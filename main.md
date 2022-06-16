@@ -157,15 +157,15 @@ In the previous problem you computed the work required to move $q_3$ to $(x,y) =
 
 a. how much work is required to move $q_2$ to (x,y) = (d,0)?;
 
-b. how much work is required to move q3 to (x,y) = (-d,0) if only $q_1$ is present?;
+b. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_1$ is present?;
 
-c. how much work is required to move q3 to (x,y) = (-d,0) if only $q_2$ is present?
+c. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_2$ is present?
 
 d. The total work required to assemble the system of three charges is the sum of the work from parts a., b., and c. Write the equation for this sum. This sum is known as the total potential energy of the system of charges.
 
 # Conservation of energy (Ch 23)
 
-A small (blue) sphere, $q_1$, with a net charge of $-3.0\thickspace\mu\text{C}$ is suspended from an insulating thread and cannot move. A second small sphere (yellow, $q_2$) with a net charge of $-8.0\thickspace\mu\text{C}$ and a mass of $2.0\thicspace\text{g}$ is shot towards the blue sphere. When the two spheres are a distance $r_1 = 1.0\text{ m}$ apart, the speed of $q_2$ is $v_2 = 20.0\text{ m/s}. Assume that the two spheres can be treated as points and gravity is negligible.
+A small (blue) sphere, $q_1$, with a net charge of $-3.0\thickspace\mu\text{C}$ is suspended from an insulating thread and cannot move. A second small sphere (yellow, $q_2$) with a net charge of $-8.0\thickspace\mu\text{C}$ and a mass of $2.0\thickspace\text{g}$ is shot towards the blue sphere. When the two spheres are a distance $r_1 = 1.0\text{ m}$ apart, the speed of $q_2$ is $v_2 = 20.0\text{ m/s}$. Assume that the two spheres can be treated as points and gravity is negligible.
 
 1. Describe the motion of $q_2$ over time and explain why. Does everyone in your group agree? Try to come to a consensus on what will happen. If you can’t, talk to your instructor. 
 
@@ -189,7 +189,7 @@ The general technique for computing capacitance when Gauss's law applies is:
 
 1. Place an equal and opposite amount of charge on the conductors.
 2. Use Gauss's law to compute the electric field between the conductors.
-3. Use $V(b)-V(a)=-\int^b_a \mathbf{E}\bfcdot d\mathbf{l} to find the potential difference between the conductors.
+3. Use $V(b)-V(a)=-\int^b_a \mathbf{E}\bfcdot d\mathbf{l}$ to find the potential difference between the conductors.
 4. Use the equation for capacitance to find $C$: $C = Q/|\Delta V| = Q/|V(b)-V(a)|$.
 
 ## Parallel Plate
@@ -226,7 +226,7 @@ Charge is uniformly distributed on two spherical conducting shells, the cross--s
  
 5. How much work will it take to move a charge qo from the outer surface of the inner shell to the inner surface of the outer shell? Said another way, what is the difference in electric potential, Ub -Ua?
  
-6. What is the potential difference, $V(b) – V(a)?
+6. What is the potential difference, $V(b) - V(a)$?
 
 7. Write the capacitance in terms of $k$, $A$, and $d$.
 
@@ -249,7 +249,6 @@ Mathematically, the work done by a force $\mathbf{F}$ in moving an object from p
 
 $$
 W_{a\rightarrow b}=\int_a^b \mathbf{F}\cdot d\mathbf{l}
-\label{eqn:work}
 $$
 
 and this work changes the potential energy of an object according to 
