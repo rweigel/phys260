@@ -1,15 +1,14 @@
-
 # Electric Force
 
 Charge $q_1$ is at $(x, y) = (a, a)$. Charge $q_2$ is at $(x, y) = (a, 2a)$. Draw this charge configuration on the provided graph paper.
 
 1. Find the magnitude of the force that $q_1$ exerts on $q_2$. Show your work in the space below. Compare your result with the members of your group and make sure that you agree.
 
-%<div style="height:10em"/>
+<img src="figures/grid.svg" style="width:100%"/>
 
 2. Find the direction of the force that $q_1$ exerts on $q_2$. Express your answer as an angle with respect to the x-axis, with counterclockwise rotation being positive. Show your work in the space below.
 
-%<div style="height:10em"/>
+<div style="height:10em"/>
 
 Draw the two charges described above three times in the space below and label them 3., 4., and 5. Draw arrows to indicate the directions of movement.
 
