@@ -1,6 +1,6 @@
-In my review prior to students working, I emphasize the use of vector notation and quickly do a version of the first problem on the board. I find that approximately 3/4 of the students write equations with scalar = vector or vice--versa. 
+In my review prior to students working, I emphasize the use of vector notation and quickly do a version of the first problem on the board. I find that approximately 3/4 of the students write equations with scalar = vector or vice--versa. When helping students, I comment on this error before answering any questions.
 
-I have used two different versions of the first problem. In version 1., the charges at $(x, y) = (a, a)$ and $(x, y) = (a, 2a)$ so they are aligned vertically. In version 2., the second charge is at $(2a, 2a)$.
+I have used two different versions of the first problem. In version 1., the charges at $(x, y) = (a, a)$ and $(x, y) = (a, 2a)$ so they are aligned vertically. In version 2., the second charge is at $(2a, 2a)$ so they are aligned at a $45^\circ$ angle.
 
 For version 1., I mention that the first problem is easily solved without vectors but is good for practice becuase one can quickly compare an answer found using vector notation with the answer found without.
 

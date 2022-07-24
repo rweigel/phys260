@@ -1,3 +1,7 @@
+# Overview
+
+See also [Chapter 21 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/u/1/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_)
+
 # Electric Force
 
 Charge $q_1$ is at $(x, y) = (a, a)$. Charge $q_2$ is at $(x, y) = (a, 2a)$. Draw this charge configuration on the provided graph paper.

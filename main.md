@@ -1,110 +1,3 @@
-Magnets sorting nails https://imgur.com/gallery/qxoTVRA
-
-# Instructor Guide
-
-These are activities that students work on during a weekly 50--minute recitation for PHYS 260. To maximize time that students spend working on problems, I typically give at most a 10--minute review. Often, my 10--minute overview involves working through an example that is nearly identical to the first problem.
-
-Prior to working on these, approximately 1/2--2/3 of the students will have attended two 75--minute lectures covering the associated chapter and content.
-
-I typically give a 3--minute quiz at the start of class that is based on the most basic concept covered in lecture (for example, a charge is moving parallel to magnetic field; what will be the direction of deflection?). The quiz is worth 10 points and students earn a minimum of 8 points for writing anything down. I scan the answers to the quizes as they are turned in to determine how much I need to review.
-
-The problems on these activities are generally very basic and simple. However, I find that most students only have time to attempt half of the problems and there are many questions. Based on experience, I assume that after two 75--minute lectures, most students have only knowledge of keywords and associated concepts and are not able to solve problems that require more than identifying the equation to use given variables.
-
-Students turn in their work at the end of class and I hand out solutions. The minimum score for their work is 7/10 points.
-
-The motivation for this style of recitation is that in the past, I would solve problems at the board for 45 minutes and then give a quiz at the end. Based on the results of the (very simple) quizes, few students got much out of my presentation. In addition, often students would ask for help on homework problems after the recitation that were nearly identical to the problem covered in recitation. It was clear from their questions that their notes from, or memory of, my presentation were of little use.
-
-# Coulomb (Ch 21)
-
-## Instructor Note
-
-In my review prior to students working, I emphasize the use of vector notation and quickly do a version of the first problem on the board. I find that approximately 3/4 of the students write equations with scalar = vector or vice--versa. 
-
-I have used two different versions of the first problem. In version 1., the charges at $(x, y) = (a, a)$ and $(x, y) = (a, 2a)$ so they are aligned vertically. In version 2., the second charge is at $(2a, 2a)$.
-
-For version 1., I mention that the first problem is easily solved without vectors but is good for practice becuase one can quickly compare an answer found using vector notation with the answer found without.
-
-The second problem is essentially a repetition of the first and its answers are the answers to the previous divided by $q_2$ (about 1/2 of the students notice this). This problem is used to reinforce the idea that we attribute an electric field to an empty point in space and the electric field is a quantity that tells us what would happen if we put a charge at that empty point in space. In my introductory remarks, I mention that the gravitational field $\mathbf{g}$ is a vector field and we determine it by putting a mass at a previously empty point in space and then measuring its acceleration when released.
-
-## Electric Force
-
-Charge $q_1$ is at $(x, y) = (a, a)$. Charge $q_2$ is at $(x, y) = (a, 2a)$. Draw this charge configuration on the provided graph paper.
-
-A. Find the magnitude of the force that $q_1$ exerts on $q_2$. Show your work in the space below. Compare your result with the members of your group and make sure that you agree.
-
-<div style="height:10em"/>
-
-B. Find the direction of the force that $q_1$ exerts on $q_2$. Express your answer as an angle with respect to the x-axis, with counterclockwise rotation being positive. Show your work in the space below.
-
-<div style="height:10em"/>
-
-Draw the two charges described above three times in the space below and label them C., D., and E. Draw arrows to indicate the directions of movement.
-
-C. If $q_1$ and $q_2$ are both positive, in what directions will each move if released?
-
-D. If $q_1$ and $q_2$ are both negative, in what directions will each move if released?
-
-D. If $q_1$ and $q_2$ have opposite signs, in what directions will each move if released?
-
-<div style="height:10em"/>
-
-## Electric Field
-
-Charge $q_1$ is at $(x, y) = (a, a)$.
-
-1. Find the magnitude of the electric field at $(x, y) = (a, 2a)$. Show your work. Compare what you got with the other students in the group.
-
-2. Find the direction of the electric field at $(x, y) = (a, 2a)$ if $q_1$ is positive. Express your answer as an angle with respect to the x-axis, with counterclockwise rotation being positive. Show your work.
-
-3. Write an equation for the electric field at $(x, y) = (a, 2a)$ in vector notation (e.g., $\mathbf{E} = E_x\ihat + E_y\jhat$). Is your answer what you would have expected based on your answer to part b? Explain.  
-
-4. If a charge $q_2$ is placed at $(a, 2a)$, what will be the electric force that is exerted on it? Express your answer in vector notation (F=Fxi+Fyj). 
-
-5. If charges $q_1$ and $q_2$ are positive, in what directions will the charges move?   Explain using your answer to part d.
-
-6. Charge $q_1 = q$ is at $(x, y) = (a, 0)$, charge $q_2 = -q$ is at (x, y) = (-a, 0), and charge $q_3 = -q$ is at $(x, y) = (0, a)$. Assume $q$ is positive. Draw this charge configuration on the provided graph paper.
-
-7. Find the electric field vector at the origin in the form $\mathbf{E} = E_x\ihat + E_y\jhat$. Show your work in the space below. Discuss the symmetry in the problem and how it impacts your answer. 
-
-8. Explain the difference between electric field and electric force. Why it does not make sense to ask what the electric force is at the origin.
-
-9. If a positive charge qo is placed at the origin, what will be the force (in vector notation) exerted on it? Which direction will the charge qo move if released?
-
-# Electric Flux, $\Phi_E$ (Ch 22)
-
-To use Gauss’s law to find the electric field for a system of charges, several calculations must be performed. First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside of a closed surface. In this activity, you will compute the electric flux through an open surface and then compute the amount of charge enclosed by the surface of a volume.
-
-Electric flux, $\Phi_E$, is the integral of $\mathbf{E}\bfcdot d\mathbf{A}$ over a surface: 
-
-$$
-\Phi_E=\int\mathbf{E}\bfcdot d\mathbf{A}
-$$
-
-(Gauss’s law involves an integral over a closed surface, but here we will consider only an open surface.) When the magnitude and direction of $\mathbf{E}$ is the same at all points on the surface, the integral simplifies to 
-
-$$
-\Phi_E = \mathbf{E}\bfcdot \mathbf{A} = \mathbf{E}\bfcdot \hat{\mathbf{n}}A
-$$
-
-where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it is the result of the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
-
-1. Draw the area vector $\mathbf{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for area to be a vector quantity.
-
-    a. Can you come up with another way to describe the orientation of this rectangle in space?
-
-    b. Is there only one normal direction to this area? Discuss your reasoning with your group. 
-
-
-2. For each of the following cases, draw the area and $\hat{\mathbf{n}}$  for the previous figure and $\mathbf{E}$ when viewed from a point on the positive z-axis that is far from the origin. Then compute $\Phi_E$.
-
-    a. $\mathbf{E}=E_o\ihat$ 
-
-    b. $\mathbf{E}=E_o\jhat$ 
-
-    c. $\mathbf{E}=E_o\khat$ 
-
-    d. $\mathbf{E}=E_o\ihat + E_o\ihat$
-
 # Enclosed Charge (Ch 22)
 
 When using Gauss’s law, one needs to draw an imaginary volume in space and compute how much charge is inside the volume. Consider a solid and uniformly charged sphere of radius $b$ that is centered on the origin and has a volume charge density of $\rho_o$ (with units of charge per volume).
@@ -607,7 +500,9 @@ When solving circuit problems with multiple loops, you will generally find that 
 4.  Attempt to use the above three equations to solve for $I_1$, $I_2$, and $I_3$.
  
 # Long Current-Carrying Wires (Ch 28)
- 
+
+Magnets sorting nails https://imgur.com/gallery/qxoTVRA
+
 Previously, you have considered the trajectories of charged particles in a given magnetic field. The given magnetic fields were created by currents, which are composed of moving charges.
 
 In general, computing the magnetic field due to an arbitrary current system requires the use of the Biot--Savart law (Ampere’s law can only be used in special cases). 

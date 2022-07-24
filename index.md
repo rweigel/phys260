@@ -12,6 +12,18 @@ Students turn in their work at the end of class and I hand out solutions. The mi
 
 # Activities
 
-1. [Coulomb and E](Coulomb_and_E.md)
+1. Coulomb and E
+    * [Activity](Coulomb_and_E/Coulomb_and_E.md) 
+    * [Instructor Notes](Coulomb_and_E/Coulomb_and_E_Notes.md) 
+    * Covered in [Chapter 21 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/u/1/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_)
+
     1. Using Coulomb's law to find the electric force vector
     2. Computing the electric field vector
+
+2. Electric Flux
+    * [Activity](Electric_Flux/Electric_Flux.md)
+    * [Instructor Notes](Electric_Flux/Electric_Flux_Notes.md)
+    * Covered in [Chapter 22 §1-2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_)
+    1. The area vector for an open surface (rectangle) and computing $\mathbf{E}\bfcdot d\mathbf{A}$ when the angle between $\mathbf{E}$ and $d\mathbf{A}$ is constant.
+    2. The area vectors for a closed surface (cube) and computing $\mathbf{E}\bfcdot d\mathbf{A}$ for each surface.
+    3. In 1. and 2., then angle between $\mathbf{E}$ and $\mathbf{A}$ is $0, 90, 180,$ or $270$ degrees. Here the angle is arbitrary.
