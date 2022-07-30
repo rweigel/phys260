@@ -1,12 +1,6 @@
-# Overview
+# Enclosed Charge (Ch 22)
 
-When using Gauss’s law, one needs to draw an imaginary volume in space and compute how much charge is inside the volume.
-
-In general, the imaginary volume that is used is one for which computation of the electric flux is easy. That is, the imaginary volume will be such that the electric field is either parallel or perpendicular to all parts of the surface. In this activity, you are given the imaginary surface. To use Gauss's law, one must identify the imaginary surface that will allow for an easy calculation of the electric flux; this is covered in a separate activity.
-
-# Solid Sphere of Charge and Spherical Gaussian Surface
-
-Consider a solid and uniformly charged sphere of radius $b$ that is centered on the origin and has a volume charge density of $\rho_o$ (with units of charge per volume).
+When using Gauss’s law, one needs to draw an imaginary volume in space and compute how much charge is inside the volume. Consider a solid and uniformly charged sphere of radius $b$ that is centered on the origin and has a volume charge density of $\rho_o$ (with units of charge per volume).
 
 1. How much charge is enclosed in an imaginary sphere centered on the origin and having radius $r < b$? Write your answer in terms of one or more of $r$, $b$, and constants.
 
@@ -16,13 +10,7 @@ Consider a solid and uniformly charged sphere of radius $b$ that is centered on 
 
     b. Find the amount of charge enclosed in this imaginary sphere in terms of one or more of $r$, $b$, and constants. 
 
-# Line of Charge and Cylindrical Gaussian Surface
-
-# Cylindrical Shell of Charge and Cylindrical Gaussian Surface
-
-# Solid Cylinder of Charge and Cylindrical Gaussian Surface
-
-# Plane of Charge and Cylindrical Gaussian Surface
+----
 
 In the following diagram, a square sheet with a uniform surface charge density of $\sigma_o$ (with units of charge per area) is shown. An imaginary cylinder with height $h$ and radius $r$ is also shown.
 

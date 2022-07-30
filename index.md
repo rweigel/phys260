@@ -12,10 +12,12 @@ Students turn in their work at the end of class and I hand out solutions. The mi
 
 # Activities
 
+When you click the links for the textbook, you will get a `404` error. To see the content, remove the `_remove_` from the URL. The directory for all parts of the textbook is [here]( https://drive.google.com/drive/u/1/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_).
+
 1. Coulomb and E
     * [Activity](Coulomb_and_E/Coulomb_and_E.md) 
     * [Instructor Notes](Coulomb_and_E/Coulomb_and_E_Notes.md) 
-    * Covered in [Chapter 21 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/u/1/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_)
+    * Covered in [Chapter 21 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
     1. Using Coulomb's law to find the electric force vector
     2. Computing the electric field vector
@@ -23,7 +25,23 @@ Students turn in their work at the end of class and I hand out solutions. The mi
 2. Electric Flux
     * [Activity](Electric_Flux/Electric_Flux.md)
     * [Instructor Notes](Electric_Flux/Electric_Flux_Notes.md)
-    * Covered in [Chapter 22 §1-2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_)
+    * Covered in [Chapter 22 §1-2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_)
     1. The area vector for an open surface (rectangle) and computing $\mathbf{E}\bfcdot d\mathbf{A}$ when the angle between $\mathbf{E}$ and $d\mathbf{A}$ is constant.
     2. The area vectors for a closed surface (cube) and computing $\mathbf{E}\bfcdot d\mathbf{A}$ for each surface.
     3. In 1. and 2., then angle between $\mathbf{E}$ and $\mathbf{A}$ is $0, 90, 180,$ or $270$ degrees. Here the angle is arbitrary.
+
+1. Enclosed Charge
+    * [Activity](Enclosed_Charge/Enclosed_Charge.md) 
+    * [Instructor Notes](Enclosed_Charge/Enclosed_Charge_Notes.md) 
+    * Covered implicilty in examples in [Chapter 22 §4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_)
+
+    1. Using Coulomb's law to find the electric force vector
+    2. Computing the electric field vector
+
+1. Electric Potential
+    * [Activity](Electric_Potential/Electric_Potential.md) 
+    * [Instructor Notes](Electric_Potential/Electric_Potential.md) 
+    * Covered in examples in [Chapter 23 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_)
+
+    1. 
+    2. 
