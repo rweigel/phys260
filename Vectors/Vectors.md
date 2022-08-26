@@ -2,12 +2,12 @@
 
 We generally describe vector equations in two ways:
 
-1. Simple -- An equation for the magnitude is given and words are used to describe the direction.
-1. Compact -- A single equation is given for the vector and additional equations are given for parts of the equation.
+1. Simple -- An equation for the magnitude is given, and words are used to describe the direction.
+1. Compact -- A single equation is given for the vector, and additional equations are given for parts of the equation.
 
 For example, in [Section 21.3](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) of the textbook, the equation for Coulomb's Law was given in the simple form. In [Section 21.4](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_), the equation for the electric field due to a point charge was given in the compact form.
 
-In PHYS 260, you will need to be able to solve problems similar to the examples given here quickly. If you found the problems in this activity to be difficult, review [Sections 1.7-1.8](https://drive.google.com/file/d/1Gg-ZzUWWqJNn3Eaw6hmix1Hsym5K4Mv3/view?usp=sharing) in the textbook and see the Khan Acadamy's comprehensive [introduction to vectors](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors).
+In PHYS 260, you will need to be able to solve problems similar to the examples given here quickly. If you found the problems in this activity to be difficult, review [Sections 1.7-1.8](https://drive.google.com/file/d/1Gg-ZzUWWqJNn3Eaw6hmix1Hsym5K4Mv3/view?usp=sharing) in the textbook and see Khan Acadamy's comprehensive [introduction to vectors](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors).
 
 # Coulomb's Law in Simple Form
 
@@ -38,7 +38,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
     $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(2\sqrt{2}a)^2}=\frac{kq^2}{8a^2}$$
 
-    The charges will repel each other, so the direction of forces of one on the other will be as shown in the diagram. The direction of the force vector on $q_2$ is $45^\circ$ upwards from horizontal.
+    The charges will repel each other, so the direction of forces of one on the other will be as shown in the diagram. The direction of the force vector on $q_2$ is shown in the diagram.
 
 2. Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. Then
     
@@ -48,7 +48,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
     
 ## Problem
 
-Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges have a charge of $q$.
+Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges have a charge of $q$. Using the steps in the previous example,
 
 1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
 2. Write the force of $q_1$ on $q_2$ in the form $\mathbf{F}=F_x\ihat + F_y\jhat$.
@@ -72,8 +72,6 @@ Although this form looks more complex, it requires basic steps to use.
 ## Example
 
 Charge $q_1$ is at $(x,y)=(-2a,-2a)$ and charge $q_2$ is at $(a, a)$. Both charges have a charge of $q$.
-
-Using the steps in the previous example,
 
 1. Write the force of $q_1$ on $q_2$ in the form $\mathbf{F}=F_x\ihat + F_y\jhat$.
 2. Find the magnitude and direction of the force of $q_1$ on $q_2$.
@@ -116,9 +114,7 @@ Using the steps in the previous example,
 
 ## Problem
 
-Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-2a, -2a)$. Both charges have a charge of $q$.
-
-Using the steps in the previous example,
+Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-2a, -2a)$. Both charges have a charge of $q$. Using the steps in the previous example,
 
 1. Write the force of $q_1$ on $q_2$ in the form $\mathbf{F}=F_x\ihat + F_y\jhat$.
 2. Find the magnitude and direction of the force of $q_1$ on $q_2$.
