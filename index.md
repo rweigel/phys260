@@ -22,7 +22,7 @@ When you click the links for the textbook, you will get a `404` error. To see th
 
 1. Review of Vectors using Coulomb's Law
     * [Activity](Vectors/Vectors.md) 
-    * [Instructor Notes](Vectors/Vector_Notes.md) 
+    * [Source Files and Notes](https://github.com/rweigel/phys260/tree/master/Vectors) 
     * In Section 21.4, a compact vector form of the electric field due to a point charge is given. However, in Section 21.3, the compact form is not used for Coulomb's Law. In this activity, students use both forms for problems involving Coulomb's law.
 
 1. Electric Field of a Point Charge

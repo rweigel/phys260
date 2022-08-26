@@ -12,7 +12,7 @@ where $\hat{\mathbf{r}}$ is the unit vector that points from the position of $q_
 
 **Electric Field**
 
-The electric field vector, $\mathbf{E}$ is a quantity that we assign to a point in space. Given this quantity, we can compute the force on a charge $Q$ will experience if it is placed at that point in space using the equation $\mathbf{F}=Q\mathbf{E}$.
+The electric field vector, $\mathbf{E}$, is a quantity that we assign to a point in space. Given this quantity, we can compute the force on a charge $Q$ will experience if it is placed at that point in space using the equation $\mathbf{F}=Q\mathbf{E}$.
 
 To find $\mathbf{E}$ at any point in space, 
 compute the force $\mathbf{F}$ due to all other charges on a hypothetical (or "test") charge $q_o$ at point where you want to know $\mathbf{E}$. To find $\mathbf{E}$ at that point, divide $\mathbf{F}$ by $q_o$.
@@ -51,7 +51,7 @@ Charge $q_1 = +q$ is at $(x, y) = (a, 0)$, charge $q_2 = +q$ is at $(x, y) = (-a
 
 1. Draw this charge configuration on the provided graph paper.
 
-<img src="figures/grid-w100pct-w20pps-h200px-h20pps.svg" style="width:100%"/>
+    <img src="figures/grid-w100pct-w20pps-h200px-h20pps.svg" style="width:100%"/>
 
 \newpage
 
@@ -73,7 +73,11 @@ In the following,
 
 <div style="height:4em"/>
 
-6. Will your answers to 2.-5. change if the problem had asked for the electric field at a different position? If so, which answers?
+6. Why it does not make sense to ask what the electric force is at the origin?
+
+<div style="height:4em"/>
+
+7. Will your answers to 2.-5. change if the problem had asked for the electric field at a different position? If so, which answers?
 
 <div style="height:4em"/>
 
