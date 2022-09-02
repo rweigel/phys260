@@ -16,19 +16,12 @@ When you click the links for the textbook, you will get a `404` error. To see th
 
 1. Electric Force Between Point Charges (Coulomb's Law)
     * [Activity](Electric_Force/Electric_Force.md) 
-    * [Instructor Notes](Electric_Force/Electric_Force_Notes.md) 
-    * Covers using Coulomb's law to find the electric force vector using the simple form of Coulomb's law (see next activity).
+    * Uusing Coulomb's law to find the electric force vector using two methods that are used in the textbook.
     * Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
-
-1. Review of Vectors using Coulomb's Law
-    * [Activity](Vectors/Vectors.md) 
-    * [Source Files and Notes](https://github.com/rweigel/phys260/tree/master/Vectors) 
-    * In Section 21.4, a compact vector form of the electric field due to a point charge is given. However, in Section 21.3, the compact form is not used for Coulomb's Law. In this activity, students use both forms for problems involving Coulomb's law.
 
 1. Electric Field of a Point Charge
     * [Activity](Electric_Field/Electric_Field.md) 
-    * [Instructor Notes](Electric_Field/Electric_Field_Notes.md) 
-    * Covers computing the electric field due to one and three point charges.
+    * Computing the electric field due to one and three point charges.
     * Covered in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 2. Electric Flux

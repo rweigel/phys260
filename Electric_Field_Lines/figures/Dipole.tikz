@@ -1,0 +1,31 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,231); %set diagram left start at 0, and has height of 231
+
+%Shape: Grid [id:dp5772774949513428] 
+\draw  [draw opacity=0] (30,30) -- (270,30) -- (270,210) -- (30,210) -- cycle ; \draw  [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=0.61 ] (40,30) -- (40,210)(60,30) -- (60,210)(80,30) -- (80,210)(100,30) -- (100,210)(120,30) -- (120,210)(140,30) -- (140,210)(160,30) -- (160,210)(180,30) -- (180,210)(200,30) -- (200,210)(220,30) -- (220,210)(240,30) -- (240,210)(260,30) -- (260,210) ; \draw  [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=0.61 ] (30,40) -- (270,40)(30,60) -- (270,60)(30,80) -- (270,80)(30,100) -- (270,100)(30,120) -- (270,120)(30,140) -- (270,140)(30,160) -- (270,160)(30,180) -- (270,180)(30,200) -- (270,200) ; \draw  [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=0.61 ]  ;
+%Shape: Circle [id:dp6566632407770856] 
+\draw  [fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (214.87,160) .. controls (214.87,162.83) and (217.17,165.13) .. (220,165.13) .. controls (222.83,165.13) and (225.13,162.83) .. (225.13,160) .. controls (225.13,157.17) and (222.83,154.87) .. (220,154.87) .. controls (217.17,154.87) and (214.87,157.17) .. (214.87,160) -- cycle ;
+%Shape: Circle [id:dp38521091328279966] 
+\draw  [fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (55,160) .. controls (55,157.24) and (57.24,155) .. (60,155) .. controls (62.76,155) and (65,157.24) .. (65,160) .. controls (65,162.76) and (62.76,165) .. (60,165) .. controls (57.24,165) and (55,162.76) .. (55,160) -- cycle ;
+%Straight Lines [id:da6489705353245667] 
+\draw    (140,160) -- (140,23) ;
+\draw [shift={(140,20)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da16448759224381426] 
+\draw    (140,160) -- (277,160) ;
+\draw [shift={(280,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (222,163) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle q$};
+% Text Node
+\draw (61,162) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle -q$};
+% Text Node
+\draw (146,14.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$y$};
+% Text Node
+\draw (277,161.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$x$};
+
+
+\end{tikzpicture}
