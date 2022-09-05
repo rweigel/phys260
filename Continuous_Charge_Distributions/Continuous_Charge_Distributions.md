@@ -51,13 +51,11 @@ $\displaystyle d\mathbf{E} =k\frac{dQ}{r^2}\hat{\mathbf{r}}$, which has magnitud
     
     See the textbook for an alternative way of arriving at the same result.
     
-    The vector from $dQ$ to a point on the $y$--axis is $\mathbf{r}=-x\ihat+y\jhat$.
+    The vector from $dQ$ to a point on the $y$--axis is $\mathbf{r}=-x\ihat+y\jhat$. We need to find
 
-    $$d\mathbf{E} = k\frac{dQ}{r^2}\hat{\mathbf{r}} = k\frac{dQ}{r^3}\mathbf{r}$$
-    
-    where in the last step, $\rhat=\mathbf{r}/r$ was used. Substitution gives
+    $\ds d\mathbf{E} = k\frac{dQ}{r^2}\hat{\mathbf{r}}$, which can be written as $\ds d\mathbf{E}= k\frac{dQ}{r^3}\mathbf{r}$ using $\rhat=\mathbf{r}/r$. This allow us to bypass the need to compute $\rhat$ explicitly. Using this and $\rhat$ from above gives
 
-    $$d\mathbf{E} = k\frac{dQ}{(\sqrt{x^2+y^2})^3}(-x\ihat+y\jhat)$$
+    $$d\mathbf{E} = k\frac{dQ}{r^3}\mathbf{r} = k\frac{dQ}{(\sqrt{x^2+y^2})^3}(-x\ihat+y\jhat)$$
 
     Thus,
     
