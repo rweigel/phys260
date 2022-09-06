@@ -1,0 +1,55 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,177); %set diagram left start at 0, and has height of 177
+
+%Straight Lines [id:da6367799622029096] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (71.2,110.8) -- (52,130) ;
+%Straight Lines [id:da6001535337839026] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (116,110.8) -- (71.2,110.8) ;
+%Shape: Cube [id:dp04342558315379508] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=0.2 ] (52,78.45) -- (71.2,59.25) -- (116,59.25) -- (116,110.8) -- (96.8,130) -- (52,130) -- cycle ; \draw   (116,59.25) -- (96.8,78.45) -- (52,78.45) ; \draw   (96.8,78.45) -- (96.8,130) ;
+%Straight Lines [id:da33768233880307563] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (71.2,59.25) -- (71.2,110.8) ;
+%Straight Lines [id:da8556566864205468] 
+\draw    (52.17,130) -- (25.91,156.25) ;
+\draw [shift={(24.5,157.67)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da7859931310096506] 
+\draw    (116,110.8) -- (150.5,110.67) ;
+\draw [shift={(152.5,110.67)}, rotate = 179.79] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da7670470282458908] 
+\draw    (71.2,59.25) -- (71.2,24.67) ;
+\draw [shift={(71.2,22.67)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da43558820809067944] 
+\draw    (79.5,166.67) .. controls (62.04,163.76) and (68.1,150.5) .. (75.78,133.28) ;
+\draw [shift={(76.5,131.67)}, rotate = 113.96] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da8847199212806154] 
+\draw    (30.93,71.49) .. controls (30.93,91.65) and (31.85,87.85) .. (44.31,94.59) ;
+\draw [shift={(45.93,95.49)}, rotate = 209.74] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da0524228217917051] 
+\draw    (95.93,34.49) .. controls (120.89,32.85) and (115.44,42.92) .. (107,55.86) ;
+\draw [shift={(105.93,57.49)}, rotate = 303.27] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (54,81.85) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1$};
+% Text Node
+\draw (100.8,81.85) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$2$};
+% Text Node
+\draw (79.87,60.77) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$3$};
+% Text Node
+\draw (32,153.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
+% Text Node
+\draw (147.5,113.07) node [anchor=north west][inner sep=0.75pt]    {$y$};
+% Text Node
+\draw (86.87,158.77) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$4$};
+% Text Node
+\draw (33.87,60.42) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$5$};
+% Text Node
+\draw (75.25,12.13) node [anchor=north west][inner sep=0.75pt]    {$z$};
+% Text Node
+\draw (82.87,28.42) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$6$};
+
+
+\end{tikzpicture}

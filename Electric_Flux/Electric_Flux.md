@@ -1,6 +1,6 @@
 # Overview
 
-See also [Chapter 21 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/u/1/folders/1RbJbDlpZB6THg1cKvlmRnvQYewRKmn03_remove_)
+See also  [Section 22.1-2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_)
 
 ## Mathematical
 
@@ -12,7 +12,7 @@ $$
 \Phi_E=\int\mathbf{E}\bfcdot d\mathbf{A}
 $$
 
-(Gauss’s law involves an integral over a closed surface, but here we will consider only an open surface.) When the magnitude and direction of $\mathbf{E}$ is the same at all points on the surface, the integral simplifies to 
+(Gauss’s law involves an integral over a closed surface, but here we will consider both open and closed surface.) When the magnitude and direction of $\mathbf{E}$ is the same at all points on the surface, the integral simplifies to 
 
 $$
 \Phi_E = \mathbf{E}\bfcdot \mathbf{A} = \mathbf{E}\bfcdot \hat{\mathbf{n}}A
@@ -20,15 +20,17 @@ $$
 
 where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it is the result of the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
 
-## Conceptual
-
-See https://rweigel.github.io/phys305/flux.html
-
 \newpage
 
 # $\Phi_E$ through Open Surface I
 
-<img src="figures/Electric_Flux_xy_Plane.svg"/>
+## Example
+
+
+
+## Problem
+
+<img src="figures/Electric_Flux_xz_Plane.svg"/>
 
 1. Draw the area vector $\mathbf{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for area to be a vector quantity.
 
@@ -39,7 +41,7 @@ See https://rweigel.github.io/phys305/flux.html
 
 2. For each of the following cases, draw the area and $\hat{\mathbf{n}}$  for the previous figure and $\mathbf{E}$ when viewed from a point on the positive $z$-axis that is far from the origin. Then compute $\Phi_E$.
 
-    a. $\mathbf{E}=E_o\ihat$ 
+   a. $\mathbf{E}=E_o\ihat$ 
 
     b. $\mathbf{E}=E_o\jhat$ 
 
