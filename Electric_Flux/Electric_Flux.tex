@@ -1,74 +1,153 @@
-```mdextension
-Title: Electric Flux
-```
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
 
-# Overview
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+% Disable page numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0em
+ \belowdisplayshortskip=0em
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Electric Flux}
+\rhead{\thepage}
+
+\begin{document}
+
+\section{Overview}
 
 Several calculations must be performed to use Gauss's law to find the electric field for a system of charges (if possible). First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside of a closed surface. In this activity, you will compute the electric flux through both open and closed surfaces.
 
 Electric flux, $\Phi_E$, is the integral of $\bfvec{E}\bfcdot d\bfvec{A}$ over a surface: 
 
-$$
+\begin{equation}
 \Phi_E=\int\bfvec{E}\bfcdot d\bfvec{A}
-$$
+\end{equation}
 
 When the magnitude and direction of $\bfvec{E}$ is the same at all points on the surface, the integral simplifies to 
 
-$$
+\begin{equation}
 \Phi_E = \bfvec{E}\bfcdot \bfvec{A} = \bfvec{E}\bfcdot \hat{\mathbf{n}}A
-$$
+\end{equation}
 
 where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it results from the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
 
 The equation $\Phi_E = \bfvec{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
 
-$$
+\begin{equation}
 \Phi_E = E_{\perp}A
-$$
+\end{equation}
 
 where $E_{\perp}$ is the component of $\bfvec{E}$ that is perpendicular to $A$. If the perpendicular component of $\bfvec{E}$ is in the same direction as the normal direction for $\bfvec{A}$, the flux is positive. If the perpendicular component of $\bfvec{E}$ is in the opposite direction as the normal direction for $\bfvec{A}$, the flux is negative.
 
 \newpage
 
-# $\Phi_E$ Through Open Surface
+\section{$\Phi_E$ Through Open Surface}
 
-## Problem I
+\subsection{Problem I}
 
-<img src="figures/Electric_Flux_xz_Plane.svg"/>
+\input{figures/Electric_Flux_xz_Plane.tikz}
 
-1. Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for an area to be a vector quantity.
+\begin{enumerate}
 
-    a. Can you come up with another way to describe the orientation of this rectangle in space?
+  \item Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for an area to be a vector quantity.\\
 
-    b. Is there only one normal direction to this area? Discuss your reasoning with your group. 
+        a. Can you come up with another way to describe the orientation of this rectangle in space?\\
 
+        b. Is there only one normal direction to this area? Discuss your reasoning with your group.
 
-2. For each of the following $\bfvec{E}$, draw  $\bfvec{E}$ and $\hat{\mathbf{n}}$ for the area in the previous figure when viewed from a point on the positive $z$-axis that is far from the origin (that is, draw the projection onto the $x$--$y$ plane). Then compute $\Phi_E$.
+\end{enumerate}
 
-   a. $\bfvec{E}=E_o\ihat\qquad$ $\Phi_E=$
+\begin{enumerate}
 
-   b. $\bfvec{E}=E_o\jhat\qquad$ $\Phi_E=$ 
+  \item[2.] For each of the following $\bfvec{E}$, draw  $\bfvec{E}$ and $\hat{\mathbf{n}}$ for the area in the previous figure when viewed from a point on the positive $z$-axis that is far from the origin (that is, draw the projection onto the $x$--$y$ plane). Then compute $\Phi_E$.\\
 
-   c. $\bfvec{E}=E_o\khat\qquad$ $\Phi_E=$ 
+            a. $\bfvec{E}=E_o\ihat\qquad$ $\Phi_E=$\\
 
-   d. $\bfvec{E}=E_o\ihat + E_o\jhat\qquad$ $\Phi_E=$
+            b. $\bfvec{E}=E_o\jhat\qquad$ $\Phi_E=$\\
 
+            c. $\bfvec{E}=E_o\khat\qquad$ $\Phi_E=$\\
 
-3. For each of the cases in 2., what is $E_{\perp}$ (the component of $\bfvec{E}$ that is perpendicular to the surface)? Also compute $\Phi_E=E_{\perp}A$.
+            d. $\bfvec{E}=E_o\ihat + E_o\jhat\qquad$ $\Phi_E=$
 
-   a. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
+\end{enumerate}
 
-   b. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$ 
+\begin{enumerate}
 
-   c. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
+  \item[3.] For each of the cases in 2., what is $E_{\perp}$ (the component of $\bfvec{E}$ that is perpendicular to the surface)? Also compute $\Phi_E=E_{\perp}A$.\\
 
-   d. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
+            a. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$\\
+
+            b. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$\\
+
+            c. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$\\
+
+            d. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
+
+\end{enumerate}
 
 \newpage
 
-## Problem II
+\subsection{Problem II}
 
-<img src="figures/Electric_Flux_xy_Plane_Rotated.svg"/>
+\input{figures/Electric_Flux_xy_Plane_Rotated.tikz}
 
 If the area from the previous problem is rotated by $\phi=45^\circ$ around the $z$--axis, compute the flux for each electric field. Hint: Draw the area as it would look from a point on the positive $z$-axis that is far from the origin (that is, draw the projection onto the $x$--$y$ plane). Then draw $\hat{\mathbf{n}}$ and $\bfvec{E}$ for each case.
 
@@ -80,7 +159,7 @@ If the area from the previous problem is rotated by $\phi=45^\circ$ around the $
 
    d. $\bfvec{E}=E_o\ihat + E_o\jhat\qquad$ $\Phi_E=$
 
-# $\Phi_E$ Through Closed Surface
+\section{$\Phi_E$ Through Closed Surface}
 
 In the previous problem, you computed the flux through an open surface. You should have noted that one can associate two area vectors to an open surface -- imagine your hand being an open surface. You can put the a pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
 
@@ -94,17 +173,17 @@ With Coulomb's law, we are given the location and values of charges and we compu
 
 \newpage
 
-## Example
+\subsection{Example}
 
-<img src="figures/Electric_Flux_Cube.svg"/>
+\input{figures/Electric_Flux_Cube.tikz}
 
 Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is everywhere in the $+z$ direction.
 
-{\bf Answer}
+\textbf{Answer}
 
 This example is similar to Example 22.2a of the textbook. We'll solve it using two methods. The first is a more visual method. The second is more mathematical.
 
-**Method I**
+\textbf{Method I}
 
 The electric field is parallel to surfaces 1, 2, 5, and 6. Thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces.
 
@@ -118,9 +197,9 @@ The normal direction for the bottom surface is downwards, which is in the opposi
 
 $\Phi_E^{4}=-E_oA=-E_oa^2$
 
-The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
+The total flux through the cube, $\Phi_E^1+…+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
 
-**Method II**
+\textbf{Method II}
 
 Conveniently, the normal vectors are parallel to the Cartesian unit vectors. Based on the diagram, $\hat{\mathbf{n}}_1=\ihat$, $\hat{\mathbf{n}}_2=\jhat$, $\hat{\mathbf{n}}_3=\khat$, $\hat{\mathbf{n}}_4=-\khat$
 $\hat{\mathbf{n}}_5=-\jhat$, $\hat{\mathbf{n}}_6=-\ihat$. The negative sign for the last three normal vectors is due to the convention that the normal points outwards from a closed surface.
@@ -145,16 +224,18 @@ Incidentally, there is an additional questions that could have been asked: How m
 
 \newpage
 
-## Problem
+\subsection{Problem}
 
-<img src="figures/Electric_Flux_Cube.svg"/>
+\input{figures/Electric_Flux_Cube.tikz}
 
 Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is everywhere in the $+y$ direction.
 
-<div style="height:10em"/>
+\vskip 120.44999999999999pt
 
-## Problem
+\subsection{Problem}
 
-<img src="figures/Electric_Flux_Cube_II.svg"/>
+\input{figures/Electric_Flux_Cube_II.tikz}
 
 Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is as shown in the diagram.
+
+\end{document}
