@@ -1,6 +1,6 @@
 # Overview
 
-These are activities that students work on during a weekly 50--minute recitation for PHYS 260. To maximize time that students spend working on problems, I typically give at most a 10--minute review. Often, my 10--minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.
+These are activities that students work on during a weekly 50--minute recitation for PHYS 260 at GMU. To maximize time that students spend working on problems, I typically give at most a 10--minute review. Often, my 10--minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.
 
 These tutorials were written in collaboration with Jessica Rosenberg over the course of four semesters. The tutorials were revised from semester-to-semester based on observations made while using them.
 
@@ -32,118 +32,24 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 # Activities
 
-1. Electric Force Between Point Charges (Coulomb's Law)
-    * [Activity](Electric_Force/Electric_Force.md) 
-    * Uusing Coulomb's law to find the electric force vector using two methods that are used in the textbook.
-    * Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+## Electric Force Between Point Charges (Coulomb's Law)
 
-1. Electric Field of a Point Charge
-    * [Activity](Electric_Field/Electric_Field.md) 
-    * Computing the electric field due to one and three point charges.
-    * Covered in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+* [Activity](Electric_Force/Electric_Force.md) 
+* [Source files](https://github.com/rweigel/phys260/tree/master/Electric_Force) 
+* Using Coulomb's law to find the electric force vector using two methods that are used in the textbook.
+* Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
-1. Continuous Charge Distributions
-    * [Activity](Continuous_Charge_Distributions/Continuous_Charge_Distributions.md) 
-    * Setting up and solving for the electric field due to a finite line of charge.
-    * Covered in [Section 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+## Electric Field of a Point Charge
 
-1. Electric Field Lines
-    * [Activity](Electric_Field_Lines/Electric_Field_Lines.md) 
-    * Drawing electric field lines for one and two charges.
-    * Covered in [Section 21.6 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+* [Activity](Electric_Field/Electric_Field.md) 
+* Computing the electric field due to one and three point charges.
+* Covered in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
-2. Electric Flux
-    * [Activity](Electric_Flux/Electric_Flux.md)
-    * [Instructor Notes](Electric_Flux/Electric_Flux_Notes.md)
-    * Covered in [Section 22.1-2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_)
-    1. The area vector for an open surface (rectangle) and computing $\mathbf{E}\bfcdot d\mathbf{A}$ when the angle between $\mathbf{E}$ and $d\mathbf{A}$ is constant.
-    2. The area vectors for a closed surface (cube) and computing $\mathbf{E}\bfcdot d\mathbf{A}$ for each surface.
-    3. In 1. and 2., then angle between $\mathbf{E}$ and $\mathbf{A}$ is $0, 90, 180,$ or $270$ degrees. Here the angle is arbitrary.
+## Continuous Charge Distributions
+* Activity: | [html](Continuous_Charge_Distributions/Continuous_Charge_Distributions.html) |  [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) |
+* [Source files](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions)
 
-1. Enclosed Charge
-    * [Activity](Enclosed_Charge/Enclosed_Charge.md) 
-    * [Instructor Notes](Enclosed_Charge/Enclosed_Charge_Notes.md) 
-    * Covered implicilty in examples in [Chapter 22 §4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_)
-
-    1. Using Coulomb's law to find the electric force vector
-    2. Computing the electric field vector
-
-1. Electric Potential
-    * [Activity](Electric_Potential/Electric_Potential.md) 
-    * [Instructor Notes](Electric_Potential/Electric_Potential_Notes.md) 
-    * Covered in examples in [Chapter 23 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_)
-
-    1. 
-    2. 
-    
-1. Capacitance
-    * [Activity](Capacitance/Capacitance.md) 
-    * [Instructor Notes](Capacitance/Capacitance_Notes.md) 
-    * Covered in examples in [Chapter 24 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1QXm2mq_mQZ4emutzffd1XgPYZZo-tRYw/view?usp=sharing_remove_)
-    
-    1. 
-    2.
-
-1. Current and Resistance
-    * [Activity](Current_and_Resistance/Current_and_Resistance.md) 
-    * [Instructor Notes](Current_and_Resistance/Current_and_Resistance_Notes.md) 
-    * Covered in examples in [Chapter 25 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/184j7CecfOxJ_P-0eGLviOnQ3QJdCrJpS/view?usp=sharing_remove_)
-    
-    1. 
-    2.
-
-1. Kirchhoff's Circuit Laws
-    * [Activity](Kirchhoffs_Laws/Kirchhoffs_Laws.md) 
-    * [Instructor Notes](Kirchhoffs_Laws/Kirchhoffs_Laws_Notes.md) 
-    * Covered in examples in [Chapter 26 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1CyRNnl_i45xwHPvrJ1IY3e8xGtLf0Q50/view?usp=sharing_remove_)
-    
-    1. 
-    2.
-
-1. Long Current-Carrying Wire
-    * [Activity](Long_Current-Carrying_Wire/Long_Current-Carrying_Wire.md) 
-    * [Instructor Notes](Long_Current-Carrying_Wire/Long_Current-Carrying_Wire_Notes.md) 
-    * Covered in examples in [Chapter 27 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1MNaMYjB4m48neqiKkt0N4q-HjEg5acWC/view?usp=sharing_remove_)
-    
-    1. 
-    2.
-
-1. Lenz's Law
-    * [Activity](Lenzs_Law/Lenzs_Law.md) 
-    * [Instructor Notes](Lenzs_Law/Lenzs_Law_Notes.md) 
-    * Covered in examples in [Chapter 28 of Young and Freedman 2015, 14th Edition](_remove_)
-    
-    1. 
-    2.
-
-1. Magnetic Flux
-    * [Activity](Magnetic_Flux/Magnetic_Flux.md) 
-    * [Instructor Notes](Magnetic_Flux/Magnetic_Flux_Notes.md) 
-    * Covered in examples in [Chapter 28 of Young and Freedman 2015, 14th Edition](_remove_)
-    
-    1. 
-    2.
-
-1. LR Circuits
-    * [Activity](LR_Circuits/LR_Circuits.md) 
-    * [Instructor Notes](LR_Circuits/LR_Circuits_Notes.md) 
-    * Covered in examples in [Chapter 28 of Young and Freedman 2015, 14th Edition](_remove_)
-    
-    1. 
-    2.
-
-1. LR Circuits
-    * [Activity](LR_Circuits/LR_Circuits.md) 
-    * [Instructor Notes](LR_Circuits/LR_Circuits_Notes.md) 
-    * Covered in examples in [Chapter 28 of Young and Freedman 2015, 14th Edition](_remove_)
-    
-    1. 
-    2.
-
-1. LRC Circuits
-    * [Activity](LRC_Circuits/LRC_Circuits.md) 
-    * [Instructor Notes](LRC_Circuits/LRC_Circuits_Notes.md) 
-    * Covered in examples in [Chapter 28 of Young and Freedman 2015, 14th Edition](_remove_)
-    
-    1. 
-    2.
+* Setting up and solving for the electric field due to a finite line of charge.
+* Covered in
+    * [Section 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) and
+    * [Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/)

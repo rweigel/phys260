@@ -1,10 +1,6 @@
 # Overview
 
-See also  [Section 22.1-2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_)
-
-## Mathematical
-
-To use Gauss’s law to find the electric field for a system of charges, several calculations must be performed. First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside of a closed surface. In this activity, you will compute the electric flux through an open surface and then compute the amount of charge enclosed by the surface of a volume.
+To use Gauss’s law to find the electric field for a system of charges, several calculations must be performed. First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside of a closed surface. In this activity, you will compute the electric flux through both open and closed surfaces.
 
 Electric flux, $\Phi_E$, is the integral of $\mathbf{E}\bfcdot d\mathbf{A}$ over a surface: 
 
@@ -12,7 +8,7 @@ $$
 \Phi_E=\int\mathbf{E}\bfcdot d\mathbf{A}
 $$
 
-(Gauss’s law involves an integral over a closed surface, but here we will consider both open and closed surface.) When the magnitude and direction of $\mathbf{E}$ is the same at all points on the surface, the integral simplifies to 
+(Gauss’s law involves an integral over a closed surface, but here we will consider both open and closed surfaces; closed surfaces can be considered as being composed of open surfaces.) When the magnitude and direction of $\mathbf{E}$ is the same at all points on the surface, the integral simplifies to 
 
 $$
 \Phi_E = \mathbf{E}\bfcdot \mathbf{A} = \mathbf{E}\bfcdot \hat{\mathbf{n}}A
@@ -20,13 +16,17 @@ $$
 
 where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it is the result of the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
 
+The equation $\Phi_E = \mathbf{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
+
+$$
+\Phi_E = E_{\perp}A
+$$
+
+where $E_{\perp}$ is the component of $\mathbf{E}$ that is perpendicular to $A$.
+
 \newpage
 
 # $\Phi_E$ through Open Surface I
-
-## Example
-
-
 
 ## Problem
 
@@ -43,25 +43,36 @@ where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface w
 
    a. $\mathbf{E}=E_o\ihat$ 
 
-    b. $\mathbf{E}=E_o\jhat$ 
+   b. $\mathbf{E}=E_o\jhat$ 
 
-    c. $\mathbf{E}=E_o\khat$ 
+   c. $\mathbf{E}=E_o\khat$ 
 
-    d. $\mathbf{E}=E_o\ihat + E_o\jhat$
+   d. $\mathbf{E}=E_o\ihat + E_o\jhat$
+
+
+3. For each of the cases in 2., what is $E_{\perp}$ (the component of $\mathbf{E}$ that is perpendicular to the surface)? Also compute $\Phi_E=E_{\perp}A$.
+
+   a. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
+
+   b. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$ 
+
+   c. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
+
+   d. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
 
 \newpage
 
 # $\Phi_E$ through Closed Surface I
 
-In the previous problem, you computed the flux through an open surface. It was noted that one associate two area vectors to an open surface -- imagine your hand being an open surface. You can put the eraser of a pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
+In the previous problem, you computed the flux through an open surface. You should have noted that one can associate two area vectors to an open surface -- imagine your hand being an open surface. You can put the eraser of a pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
 
-Gauss's law, which involves electric flux, always involves a closed surface (if you put water inside the surface, it would not leak out). For Gauss's law, there is a convention for which area vector to choose -- it is the one that points outwards from the volume that the surface encloses. Suppose you have a cardboard box. You can put a pencil with the eraser on the outside of the box and perpendicular to one of the sides; this corresponds to an outward area vector. You can also put the eraser on the inside of the box with the eraser on the inner surface and the pencil perpendicular to the surface; this corresponds to an inward area vector.
+Gauss's law, which involves electric flux, always involves a closed surface (if you put water inside a closed surface, it would not leak out). For Gauss's law, there is a convention for which area vector to choose -- it is the one that points outwards from the volume that the surface encloses. 
 
 In the following example, the electric flux is computed through a closed surface (a cube) by finding the flux through each of the faces of the cube. The total electric flux is the sum of the fluxes though each cube.
 
-The reason that we are interested in knowing the flux through a closed surface is due to a remarkable mathematical result known as Gauss's law. Suppose that you are able to measure the electric field on an arbitrary and closed surface. The net flux through the surface that you compute is related to the total amount of charge inside the surface! Said another way, if you are given the electric field at all points on the surface of a closed cardboard box, you can compute the total charge inside the box without having to open it.
+The reason that we are interested in knowing the flux through a closed surface is due to a remarkable mathematical result known as Gauss's law. Suppose that you are able to measure the electric field on an arbitrary and closed surface. The net electric flux through the surface that you compute is related to the total amount of charge inside the surface! Said another way, if you are given the electric field at all points on the surface of a closed cardboard box, you can compute the total charge inside the box without having to open it.
 
-With Coulomb's law, we are given the location and values of charges and we compute the electric field anywhere in space. With Gauss's law, we can do the reverse -- given the electric field, we can compute the charge. If the volume used for the flux calculation is large, we can only find the amount of charge enclosed in the volume; however, if the closed surface is small enough, we can compute the amount of charge at a point in space.
+With Coulomb's law, we are given the location and values of charges and we compute the electric field anywhere in space. With Gauss's law, we can do the reverse -- given the electric field, we can compute the charge. If the volume used for the flux calculation is large, we can only find the amount of charge enclosed in the volume; however, if the closed surface volume approaches zero, we can compute the amount of charge at a point in space.
 
 ## Example
 
@@ -116,7 +127,7 @@ Incidentally, there is an additional questions that could have been asked: How m
 
 <img src="figures/Electric_Flux_Cube.svg"/>
 
-Find the flux through the cube for the electric field given in the above figure. Use both Methods I and II.
+Find the flux through the cube for the electric field given in the above figure.
 
 # $\Phi_E$ through Open Surface II
 

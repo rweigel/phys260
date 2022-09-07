@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>index</title>
   <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
     #toc>ol ol {
       display: none
@@ -26,6 +25,7 @@
     #toc {
       flex: 0 1 auto;
       margin-top: 0em;
+      margin-right: 1em;
       max-width: 12em;
       overflow: hidden auto;
     }
@@ -41,7 +41,7 @@
 
     #toc ol {
       list-style-type: decimal;
-      margin: 0.25em 0.5em 0em 0.25em;
+      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -91,7 +91,7 @@
       flex: 1 1 auto;
     }
 
-    #display .block.comment {
+    #display .block>.comment {
       display: none;
     }
 
@@ -464,7 +464,8 @@
             ns = event.target.parentNode.nextElementSibling;
             if (ns.style.display === 'none') {
     ns.style.display = 'block';
-            } else {
+            }
+            else {
     ns.style.display = 'none';
             }
           });
@@ -487,19 +488,36 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#overview" raw="# Overview" lo="1" class="">
+        <a href="#overview" class="highlighted">
           <span class="toctext">Overview</span>
         </a>
       </li>
       <li>
-        <a href="#using" raw="# Using" lo="21" class="highlighted" lf="21">
+        <a href="#using">
           <span class="toctext">Using</span>
         </a>
       </li>
       <li>
-        <a href="#activities" raw="# Activities" lo="33" lf="33" class="">
+        <a href="#activities">
           <span class="toctext">Activities</span>
         </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#electric-force-between-point-charges-coulomb-s-law">
+              <span class="toctext">Electric Force Between Point Charges (Coulomb’s Law)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#electric-field-of-a-point-charge">
+              <span class="toctext">Electric Field of a Point Charge</span>
+            </a>
+          </li>
+          <li>
+            <a href="#continuous-charge-distributions">
+              <span class="toctext">Continuous Charge Distributions</span>
+            </a>
+          </li>
+        </ol>
       </li>
     </ol>
   </div>
@@ -508,620 +526,155 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1" class=""><a name="overview" number="1" lo="1" raw="# Overview" class="hanchor" href="#overview"><span class="hnumber">1</span>&nbsp;<span class="htext">Overview</span></a></h1>
+        <h1 class="highlighted"><a name="overview" number="1" class="hanchor" href="#overview"><span class="hnumber">1</span>&nbsp;<span class="htext">Overview</span></a></h1>
       </div>
       <div class="block">
-        <p lo="3" lf="3" class="">These are activities that students work on during a weekly 50–minute recitation for PHYS 260. To maximize time that students spend working on problems, I typically give at most a 10–minute review. Often, my 10–minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.</p>
+        <p>These are activities that students work on during a weekly 50–minute recitation for PHYS 260 at GMU. To maximize time that students spend working on problems, I typically give at most a 10–minute review. Often, my 10–minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.</p>
       </div>
       <div class="block">
-        <p lo="5" lf="5" class="">These tutorials were written in collaboration with Jessica Rosenberg over the course of four semesters. The tutorials were revised from semester-to-semester based on observations made while using them.</p>
+        <p>These tutorials were written in collaboration with Jessica Rosenberg over the course of four semesters. The tutorials were revised from semester-to-semester based on observations made while using them.</p>
       </div>
       <div class="block">
-        <p lo="7" lf="7" class="">The length of the tutorials are such that 1–2 students out of 30 will finish completely. </p>
+        <p>The length of the tutorials are such that 1–2 students out of 30 will finish completely. </p>
       </div>
-      <div class="comment block">
-        <div lo="9" lf="9" class="">%<strong>Motivation</strong></div>
+      <div class="block">
+        <div class="comment">%<strong>Motivation</strong></div>
       </div>
-      <div class="comment block">
-        <div lo="11" lf="11" class="">%In the past, I would solve problems at the board for 40 minutes and then give a quiz at the end. The quiz required students to reproduce something that I had expained several times or to reproduce the set–up of a problem. Based on the results of these very simple quizes, few students got much out of my presentation. In addition, often students would ask for help on homework problems after the recitation that were nearly identical to the problem covered in recitation. It was clear from their questions that their notes from, or memory of, my presentation were of little use.</div>
+      <div class="block">
+        <div class="comment">%In the past, I would solve problems at the board for 40 minutes and then give a quiz at the end. The quiz required students to reproduce something that I had expained several times or to reproduce the set–up of a problem. Based on the results of these very simple quizes, few students got much out of my presentation. In addition, often students would ask for help on homework problems after the recitation that were nearly identical to the problem covered in recitation. It was clear from their questions that their notes from, or memory of, my presentation were of little use.</div>
       </div>
-      <div class="comment block">
-        <div lo="13" lf="13" class="">%Prior to working on these, approximately 1/2–2/3 of the students will have attended two 75–minute lectures covering the associated chapter and content.</div>
+      <div class="block">
+        <div class="comment">%Prior to working on these, approximately 1/2–2/3 of the students will have attended two 75–minute lectures covering the associated chapter and content.</div>
       </div>
-      <div class="comment block">
-        <div lo="15" lf="15">%The problems on these activities are generally basic and simple. They emphasis the basic calculations required to solve problems rather than concepts. I generally explain the concepts and ask questions about them while the students are solving problems or when I go over a solution.</div>
+      <div class="block">
+        <div class="comment">%The problems on these activities are generally basic and simple. They emphasis the basic calculations required to solve problems rather than concepts. I generally explain the concepts and ask questions about them while the students are solving problems or when I go over a solution.</div>
       </div>
-      <div class="comment block">
-        <div lo="17" lf="17">%However, I find that most students only have time to attempt half of the problems and there are many questions. Based on experience, I assume that after two 75–minute lectures, most students have only knowledge of keywords and associated concepts and are not able to solve problems that require more than identifying the equation to use given variables in the problem statement.</div>
+      <div class="block">
+        <div class="comment">%However, I find that most students only have time to attempt half of the problems and there are many questions. Based on experience, I assume that after two 75–minute lectures, most students have only knowledge of keywords and associated concepts and are not able to solve problems that require more than identifying the equation to use given variables in the problem statement.</div>
       </div>
-      <div class="comment block">
-        <div lo="19" lf="19">%For my recitations, students turn in their work at the end of class and I hand out solutions. The minimum score for their work is 7/10 points. Scores below a 10 are for students who made little progress and did not ask questions or work with others. I typically indicate wrong answers but do not take points off unless almost everything is very wrong. I also hand out solutions at the end of class and tell students that in order to have any chance of a passing score on the exams, they must have mastered the problems in this tutorial prior to exams. I also encourage them to review by re–solving the tutorial problems again without referring to their previous work or solutions.</div>
+      <div class="block">
+        <div class="comment">%For my recitations, students turn in their work at the end of class and I hand out solutions. The minimum score for their work is 7/10 points. Scores below a 10 are for students who made little progress and did not ask questions or work with others. I typically indicate wrong answers but do not take points off unless almost everything is very wrong. I also hand out solutions at the end of class and tell students that in order to have any chance of a passing score on the exams, they must have mastered the problems in this tutorial prior to exams. I also encourage them to review by re–solving the tutorial problems again without referring to their previous work or solutions.</div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="21" lf="21" class="highlighted"><a name="using" number="2" lo="21" raw="# Using" class="hanchor" href="#using" lf="21"><span class="hnumber">2</span>&nbsp;<span class="htext">Using</span></a></h1>
+        <h1><a name="using" number="2" class="hanchor" href="#using"><span class="hnumber">2</span>&nbsp;<span class="htext">Using</span></a></h1>
       </div>
       <div class="block">
-        <p lo="23" lf="23" class="">The source files for all activities are available at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a></p>
+        <p>The source files for all activities are available at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a></p>
       </div>
       <div class="block">
-        <p lo="25" lf="25" class="">The entire repository is available as a zip file: <a href="https://github.com/rweigel/phys260/archive/refs/heads/master.zip">https://github.com/rweigel/phys260/archive/refs/heads/master.zip</a></p>
+        <p>The entire repository is available as a zip file: <a href="https://github.com/rweigel/phys260/archive/refs/heads/master.zip">https://github.com/rweigel/phys260/archive/refs/heads/master.zip</a></p>
       </div>
       <div class="block">
-        <p lo="27" lf="27" class="">If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code>rweigel@gmu.edu</code>. In each subdirectory at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a> there is a file named <code>README.md</code> with notes written after class and after reviewing student work.</p>
+        <p>If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code>rweigel@gmu.edu</code>. In each subdirectory at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a> there is a file named <code>README.md</code> with notes written after class and after reviewing student work.</p>
       </div>
       <div class="block">
-        <p lo="29" lf="29" class="">The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit using MathCha, open the MathCha links in the comments in the <code>.md</code> or <code>.tex</code> file. The <code>.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
+        <p>The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit using MathCha, open the MathCha links in the comments in the <code>.md</code> or <code>.tex</code> file. The <code>.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
       </div>
       <div class="block">
-        <p lo="31" lf="31" class="">The master document is the <code>.md</code> file, which is converted to <code>.html</code> and <code>.tex</code>. The <code>.pdf</code> files are based on the <code>.html</code> file. The <code>.tex</code> files are auto–generated from the <code>.md</code> files and a <code>.pdf</code> created with the <code>.tex</code> file may look different than the one stored in the repository.</p>
+        <p>The master document is the <code>.md</code> file, which is converted to <code>.html</code> and <code>.tex</code>. The <code>.pdf</code> files are based on the <code>.html</code> file. The <code>.tex</code> files are auto–generated from the <code>.md</code> files and a <code>.pdf</code> created with the <code>.tex</code> file may look different than the one stored in the repository.</p>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="33" lf="33" class=""><a name="activities" number="3" lo="33" raw="# Activities" class="hanchor" href="#activities" lf="33"><span class="hnumber">3</span>&nbsp;<span class="htext">Activities</span></a></h1>
+        <h1><a name="activities" number="3" class="hanchor" href="#activities"><span class="hnumber">3</span>&nbsp;<span class="htext">Activities</span></a></h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="electric-force-between-point-charges-coulomb-s-law" number="3.1" class="hanchor" href="#electric-force-between-point-charges-coulomb-s-law"><span class="hnumber">3.1</span>&nbsp;<span class="htext">Electric Force Between Point Charges (Coulomb’s Law)</span></a></h2>
       </div>
       <div class="block">
-        <ol lo="35" lf="149">
-          <li lo="35" lf="39">
+        <ul>
+          <li>
             <div class="block">
-              <p lo="35" lf="36">Electric Force Between Point Charges (Coulomb’s Law)</p>
+              <p><a href="Electric_Force/Electric_Force.html" target="_blank">Activity</a> </p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p><a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Source files</a> </p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Using Coulomb’s law to find the electric force vector using two methods that are used in the textbook.</p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.3 of Young and Freedman 2015, 14th Edition</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="electric-field-of-a-point-charge" number="3.2" class="hanchor" href="#electric-field-of-a-point-charge"><span class="hnumber">3.2</span>&nbsp;<span class="htext">Electric Field of a Point Charge</span></a></h2>
+      </div>
+      <div class="block">
+        <ul>
+          <li>
+            <div class="block">
+              <p><a href="Electric_Field/Electric_Field.html" target="_blank">Activity</a> </p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Computing the electric field due to one and three point charges.</p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.4 of Young and Freedman 2015, 14th Edition</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="continuous-charge-distributions" number="3.3" class="hanchor" href="#continuous-charge-distributions"><span class="hnumber">3.3</span>&nbsp;<span class="htext">Continuous Charge Distributions</span></a></h2>
+      </div>
+      <div class="block">
+        <ul>
+          <li>
+            <div class="block">
+              <p>Activity: | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.html">html</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf">pdf</a> |</p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p><a href="https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions">Source files</a></p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Setting up and solving for the electric field due to a finite line of charge.</p>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Covered in</p>
             </div>
             <div class="block">
-              <ul lo="36" lf="38">
-                <li lo="36" lf="36">
+              <ul>
+                <li>
                   <div class="block">
-                    <p><a href="Electric_Force/Electric_Force.html" target="_blank">Activity</a> </p>
+                    <p><a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.5 of Young and Freedman 2015, 14th Edition</a> and</p>
                   </div>
                 </li>
-                <li lo="37" lf="37">
+                <li>
                   <div class="block">
-                    <p>Uusing Coulomb’s law to find the electric force vector using two methods that are used in the textbook.</p>
-                  </div>
-                </li>
-                <li lo="38" lf="39">
-                  <div class="block">
-                    <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.3 of Young and Freedman 2015, 14th Edition</a></p>
+                    <p><a href="https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/">Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.</a></p>
                   </div>
                 </li>
               </ul>
             </div>
           </li>
-          <li lo="40" lf="44">
-            <div class="block">
-              <p lo="40" lf="41">Electric Field of a Point Charge</p>
-            </div>
-            <div class="block">
-              <ul lo="41" lf="43">
-                <li lo="41" lf="41">
-                  <div class="block">
-                    <p><a href="Electric_Field/Electric_Field.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="42" lf="42">
-                  <div class="block">
-                    <p>Computing the electric field due to one and three point charges.</p>
-                  </div>
-                </li>
-                <li lo="43" lf="44">
-                  <div class="block">
-                    <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.4 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li lo="45" lf="49">
-            <div class="block">
-              <p lo="45" lf="46">Continuous Charge Distributions</p>
-            </div>
-            <div class="block">
-              <ul lo="46" lf="48">
-                <li lo="46" lf="46">
-                  <div class="block">
-                    <p><a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="47" lf="47">
-                  <div class="block">
-                    <p>Setting up and solving for the electric field due to a finite line of charge.</p>
-                  </div>
-                </li>
-                <li lo="48" lf="49">
-                  <div class="block">
-                    <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.5 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li lo="50" lf="54">
-            <div class="block">
-              <p lo="50" lf="51">Electric Field Lines</p>
-            </div>
-            <div class="block">
-              <ul lo="51" lf="53">
-                <li lo="51" lf="51">
-                  <div class="block">
-                    <p><a href="Electric_Field_Lines/Electric_Field_Lines.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="52" lf="52">
-                  <div class="block">
-                    <p>Drawing electric field lines for one and two charges.</p>
-                  </div>
-                </li>
-                <li lo="53" lf="54">
-                  <div class="block">
-                    <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.6 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li lo="55" lf="62">
-            <div class="block">
-              <p lo="55" lf="56">Electric Flux</p>
-            </div>
-            <div class="block">
-              <ul lo="56" lf="58">
-                <li lo="56" lf="56">
-                  <div class="block">
-                    <p><a href="Electric_Flux/Electric_Flux.html" target="_blank">Activity</a></p>
-                  </div>
-                </li>
-                <li lo="57" lf="57">
-                  <div class="block">
-                    <p><a href="Electric_Flux/Electric_Flux_Notes.html" target="_blank">Instructor Notes</a></p>
-                  </div>
-                </li>
-                <li lo="58" lf="58">
-                  <div class="block">
-                    <p>Covered in <a href="https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_">Section 22.1-2 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="59" lf="61">
-                <li lo="59" lf="59">
-                  <div class="block">
-                    <p>The area vector for an open surface (rectangle) and computing <span len="31" raw="_\mathbf{E}\bfcdot d\mathbf{A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathbf">⋅</span></span></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathbf">A</span></span></span></span> when the angle between <span len="12" raw="_\mathbf{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">E</span></span></span></span> and <span len="13" raw="_d\mathbf{A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathbf">A</span></span></span></span> is constant.</p>
-                  </div>
-                </li>
-                <li lo="60" lf="60">
-                  <div class="block">
-                    <p>The area vectors for a closed surface (cube) and computing <span len="31" raw="_\mathbf{E}\bfcdot d\mathbf{A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin"><span class="mord"><span class="mord mathbf">⋅</span></span></span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathbf">A</span></span></span></span> for each surface.</p>
-                  </div>
-                </li>
-                <li lo="61" lf="62">
-                  <div class="block">
-                    <p>In 1. and 2., then angle between <span len="12" raw="_\mathbf{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">E</span></span></span></span> and <span len="12" raw="_\mathbf{A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span></span></span></span> is <span len="13" raw="_0, 90, 180,_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">90</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">180</span><span class="mpunct">,</span></span></span></span> or <span len="5" raw="_270_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">270</span></span></span></span> degrees. Here the angle is arbitrary.</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="63" lf="70">
-            <div class="block">
-              <p lo="63" lf="64">Enclosed Charge</p>
-            </div>
-            <div class="block">
-              <ul lo="64" lf="66">
-                <li lo="64" lf="64">
-                  <div class="block">
-                    <p><a href="Enclosed_Charge/Enclosed_Charge.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="65" lf="65">
-                  <div class="block">
-                    <p><a href="Enclosed_Charge/Enclosed_Charge_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="66" lf="67">
-                  <div class="block">
-                    <p>Covered implicilty in examples in <a href="https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB/view?usp=sharing_remove_">Chapter 22 §4 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="67" lf="68">
-                <li lo="67" lf="67">
-                  <div class="block">
-                    <p>Using Coulomb’s law to find the electric force vector</p>
-                  </div>
-                </li>
-                <li lo="68" lf="69">
-                  <div class="block">
-                    <p>Computing the electric field vector</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="71" lf="78">
-            <div class="block">
-              <p lo="71" lf="72">Electric Potential</p>
-            </div>
-            <div class="block">
-              <ul lo="72" lf="74">
-                <li lo="72" lf="72">
-                  <div class="block">
-                    <p><a href="Electric_Potential/Electric_Potential.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="73" lf="73">
-                  <div class="block">
-                    <p><a href="Electric_Potential/Electric_Potential_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="74" lf="75">
-                  <div class="block">
-                    <p>Covered in examples in <a href="https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_">Chapter 23 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="75" lf="76">
-                <li lo="75" lf="75">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="76" lf="77">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="79" lf="86">
-            <div class="block">
-              <p lo="79" lf="80">Capacitance</p>
-            </div>
-            <div class="block">
-              <ul lo="80" lf="82">
-                <li lo="80" lf="80">
-                  <div class="block">
-                    <p><a href="Capacitance/Capacitance.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="81" lf="81">
-                  <div class="block">
-                    <p><a href="Capacitance/Capacitance_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="82" lf="83">
-                  <div class="block">
-                    <p>Covered in examples in <a href="https://drive.google.com/file/d/1QXm2mq_mQZ4emutzffd1XgPYZZo-tRYw/view?usp=sharing_remove_">Chapter 24 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="83" lf="84">
-                <li lo="83" lf="83">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="84" lf="85">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="87" lf="94">
-            <div class="block">
-              <p lo="87" lf="88">Current and Resistance</p>
-            </div>
-            <div class="block">
-              <ul lo="88" lf="90">
-                <li lo="88" lf="88">
-                  <div class="block">
-                    <p><a href="Current_and_Resistance/Current_and_Resistance.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="89" lf="89">
-                  <div class="block">
-                    <p><a href="Current_and_Resistance/Current_and_Resistance_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="90" lf="91">
-                  <div class="block">
-                    <p>Covered in examples in <a href="https://drive.google.com/file/d/184j7CecfOxJ_P-0eGLviOnQ3QJdCrJpS/view?usp=sharing_remove_">Chapter 25 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="91" lf="92">
-                <li lo="91" lf="91">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="92" lf="93">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="95" lf="102">
-            <div class="block">
-              <p lo="95" lf="96">Kirchhoff’s Circuit Laws</p>
-            </div>
-            <div class="block">
-              <ul lo="96" lf="98">
-                <li lo="96" lf="96">
-                  <div class="block">
-                    <p><a href="Kirchhoffs_Laws/Kirchhoffs_Laws.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="97" lf="97">
-                  <div class="block">
-                    <p><a href="Kirchhoffs_Laws/Kirchhoffs_Laws_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="98" lf="99">
-                  <div class="block">
-                    <p>Covered in examples in <a href="https://drive.google.com/file/d/1CyRNnl_i45xwHPvrJ1IY3e8xGtLf0Q50/view?usp=sharing_remove_">Chapter 26 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="99" lf="100">
-                <li lo="99" lf="99">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="100" lf="101">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="103" lf="110">
-            <div class="block">
-              <p lo="103" lf="104">Long Current-Carrying Wire</p>
-            </div>
-            <div class="block">
-              <ul lo="104" lf="106">
-                <li lo="104" lf="104">
-                  <div class="block">
-                    <p><a href="Long_Current-Carrying_Wire/Long_Current-Carrying_Wire.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="105" lf="105">
-                  <div class="block">
-                    <p><a href="Long_Current-Carrying_Wire/Long_Current-Carrying_Wire_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="106" lf="107">
-                  <div class="block">
-                    <p>Covered in examples in <a href="https://drive.google.com/file/d/1MNaMYjB4m48neqiKkt0N4q-HjEg5acWC/view?usp=sharing_remove_">Chapter 27 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="107" lf="108">
-                <li lo="107" lf="107">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="108" lf="109">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="111" lf="118">
-            <div class="block">
-              <p lo="111" lf="112">Lenz’s Law</p>
-            </div>
-            <div class="block">
-              <ul lo="112" lf="114">
-                <li lo="112" lf="112">
-                  <div class="block">
-                    <p><a href="Lenzs_Law/Lenzs_Law.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="113" lf="113">
-                  <div class="block">
-                    <p><a href="Lenzs_Law/Lenzs_Law_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="114" lf="115">
-                  <div class="block">
-                    <p>Covered in examples in <a href="_remove_">Chapter 28 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="115" lf="116">
-                <li lo="115" lf="115">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="116" lf="117">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="119" lf="126">
-            <div class="block">
-              <p lo="119" lf="120">Magnetic Flux</p>
-            </div>
-            <div class="block">
-              <ul lo="120" lf="122">
-                <li lo="120" lf="120">
-                  <div class="block">
-                    <p><a href="Magnetic_Flux/Magnetic_Flux.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="121" lf="121">
-                  <div class="block">
-                    <p><a href="Magnetic_Flux/Magnetic_Flux_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="122" lf="123">
-                  <div class="block">
-                    <p>Covered in examples in <a href="_remove_">Chapter 28 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="123" lf="124">
-                <li lo="123" lf="123">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="124" lf="125">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="127" lf="134">
-            <div class="block">
-              <p lo="127" lf="128">LR Circuits</p>
-            </div>
-            <div class="block">
-              <ul lo="128" lf="130">
-                <li lo="128" lf="128">
-                  <div class="block">
-                    <p><a href="LR_Circuits/LR_Circuits.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="129" lf="129">
-                  <div class="block">
-                    <p><a href="LR_Circuits/LR_Circuits_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="130" lf="131">
-                  <div class="block">
-                    <p>Covered in examples in <a href="_remove_">Chapter 28 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="131" lf="132">
-                <li lo="131" lf="131">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="132" lf="133">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="135" lf="142">
-            <div class="block">
-              <p lo="135" lf="136">LR Circuits</p>
-            </div>
-            <div class="block">
-              <ul lo="136" lf="138">
-                <li lo="136" lf="136">
-                  <div class="block">
-                    <p><a href="LR_Circuits/LR_Circuits.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="137" lf="137">
-                  <div class="block">
-                    <p><a href="LR_Circuits/LR_Circuits_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="138" lf="139">
-                  <div class="block">
-                    <p>Covered in examples in <a href="_remove_">Chapter 28 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="139" lf="140">
-                <li lo="139" lf="139">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="140" lf="141">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="143" lf="150">
-            <div class="block">
-              <p lo="143" lf="144">LRC Circuits</p>
-            </div>
-            <div class="block">
-              <ul lo="144" lf="146">
-                <li lo="144" lf="144">
-                  <div class="block">
-                    <p><a href="LRC_Circuits/LRC_Circuits.html" target="_blank">Activity</a> </p>
-                  </div>
-                </li>
-                <li lo="145" lf="145">
-                  <div class="block">
-                    <p><a href="LRC_Circuits/LRC_Circuits_Notes.html" target="_blank">Instructor Notes</a> </p>
-                  </div>
-                </li>
-                <li lo="146" lf="147">
-                  <div class="block">
-                    <p>Covered in examples in <a href="_remove_">Chapter 28 of Young and Freedman 2015, 14th Edition</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="block">
-              <ol lo="147" lf="148">
-                <li lo="147" lf="147">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-                <li lo="148" lf="149">
-                  <div class="block">
-                    <p></p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-        </ol>
+        </ul>
       </div>
     </div>
   </div>
