@@ -1,0 +1,44 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,193); %set diagram left start at 0, and has height of 193
+
+%Straight Lines [id:da3344454963441721] 
+\draw    (70,12) -- (70,130) ;
+\draw [shift={(70,10)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Polygon [id:ds46480537066610883] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=0.64 ] (70,130) -- (100,160) -- (100,80) -- (70.38,60.5) -- cycle ;
+%Straight Lines [id:da17740345654787837] 
+\draw    (71.41,131.41) -- (98.59,158.59) ;
+\draw [shift={(100,160)}, rotate = 225] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+\draw [shift={(70,130)}, rotate = 45] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+%Straight Lines [id:da1611967621487418] 
+\draw    (100,82) -- (100,158) ;
+\draw [shift={(100,160)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+\draw [shift={(100,80)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+%Straight Lines [id:da5493760744821823] 
+\draw    (70,130) -- (11.54,178.72) ;
+\draw [shift={(10,180)}, rotate = 320.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da2795261006841576] 
+\draw    (100,130) -- (168,130) ;
+\draw [shift={(170,130)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Pie [id:dp974067234639628] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.2 ] (87.48,147.01) .. controls (80.15,153.89) and (68.11,154.89) .. (58.3,148.79) .. controls (56.29,147.54) and (54.51,146.07) .. (52.97,144.45) -- (70,130) -- cycle ;
+
+% Text Node
+\draw (81,122.4) node [anchor=north west][inner sep=0.75pt]    {$x_{o}$};
+% Text Node
+\draw (22,172.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
+% Text Node
+\draw (158,134.4) node [anchor=north west][inner sep=0.75pt]    {$y$};
+% Text Node
+\draw (76,2.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
+% Text Node
+\draw (107,92.4) node [anchor=north west][inner sep=0.75pt]    {$z_{o}$};
+% Text Node
+\draw (61,154.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
+
+
+\end{tikzpicture}

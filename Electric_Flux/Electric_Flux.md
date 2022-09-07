@@ -1,56 +1,56 @@
 # Overview
 
-To use Gauss’s law to find the electric field for a system of charges, several calculations must be performed. First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside of a closed surface. In this activity, you will compute the electric flux through both open and closed surfaces.
+Several calculations must be performed to use Gauss's law to find the electric field for a system of charges (if possible). First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside of a closed surface. In this activity, you will compute the electric flux through both open and closed surfaces.
 
-Electric flux, $\Phi_E$, is the integral of $\mathbf{E}\bfcdot d\mathbf{A}$ over a surface: 
-
-$$
-\Phi_E=\int\mathbf{E}\bfcdot d\mathbf{A}
-$$
-
-(Gauss’s law involves an integral over a closed surface, but here we will consider both open and closed surfaces; closed surfaces can be considered as being composed of open surfaces.) When the magnitude and direction of $\mathbf{E}$ is the same at all points on the surface, the integral simplifies to 
+Electric flux, $\Phi_E$, is the integral of $\bfvec{E}\bfcdot d\bfvec{A}$ over a surface: 
 
 $$
-\Phi_E = \mathbf{E}\bfcdot \mathbf{A} = \mathbf{E}\bfcdot \hat{\mathbf{n}}A
+\Phi_E=\int\bfvec{E}\bfcdot d\bfvec{A}
 $$
 
-where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it is the result of the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
+When the magnitude and direction of $\bfvec{E}$ is the same at all points on the surface, the integral simplifies to 
 
-The equation $\Phi_E = \mathbf{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
+$$
+\Phi_E = \bfvec{E}\bfcdot \bfvec{A} = \bfvec{E}\bfcdot \hat{\mathbf{n}}A
+$$
+
+where $\hat{\mathbf{n}}$ is a unit vector that is perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it results from the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
+
+The equation $\Phi_E = \bfvec{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
 
 $$
 \Phi_E = E_{\perp}A
 $$
 
-where $E_{\perp}$ is the component of $\mathbf{E}$ that is perpendicular to $A$.
+where $E_{\perp}$ is the component of $\bfvec{E}$ that is perpendicular to $A$. If the perpendicular component of $\bfvec{E}$ is in the same direction as the normal direction for $\bfvec{A}$, the flux is positive. If the perpendicular component of $\bfvec{E}$ is in the opposite direction as the normal direction for $\bfvec{A}$, the flux is negative.
 
 \newpage
 
-# $\Phi_E$ through Open Surface I
+# $\Phi_E$ Through Open Surface
 
-## Problem
+## Problem I
 
 <img src="figures/Electric_Flux_xz_Plane.svg"/>
 
-1. Draw the area vector $\mathbf{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for area to be a vector quantity.
+1. Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for an area to be a vector quantity.
 
     a. Can you come up with another way to describe the orientation of this rectangle in space?
 
     b. Is there only one normal direction to this area? Discuss your reasoning with your group. 
 
 
-2. For each of the following cases, draw the area and $\hat{\mathbf{n}}$  for the previous figure and $\mathbf{E}$ when viewed from a point on the positive $z$-axis that is far from the origin. Then compute $\Phi_E$.
+2. For each of the following $\bfvec{E}$, draw  $\bfvec{E}$ and $\hat{\mathbf{n}}$ for the area in the previous figure when viewed from a point on the positive $z$-axis that is far from the origin (that is, draw the projection onto the $x$--$y$ plane). Then compute $\Phi_E$.
 
-   a. $\mathbf{E}=E_o\ihat$ 
+   a. $\bfvec{E}=E_o\ihat\qquad$ $\Phi_E=$
 
-   b. $\mathbf{E}=E_o\jhat$ 
+   b. $\bfvec{E}=E_o\jhat\qquad$ $\Phi_E=$ 
 
-   c. $\mathbf{E}=E_o\khat$ 
+   c. $\bfvec{E}=E_o\khat\qquad$ $\Phi_E=$ 
 
-   d. $\mathbf{E}=E_o\ihat + E_o\jhat$
+   d. $\bfvec{E}=E_o\ihat + E_o\jhat\qquad$ $\Phi_E=$
 
 
-3. For each of the cases in 2., what is $E_{\perp}$ (the component of $\mathbf{E}$ that is perpendicular to the surface)? Also compute $\Phi_E=E_{\perp}A$.
+3. For each of the cases in 2., what is $E_{\perp}$ (the component of $\bfvec{E}$ that is perpendicular to the surface)? Also compute $\Phi_E=E_{\perp}A$.
 
    a. $E_{\perp}=\qquad$ $\Phi_E=E_{\perp}A=$
 
@@ -62,17 +62,33 @@ where $E_{\perp}$ is the component of $\mathbf{E}$ that is perpendicular to $A$.
 
 \newpage
 
-# $\Phi_E$ through Closed Surface I
+## Problem II
 
-In the previous problem, you computed the flux through an open surface. You should have noted that one can associate two area vectors to an open surface -- imagine your hand being an open surface. You can put the eraser of a pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
+<img src="figures/Electric_Flux_xy_Plane_Rotated.svg"/>
+
+If the area from the previous problem is rotated by $\phi=45^\circ$ around the $z$--axis, compute the flux for each electric field. Hint: Draw the area as it would look from a point on the positive $z$-axis that is far from the origin (that is, draw the projection onto the $x$--$y$ plane). Then draw $\hat{\mathbf{n}}$ and $\bfvec{E}$ for each case.
+
+   a. $\bfvec{E}=E_o\ihat\qquad$ $\Phi_E=$
+
+   b. $\bfvec{E}=E_o\jhat\qquad$ $\Phi_E=$ 
+
+   c. $\bfvec{E}=E_o\khat\qquad$ $\Phi_E=$ 
+
+   d. $\bfvec{E}=E_o\ihat + E_o\jhat\qquad$ $\Phi_E=$
+
+# $\Phi_E$ Through Closed Surface
+
+In the previous problem, you computed the flux through an open surface. You should have noted that one can associate two area vectors to an open surface -- imagine your hand being an open surface. You can put the a pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
 
 Gauss's law, which involves electric flux, always involves a closed surface (if you put water inside a closed surface, it would not leak out). For Gauss's law, there is a convention for which area vector to choose -- it is the one that points outwards from the volume that the surface encloses. 
 
 In the following example, the electric flux is computed through a closed surface (a cube) by finding the flux through each of the faces of the cube. The total electric flux is the sum of the fluxes though each cube.
 
-The reason that we are interested in knowing the flux through a closed surface is due to a remarkable mathematical result known as Gauss's law. Suppose that you are able to measure the electric field on an arbitrary and closed surface. The net electric flux through the surface that you compute is related to the total amount of charge inside the surface! Said another way, if you are given the electric field at all points on the surface of a closed cardboard box, you can compute the total charge inside the box without having to open it.
+%The reason that we are interested in knowing the flux through a closed surface is due to a remarkable mathematical result known as Gauss's law. Suppose that you are able to measure the electric field on an arbitrary and closed surface. The net electric flux through the surface that you compute is related to the total amount of charge inside the surface! For example, if you are given the electric field at all points on the surface of a closed cardboard box, you can compute the total charge inside the box without having to open it. 
 
-With Coulomb's law, we are given the location and values of charges and we compute the electric field anywhere in space. With Gauss's law, we can do the reverse -- given the electric field, we can compute the charge. If the volume used for the flux calculation is large, we can only find the amount of charge enclosed in the volume; however, if the closed surface volume approaches zero, we can compute the amount of charge at a point in space.
+With Coulomb's law, we are given the location and values of charges and we compute the electric field anywhere in space. With Gauss's law, we can do the reverse -- given an electric field on the surface of a small volume of space, we can compute the charge in the volume. (If the volume is large, we can only compute the amount of charge enclosed in the volume; however, if the closed surface volume approaches zero, we can compute the amount of charge at a point in space.)
+
+\newpage
 
 ## Example
 
@@ -82,9 +98,9 @@ Find the flux through the six labeled faces of the cube with side length $a$ whe
 
 {\bf Answer}
 
-This example is similar to Example 22.2a of the textbook. We'll solve part 1. using two methods. The first is a more visual method. The second is more mathematical. Although the mathematical complexity of the second method is not really needed for this problem, it allows one to solve the next problem without an additional diagram.
+This example is similar to Example 22.2a of the textbook. We'll solve it using two methods. The first is a more visual method. The second is more mathematical.
 
-Method I
+**Method I**
 
 The electric field is parallel to surfaces 1, 2, 5, and 6. Thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces.
 
@@ -100,50 +116,41 @@ $\Phi_E^{4}=-E_oA=-E_oa^2$
 
 The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
 
-Method II
+**Method II**
 
 Conveniently, the normal vectors are parallel to the Cartesian unit vectors. Based on the diagram, $\hat{\mathbf{n}}_1=\ihat$, $\hat{\mathbf{n}}_2=\jhat$, $\hat{\mathbf{n}}_3=\khat$, $\hat{\mathbf{n}}_4=-\khat$
 $\hat{\mathbf{n}}_5=-\jhat$, $\hat{\mathbf{n}}_6=-\ihat$. The negative sign for the last three normal vectors is due to the convention that the normal points outwards from a closed surface.
 
-The area vector is the area times the normal vector, so $\mathbf{A}_1=A\ihat$, $\mathbf{A}_2=A\jhat$, $\mathbf{A}_3=A\khat$, $\mathbf{A}_4=-A\khat$, $\mathbf{A}_4=-A\jhat$, and $\mathbf{A}_4=-A\ihat$, where $A=a^2$.
+The area vector is the area times the normal vector, so $\bfvec{A}_1=A\ihat$, $\bfvec{A}_2=A\jhat$, $\bfvec{A}_3=A\khat$, $\bfvec{A}_4=-A\khat$, $\bfvec{A}_4=-A\jhat$, and $\bfvec{A}_4=-A\ihat$, where $A=a^2$.
 
 Recall that $\ihat\cdot\ihat=\jhat\cdot\jhat=\khat\cdot\khat=1$ and the dot product of any other combinations of Cartesian unit vectors is zero: $\ihat\cdot\jhat=0$, $\jhat\cdot\khat=0$, and $\ihat\cdot\khat=0$. Dot products of unit vectors are reviewed in Section 1.10 of the textbook.
 
-$\Phi_E^{1}=\mathbf{E}\cdot \mathbf{A}_1=\mathbf{E}\cdot A\hat{\mathbf{n}}_1=E_o\khat\cdot A\ihat=E_oA(\khat\cdot \ihat)=0$
+$\Phi_E^{1}=\bfvec{E}\cdot \bfvec{A}_1=\bfvec{E}\cdot A\hat{\mathbf{n}}_1=E_o\khat\cdot A\ihat=E_oA(\khat\cdot \ihat)=0$
 
-$\Phi_E^{2}=\mathbf{E}\cdot \mathbf{A}_2=\mathbf{E}\cdot A\hat{\mathbf{n}}_2=E_o\hat{\mathbf{k}}\cdot A\jhat=E_oA(\khat\cdot \jhat)=0$
+$\Phi_E^{2}=\bfvec{E}\cdot \bfvec{A}_2=\bfvec{E}\cdot A\hat{\mathbf{n}}_2=E_o\hat{\mathbf{k}}\cdot A\jhat=E_oA(\khat\cdot \jhat)=0$
 
-$\Phi_E^{3}=\mathbf{E}\cdot \mathbf{A}_3=\mathbf{E}\cdot A\hat{\mathbf{n}}_3=E_o\hat{\mathbf{k}}\cdot A\khat=E_oA(\khat\cdot\khat)=E_oA=E_oa^2$
+$\Phi_E^{3}=\bfvec{E}\cdot \bfvec{A}_3=\bfvec{E}\cdot A\hat{\mathbf{n}}_3=E_o\hat{\mathbf{k}}\cdot A\khat=E_oA(\khat\cdot\khat)=E_oA=E_oa^2$
 
-$\Phi_E^{4}=\mathbf{E}\cdot \mathbf{A}_4=\mathbf{E}\cdot A\hat{\mathbf{n}}_4=E_o\hat{\mathbf{k}}\cdot (-A\khat)=-E_oA(\khat\cdot\khat)=-E_oa^2$
+$\Phi_E^{4}=\bfvec{E}\cdot \bfvec{A}_4=\bfvec{E}\cdot A\hat{\mathbf{n}}_4=E_o\hat{\mathbf{k}}\cdot (-A\khat)=-E_oA(\khat\cdot\khat)=-E_oa^2$
 
-$\Phi_E^{5}=\mathbf{E}\cdot \mathbf{A}_5=\mathbf{E}\cdot A\hat{\mathbf{n}}_5=E_o\hat{\mathbf{k}}\cdot (-A\jhat)=E_oA(\khat\cdot\jhat)=0$
+$\Phi_E^{5}=\bfvec{E}\cdot \bfvec{A}_5=\bfvec{E}\cdot A\hat{\mathbf{n}}_5=E_o\hat{\mathbf{k}}\cdot (-A\jhat)=E_oA(\khat\cdot\jhat)=0$
 
-$\Phi_E^{6}=\mathbf{E}\cdot \mathbf{A}_6=\mathbf{E}\cdot A\hat{\mathbf{n}}_6=E_o\hat{\mathbf{k}}\cdot (-A\ihat)=-E_oA(\khat\cdot\ihat)=0$
+$\Phi_E^{6}=\bfvec{E}\cdot \bfvec{A}_6=\bfvec{E}\cdot A\hat{\mathbf{n}}_6=E_o\hat{\mathbf{k}}\cdot (-A\ihat)=-E_oA(\khat\cdot\ihat)=0$
 
 Incidentally, there is an additional questions that could have been asked: How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed is zero.
+
+\newpage
 
 ## Problem
 
 <img src="figures/Electric_Flux_Cube.svg"/>
 
-Find the flux through the cube for the electric field given in the above figure.
+Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is everywhere in the $+y$ direction.
 
-# $\Phi_E$ through Open Surface II
+<div style="height:10em"/>
 
-Previously you computed the flux through an open surface when the electric field was either parallel or perpendicular to the surface. 
+## Problem
 
-To compute the flux through an open surface when this is not the case, take the given electric field and break it down into components parallel ($E_{||})$ and perpendicular ($E_{
-\perp}$) to the surface. The component parallel to the surface contributes zero flux and the component perpendicular contributes a flux of $E_{\perp}A$.
+<img src="figures/Electric_Flux_Cube_II.svg"/>
 
-
-# $\Phi_E$ through Closed Surface II
-
-Previously you computed the flux through a closed surface when the electric field was either parallel or perpendicular to the surface. 
-
-To compute the flux through a closed surface when this is not the case, use the technique from the previous section to compute the flux through each of the sides of the surface.
-
-# $\Phi_E$ through General Closed Surfaces
-
-
-
+Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is as shown in the diagram.

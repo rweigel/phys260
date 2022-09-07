@@ -53,3 +53,7 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 * Covered in
     * [Section 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) and
     * [Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/)
+
+## Electric Flux
+* Activity: | [html](Electric_Flux/Electric_Flux.html) |  [pdf](Electric_Flux/Electric_Flux.pdf) |
+* [Source files](https://github.com/rweigel/phys260/tree/master/Electric_Flux)
