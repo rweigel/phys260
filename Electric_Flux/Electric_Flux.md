@@ -36,9 +36,7 @@ where $E_{\perp}$ is the component of $\bfvec{E}$ that is perpendicular to $A$. 
 
 <img src="figures/Electric_Flux_xz_Plane.svg"/>
 
-1. Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the figure and explain what it means for an area to be a vector quantity.
-
-    a. Can you come up with another way to describe the orientation of this rectangle in space?
+1. a. Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the figure.
 
     b. Is there only one normal direction to this area? Discuss your reasoning with your group. 
 
@@ -98,15 +96,15 @@ With Coulomb's law, we are given the location and values of charges and we compu
 
 <img src="figures/Electric_Flux_Cube.svg"/>
 
-Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is everywhere in the $+z$ direction.
+Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is everywhere in the $+z$ direction with magnitude $E_o$.
 
 {\bf Answer}
 
-This example is similar to Example 22.2a of the textbook. We'll solve it using two methods. The first is a more visual method. The second is more mathematical.
+This example is similar to Example 22.2a of the textbook. We'll solve it using two methods. The first method is useful for cases when the electric field is either parallel or perpendicular to all surfaces. The second method is useful for more general cases, such as problem 3.3.
 
 **Method I**
 
-The electric field is parallel to surfaces 1, 2, 5, and 6. Thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces.
+The electric field is parallel to surfaces 1, 2, 5, and 6. Thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces. 
 
 $\Phi_E^{1}=\Phi_E^{2}=\Phi_E^{5}=\Phi_E^{6}=0$
 
@@ -122,7 +120,7 @@ The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Thinking agai
 
 **Method II**
 
-Conveniently, the normal vectors are parallel to the Cartesian unit vectors. Based on the diagram, $\hat{\mathbf{n}}_1=\ihat$, $\hat{\mathbf{n}}_2=\jhat$, $\hat{\mathbf{n}}_3=\khat$, $\hat{\mathbf{n}}_4=-\khat$
+In this problem, the normal vectors are parallel to the Cartesian unit vectors. Based on the diagram, $\hat{\mathbf{n}}_1=\ihat$, $\hat{\mathbf{n}}_2=\jhat$, $\hat{\mathbf{n}}_3=\khat$, $\hat{\mathbf{n}}_4=-\khat$
 $\hat{\mathbf{n}}_5=-\jhat$, $\hat{\mathbf{n}}_6=-\ihat$. The negative sign for the last three normal vectors is due to the convention that the normal points outwards from a closed surface.
 
 The area vector is the area times the normal vector, so $\bfvec{A}_1=A\ihat$, $\bfvec{A}_2=A\jhat$, $\bfvec{A}_3=A\khat$, $\bfvec{A}_4=-A\khat$, $\bfvec{A}_4=-A\jhat$, and $\bfvec{A}_4=-A\ihat$, where $A=a^2$.
@@ -141,7 +139,7 @@ $\Phi_E^{5}=\bfvec{E}\cdot \bfvec{A}_5=\bfvec{E}\cdot A\hat{\mathbf{n}}_5=E_o\ha
 
 $\Phi_E^{6}=\bfvec{E}\cdot \bfvec{A}_6=\bfvec{E}\cdot A\hat{\mathbf{n}}_6=E_o\hat{\mathbf{k}}\cdot (-A\ihat)=-E_oA(\khat\cdot\ihat)=0$
 
-Incidentally, there is an additional questions that could have been asked: How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed is zero.
+How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed is zero.
 
 \newpage
 
