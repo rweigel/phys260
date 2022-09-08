@@ -11,10 +11,7 @@
 \makeatletter
 \renewcommand\tagform@[1]{}
 \makeatother
-% Disable page numbering (https://tex.stackexchange.com/a/360378)
-\makeatletter
-\renewcommand\tagform@[1]{}
-\makeatother
+
 
 % Allow Unicode (some, e.g., © and £ at least)
 % https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
@@ -68,6 +65,7 @@
 \pagestyle{fancy}
 \lhead{Electric Flux}
 \rhead{\thepage}
+\fancyfoot{}
 
 \begin{document}
 
