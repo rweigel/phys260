@@ -34,26 +34,24 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
-* [Activity](Electric_Force/Electric_Force.md) 
-* [Source files](https://github.com/rweigel/phys260/tree/master/Electric_Force) 
+* [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Force) 
 * Using Coulomb's law to find the electric force vector using two methods that are used in the textbook.
 * Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 ## Electric Field of a Point Charge
 
-* [Activity](Electric_Field/Electric_Field.md) 
+* [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Field)
 * Computing the electric field due to one and three point charges.
 * Covered in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 ## Continuous Charge Distributions
-* Activity: | [html](Continuous_Charge_Distributions/Continuous_Charge_Distributions.html) |  [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) |
-* [Source files](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions)
 
+* [Activity](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions)
 * Setting up and solving for the electric field due to a finite line of charge.
 * Covered in
     * [Section 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) and
     * [Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/)
 
 ## Electric Flux
-* Activity: | [html](Electric_Flux/Electric_Flux.html) |  [pdf](Electric_Flux/Electric_Flux.pdf) |
-* [Source files](https://github.com/rweigel/phys260/tree/master/Electric_Flux)
+
+* [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Flux)

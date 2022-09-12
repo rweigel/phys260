@@ -1,0 +1,57 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,113); %set diagram left start at 0, and has height of 113
+
+%Flowchart: Direct Access Storage [id:dp2523632931053985] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (129.5,79.43) -- (90.5,79.43) .. controls (84.7,79.43) and (80,67.92) .. (80,53.71) .. controls (80,39.51) and (84.7,28) .. (90.5,28) -- (129.5,28)(140,53.71) .. controls (140,67.92) and (135.3,79.43) .. (129.5,79.43) .. controls (123.7,79.43) and (119,67.92) .. (119,53.71) .. controls (119,39.51) and (123.7,28) .. (129.5,28) .. controls (135.3,28) and (140,39.51) .. (140,53.71) ;
+%Straight Lines [id:da2128877957194073] 
+\draw [line width=1.5]    (20,53.71) -- (80,53.24) ;
+%Straight Lines [id:da8973887652942925] 
+\draw [line width=1.5]    (130,53.71) -- (210,53.71) ;
+%Straight Lines [id:da09343418673905979] 
+\draw [line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (90,53.71) -- (130,53.71) ;
+%Shape: Grid [id:dp9875189635012225] 
+\draw  [draw opacity=0] (240,20) -- (390,20) -- (390,80) -- (240,80) -- cycle ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ] (240,20) -- (240,80)(250,20) -- (250,80)(260,20) -- (260,80)(270,20) -- (270,80)(280,20) -- (280,80)(290,20) -- (290,80)(300,20) -- (300,80)(310,20) -- (310,80)(320,20) -- (320,80)(330,20) -- (330,80)(340,20) -- (340,80)(350,20) -- (350,80)(360,20) -- (360,80)(370,20) -- (370,80)(380,20) -- (380,80) ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ] (240,20) -- (390,20)(240,30) -- (390,30)(240,40) -- (390,40)(240,50) -- (390,50)(240,60) -- (390,60)(240,70) -- (390,70) ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]  ;
+%Straight Lines [id:da9734706800390553] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]   (240,80) -- (390,80) ;
+%Straight Lines [id:da6432884490747786] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]   (390,80) -- (390,20) ;
+
+%Straight Lines [id:da029072803872031594] 
+\draw    (250,23) -- (250,80) ;
+\draw [shift={(250,20)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da733891856041468] 
+\draw    (240,70) -- (387,70) ;
+\draw [shift={(390,70)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da5848925936939344] 
+\draw    (330,64) -- (330,75) ;
+%Straight Lines [id:da6508968321800463] 
+\draw    (93,88) -- (127,88) ;
+\draw [shift={(130,88)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(90,88)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da9876972360001792] 
+\draw    (150,53.71) -- (150,31) ;
+\draw [shift={(150,28)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da893064176898352] 
+\draw    (23,18) -- (207,18) ;
+\draw [shift={(210,18)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(20,18)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+
+% Text Node
+\draw (241,2.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q\mathrm{_{encl}}$};
+% Text Node
+\draw (393,63.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
+% Text Node
+\draw (327,78.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$h$};
+% Text Node
+\draw (105,95.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$h$};
+% Text Node
+\draw (154,35.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
+% Text Node
+\draw (107,6.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$L$};
+
+
+\end{tikzpicture}
