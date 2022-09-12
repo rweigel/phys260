@@ -32,6 +32,10 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 # Activities
 
+%https://rweigel.github.io/phys260/Electric_Force/Electric_Force-solutions.pdf
+%https://rweigel.github.io/phys260/Electric_Field/Electric_Field-solutions.pdf
+%https://rweigel.github.io/phys260/Electric_Flux/Electric_Flux-solutions.pdf
+
 ## Electric Force Between Point Charges (Coulomb's Law)
 
 * [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Force) 
