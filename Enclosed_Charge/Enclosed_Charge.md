@@ -12,27 +12,26 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
 
 <img src="figures/Line.svg"/>
 
-1. Find the charge density on the line.
+1. Find the linear charge density, $\lambda$, on the line.
 
     {\bf Answer}: Because the charge is uniformly distributed on the line, the the charge density is constant and is the total charge divided by the length: $\lambda={3Q}/{L}$.
 
-2. Find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=h/100$, $r=h/2$, $r=h$, and $r=2h$. The enclosed charge should be in terms of one or more of $\epsilon_o$, numbers, and the parameters given ($Q$, $L$, $h$).
 
-    {\bf Answer}:  The dashed line in the figure is the part of the line inside of the Gaussian cylinder. The length of the dashed line is $h$. The charge enclosed for all four cases is $Q_{\text{encl}}=\lambda l=3Q{h}/{L}$. In retrospect, one could have obtained this equation without considering the charge density -- the charge enclosed is the total charge $\times$ the ratio $h/L$. 
+2. Find an equation that relates $Q_{\text{encl}}$ to $r$ in terms of $\lambda$ and one or more of $r$, $h$, and $L$.
 
-    The equation for the charge enclosed does not depend on the radius of the Gaussian cylinder. Visually, this is expected. If the radius of the cylinder increases, the length of the line inside of the cylinder does not change. 
+    {\bf Answer}: As noted in the answer to part 2., the enclosed charge does not change as the radius of the Gaussian cylinder changes. So $Q_{\text{encl}}(r)=\lambda h=\text{const}$, corresponding to the straight line on the graph in the answer to part 3.
 
-    Check: As $h\rightarrow 0$, we expect from the diagram that the amount of charge enclosed should approach zero. This equation also says that as the ratio $h/L\rightarrow 0$, $Q_{\text{encl}}\rightarrow 0$. Does this make sense?
+    {\bf Answer}:  The dashed line in the figure is the part of the line inside of the Gaussian cylinder. The length of the dashed line is $h$. The charge enclosed for all four cases is $Q_{\text{encl}}=\lambda h=3Q{h}/{L}$. In retrospect, one could have obtained the latter equation without considering the charge density -- the charge enclosed is the total charge $\times$ the ratio $h/L$.
 
-3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. 
+
+3. Find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=h/100$, $r=h/2$, $r=h$, and $r=2h$.
+
+
+4. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. 
 
     {\bf Answer:}
 
     <img src="figures/Line_Graph.svg"/>
-
-4. Find an equation that relates $Q_{\text{encl}}$ to $r$. Plot this equation on the graph above.
-
-    {\bf Answer}: As noted in the answer to part 2., the enclosed charge does not change as the radius of the Gaussian cylinder changes. So $Q_{\text{encl}}(r)=\lambda h=\text{const}$, corresponding to the straight line on the graph.
 
 \newpage
 
@@ -42,59 +41,52 @@ A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $
 
 <img src="figures/Hollow_Cylinder.svg"/>
 
-1. Find the surface charge density on the curved part of the charged cylinder. Also find the charge per unit length.
+1.  Find the linear charge density, $\lambda$, of the charged cylinder.
 
-    {\bf Answer}: The area of the curved surface is the circumference $\times H = 2\pi RH$. The charge is uniformly distributed, so the charge density is the total charge divided by the area: $\sigma={3Q}/{2\pi RH}$. The length of the cylinder is $H$, so the linear charge density is $\lambda = 3Q/H$. Note that $\lambda=\sigma 2\pi R$.
+    {\bf Answer}: The length of the cylinder is $H$, so the linear charge density is $\lambda = 3Q/H$.
 
-2. Find the amount of charge enclosed in Gaussian cylinder of radii $r=0$, $r=R/2$, $r=2R$, and $r=4R$.
+2. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r<R$. Your equation should involve $\lambda$ and one or more of $h$, $r$, and $R$.
 
-    {\bf Answer}: Imagine that the blue Gaussian cylinder was fully inside of the hollow cylinder. There would be no charge inside of it. As a result, the charge enclosed for $r=0$ and $r=R/2$ is zero. Once the Gaussian cylinder's radius is larger than the hollow cylinder's radius, the total charge inside of the Gaussian cylinder does not change. To find the charge enclosed in this case, we need to find the area of the hollow cylinder enclosed. It is $2\pi R h$. The charge enclosed is the charge density computed in part 1. times this area: $Q_{\text{encl}}=\sigma (2\pi R h) = 3Q{h}/{H}$. In retrospect, one could have obtained this equation without considering the surface charge density -- the charge enclosed is the total charge $\times$ the ratio $h/H$. 
-    
-    Alternatively, we can state that the amount of charge enclosed is the linear charge density $\times h = \lambda h = 3Q{h}/{H}$.
+    {\bf Answer}: Imagine that the blue Gaussian cylinder was fully inside of the hollow cylinder. There would be no charge inside of it. As a result, the charge enclosed for $r< R$ is zero, so $Q_{\text{encl}}=0$.
 
-    Check: Visually, as the length $h$ of the Gaussian cylinder shrinks to zero, the enclosed charge should approach zero. The equation for $Q_{\text{\text{encl}}}$ is consistent with this observation.
-    
-3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder.
+3. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r>R$. Your equation should involve $\lambda$ and one or more of $h$, $r$, and $R$.
 
-    {\bf Answer}: 
+    The amount of charge enclosed is the charge per unit length $\times h = \lambda h$, so  $Q_{\text{encl}}=\lambda h$. (The amount of charge enclosed does not depend on $r$.)
 
-4. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r<R$. Plot this equation on the graph above.
+4. Find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=0$, $r=R/2$, $r=2R$, and $r=4R$.
 
-    {\bf Answer}: The enclosed charge is zero for $r<R$, so $Q_{\text{\text{encl}}}(r)=0$.
 
-5. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r>R$. Plot this equation on the graph above.
-
-    {\bf Answer}: The enclosed charge is constant for $r>R$, so, $Q_{\text{\text{encl}}}(r)=3Q{l}/{L}=\text{constant}$.
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Plot the equations found in parts 2. and 3.
 
 \newpage
 
 # Solid Cylinder
 
-A solid non--conducting cylinder of radius, $R$ and length, $L$ has a charge of $+3Q$ uniformly distributed within it. The Gaussian cylinder shown has the same center line as the charged cylinder, length $l$, and radius $r$.
+A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of $+3Q$ uniformly distributed within it. The Gaussian cylinder has length $h$, radius $r$, and the same center line as the charged cylinder.
 
 <img src="figures/Solid_Cylinder.svg"/>
 
-1. Find the charge density of the charged cylinder.
+1. Find the volume charge density, $\rho$, of the charged cylinder.
 
-    {\bf Answer:} The volume of a cylinder is its cross-sectional area time its height, $\pi R^2 L$. The charge density is charge/volume, $\rho=3Q/(\pi R^2 L)$.
+    {\bf Answer:} The volume of the charged cylinder is its cross-sectional area time its height: $V=\pi R^2 h$. The charge density is charge/volume: $\rho=3Q/(\pi R^2 L)$.
 
 2. Find the amount of charge enclosed in a Gaussian cylinder of radius $r=0$, $r=R/2$, $r=2R$, and $r=4R$.
 
-    {\bf Answer}: When $r<R$, the Gaussian cylinder is fully inside of the charged cylinder. The charge in the Gaussian cylinder is the charge density of the charged cylinder times the volume of the Gaussian cylinder: $Q_{\text{encl}}=\rho \pi r^2 l = 3Q(r^2/R^2)(l/L)$.
+    {\bf Answer}: When $r<R$, the Gaussian cylinder is fully inside of the charged cylinder. The charge in the Gaussian cylinder is the charge density of the charged cylinder times the volume of the Gaussian cylinder: $Q_{\text{encl}}=\rho \pi r^2 h = 3Q(r^2/R^2)(h/H)$.
 
-    For any $r\ge R$, the amount of charge inside the Gaussian cylinder does not change with $r$. The amount of charge depends on volume of inside of the Gaussian cylinder, which is $\pi R^2 l$, so $Q_{\text{encl}}=\rho \pi R^2 l = 3Q(l/L)$. When $l=L$, $Q_{\text{encl}}=3Q$, which makes sense because all of the charge is inside of the Gaussian cylinder.
+    For any $r\ge R$, the amount of charge inside the Gaussian cylinder does not change with $r$. The amount of charge depends on volume of inside of the Gaussian cylinder, which is $\pi R^2 h$, so $Q_{\text{encl}}=\rho \pi R^2 h = 3Q(h/H)$. When $h=H$, $Q_{\text{encl}}=3Q$, which makes sense because all of the charge is inside of the Gaussian cylinder.
 
 3. Plot the four values of enclosed charge  calculated above versus the radius of the Gaussian cylinder.
 
-    {\bf Answer}: For $r<R$, the curve will be a parabola because of the $r^2$. For $r>R$, curve will be a horizontal line that intersects with the parabola at $r=R$. For values outside of the cylinder, r $>$ R, the enclosed charge will be constant.
+    {\bf Answer}: For $r<R$, the curve will be a parabola because of the $r^2$. For $r>R$, curve will be a horizontal line that intersects with the parabola at $r=R$. For values outside of the cylinder, $r>R$, the enclosed charge will be constant.
 
 4. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r<R$. Plot this equation on the graph above.
 
-    {\bf Answer}: As noted in part 2, the charge enclosed is $Q_{\text{encl}}=\rho \pi r^2 l = 3Q(r^2/R^2)(l/L)$. Because of the dependence on r$^2$ the curve is parabolic. 
+    {\bf Answer}: As noted in part 2, the charge enclosed is $Q_{\text{encl}}=\rho \pi r^2 h$. Because of the dependence on r$^2$, the curve is a parabola. 
 
 5. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r>R$. Plot this equation on the graph above.
 
-    {\bf Answer}: As noted in part 2, the charge enclosed is $Q_{\text{encl}}=3Q$ so it is constant. 
+    {\bf Answer}: As noted in part 2, the charge enclosed is $Q_{\text{encl}}=\rho \pi R^2 h$ so it is independent of $r$. 
 
 \newpage
 
@@ -108,7 +100,7 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ distribute
 
 2. Find the amount of charge enclosed in Gaussian sphere of radii $r=0$, $r=R/2$, $r=2R$, and $r=4R$.
 
-    {\bf Answer}: When $r < R$, $Q_{\text{encl}}=0$. When $r\ge R$, $Q_{\text{encl}}=3Q$ because all of the charge is enclosed.
+    {\bf Answer}: When $r < R$, $Q_{\text{encl}}=0$. When $r\ge R$, $Q_{\text{encl}}=\sigma 4\pi R^2=3Q$ because all of the charge is enclosed.
 
 3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere.
 
@@ -118,7 +110,7 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ distribute
 
 5. Find an equation that relates $Q_{\text{encl}}$ and $r$ for $r>R$. Plot this equation on the graph above.
 
-%{\bf Answer}: Plot should be a horizontal line between $r$ and $R$ at y = 0 and a horizontal line for $r\ge R$ at y = $3Q$.
+    {\bf Answer}: $Q_{\text{encl}}=\sigma 4\pi R^2$, which corresponds to a horizontal line that intersects the parabola at $r=R$.
 
 \newpage
 
@@ -126,9 +118,15 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ distribute
 
 A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniformly _throughout_ it. The cross--section of the sphere is shown along with a dashed line representing the surface of a Gaussian sphere, which has the same center as the charged sphere and a radius $r$.
 
-1. Find the charge density in the sphere.
+1. Find the volume charge density, $\rho$, of the charged sphere.
+
+    {\bf Answer}: $\ds \rho=3Q/[(4/3)\pi R^3]$
 
 2. Find the amount of charge enclosed in Gaussian sphere of radii $r=0$, $r=R/2$, $r=2R$, and $r=4R$.
+
+    {\bf Answer}: For $r \le R$, $Q_{\text{encl}}=\rho [(4/3)\pi r^3]$
+    
+    For $r \ge R$,  $Q_{\text{encl}}=\rho [(4/3)\pi R^3]$
 
 3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere.
 
