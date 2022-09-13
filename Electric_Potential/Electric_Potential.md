@@ -1,3 +1,7 @@
+```mdextension
+Title: Electric Potential
+```
+
 # Overview 
 
 [Chapter 23 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_)

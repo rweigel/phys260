@@ -1,5 +1,5 @@
 ```mdextension
-Title: Electric Field Activity
+Title: Electric Field
 ```
 
 # Overview

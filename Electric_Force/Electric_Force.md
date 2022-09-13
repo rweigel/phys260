@@ -1,5 +1,5 @@
 ```mdextension
-Title: Electric Force Activity
+Title: Electric Force
 ```
 
 # Overview
