@@ -86,7 +86,9 @@ A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $
 
 3. Find an equation for $Q_{\text{encl}}$ for $r>R$. Your equation should involve $\lambda$ and one or more of $h$, $r$, and $R$.
 
-     {\bf Answer}: The amount of charge enclosed is the charge per unit length $\times h = \lambda h$, so  $Q_{\text{encl}}=\lambda h$. (The amount of charge enclosed does not depend on $r$.)
+   <div class="solutionstrue"> 
+   {\bf Answer}: The amount of charge enclosed is the charge per unit length $\times h = \lambda h$, so  $Q_{\text{encl}}=\lambda h$. (The amount of charge enclosed does not depend on $r$.)
+   </div>
 
    <div class="solutionsfalse"> 
       <div style="height:3em"/>
