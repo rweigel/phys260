@@ -1,0 +1,32 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,87); %set diagram left start at 0, and has height of 87
+
+%Shape: Grid [id:dp036989104826425034] 
+\draw  [draw opacity=0] (10,20) -- (160,20) -- (160,80) -- (10,80) -- cycle ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ] (10,20) -- (10,80)(20,20) -- (20,80)(30,20) -- (30,80)(40,20) -- (40,80)(50,20) -- (50,80)(60,20) -- (60,80)(70,20) -- (70,80)(80,20) -- (80,80)(90,20) -- (90,80)(100,20) -- (100,80)(110,20) -- (110,80)(120,20) -- (120,80)(130,20) -- (130,80)(140,20) -- (140,80)(150,20) -- (150,80) ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ] (10,20) -- (160,20)(10,30) -- (160,30)(10,40) -- (160,40)(10,50) -- (160,50)(10,60) -- (160,60)(10,70) -- (160,70) ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]  ;
+%Straight Lines [id:da9110657930117563] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]   (10,80) -- (160,80) ;
+%Straight Lines [id:da9537398910246793] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]   (160,80) -- (160,20) ;
+
+%Straight Lines [id:da8928276270226045] 
+\draw    (20,23) -- (20,80) ;
+\draw [shift={(20,20)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da21991350173696778] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (10,70) -- (156,70) ;
+\draw [shift={(159,70)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Shape: Circle [id:dp3990152675244536] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (18,70) .. controls (18,68.9) and (18.9,68) .. (20,68) .. controls (21.1,68) and (22,68.9) .. (22,70) .. controls (22,71.1) and (21.1,72) .. (20,72) .. controls (18.9,72) and (18,71.1) .. (18,70) -- cycle ;
+%Curve Lines [id:da0637629892146847] 
+\draw    (22,70) .. controls (54,69.43) and (91,53.43) .. (120,30) ;
+
+% Text Node
+\draw (11,2.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q_{\mathrm{encl}} =\sigma \pi r^{2}$};
+% Text Node
+\draw (161,64.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
+
+
+\end{tikzpicture}

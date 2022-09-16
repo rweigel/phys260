@@ -27,7 +27,7 @@
 \draw    (240,70) -- (387,70) ;
 \draw [shift={(390,70)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
 %Straight Lines [id:da5848925936939344] 
-\draw    (330,64) -- (330,75) ;
+\draw    (300,63) -- (300,74) ;
 %Straight Lines [id:da6508968321800463] 
 \draw    (93,88) -- (127,88) ;
 \draw [shift={(130,88)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
@@ -45,13 +45,13 @@
 % Text Node
 \draw (393,63.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
 % Text Node
-\draw (327,78.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$h$};
+\draw (297,76.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$h$};
 % Text Node
 \draw (105,95.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$h$};
 % Text Node
 \draw (154,35.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
 % Text Node
-\draw (107,6.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$L$};
+\draw (107,4.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$L$};
 
 
 \end{tikzpicture}

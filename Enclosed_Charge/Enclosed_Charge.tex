@@ -1,0 +1,362 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=-\parskip
+ \belowdisplayshortskip=-\parskip
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Enclosed Charge}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Overview}
+
+When using Gauss's law, one must draw an imaginary volume in space and compute how much charge is inside the volume.
+
+In general, an imaginary volume is chosen is one for which computation of the electric flux is easy. That is, the imaginary volume will be such that the electric field is either parallel or perpendicular to all parts of the surface. In this activity, you are given the Gaussian volume. However, you should understand the reason for the choice of each Gaussian volume given.
+
+\section{Line of Charge}
+
+A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. The Gaussian cylinder shown has a length $h$, radius $r$, and the same center line as the charged line.
+
+\input{figures/Line.tikz}
+
+\begin{enumerate}
+
+  \item Find the linear charge density, $\lambda$, on the line.
+
+        \ifsolutions
+          \textbf{Answer}: The linear charge density is the total charge divided by the length over which the charge is distributed: $\lambda={3Q}/{L}$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ in terms of $\lambda$ and one or more of $r$, $h$, and $L$.
+
+        \ifsolutions
+          \textbf{Answer}: The dashed line in the figure is the part of the line inside of the Gaussian cylinder. The length of the dashed line is $h$, so $Q_{\text{encl}}=\lambda h$. Another way of arriving at this is by noting that the charge enclosed is the total charge $\times$ the ratio $h/L$, so $Q_{\text{encl}}=3Q(h/L) = \lambda h$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Use your equation from 2. to find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=h/100$, $r=h/2$, $r=h$, and $r=2h$.
+
+        \ifsolutions
+          \textbf{Answer}: $Q_{\text{encl}}=\lambda h$ for all four cases.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equation found in part 2. as a smooth line.
+
+        \ifsolutions
+          \textbf{Answer:}
+        
+          \input{figures/Line_Graph.tikz}
+        \else
+          \newpage
+        \fi
+
+\end{enumerate}
+
+\section{Cylindrical Shell}
+
+A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $+3Q$ uniformly distributed on its curved surface. The Gaussian cylinder shown has a length $h$, radius $r$, and the same center line as the charged cylinder.
+
+\input{figures/Hollow_Cylinder.tikz}
+
+\begin{enumerate}
+
+  \item Find the linear charge density, $\lambda$, of the charged cylinder.
+
+        \ifsolutions
+          \textbf{Answer}: The linear charge density is the total charge divided by the length over which the charge is distributed: $\lambda={3Q}/{H}$.
+        
+          \textbf{Note}: The charges are distributed on a surface, so it may seem more natural to use a surface charge density, which is $\sigma = 3Q/(2\pi R H)$, where the denominator is the surface area of the curved part of the charged cylinder. In this case, the answer to 2. does not change and the answer to 3. is $Q_{\text{encl}} = \sigma 2\pi R h$ instead of $Q_{\text{encl}}=\lambda h$. We use charge per length in this problem because the formula for $Q_{\text{encl}}$ is simpler.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r<R$.
+
+        \ifsolutions
+          \textbf{Answer}: If the Gaussian cylinder is fully inside the hollow cylinder, there would be no charge inside of it. As a result, the charge enclosed for $r< R$ is zero: $Q_{\text{encl}}=0$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r>R$. Your equation should involve $\lambda$ and one or more of $h$, $r$, and $R$.
+
+        \textbf{Answer}: The amount of charge enclosed is the charge per unit length $\times h = \lambda h$, so  $Q_{\text{encl}}=\lambda h$. (The amount of charge enclosed does not depend on $r$.)
+
+        \ifsolutions\else
+        \vskip 36.135pt
+        \fi
+
+  \item Find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=0$, $r=R/2$, $r=2R$, and $r=3R$.
+
+        \ifsolutions
+          \textbf{Answer}: $0, 0, \lambda h, \lambda h$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
+
+        \ifsolutions
+          \input{figures/Hollow_Cylinder_Graph.tikz}
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Solid Cylinder}
+
+A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of $+3Q$ uniformly distributed throughout it. The Gaussian cylinder has length $h$, radius $r$, and the same center line as the charged cylinder.
+
+\input{figures/Solid_Cylinder.tikz}
+
+\begin{enumerate}
+
+  \item Find the volume charge density, $\rho$, of the charged cylinder.
+
+        \ifsolutions
+          \textbf{Answer:} The volume, $V$, of the charged cylinder is its cross-sectional area, $\pi R^2$, times its height, $H$: $V=\pi R^2 H$. The volume charge density is charge/volume: $\rho=3Q/(\pi R^2 H)$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r\le R$. Your equation should involve $\rho$ and one or more of $h$, $r$, and $R$.
+
+        \ifsolutions
+          \textbf{Answer}: When $r<R$, the Gaussian cylinder is entirely inside the charged cylinder. The charge in the Gaussian cylinder is the charge density of the charged cylinder times the volume of the Gaussian cylinder: $Q_{\text{encl}}(r)=\rho \pi r^2 h$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r\ge R$. Your equation should involve $\rho$ and one or more of $h$, $r$, and $R$.
+
+        \ifsolutions
+          \textbf{Answer}: For any $r\ge R$, $Q_{\text{encl}}=\rho \pi R^2 h$, which is independent of $r$. 
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find the amount of charge enclosed in a Gaussian cylinder of radius $r=0$, $r=R/2$, $r=R$, and $r=2R$.
+
+        \ifsolutions
+          \textbf{Answer}:  $0, \rho\pi R^2 h/4, \rho \pi R^2 h, \rho \pi R^2 h$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
+
+        \ifsolutions
+          \textbf{Answer}:
+        
+          \input{figures/Solid_Cylinder_Graph.tikz}
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Spherical Shell}
+
+A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly distributed on its surface. Its cross--section is shown along with that of a Gaussian sphere with the same center and a radius $r$.
+
+\input{figures/Spherical_Shell.tikz}
+
+\begin{enumerate}
+
+  \item Find the surface charge density on the sphere.
+
+        \ifsolutions
+          \textbf{Answer}: $\sigma = 3Q/4\pi R^2$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r<R$.
+
+        \ifsolutions
+          \textbf{Answer}: $Q_{\text{encl}}=0$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r>R$. Your equation should involve $\sigma$ and one or more of $R$ and $r$.
+
+        \ifsolutions
+          \textbf{Answer}: $Q_{\text{encl}}=\sigma 4\pi R^2$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find the amount of charge enclosed in Gaussian sphere of radii $r=0$, $r=R/2$, $r=2R$, and $r=3R$.
+
+        \ifsolutions
+          \textbf{Answer}: $0, 0, \sigma 4 \pi R^2, \sigma 4\pi R^2$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as a smooth line.
+
+        \ifsolutions
+          \textbf{Answer}: 
+        
+          \input{figures/Spherical_Shell_Graph.tikz}
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Solid Sphere}
+
+A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniformly throughout it. The cross--section of the sphere is shown along with a dashed line representing the surface of a Gaussian sphere, which has the same center as the charged sphere and a radius $r$.
+
+\input{figures/Solid_Sphere.tikz}
+
+\begin{enumerate}
+
+  \item Find the charged sphere's volume charge density, $\rho$.
+
+        \ifsolutions
+          \textbf{Answer}: $\ds \rho=3Q/[(4/3)\pi R^3]$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r<R$. Your answer should involve $\rho$ and one or more of $r$ and $R$.
+
+        \ifsolutions
+          \textbf{Answer}: For $r \le R$, $Q_{\text{encl}}=\rho [(4/3)\pi r^3]$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r>R$. Your answer should involve $\rho$ and one or more of $r$ and $R$.
+
+        \ifsolutions
+          \textbf{Answer}: For $r \ge R$,  $Q_{\text{encl}}=\rho [(4/3)\pi R^3]$, which is independent of $r$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find the amount of charge enclosed in Gaussian sphere of radii $r=0$, $r=R/2$, $r=R$, and $r=2R$.
+
+        \ifsolutions
+          \textbf{Answer}: $0, (1/8)\rho (4/3)\pi R^3, \rho(4/3)\pi R^3, \rho(4/3)\pi R^3$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as a smooth line.
+
+        \ifsolutions
+          \input{figures/Solid_Sphere_Graph.tikz}
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Large Sheet}
+
+\input{figures/Sheet.tikz}
+
+A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distributed uniformly on it. The Gaussian cylinder has a height $h$ and radius $r$, and half of it is above the sheet.
+
+\begin{enumerate}
+
+  \item Find the surface charge density, $\sigma$, on the sheet.
+
+        \ifsolutions
+          \textbf{Answer}: $\sigma=3Q/L^2$
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Find an equation for $Q_{\text{encl}}$ for $r<L$. Your answer should involve $\sigma$ and one or more of $r$, $h$, and $L$. (In Gauss's law problems, $L$ is much larger than $r$, so we do not need to consider $r > L$.)
+
+        \ifsolutions
+          \textbf{Answer}: $Q_{\text{encl}}=\sigma \pi r^2$.
+        \else
+          \vskip 36.135pt
+        \fi
+
+  \item Plot the enclosed charge calculated above versus the radius of the Gaussian cylinder.
+
+        \ifsolutions
+          \input{figures/Sheet_Graph.tikz}
+        \fi
+
+\end{enumerate}
+
+\end{document}
