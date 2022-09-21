@@ -61,3 +61,7 @@ Reply:
 > Probably I'll revise to use 3. in the main part and then have a problem at the end when using 1. is easier (E and A given in component form). 
 >
 > Forms 2. and 4. are useful for interpretation - I typically start out with an analogy of points flowing horizontally and passing through a line at an angle and then show a new drawing with a vertical line and arguing that the flow is the same through both. I suppose instead of having them do a calculation, we could have a problem where they are asked if the flux through the area that is perpendicular is the same as that through the larger area that is at an angle. This way we make sure that they can compute the flux and understand the reason for the cos(angle).
+
+Reply:
+
+> From my experience with this tutorial, I think you're right that 3. might be the easiest for students to learn. If that's the emphasis, then maybe it would be a good idea to use something other than 45 deg for the angle, so we can talk about the crucial issue of "which angle for the cosine?"
