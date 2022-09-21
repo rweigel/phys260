@@ -35,6 +35,7 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 %https://rweigel.github.io/phys260/Electric_Force/Electric_Force-solutions.pdf
 %https://rweigel.github.io/phys260/Electric_Field/Electric_Field-solutions.pdf
 %https://rweigel.github.io/phys260/Electric_Flux/Electric_Flux-solutions.pdf
+%https://rweigel.github.io/phys260/Electric_Flux/Enclosed_Charge-solutions.pdf
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
@@ -59,3 +60,7 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 ## Electric Flux
 
 * [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Flux)
+
+## Enclosed Charge
+
+* [Activity](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge)
