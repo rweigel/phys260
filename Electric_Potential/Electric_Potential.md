@@ -91,7 +91,9 @@ The following diagram shows a region of space where the electric field is consta
 
 1.  You place a charge of $+3\text{ C}$ at point $A$. What happens to that charge when it is released?
 
+    \ifsolutions
     {\bf Answer}: Moves to right. By convention field lines point in direction of force on positive charge.
+    \fi
 
 2.  You move charge of $+3\text{ C}$ from $a$ to $b$. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the charge changed?
 
