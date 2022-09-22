@@ -33,15 +33,15 @@
 \draw [shift={(160,40)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
 
 % Text Node
-\draw (63.32,71.36) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont a}};
-% Text Node
-\draw (162.68,70.36) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont b}};
-% Text Node
-\draw (67,106.68) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont c}};
-% Text Node
 \draw (4,82) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont 1 m}};
 % Text Node
 \draw (98,22) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont 2 m}};
+% Text Node
+\draw (62.32,70.76) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+% Text Node
+\draw (163.68,72.76) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$B$};
+% Text Node
+\draw (62.32,114.08) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$D$};
 
 
 \end{tikzpicture}
