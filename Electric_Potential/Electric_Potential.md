@@ -2,10 +2,6 @@
 Title: Electric Potential
 ```
 
-# Overview 
-
-[Chapter 23 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_)
-
 # Electric Potential Energy Differences, $\Delta U$
 
 Recall from mechanics that the symbol $U$ was used to represent potential energy. The potential energy of an object increases when you do a positive amount of work on it. For example, if you lift a mass from the floor, you increase its potential energy. In addition, recall that work done on an object {\it changes} its potential energy, and this change is represented by $\Delta U$.
@@ -91,9 +87,7 @@ The following diagram shows a region of space where the electric field is consta
 
 1.  You place a charge of $+3\text{ C}$ at point $A$. What happens to that charge when it is released?
 
-    \ifsolutions
     {\bf Answer}: Moves to right. By convention field lines point in direction of force on positive charge.
-    \fi
 
 2.  You move charge of $+3\text{ C}$ from $a$ to $b$. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the charge changed?
 
@@ -289,11 +283,12 @@ $$
 
 ## Problem
 
-\input{Electrostatic_Potential/figures/Assembly_of_Charges}
+<img src="figures/Collection_of_Charges.svg"/>
 
 1. What is the potential energy of the charge $q_0$ in the diagram shown? 
 
     {\bf Answer}
+
     $$
     U = \frac{kq_oq_1}{r_1}+\frac{kq_oq_2}{r_2}+\frac{kq_oq_3}{r_3}
     $$
@@ -338,10 +333,10 @@ In summary, to find the work required to put a charge $Q$ at point $P$ (or, equi
 
 In the previous problem you computed the work required to move $q_3$ to $(x,y) = (-d,0)$ after $q_2$ was in place. The total work required to assemble the system of three charges is larger than this work because it also took work to move $q_2$ into place. Given a point charge $q_1$ at origin, as in the previous question:
 
-a. how much work is required to move $q_2$ to $(x,y) = (d,0)$?;
+1. how much work is required to move $q_2$ to $(x,y) = (d,0)$?;
 
-b. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_1$ is present?;
+2. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_1$ is present?;
 
-c. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_2$ is present?
+3. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_2$ is present?
 
-d. The total work required to assemble the system of three charges is the sum of the work from parts a., b., and c. Write the equation for this sum. This sum is known as the total potential energy of the system of charges.
+4. The total work required to assemble the system of three charges is the sum of the work from parts a., b., and c. Write the equation for this sum. This sum is known as the total potential energy of the system of charges.
