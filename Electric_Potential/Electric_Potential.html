@@ -26,6 +26,7 @@
     #toc {
       flex: 0 1 auto;
       margin-top: 0em;
+      margin-right: 1em;
       max-width: 12em;
       overflow: hidden auto;
     }
@@ -41,7 +42,7 @@
 
     #toc ol {
       list-style-type: decimal;
-      margin: 0.25em 0.5em 0em 0.25em;
+      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -270,11 +271,29 @@
       width: 100%;
     }
 
+    #display ol.compact li {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display ul.compact li {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
     #display li p {
       width: 100%;
       display: block;
-      margin-top: 0.25em;
-      margin-bottom: 0.25em;
     }
 
     #display li>.block:first-of-type p {
@@ -328,7 +347,7 @@
     }
 
     .solutionstrue {
-      display: none;
+      display: block;
     }
 
     .inline {
@@ -519,14 +538,14 @@
         <a href="#electric-potential-difference-delta-v">
           <span class="toctext">Electric potential difference, <span len="10" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></span>
         </a>
-        <ol class="toc" style="display: block;">
+        <ol class="toc" style="display: none;">
           <li>
             <a href="#problem">
               <span class="toctext">Problem</span>
             </a>
           </li>
           <li>
-            <a href="#problem" class="highlighted">
+            <a href="#problem">
               <span class="toctext">Problem</span>
             </a>
           </li>
@@ -638,7 +657,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p>There are three cases:</p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="compact">
           <li>
             <div class="block">
               <p>If a force is always perpendicular to the direction of movement, the work due to that force is zero. For example, a block sliding horizontally has a gravitational force exerted on it, but the gravitational force is downward and so is perpendicular to the direction of motion. Thus, gravity does no work.</p>
@@ -647,7 +666,7 @@ c-16-25.333-24-45-24-59z"></path>
         </ol>
       </div>
       <div class="block">
-        <ol start="2">
+        <ol start="2" class="loose">
           <li>
             <div class="block">
               <p>When the force on an object does not change when it is moved a distance <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> from <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> to <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> and the direction of force is always in the same direction as the direction of movement, then</p>
@@ -686,7 +705,7 @@ c-16-25.333-24-45-24-59z"></path>
         </ol>
       </div>
       <div class="block">
-        <ol start="3">
+        <ol start="3" class="compact">
           <li>
             <div class="block">
               <p>When the direction of force relative to the direction of movement changes (so the dot product changes) and/or the magnitude of force changes. This is covered on <a href="https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_">page 755 of the textbook</a>.</p>
@@ -701,7 +720,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p>In general, determine the direction an object would move when released from rest (call this the “release direction”). If the object moves or is moved a small step in the release direction, its potential energy will decrease. If the object moves or is moved a small step in a direction opposite to the release direction, its potential energy will increase.</p>
       </div>
       <div class="block">
-        <ul>
+        <ul class="loose">
           <li>
             <div class="block">
               <p>The potential energy of an object increases when you do positive work on it. That is, when your force on the object is in the direction that you move the object. One way of determining if an object’s potential is higher is if it has more potential to do something. A mass lifted upwards has more potential to crush something below it. If you lower a mass, it will have less potential to crush something.</p>
@@ -738,7 +757,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p>In mechanics, you have encountered two conservative forces</p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="compact">
           <li>
             <div class="block">
               <p>A constant force (e.g., the force on a small mass near Earth’s surface)</p>
@@ -772,7 +791,7 @@ c-16-25.333-24-45-24-59z"></path>
                                 </svg></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord mathnormal">L</span></span></span></span></span></p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>how much work is required by you to lift the object from <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> to <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>?;</p>
@@ -794,7 +813,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p><strong>Solution</strong></p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>Your force on the object must be upwards in order to lift it upwards, so your force is in the direction of movement. So <span len="27" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mrel mtight">→</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">+</span><span class="mclose">)</span><span class="mord mathnormal">m</span><span class="mord mathnormal">gL</span></span></span></span>.</p>
@@ -808,7 +827,7 @@ c-16-25.333-24-45-24-59z"></path>
         </ol>
       </div>
       <div class="block">
-        <ol start="3">
+        <ol start="3" class="loose">
           <li>
             <div class="block">
               <p><span len="11" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span len="11" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Using</p>
@@ -825,12 +844,14 @@ c-16-25.333-24-45-24-59z"></path>
           </li>
         </ol>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -847,7 +868,7 @@ c-16-25.333-24-45-24-59z"></path>
         </div>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>You place a charge of <span len="13" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord">3</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span> at point <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>. What happens to that charge when it is released?</p>
@@ -969,12 +990,14 @@ c-16-25.333-24-45-24-59z"></path>
           </li>
         </ol>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -994,7 +1017,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p>There is a charge of <span len="13" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">6</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span> at the origin. Some electric field lines for this charge are shown. To simplify the calculations, use <span len="51" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;N</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>You move a charge of <span len="13" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord">3</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span> from <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> to <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the moved charge changed?</p>
@@ -1064,12 +1087,14 @@ c-16-25.333-24-45-24-59z"></path>
           </li>
         </ol>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1125,12 +1150,14 @@ H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
                               </svg></span></span></span></span></span></span></span></span></span></span> and <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span>.</p>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1147,7 +1174,7 @@ c-16-25.333-24-45-24-59z"></path>
         </div>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>What is the difference in electric potential <span len="20" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
@@ -1240,18 +1267,20 @@ c-16-25.333-24-45-24-59z"></path>
           </li>
         </ol>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class="highlighted"><a name="problem" number="2.2" class="hanchor" href="#problem"><span class="hnumber">2.2</span>&nbsp;<span class="htext">Problem</span></a></h2>
+        <h2><a name="problem" number="2.2" class="hanchor" href="#problem"><span class="hnumber">2.2</span>&nbsp;<span class="htext">Problem</span></a></h2>
       </div>
       <div class="block">
         <p>There is a charge of <span len="13" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">6</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span> at the origin. Some electric field lines for this charge are shown. To simplify the math, use <span len="50" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;N</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord text"><span class="mord">C</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
@@ -1262,7 +1291,7 @@ c-16-25.333-24-45-24-59z"></path>
         </div>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>What is the difference in potential <span len="20" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>?</p>
@@ -1343,12 +1372,14 @@ c-16-25.333-24-45-24-59z"></path>
           </li>
         </ol>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1398,12 +1429,14 @@ c-16-25.333-24-45-24-59z"></path>
       <div class="block">
         <p><span len="40" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.106em;vertical-align:-1.2777em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1417,7 +1450,7 @@ c-16-25.333-24-45-24-59z"></path>
         </div>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>What is the potential energy of the charge <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in the diagram shown? </p>
@@ -1493,12 +1526,14 @@ c-16-25.333-24-45-24-59z"></path>
           </li>
         </ol>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1510,7 +1545,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p>Given a point charge <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> at the origin:</p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>Write the general equation for the electric potential at a distance <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> from <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
@@ -1596,12 +1631,14 @@ c-16-25.333-24-45-24-59z"></path>
       <div class="block">
         <p>In summary, to find the work required to put a charge <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span> at point <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> (or, equivalently, the electric potential energy <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> of a single charge <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span> when it is at point <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>), find the potential <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span> at point <span len="3" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> due to all of the other charges and then <span len="8" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>.</p>
       </div>
-      <div class="inline-html">
-        <div class="newpage">
-          <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
-          <div></div>
-          <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
-          <div></div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1613,7 +1650,7 @@ c-16-25.333-24-45-24-59z"></path>
         <p>In the previous problem you computed the work required to move <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to <span len="16" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span> after <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> was in place. The total work required to assemble the system of three charges is larger than this work because it also took work to move <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> into place. Given a point charge <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> at origin, as in the previous question,</p>
       </div>
       <div class="block">
-        <ol>
+        <ol class="loose">
           <li>
             <div class="block">
               <p>how much work is required to move <span len="5" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to <span len="15" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span>?;</p>
