@@ -42,8 +42,7 @@ In general, determine the direction an object would move when released from rest
 If $\bfvec{F}$ is a special kind of force, called a _conservative_ force, we do not need to perform integration to every time that we want to compute the work. For each conservative force, there is an equation for $U$ (called potential energy, or PE) such that one needs to only know $U$ at $b$ and $a$. In this case,
 
 $$
-W_{a\rightarrow b}^{
-\text{cons}} \equiv -\Delta U = -(U_b-U_a)
+W_{a\rightarrow b}^{\text{cons}} \equiv -\Delta U = -(U_b-U_a)
 $$
 
 where they symbol $\equiv$ is used to indicate a definition.
@@ -443,13 +442,15 @@ Given a point charge $q_1$ at the origin:
 1. Write the general equation for the electric potential at a distance $r$ from $q_1$
 
    \ifsolutions
+   $V=kq_1/r$
    \else
    <div style="height:3em"/>
    \fi
 
-2. Find the electric potential, $V$, at $(x,y) = (d,0)$.
+2. Find the electric potential, $V$, at $(x,y) = (-d,0)$ due to $q_1$.
 
    \ifsolutions
+   $V_1(d,0)=kq_1/d$
    \else
    <div style="height:3em"/>
    \fi
@@ -457,6 +458,7 @@ Given a point charge $q_1$ at the origin:
 3. If a charge $q_2$ is placed at $(x,y) = (d,0)$, find the electric potential, $V$, at $(x,y) = (-d,0)$ (hint -- it is the sum of the electric potentials at $(x,y)=(-d, 0)$ due to $q_1$ and $q_2$).
 
    \ifsolutions
+   $V(-d,0)=V_1(-d,0)+V_2(-d,0) = kq_1/d + kq_2/2d$
    \else
    <div style="height:3em"/>
    \fi
@@ -464,6 +466,7 @@ Given a point charge $q_1$ at the origin:
 4. How much work is required to place $q_3$ at $(x,y) = (-d,0)$?
 
    \ifsolutions
+   $U=W=q_3V(-d,0)=q_3(kq_1/d + kq_2/2d)$
    \else
    <div style="height:3em"/>
    \fi
@@ -471,6 +474,7 @@ Given a point charge $q_1$ at the origin:
 5. What is the potential energy, $U$, of $q_3$ when it is at $(x,y) = (-d,0)$?
 
    \ifsolutions
+   See 4.
    \else
    <div style="height:3em"/>
    \fi
@@ -486,6 +490,7 @@ In the previous problem you computed the work required to move $q_3$ to $(x,y) =
 1. how much work is required to move $q_2$ to $(x,y) = (d,0)$?;
 
    \ifsolutions
+   $W = q_2V_1(0,d) = q_2(kq_1/d)$
    \else
    <div style="height:3em"/>
    \fi
@@ -493,6 +498,7 @@ In the previous problem you computed the work required to move $q_3$ to $(x,y) =
 2. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_1$ is present?;
 
    \ifsolutions
+   $W = q_3V_1(-d,0) = q_3(kq_1/d)$
    \else
    <div style="height:3em"/>
    \fi
@@ -500,8 +506,11 @@ In the previous problem you computed the work required to move $q_3$ to $(x,y) =
 3. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_2$ is present?
 
    \ifsolutions
+   $W=q_3V_2(-d,0)=q_3kq_2/2d$
    \else
    <div style="height:3em"/>
    \fi
 
 4. The total work required to assemble the system of three charges is the sum of the work from parts 1.-3.. Write the equation for this sum in terms of the given variables. (This sum is known as the total potential energy of the system of charges -- see equation 23.11 of the textbook, which uses the same symbol $U$; ideally, they would have used $U_c$ to indicate that it applies to a collection of charges and not a single charge).
+
+   $W=q_2kq_1/d +  q_3(kq_1/d) + q_3kq_2/2d$
