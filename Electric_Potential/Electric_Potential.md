@@ -513,4 +513,6 @@ In the previous problem you computed the work required to move $q_3$ to $(x,y) =
 
 4. The total work required to assemble the system of three charges is the sum of the work from parts 1.-3.. Write the equation for this sum in terms of the given variables. (This sum is known as the total potential energy of the system of charges -- see equation 23.11 of the textbook, which uses the same symbol $U$; ideally, they would have used $U_c$ to indicate that it applies to a collection of charges and not a single charge).
 
+   \ifsolutions
    $W=q_2kq_1/d +  q_3(kq_1/d) + q_3kq_2/2d$
+   \fi
