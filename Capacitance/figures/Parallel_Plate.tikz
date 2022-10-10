@@ -1,0 +1,100 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,238); %set diagram left start at 0, and has height of 238
+
+%Shape: Rectangle [id:dp4781425563552617] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (221,30) -- (241,30) -- (241,180) -- (221,180) -- cycle ;
+%Shape: Rectangle [id:dp6627321392123502] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (311,30) -- (331,30) -- (331,180) -- (311,180) -- cycle ;
+%Straight Lines [id:da050416454278339407] 
+\draw    (243,190) -- (307,190) ;
+\draw [shift={(310,190)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(240,190)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da669587499539398] 
+\draw    (43,230) -- (64,230) ;
+\draw [shift={(67,230)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(40,230)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Shape: Polygon [id:ds48793909345474673] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=1.5]  (50,10) -- (50,181.11) -- (30,230) -- (30,58.89) -- cycle ;
+%Shape: Polygon [id:ds9808941595699727] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (60,10) -- (60,181.11) -- (40,230) -- (40,58.89) -- cycle ;
+%Shape: Polygon [id:ds7281613636786879] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.75]  (60,10) -- (40,58.89) -- (30,58.89) -- (50,10) -- cycle ;
+%Shape: Polygon [id:ds010997684504611582] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.75]  (40,58.89) -- (40,230) -- (30,230) -- (30,58.89) -- cycle ;
+
+%Straight Lines [id:da2244240649960263] 
+\draw    (23.89,54.14) -- (37.11,11.86) ;
+\draw [shift={(38,9)}, rotate = 107.35] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(23,57)}, rotate = 287.35] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da7344448006041042] 
+\draw    (23,60) -- (23,224) ;
+\draw [shift={(23,227)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(23,57)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Shape: Rectangle [id:dp5380194246766798] 
+\draw   (240,210) -- (241,210) -- (241,220) -- (240,220) -- cycle ;
+%Straight Lines [id:da057592777072014156] 
+\draw    (240.5,215) -- (287,215) ;
+\draw [shift={(290,215)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Shape: Polygon [id:ds9492933425452903] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=1.5]  (89,10) -- (89,181.11) -- (67,230) -- (67,58.89) -- cycle ;
+%Shape: Polygon [id:ds46227237706637814] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (100,10) -- (100,181.11) -- (78,230) -- (78,58.89) -- cycle ;
+%Shape: Polygon [id:ds16834684381886045] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.75]  (100,10) -- (78,58.89) -- (67,58.89) -- (89,10) -- cycle ;
+%Shape: Polygon [id:ds6208970266098528] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.75]  (78,58.89) -- (78,230) -- (67,230) -- (67,58.89) -- cycle ;
+
+%Straight Lines [id:da304858444201656] 
+\draw    (51,113.57) -- (64,113.57) ;
+\draw [shift={(67,113.57)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da022134641801796473] 
+\draw    (95,113.57) -- (80,113.57) ;
+\draw [shift={(77,113.57)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da9216205628160365] 
+\draw    (370,33) -- (370,177) ;
+\draw [shift={(370,180)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+\draw [shift={(370,30)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da8606516356050204] 
+\draw    (348,100) -- (333,100) ;
+\draw [shift={(330,100)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da8775319862635156] 
+\draw    (294,100) -- (307,100) ;
+\draw [shift={(310,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+
+% Text Node
+\draw (311,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$+Q$};
+% Text Node
+\draw (221,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$-Q$};
+% Text Node
+\draw (268,175.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$d$};
+% Text Node
+\draw (224,33.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$2.$};
+% Text Node
+\draw (201,32.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1.$};
+% Text Node
+\draw (264,32.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$3.$};
+% Text Node
+\draw (315,33.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$4.$};
+% Text Node
+\draw (339,32.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$5.$};
+% Text Node
+\draw (281,221.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$x$};
+% Text Node
+\draw (50,215.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$d$};
+% Text Node
+\draw (16,28.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$w$};
+% Text Node
+\draw (11,112.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$w$};
+% Text Node
+\draw (69,116.97) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$t$};
+% Text Node
+\draw (377,92.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$w$};
+% Text Node
+\draw (319,95.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$t$};
+
+
+\end{tikzpicture}

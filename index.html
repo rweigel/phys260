@@ -95,10 +95,6 @@
       display: none;
     }
 
-    #display .block.inline-html {
-      display: block;
-    }
-
     #display .hr {
       width: 100%;
       height: 1px;
@@ -123,22 +119,6 @@
     #display pre {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-    }
-
-    #display ul {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.35em;
-    }
-
-    #display ol {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.5em;
     }
 
     #display h1,
@@ -274,12 +254,61 @@
       width: 100%;
     }
 
+    #display ul {
+      width: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
+    }
+
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
+      width: 100%;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display ol.compact>li {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose>li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display ul.compact li {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
     #display li p {
       width: 100%;
       display: block;
     }
 
-    #display li .block:first-of-type p {
+    #display li>.block:first-of-type p {
       width: 100%;
       display: block;
       margin-top: 0em;
@@ -288,6 +317,10 @@
 
     .inline-html .block .block-info {
       display: none;
+    }
+
+    .inline-html {
+      width: 100%;
     }
 
     .section>.block ol~.block-info {}
@@ -325,12 +358,29 @@
       border-radius: 0.5em;
     }
 
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .latex-underline {
+      text-decoration: underline;
+    }
+
     .katex {
       font-size: inherit !important;
     }
 
     .katex-warning {
-      border-right: 3px solid red;
+      border-right: 0.5em solid red;
     }
 
     .katex-display {
@@ -488,51 +538,51 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#overview">
+        <a href="#overview" raw="# Overview" lo="1">
           <span class="toctext">Overview</span>
         </a>
       </li>
       <li>
-        <a href="#using">
+        <a href="#using" raw="# Using" lo="21">
           <span class="toctext">Using</span>
         </a>
       </li>
       <li>
-        <a href="#activities">
+        <a href="#activities" raw="# Activities" lo="33">
           <span class="toctext">Activities</span>
         </a>
         <ol class="toc" style="display: none;">
           <li>
-            <a href="#electric-force-between-point-charges-coulomb-s-law">
+            <a href="#electric-force-between-point-charges-coulomb-s-law" raw="## Electric Force Between Point Charges (Coulomb's Law)" lo="40">
               <span class="toctext">Electric Force Between Point Charges (Coulomb’s Law)</span>
             </a>
           </li>
           <li>
-            <a href="#electric-field-of-a-point-charge">
+            <a href="#electric-field-of-a-point-charge" raw="## Electric Field of a Point Charge" lo="46">
               <span class="toctext">Electric Field of a Point Charge</span>
             </a>
           </li>
           <li>
-            <a href="#continuous-charge-distributions">
+            <a href="#continuous-charge-distributions" raw="## Continuous Charge Distributions" lo="52">
               <span class="toctext">Continuous Charge Distributions</span>
             </a>
           </li>
           <li>
-            <a href="#electric-flux">
+            <a href="#electric-flux" raw="## Electric Flux" lo="60">
               <span class="toctext">Electric Flux</span>
             </a>
           </li>
           <li>
-            <a href="#enclosed-charge">
+            <a href="#enclosed-charge" raw="## Enclosed Charge" lo="64">
               <span class="toctext">Enclosed Charge</span>
             </a>
           </li>
+          <li>
+            <a href="#electric-potential" raw="## Electric Potential" lo="68" class="highlighted">
+              <span class="toctext">Electric Potential</span>
+            </a>
+          </li>
         </ol>
-      </li>
-      <li>
-        <a href="#electric-potential" class="highlighted">
-          <span class="toctext">Electric Potential</span>
-        </a>
       </li>
     </ol>
   </div>
@@ -544,16 +594,16 @@
         <h1><a name="overview" number="1" class="hanchor" href="#overview"><span class="hnumber">1</span>&nbsp;<span class="htext">Overview</span></a></h1>
       </div>
       <div class="block">
-        <p>These are activities that students work on during a weekly 50–minute recitation for PHYS 260 at GMU. To maximize time that students spend working on problems, I typically give at most a 10–minute review. Often, my 10–minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.</p>
+        <p padlength="0">These are activities that students work on during a weekly 50–minute recitation for PHYS 260 at GMU. To maximize time that students spend working on problems, I typically give at most a 10–minute review. Often, my 10–minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.</p>
       </div>
       <div class="block">
-        <p>These tutorials were written in collaboration with Jessica Rosenberg over the course of four semesters. The tutorials were revised from semester-to-semester based on observations made while using them.</p>
+        <p padlength="0">These tutorials were written in collaboration with Jessica Rosenberg over the course of four semesters. The tutorials were revised from semester-to-semester based on observations made while using them.</p>
       </div>
       <div class="block">
-        <p>The length of the tutorials are such that 1–2 students out of 30 will finish completely. </p>
+        <p padlength="0">The length of the tutorials are such that 1–2 students out of 30 will finish completely. </p>
       </div>
       <div class="block">
-        <div class="comment">%<strong>Motivation</strong></div>
+        <div class="comment">%<strong type="md">Motivation</strong></div>
       </div>
       <div class="block">
         <div class="comment">%In the past, I would solve problems at the board for 40 minutes and then give a quiz at the end. The quiz required students to reproduce something that I had expained several times or to reproduce the set–up of a problem. Based on the results of these very simple quizes, few students got much out of my presentation. In addition, often students would ask for help on homework problems after the recitation that were nearly identical to the problem covered in recitation. It was clear from their questions that their notes from, or memory of, my presentation were of little use.</div>
@@ -576,19 +626,19 @@
         <h1><a name="using" number="2" class="hanchor" href="#using"><span class="hnumber">2</span>&nbsp;<span class="htext">Using</span></a></h1>
       </div>
       <div class="block">
-        <p>The source files for all activities are available at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a></p>
+        <p padlength="0">The source files for all activities are available at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a></p>
       </div>
       <div class="block">
-        <p>The entire repository is available as a zip file: <a href="https://github.com/rweigel/phys260/archive/refs/heads/master.zip">https://github.com/rweigel/phys260/archive/refs/heads/master.zip</a></p>
+        <p padlength="0">The entire repository is available as a zip file: <a href="https://github.com/rweigel/phys260/archive/refs/heads/master.zip">https://github.com/rweigel/phys260/archive/refs/heads/master.zip</a></p>
       </div>
       <div class="block">
-        <p>If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code>rweigel@gmu.edu</code>. In each subdirectory at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a> there is a file named <code>README.md</code> with notes written after class and after reviewing student work.</p>
+        <p padlength="0">If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code type="md">rweigel@gmu.edu</code>. In each subdirectory at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a> there is a file named <code type="md">README.md</code> with notes written after class and after reviewing student work.</p>
       </div>
       <div class="block">
-        <p>The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit using MathCha, open the MathCha links in the comments in the <code>.md</code> or <code>.tex</code> file. The <code>.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
+        <p padlength="0">The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit using MathCha, open the MathCha links in the comments in the <code type="md">.md</code> or <code type="md">.tex</code> file. The <code type="md">.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
       </div>
       <div class="block">
-        <p>The master document is the <code>.md</code> file, which is converted to <code>.html</code> and <code>.tex</code>. The <code>.pdf</code> files are based on the <code>.html</code> file. The <code>.tex</code> files are auto–generated from the <code>.md</code> files and a <code>.pdf</code> created with the <code>.tex</code> file may look different than the one stored in the repository.</p>
+        <p padlength="0">The master document is the <code type="md">.md</code> file, which is converted to <code type="md">.html</code> and <code type="md">.tex</code>. The <code type="md">.pdf</code> files are based on the <code type="md">.html</code> file. The <code type="md">.tex</code> files are auto–generated from the <code type="md">.md</code> files and a <code type="md">.pdf</code> created with the <code type="md">.tex</code> file may look different than the one stored in the repository.</p>
       </div>
     </div>
     <div class="section">
@@ -604,20 +654,20 @@
         <h2><a name="electric-force-between-point-charges-coulomb-s-law" number="3.1" class="hanchor" href="#electric-force-between-point-charges-coulomb-s-law"><span class="hnumber">3.1</span>&nbsp;<span class="htext">Electric Force Between Point Charges (Coulomb’s Law)</span></a></h2>
       </div>
       <div class="block">
-        <ul>
-          <li>
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
             <div class="block">
-              <p><a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Activity</a> </p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Activity</a> </p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="43" lf="43">
             <div class="block">
-              <p>Using Coulomb’s law to find the electric force vector using two methods that are used in the textbook.</p>
+              <p padlength="0">Using Coulomb’s law to find the electric force vector using two methods that are used in the textbook.</p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="44" lf="46">
             <div class="block">
-              <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.3 of Young and Freedman 2015, 14th Edition</a></p>
+              <p padlength="0">Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.3 of Young and Freedman 2015, 14th Edition</a></p>
             </div>
           </li>
         </ul>
@@ -628,20 +678,20 @@
         <h2><a name="electric-field-of-a-point-charge" number="3.2" class="hanchor" href="#electric-field-of-a-point-charge"><span class="hnumber">3.2</span>&nbsp;<span class="htext">Electric Field of a Point Charge</span></a></h2>
       </div>
       <div class="block">
-        <ul>
-          <li>
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
             <div class="block">
-              <p><a href="https://github.com/rweigel/phys260/tree/master/Electric_Field">Activity</a></p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Electric_Field">Activity</a></p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="49" lf="49">
             <div class="block">
-              <p>Computing the electric field due to one and three point charges.</p>
+              <p padlength="0">Computing the electric field due to one and three point charges.</p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="50" lf="52">
             <div class="block">
-              <p>Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.4 of Young and Freedman 2015, 14th Edition</a></p>
+              <p padlength="0">Covered in <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.4 of Young and Freedman 2015, 14th Edition</a></p>
             </div>
           </li>
         </ul>
@@ -652,31 +702,31 @@
         <h2><a name="continuous-charge-distributions" number="3.3" class="hanchor" href="#continuous-charge-distributions"><span class="hnumber">3.3</span>&nbsp;<span class="htext">Continuous Charge Distributions</span></a></h2>
       </div>
       <div class="block">
-        <ul>
-          <li>
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
             <div class="block">
-              <p><a href="https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions">Activity</a></p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions">Activity</a></p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="55" lf="55">
             <div class="block">
-              <p>Setting up and solving for the electric field due to a finite line of charge.</p>
+              <p padlength="0">Setting up and solving for the electric field due to a finite line of charge.</p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="56" lf="60">
             <div class="block">
-              <p>Covered in</p>
+              <p padlength="0">Covered in</p>
             </div>
             <div class="block">
-              <ul>
-                <li>
+              <ul class="compact">
+                <li markerlength="2" padlength="2">
                   <div class="block">
-                    <p><a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.5 of Young and Freedman 2015, 14th Edition</a> and</p>
+                    <p padlength="0"><a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.5 of Young and Freedman 2015, 14th Edition</a> and</p>
                   </div>
                 </li>
-                <li>
+                <li markerlength="2" padlength="2" lo="58" lf="60">
                   <div class="block">
-                    <p><a href="https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/">Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.</a></p>
+                    <p padlength="0"><a href="https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/">Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.</a></p>
                   </div>
                 </li>
               </ul>
@@ -690,10 +740,10 @@
         <h2><a name="electric-flux" number="3.4" class="hanchor" href="#electric-flux"><span class="hnumber">3.4</span>&nbsp;<span class="htext">Electric Flux</span></a></h2>
       </div>
       <div class="block">
-        <ul>
-          <li>
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
             <div class="block">
-              <p><a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux">Activity</a></p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux">Activity</a></p>
             </div>
           </li>
         </ul>
@@ -704,10 +754,10 @@
         <h2><a name="enclosed-charge" number="3.5" class="hanchor" href="#enclosed-charge"><span class="hnumber">3.5</span>&nbsp;<span class="htext">Enclosed Charge</span></a></h2>
       </div>
       <div class="block">
-        <ul>
-          <li>
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
             <div class="block">
-              <p><a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge">Activity</a></p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge">Activity</a></p>
             </div>
           </li>
         </ul>
@@ -715,18 +765,18 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 class="highlighted"><a name="electric-potential" number="4" class="hanchor" href="#electric-potential"><span class="hnumber">4</span>&nbsp;<span class="htext">Electric Potential</span></a></h1>
+        <h2 class="highlighted"><a name="electric-potential" number="3.6" class="hanchor" href="#electric-potential"><span class="hnumber">3.6</span>&nbsp;<span class="htext">Electric Potential</span></a></h2>
       </div>
       <div class="block">
-        <ul>
-          <li>
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
             <div class="block">
-              <p><a href="Electric_Potential/Electric_Potential.html" target="_blank">Activity</a> </p>
+              <p padlength="0"><a href="Electric_Potential/Electric_Potential.html" target="_blank">Activity</a> </p>
             </div>
           </li>
-          <li>
+          <li markerlength="2" padlength="0" lo="71" lf="73">
             <div class="block">
-              <p><a href="Electric_Potential/Electric_Potential-min.html" target="_blank">Shorter Activity</a> </p>
+              <p padlength="0"><a href="Electric_Potential/Electric_Potential-min.html" target="_blank">Shorter Activity</a> </p>
             </div>
           </li>
         </ul>

@@ -1,0 +1,53 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,185); %set diagram left start at 0, and has height of 185
+
+%Shape: Ellipse [id:dp786923384871064] 
+\draw  [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][line width=6]  (36,82.74) .. controls (36,43.63) and (68.27,11.93) .. (108.07,11.93) .. controls (147.88,11.93) and (180.15,43.63) .. (180.15,82.74) .. controls (180.15,121.84) and (147.88,153.55) .. (108.07,153.55) .. controls (68.27,153.55) and (36,121.84) .. (36,82.74) -- cycle ;
+%Shape: Ellipse [id:dp7642544577323118] 
+\draw  [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][line width=6]  (81.05,82.74) .. controls (81.05,68.07) and (93.15,56.18) .. (108.07,56.18) .. controls (123,56.18) and (135.1,68.07) .. (135.1,82.74) .. controls (135.1,97.4) and (123,109.29) .. (108.07,109.29) .. controls (93.15,109.29) and (81.05,97.4) .. (81.05,82.74) -- cycle ;
+%Straight Lines [id:da023238427542429108] 
+\draw    (108.07,82.74) -- (127.89,62.68) ;
+\draw [shift={(130,60.55)}, rotate = 134.66] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da026482910185540165] 
+\draw    (108.07,82.74) -- (135.72,24.26) ;
+\draw [shift={(137,21.55)}, rotate = 115.3] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da8792066435104271] 
+\draw    (53,85) -- (43,85) ;
+\draw [shift={(40,85)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da5223957758570585] 
+\draw    (19,85) -- (29,85) ;
+\draw [shift={(32,85)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Curve Lines [id:da0374365538769168] 
+\draw    (199.1,76.74) .. controls (166.12,61.22) and (153.84,71.14) .. (136.71,81.75) ;
+\draw [shift={(135.1,82.74)}, rotate = 328.68] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da2665879759794427] 
+\draw    (220,53.48) .. controls (197.46,39.76) and (196.05,34.68) .. (173.41,48.6) ;
+\draw [shift={(172,49.48)}, rotate = 327.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (116,75.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$a$};
+% Text Node
+\draw (115,35.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$b$};
+% Text Node
+\draw (11,72.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$t$};
+% Text Node
+\draw (105,91.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$1.$};
+% Text Node
+\draw (105,125.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3.$};
+% Text Node
+\draw (104,171.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$5.$};
+% Text Node
+\draw (105,106.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$2.$};
+% Text Node
+\draw (104,150.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$4.$};
+% Text Node
+\draw (201.1,80.14) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$-Q$};
+% Text Node
+\draw (222,52.88) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$+Q$};
+
+
+\end{tikzpicture}

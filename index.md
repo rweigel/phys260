@@ -65,7 +65,7 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 * [Activity](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge)
 
-# Electric Potential
+## Electric Potential
 
 * [Activity](Electric_Potential/Electric_Potential.md) 
 * [Shorter Activity](Electric_Potential/Electric_Potential-min.md) 
