@@ -135,9 +135,10 @@ Using Gauss's law and the fact that the electric field inside a conductor must b
 
 3. there is no charge on the outer surface of the outer conductor.
 
-\ifsolutions
-  **Answer**: Covered in class.
-\fi
+   \ifsolutions
+    **Answer**: Covered in class.
+   \fi
+
 Draw the Gaussian surfaces that you use to answer this question on the diagram above or on a new diagram in the space below.
 
 \ifsolutions\else
