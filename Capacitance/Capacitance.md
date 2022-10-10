@@ -22,7 +22,7 @@ The general technique for computing capacitance when Gauss's law applies is:
 
 **Electric Potential Energy and Electric Potential**
 
-The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force due to a static electric field, we define a potential energy $U$ according to
+The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force due to a static electric field, we define potential energy $U$ according to
 
 $\Delta U = U(b)-U(a) \equiv -W_{a\rightarrow b}$
 
@@ -34,8 +34,8 @@ Defining electric potential as $V\equiv U/q_o$ gives $V(b)-V(a) = -\int_a^b\bfve
 
 In summary, if you calculate the difference in potential between $a$ and $b$ (in Volts), you can also determine, for a charge $q_o$ moved from $a$ to $b$,
 
-1. how much work (in Joules) the electric field did on the charge: $-q_o[V(b)-V(a)]$, and
-2. the change in the charge's electric potential energy (in Joules): $+q_o[V(b)-V(a)]$.
+1. how much work (in Joules) the electric field did on the charge: $-q_o(V(b)-V(a))$, and
+2. the change in the charge's electric potential energy (in Joules): $+q_o(V(b)-V(a))$.
 
 \ifsolutions\else
    \newpage
@@ -43,14 +43,14 @@ In summary, if you calculate the difference in potential between $a$ and $b$ (in
 
 # Parallel Plates
 
-An equal and opposite amount of charge is placed on two conducting and parallel plates as shown on the left in the following figure. On the right, a side view of the plates is shown. The area of the plates, $A = w^2$, is much larger than shown such that the width, $w$, is much larger than the separation distance, $d$.
+An equal and opposite amount of charge is placed on two conducting and parallel plates, as shown on the left in the following figure. On the right, a side view of the plates is shown. The area of the plates, $A = w^2$, is much larger than shown, such that the width, $w$, is much larger than the separation distance, $d$.
 
 <img src="figures/Parallel_Plate.svg" height="200px">
 
-1. How will the charges distribute on each of the plates? That is, how much charge is on each of the four faces that have area $A$? Assume that no charge appears on the other (narrow, and having thickness $t$) faces of the plates, which have a much smaller area.
+1. How will the charges distribute on each of the plates? That is, how much charge is on each of the four faces that have an area $A$? Assume that no charge appears on the other (thin, and having thickness $t$) faces of the plates, which have a much smaller area.
 
    \ifsolutions
-   {\bf Answer}: The charges will move to the inner faces as shown in the following diagram. Electric field vectors for the positive an negative charges are shown. Because the charges are on a large plane, the field is indpendent of distance from the plane. With this charge configuration, inside the conductors, the field due to the positive charges cancels the field due to the negative charges giving a net field of zero.
+   {\bf Answer}: The charges will move to the inner faces, as shown in the following diagram. Electric field vectors for the positive and negative charges are shown. Because the charges are on a large plane, the field is independent of distance from the plane. With this charge configuration, inside the conductors, the field due to the positive charges cancels the field due to the negative charges giving a net field of zero.
 
    <img src="figures/Parallel_Plate_Fields.svg"/>
    \else
@@ -60,7 +60,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 2. What is the electric field in each of the five regions? (Hint: The magnitude of the field due to charges uniformly distributed on a plane is $|\sigma|/2\epsilon_o$. The field in each region will be the sum of the field due to charges on each plate. Your answer should be such that the electric field inside the conducting plates is zero!)  
 
    \ifsolutions
-   {\bf Answer}: The magnitude of the field due to each plate is $|\sigma|/2\epsilon_o$, where $\sigma$ is the surface charge density. The surface charge densities are $\pm Q/A$.  
+   {\bf Answer}: The magnitude of the field due to each charged surface is $|\sigma|/2\epsilon_o$, where $\sigma$ is the surface charge density. The surface charge densities are $\pm Q/A$.  
    
    <img src="figures/Parallel_Plate_Solution.svg"/>
 
@@ -87,7 +87,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
    
    $\ds V(d)-V(0) = -\int_0^d\bfvec{E}\bfcdot d\bfvec{l}$
 
-   The electric field is constant and in the same direction as $x$, so we know the result of the integration will be $\pm Ed=\pm Qd/A\epsilon_o$. Based on techniques covered in the last activity, we expect the potential to be higher at the right plate, so we choose the $+$ option. More formally,
+   The electric field is constant, and in the same direction as $x$, so we know the result of the integration will be $\pm Ed=\pm Qd/A\epsilon_o$. Based on techniques covered in the last activity, we expect the potential to be higher at the right plate, so we choose the $+$ option. More formally,
 
    Using $d\mathbf{l}=dx\ihat$  and $\bfvec{E}=-\frac{Q}{A\epsilon_o}\ihat$ gives
 
@@ -127,7 +127,7 @@ Charge placed on two spherical conducting shells, the cross--section of which is
 
 <img src="figures/Spherical.svg">
 
-Using Gauss's law and the fact that the electric field inside a conductor must be zero, show that
+Using Gauss's law and the fact that the electric field inside a conductor must be zero show that
 
 1. there can be no charge on the inner surface of the inner conductor,
 
@@ -135,13 +135,18 @@ Using Gauss's law and the fact that the electric field inside a conductor must b
 
 3. there is no charge on the outer surface of the outer conductor.
 
+\ifsolutions
+  **Answer**: Covered in class.
+\fi
 Draw the Gaussian surfaces that you use to answer this question on the diagram above or on a new diagram in the space below.
 
 \ifsolutions\else
    \newpage
 \fi
 
+\ifsolutions\else
 <img src="figures/Spherical.svg">
+\fi
 
 4. What is the electric field in each of the 5 labeled regions? Region 1. is the empty volume inside of the inner conductor, region 2. is the inner conductor, region 3. is the empty volume between the conductors, region 4. is the outer conductor, and region 5. is the region outside of the outer conductor. (Hint: Use Gauss's law several times; when not zero, the electric field should be proportional to $1/r^2$.)
  
@@ -172,5 +177,5 @@ Draw the Gaussian surfaces that you use to answer this question on the diagram a
 7. (Review question) How much work would the electric field do on a charge $q_o$ that is moved from $r=a$ to $r=b$? What would be the change in $q_o$'s electric potential energy?
 
    \ifsolutions
-   **Answer**: $-q_o(V(b)-V(a))$ and $q_o(V(b)-V(a))$. Check: Work is negative b/c electric field direction is opposite the direction of movement. PE increases.
+   **Answer**: $-q_o(V(b)-V(a))$ and $q_o(V(b)-V(a))$. Check: Work is negative b/c the electric field direction is opposite the direction of movement. PE increases.
    \fi
