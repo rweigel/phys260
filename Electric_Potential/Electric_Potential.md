@@ -328,7 +328,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
 4. What is difference in electric potential $\Delta V = V_D-V_A$.
 
    \ifsolutions
-   {\bf Answer}: The potential at $D$ is the same as the potential at $B$. This can be seen mathematically from the equation $V=\frac{kq}{r}$ -- at $D$ and $B$, $r$ is the same. Physically, in moving from $B$ to $D$ along the dotted line, no work is required because the electric field is perpendicular to this path. The problem statement did not require moving from $B$ to $D$ along the dotted line, but was established earlier, the changes in potential energy are independent of the path for a conservative force, so we are free to choose a convenient path. Based on this, $V_D-V_A=V_B-V_A$ and so the answer is the same as the previous problem.
+   {\bf Answer}: The potential at $D$ is the same as the potential at $B$. This can be seen mathematically from the equation $V=\frac{kq}{r}$ -- at $D$ and $B$, $r$ is the same. Physically, in moving from $B$ to $D$ along the dotted line, no work is required because the electric field is perpendicular to this path. The problem statement did not require moving from $B$ to $D$ along the dotted line, but was established earlier, the changes in potential energy are independent of the path for a conservative force, so we are free to choose a convenient path. Based on this, $V_D-V_A=V_B-V_A$ and so the answer is the same as found previously.
    \else
    <div style="height:4em"/>
    \fi
