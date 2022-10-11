@@ -87,9 +87,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
    
    $\ds V(d)-V(0) = -\int_0^d\bfvec{E}\bfcdot d\bfvec{l}$
 
-   The electric field is constant, and in the same direction as $x$, so we know the result of the integration will be $\pm Ed=\pm Qd/A\epsilon_o$. Based on techniques covered in the last activity, we expect the potential to be higher at the right plate, so we choose the $+$ option. More formally,
-
-   Using $d\mathbf{l}=dx\ihat$  and $\bfvec{E}=-\frac{Q}{A\epsilon_o}\ihat$ gives
+   The electric field is constant, so we know the result of the integration will be $\pm Ed=\pm Qd/A\epsilon_o$. Based on techniques covered in the last activity, we expect the potential to be higher at the right plate, so we choose the $+$ option. More formally, using $d\mathbf{l}=dx\ihat$  and $\bfvec{E}=-\frac{Q}{A\epsilon_o}\ihat$ gives
 
    $\ds V(d)-V(0) = -\int_0^d\bfvec{E}\bfcdot d\bfvec{l}=-\int_0^d\left[-\frac{Q}{A\epsilon_o}\ihat\right]\bfcdot dx\ihat=\frac{Qd}{A\epsilon_o}$
 
@@ -110,7 +108,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 5. (Review question) How much work would the electric field do on a charge $q_o$ that is moved from the left plate to the right plate? What would be the change in $q_o$'s electric potential energy?
 
    \ifsolutions
-  {\bf Answer}: $\ds W=-q_o\frac{\epsilon_oA}{d}$. Sign check: The force of the field is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
+  {\bf Answer}: $\ds W=-q_o\frac{\epsilon_oA}{d}$. Sign check: The force of the field on $q_o$ is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
 
   $\ds\Delta U=-W=q_o\frac{\epsilon_oA}{d}$
    \else
