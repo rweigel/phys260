@@ -273,46 +273,34 @@
       padding-left: 0.5em;
     }
 
-    #display>.section>.block>ol.compact {
-      margin-top: 0.25em;
-      margin-bottom: 0.25em;
-    }
-
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
     }
 
-    #display ol.compact>li {
+    #display>.section>.block>ol.compact {
       margin-top: 0.25em;
       margin-bottom: 0.25em;
     }
 
-    #display ol.loose>li {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-    }
-
-    #display ul.compact li {
+    #display ol.compact p {
       margin-top: 0.25em;
       margin-bottom: 0.25em;
     }
 
-    #display ul.loose li {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
-    #display li p {
-      width: 100%;
-      display: block;
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
-    #display li>.block:first-of-type p {
-      width: 100%;
-      display: block;
-      margin-top: 0em;
-      margin-bottom: 0em;
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
     .inline-html .block .block-info {
@@ -359,11 +347,11 @@
     }
 
     .solutionsfalse {
-      display: none;
+      display: block;
     }
 
     .solutionstrue {
-      display: block;
+      display: none;
     }
 
     .inline {
@@ -573,13 +561,23 @@
             </a>
           </li>
           <li>
-            <a href="#enclosed-charge" raw="## Enclosed Charge" lo="64">
+            <a href="#enclosed-charge" raw="## Enclosed Charge" lo="66">
               <span class="toctext">Enclosed Charge</span>
             </a>
           </li>
           <li>
-            <a href="#electric-potential" raw="## Electric Potential" lo="68" class="highlighted">
+            <a href="#electric-potential" raw="## Electric Potential" lo="72">
               <span class="toctext">Electric Potential</span>
+            </a>
+          </li>
+          <li>
+            <a href="#capacitance" raw="## Capacitance" lo="78">
+              <span class="toctext">Capacitance</span>
+            </a>
+          </li>
+          <li>
+            <a href="#kirchhoff-s-circuit-laws" raw="## Kirchhoff's Circuit Laws" lo="84" class="highlighted">
+              <span class="toctext">Kirchhoff’s Circuit Laws</span>
             </a>
           </li>
         </ol>
@@ -635,7 +633,7 @@
         <p padlength="0">If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code type="md">rweigel@gmu.edu</code>. In each subdirectory at <a href="https://github.com/rweigel/phys260">https://github.com/rweigel/phys260</a> there is a file named <code type="md">README.md</code> with notes written after class and after reviewing student work.</p>
       </div>
       <div class="block">
-        <p padlength="0">The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit using MathCha, open the MathCha links in the comments in the <code type="md">.md</code> or <code type="md">.tex</code> file. The <code type="md">.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
+        <p padlength="0">The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit using MathCha, open the MathCha links in the comments in the <code type="md">.md</code> or <code type="md">.tex</code> file with a web browser. The <code type="md">.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
       </div>
       <div class="block">
         <p padlength="0">The master document is the <code type="md">.md</code> file, which is converted to <code type="md">.html</code> and <code type="md">.tex</code>. The <code type="md">.pdf</code> files are based on the <code type="md">.html</code> file. The <code type="md">.tex</code> files are auto–generated from the <code type="md">.md</code> files and a <code type="md">.pdf</code> created with the <code type="md">.tex</code> file may look different than the one stored in the repository.</p>
@@ -743,7 +741,17 @@
         <ul class="compact">
           <li markerlength="2" padlength="0">
             <div class="block">
-              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux">Activity</a></p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md">Instructor Notes</a> </p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="63" lf="63">
+            <div class="block">
+              <p padlength="0">Documents: | <a href="Enclosed_Charge/Electric_Flux.pdf">pdf</a> | <a href="Capacitance/Electric_Flux-solutions.pdf">pdf solns</a> |</p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="64" lf="66">
+            <div class="block">
+              <p padlength="0">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux">Github</a> | <a href="Electric_Flux/Electric_Flux.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
@@ -757,7 +765,17 @@
         <ul class="compact">
           <li markerlength="2" padlength="0">
             <div class="block">
-              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge">Activity</a></p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md">Instructor Notes</a> </p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="69" lf="69">
+            <div class="block">
+              <p padlength="0">Documents: | <a href="Enclosed_Charge/Enclosed_Charge.pdf">pdf</a> | <a href="Capacitance/Enclosed_Charge-solutions.pdf">pdf solns</a> |</p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="70" lf="72">
+            <div class="block">
+              <p padlength="0">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge">Github</a> | <a href="Enclosed_Charge/Enclosed_Charge.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
@@ -765,18 +783,71 @@
     </div>
     <div class="section">
       <div class="block">
-        <h2 class="highlighted"><a name="electric-potential" number="3.6" class="hanchor" href="#electric-potential"><span class="hnumber">3.6</span>&nbsp;<span class="htext">Electric Potential</span></a></h2>
+        <h2><a name="electric-potential" number="3.6" class="hanchor" href="#electric-potential"><span class="hnumber">3.6</span>&nbsp;<span class="htext">Electric Potential</span></a></h2>
       </div>
       <div class="block">
         <ul class="compact">
           <li markerlength="2" padlength="0">
             <div class="block">
-              <p padlength="0"><a href="Electric_Potential/Electric_Potential.html" target="_blank">Activity</a> </p>
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.md">Instructor Notes</a> </p>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="71" lf="73">
+          <li markerlength="2" padlength="0" lo="75" lf="75">
             <div class="block">
-              <p padlength="0"><a href="Electric_Potential/Electric_Potential-min.html" target="_blank">Shorter Activity</a> </p>
+              <p padlength="0">Documents: | <a href="Electric_Potential/Electric_Potential.pdf">pdf</a> | <a href="Electric_Potential/Electric_Potential-solutions.pdf">pdf solns</a> |</p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="76" lf="78">
+            <div class="block">
+              <p padlength="0">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Potential">Github</a> | <a href="Electric_Potential/Electric_Potential.html" target="_blank">Markdown</a> | </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="capacitance" number="3.7" class="hanchor" href="#capacitance"><span class="hnumber">3.7</span>&nbsp;<span class="htext">Capacitance</span></a></h2>
+      </div>
+      <div class="block">
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
+            <div class="block">
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Capacitance/README.md">Instructor Notes</a> </p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="81" lf="81">
+            <div class="block">
+              <p padlength="0">Document: | <a href="Capacitance/Capacitance.pdf">pdf</a> | <a href="Capacitance/Capacitance-solutions.pdf">pdf solns</a> |</p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="82" lf="84">
+            <div class="block">
+              <p padlength="0">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Capacitance">Github</a> | <a href="Capacitance/Capacitance.html" target="_blank">Markdown</a> |</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 class="highlighted"><a name="kirchhoff-s-circuit-laws" number="3.8" class="hanchor" href="#kirchhoff-s-circuit-laws"><span class="hnumber">3.8</span>&nbsp;<span class="htext">Kirchhoff’s Circuit Laws</span></a></h2>
+      </div>
+      <div class="block">
+        <ul class="compact">
+          <li markerlength="2" padlength="0">
+            <div class="block">
+              <p padlength="0"><a href="https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.md">Instructor Notes</a> </p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="87" lf="87">
+            <div class="block">
+              <p padlength="0">Document: | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.pdf">pdf</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf">pdf solns</a> |</p>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="88" lf="89">
+            <div class="block">
+              <p padlength="0">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws">Github</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>

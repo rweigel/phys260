@@ -1,0 +1,41 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,165); %set diagram left start at 0, and has height of 165
+
+%Shape: Resistor [id:dp04378564218643377] 
+\draw   (33,39) -- (40.2,39) -- (41.8,29) -- (45,49) -- (48.2,29) -- (51.4,49) -- (54.6,29) -- (57.8,49) -- (61,29) -- (64.2,49) -- (65.8,39) -- (73,39) ;
+%Straight Lines [id:da992166199236981] 
+\draw    (73,39) -- (93,39) ;
+%Straight Lines [id:da271365249390056] 
+\draw    (93,39) -- (93,76) ;
+%Straight Lines [id:da4991644356919813] 
+\draw    (93,99) -- (93,129) ;
+%Shape: Resistor [id:dp19059455882938692] 
+\draw   (33,129) -- (40.2,129) -- (41.8,119) -- (45,139) -- (48.2,119) -- (51.4,139) -- (54.6,119) -- (57.8,139) -- (61,119) -- (64.2,139) -- (65.8,129) -- (73,129) ;
+%Straight Lines [id:da5142725466949509] 
+\draw    (73,129) -- (93,129) ;
+%Straight Lines [id:da04358586309123358] 
+\draw    (13,39) -- (33,39) ;
+%Straight Lines [id:da17475123899038092] 
+\draw    (13,129) -- (33,129) ;
+%Straight Lines [id:da31864553225543846] 
+\draw    (13,39) -- (13,129) ;
+%Straight Lines [id:da23922847632173405] 
+\draw    (83,76) -- (103,76) ;
+%Straight Lines [id:da3747834408087263] 
+\draw [line width=1.5]    (88,80) -- (98,80) ;
+%Straight Lines [id:da9200807256957335] 
+\draw    (93,80) -- (93,99) ;
+
+% Text Node
+\draw (47,7.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (47,142.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (106,70.4) node [anchor=north west][inner sep=0.75pt]    {$\mathcal{E}$};
+
+
+\end{tikzpicture}

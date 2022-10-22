@@ -108,9 +108,9 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 5. (Review question) How much work would the electric field do on a charge $q_o$ that is moved from the left plate to the right plate? What would be the change in $q_o$'s electric potential energy?
 
    \ifsolutions
-  {\bf Answer}: $\ds W=-q_o\frac{\epsilon_oA}{d}$. Sign check: The force of the field on $q_o$ is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
+  {\bf Answer}: $\ds W=-q_o(V(d)-V(0))=-q_o\frac{Qd}{A\epsilon_o}$. Sign check: The force of the field on $q_o$ is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
 
-  $\ds\Delta U=-W=q_o\frac{\epsilon_oA}{d}$
+  $\ds\Delta U=-W=q_o(V(d)-V(0))=+q_o\frac{Qd}{A\epsilon_o}$
    \else
    \vspace{3em}
    \fi

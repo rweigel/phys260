@@ -1,0 +1,184 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Kirchoff's Circuit Laws}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Introduction}
+
+To find the current through each resistor in a circuit with only batteries and resistors, Kirchhoff's Current Law and Kirchhoff's Voltage Rule can be used.
+
+\begin{enumerate}
+
+  \item Kirchhoff's Voltage Law (KVL): The sum of all voltage changes around a closed loop must equal zero.
+
+  \item Kirchhoff's Current Law (KCL): The sum of all currents entering and exiting a junction must equal zero.
+
+\end{enumerate}
+
+\textbf{General procedure}
+
+\begin{enumerate}
+
+  \item Assume directions of current.
+
+  \item Write equations for KCL for nodes.
+
+  \item Write equations for KVL for loops using the assumed direction of current.
+
+  \item Solve for currents.
+
+\end{enumerate}
+
+\textbf{Sign conventions}
+
+If you get a negative number for a current, your assumed direction was wrong.
+
+When you write KVL, you must choose a direction that you move around the loop. If you ``step" across a resistor $R$ in the direction of an assumed current $i$, the voltage change is $-iR$. If you ``step" across in the direction opposite of $i$, the voltage change is $iR$.
+
+If you step across a battery with emf $\mathcal{E}$ from the $-$ to the $+$, the voltage change is $+\mathcal{E}$. If you step across a battery with emf $\mathcal{E}$ from the $+$ to the $-$, the voltage change is $-\mathcal{E}$. \emph{The direction of the assumed current does not matter.}
+
+\newpage
+
+\section{Single Loop Circuit}
+
+In a single loop circuit, only KVL is needed to find the current.
+
+\input{figures/Single_Loop.tikz}
+
+\begin{enumerate}
+
+  \item Assume the direction of current $I$ in the above circuit is counterclockwise. Write the equation for KVL and then solve for $I$.
+
+  \item Assume the direction of current $I$ in the following circuit is clockwise. Write the equation for KVL and then solve for $I$.
+
+  \item Which value for $I$ found above is correct?
+
+  \item If you removed the bottom resistor and replaced the top resistor with a resistor with resistance $2R$, would $I$ change?
+
+\end{enumerate}
+
+\section{Multiple Loop Circuit I}
+
+Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circuit are as shown.
+
+\input{figures/Multiple_Loops_I.tikz}
+
+\begin{enumerate}
+
+  \item Write the equation for KVL for loop A.
+
+  \item Write the equation for KVL for loop B.
+
+  \item Write the equation for KCL for node X.
+
+\end{enumerate}
+
+Use the three equations found above to solve for the three unknowns, $I_1$, $I_2$, and $I_3$.
+
+\newpage
+
+\section{Multiple Loop Circuit II}
+
+In the circuit for the previous problem, there are three possible loops. The third loop is loop C. indicated below.
+
+\input{figures/Multiple_Loops_II.tikz}
+
+\begin{enumerate}
+
+  \item Write the equation for KVL for loop C.
+
+  \item Use the equation for KVL for loop B. and the KCL equation for node X from the previous problem along with the KVL equation for loop C to find $I_1$, $I_2$, and $I_3$. (You should get the same answers.)
+
+\end{enumerate}
+
+\section{Redundant Equations}
+
+When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote $N$ equations based on KVL and KCL but cannot find $N$ unknows, the reason is that two or more of the $N$ equations that you wrote were not independent. To demonstrate this, for the circuit below,
+
+\begin{enumerate}
+
+  \item Write the KCL equation for node X
+
+  \item Write the KCL equation for node Y
+
+  \item Write the KVL equation for loop A
+
+  \item Attempt to use the above three equations to solve for $I_1$, $I_2$, and $I_3$.
+
+\end{enumerate}
+
+\end{document}

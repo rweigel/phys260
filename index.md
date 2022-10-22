@@ -26,7 +26,7 @@ The entire repository is available as a zip file: https://github.com/rweigel/phy
 
 If you have corrections, comments, or suggestions please [submit an issue](https://github.com/rweigel/phys260/issues) or email `rweigel@gmu.edu`. In each subdirectory at https://github.com/rweigel/phys260 there is a file named `README.md` with notes written after class and after reviewing student work.
 
-The figures were created using [MathCha](https://www.mathcha.io/). To edit using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
+The figures were created using [MathCha](https://www.mathcha.io/). To edit using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
 
 The master document is the `.md` file, which is converted to `.html` and `.tex`. The `.pdf` files are based on the `.html` file. The `.tex` files are auto--generated from the `.md` files and a `.pdf` created with the `.tex` file may look different than the one stored in the repository.
 
@@ -59,14 +59,30 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 ## Electric Flux
 
-* [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Flux)
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
+* Documents: | [pdf](Enclosed_Charge/Electric_Flux.pdf) | [pdf solns](Capacitance/Electric_Flux-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Flux) | [Markdown](Electric_Flux/Electric_Flux.md) | 
 
 ## Enclosed Charge
 
-* [Activity](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge)
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md) 
+* Documents: | [pdf](Enclosed_Charge/Enclosed_Charge.pdf) | [pdf solns](Capacitance/Enclosed_Charge-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge) | [Markdown](Enclosed_Charge/Enclosed_Charge.md) | 
 
 ## Electric Potential
 
-* [Activity](Electric_Potential/Electric_Potential.md) 
-* [Shorter Activity](Electric_Potential/Electric_Potential-min.md) 
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.md) 
+* Documents: | [pdf](Electric_Potential/Electric_Potential.pdf) | [pdf solns](Electric_Potential/Electric_Potential-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Potential) | [Markdown](Electric_Potential/Electric_Potential.md) | 
 
+## Capacitance
+
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.md) 
+* Document: | [pdf](Capacitance/Capacitance.pdf) | [pdf solns](Capacitance/Capacitance-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Capacitance) | [Markdown](Capacitance/Capacitance.md) |
+
+## Kirchhoff's Circuit Laws
+
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.md) 
+* Document: | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf) | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws) | [Markdown](Kirchhoffs_Laws/Kirchhoffs_Laws.md) | 

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kirchhoffs_Laws</title>
+  <title>Kirchoff's Circuit Laws</title>
   <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
@@ -26,6 +26,7 @@
     #toc {
       flex: 0 1 auto;
       margin-top: 0em;
+      margin-right: 1em;
       max-width: 12em;
       overflow: hidden auto;
     }
@@ -41,7 +42,7 @@
 
     #toc ol {
       list-style-type: decimal;
-      margin: 0.25em 0.5em 0em 0.25em;
+      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -66,16 +67,16 @@
 
     #display .title {
       text-align: center;
-      font-size: 250%;
+      font-size: 150%;
       font-weight: bold;
       color: black;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
     }
 
     #display .subtitle {
       text-align: center;
-      font-size: 150%;
+      font-size: 120%;
       font-weight: bold;
       color: black;
       margin-top: 0.2em;
@@ -91,12 +92,8 @@
       flex: 1 1 auto;
     }
 
-    #display .block.comment {
+    #display .block>.comment {
       display: none;
-    }
-
-    #display .block.inline-html {
-      display: block;
     }
 
     #display .hr {
@@ -108,9 +105,26 @@
     }
 
     #display a {
-      text-decoration: none black;
-      text-underline-offset: 2px;
+      text-decoration-line: none;
+      text-decoration-color: black;
       color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
     }
 
     #display p {
@@ -123,22 +137,6 @@
     #display pre {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-    }
-
-    #display ul {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.35em;
-    }
-
-    #display ol {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.5em;
     }
 
     #display h1,
@@ -274,20 +272,61 @@
       width: 100%;
     }
 
-    #display li p {
+    #display ul {
       width: 100%;
-      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
     }
 
-    #display li .block:first-of-type p {
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
       width: 100%;
-      display: block;
-      margin-top: 0em;
-      margin-bottom: 0em;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
     .inline-html .block .block-info {
       display: none;
+    }
+
+    .inline-html {
+      width: 100%;
     }
 
     .section>.block ol~.block-info {}
@@ -325,12 +364,29 @@
       border-radius: 0.5em;
     }
 
+    .solutionsfalse {
+      display: block;
+    }
+
+    .solutionstrue {
+      display: none;
+    }
+
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .latex-underline {
+      text-decoration: underline;
+    }
+
     .katex {
       font-size: inherit !important;
     }
 
     .katex-warning {
-      border-right: 3px solid red;
+      border-right: 0.5em solid red;
     }
 
     .katex-display {
@@ -462,9 +518,11 @@
           }
           el.addEventListener('click', event => {
             ns = event.target.parentNode.nextElementSibling;
-            if (ns.style.display === 'none') {
+            if (!ns) return;
+            if (nsns.style.display === 'none') {
     ns.style.display = 'block';
-            } else {
+            }
+            else {
     ns.style.display = 'none';
             }
           });
@@ -484,64 +542,144 @@
 </head>
 
 <body class="body">
-  <div id="toc" style="display: block; min-width: 5em;">
+  <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#kirchhoff-s-circuit-laws-ch-27" raw="# Kirchhoff’s Circuit Laws (Ch 27)" lo="1">
-          <span class="toctext">Kirchhoff’s Circuit Laws (Ch 27)</span>
+        <a href="#introduction" raw="# Introduction" lo="5">
+          <span class="toctext">Introduction</span>
         </a>
-        <ol class="toc" style="display: none;">
-          <li>
-            <a href="#single-loop-circuit" raw="## Single Loop Circuit" lo="8">
-              <span class="toctext">Single Loop Circuit</span>
-            </a>
-          </li>
-          <li>
-            <a href="#multiple-loop-circuit" raw="## Multiple Loop Circuit" lo="18">
-              <span class="toctext">Multiple Loop Circuit</span>
-            </a>
-          </li>
-          <li>
-            <a href="#redundant-kvl-equations" raw="## Redundant KVL Equations" lo="30">
-              <span class="toctext">Redundant KVL Equations</span>
-            </a>
-            <ol class="toc" style="display: none;">
-              <li>
-                <a href="#1.3.1" raw="###" lo="32">
-                  <span class="toctext"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#1.3.2" raw="###" lo="40">
-                  <span class="toctext"></span>
-                </a>
-              </li>
-            </ol>
-          </li>
-        </ol>
+      </li>
+      <li>
+        <a href="#single-loop-circuit" raw="# Single Loop Circuit" lo="29" class="">
+          <span class="toctext">Single Loop Circuit</span>
+        </a>
+      </li>
+      <li>
+        <a href="#multiple-loop-circuit-i" raw="# Multiple Loop Circuit I" lo="43" class="" lf="43">
+          <span class="toctext">Multiple Loop Circuit I</span>
+        </a>
+      </li>
+      <li>
+        <a href="#multiple-loop-circuit-ii" raw="# Multiple Loop Circuit II" lo="59" lf="59">
+          <span class="toctext">Multiple Loop Circuit II</span>
+        </a>
+      </li>
+      <li>
+        <a href="#redundant-equations" raw="# Redundant Equations" lo="69" lf="69">
+          <span class="toctext">Redundant Equations</span>
+        </a>
       </li>
     </ol>
   </div>
   <div id="display">
     <div class="section">
+      <div class="block">
+        <p class="title">Kirchoff's Circuit Laws</p>
+      </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1"><a name="kirchhoff-s-circuit-laws-ch-27" number="1" lo="1" raw="# Kirchhoff’s Circuit Laws (Ch 27)" class="hanchor" href="#kirchhoff-s-circuit-laws-ch-27"><span class="hnumber">1</span>&nbsp;<span class="htext">Kirchhoff’s Circuit Laws (Ch 27)</span></a></h1>
+        <h1><a name="introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
       </div>
       <div class="block">
-        <p lo="3" lf="3">To find the current through each resistor in a circuit with batteries and resistors, Kirchhoff’s Current Law and Kirchhoff’s Voltage Law can be used. </p>
+        <p>To find the current through each resistor in a circuit with only batteries and resistors, Kirchhoff’s Current Law and Kirchhoff’s Voltage Rule can be used.</p>
       </div>
       <div class="block">
-        <ol lo="5" lf="6">
-          <li lo="5" lf="5">
+        <ol class="compact">
+          <li markerlength="3">
             <div class="block">
-              <p> Kirchhoff’s Voltage Law (KVL): The algebraic sum of all voltage drops around a closed loop must equal zero.</p>
+              <p>Kirchhoff’s Voltage Law (KVL): The sum of all voltage changes around a closed loop must equal zero.</p>
             </div>
           </li>
-          <li lo="6" lf="8">
+          <li markerlength="3" lo="10" lf="12">
             <div class="block">
-              <p> Kirchhoff’s Current Law (KCL): The algebraic sum of all currents entering and exiting a node must equal zero.</p>
+              <p>Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction must equal zero.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <p><strong>General procedure</strong></p>
+      </div>
+      <div class="block">
+        <ol class="compact">
+          <li markerlength="3">
+            <div class="block">
+              <p>Assume directions of current.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="15" lf="15">
+            <div class="block">
+              <p>Write equations for KCL for nodes.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="16" lf="16">
+            <div class="block">
+              <p>Write equations for KVL for loops using the assumed direction of current.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="17" lf="19">
+            <div class="block">
+              <p>Solve for currents.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <p><strong>Sign conventions</strong></p>
+      </div>
+      <div class="block">
+        <p>If you get a negative number for a current, your assumed direction was wrong.</p>
+      </div>
+      <div class="block">
+        <p>When you write KVL, you must choose a direction that you move around the loop. If you “step” across a resistor <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> in the direction of an assumed current <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>, the voltage change is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. If you “step” across in the direction opposite of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>, the voltage change is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+      </div>
+      <div class="block">
+        <p>If you step across a battery with emf <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> from the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span></span></span></span> to the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span></span></span></span>, the voltage change is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span>. If you step across a battery with emf <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> from the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span></span></span></span> to the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span></span></span></span>, the voltage change is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span>. <em>The direction of the assumed current does not matter.</em></p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 class=""><a name="single-loop-circuit" class="anchor hanchor" href="#single-loop-circuit"><span class="hnumber">2</span>&nbsp;<span class="htext">Single Loop Circuit</span></a></h1>
+      </div>
+      <div class="block">
+        <p>In a single loop circuit, only KVL is needed to find the current.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Single_Loop.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>Assume the direction of current <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the above circuit is counterclockwise. Write the equation for KVL and then solve for <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="37" lf="38">
+            <div class="block">
+              <p>Assume the direction of current <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the following circuit is clockwise. Write the equation for KVL and then solve for <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="39" lf="40">
+            <div class="block">
+              <p>Which value for <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> found above is correct?</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="41" lf="42">
+            <div class="block">
+              <p>If you removed the bottom resistor and replaced the top resistor with a resistor with resistance <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, would <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> change?</p>
             </div>
           </li>
         </ol>
@@ -549,73 +687,71 @@
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="8" lf="8"><a name="single-loop-circuit" number="1.1" lo="8" raw="## Single Loop Circuit" class="hanchor" href="#single-loop-circuit"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Single Loop Circuit</span></a></h2>
+        <h1 class=""><a name="multiple-loop-circuit-i" class="anchor hanchor" href="#multiple-loop-circuit-i"><span class="hnumber">3</span>&nbsp;<span class="htext">Multiple Loop Circuit I</span></a></h1>
       </div>
       <div class="block">
-        <p lo="10" lf="10">In a single loop circuit, only KVL is needed to find the current.</p>
+        <p>Assume the direction of currents <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in the following circuit are as shown.</p>
       </div>
       <div class="block">
-        <p lo="12" lf="12">Assume the direction of current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the above circuit is counterclockwise. Write the equation for KVL and then solve for $$.</p>
+        <div class="inline-html">
+          <img src="figures/Multiple_Loops_I.svg">
+        </div>
       </div>
       <div class="block">
-        <p lo="14" lf="14">Assume the direction of current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the following circuit is clockwise. Write the equation for KVL and then solve for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>.</p>
-      </div>
-      <div class="block">
-        <p lo="16" lf="16">Which value for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> found above is correct?</p>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="18" lf="18"><a name="multiple-loop-circuit" number="1.2" lo="18" raw="## Multiple Loop Circuit" class="hanchor" href="#multiple-loop-circuit"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Multiple Loop Circuit</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="20" lf="20">Assume the direction of currents <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in the following circuit are as shown.</p>
-      </div>
-      <div class="block">
-        <ol lo="22" lf="26">
-          <li lo="22" lf="23">
+        <ol class="loose">
+          <li markerlength="3">
             <div class="block">
-              <p lo="22" lf="23"> Write the equation for KVL for loop A.</p>
+              <p>Write the equation for KVL for loop A.</p>
             </div>
           </li>
-          <li lo="24" lf="25">
+          <li markerlength="3" lo="51" lf="52">
             <div class="block">
-              <p lo="24" lf="25"> Write the equation for KVL for loop B. </p>
+              <p>Write the equation for KVL for loop B. </p>
             </div>
           </li>
-          <li lo="26" lf="28">
+          <li markerlength="3" lo="53" lf="55">
             <div class="block">
-              <p lo="26" lf="27"> Write the equation for KCL for node X.</p>
+              <p>Write the equation for KCL for node X.</p>
             </div>
           </li>
         </ol>
       </div>
       <div class="block">
-        <p lo="28" lf="28">Use the three equations found above to solve for the three unknowns, <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+        <p class="">Use the three equations found above to solve for the three unknowns, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+            <div style="font-size:0px;page-break-before: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="30" lf="30"><a name="redundant-kvl-equations" number="1.3" lo="30" raw="## Redundant KVL Equations" class="hanchor" href="#redundant-kvl-equations"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Redundant KVL Equations</span></a></h2>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h3 lo="32" lf="32"><a name="1.3.1" number="1.3.1" lo="32" raw="###" class="hanchor" href="#1.3.1"><span class="hnumber">1.3.1</span>&nbsp;<span class="htext"></span></a></h3>
+        <h1 class=""><a name="multiple-loop-circuit-ii" class="anchor hanchor" href="#multiple-loop-circuit-ii"><span class="hnumber">4</span>&nbsp;<span class="htext">Multiple Loop Circuit II</span></a></h1>
       </div>
       <div class="block">
-        <p lo="34" lf="34">In the circuit for part II., there are three possible loops. The third loop is loop C. indicated below. </p>
+        <p>In the circuit for the previous problem, there are three possible loops. The third loop is loop C. indicated below.</p>
       </div>
       <div class="block">
-        <ol lo="36" lf="38">
-          <li lo="36" lf="37">
+        <div class="inline-html">
+          <img src="figures/Multiple_Loops_II.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
             <div class="block">
-              <p lo="36" lf="37"> Write the equation for KVL for loop C. </p>
+              <p>Write the equation for KVL for loop C.</p>
             </div>
           </li>
-          <li lo="38" lf="40">
+          <li markerlength="3" lo="67" lf="69">
             <div class="block">
-              <p lo="38" lf="39"> Use the equation for KVL for loop B. and the KCL equation for node X from Part II with the KVL equation for loop C to find <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+              <p>Use the equation for KVL for loop B. and the KCL equation for node X from the previous problem along with the KVL equation for loop C to find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. (You should get the same answers.)</p>
             </div>
           </li>
         </ol>
@@ -623,31 +759,31 @@
     </div>
     <div class="section">
       <div class="block">
-        <h3 lo="40" lf="40" class="highlighted"><a name="1.3.2" number="1.3.2" lo="40" raw="###" class="hanchor" href="#1.3.2"><span class="hnumber">1.3.2</span>&nbsp;<span class="htext"></span></a></h3>
+        <h1><a name="redundant-equations" class="anchor hanchor" href="#redundant-equations"><span class="hnumber">5</span>&nbsp;<span class="htext">Redundant Equations</span></a></h1>
       </div>
       <div class="block">
-        <p lo="42" lf="42">When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations based on KVL and KCL but cannot find <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> unknows, the reason is that two or more of the <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations that you wrote were not independent. To demonstrate this, for the circuit below,</p>
+        <p>When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations based on KVL and KCL but cannot find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> unknows, the reason is that two or more of the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations that you wrote were not independent. To demonstrate this, for the circuit below,</p>
       </div>
       <div class="block">
-        <ol lo="44" lf="50">
-          <li lo="44" lf="45">
+        <ol class="loose">
+          <li markerlength="3">
             <div class="block">
-              <p lo="44" lf="45"> Write the KCL equation for node X</p>
+              <p>Write the KCL equation for node X</p>
             </div>
           </li>
-          <li lo="46" lf="47">
+          <li markerlength="3" lo="75" lf="76">
             <div class="block">
-              <p lo="46" lf="47"> Write the KCL equation for node Y</p>
+              <p>Write the KCL equation for node Y</p>
             </div>
           </li>
-          <li lo="48" lf="49">
+          <li markerlength="3" lo="77" lf="78">
             <div class="block">
-              <p lo="48" lf="49"> Write the KVL equation for loop A</p>
+              <p>Write the KVL equation for loop A</p>
             </div>
           </li>
-          <li lo="50" lf="51">
+          <li markerlength="3" lo="79" lf="81">
             <div class="block">
-              <p lo="50" lf="51" class="active"> Attempt to use the above three equations to solve for <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+              <p>Attempt to use the above three equations to solve for <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
             </div>
           </li>
         </ol>
