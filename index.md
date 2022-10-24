@@ -51,16 +51,16 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 ## Continuous Charge Distributions
 
-* [Activity](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions)
-* Setting up and solving for the electric field due to a finite line of charge.
-* Covered in
-    * [Section 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) and
-    * [Section 1.5 of Introduction to Electricity, Magnetism, and Circuits by Ling et al.](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/)
+
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
+* Documents: | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions) | [Markdown](Continuous_Charge_Distributions/Continuous_Charge_Distributions.md) | 
+* Covered in [Section 21.5](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) of Young and Freedman 2015, 14th Edition and [Section 1.5](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/) of Introduction to Electricity, Magnetism, and Circuits by Ling et al.
 
 ## Electric Flux
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
-* Documents: | [pdf](Enclosed_Charge/Electric_Flux.pdf) | [pdf solns](Capacitance/Electric_Flux-solutions.pdf) |
+* Documents: | [pdf](Electric_Flux/Electric_Flux.pdf) | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf) |
 * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Flux) | [Markdown](Electric_Flux/Electric_Flux.md) | 
 
 ## Enclosed Charge
@@ -86,3 +86,4 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.md) 
 * Document: | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf) | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf) |
 * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws) | [Markdown](Kirchhoffs_Laws/Kirchhoffs_Laws.md) | 
+* See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)

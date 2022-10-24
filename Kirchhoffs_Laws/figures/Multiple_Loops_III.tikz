@@ -1,0 +1,77 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,264); %set diagram left start at 0, and has height of 264
+
+%Shape: Resistor [id:dp2524184722994143] 
+\draw   (60,49) -- (67.2,49) -- (68.8,39) -- (72,59) -- (75.2,39) -- (78.4,59) -- (81.6,39) -- (84.8,59) -- (88,39) -- (91.2,59) -- (92.8,49) -- (100,49) ;
+%Straight Lines [id:da9831394926513701] 
+\draw    (100,49) -- (120,49) ;
+%Straight Lines [id:da06903668242243843] 
+\draw    (120,49) -- (120,69) ;
+%Straight Lines [id:da651338255376767] 
+\draw    (120,112) -- (120,139) ;
+\draw [shift={(120,109)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Resistor [id:dp21864265246191938] 
+\draw   (60,139) -- (67.2,139) -- (68.8,129) -- (72,149) -- (75.2,129) -- (78.4,149) -- (81.6,129) -- (84.8,149) -- (88,129) -- (91.2,149) -- (92.8,139) -- (100,139) ;
+%Straight Lines [id:da7200722885610089] 
+\draw    (100,139) -- (117,139) ;
+\draw [shift={(120,139)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da027217809739622956] 
+\draw    (40,49) -- (60,49) ;
+%Straight Lines [id:da09434993868871788] 
+\draw    (40,139) -- (60,139) ;
+%Straight Lines [id:da8448787660328827] 
+\draw    (40,49) -- (40,139) ;
+%Shape: Resistor [id:dp8794406807534081] 
+\draw   (60,210) -- (67.2,210) -- (68.8,200) -- (72,220) -- (75.2,200) -- (78.4,220) -- (81.6,200) -- (84.8,220) -- (88,200) -- (91.2,220) -- (92.8,210) -- (100,210) ;
+%Straight Lines [id:da6933787506634865] 
+\draw    (120,139) -- (120,210) ;
+\draw [shift={(120,139)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Straight Lines [id:da2416286978278488] 
+\draw    (100,210) -- (117,210) ;
+\draw [shift={(120,210)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da5424323112360687] 
+\draw    (40,210) -- (60,210) ;
+%Straight Lines [id:da30984975132395776] 
+\draw    (40,139) -- (40,210) ;
+\draw [shift={(40,139)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Straight Lines [id:da3059667385706837] 
+\draw    (120,50) -- (120,87) ;
+%Straight Lines [id:da9581315462885218] 
+\draw    (110,87) -- (130,87) ;
+%Straight Lines [id:da8139657282656465] 
+\draw [line width=1.5]    (115,91) -- (125,91) ;
+%Straight Lines [id:da157510882932268] 
+\draw    (120,91) -- (120,110) ;
+%Shape: Arc [id:dp8118670491021451] 
+\draw  [draw opacity=0] (93.47,98.89) .. controls (91.57,110.19) and (81.74,118.8) .. (69.9,118.8) .. controls (56.7,118.8) and (46,108.1) .. (46,94.9) .. controls (46,81.7) and (56.7,71) .. (69.9,71) .. controls (82.73,71) and (93.21,81.12) .. (93.78,93.81) -- (69.9,94.9) -- cycle ; \draw   (93.47,98.89) .. controls (91.57,110.19) and (81.74,118.8) .. (69.9,118.8) .. controls (56.7,118.8) and (46,108.1) .. (46,94.9) .. controls (46,81.7) and (56.7,71) .. (69.9,71) .. controls (82.73,71) and (93.21,81.12) .. (93.78,93.81) ;  
+%Straight Lines [id:da2659103659426487] 
+\draw    (93.47,98.89) -- (93.55,94.85) ;
+\draw [shift={(93.61,91.85)}, rotate = 91.13] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (54,123.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$R$};
+% Text Node
+\draw (124,113.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$I_{1}$};
+% Text Node
+\draw (102,213.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$I_{2}$};
+% Text Node
+\draw (97,121.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$I_{3}$};
+% Text Node
+\draw (127,140.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$X$};
+% Text Node
+\draw (57,215.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$R$};
+% Text Node
+\draw (55,32.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$R$};
+% Text Node
+\draw (21,142.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$Y$};
+% Text Node
+\draw (100,70.4) node [anchor=north west][inner sep=0.75pt]    {$\mathcal{E}$};
+% Text Node
+\draw (64,87.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$A$};
+
+
+\end{tikzpicture}

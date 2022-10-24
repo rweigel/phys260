@@ -129,15 +129,23 @@ Using Gauss's law and the fact that the electric field inside a conductor must b
 
 1. there can be no charge on the inner surface of the inner conductor,
 
+   \ifsolutions
+    **Answer**: A Gaussian sphere with a surface inside the inner conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{l}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. (Note that all charges must be on the surface of a conductor, so the only possible location for the charge is on the inner and outer surfaces.)
+   \fi
+
 2. the charge on the inner surface of the outer conductor is $+Q$, and
+
+   \ifsolutions
+    **Answer**: A Gaussian sphere with its surface inside the outer conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{l}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. We know the charge on the inner conductor must be $-Q$. To make the charge inside this sphere zero, we need $+Q$ on the inner surface of the inner conductor to get $Q_{\text{encl}}=0$.
+   \fi
 
 3. there is no charge on the outer surface of the outer conductor.
 
    \ifsolutions
-    **Answer**: Covered in class.
+    **Answer**: If the total charge on the outer conductor is $+Q$ and all of it is on its inner surface, but conservation of charge, there is no charge on its outer surface. Recall that charges arrange themselves on a conductor to make the electric field inside all conductors zero. With this charge arrangement, the field due to the charges on the outer surface of the inner conductor cancels the field due to the charge on the inner surface of the outer conductor for $r>b$.
    \fi
 
-Draw the Gaussian surfaces that you use to answer this question on the diagram above or on a new diagram in the space below.
+Draw the Gaussian surfaces you use to answer this question on the diagram above or on a new diagram in the space below.
 
 \ifsolutions\else
    \newpage
