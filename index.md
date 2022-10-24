@@ -87,3 +87,29 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 * Document: | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf) | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf) |
 * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws) | [Markdown](Kirchhoffs_Laws/Kirchhoffs_Laws.md) | 
 * See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)
+
+
+Solutions for the activities are
+
+https://rweigel.github.io/phys260/Electric_Force/Electric_Force-solutions.pdf
+https://rweigel.github.io/phys260/Electric_Field/Electric_Field-solutions.pdf
+https://rweigel.github.io/phys260/Continuous_Charge_Distributions/Continuous_Charge_Distributions-solution.pdf
+https://rweigel.github.io/phys260/Electric_Flux/Electric_Flux-solutions.pdf
+https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf
+https://rweigel.github.io/phys260/Electric_Potential/Electric_Potential.pdf
+https://rweigel.github.io/phys260/Capacitance/Capacitance.pdf
+https://rweigel.github.io/phys260/Capacitance/Capacitance.pdf
+
+Because of Labor Day, you did not do the Continuous Charge Distributions activity.
+
+These activites cover the basic mathematical concepts that you need in order to solve problems. In my experience, these problems cover the minimal set of concepts and calculations that you'll need to be good at to pass an exam.
+
+If you had difficulty, read the solution and then try to solve the problem on your own without referencing the solution. Repeat as needed. The following are copies without solutions:
+
+https://rweigel.github.io/phys260/Electric_Force/Electric_Force.pdf
+https://rweigel.github.io/phys260/Electric_Field/Electric_Field.pdf
+https://rweigel.github.io/phys260/Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf
+https://rweigel.github.io/phys260/Electric_Flux/Electric_Flux.pdf
+https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge.pdf
+
+Dr. Weigel
