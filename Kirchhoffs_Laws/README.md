@@ -1,0 +1,1 @@
+rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.

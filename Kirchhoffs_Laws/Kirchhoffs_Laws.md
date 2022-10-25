@@ -20,7 +20,7 @@ To find the current through each resistor in a circuit with only batteries and r
 
 If you get a negative number for a current, your assumed direction was wrong.
 
-When you write KVL, you must choose a direction that you move around the loop. If you "step" across a resistor $R$ in the direction of an assumed current $i$, the voltage change is $-iR$. If you "step" across in the direction opposite of $i$, the voltage change is $+iR$.
+When you write KVL, you must choose a direction that you move around the loop. If you "step" across a resistor $R$ in the direction of an assumed current $I$, the voltage change is $-IR$. If you "step" across in the direction opposite of $I$, the voltage change is $+IR$.
 
 If you step across a battery with emf $\mathcal{E}$ from the $-$ to the $+$, the voltage change is $+\mathcal{E}$. If you step across a battery with emf $\mathcal{E}$ from the $+$ to the $-$, the voltage change is $-\mathcal{E}$. _The direction of the assumed current does not matter._
 
