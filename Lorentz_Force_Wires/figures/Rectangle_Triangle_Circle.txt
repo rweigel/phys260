@@ -1,0 +1,60 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,281); %set diagram left start at 0, and has height of 281
+
+%Shape: Rectangle [id:dp5771131673592347] 
+\draw  [line width=1.5]  (141,39.4) -- (261,39.4) -- (261,100.6) -- (141,100.6) -- cycle ;
+%Shape: Right Triangle [id:dp8626540458478626] 
+\draw  [line width=1.5]  (141,171) -- (250.5,229) -- (141,229) -- cycle ;
+%Straight Lines [id:da7333070679183802] 
+\draw    (188.29,196.2) -- (193.08,198.64) ;
+\draw [shift={(195.75,200)}, rotate = 207.03] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+%Straight Lines [id:da6399543057910764] 
+\draw    (190.67,39.67) -- (193.67,39.67) ;
+\draw [shift={(196.67,39.67)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Axis 2D [id:dp6275590714551893] 
+\draw  (507.93,70.5) -- (532.31,70.5)(510.37,50.42) -- (510.37,72.73) (525.31,65.5) -- (532.31,70.5) -- (525.31,75.5) (505.37,57.42) -- (510.37,50.42) -- (515.37,57.42)  ;
+\draw   ;
+
+%Shape: Ellipse [id:dp9293791039005939] 
+\draw  [line width=1.5]  (439.5,200.92) .. controls (439.5,173.17) and (462,150.67) .. (489.75,150.67) .. controls (517.5,150.67) and (540,173.17) .. (540,200.92) .. controls (540,228.67) and (517.5,251.17) .. (489.75,251.17) .. controls (462,251.17) and (439.5,228.67) .. (439.5,200.92) -- cycle ;
+%Straight Lines [id:da13823415599894506] 
+\draw    (456.78,240.02) -- (458.4,241.2) ;
+\draw [shift={(460.82,242.97)}, rotate = 216.03] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+
+% Text Node
+\draw (184,48.07) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
+% Text Node
+\draw (82,11.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {a.};
+% Text Node
+\draw (390,155.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {c.};
+% Text Node
+\draw (194.28,176.63) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
+% Text Node
+\draw (509,85.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\text{Grid spacing} =L_{o}$};
+% Text Node
+\draw (534.01,64.17) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$x$};
+% Text Node
+\draw (511.48,36.16) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$y$};
+% Text Node
+\draw (86,148.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {b.};
+% Text Node
+\draw (483.72,241.82) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (513.8,150.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (433.8,190.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (533.35,190.41) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (459.75,215.47) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
+% Text Node
+\draw (483.8,140.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+
+
+\end{tikzpicture}
