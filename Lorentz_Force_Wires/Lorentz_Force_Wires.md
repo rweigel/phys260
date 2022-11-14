@@ -10,7 +10,7 @@ Each charge $q$ moving with a velocity $\bfvec{v}$ in a segment of wire  will ha
 
 $$\bfvec{F} = q\bfvec{v}\times\bfvec{B}$$
 
-This equation can be transformed into an equation involving the current $I$ and length $L$ of the wire segment using $q\bfvec{v}=\bfvec{I}L$ 
+This equation can be transformed into an equation involving the current $I$ and length $L$ of the wire segment using $q\bfvec{v}=\bfvec{I}L$:
 
 $$\bfvec{F} = L\bfvec{I}\times\bfvec{B}$$
 
@@ -18,7 +18,7 @@ or, equivalently, $q\bfvec{v}=I\bfvec{L}$.
 
 $$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
 
-The length vector $\bfvec{L}$ is defined to be a vector in the direction of $\bfvec{I}$ with a magnitude of the length of the wire segment.
+where length vector $\bfvec{L}$ is defined to be a vector in the direction of $\bfvec{I}$ with a magnitude of the length of the wire segment.
 
 These equations apply to (1) straight wires with (2) the same $\bfvec{B}$ on all segments of wire.
 
@@ -32,17 +32,19 @@ In the figure above, a magnetic field of magnitude $B_o$ is pointing out of the 
 
 Determine the magnitude and direction of the force on each segment of the wire and the net force on the loop. Draw the vector on the line segment and show your calculation on the figure. 
 
-{\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right-handed coordinate system. In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$. A common error in a problem such as this is to choose the $+z$ direction into the page. In this case, you answers will be be off by a factor of $-1$. 
+{\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right--handed coordinate system. (In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$. A common error in a problem such as this is to choose the $+z$ direction into the page. In this case, you answers will be be off by a factor of $-1$.)
 
 $$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
 
-Left wire: The length of the left wire is $6L_0$ and the current is flowing downward (in the $-\jhat$ direction), so $\bfvec{L} = -6L_o\jhat$.
+* Left wire: The length of the left wire is $6L_0$ and the current is flowing downward (in the $-\jhat$ direction), so $\bfvec{L} = -6L_o\jhat$. The force is $-6I_oL_oB_o\ihat$
 
-Right wire: The length is $6L_0$ and the current is flowing upward (in the $+\jhat$ direction), so $\bfvec{L} = +6L_o\jhat$. $\bfvec{F}=I_o(+6L_o\jhat)\times (B_o\khat)=+6I_oL_oB_o\ihat$.
+* Right wire: The length is $6L_0$ and the current is flowing upward (in the $+\jhat$ direction), so $\bfvec{L} = +6L_o\jhat$. $\bfvec{F}=I_o(+6L_o\jhat)\times (B_o\khat)=+6I_oL_oB_o\ihat$.
 
-Bottom wire: $\bfvec{F}=I_o(12L_o\ihat)\times (B_o\khat)=-12I_oL_oB_o\jhat$.
+* Bottom wire: $\bfvec{F}=I_o(12L_o\ihat)\times (B_o\khat)=-12I_oL_oB_o\jhat$.
 
-Top wire: $\bfvec{F}=I_o(-12L_o\ihat)\times (B_o\khat)=+12I_oL_oB_o\jhat$.
+* Top wire: $\bfvec{F}=I_o(-12L_o\ihat)\times (B_o\khat)=+12I_oL_oB_o\jhat$.
+
+Note that the sum of the forces is zero.
 
 ## Problem 
 
@@ -54,11 +56,7 @@ Top wire: $\bfvec{F}=I_o(-12L_o\ihat)\times (B_o\khat)=+12I_oL_oB_o\jhat$.
 \vspace{6cm}
 \fi
 
-2. For the current loop in c., determine {\bf only} the direction of the force at each of the five points shown as solid dots. Draw a vector on the diagram to indicate the direction of the force at that point.
-
-\ifsolutions
-\else
-\fi
+2. For the current loop in c., determine {\bf only} the direction of the force at each of the five points shown as solid dots. Draw a vector on the diagram to indicate the direction of the force at that point. What is the net force on this loop?
 
 \newpage
 
@@ -70,11 +68,11 @@ However, a closed loop in a constant magnetic field can have a net torque (it wi
 
 The general equation for computing the torque on a current loop that lies in a plane is:
 
-$$\boldsymbol{\tau} = \boldsymbol{\mu}\times\bfvec{B}$$
+$$\vec{\boldsymbol{\tau}} = \vec{\boldsymbol{\mu}}\times\bfvec{B}$$
 
-where $\boldsymbol{\mu}$ is the magnetic moment defined as $\boldsymbol{\mu}=I\bfvec{A}$ and $\bfvec{A}$ is the area vector for a loop. The magnitude of the area vector is simply the area of the loop. The direction of the area vector is determined by a right-hand-rule: wrap your fingers along the direction of current and your thumb points in the direction of the area vector.
+where $\vec{\boldsymbol{\mu}}$ is the magnetic moment defined as $\vec{\boldsymbol{\mu}}=I\bfvec{A}$ and $\bfvec{A}$ is the area vector for a loop. The magnitude of the area vector is simply the area of the loop. The direction of the area vector is determined by a right--hand rule: wrap your fingers along the direction of current and your thumb points in the direction of the area vector.
 
-The equation $\boldsymbol{\tau} = \boldsymbol{\mu}\times\bfvec{B}$ predicts that when $\bfvec{A}$ is perpendicular to $\bfvec{B}$, the torque magnitude is the largest. To see this, note that $\boldsymbol{\mu}\times\bfvec{B}$ can be equivalently written as $\mu A\sin\phi$, where $\phi$ is the angle between $\boldsymbol{\mu}$ and $\bfvec{B}$. When $\phi = \pm 90^\circ$, the cross product will have the largest magnitude.
+The equation $\vec{\boldsymbol{\tau}} = \boldsymbol{\mu}\times\bfvec{B}$ predicts that when $\bfvec{A}$ is perpendicular to $\bfvec{B}$, the torque magnitude is the largest. To see this, note that $\vec{\boldsymbol{\mu}}\times\bfvec{B}$ can be equivalently written as $\mu A\sin\phi$, where $\phi$ is the angle between $\vec{\boldsymbol{\mu}}$ and $\bfvec{B}$. When $\phi = \pm 90^\circ$, the cross product will have the largest magnitude.
 
 **Interpreting the torque unit vector**
 
@@ -93,7 +91,7 @@ Although the forces on the current loops shown in Problem 1.1 were such that the
 <img src="figures/Rectangle_Triangle_Torque.svg"/>
 
 
-1. Will the loop a. tend to rotate? If so, what axis will it tend to rotate about? Determine this by drawing the direction of the force (determined using the right-hand-rule) on each segment of the wire.
+1. Will the loop a. tend to rotate? If so, what axis will it tend to rotate about? Determine this by drawing the direction of the force (determined using the right--hand rule) on each segment of the wire.
 
    \ifsolutions
    {\bf Answer: }Yes. Will rotate about $y$-axis ccw when viewed from point on $+y$ axis.
@@ -141,7 +139,7 @@ Although the forces on the current loops shown in Problem 1.1 were such that the
    \vspace{2cm}
    \fi
 
-7. For loop b., compute $\boldsymbol{\tau}$ when $\bfvec{B}=B_o\ihat + B_o\jhat$ and verify that this torque vector matches what you would expect from using the right-hand rule to determine the direction of the force on each segment of the loop.
+7. For loop b., compute $\boldsymbol{\tau}$ when $\bfvec{B}=(B_o/\sqrt{2})\ihat + (B_o/\sqrt{2})\jhat$ and verify that this torque vector matches what you would expect from using the right-hand rule to determine the direction of the force on each segment of the loop.
 
    \ifsolutions
    {\bf Answer: }
@@ -163,7 +161,7 @@ Although the forces on the current loops shown in Problem 1.1 were such that the
    \vspace{2cm}
    \fi
 
-8. For loop c., compute $\boldsymbol{\tau}$ when $\bfvec{B}=B_o\ihat + B_o\jhat$ and verify that this torque vector matches what you would expect from using the right-hand rule to determine the direction of the force on each segment of the loop.
+8. For loop c., compute $\boldsymbol{\tau}$ when $\bfvec{B}=(B_o/\sqrt{2})\ihat + (B_o/\sqrt{2})\jhat$ and verify that this torque vector matches what you would expect from using the right-hand rule to determine the direction of the force on each segment of the loop.
 
    \ifsolutions
    $\boldsymbol{\mu}=72I_oL_o^2\khat$ (same as Figure 3a.)
