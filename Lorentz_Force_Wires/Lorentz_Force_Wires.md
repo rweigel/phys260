@@ -30,7 +30,7 @@ These equations apply to (1) straight wires with (2) the same $\bfvec{B}$ on all
 
 In the figure above, a magnetic field of magnitude $B_o$ is pointing out of the page and the rectangle has a height of $6L_o$ and a width of $12L_o$.
 
-Determine the magnitude and direction of the force on each segment of the wire and the net force on the loop. Draw the vector on the line segment and show your calculation on the figure. 
+Determine the magnitude and direction of the force on each segment of the wire and the net force on the loop.
 
 {\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right--handed coordinate system. (In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$. A common error in a problem such as this is to choose the $+z$ direction into the page. In this case, you answers will be be off by a factor of $-1$.)
 
@@ -48,17 +48,20 @@ Note that the sum of the forces is zero.
 
 ## Problem 
 
+\ifsolutions
+<img src="figures/Rectangle_Triangle_Circle_Solutions.svg"/>
+\else
 <img src="figures/Rectangle_Triangle_Circle.svg"/>
+\fi
 
 1. For the current loops in a. and b. in the figure above, determine the magnitude and direction of the force on each segment of the wire and the net force on the loop given that a magnetic field of magnitude $B_o$ points out of the page. Draw the vector on the line segments and show your calculation on the figure or in the space below.
+
 \ifsolutions
 \else
 \vspace{6cm}
 \fi
 
 2. For the current loop in c., determine {\bf only} the direction of the force at each of the five points shown as solid dots. Draw a vector on the diagram to indicate the direction of the force at that point. What is the net force on this loop?
-
-\newpage
 
 # Torques on Current Loops
 
@@ -88,8 +91,11 @@ Although the forces on the current loops shown in Problem 1.1 were such that the
 
 \newpage
 
+\ifsolutions
+<img src="figures/Rectangle_Triangle_Torque_Solutions.svg"/>
+\else
 <img src="figures/Rectangle_Triangle_Torque.svg"/>
-
+\fi
 
 1. Will the loop a. tend to rotate? If so, what axis will it tend to rotate about? Determine this by drawing the direction of the force (determined using the right--hand rule) on each segment of the wire.
 
@@ -185,3 +191,24 @@ If $\bfvec{B}=B_o\ihat$,
 2. Find the net force on the loop.
 
 3. Find the net torque on the loop.
+
+\ifsolutions
+
+1. 
+   Left: $\bfvec{L} = c\khat$
+   
+   Right: $\bfvec{L} = -c\khat$
+
+   From a diagram viewing the system from a point on the $+z$--axis,
+
+   Top: $\bfvec{L}=b\cos\phi\ihat + b\sin\phi\jhat$
+
+   Bottom: $\bfvec{L}=-b\cos\phi\ihat - b\sin\phi\jhat$
+   
+2. $0$
+3. $\hat{\mathbf{n}}=-\sin\phi\ihat + \cos\phi\jhat$
+
+   $\boldsymbol{\tau}=\boldsymbol{\mu}\times\bfvec{B}=I_oA\hat{\mathbf{n}}\times\bfvec{B} = I_obc(-\sin\phi\ihat + \cos\phi\jhat)\times\ihat=-Ibc\cos\phi\khat$
+
+\else
+\fi
