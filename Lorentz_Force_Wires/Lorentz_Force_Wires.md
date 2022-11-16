@@ -34,11 +34,13 @@ Determine the magnitude and direction of the force on each segment of the wire a
 
 {\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right--handed coordinate system. (In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$. A common error in a problem such as this is to choose the $+z$ direction into the page. In this case, you answers will be be off by a factor of $-1$.)
 
-$$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
+* Left wire: The length of the left wire is $6L_0$ and the current is flowing downward (in the $-\jhat$ direction), so $\bfvec{L} = -6L_o\jhat$.
 
-* Left wire: The length of the left wire is $6L_0$ and the current is flowing downward (in the $-\jhat$ direction), so $\bfvec{L} = -6L_o\jhat$. The force is $-6I_oL_oB_o\ihat$
+   $$\bfvec{F} = I\bfvec{L}\times\bfvec{B} =I_o(-6L_o\jhat)\times B_o\khat=-6I_oL_oB_o\jhat\times B_o\khat=-6I_oL_oB_o\ihat$$
 
-* Right wire: The length is $6L_0$ and the current is flowing upward (in the $+\jhat$ direction), so $\bfvec{L} = +6L_o\jhat$. $\bfvec{F}=I_o(+6L_o\jhat)\times (B_o\khat)=+6I_oL_oB_o\ihat$.
+* Right wire: The length is $6L_0$ and the current is flowing upward (in the $+\jhat$ direction), so $\bfvec{L} = +6L_o\jhat$.
+
+   $$\bfvec{F}=I_o(+6L_o\jhat)\times (B_o\khat)=+6I_oL_oB_o\ihat$$
 
 * Bottom wire: $\bfvec{F}=I_o(12L_o\ihat)\times (B_o\khat)=-12I_oL_oB_o\jhat$.
 
@@ -150,18 +152,18 @@ Although the forces on the current loops shown in Problem 1.1 were such that the
    \ifsolutions
    {\bf Answer: }
    $$
-   \begin{align}
+   \begin{align*}
    \boldsymbol{\tau} & =\boldsymbol{\mu}\times\bfvec{B}\\
    & =(72I_oL_o^2\khat)\times (B_o\ihat+B_o\jhat)\\
-   & = 72I_oB_oL_o^2(\khat\times \ihat\; +    \;\khat\times \jhat)\\
+   & = 72I_oB_oL_o^2(\khat\times \ihat + \khat\times \jhat)\\
    & =72I_oB_oL_o^2(\jhat-\ihat)\\
    & =72I_oB_oL_o^2(-\ihat+\jhat)
-   \end{align}
+   \end{align*}
    $$
 
-   The torque vector has a negative $x$-component and a positive $y$-component. This is consistent with the answer ``will rotate about $x$-axis cw when viewed from point on $+x$ axis and about $y$-axis cw when viewed from point on $+y$ axis." given the convention that for torque vectors when you wrap your fingers on your right hand in the direction of rotation your thumb points in the direction corresponding to positive torque.
+   The torque vector has a negative $x$-component and a positive $y$-component. This is consistent with the answer "will rotate about $x$-axis cw when viewed from point on $+x$ axis and about $y$-axis cw when viewed from point on $+y$ axis." given the convention that for torque vectors when you wrap your fingers on your right hand in the direction of rotation your thumb points in the direction corresponding to positive torque.
 
-   You can also use the cross-product to get to your solution with respect to the direction. 
+   You can also use the cross--product to get to your solution with respect to the direction. 
 
    \else
    \vspace{2cm}
@@ -170,11 +172,13 @@ Although the forces on the current loops shown in Problem 1.1 were such that the
 8. For loop c., compute $\boldsymbol{\tau}$ when $\bfvec{B}=(B_o/\sqrt{2})\ihat + (B_o/\sqrt{2})\jhat$ and verify that this torque vector matches what you would expect from using the right-hand rule to determine the direction of the force on each segment of the loop.
 
    \ifsolutions
+   **Answer**:
+   
    $\boldsymbol{\mu}=72I_oL_o^2\khat$ (same as Figure 3a.)
 
    The area is $A=(11L_o\cdot 6L_o)/2=33L_o^2$ and the direction of the area vector is into the page by the right-hand-rule, so $\bfvec{A}=-33L_o^2\khat$ and $\boldsymbol{\mu}=I\bfvec{A}=-33I_oL_o^2\khat$. Thus
 
-   $$\boldsymbol{\tau}=\boldsymbol{\mu}\times\bfvec{B}= (-33I_oL_o^2\khat)\times (B_o\ihat)=-33I_oB_oL_o^2\jhat$$
+   $$\boldsymbol{\tau}=\boldsymbol{\mu}\times\bfvec{B}= (-33I_oL_o^2\khat)\times [(B_o/\sqrt{2})\ihat]=-33I_oL_o^2(B_o/\sqrt{2})\jhat$$
 
    \else
    \vspace{2cm}
@@ -194,6 +198,7 @@ If $\bfvec{B}=B_o\ihat$,
 
 \ifsolutions
 
+**Answers**
 1. 
    Left: $\bfvec{L} = c\khat$
    
