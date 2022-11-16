@@ -112,8 +112,8 @@ https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf
 https://rweigel.github.io/phys260/Electric_Potential/Electric_Potential-solutions.pdf
 https://rweigel.github.io/phys260/Capacitance/Capacitance-solutions.pdf
 https://rweigel.github.io/phys260/Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf
-https://rweigel.github.io/phys260/Kirchhoffs_Laws/Lorentz_Force-solutions.pdf
-https://rweigel.github.io/phys260/Kirchhoffs_Laws/Lorentz_Force_Wires-solutions.pdf
+https://rweigel.github.io/phys260/Lorentz_Force/Lorentz_Force-solutions.pdf
+https://rweigel.github.io/phys260/Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf
 
 The following are copies without solutions:
 
@@ -125,6 +125,6 @@ https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge.pdf
 https://rweigel.github.io/phys260/Electric_Potential/Electric_Potential.pdf
 https://rweigel.github.io/phys260/Capacitance/Capacitance.pdf
 https://rweigel.github.io/phys260/Kirchhoffs_Laws/Kirchhoffs_Laws.pdf
-https://rweigel.github.io/phys260/Kirchhoffs_Laws/Lorentz_Force.pdf
-https://rweigel.github.io/phys260/Kirchhoffs_Laws/Lorentz_Force_Wires.pdf
+https://rweigel.github.io/phys260/Lorentz_Force/Lorentz_Force.pdf
+https://rweigel.github.io/phys260/Lorentz_Force_Wires/Lorentz_Force_Wires.pdf
 

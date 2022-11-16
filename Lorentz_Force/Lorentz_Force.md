@@ -82,7 +82,7 @@ $\bfvec{v}=v_o\jhat$, so $\bfvec{F} = q\,(v_o\jhat)\times (B_o\ihat)=qv_oB_o(\jh
 
 {\bf a.2}
 \ifsolutions
-$\theta=90^{\circ}$, so $F = qv_oB_o\sin(90^{\circ})=qv_oB_o$.
+$\phi=90^{\circ}$, so $F = qv_oB_o\sin(90^{\circ})=qv_oB_o$.
 \else
 <div style="height:3em"/>
 \fi
@@ -95,7 +95,7 @@ $\bfvec{v}=-v_o\jhat$, so $\bfvec{F} = -q\,(v_o\jhat)\times (B_o\ihat)=qv_oB_o(\
 \fi
 {\bf b.2}
 \ifsolutions
-$\theta=90^{\circ}$, so $F = qv_oB_o\sin(90^{\circ})=qv_oB_o$.
+$\phi=90^{\circ}$, so $F = qv_oB_o\sin(90^{\circ})=qv_oB_o$.
 \else
 <div style="height:3em"/>
 \fi
@@ -109,7 +109,7 @@ $\bfvec{v}=-v_o\ihat$, so $\bfvec{F} = -q\,(v_o\ihat)\times (B_o\ihat)=-qv_oB_o(
 
 {\bf c.2}
 \ifsolutions
-$\theta=90^{\circ}$, so $F = qv_oB_o\sin(180^{\circ})=0$.
+$\phi=90^{\circ}$, so $F = qv_oB_o\sin(180^{\circ})=0$.
 \else
 <div style="height:3em"/>
 \fi
@@ -123,7 +123,7 @@ $\bfvec{v}=v_o\ihat$, so $\bfvec{F} = q\,(v_o\ihat)\times (B_o\ihat)=qv_oB_o(\ih
 
 {\bf d.2}
 \ifsolutions
-$\theta=90^{\circ}$, so $F = qv_oB_o\sin(0^{\circ})=0$.
+$\phi=90^{\circ}$, so $F = qv_oB_o\sin(0^{\circ})=0$.
 \else
 <div style="height:3em"/>
 \fi
@@ -137,7 +137,7 @@ $\bfvec{v}=v_o\khat$, so $\bfvec{F} = q\,(v_o\khat)\times (B_o\ihat)=qv_oB_o(\kh
 
 {\bf e.2}
 \ifsolutions
-$\theta=90^{\circ}$, so $F = qv_oB_o\sin(90^{\circ})=qv_oB_o$.
+$\phi=90^{\circ}$, so $F = qv_oB_o\sin(90^{\circ})=qv_oB_o$.
 \else
 %\vspace{0.35in}
 \fi
@@ -174,7 +174,7 @@ Use the simulation at https://ophysics.com/em8.html to verify the above statemen
 
 
 
-2. Next, consider the following cases and describe the trajectory of the particle in words in the table below (e.g.,''circle in \(x\)-\(y\) plane; ccw when viewed from a point on \(+z\) axis" or "spiral in \(+z\) direction; ccw when viewed from a point on \(+z\) axis"). You may use the simulation to check some of your answers. Before answering these questions, review the textbook and lecture notes on BlackBoard.
+Next, consider the following cases and describe the trajectory of the particle in words in the table below (e.g.,''circle in \(x\)-\(y\) plane; ccw when viewed from a point on \(+z\) axis" or "spiral in \(+z\) direction; ccw when viewed from a point on \(+z\) axis"). You may use the simulation to check some of your answers. Before answering these questions, review the textbook and lecture notes on BlackBoard.
 
   $$
 \begin{align*}
@@ -249,4 +249,18 @@ $$(v_x\ihat)\times (B_x\ihat + B_y\jhat + B_z\khat)=-v_xB_y\jhat + v_xB_y\khat$$
 
 1. Use method 2. to find $(v_y\jhat)\times (B_x\ihat + B_y\jhat + B_z\khat)$
 
-2. Use method 2. to find $(v_x\ihat + A_y\jhat)\times (B_x\ihat + B_y\jhat)$
+2. Use method 2. to find $(v_x\ihat + v_y\jhat)\times (B_x\ihat + B_y\jhat)$
+
+\ifsolutions
+**Answer**
+
+1. $(v_y\jhat)\times (B_x\ihat + B_y\jhat + B_z\khat)=v_yB_x\jhat\times\ihat + v_yB_y\jhat\times\jhat + v_yB_z\jhat\times\khat$. The middle term is zero, leaving
+
+  $v_yB_x\jhat\times\ihat + v_yB_z\jhat\times\khat= v_yB_z\ihat-v_yB_x\khat$
+
+2. $(v_x\ihat + v_y\jhat)\times (B_x\ihat + B_y\jhat) = v_xB_y\ihat\times\jhat + v_yB_x\jhat\times\ihat$ (The two terms that involve $\ihat\times\ihat$ and $\jhat\times\jhat$ have been omitted.). This leaves
+
+  $v_xB_y\khat - v_yB_x\khat=(v_xB_y - v_yB_x)\khat$
+
+\else
+\fi
