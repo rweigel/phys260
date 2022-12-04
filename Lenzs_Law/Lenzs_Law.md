@@ -1,40 +1,52 @@
-# Lenz's Law (Ch 29)
+```mdextension
+Title: Lenz's Law
+```
 
-## Introduction
+# Introduction
 
-In this section we get our first look at the connection between magnetic and electric fields. A changing magnetic flux can {\it induce} the flow of a current in a conducting loop. 
+## Magnetic Flux
 
-As a reminder, the general equation for magnetic flux is:
+A changing magnetic flux through a closed conducting loop can _induce_ the flow of a current in the conducting loop.
+
+In this activity, we will deal with a conducting loop that has a current that is not driven by a battery -- it will be driven by a change in magnetic flux through the loop. This change will _induce_ a current and this induced current will create what we will refer to as an _induced_ magnetic field.
+
+%Some modern cell phones can be "wirelessly" re--charged using induced currents. Instead of charging a cell phone using currents from a power outlet (which can be thought of as a battery), the cell phone is charged using currents induced by a changing magnetic flux through a conducting loop in your cell phone.
+
+The general equation for magnetic flux is:
 
 $$
-\Phi_B = \int \mathbf{B}\cdot d\mathbf{A}
+\Phi_B = \int \bfvec{B}\cdot d\bfvec{A}
 $$
 
-If the magnitude (strength) of the magnetic field is not changing and the angle between the magnetic field vector and the area vector doesn't change over the surface, then integration is not required and we can write
+If the magnitude (strength) of the magnetic field is not changing and the angle between the magnetic field vector and the area vector does not change over the surface, then integration is not required and we can write
 
-$$
-\Phi_B = \mathbf{B}\cdot \mathbf{A}
-$$
-
+$
+\Phi_B = \bfvec{B}\cdot \bfvec{A}
+$
 or, equivalently,
-
-$$
+$
 \Phi_B = BA\cos\phi
-$$
+$
 
-See the previous tutorial for examples that demonstrate the use of this equation.
+where $\phi$ is the angle between the area vector and $\bfvec{B}$
 
 There are three ways in which flux can change:
 
-1.  The magnitude of $\mathbf{B}$ can change. To do this, a magnet can be moved closer or farther away from a conducting loop, a loop can be moved closer or farther away from a magnet, or the current in the loop that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field without a magnet.
-    
-2.  The area $A$ can change. To do this, the loop cross-section can be expanded or contracted, either by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5).
-    
-3.  The angle can change. To do this, a conducting loop can be rotated (see Example 29.3). This is important in motors. 
+1. The magnitude of $\bfvec{B}$ (that is, $B$) can change. To do this, a magnet can be moved closer or farther away from a conducting loop, a loop can be moved closer or farther away from a magnet, or the current in the loop that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field without a magnet.
 
-In this tutorial, you will first determine the direction of the induced current using Lenz's law. After becoming familiar with the direction of the induced current, we will use Faraday's law to explore the induced emf that drives the induced current. 
+2. The area $A$ can change. To do this, the loop cross--section can be expanded or contracted, either by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5).
 
-Lenz's law follows from Faraday's law. In principle, Faraday's law with careful attention paid to signs can be used to determine the direction of induced current, in which case Lenz's law is not needed. In a similar way that using the right--hand rules to get the general direction for force can be used to check your math on a cross-product, Lenz's Law provides a check on the direction of the induced current when using Faraday's law. 
+3. The angle $\phi$ can change. To do this, a conducting loop can be rotated (see Example 29.3). Electric motors use changes in $\phi$ to convert mechanical energy to electrical energy (or vice versa).
+
+In this activity, you will determine the direction of the induced current in a conducting loop due to a changing magnetic flux through its area using Lenz's law for cases 1. and 2. Although Lenz's law can be used for case 3., we generally use Faraday's law first and then ask if our answer is consisten with Lenz's law. This is covered in a separate activity. Additionally, Lenz's law can be used to determine the direction of force or torque required by an external agent to cause the change in flux through the loop. This is also covered in a separte.
+
+Lenz's law follows from Faraday's law. In principle, Faraday's law with careful attention paid to signs can be used to determine the direction of induced current, in which case Lenz's law is not needed. In a similar way that using the right--hand rules to get the general direction for force can be used to check your math on a cross--product, Lenz's Law provides a check on the direction of the induced current when using Faraday's law.
+
+\newpage
+
+## Currents Generated By Current Loops
+
+Given a loop of current in a plane, one can determine the direction of magnetic field created by the current using a right--hand rule. Wrap your fingers around the loop in the direction of the current and your thumb points in the direction of the magnetic field.
 
 ## Lenz's Law
 
@@ -42,289 +54,186 @@ As described in the textbook,
 
 {\bf Lenz’s Law:} The direction of any magnetic induction effect is such as to oppose the cause of the effect.
 
-Here, we'll use a simpler definition.
+Here, we'll use a longer, but more descriptive definition.
 
-{\bf Lenz’s Law alternative}: When the external magnetic flux through a conducting loop changes, a current appears (is induced) in the loop. This induced current creates an induced magnetic field. The direction of the induced current is such that the magnetic field it creates attempts to keep the magnetic flux unchanged.
+{\bf Lenz’s Law alternative}: When the external magnetic flux through a conducting loop changes, a current appears (is induced) in the loop. This induced current creates an induced magnetic field. The direction of the induced current is such that the induced magnetic field it creates attempts to keep the magnetic flux unchanged.
 
-## Example 2.1
+In the examples given, we will first find the direction of the induced magnetic field. Then we will ask what direction of induced current is consistent with this induced magnetic field.
+
+# A Method of Solution
+
+For cases 1. and 2., it is useful to draw the system before and after the change in magnetic field magnitude or area. 
+
+## $B$ Changing
+
+When the magnetic field magnitude changes and is out of the page, draw the loop with a few dots representing a magnetic field pointing out of the page. Next, draw the loop after an increase or decrease in the magnetic field magnitude. If the magnitude increases, draw more dots. If the magnitude decreases, draw fewer dots. Then, ask what direction of induced field will be needed to give the same number of dots. Finally ask what direction of current in the loop will create this induced field. (If the magnetic field is into the page, use crosses instead of dots in this perscription.)
+
+<img src="figures/Field_out_of_Page_Field_Increasing.svg"/>
+
+## $A$ Changing
+
+If the magnetic field is constant and out of the page and the area of the loop changes, draw the loop with a uniformly spaced dots inside and outside of it. Next draw the loop after the area has changed. If there are more dots in the area, an induced field, represented with crosses, will into the page will be needed to "kill off" the extra dots. If there are fewer dots in the area, an induced field out of the page will be needed to replace the lost dots. (If the magnetic field is constant and into the page, swap "dots" and "crosses" in this perscription.)
+
+<img src="figures/Field_out_of_Page_Area_Increasing.svg"/>
+
+# Examples
+
+## Changing $B$
 
 A spatially uniform external magnetic field points out of the page and its magnitude is increasing in time.
 
-Assume that the area vector, which is normal to the gray cross-sectional area of rectangular conducting loop, is out of the page.
+<img src="figures/Single_Loop_I.svg"/>
 
-\input{EMF and Induced Fields/figures/Square_Loop_I}
+1. What is the direction of an induced magnetic field in the gray region that will counteract the change in the magnetic flux?
 
-1.  Is the magnetic flux through the loop increasing or decreasing? 
-
-2.  What is the direction of an induced magnetic field, through the gray region, that will counteract the change in the magnetic flux? Is the direction of the induced magnetic field positive or negative?
-
-3.  What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current.  
-
-4.  If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?
+2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
 {\bf Answer}:
 
-1.  The magnetic field is in the same direction of as the normal, so $\Phi_B=\mathbf{B}_{ext}\cdot \mathbf{A}=\mathbf{B}_{ext}\cdot A\hat{\mathbf{n}}$ is positive. The flux is increasing. 
+1. Into the page.
 
-2.  A \emph{induced} magnetic field, that counteracts the increasing magnetic flux, would have to be pointed into the page. A magnetic field that counteracts the increasing magnetic flux would be in the negative direction.
+2. By the right--hand rule, to create a magnetic field into the page would require a clockwise current.
 
-3.  By the right-hand rule, to create a magnetic field into the page would require a clockwise current.
-
-4.  The sign of the magnetic fluxes will change but the current direction that follows from Lenz's law will be the same.
-
-## Problem
-
-A spatially uniform external magnetic field points into of the page and its magnitude is decreasing in time.
-
-Assume that the normal direction of the cross-sectional area of loop is out of the page.
-
-\input{EMF and Induced Fields/figures/Square_Loop_II}
-
-1.  Is the magnetic flux through the loop increasing or decreasing? 
-
-2.  What direction would an induced magnetic field have to be to oppose the change in the magnetic flux? Would the direction of the induced magnetic field be positive or negative? 
-
-3.  What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. 
-
-4.  If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?
-
-{\bf Answer}:
-
-1.  The magnetic field is in the opposite direction of as the normal, so $\Phi_B=\mathbf{B}_{ext}\cdot \mathbf{A}=\mathbf{B}_{ext}\cdot A\hat{\mathbf{n}}$ is negative. However, the external magnetic field is decreasing with time so the magnetic flux is increasing (the magnetic flux is large an negative initially; because $B_{ext}$ is decreasing with time, after a short amount of time the flux is still negative but closer to zero). Another way of working this out is to consider the derivative of flux: $\Phi_B=-B_{ext}A$, $d \Phi_B/dt = -AdB_{ext}/dt$. Here $dB_{ext}/dt$ is given to be negative, so $\Phi_B/dt$ is positive. 
-
-(b) A \emph{induced} magnetic field, that will create a flux that counteracts the increasing magnetic flux, would have to be pointed into the page. The induced magnetic flux is thus negative.
-
-(c) By the right-hand rule, to create an induced magnetic field into the page requires a clockwise current.
-
-(d) The sign of the magnetic fluxes will change but the current direction that follows from Lenz's law will be the same.
-
-## Example 2.2
+## Changing Area
 
 A spatially uniform external magnetic field points out of the page and it is not changing with time.
 
-The conducting loop is heated causing the gray cross-sectional area to increase with time.
+The conducting loop is heated causing the gray cross--sectional area to increase with time.
 
-Assume that the normal direction of the gray cross-sectional area of loop is out of the page.
+<img src="figures/Single_Loop_I.svg"/>
 
-\input{EMF and Induced Fields/figures/Square_Loop_I}
+1. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?
 
-1.  Is the magnetic flux through the loop increasing or decreasing? 
-
-2.  What direction would an induced magnetic field have to be to oppose the change in the magnetic flux? Would the direction of the induced magnetic field be positive or negative? 
-
-3.  What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. 
-
-4.  If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?
+2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
 {\bf Answer}:
 
-1.  The magnetic flux is $\Phi_B=\mathbf{B}_{ext}\cdot \mathbf{A}=\mathbf{B}_{ext}\cdot A\hat{\mathbf{n}}$ = $B_{ext}A$. Here $A$ is increasing, so the magnetic flux is increasing.
+1. Into the page.
 
-2.  An induced magnetic field into the page will create a negative flux to counteract the increase in flux.
+2. A clockwise current creates a magnetic field into the page.
 
-3.  A clockwise current creates a magnetic field into the page.
+\newpage
 
-4.  The sign of the magnetic fluxes will change. The direction of current will not change.
+# Problems
 
-## Problem
+## Changing $B$
 
-An external magnetic field points into of the page and it is not changing with time.
+A spatially uniform external magnetic field points into of the page and its magnitude is decreasing in time.
 
-Assume that the normal direction of the cross-sectional area of loop is out of the page.
+<img src="figures/Single_Loop_II.svg"/>
 
-The conducting loop of area $A$ is cooled and as a result its cross-sectional area decreases with time.
+1. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?
 
-\input{EMF and Induced Fields/figures/Square_Loop_II}
+   \ifsolutions
+   {\bf Answer}: Into the page.
+   \else
+   \fi
 
-1.  Is the magnetic flux through the loop increasing or decreasing? 
+2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
-2.  What direction would an induced magnetic field have to be to oppose the change in the magnetic flux? Would the direction of the induced magnetic field be positive or negative? 
+   \ifsolutions
+   {\bf Answer}: Clockwise.
+   \else
+   \fi
 
-3.  What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. 
+\newpage
 
-4.  If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?
+## Changing $B$
 
-{\bf Answer}:
+<img src="figures/Ring_and_Solenoid.png"/>
 
-1.  The magnetic flux is $\Phi_B=\mathbf{B}_{ext}\cdot \mathbf{A}=\mathbf{B}_{ext}\cdot A\hat{\mathbf{n}}$. Here the magnetic field is in the opposite direction of the normal so $\mathbf{B}_{ext}\cdot A\hat{\mathbf{n}}$ is negative. The area $A$ is decreasing so the magnetic flux, which is initially negative, is increasing towards zero. 
+1. A conducting wire loop is placed in the magnetic field of a solenoid as shown. Determine if an induced magnetic field will appear and if so, its direction.
 
-2.  The induced magnetic field would have to be into the page. The induced magnetic field would be in the direction opposite of the chosen normal direction for the loop.
+   1. The loop is stationary.
 
-3.  By the right-hand rule, a clockwise current creates a magnetic field into the page. This direction of induced current is such that its associated induced magnetic field is attempting to keep the magnetic flux unchanged.
+      \ifsolutions
+      {\bf Answer}: No flux change, so no induced magnetic field.
+      \else
+      \fi
 
-4.  The sign of magnetic fluxes will change, the direction of the current will not change.
+   2. The loop is moving to the right.
 
-%To understand the direction a current will be induced in a wire, one can start by considering the magnetic forces on charges on a conductor that is moving within the field. 
+      \ifsolutions
+      {\bf Answer}: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). To keep the flux the same, an induced magnetic field pointing to the left will appear.
+      \else
+      \fi
 
-%Note: we will discuss later that this is only part of the explanation and cannot explain the motion of charges when the conductor is not moving (but the field is still changing). 
+   3. The loop is moving to the left.
 
-## Induced Currents and the Lorentz Force Law
+      \ifsolutions
+      {\bf Answer}: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). To keep the flux the same, an induced magnetic field pointing to the right will appear.
+      \else
+      \fi
 
-Lenz's law can only be used to determine the direction a current will flow in response to a changing magnetic flux through a conducting loop. It does not explain why currents start to flow. The currents flow due to one of two forces. These forces are 
+2. For each case in your answer to question 1. where there is an induced magnetic field find the direction of the current in the loop.
 
-* The Lorentz force, which says that a charge moving in a magnetic field experiences a force according to $\mathbf{F}=q\mathbf{v}\times\mathbf{B}$. An example of this was given in Example 2.2 and 2.3. In both cases, the charges on the conductor are moving in a magnetic field and as a result, they will experience a Lorentz Force that initiates the flow of current.
+      \ifsolutions
+      {\bf Answer}: Moving to the right: counter--clockwise when viewed from a point to the the left of the loop.
+      
+      Moving to the left: clockwise when viewed from a point to the the left of the loop.
+      \else
+      \fi
 
-* An induced electric field. In Example 2.1, the conductor is not moving and so its velocity is zero. But an induced current still appears. We must conclude that there is an induced electric field that causes the current to flow.
+## Changing Area I
 
-## Example
+An external magnetic field points into the page and it is not changing with time.
 
-A conducting loop is moving in a spatially uniformmagnetic field. 
-\input{EMF and Induced Fields/figures/Moving_Loop}
+The conducting loop is cooled causing the gray cross--sectional area to decrease with time.
 
-1.  What is the direction of Lorentz force on the electrons in each segment of the wire?
 
-2.  Based on the result of (1), do you expect a current to flow?
+<img src="figures/Single_Loop_II.svg"/>
 
-3.  Based on Lenz's law, do you expect a current to flow?
+1. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?
 
-{\bf Answer}:
+2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
-1.  Upwards on all sides. 
+   \ifsolutions
+   {\bf Answer}:
+   1. The induced magnetic field will be into the page.
 
-2.  The magnetic force will not cause the charges to rotate around the loop. 
+   2. By the right--hand rule, a clockwise current creates a magnetic field into the page.
+   \else
+   \fi
 
-3.  No current is expected because the magnetic flux through the loop is not changing.
+\newpage
 
-## Problem
+## Changing Area II
 
-A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform.
+A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform. (This is known as a "slidewire generator").
 
-\input{EMF and Induced Fields/figures/Slide_Wire}
+<img src="figures/Slide_Wire.svg"/>
 
-1.  What is the direction of Lorentz force on the electrons in each segment of the wire?
+1. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?
 
-    {\bf Answer}:
+   \ifsolutions
+   {\bf Answer}: Into the page.
+   \else
+   \fi
 
-    The Lorentz force will be zero on all sides (because $\mathbf{v}=0$) except for the moving wire. On the moving wire, $\mathbf{v}\times \mathbf{B}_{ext}$ is downwards (with a small component to the left because the velocity in the Lorentz force equation contains the velocity of the charge as it moves along the wire). The force on an electron will be in the opposite direction. 
+2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
-2.  Based on the result of (1), do you expect a current to flow?
+   \ifsolutions
+   {\bf Answer}: Clockwise.
+   \else
+   \fi
 
-    {\bf Answer}: Clockwise.
+## Loop in Wire Field
 
-3.  Based on Lenz's law, do you expect a current to flow? If yes, (a) in what direction and (b) is this direction consistent with your answer to 2.?
+<img src="figures/Loops_in_Wire_Field.svg"/>
 
-    {\bf Answer}:
+In the figure above, there is a current $I$ running through a long straight wire as shown.
 
-    Yes, the current is expected to flow clockwise. If the normal to the loop is out of the page, the magnetic flux through the loops is increasing; a clockwise current creates a negative magnetic flux.
+For conducting loops A--D that are with a velocity in the direction shown, determine if the current in each the loop is zero or flows clockwise or counterclockwise.
 
-## Problem
+   \ifsolutions
+   {\bf Answer}: Above the long straight wire, the field is out of the page. Below, it is into the page. The magnitude of $\bfvec{B}$ is larger near the wire.
 
-\begin{center}
-    \includegraphics[]{EMF and Induced Fields/figures/emf_and_Induced_Fields_Fig3.png}
-\end{center}
+   A. Induced field is into page. Current is clockwise.
 
+   B. No current.
 
-1.  A copper wire loop is placed in a uniform magnetic field as shown. Determine whether there would be a current through the wire of the loop in each case below. {\bf Explain your answer in terms of magnetic forces exerted on the charges in the wire of the loop.} Recall that the magnitude of field lines is proportional to their spacing.
-    1.  The loop is stationary.
+   C. No current.
 
-    {\bf Answer}:
-
-    If the loop is stationary, there are no moving charges so there is no Lorentz force on the charges and hence no current is induced in the loop.
-
-    2.  The loop is moving to the right.
-
-    {\bf Answer}:
-
-    $$
-    {\bf F} = q{\bf v} \times {\bf B}
-    $$
-
-    Both $\mathbf{v}$ and $\mathbf{B}$ are in the $\xhat$ direction so 
-$v\hat{\bf x} \times B\hat{\bf x} = 0$.So no force and thus no current. 
-
-    3.  The loop is moving to the left.
-
-    {\bf Answer}:
-
-    $$
-    {\bf F} = q{\bf v} \times {\bf B}
-    $$
-
-    Both $\mathbf{v}$ and $\mathbf{B}$ are in the $\hat{\bf x}$ direction so 
-
-    $$
-    v (-\hat{\bf x}) \times B\hat{\bf x} = vb(-\hat{\bf x} \times \hat{\bf x}) = 0
-    $$
-
-    So no force and thus no current. 
-
-## Problem
-
-\begin{center}
-    \includegraphics[]{EMF and Induced Fields/figures/emf_and_Induced_Fields_Fig5.png}
-\end{center}
-
-1.  In the figure above, there is a current running through a long straight wire as shown. For each conducting loop A-D determine:
-
-    1.  The direction (clockwise or counterclockwise or zero) for the current induced in each loop.
-
-    {\bf Answer}:
-
-    A. no current
-
-    B. clockwise
-
-    C. clockwise
-
-    D. no current
-
-    2.  The direction of the net force on the loop – explain your reasoning.
-
-    {\bf Answer}:
-
-    A. no force -- there is no movement in a direction that is perpendicular to the current in the long wire and so there is no change in magnetic flux.
-
-    {\small (This problem statement is missing information required to answer the question for case B. and C. If the velocity of an object is not changing, there is not a net force. Here we are not told whether or not an external force is being supplied to keep the velocity constant. In the answers for B. and C., it is assumed that there is not an external force being supplied to keep the velocity constant.)}
-
-    B. and C. There is a net upwards magnetic force.
-
-    D. no force -- there is no movement in a direction that is perpendicular to the current in the long wire and so there is no change in magnetic flux.
-
-## Problem
-
-
-\begin{center}
-    \includegraphics[]{EMF and Induced Fields/figures/emf_and_Induced_Fields_Fig4.png}
-\end{center}
-
-1.  A conducting wire loop is placed in the magnetic field of a solenoid as shown. Determine whether there would be a current through the wire of the loop in each case below. If so, give the direction of the current. {\bf Explain your answer in terms of the magnetic forces exerted on the charges in the wire.}
-
-    1.  The loop is stationary.
-
-        {\bf Answer}: No moving charges so no force and thus no Lorentz force to start a current.
-
-    2.  The loop is moving to the right.
-
-    {\bf Answer}: 
-
-    Let the $+\xhat$ direction be to the right and the $+\yhat$ direction be upwards. At the top of the ring, {\bf v} is in the $+\xhat$ direction, {\bf B} is in mostly in the $+\xhat$ direction and there is also a $-\yhat$ component, i.e., $B(a\hat{\bf x} + b\hat{\bf y}$).
-
-    $$
-    {\bf F} = qv\hat{\bf x} \times B(a\hat{\bf x} + b\hat{\bf y)} = qvbB(-\hat{\bf z})
-    $$
-
-    Thus the magnetic force is into the page at the top of the ring an so the current will be into the page at that location. This corresponds to a clockwise current if viewed from a point on the $+x$-axis.
-
-    3.  The loop is moving to the left.
-
-        {\bf Answer}: The same as above except that {\bf v} is in the $-\hat{\bf x}$ direction so:
-
-        $$
-        {\bf F} = qv(-\hat{\bf x}) \times B(a\hat{\bf x} + b\hat{\bf y}) = qvbB\hat{\bf z}
-        $$
-
-    Therefore the current will be counterclockwise if viewed from the $+x$-axis. 
-
-1.  For each case in your answer to question 1. where there is an induced current find:
-
-    1.  The direction of the induced magnetic field at the center of the loop due to the induced current.
-
-        {\bf Answer}: Moving to the right: $-\hat{\bf x}$; Moving to the left: $+\hat{\bf x}$
-
-    2.  Whether the loop is attracted to or repelled from the solenoid.
-
-        {\bf Answer}: Moving to the right: repelled (field opposite solenoid's field); Moving to the left: attracted (field along solenoids field)
-
-    3.  Whether the force required to move the loop increases or decreases as the loop is moved.
-
-        {\bf Answer}: Moving to the right: increases, the magnetic field is increasing; Moving to the left: decreases, the magnetic field is decreasing
+   D. Induced field is into page. Current is clockwise.
+   \else
+   \fi

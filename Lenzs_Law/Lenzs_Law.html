@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lenzs_Law</title>
+  <title>Lenz's Law</title>
   <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
@@ -26,6 +26,7 @@
     #toc {
       flex: 0 1 auto;
       margin-top: 0em;
+      margin-right: 1em;
       max-width: 12em;
       overflow: hidden auto;
     }
@@ -41,7 +42,7 @@
 
     #toc ol {
       list-style-type: decimal;
-      margin: 0.25em 0.5em 0em 0.25em;
+      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -66,16 +67,16 @@
 
     #display .title {
       text-align: center;
-      font-size: 250%;
+      font-size: 150%;
       font-weight: bold;
       color: black;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
     }
 
     #display .subtitle {
       text-align: center;
-      font-size: 150%;
+      font-size: 120%;
       font-weight: bold;
       color: black;
       margin-top: 0.2em;
@@ -91,12 +92,8 @@
       flex: 1 1 auto;
     }
 
-    #display .block.comment {
+    #display .block>.comment {
       display: none;
-    }
-
-    #display .block.inline-html {
-      display: block;
     }
 
     #display .hr {
@@ -108,9 +105,26 @@
     }
 
     #display a {
-      text-decoration: none black;
-      text-underline-offset: 2px;
+      text-decoration-line: none;
+      text-decoration-color: black;
       color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
     }
 
     #display p {
@@ -123,22 +137,6 @@
     #display pre {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-    }
-
-    #display ul {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.35em;
-    }
-
-    #display ol {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.5em;
     }
 
     #display h1,
@@ -274,20 +272,61 @@
       width: 100%;
     }
 
-    #display li p {
+    #display ul {
       width: 100%;
-      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
     }
 
-    #display li .block:first-of-type p {
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
       width: 100%;
-      display: block;
-      margin-top: 0em;
-      margin-bottom: 0em;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
     .inline-html .block .block-info {
       display: none;
+    }
+
+    .inline-html {
+      width: 100%;
     }
 
     .section>.block ol~.block-info {}
@@ -325,12 +364,29 @@
       border-radius: 0.5em;
     }
 
+    .solutionsfalse {
+      display: block;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .latex-underline {
+      text-decoration: underline;
+    }
+
     .katex {
       font-size: inherit !important;
     }
 
     .katex-warning {
-      border-right: 3px solid red;
+      border-right: 0.5em solid red;
     }
 
     .katex-display {
@@ -361,15 +417,6 @@
       .body {
         display: inline;
         position: relative;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        break-before: page;
       }
 
       h1,
@@ -449,6 +496,703 @@
       }
     }
   </style>
+</head>
+
+<body class="body">
+  <div id="toc" style="min-width: 5em;">
+    <ol>
+      <li>
+        <a href="#introduction" raw="# Introduction" lo="5">
+          <span class="toctext">Introduction</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#magnetic-flux" raw="## Magnetic Flux" lo="7">
+              <span class="toctext">Magnetic Flux</span>
+            </a>
+          </li>
+          <li>
+            <a href="#currents-generated-by-current-loops" raw="## Currents Generated By Current Loops" lo="47">
+              <span class="toctext">Currents Generated By Current Loops</span>
+            </a>
+          </li>
+          <li>
+            <a href="#lenz-s-law" raw="## Lenz's Law" lo="51">
+              <span class="toctext">Lenz’s Law</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#a-method-of-solution" raw="# A Method of Solution" lo="63">
+          <span class="toctext">A Method of Solution</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#-b-changing" raw="## $B$ Changing" lo="67">
+              <span class="toctext"><span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> Changing</span>
+            </a>
+          </li>
+          <li>
+            <a href="#-a-changing" raw="## $A$ Changing" lo="73">
+              <span class="toctext"><span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> Changing</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#examples" raw="# Examples" lo="79">
+          <span class="toctext">Examples</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#changing-b" raw="## Changing $B$" lo="81">
+              <span class="toctext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#changing-area" raw="## Changing Area" lo="97">
+              <span class="toctext">Changing Area</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#problems" raw="# Problems" lo="117">
+          <span class="toctext">Problems</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#changing-b" raw="## Changing $B$" lo="119">
+              <span class="toctext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#changing-b" raw="## Changing $B$" lo="141">
+              <span class="toctext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#changing-area-i" raw="## Changing Area I" lo="177">
+              <span class="toctext">Changing Area I</span>
+            </a>
+          </li>
+          <li>
+            <a href="#changing-area-ii" raw="## Changing Area II" lo="200" class="">
+              <span class="toctext">Changing Area II</span>
+            </a>
+          </li>
+          <li>
+            <a href="#loop-in-wire-field" raw="## Loop in Wire Field" lo="220" class="">
+              <span class="toctext">Loop in Wire Field</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <div id="display">
+    <div class="section">
+      <div class="block">
+        <p class="title">Lenz's Law</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1><a name="introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="magnetic-flux" class="anchor hanchor" href="#magnetic-flux"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Magnetic Flux</span></a></h2>
+      </div>
+      <div class="block">
+        <p>A changing magnetic flux through a closed conducting loop can <em>induce</em> the flow of a current in the conducting loop.</p>
+      </div>
+      <div class="block">
+        <p>In this activity, we will deal with a conducting loop that has a current that is not driven by a battery – it will be driven by a change in magnetic flux through the loop. This change will <em>induce</em> a current and this induced current will create what we will refer to as an <em>induced</em> magnetic field.</p>
+      </div>
+      <div class="block">
+        <div class="comment">%Some modern cell phones can be “wirelessly” re–charged using induced currents. Instead of charging a cell phone using currents from a power outlet (which can be thought of as a battery), the cell phone is charged using currents induced by a changing magnetic flux through a conducting loop in your cell phone.</div>
+      </div>
+      <div class="block">
+        <p>The general equation for magnetic flux is:</p>
+      </div>
+      <div class="block">
+        <p><span class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                  <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                                </svg></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord mathnormal">d</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">A</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0966em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                  <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                                </svg></span></span></span></span></span></span></span></span></span></span></span></p>
+      </div>
+      <div class="block">
+        <p>If the magnitude (strength) of the magnetic field is not changing and the angle between the magnetic field vector and the area vector does not change over the surface, then integration is not required and we can write</p>
+      </div>
+      <div class="block">
+        <p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                              </svg></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">A</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0966em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                              </svg></span></span></span></span></span></span></span></span></span></span> or, equivalently, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span></span></span></span></p>
+      </div>
+      <div class="block">
+        <p>where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> is the angle between the area vector and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                              </svg></span></span></span></span></span></span></span></span></span></span></p>
+      </div>
+      <div class="block">
+        <p>There are three ways in which flux can change:</p>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>The magnitude of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                      <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                                    </svg></span></span></span></span></span></span></span></span></span></span> (that is, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>) can change. To do this, a magnet can be moved closer or farther away from a conducting loop, a loop can be moved closer or farther away from a magnet, or the current in the loop that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field without a magnet.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="37" lf="38">
+            <div class="block">
+              <p>The area <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> can change. To do this, the loop cross–section can be expanded or contracted, either by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5).</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="39" lf="41">
+            <div class="block">
+              <p>The angle <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> can change. To do this, a conducting loop can be rotated (see Example 29.3). Electric motors use changes in <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> to convert mechanical energy to electrical energy (or vice versa).</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <p>In this activity, you will determine the direction of the induced current in a conducting loop due to a changing magnetic flux through its area using Lenz’s law for cases 1. and 2. Although Lenz’s law can be used for case 3., we generally use Faraday’s law first and then ask if our answer is consisten with Lenz’s law. This is covered in a separate activity. Additionally, Lenz’s law can be used to determine the direction of force or torque required by an external agent to cause the change in flux through the loop. This is also covered in a separte.</p>
+      </div>
+      <div class="block">
+        <p>Lenz’s law follows from Faraday’s law. In principle, Faraday’s law with careful attention paid to signs can be used to determine the direction of induced current, in which case Lenz’s law is not needed. In a similar way that using the right–hand rules to get the general direction for force can be used to check your math on a cross–product, Lenz’s Law provides a check on the direction of the induced current when using Faraday’s law.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="currents-generated-by-current-loops" class="anchor hanchor" href="#currents-generated-by-current-loops"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Currents Generated By Current Loops</span></a></h2>
+      </div>
+      <div class="block">
+        <p>Given a loop of current in a plane, one can determine the direction of magnetic field created by the current using a right–hand rule. Wrap your fingers around the loop in the direction of the current and your thumb points in the direction of the magnetic field.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="lenz-s-law" class="anchor hanchor" href="#lenz-s-law"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Lenz’s Law</span></a></h2>
+      </div>
+      <div class="block">
+        <p>As described in the textbook,</p>
+      </div>
+      <div class="block">
+        <p><strong markerlength="4"> Lenz’s Law:</strong> The direction of any magnetic induction effect is such as to oppose the cause of the effect.</p>
+      </div>
+      <div class="block">
+        <p>Here, we’ll use a longer, but more descriptive definition.</p>
+      </div>
+      <div class="block">
+        <p><strong markerlength="4"> Lenz’s Law alternative</strong>: When the external magnetic flux through a conducting loop changes, a current appears (is induced) in the loop. This induced current creates an induced magnetic field. The direction of the induced current is such that the induced magnetic field it creates attempts to keep the magnetic flux unchanged.</p>
+      </div>
+      <div class="block">
+        <p>In the examples given, we will first find the direction of the induced magnetic field. Then we will ask what direction of induced current is consistent with this induced magnetic field.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1><a name="a-method-of-solution" class="anchor hanchor" href="#a-method-of-solution"><span class="hnumber">2</span>&nbsp;<span class="htext">A Method of Solution</span></a></h1>
+      </div>
+      <div class="block">
+        <p>For cases 1. and 2., it is useful to draw the system before and after the change in magnetic field magnitude or area. </p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="-b-changing" class="anchor hanchor" href="#-b-changing"><span class="hnumber">2.1</span>&nbsp;<span class="htext"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> Changing</span></a></h2>
+      </div>
+      <div class="block">
+        <p>When the magnetic field magnitude changes and is out of the page, draw the loop with a few dots representing a magnetic field pointing out of the page. Next, draw the loop after an increase or decrease in the magnetic field magnitude. If the magnitude increases, draw more dots. If the magnitude decreases, draw fewer dots. Then, ask what direction of induced field will be needed to give the same number of dots. Finally ask what direction of current in the loop will create this induced field. (If the magnetic field is into the page, use crosses instead of dots in this perscription.)</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Field_out_of_Page_Field_Increasing.svg">
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="-a-changing" class="anchor hanchor" href="#-a-changing"><span class="hnumber">2.2</span>&nbsp;<span class="htext"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> Changing</span></a></h2>
+      </div>
+      <div class="block">
+        <p>If the magnetic field is constant and out of the page and the area of the loop changes, draw the loop with a uniformly spaced dots inside and outside of it. Next draw the loop after the area has changed. If there are more dots in the area, an induced field, represented with crosses, will into the page will be needed to “kill off” the extra dots. If there are fewer dots in the area, an induced field out of the page will be needed to replace the lost dots. (If the magnetic field is constant and into the page, swap “dots” and “crosses” in this perscription.)</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Field_out_of_Page_Area_Increasing.svg">
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1><a name="examples" class="anchor hanchor" href="#examples"><span class="hnumber">3</span>&nbsp;<span class="htext">Examples</span></a></h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="changing-b" class="anchor hanchor" href="#changing-b"><span class="hnumber">3.1</span>&nbsp;<span class="htext">Changing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span></a></h2>
+      </div>
+      <div class="block">
+        <p>A spatially uniform external magnetic field points out of the page and its magnitude is increasing in time.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Single_Loop_I.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>What is the direction of an induced magnetic field in the gray region that will counteract the change in the magnetic flux?</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="89" lf="91">
+            <div class="block">
+              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <p><strong markerlength="4"> Answer</strong>:</p>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>Into the page.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="95" lf="97">
+            <div class="block">
+              <p>By the right–hand rule, to create a magnetic field into the page would require a clockwise current.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="changing-area" class="anchor hanchor" href="#changing-area"><span class="hnumber">3.2</span>&nbsp;<span class="htext">Changing Area</span></a></h2>
+      </div>
+      <div class="block">
+        <p>A spatially uniform external magnetic field points out of the page and it is not changing with time.</p>
+      </div>
+      <div class="block">
+        <p>The conducting loop is heated causing the gray cross–sectional area to increase with time.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Single_Loop_I.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="107" lf="109">
+            <div class="block">
+              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <p><strong markerlength="4"> Answer</strong>:</p>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>Into the page.</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="113" lf="115">
+            <div class="block">
+              <p>A clockwise current creates a magnetic field into the page.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1><a name="problems" class="anchor hanchor" href="#problems"><span class="hnumber">4</span>&nbsp;<span class="htext">Problems</span></a></h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="changing-b" class="anchor hanchor" href="#changing-b"><span class="hnumber">4.1</span>&nbsp;<span class="htext">Changing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span></a></h2>
+      </div>
+      <div class="block">
+        <p>A spatially uniform external magnetic field points into of the page and its magnitude is decreasing in time.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Single_Loop_II.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue">
+                  <div class="block">
+                    <p><strong markerlength="4"> Answer</strong>: Into the page.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li markerlength="3" lo="132" lf="139">
+            <div class="block">
+              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue">
+                  <div class="block">
+                    <p><strong markerlength="4"> Answer</strong>: Clockwise.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="changing-b" class="anchor hanchor" href="#changing-b"><span class="hnumber">4.2</span>&nbsp;<span class="htext">Changing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span></a></h2>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Ring_and_Solenoid.png">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>A conducting wire loop is placed in the magnetic field of a solenoid as shown. Determine if an induced magnetic field will appear and if so, its direction.</p>
+            </div>
+            <div class="block">
+              <ol class="loose">
+                <li markerlength="3">
+                  <div class="block">
+                    <p>The loop is stationary.</p>
+                  </div>
+                  <div class="block">
+                    <div class="inline-html">
+                      <div class="solutionstrue">
+                        <div class="block">
+                          <p><strong markerlength="4"> Answer</strong>: No flux change, so no induced magnetic field.</p>
+                        </div>
+                      </div>
+                      <div class="solutionsfalse">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li markerlength="3" lo="154" lf="160">
+                  <div class="block">
+                    <p>The loop is moving to the right.</p>
+                  </div>
+                  <div class="block">
+                    <div class="inline-html">
+                      <div class="solutionstrue">
+                        <div class="block">
+                          <p><strong markerlength="4"> Answer</strong>: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). To keep the flux the same, an induced magnetic field pointing to the left will appear.</p>
+                        </div>
+                      </div>
+                      <div class="solutionsfalse">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li markerlength="3" lo="161" lf="167">
+                  <div class="block">
+                    <p>The loop is moving to the left.</p>
+                  </div>
+                  <div class="block">
+                    <div class="inline-html">
+                      <div class="solutionstrue">
+                        <div class="block">
+                          <p><strong markerlength="4"> Answer</strong>: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). To keep the flux the same, an induced magnetic field pointing to the right will appear.</p>
+                        </div>
+                      </div>
+                      <div class="solutionsfalse">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li markerlength="3" lo="168" lf="177">
+            <div class="block">
+              <p>For each case in your answer to question 1. where there is an induced magnetic field find the direction of the current in the loop.</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue">
+                  <div class="block">
+                    <p><strong markerlength="4"> Answer</strong>: Moving to the right: counter–clockwise when viewed from a point to the the left of the loop.</p>
+                  </div>
+                  <div class="block">
+                    <p>Moving to the left: clockwise when viewed from a point to the the left of the loop.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="changing-area-i" class="anchor hanchor" href="#changing-area-i"><span class="hnumber">4.3</span>&nbsp;<span class="htext">Changing Area I</span></a></h2>
+      </div>
+      <div class="block">
+        <p>An external magnetic field points into the page and it is not changing with time.</p>
+      </div>
+      <div class="block">
+        <p>The conducting loop is cooled causing the gray cross–sectional area to decrease with time.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Single_Loop_II.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+            </div>
+          </li>
+          <li markerlength="3" lo="188" lf="198">
+            <div class="block">
+              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue">
+                  <div class="block">
+                    <p><strong markerlength="4"> Answer</strong>:</p>
+                  </div>
+                  <div class="block">
+                    <ol class="loose">
+                      <li markerlength="3">
+                        <div class="block">
+                          <p>The induced magnetic field will be into the page.</p>
+                        </div>
+                      </li>
+                      <li markerlength="3" lo="194" lf="195">
+                        <div class="block">
+                          <p>By the right–hand rule, a clockwise current creates a magnetic field into the page.</p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="solutionsfalse">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 class=""><a name="changing-area-ii" class="anchor hanchor" href="#changing-area-ii"><span class="hnumber">4.4</span>&nbsp;<span class="htext">Changing Area II</span></a></h2>
+      </div>
+      <div class="block">
+        <p>A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform. (This is known as a “slidewire generator”).</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Slide_Wire.svg">
+        </div>
+      </div>
+      <div class="block">
+        <ol class="loose">
+          <li markerlength="3">
+            <div class="block">
+              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue">
+                  <div class="block">
+                    <p><strong markerlength="4"> Answer</strong>: Into the page.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li markerlength="3" lo="213" lf="220">
+            <div class="block">
+              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue">
+                  <div class="block">
+                    <p><strong markerlength="4"> Answer</strong>: Clockwise.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 class=""><a name="loop-in-wire-field" class="anchor hanchor" href="#loop-in-wire-field"><span class="hnumber">4.5</span>&nbsp;<span class="htext">Loop in Wire Field</span></a></h2>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <img src="figures/Loops_in_Wire_Field.svg">
+        </div>
+      </div>
+      <div class="block">
+        <p class="">In the figure above, there is a current <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> running through a long straight wire as shown.</p>
+      </div>
+      <div class="block">
+        <p>For conducting loops A–D that are with a velocity in the direction shown, determine if the current in each the loop is zero or flows clockwise or counterclockwise.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="solutionstrue">
+            <div class="block">
+              <p><strong markerlength="4"> Answer</strong>: Above the long straight wire, the field is out of the page. Below, it is into the page. The magnitude of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                      <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"></path>
+                                    </svg></span></span></span></span></span></span></span></span></span></span> is larger near the wire.</p>
+            </div>
+            <div class="block">
+              <p>A. Induced field is into page. Current is clockwise.</p>
+            </div>
+            <div class="block">
+              <p>B. No current.</p>
+            </div>
+            <div class="block">
+              <p>C. No current.</p>
+            </div>
+            <div class="block">
+              <p>D. Induced field is into page. Current is clockwise.</p>
+            </div>
+          </div>
+          <div class="solutionsfalse">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
     function tocClickListen() {
       // No jQuery b/c also used in stand-alone HTML.
@@ -462,9 +1206,11 @@
           }
           el.addEventListener('click', event => {
             ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
             if (ns.style.display === 'none') {
     ns.style.display = 'block';
-            } else {
+            }
+            else {
     ns.style.display = 'none';
             }
           });
@@ -481,781 +1227,6 @@
       document.addEventListener("DOMContentLoaded", tocClickListen);
     }
   </script>
-</head>
-
-<body class="body">
-  <div id="toc" style="display: block; min-width: 5em;">
-    <ol>
-      <li>
-        <a href="#lenz-s-law-ch-29" raw="# Lenz's Law (Ch 29)" lo="1">
-          <span class="toctext">Lenz’s Law (Ch 29)</span>
-        </a>
-        <ol class="toc" style="display: none;">
-          <li>
-            <a href="#introduction" raw="## Introduction" lo="3">
-              <span class="toctext">Introduction</span>
-            </a>
-          </li>
-          <li>
-            <a href="#lenz-s-law" raw="## Lenz's Law" lo="39">
-              <span class="toctext">Lenz’s Law</span>
-            </a>
-          </li>
-          <li>
-            <a href="#example-2-1" raw="## Example 2.1" lo="49">
-              <span class="toctext">Example 2.1</span>
-            </a>
-          </li>
-          <li>
-            <a href="#problem" raw="## Problem" lo="75">
-              <span class="toctext">Problem</span>
-            </a>
-          </li>
-          <li>
-            <a href="#example-2-2" raw="## Example 2.2" lo="101">
-              <span class="toctext">Example 2.2</span>
-            </a>
-          </li>
-          <li>
-            <a href="#problem" raw="## Problem" lo="129">
-              <span class="toctext">Problem</span>
-            </a>
-          </li>
-          <li>
-            <a href="#induced-currents-and-the-lorentz-force-law" raw="## Induced Currents and the Lorentz Force Law" lo="161">
-              <span class="toctext">Induced Currents and the Lorentz Force Law</span>
-            </a>
-          </li>
-          <li>
-            <a href="#example" raw="## Example" lo="169">
-              <span class="toctext">Example</span>
-            </a>
-          </li>
-          <li>
-            <a href="#problem" raw="## Problem" lo="188">
-              <span class="toctext">Problem</span>
-            </a>
-          </li>
-          <li>
-            <a href="#problem" raw="## Problem" lo="210">
-              <span class="toctext">Problem</span>
-            </a>
-          </li>
-          <li>
-            <a href="#problem" raw="## Problem" lo="251">
-              <span class="toctext">Problem</span>
-            </a>
-          </li>
-          <li>
-            <a href="#problem" raw="## Problem" lo="283">
-              <span class="toctext">Problem</span>
-            </a>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-  <div id="display">
-    <div class="section">
-    </div>
-    <div class="section">
-      <div class="block">
-        <h1 lo="1" lf="1"><a name="lenz-s-law-ch-29" number="1" lo="1" raw="# Lenz's Law (Ch 29)" class="hanchor" href="#lenz-s-law-ch-29"><span class="hnumber">1</span>&nbsp;<span class="htext">Lenz’s Law (Ch 29)</span></a></h1>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="3" lf="3"><a name="introduction" number="1.1" lo="3" raw="## Introduction" class="hanchor" href="#introduction"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Introduction</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="5" lf="5">In this section we get our first look at the connection between magnetic and electric fields. A changing magnetic flux can <em>induce</em> the flow of a current in a conducting loop. </p>
-      </div>
-      <div class="block">
-        <p lo="7" lf="7">As a reminder, the general equation for magnetic flux is:</p>
-      </div>
-      <div class="block">
-        <p lo="9" lf="11"><span len="47" raw="__
-\Phi_B = \int \mathbf{B}\cdot d\mathbf{A}
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathbf">A</span></span></span></span></span></p>
-      </div>
-      <div class="block">
-        <p lo="13" lf="13">If the magnitude (strength) of the magnetic field is not changing and the angle between the magnetic field vector and the area vector doesn’t change over the surface, then integration is not required and we can write</p>
-      </div>
-      <div class="block">
-        <p lo="15" lf="17"><span len="41" raw="__
-\Phi_B = \mathbf{B}\cdot \mathbf{A}
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span></span></span></span></span></p>
-      </div>
-      <div class="block">
-        <p lo="19" lf="19">or, equivalently,</p>
-      </div>
-      <div class="block">
-        <p lo="21" lf="23"><span len="25" raw="__
-\Phi_B = BA\cos\phi
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span></span></span></span></span></p>
-      </div>
-      <div class="block">
-        <p lo="25" lf="25">See the previous tutorial for examples that demonstrate the use of this equation.</p>
-      </div>
-      <div class="block">
-        <p lo="27" lf="27">There are three ways in which flux can change:</p>
-      </div>
-      <div class="block">
-        <ol lo="29" lf="33">
-          <li lo="29" lf="30">
-            <div class="block">
-              <p lo="29" lf="30"> The magnitude of <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> can change. To do this, a magnet can be moved closer or farther away from a conducting loop, a loop can be moved closer or farther away from a magnet, or the current in the loop that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field without a magnet.</p>
-            </div>
-          </li>
-          <li lo="31" lf="32">
-            <div class="block">
-              <p lo="31" lf="32"> The area <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> can change. To do this, the loop cross-section can be expanded or contracted, either by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5).</p>
-            </div>
-          </li>
-          <li lo="33" lf="35">
-            <div class="block">
-              <p lo="33" lf="34"> The angle can change. To do this, a conducting loop can be rotated (see Example 29.3). This is important in motors. </p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="35" lf="35">In this tutorial, you will first determine the direction of the induced current using Lenz’s law. After becoming familiar with the direction of the induced current, we will use Faraday’s law to explore the induced emf that drives the induced current. </p>
-      </div>
-      <div class="block">
-        <p lo="37" lf="37">Lenz’s law follows from Faraday’s law. In principle, Faraday’s law with careful attention paid to signs can be used to determine the direction of induced current, in which case Lenz’s law is not needed. In a similar way that using the right–hand rules to get the general direction for force can be used to check your math on a cross-product, Lenz’s Law provides a check on the direction of the induced current when using Faraday’s law. </p>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="39" lf="39"><a name="lenz-s-law" number="1.2" lo="39" raw="## Lenz's Law" class="hanchor" href="#lenz-s-law"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Lenz’s Law</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="41" lf="41">As described in the textbook,</p>
-      </div>
-      <div class="block">
-        <p lo="43" lf="43"><strong>Lenz’s Law:</strong> The direction of any magnetic induction effect is such as to oppose the cause of the effect.</p>
-      </div>
-      <div class="block">
-        <p lo="45" lf="45">Here, we’ll use a simpler definition.</p>
-      </div>
-      <div class="block">
-        <p lo="47" lf="47"><strong>Lenz’s Law alternative</strong>: When the external magnetic flux through a conducting loop changes, a current appears (is induced) in the loop. This induced current creates an induced magnetic field. The direction of the induced current is such that the magnetic field it creates attempts to keep the magnetic flux unchanged.</p>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="49" lf="49"><a name="example-2-1" number="1.3" lo="49" raw="## Example 2.1" class="hanchor" href="#example-2-1"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Example 2.1</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="51" lf="51">A spatially uniform external magnetic field points out of the page and its magnitude is increasing in time.</p>
-      </div>
-      <div class="block">
-        <p lo="53" lf="53">Assume that the area vector, which is normal to the gray cross-sectional area of rectangular conducting loop, is out of the page.</p>
-      </div>
-      <div class="block">
-        <p lo="55" lf="55">\input{EMF and Induced Fields/figures/Square_Loop_I}</p>
-      </div>
-      <div class="block">
-        <ol lo="57" lf="63">
-          <li lo="57" lf="58">
-            <div class="block">
-              <p lo="57" lf="58"> Is the magnetic flux through the loop increasing or decreasing? </p>
-            </div>
-          </li>
-          <li lo="59" lf="60">
-            <div class="block">
-              <p lo="59" lf="60"> What is the direction of an induced magnetic field, through the gray region, that will counteract the change in the magnetic flux? Is the direction of the induced magnetic field positive or negative?</p>
-            </div>
-          </li>
-          <li lo="61" lf="62">
-            <div class="block">
-              <p lo="61" lf="62"> What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. </p>
-            </div>
-          </li>
-          <li lo="63" lf="65">
-            <div class="block">
-              <p lo="63" lf="64"> If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="65" lf="65"><strong>Answer</strong>:</p>
-      </div>
-      <div class="block">
-        <ol lo="67" lf="73">
-          <li lo="67" lf="68">
-            <div class="block">
-              <p lo="67" lf="68"> The magnetic field is in the same direction of as the normal, so <span len="88" raw="_\Phi_B=\mathbf{B}<em>{ext}\cdot \mathbf{A}=\mathbf{B}</em>{ext}\cdot A\hat{\mathbf{n}}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord mathnormal">A</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">n</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> is positive. The flux is increasing. </p>
-            </div>
-          </li>
-          <li lo="69" lf="70">
-            <div class="block">
-              <p lo="69" lf="70"> A \emph{induced} magnetic field, that counteracts the increasing magnetic flux, would have to be pointed into the page. A magnetic field that counteracts the increasing magnetic flux would be in the negative direction.</p>
-            </div>
-          </li>
-          <li lo="71" lf="72">
-            <div class="block">
-              <p lo="71" lf="72"> By the right-hand rule, to create a magnetic field into the page would require a clockwise current.</p>
-            </div>
-          </li>
-          <li lo="73" lf="75">
-            <div class="block">
-              <p lo="73" lf="74"> The sign of the magnetic fluxes will change but the current direction that follows from Lenz’s law will be the same.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="75" lf="75"><a name="problem" number="1.4" lo="75" raw="## Problem" class="hanchor" href="#problem"><span class="hnumber">1.4</span>&nbsp;<span class="htext">Problem</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="77" lf="77">A spatially uniform external magnetic field points into of the page and its magnitude is decreasing in time.</p>
-      </div>
-      <div class="block">
-        <p lo="79" lf="79">Assume that the normal direction of the cross-sectional area of loop is out of the page.</p>
-      </div>
-      <div class="block">
-        <p lo="81" lf="81">\input{EMF and Induced Fields/figures/Square_Loop_II}</p>
-      </div>
-      <div class="block">
-        <ol lo="83" lf="89">
-          <li lo="83" lf="84">
-            <div class="block">
-              <p lo="83" lf="84"> Is the magnetic flux through the loop increasing or decreasing? </p>
-            </div>
-          </li>
-          <li lo="85" lf="86">
-            <div class="block">
-              <p lo="85" lf="86"> What direction would an induced magnetic field have to be to oppose the change in the magnetic flux? Would the direction of the induced magnetic field be positive or negative? </p>
-            </div>
-          </li>
-          <li lo="87" lf="88">
-            <div class="block">
-              <p lo="87" lf="88"> What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. </p>
-            </div>
-          </li>
-          <li lo="89" lf="91">
-            <div class="block">
-              <p lo="89" lf="90"> If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="91" lf="91"><strong>Answer</strong>:</p>
-      </div>
-      <div class="block">
-        <ol lo="93" lf="93">
-          <li lo="93" lf="95">
-            <div class="block">
-              <p> The magnetic field is in the opposite direction of as the normal, so <span len="88" raw="_\Phi_B=\mathbf{B}<em>{ext}\cdot \mathbf{A}=\mathbf{B}</em>{ext}\cdot A\hat{\mathbf{n}}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord mathnormal">A</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">n</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> is negative. However, the external magnetic field is decreasing with time so the magnetic flux is increasing (the magnetic flux is large an negative initially; because <span len="9" raw="_B_{ext}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is decreasing with time, after a short amount of time the flux is still negative but closer to zero). Another way of working this out is to consider the derivative of flux: <span len="18" raw="_\Phi_B=-B_{ext}A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span>, <span len="29" raw="_d \Phi_B/dt = -AdB_{ext}/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal">A</span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span>. Here <span len="13" raw="_dB_{ext}/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span> is given to be negative, so <span len="11" raw="_\Phi_B/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span> is positive. </p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="95" lf="95">(b) A \emph{induced} magnetic field, that will create a flux that counteracts the increasing magnetic flux, would have to be pointed into the page. The induced magnetic flux is thus negative.</p>
-      </div>
-      <div class="block">
-        <p lo="97" lf="97">(c) By the right-hand rule, to create an induced magnetic field into the page requires a clockwise current.</p>
-      </div>
-      <div class="block">
-        <p lo="99" lf="99">(d) The sign of the magnetic fluxes will change but the current direction that follows from Lenz’s law will be the same.</p>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="101" lf="101"><a name="example-2-2" number="1.5" lo="101" raw="## Example 2.2" class="hanchor" href="#example-2-2"><span class="hnumber">1.5</span>&nbsp;<span class="htext">Example 2.2</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="103" lf="103">A spatially uniform external magnetic field points out of the page and it is not changing with time.</p>
-      </div>
-      <div class="block">
-        <p lo="105" lf="105">The conducting loop is heated causing the gray cross-sectional area to increase with time.</p>
-      </div>
-      <div class="block">
-        <p lo="107" lf="107">Assume that the normal direction of the gray cross-sectional area of loop is out of the page.</p>
-      </div>
-      <div class="block">
-        <p lo="109" lf="109">\input{EMF and Induced Fields/figures/Square_Loop_I}</p>
-      </div>
-      <div class="block">
-        <ol lo="111" lf="117">
-          <li lo="111" lf="112">
-            <div class="block">
-              <p lo="111" lf="112"> Is the magnetic flux through the loop increasing or decreasing? </p>
-            </div>
-          </li>
-          <li lo="113" lf="114">
-            <div class="block">
-              <p lo="113" lf="114"> What direction would an induced magnetic field have to be to oppose the change in the magnetic flux? Would the direction of the induced magnetic field be positive or negative? </p>
-            </div>
-          </li>
-          <li lo="115" lf="116">
-            <div class="block">
-              <p lo="115" lf="116"> What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. </p>
-            </div>
-          </li>
-          <li lo="117" lf="119">
-            <div class="block">
-              <p lo="117" lf="118"> If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="119" lf="119"><strong>Answer</strong>:</p>
-      </div>
-      <div class="block">
-        <ol lo="121" lf="127">
-          <li lo="121" lf="122">
-            <div class="block">
-              <p lo="121" lf="122"> The magnetic flux is <span len="88" raw="_\Phi_B=\mathbf{B}<em>{ext}\cdot \mathbf{A}=\mathbf{B}</em>{ext}\cdot A\hat{\mathbf{n}}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord mathnormal">A</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">n</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> = <span len="10" raw="_B_{ext}A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span>. Here <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is increasing, so the magnetic flux is increasing.</p>
-            </div>
-          </li>
-          <li lo="123" lf="124">
-            <div class="block">
-              <p lo="123" lf="124"> An induced magnetic field into the page will create a negative flux to counteract the increase in flux.</p>
-            </div>
-          </li>
-          <li lo="125" lf="126">
-            <div class="block">
-              <p lo="125" lf="126"> A clockwise current creates a magnetic field into the page.</p>
-            </div>
-          </li>
-          <li lo="127" lf="129">
-            <div class="block">
-              <p lo="127" lf="128"> The sign of the magnetic fluxes will change. The direction of current will not change.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="129" lf="129"><a name="problem" number="1.6" lo="129" raw="## Problem" class="hanchor" href="#problem"><span class="hnumber">1.6</span>&nbsp;<span class="htext">Problem</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="131" lf="131">An external magnetic field points into of the page and it is not changing with time.</p>
-      </div>
-      <div class="block">
-        <p lo="133" lf="133">Assume that the normal direction of the cross-sectional area of loop is out of the page.</p>
-      </div>
-      <div class="block">
-        <p lo="135" lf="135">The conducting loop of area <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is cooled and as a result its cross-sectional area decreases with time.</p>
-      </div>
-      <div class="block">
-        <p lo="137" lf="137">\input{EMF and Induced Fields/figures/Square_Loop_II}</p>
-      </div>
-      <div class="block">
-        <ol lo="139" lf="145">
-          <li lo="139" lf="140">
-            <div class="block">
-              <p lo="139" lf="140"> Is the magnetic flux through the loop increasing or decreasing? </p>
-            </div>
-          </li>
-          <li lo="141" lf="142">
-            <div class="block">
-              <p lo="141" lf="142"> What direction would an induced magnetic field have to be to oppose the change in the magnetic flux? Would the direction of the induced magnetic field be positive or negative? </p>
-            </div>
-          </li>
-          <li lo="143" lf="144">
-            <div class="block">
-              <p lo="143" lf="144"> What would the direction of the current in the loop have to be to induce a magnetic field in the direction you got in part b? This is the direction of the induced current. </p>
-            </div>
-          </li>
-          <li lo="145" lf="147">
-            <div class="block">
-              <p lo="145" lf="146"> If you assume that the normal direction of the cross-sectional area of loop is into the page, will your answers change?</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="147" lf="147"><strong>Answer</strong>:</p>
-      </div>
-      <div class="block">
-        <ol lo="149" lf="155">
-          <li lo="149" lf="150">
-            <div class="block">
-              <p lo="149" lf="150"> The magnetic flux is <span len="88" raw="_\Phi_B=\mathbf{B}<em>{ext}\cdot \mathbf{A}=\mathbf{B}</em>{ext}\cdot A\hat{\mathbf{n}}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">t</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord mathnormal">A</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">n</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span>. Here the magnetic field is in the opposite direction of the normal so <span len="41" raw="_\mathbf{B}_{ext}\cdot A\hat{\mathbf{n}}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8361em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbf">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord mathnormal">A</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">n</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> is negative. The area <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is decreasing so the magnetic flux, which is initially negative, is increasing towards zero. </p>
-            </div>
-          </li>
-          <li lo="151" lf="152">
-            <div class="block">
-              <p lo="151" lf="152"> The induced magnetic field would have to be into the page. The induced magnetic field would be in the direction opposite of the chosen normal direction for the loop.</p>
-            </div>
-          </li>
-          <li lo="153" lf="154">
-            <div class="block">
-              <p lo="153" lf="154"> By the right-hand rule, a clockwise current creates a magnetic field into the page. This direction of induced current is such that its associated induced magnetic field is attempting to keep the magnetic flux unchanged.</p>
-            </div>
-          </li>
-          <li lo="155" lf="157">
-            <div class="block">
-              <p lo="155" lf="156"> The sign of magnetic fluxes will change, the direction of the current will not change.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="comment block">
-        <div lo="157" lf="157">%To understand the direction a current will be induced in a wire, one can start by considering the magnetic forces on charges on a conductor that is moving within the field. </div>
-      </div>
-      <div class="comment block">
-        <div lo="159" lf="159">%Note: we will discuss later that this is only part of the explanation and cannot explain the motion of charges when the conductor is not moving (but the field is still changing). </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="161" lf="161"><a name="induced-currents-and-the-lorentz-force-law" number="1.7" lo="161" raw="## Induced Currents and the Lorentz Force Law" class="hanchor" href="#induced-currents-and-the-lorentz-force-law"><span class="hnumber">1.7</span>&nbsp;<span class="htext">Induced Currents and the Lorentz Force Law</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="163" lf="163">Lenz’s law can only be used to determine the direction a current will flow in response to a changing magnetic flux through a conducting loop. It does not explain why currents start to flow. The currents flow due to one of two forces. These forces are </p>
-      </div>
-      <div class="block">
-        <ul lo="165" lf="167">
-          <li lo="165" lf="166">
-            <div class="block">
-              <p lo="165" lf="166">The Lorentz force, which says that a charge moving in a magnetic field experiences a force according to <span len="40" raw="_\mathbf{F}=q\mathbf{v}\times\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span>. An example of this was given in Example 2.2 and 2.3. In both cases, the charges on the conductor are moving in a magnetic field and as a result, they will experience a Lorentz Force that initiates the flow of current.</p>
-            </div>
-          </li>
-          <li lo="167" lf="169">
-            <div class="block">
-              <p lo="167" lf="168">An induced electric field. In Example 2.1, the conductor is not moving and so its velocity is zero. But an induced current still appears. We must conclude that there is an induced electric field that causes the current to flow.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="169" lf="169"><a name="example" number="1.8" lo="169" raw="## Example" class="hanchor" href="#example"><span class="hnumber">1.8</span>&nbsp;<span class="htext">Example</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="171" lf="172">A conducting loop is moving in a spatially uniformmagnetic field. \input{EMF and Induced Fields/figures/Moving_Loop}</p>
-      </div>
-      <div class="block">
-        <ol lo="174" lf="178">
-          <li lo="174" lf="175">
-            <div class="block">
-              <p lo="174" lf="175"> What is the direction of Lorentz force on the electrons in each segment of the wire?</p>
-            </div>
-          </li>
-          <li lo="176" lf="177">
-            <div class="block">
-              <p lo="176" lf="177"> Based on the result of (1), do you expect a current to flow?</p>
-            </div>
-          </li>
-          <li lo="178" lf="180">
-            <div class="block">
-              <p lo="178" lf="179"> Based on Lenz’s law, do you expect a current to flow?</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="180" lf="180"><strong>Answer</strong>:</p>
-      </div>
-      <div class="block">
-        <ol lo="182" lf="186">
-          <li lo="182" lf="183">
-            <div class="block">
-              <p lo="182" lf="183"> Upwards on all sides. </p>
-            </div>
-          </li>
-          <li lo="184" lf="185">
-            <div class="block">
-              <p lo="184" lf="185"> The magnetic force will not cause the charges to rotate around the loop. </p>
-            </div>
-          </li>
-          <li lo="186" lf="188">
-            <div class="block">
-              <p lo="186" lf="187"> No current is expected because the magnetic flux through the loop is not changing.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="188" lf="188"><a name="problem" number="1.9" lo="188" raw="## Problem" class="hanchor" href="#problem"><span class="hnumber">1.9</span>&nbsp;<span class="htext">Problem</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="190" lf="190">A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform.</p>
-      </div>
-      <div class="block">
-        <p lo="192" lf="192">\input{EMF and Induced Fields/figures/Slide_Wire}</p>
-      </div>
-      <div class="block">
-        <ol lo="194" lf="208">
-          <li lo="194" lf="199">
-            <div class="block">
-              <p lo="194" lf="195">What is the direction of Lorentz force on the electrons in each segment of the wire?</p>
-            </div>
-            <div class="block">
-              <p lo="196" lf="196"> <strong>Answer</strong>:</p>
-            </div>
-            <div class="block">
-              <p lo="198" lf="198"> The Lorentz force will be zero on all sides (because <span len="14" raw="_\mathbf{v}=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>) except for the moving wire. On the moving wire, <span len="35" raw="_\mathbf{v}\times \mathbf{B}_{ext}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8361em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbf">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is downwards (with a small component to the left because the velocity in the Lorentz force equation contains the velocity of the charge as it moves along the wire). The force on an electron will be in the opposite direction. </p>
-            </div>
-          </li>
-          <li lo="200" lf="203">
-            <div class="block">
-              <p lo="200" lf="201">Based on the result of (1), do you expect a current to flow?</p>
-            </div>
-            <div class="block">
-              <p lo="202" lf="202"> <strong>Answer</strong>: Clockwise.</p>
-            </div>
-          </li>
-          <li lo="204" lf="210">
-            <div class="block">
-              <p lo="204" lf="205">Based on Lenz’s law, do you expect a current to flow? If yes, (a) in what direction and (b) is this direction consistent with your answer to 2.?</p>
-            </div>
-            <div class="block">
-              <p lo="206" lf="206"> <strong>Answer</strong>:</p>
-            </div>
-            <div class="block">
-              <p lo="208" lf="208"> Yes, the current is expected to flow clockwise. If the normal to the loop is out of the page, the magnetic flux through the loops is increasing; a clockwise current creates a negative magnetic flux.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="210" lf="210"><a name="problem" number="1.10" lo="210" raw="## Problem" class="hanchor" href="#problem"><span class="hnumber">1.10</span>&nbsp;<span class="htext">Problem</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="212" lf="214">\begin{center} \includegraphics[]{EMF and Induced Fields/figures/emf_and_Induced_Fields_Fig3.png} \end{center}</p>
-      </div>
-      <div class="block">
-        <ol lo="217" lf="249">
-          <li lo="217" lf="251">
-            <div class="block">
-              <p lo="217" lf="218">A copper wire loop is placed in a uniform magnetic field as shown. Determine whether there would be a current through the wire of the loop in each case below. <strong>Explain your answer in terms of magnetic forces exerted on the charges in the wire of the loop.</strong> Recall that the magnitude of field lines is proportional to their spacing.</p>
-            </div>
-            <div class="block">
-              <ol lo="218" lf="249">
-                <li lo="218" lf="223">
-                  <div class="block">
-                    <p lo="218" lf="219">The loop is stationary.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="220" lf="220"><strong>Answer</strong>:</p>
-                  </div>
-                  <div class="block">
-                    <p lo="222" lf="222">If the loop is stationary, there are no moving charges so there is no Lorentz force on the charges and hence no current is induced in the loop.</p>
-                  </div>
-                </li>
-                <li lo="224" lf="234">
-                  <div class="block">
-                    <p lo="224" lf="225">The loop is moving to the right.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="226" lf="226"><strong>Answer</strong>:</p>
-                  </div>
-                  <div class="block">
-                    <p lo="228" lf="230"><span len="72" raw="__
-<strong>F</strong> = q<strong>v</strong> \times <strong>B</strong>
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">×</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span></span></p>
-                  </div>
-                  <div class="block">
-                    <p lo="232" lf="233">Both <span len="12" raw="_\mathbf{v}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span> and <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> are in the <span len="7" raw="_\xhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">x</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span></span></span></span></span></span></span> direction so <span len="60" raw="_v\hat<strong>x</strong> \times B\hat<strong>x</strong> = 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">×</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>.So no force and thus no current. </p>
-                  </div>
-                </li>
-                <li lo="235" lf="251">
-                  <div class="block">
-                    <p lo="235" lf="236">The loop is moving to the left.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="237" lf="237"><strong>Answer</strong>:</p>
-                  </div>
-                  <div class="block">
-                    <p lo="239" lf="241"><span len="72" raw="__
-<strong>F</strong> = q<strong>v</strong> \times <strong>B</strong>
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">×</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span></span></p>
-                  </div>
-                  <div class="block">
-                    <p lo="243" lf="243">Both <span len="12" raw="_\mathbf{v}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span> and <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> are in the <span len="24" raw="_\hat<strong>x</strong>_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span> direction so </p>
-                  </div>
-                  <div class="block">
-                    <p lo="245" lf="247"><span len="128" raw="__
-v (-\hat<strong>x</strong>) \times B\hat<strong>x</strong> = vb(-\hat<strong>x</strong> \times \hat<strong>x</strong>) = 0
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">b</span><span class="mopen">(</span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">×</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
-                  </div>
-                  <div class="block">
-                    <p lo="249" lf="249">So no force and thus no current. </p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="251" lf="251"><a name="problem" number="1.11" lo="251" raw="## Problem" class="hanchor" href="#problem"><span class="hnumber">1.11</span>&nbsp;<span class="htext">Problem</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="253" lf="255">\begin{center} \includegraphics[]{EMF and Induced Fields/figures/emf_and_Induced_Fields_Fig5.png} \end{center}</p>
-      </div>
-      <div class="block">
-        <ol lo="257" lf="281">
-          <li lo="257" lf="283">
-            <div class="block">
-              <p lo="257" lf="258">In the figure above, there is a current running through a long straight wire as shown. For each conducting loop A-D determine:</p>
-            </div>
-            <div class="block">
-              <ol lo="259" lf="281">
-                <li lo="259" lf="270">
-                  <div class="block">
-                    <p lo="259" lf="260">The direction (clockwise or counterclockwise or zero) for the current induced in each loop.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="261" lf="261"><strong>Answer</strong>:</p>
-                  </div>
-                  <div class="block">
-                    <p lo="263" lf="263">A. no current</p>
-                  </div>
-                  <div class="block">
-                    <p lo="265" lf="265">B. clockwise</p>
-                  </div>
-                  <div class="block">
-                    <p lo="267" lf="267">C. clockwise</p>
-                  </div>
-                  <div class="block">
-                    <p lo="269" lf="269">D. no current</p>
-                  </div>
-                </li>
-                <li lo="271" lf="283">
-                  <div class="block">
-                    <p lo="271" lf="272">The direction of the net force on the loop – explain your reasoning.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="273" lf="273"><strong>Answer</strong>:</p>
-                  </div>
-                  <div class="block">
-                    <p lo="275" lf="275">A. no force – there is no movement in a direction that is perpendicular to the current in the long wire and so there is no change in magnetic flux.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="277" lf="277">{\small (This problem statement is missing information required to answer the question for case B. and C. If the velocity of an object is not changing, there is not a net force. Here we are not told whether or not an external force is being supplied to keep the velocity constant. In the answers for B. and C., it is assumed that there is not an external force being supplied to keep the velocity constant.)}</p>
-                  </div>
-                  <div class="block">
-                    <p lo="279" lf="279">B. and C. There is a net upwards magnetic force.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="281" lf="281">D. no force – there is no movement in a direction that is perpendicular to the current in the long wire and so there is no change in magnetic flux.</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="283" lf="283" class="highlighted"><a name="problem" number="1.12" lo="283" raw="## Problem" class="hanchor" href="#problem"><span class="hnumber">1.12</span>&nbsp;<span class="htext">Problem</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="286" lf="288">\begin{center} \includegraphics[]{EMF and Induced Fields/figures/emf_and_Induced_Fields_Fig4.png} \end{center}</p>
-      </div>
-      <div class="block">
-        <ol lo="290" lf="330">
-          <li lo="290" lf="317">
-            <div class="block">
-              <p lo="290" lf="291">A conducting wire loop is placed in the magnetic field of a solenoid as shown. Determine whether there would be a current through the wire of the loop in each case below. If so, give the direction of the current. <strong>Explain your answer in terms of the magnetic forces exerted on the charges in the wire.</strong></p>
-            </div>
-            <div class="block">
-              <ol lo="292" lf="316">
-                <li lo="292" lf="295">
-                  <div class="block">
-                    <p lo="292" lf="293">The loop is stationary.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="294" lf="294"> <strong>Answer</strong>: No moving charges so no force and thus no Lorentz force to start a current.</p>
-                  </div>
-                </li>
-                <li lo="296" lf="307">
-                  <div class="block">
-                    <p lo="296" lf="297">The loop is moving to the right.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="298" lf="298"><strong>Answer</strong>: </p>
-                  </div>
-                  <div class="block">
-                    <p lo="300" lf="300">Let the <span len="8" raw="_+\xhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7912em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">x</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span></span></span></span></span></span></span> direction be to the right and the <span len="8" raw="_+\yhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9023em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">y</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span> direction be upwards. At the top of the ring, <strong>v</strong> is in the <span len="8" raw="_+\xhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7912em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">x</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span></span></span></span></span></span></span> direction, <strong>B</strong> is in mostly in the <span len="8" raw="_+\xhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7912em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">x</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span></span></span></span></span></span></span> direction and there is also a <span len="8" raw="_-\yhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9023em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">y</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span> component, i.e., <span len="53" raw="_B(a\hat<strong>x</strong> + b\hat<strong>y</strong>_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal">b</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span>).</p>
-                  </div>
-                  <div class="block">
-                    <p lo="302" lf="304"><span len="143" raw="__
-<strong>F</strong> = qv\hat<strong>x</strong> \times B(a\hat<strong>x</strong> + b\hat<strong>y)</strong> = qvbB(-\hat<strong>z</strong>)
-__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord">×</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal">b</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span></span></p>
-                  </div>
-                  <div class="block">
-                    <p lo="306" lf="306">Thus the magnetic force is into the page at the top of the ring an so the current will be into the page at that location. This corresponds to a clockwise current if viewed from a point on the <span len="4" raw="_+x_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal">x</span></span></span></span>-axis.</p>
-                  </div>
-                </li>
-                <li lo="308" lf="317">
-                  <div class="block">
-                    <p lo="308" lf="309">The loop is moving to the left.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="310" lf="310"> <strong>Answer</strong>: The same as above except that <strong>v</strong> is in the <span len="25" raw="_-\hat<strong>x</strong>_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span> direction so:</p>
-                  </div>
-                  <div class="block">
-                    <p lo="312" lf="314"> <span len="145" raw="__
- <strong>F</strong> = qv(-\hat<strong>x</strong>) \times B(a\hat<strong>x</strong> + b\hat<strong>y</strong>) = qvbB\hat<strong>z</strong>
- __" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0525em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal">b</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span></span></p>
-                  </div>
-                  <div class="block">
-                    <p lo="316" lf="316">Therefore the current will be counterclockwise if viewed from the <span len="4" raw="_+x_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal">x</span></span></span></span>-axis. </p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-          <li lo="318" lf="331">
-            <div class="block">
-              <p lo="318" lf="319">For each case in your answer to question 1. where there is an induced current find:</p>
-            </div>
-            <div class="block">
-              <ol lo="320" lf="330">
-                <li lo="320" lf="323">
-                  <div class="block">
-                    <p lo="320" lf="321">The direction of the induced magnetic field at the center of the loop due to the induced current.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="322" lf="322"> <strong>Answer</strong>: Moving to the right: <span len="25" raw="_-\hat<strong>x</strong>_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span>; Moving to the left: <span len="25" raw="_+\hat<strong>x</strong>_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.997em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8025em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mrel">&lt;</span></span><span style="top:-3.1081em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.0391em;"><span></span></span></span></span></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span></p>
-                  </div>
-                </li>
-                <li lo="324" lf="327">
-                  <div class="block">
-                    <p lo="324" lf="325">Whether the loop is attracted to or repelled from the solenoid.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="326" lf="326"> <strong>Answer</strong>: Moving to the right: repelled (field opposite solenoid’s field); Moving to the left: attracted (field along solenoids field)</p>
-                  </div>
-                </li>
-                <li lo="328" lf="331" class="active">
-                  <div class="block">
-                    <p lo="328" lf="329">Whether the force required to move the loop increases or decreases as the loop is moved.</p>
-                  </div>
-                  <div class="block">
-                    <p lo="330" lf="330"> <strong>Answer</strong>: Moving to the right: increases, the magnetic field is increasing; Moving to the left: decreases, the magnetic field is decreasing</p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>

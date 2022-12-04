@@ -1,0 +1,54 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,242); %set diagram left start at 0, and has height of 242
+
+%Straight Lines [id:da9391741884541585] 
+\draw    (20,110) -- (217,110) ;
+\draw [shift={(220,110)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da5381284642114172] 
+\draw    (210,110) -- (390,110) ;
+%Shape: Rectangle [id:dp1701563399055186] 
+\draw   (60,30) -- (140,30) -- (140,70) -- (60,70) -- cycle ;
+%Shape: Rectangle [id:dp04365775921249937] 
+\draw   (200,30) -- (270,30) -- (270,70) -- (200,70) -- cycle ;
+%Shape: Rectangle [id:dp6674329160586638] 
+\draw   (60,150) -- (140,150) -- (140,190) -- (60,190) -- cycle ;
+%Shape: Rectangle [id:dp14305010940503493] 
+\draw   (200,150) -- (270,150) -- (270,190) -- (200,190) -- cycle ;
+%Straight Lines [id:da7178870615335102] 
+\draw    (100,70) -- (100,88) ;
+\draw [shift={(100,90)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da9835364258802752] 
+\draw    (270,50) -- (288,50) ;
+\draw [shift={(290,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da6085880149489133] 
+\draw    (140,170) -- (158,170) ;
+\draw [shift={(160,170)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da34065289148350364] 
+\draw    (240,190) -- (240,208) ;
+\draw [shift={(240,210)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (201,114.4) node [anchor=north west][inner sep=0.75pt]    {$I$};
+% Text Node
+\draw (88,42.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+% Text Node
+\draw (91,162.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+% Text Node
+\draw (227,42.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+% Text Node
+\draw (228,161.4) node [anchor=north west][inner sep=0.75pt]    {$D$};
+% Text Node
+\draw (106,78.4) node [anchor=north west][inner sep=0.75pt]    {$v$};
+% Text Node
+\draw (287,26.4) node [anchor=north west][inner sep=0.75pt]    {$v$};
+% Text Node
+\draw (151,172.4) node [anchor=north west][inner sep=0.75pt]    {$v$};
+% Text Node
+\draw (244,205.4) node [anchor=north west][inner sep=0.75pt]    {$v$};
+
+
+\end{tikzpicture}
