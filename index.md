@@ -97,8 +97,17 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 ## Lorentz Force Law on Wires
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires/README.md) 
-* Document: | [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf) | [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires) | [Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md) | 
+* Document:
+[pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
+|
+[pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
+
+* Source:
+[Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+|
+[Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires)
+|
+[Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md) | 
 
 ## Solutions
 
