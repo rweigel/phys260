@@ -1,0 +1,28 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,114); %set diagram left start at 0, and has height of 114
+
+%Shape: Rectangle [id:dp7638554893646261] 
+\draw  [line width=2.25]  (20,20) -- (170,20) -- (170,90) -- (20,90) -- cycle ;
+%Straight Lines [id:da8020175323566545] 
+\draw    (170,50) -- (208,50) ;
+\draw [shift={(210,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da966588851849048] 
+\draw [line width=2.25]    (170,10) -- (170,100) ;
+%Straight Lines [id:da74599236475864] 
+\draw [line width=2.25]    (20,20) -- (240,20) ;
+%Straight Lines [id:da06687573743311237] 
+\draw [line width=2.25]    (20,90) -- (240,90) ;
+
+% Text Node
+\draw (261,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$\odot $};
+% Text Node
+\draw (301,19.4) node [anchor=north west][inner sep=0.75pt]    {$\mathbf{B}_{\text{ext}}$};
+% Text Node
+\draw (217,42.4) node [anchor=north west][inner sep=0.75pt]    {$v$};
+
+
+\end{tikzpicture}

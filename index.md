@@ -109,31 +109,8 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 |
 [Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md) | 
 
-## Solutions
+## Lenz's Law
 
-Solutions for the activities are
-
-https://rweigel.github.io/phys260/Electric_Force/Electric_Force-solutions.pdf
-https://rweigel.github.io/phys260/Electric_Field/Electric_Field-solutions.pdf
-https://rweigel.github.io/phys260/Continuous_Charge_Distributions/Continuous_Charge_Distributions-solution.pdf
-https://rweigel.github.io/phys260/Electric_Flux/Electric_Flux-solutions.pdf
-https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf
-https://rweigel.github.io/phys260/Electric_Potential/Electric_Potential-solutions.pdf
-https://rweigel.github.io/phys260/Capacitance/Capacitance-solutions.pdf
-https://rweigel.github.io/phys260/Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf
-https://rweigel.github.io/phys260/Lorentz_Force/Lorentz_Force-solutions.pdf
-https://rweigel.github.io/phys260/Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf
-
-The following are copies without solutions:
-
-https://rweigel.github.io/phys260/Electric_Force/Electric_Force.pdf
-https://rweigel.github.io/phys260/Electric_Field/Electric_Field.pdf
-https://rweigel.github.io/phys260/Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf
-https://rweigel.github.io/phys260/Electric_Flux/Electric_Flux.pdf
-https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge.pdf
-https://rweigel.github.io/phys260/Electric_Potential/Electric_Potential.pdf
-https://rweigel.github.io/phys260/Capacitance/Capacitance.pdf
-https://rweigel.github.io/phys260/Kirchhoffs_Laws/Kirchhoffs_Laws.pdf
-https://rweigel.github.io/phys260/Lorentz_Force/Lorentz_Force.pdf
-https://rweigel.github.io/phys260/Lorentz_Force_Wires/Lorentz_Force_Wires.pdf
-
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lenzs_Law/README.md) 
+* Document: | [pdf](Lenzs_Law/Lenzs_Law.pdf) | [pdf solns](Lorentz_Force_Wires/Lenzs_Law-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Lenzs_Law) | [Markdown](Lenzs_Law/Lenzs_Law.md) | 
