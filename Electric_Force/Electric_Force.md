@@ -32,27 +32,29 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
 2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 
+\ifsolutions
 **Solution**
 
 1. The distance between the charges is $r=2\sqrt{2}a$, so
 
-    $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(2\sqrt{2}a)^2}=\frac{kq^2}{8a^2}$$
+   $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(2\sqrt{2}a)^2}=\frac{kq^2}{8a^2}$$
 
-    The charges will repel each other, so the direction of forces of one on the other will be as shown in the diagram. The direction of the force vector on $q_2$ is shown in the diagram.
+   The charges will repel each other, so the direction of forces of one on the other will be as shown in the diagram. The direction of the force vector on $q_2$ is shown in the diagram.
 
-\newpage
-
-<img src="figures/Two_Charges.svg"/>
+   <img src="figures/Two_Charges.svg"/>
 
 2. Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. Then
     
-    $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. Given that $\cos 45^\circ=\sin 45^\circ = \frac{1}{\sqrt{2}}$, we can also write 
+   $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. Given that $\cos 45^\circ=\sin 45^\circ = \frac{1}{\sqrt{2}}$, we can also write 
     
    $$\bfvec{F} = F\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$$
-    
+\fi
+
 ## Problem
 
-Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges have a charge of $q$. Using the steps in the previous example,
+Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges have a charge of $q$. Draw this charge configuration and then using the steps in the previous example,
+
+<img src="figures/grid-w100pct-w20pps-h200px-h20pps.svg" style="width:100%"/>
 
 1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
 2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
@@ -64,7 +66,6 @@ Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges
 $$\bfvec{F}_{1\mbox{ on } 2}=kq_1q_2\frac{\rhat}{r^2}$$
 
 $\bfvec{r}=\bfvec{r}_2-\bfvec{r}_1$ is the vector from the position of $q_1$ to the position of $q_2$, $\bfvec{r}_1$ is a vector from the origin to the location of $q_1$, and $\bfvec{r}_2$ is a vector from the origin to the location of $q_2$.
-
 
 $r=|\bfvec{r}|=|\bfvec{r}_2-\bfvec{r}_1|$ is the distance from $q_1$ to $q_2$.
 

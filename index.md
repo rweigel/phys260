@@ -34,18 +34,35 @@ The master document is the `.md` file, which is converted to `.html` and `.tex`.
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
-* [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Force) 
-* Using Coulomb's law to find the electric force vector using two methods that are used in the textbook.
+Using Coulomb's law to find the electric force vector using two methods that are used in the textbook.
+
+* Documents:
+| [pdf](Electric_Force/Electric_Force.pdf)
+| [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
+| [html](Electric_Force/Electric_Force.html)
+|
+* Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+|
 * Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 ## Electric Field of a Point Charge
 
-* [Activity](https://github.com/rweigel/phys260/tree/master/Electric_Field)
-* Computing the electric field due to one and three point charges.
+Computing the electric field due to one and three point charges.
+
+* Documents:
+| [pdf](Electric_Field/Electric_Field.pdf)
+| [pdf solns](Electric_Field/Electric_Field-solutions.pdf)
+| [html](Electric_Field/Electric_Field.html)
+|
+* Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Field)
+|
 * Covered in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 ## Continuous Charge Distributions
-
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
 * Documents: | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf) |
