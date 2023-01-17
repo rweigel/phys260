@@ -81,41 +81,43 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 1. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 2. Find the magnitude and direction of the force of $q_1$ on $q_2$.
 
+\ifsolutions
 **Solution**
 
 1. The vector from the origin to the location of $q_1$ is $\bfvec{r}_1=-a\ihat -a\jhat$
 
-    The vector from the origin to the location of $q_2$ is $\bfvec{r}_2=a\ihat + a\jhat$
+   The vector from the origin to the location of $q_2$ is $\bfvec{r}_2=a\ihat + a\jhat$
 
-    The distance vector is $\bfvec{r}=\bfvec{r}_2-\bfvec{r}_1=2a\ihat+2a\jhat$
+   The distance vector is $\bfvec{r}=\bfvec{r}_2-\bfvec{r}_1=2a\ihat+2a\jhat$
 
-    The length of the distance vector is 
+   The length of the distance vector is 
     
-    $r=|\bfvec{r}_2-\bfvec{r}_1|=\sqrt{(2a)^2 + (2a)^2} = 2\sqrt{2}a$
+   $r=|\bfvec{r}_2-\bfvec{r}_1|=\sqrt{(2a)^2 + (2a)^2} = 2\sqrt{2}a$
 
-    The unit vector pointing from the position of $q_1$ to the position of $q_2$ is
+   The unit vector pointing from the position of $q_1$ to the position of $q_2$ is
+
+   $$\rhat=\frac{\bfvec{r}}{r}=\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat$$
+
+   Inserting the above results into the equation
+
+   $\displaystyle \bfvec{F}_{1\mbox{ on } 2}=kq_1q_2\frac{\rhat}{r^2}\quad$ gives
     
-    $$\rhat=\frac{\bfvec{r}}{r}=\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat$$
-
-    Inserting the above results into the equation
-
-    $\displaystyle \bfvec{F}_{1\mbox{ on } 2}=kq_1q_2\frac{\rhat}{r^2}\quad$ gives
-    
-    $$\bfvec{F}\_{1\mbox{ on } 2}=
+   $$\bfvec{F}\_{1\mbox{ on } 2}=
     kq^2\frac{\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]}{(2\sqrt{2}a)^2}
     \quad\text{ or }\quad
     \bfvec{F}_{1\mbox{ on } 2}=
     \frac{kq^2}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$$
 
-    (Note that one can avoid the need to compute $\rhat$ by using the equivalent formula $\displaystyle \bfvec{F}_{1\mbox{ on } 2}=kq_1q_2{\bfvec{r}}/{r^3}$.)
+   (Note that one can avoid the need to compute $\rhat$ by using the equivalent formula $\displaystyle \bfvec{F}_{1\mbox{ on } 2}=kq_1q_2{\bfvec{r}}/{r^3}$.)
 
 2. Let $\bfvec{F} = \bfvec{F}_{1\mbox{ on } 2}$ from part 1. to simplify notation. Then
 
-    $$F=|\bfvec{F}|=\frac{kq^2}{8a^2}\sqrt{\left(\frac{1}{\sqrt{2}}\right)^2 + \left(\frac{1}{\sqrt{2}}\right)^2}=\frac{kq^2}{8a^2}$$
-    
-    The angle is $\displaystyle \theta = \tan^{-1}\left(\frac{F_y}{F_x}\right) = \tan^{-1}\bigg( \frac{\frac{F}{\sqrt{2}}}{\frac{F}{\sqrt{2}}}\bigg)=45^\circ$
-    
-    See the margin note on [page 16 of the textbook](https://drive.google.com/file/d/1Gg-ZzUWWqJNn3Eaw6hmix1Hsym5K4Mv3/view?usp=sharing_remove_) for an issue that may arise when using this formula to compute an angle.
+   $$F=|\bfvec{F}|=\frac{kq^2}{8a^2}\sqrt{\left(\frac{1}{\sqrt{2}}\right)^2 + \left(\frac{1}{\sqrt{2}}\right)^2}=\frac{kq^2}{8a^2}$$
+
+   The angle is $\displaystyle \theta = \tan^{-1}\left(\frac{F_y}{F_x}\right) = \tan^{-1}\bigg( \frac{\frac{F}{\sqrt{2}}}{\frac{F}{\sqrt{2}}}\bigg)=45^\circ$
+
+   See the margin note on [page 16 of the textbook](https://drive.google.com/file/d/1Gg-ZzUWWqJNn3Eaw6hmix1Hsym5K4Mv3/view?usp=sharing_remove_) for an issue that may arise when using this formula to compute an angle.
+\fi
 
 ## Problem
 
@@ -123,4 +125,3 @@ Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-2a, -2a)$. Both charg
 
 1. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 2. Find the magnitude and direction of the force of $q_1$ on $q_2$.
-    
