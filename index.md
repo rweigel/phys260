@@ -20,15 +20,15 @@ The length of the tutorials are such that 1--2 students out of 30 will finish co
 
 # Using
 
-The source files for all activities are available at https://github.com/rweigel/phys260
+The source files for all activities are available at [Overleaf]((https://www.overleaf.com/read/btssfxsjgyzr) and [GitHub](https://github.com/rweigel/phys260); all files are available in a [zip](https://github.com/rweigel/phys260/archive/refs/heads/master.zip) file.
 
-The entire repository is available as a zip file: https://github.com/rweigel/phys260/archive/refs/heads/master.zip
-
-If you have corrections, comments, or suggestions please [submit an issue](https://github.com/rweigel/phys260/issues) or email `rweigel@gmu.edu`. In each subdirectory at https://github.com/rweigel/phys260 there is a file named `README.md` with notes written after class and after reviewing student work.
-
-The figures were created using [MathCha](https://www.mathcha.io/). To edit a figure using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
+In each subdirectory at https://github.com/rweigel/phys260 there is a file named `README.md` with notes written after class and after reviewing student work.
 
 The master document is the `.md` file, which is converted to `.html` and `.tex`. The `.pdf` files are based on the `.html` file. The `.tex` files are auto--generated from the `.md` files and a `.pdf` created with the `.tex` file may look different than the one stored in the repository.
+
+If you have corrections, comments, or suggestions please [submit an issue](https://github.com/rweigel/phys260/issues) or email `rweigel@gmu.edu`. 
+
+The figures were created using [MathCha](https://www.mathcha.io/). To edit a figure using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
 
 # Activities
 
