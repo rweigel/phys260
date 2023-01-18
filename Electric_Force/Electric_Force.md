@@ -27,9 +27,9 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
 **Solution**
 
-1. The distance between the charges is $r=\sqrt{(2a)^2+(2a)^2}=2\sqrt{2}a$, so
+1. The distance between the charges is $r=\sqrt{(2a)^2+(2a)^2}=\sqrt{8a^2}$, so
 
-   $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(2\sqrt{2}a)^2}=\frac{kq^2}{8a^2}$$
+   $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$$
 
    The charges will repel each other, so the direction of forces of one on the other will be as shown in the left part of the following diagram.
 
@@ -52,12 +52,13 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 <img src="figures/grid.svg" style="width:90%"/>
 
 \ifsolutions
-1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(2\sqrt{2}a)^2}=\frac{kq^2}{8a^2}$
+{\bf Solution}
+1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$
 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 45^\circ \ihat - \sin 45^\circ \jhat)$
 3. 1.: No change; 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\cos 45^\circ \ihat + \sin 45^\circ \jhat)$
-\fi
-
+\else
 \newpage
+\fi
 
 # Problem II
 
@@ -70,6 +71,8 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
 <img src="figures/grid.svg" style="width:90%"/>
 
 \ifsolutions
+{\bf Solution}
+
 <img src="figures/Two_Charges-c.svg"/>
 
 1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{\sqrt{(2a)^2+a^2}}=\frac{kq^2}{\sqrt{5}a^2}$
@@ -88,6 +91,7 @@ Charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$
 <img src="figures/grid.svg" style="width:100%"/>
 
 \ifsolutions
+{\bf Solution}
 1. $r=\sqrt{a^2+(3a)^2}$, $F=k|q(-q)|/r^2=kq^2/10a^2$
 2. $\bfvec{F}=-F\sin\theta\ihat - F\cos\theta\jhat$, where $\theta=\tan^{-1}(1/3)=18.4^\circ$
 3. 1.: No change; 2.: $\bfvec{F}=+F\sin\theta\ihat + F\cos\theta\jhat$
