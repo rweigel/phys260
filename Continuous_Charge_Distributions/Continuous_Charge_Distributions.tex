@@ -1,3 +1,7 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
 \documentclass{article}
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -8,11 +12,6 @@
 \usepackage[fleqn]{amsmath}
 \setlength{\mathindent}{0pt} % Set indent
 % Disable equation numbering (https://tex.stackexchange.com/a/360378)
-\makeatletter
-\renewcommand\tagform@[1]{}
-\makeatother
-
-% Disable numbering (https://tex.stackexchange.com/a/360378)
 \makeatletter
 \renewcommand\tagform@[1]{}
 \makeatother
@@ -29,6 +28,15 @@
 \setlength\parindent{0pt}
 \setlength{\parskip}{\baselineskip}
 
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
 % Allow 3 additional subsection levels
 % https://tex.stackexchange.com/a/60212
 \usepackage{titlesec}
@@ -43,6 +51,11 @@
 \titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
 \titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
 
 \renewcommand{\mbox}{\text}
 \newcommand{\ds}[0]{\displaystyle}
@@ -58,152 +71,113 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Continuous Charge Distributions}
+\lhead{Electric Force}
 \rhead{\thepage}
-
-\title{Continuous Charge Distributions}
+\fancyfoot{}
 
 \begin{document}
 
 \section{Overview}
 
-Previously, you found the electric field at a location in space due to one or more point charges by finding the electric field due to each charge and then vectorially summing the fields to get the total field (this is ``using superposition").
-
-This process requires a significant amount of calculation if there are many charges. To reduce the number of calculations when charges are closely spaced, we sometimes assume they are continuously distributed; in this case, to compute the electric field, we need to evaluate an integral rather than a sum with many terms.
-
-Section 21.5 of the textbook gives three examples for charges that are continuously distributed:
+We generally describe vector equations in two ways:
 
 \begin{enumerate}
 
-  \item charges uniformly distributed along a straight line,
+  \item Simple -- An equation for the magnitude is given, and words are used to describe the direction.
 
-  \item charges uniformly distributed on a circle, and
-
-  \item charges uniformly distributed on a disk.
+  \item Compact -- A single equation is given for the vector, and additional equations are given for parts of the equation.
 
 \end{enumerate}
 
-If you read the textbook examples and the lecture notes, you should be able to identify the following steps (not necessarily in this order).
+For example, in Section 21.3 of the textbook, the equation for Coulomb's Law was given in the simple form. In Section 21.4, the equation for the electric field due to a point charge was given in the compact form.
 
-\begin{enumerate}
+In PHYS 260, you will need to be able to solve problems similar to the examples given here quickly. If you found the problems in this activity to be difficult, review Sections 1.7-1.8 in the textbook and see Khan Academy's comprehensive introduction to vectors.
 
-  \item Identify answer features
+\section{Coulomb's Law in Simple Form}
 
-  \item Find $d\bfvec{E}$ (or $dE$ and its direction) for a $dQ$ on the charged object
-
-  \item Find $dQ$ in terms of coordinates (e.g., $dx$, $dy$, $r$, $d\theta$, etc.)
-
-  \item Simplify $d\bfvec{E}$ (if possible) using symmetry arguments
-
-  \item Integrate $d\bfvec{E}$
-
-  \item Check answer features
-
-\end{enumerate}
-
-In this activity, you will explicitly address all of these steps for charges that are uniformly and continuously distributed along a straight line.
-
-\section{Finite Line of Charge}
-
-The following diagram shows a differential charge $dQ$ at a location on the $x$--axis. Recall that the general equation for the electric field due to a point charge (with $q$ replaced with $dQ$ and $\bfvec{E}$ replaced with $d\bfvec{E}$) is
-
-$\displaystyle d\mathbf{E} =k\frac{dQ}{r^2}\hat{\mathbf{r}}$, which has magnitude $\displaystyle dE = k\frac{dQ}{r^2}$
-
-(In a previous activity, you found the components of $\bfvec{E}$ using two methods that are used in the textbook. You may use either method for this problem.)
-
-\input{figures/Finite_Line.tikz}
-
-\begin{enumerate}
-
-  \item Draw the expected directions of $dE_x$ and $dE_y$ at a location on the $+y$--axis on the diagram given the location of $dQ$ shown on the figure (assume $dQ$ is positive).
-
-  \item In the diagram, the differential charge is at a positive $x$. At the same location on the $+y$--axis, draw the expected direction of $dE_x$ and $dE_y$ on the diagram with dotted lines if $dQ$ is at $-x$.
-
-  \item Draw the expected direction of $dE_x$ and $dE_y$ on the diagram at a location on the $-y$--axis for $dQ$ at the position in the figure.
-
-  \item Find equations for the electric field components $dE_x$ and $dE_y$ at any location on the $y$--axis in terms of $dQ$, $x$, $y$, and $k$.
-
-\end{enumerate}
-
-\vskip 96.36pt
-
-\begin{enumerate}
-
-  \item[5.] Do your equations for $dE_x$ and $dE_y$ give the directions predicted by your answers to 1.--3.? Try plugging in values of $y=\pm a$ and $x=\pm a$.
-
-\end{enumerate}
-
-\vskip 36.135pt
-
-\begin{enumerate}
-
-  \item[6.] If the differential charge $dQ$ is at $x=0$, do you expect $dE_x$ or $dE_y$ to be zero? Is your answer consistent with the result of plugging in $x=0$ into your equations for $dE_x$ and $dE_y$?
-
-\end{enumerate}
-
-\vskip 12.045pt
-
-If the charge per unit length on the line is $\lambda$, then we can write $dQ=\lambda dx$. To find $E_x$ and $E_y$, integrate $dE_x$ and $dE_y$ from $x=-a$ to $a$.
-
-\begin{enumerate}
-
-  \item[7.] Write down the integrals that must be evaluated to find $E_x$ and $E_y$. Do you expect either of the integrals to be zero?
-
-\end{enumerate}
-
-\begin{enumerate}
-
-  \item[8.] From an integral table (or using trig substitutions), we know $\displaystyle \int \frac{du}{(u^2+a^2)^{3/2}} = \frac{u}{a^2\sqrt{u^2+a^2}} + C$. Use this to find $E_y$.
-
-\end{enumerate}
-
-\vskip 72.27pt
-
-\begin{enumerate}
-
-  \item[9.] If $y$ is negative (for example $y=-a$), is $E_y$ positive or negative? Is this consistent with your answer to 3.?
-
-\end{enumerate}
-
-\vskip 36.135pt
-
-\begin{enumerate}
-
-  \item[10.] The total charge on the line is $Q=2a\lambda$ (length $\times$ charge/length). Suppose $y\gg a$ so that you can replace $a^2+y^2$ with $y^2$. Is your equation for $E_y$ consistent with the electric field for a point charge $Q=2a\lambda$ at the origin?
-
-\end{enumerate}
-
-\vskip 36.135pt
-
-\section{Long Line of Charge}
-
-Using the result of the previous problem, we can find $E_y$ when $a \gg y$, which corresponds to a long line of charge. The result is
+\emph{Magnitude}
 
 \begin{equation}
-  E_y=\frac{2\lambda k}{y}
+F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}
 \end{equation}
 
-This equation can be written more generally as
+where $r$ is the distance between $q_1$ and $q_2$. To simplify notation, we are using $k$ in place of $1/4\pi\epsilon_o$.
 
-\begin{equation}
-  E=\frac{2\lambda k}{r}
-\end{equation}
+\emph{Direction}
 
-where $r$ is the perpendicular distance from the line and the direction of $E$ is perpendicular the line with a direction that depends on the sign of the charge density $\lambda$.
+Along line that connects $q_1$ and $q_2$. Direction depends on signs of $q_1$ and $q_2$. (Likes repel, opposites attract.).
 
-A long line of charge lies along the line $y=b$.
+\subsection{Example}
+
+Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges have a charge of $q$.
 
 \begin{enumerate}
 
-  \item Find the electric field magnitude and direction at the origin.
+  \item Find the magnitude and direction of the force of $q_1$ on $q_2$.
+
+  \item Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 
 \end{enumerate}
 
-\vskip 72.27pt
+\ifsolutions
+  \textbf{Solution}
+
+\fi
+
+\subsection{Problem}
+
+Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges have a charge of $q$. Draw this charge configuration and then using the steps in the previous example,
+
+%\input{figures/grid-w100pct-w20pps-h200px-h20pps.tikz?1673972862886?1673972942046}
 
 \begin{enumerate}
 
-  \item[2.] Find the electric field magnitude and direction at $(x,y)=(b,0)$.
+  \item Find the magnitude and direction of the force of $q_1$ on $q_2$.
+
+  \item Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
+
+\end{enumerate}
+
+\section{Coulomb's Law in Compact Form}
+
+\begin{equation}
+\bfvec{F}_{1\mbox{ on } 2}=kq_1q_2\frac{\rhat}{r^2}
+\end{equation}
+
+$\bfvec{r}=\bfvec{r}_2-\bfvec{r}_1$ is the vector from the position of $q_1$ to the position of $q_2$, $\bfvec{r}_1$ is a vector from the origin to the location of $q_1$, and $\bfvec{r}_2$ is a vector from the origin to the location of $q_2$.
+
+$r=|\bfvec{r}|=|\bfvec{r}_2-\bfvec{r}_1|$ is the distance from $q_1$ to $q_2$.
+
+$\displaystyle\rhat=\frac{\bfvec{r}}{r}$ is the unit vector pointing from the position of $q_1$ to the position of $q_2$.
+
+Although this form looks more complex, it requires basic steps to use.
+
+\subsection{Example}
+
+Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges have a charge of $q$.
+
+\begin{enumerate}
+
+  \item Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
+
+  \item Find the magnitude and direction of the force of $q_1$ on $q_2$.
+
+\end{enumerate}
+
+\ifsolutions
+  \textbf{Solution}
+
+\fi
+
+\subsection{Problem}
+
+Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-2a, -2a)$. Both charges have a charge of $q$. Using the steps in the previous example,
+
+\begin{enumerate}
+
+  \item Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
+
+  \item Find the magnitude and direction of the force of $q_1$ on $q_2$.
 
 \end{enumerate}
 
