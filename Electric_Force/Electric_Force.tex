@@ -120,15 +120,36 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 \end{enumerate}
 
 \ifsolutions
-  \textbf{Solution}
+\textbf{Solution}
 
+    \begin{enumerate}
+
+      \item The distance between the charges is $r=2\sqrt{2}a$, so
+
+        \begin{equation}
+        F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(2\sqrt{2}a)^2}=\frac{kq^2}{8a^2}
+        \end{equation}
+
+            The charges will repel each other, so the direction of forces of one on the other will be as shown in the diagram. The direction of the force vector on $q_2$ is shown in the diagram.
+
+            %\input{figures/Two_Charges.tikz}
+
+      \item Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. Then
+
+            $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. Given that $\cos 45^\circ=\sin 45^\circ = \frac{1}{\sqrt{2}}$, we can also write
+
+        \begin{equation}
+        \bfvec{F} = F\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]
+        \end{equation}
+
+    \end{enumerate}
 \fi
 
 \subsection{Problem}
 
 Charge $q_1$ is at $(x,y)=(a,a)$ and charge $q_2$ is at $(-a, -a)$. Both charges have a charge of $q$. Draw this charge configuration and then using the steps in the previous example,
 
-%\input{figures/grid-w100pct-w20pps-h200px-h20pps.tikz?1673972862886?1673972942046}
+%\input{figures/grid-w100pct-w20pps-h200px-h20pps.tikz}
 
 \begin{enumerate}
 
@@ -165,8 +186,51 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 \end{enumerate}
 
 \ifsolutions
-  \textbf{Solution}
+\textbf{Solution}
 
+    \begin{enumerate}
+
+      \item The vector from the origin to the location of $q_1$ is $\bfvec{r}_1=-a\ihat -a\jhat$
+
+            The vector from the origin to the location of $q_2$ is $\bfvec{r}_2=a\ihat + a\jhat$
+
+            The distance vector is $\bfvec{r}=\bfvec{r}_2-\bfvec{r}_1=2a\ihat+2a\jhat$
+
+            The length of the distance vector is
+
+            $r=|\bfvec{r}_2-\bfvec{r}_1|=\sqrt{(2a)^2 + (2a)^2} = 2\sqrt{2}a$
+
+            The unit vector pointing from the position of $q_1$ to the position of $q_2$ is
+
+        \begin{equation}
+        \rhat=\frac{\bfvec{r}}{r}=\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat
+        \end{equation}
+
+            Inserting the above results into the equation
+
+            $\displaystyle \bfvec{F}_{1\mbox{ on } 2}=kq_1q_2\frac{\rhat}{r^2}\quad$ gives
+
+        \begin{equation}
+        \bfvec{F}_{1\mbox{ on } 2}=
+         kq^2\frac{\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]}{(2\sqrt{2}a)^2}
+         \quad\text{ or }\quad
+         \bfvec{F}_{1\mbox{ on } 2}=
+         \frac{kq^2}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]
+         \end{equation}
+
+            (Note that one can avoid the need to compute $\rhat$ by using the equivalent formula $\displaystyle \bfvec{F}_{1\mbox{ on } 2}=kq_1q_2{\bfvec{r}}/{r^3}$.)
+
+      \item Let $\bfvec{F} = \bfvec{F}_{1\mbox{ on } 2}$ from part 1. to simplify notation. Then
+
+        \begin{equation}
+        F=|\bfvec{F}|=\frac{kq^2}{8a^2}\sqrt{\left(\frac{1}{\sqrt{2}}\right)^2 + \left(\frac{1}{\sqrt{2}}\right)^2}=\frac{kq^2}{8a^2}
+        \end{equation}
+
+            The angle is $\displaystyle \theta = \tan^{-1}\left(\frac{F_y}{F_x}\right) = \tan^{-1}\bigg( \frac{\frac{F}{\sqrt{2}}}{\frac{F}{\sqrt{2}}}\bigg)=45^\circ$
+
+            See the margin note on page 16 of the textbook for an issue that may arise when using this formula to compute an angle.
+
+    \end{enumerate}
 \fi
 
 \subsection{Problem}
