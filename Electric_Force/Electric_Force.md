@@ -75,7 +75,7 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
 
 <img src="figures/Two_Charges-c.svg"/>
 
-1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{\sqrt{(2a)^2+a^2}}=\frac{kq^2}{\sqrt{5}a^2}$
+1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{(2a)^2+a^2})^2}=\frac{kq^2}{5a^2}$
 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \theta^\circ \ihat - \cos \theta\jhat)$, where $\theta=\tan^{-1}(2) = 63.4^\circ$.
 3. 1.: No change; 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\sin \theta^\circ \ihat + \cos \theta\jhat)$; $\theta=63.4^\circ$
 \fi
