@@ -52,6 +52,10 @@
 \draw    (413.5,12) -- (413.5,62) ;
 %Straight Lines [id:da975774904850317] 
 \draw    (413.5,62) -- (513.5,62) ;
+%Shape: Circle [id:dp09274289663408197] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (408.63,12) .. controls (408.63,9.31) and (410.81,7.13) .. (413.5,7.13) .. controls (416.19,7.13) and (418.37,9.31) .. (418.37,12) .. controls (418.37,14.69) and (416.19,16.87) .. (413.5,16.87) .. controls (410.81,16.87) and (408.63,14.69) .. (408.63,12) -- cycle ;
+%Shape: Circle [id:dp6717878666182211] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (508.63,62) .. controls (508.63,59.31) and (510.81,57.13) .. (513.5,57.13) .. controls (516.19,57.13) and (518.37,59.31) .. (518.37,62) .. controls (518.37,64.69) and (516.19,66.87) .. (513.5,66.87) .. controls (510.81,66.87) and (508.63,64.69) .. (508.63,62) -- cycle ;
 
 % Text Node
 \draw (129.5,25.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$y$};

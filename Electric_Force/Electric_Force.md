@@ -37,7 +37,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
 2. Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. The right part of the above diagram shows the calculation of the components $F_x$ and $F_y$, from which it follows that $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. 
 
-3. The magnitude will not change (it is by definition a positive number). The force vectors will reverse direction as shown on the left in the following diagram. The diagram on the right shows the calculation of $\bfvec{F}_{1\mbox{ on } 2}$, from which it follows that $\bfvec{F}_{1\mbox{ on } 2} = -F\cos 45^\circ \ihat - F\sin 45^\circ \jhat$. Note that reversing the direction of a vector is the same as multiplying each of its components by $-1$.
+3. The magnitude will not change (it is by definition a positive number). Assume "Opposite signs" means that one is positive and one is negative and still $|q_1|=|q_2|=q$. The force vectors will reverse direction as shown on the left in the following diagram. The diagram on the right shows the calculation of $\bfvec{F}_{1\mbox{ on } 2}$, from which it follows that $\bfvec{F}_{1\mbox{ on } 2} = -F\cos 45^\circ \ihat - F\sin 45^\circ \jhat$. Note that reversing the direction of a vector is the same as multiplying each of its components by $-1$.
 
    <img src="figures/Two_Charges-b.svg"/>
 
