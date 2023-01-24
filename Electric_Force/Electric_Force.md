@@ -49,15 +49,17 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 3. If the charges have opposite signs, how will your answers to 1. and 2. change?
 
-<img src="figures/grid.svg" style="width:90%"/>
-
 \ifsolutions
 {\bf Solution}
 1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$
 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 45^\circ \ihat - \sin 45^\circ \jhat)$
-3. 1.: No change; 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\cos 45^\circ \ihat + \sin 45^\circ \jhat)$
+3. 1.: No change; 2. Assuming "Opposite signs" means that one is positive and one is negative and still $|q_1|=|q_2|=q$, $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\cos 45^\circ \ihat + \sin 45^\circ \jhat)$
 \else
+
+<img src="figures/grid.svg" style="width:90%"/>
+
 \newpage
+
 \fi
 
 # Problem II
@@ -68,8 +70,6 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
 2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 3. If the charges have opposite signs, how will your answers to 1. and 2. change?
 
-<img src="figures/grid.svg" style="width:90%"/>
-
 \ifsolutions
 {\bf Solution}
 
@@ -79,9 +79,14 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \theta \ihat - \cos \theta\jhat)$, where $\theta=\tan^{-1}(2) = 63.4^\circ$.
 
    Alternatively, from the diagram on the right, $\sin\theta = 2a/\sqrt{5}a$ and $\cos\theta = 1a/\sqrt{5}a$, so 
-   $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$
+   $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$.
 
-3. 1.: No change; 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\sin \theta^\circ \ihat + \cos \theta\jhat)$; $\theta=63.4^\circ$
+3. 1.: No change; 2. Assuming "Opposite signs" means that one is positive and one is negative and still $|q_1|=|q_2|=q$, $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\sin \theta \ihat + \cos \theta\jhat)$; $\theta=63.4^\circ$.
+
+\else
+
+<img src="figures/grid.svg" style="width:80%"/>
+
 \fi
 
 # Problem III
@@ -92,13 +97,23 @@ Charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$
 2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 3. If the charges have opposite signs, how will your answers to 1. and 2. change?
 
-<img src="figures/grid.svg" style="width:80%"/>
-
 \ifsolutions
+
 {\bf Solution}
+<img src="figures/Two_Charges-d.svg"/>
+
 1. $r=\sqrt{a^2+(3a)^2}$, $F=k|q(-q)|/r^2=kq^2/10a^2$
-2. $\bfvec{F}=-F\sin\theta\ihat - F\cos\theta\jhat$, where $\theta=\tan^{-1}(1/3)=18.4^\circ$
-3. 1.: No change; 2.: $\bfvec{F}=+F\sin\theta\ihat + F\cos\theta\jhat$
+2. $\bfvec{F}=-F\sin\theta\ihat - F\cos\theta\jhat$, where $\theta=\tan^{-1}(1/3)=18.4^\circ$.
+
+   Alternatively, from the diagram, $\sin\theta = a/\sqrt{10}a$ and $\cos\theta = 3a/\sqrt{10}a$, so 
+   $\ds\bfvec{F}_{1\mbox{ on } 2} = F\left(-\frac{1}{\sqrt{10}}\ihat - \frac{3}{\sqrt{10}}\jhat\right)$.
+
+3. 1.: No change; 2.: Note: the problem statement should have been "if both charges have the _same_ sign" (the charges were given to have opposite signs). In this case: $\bfvec{F}_{1\mbox{ on } 2}=+F\sin\theta\ihat + F\cos\theta\jhat$.
+
+\else
+
+<img src="figures/grid.svg" style="width:75%"/>
+
 \fi
 
 # Problem IV
