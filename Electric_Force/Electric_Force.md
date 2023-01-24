@@ -41,6 +41,10 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
    <img src="figures/Two_Charges-b.svg"/>
 
+\ifsolutions
+\clearpage
+\fi
+
 # Problem I
 
 Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges have a charge of $q$. Draw this charge configuration and then using the steps in the previous example,
@@ -121,5 +125,5 @@ Charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$
 Charge $q_1$ is at $(x,y)=(x_1,y_1)$ and charge $q_2$ is at $(x_2, y_2)$. Find the magnitude of the force of $q_1$ on $q_2$.
 
 \ifsolutions
-{\bf Solution}: $F=kq^2/\left((x_2-x_1)^2 + (y_2-y_1)^2\right)$. Make sure that you can justify this with a diagram.
+{\bf Solution}: $F=k|q_1q_2|/\left((x_2-x_1)^2 + (y_2-y_1)^2\right)$. Make sure that you can justify this with a diagram. Check to see if you can use this formula to find the magnitudes for the previous problems.
 \fi
