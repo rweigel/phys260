@@ -76,7 +76,11 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
 <img src="figures/Two_Charges-c.svg"/>
 
 1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{(2a)^2+a^2})^2}=\frac{kq^2}{5a^2}$
-2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \theta^\circ \ihat - \cos \theta\jhat)$, where $\theta=\tan^{-1}(2) = 63.4^\circ$.
+2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \theta \ihat - \cos \theta\jhat)$, where $\theta=\tan^{-1}(2) = 63.4^\circ$.
+
+   Alternatively, from the diagram on the right, $\sin\theta = 2a/\sqrt{5}a$ and $\cos\theta = 1a/\sqrt{5}a$, so 
+   $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$
+
 3. 1.: No change; 2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\sin \theta^\circ \ihat + \cos \theta\jhat)$; $\theta=63.4^\circ$
 \fi
 
@@ -88,11 +92,19 @@ Charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$
 2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
 3. If the charges have opposite signs, how will your answers to 1. and 2. change?
 
-<img src="figures/grid.svg" style="width:100%"/>
+<img src="figures/grid.svg" style="width:80%"/>
 
 \ifsolutions
 {\bf Solution}
 1. $r=\sqrt{a^2+(3a)^2}$, $F=k|q(-q)|/r^2=kq^2/10a^2$
 2. $\bfvec{F}=-F\sin\theta\ihat - F\cos\theta\jhat$, where $\theta=\tan^{-1}(1/3)=18.4^\circ$
 3. 1.: No change; 2.: $\bfvec{F}=+F\sin\theta\ihat + F\cos\theta\jhat$
+\fi
+
+# Problem IV
+
+Charge $q_1$ is at $(x,y)=(x_1,y_1)$ and charge $q_2$ is at $(x_2, y_2)$. Find the magnitude of the force of $q_1$ on $q_2$.
+
+\ifsolutions
+{\bf Solution}: $F=kq^2/\left((x_2-x_1)^2 + (y_2-y_1)^2\right)$. Make sure that you can justify this with a diagram.
 \fi
