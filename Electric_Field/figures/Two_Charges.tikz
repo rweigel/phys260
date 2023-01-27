@@ -57,13 +57,11 @@
 % Text Node
 \draw (301,47.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
 \hat{\mathbf{r}} \ =\ \frac{\mathbf{r}}{r}\\
-\ \ \ =\frac{r\ \cos\mathbf{45^{\circ } i} +r\mathrm{\sin 45^{\circ } \ j}}{r}\\
-\ \ \ =\cos\mathbf{45^{\circ } i} +\mathrm{\sin 45^{\circ } \ j}\\
-\\
-\ \ \ =\frac{1}{\sqrt{2}}(\mathbf{i} +\mathrm{j})
+\ \ \ =\frac{r\ \cos 45\mathbf{^{\circ } i} +r\mathrm{\sin 45^{\circ } \ j}}{r}\\
+\ \ \ =\cos 45\mathbf{^{\circ } i} +\mathrm{\sin 45^{\circ } \ j}
 \end{array}$};
 % Text Node
-\draw (301,14.4) node [anchor=north west][inner sep=0.75pt]    {$\mathbf{r} =r_{x}\mathbf{i} +r_{y}\mathrm{j} =r\ \cos\mathbf{45^{\circ } i} +r\mathrm{\sin 45^{\circ } \ j}$};
+\draw (301,14.4) node [anchor=north west][inner sep=0.75pt]    {$\mathbf{r} =r_{x}\mathbf{i} +r_{y}\mathrm{j} =r\ \cos 45\mathbf{^{\circ } i} +r\mathrm{\sin 45^{\circ } \ j}$};
 
 
 \end{tikzpicture}
