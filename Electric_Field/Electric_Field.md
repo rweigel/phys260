@@ -51,6 +51,21 @@ Charge $q_1$ is at $(x,y)=(-a,a)$. At $(x,y)=(a, 0)$, find $\mathbf{E}$ in the f
 
 <img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
+\ifsolutions
+{\bf Answer}:
+
+From Problem II on the Electric Force Activity, if $q_2$ is at $(x,y)=(a, 0)$ (and using the arguments in the previous example to drop the absolute value sign),
+
+$$\bfvec{F}_{q_1\text{ on } q_2}=k\frac{q_1q_2}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$$
+
+Replacing $q_2$ with a test charge $q_o$,
+
+$$\bfvec{F}_{q_1\text{ on } q_o}=k\frac{q_1q_o}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$$
+
+$\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o}=\frac{kq_1}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$
+
+\fi
+
 \newpage
 
 # The $\rhat$ Unit Vector
@@ -105,6 +120,18 @@ Charge $q_1$ is at $(x,y)=(-a,a)$. Find the electric field at $(x,y)=(a, 0)$ usi
 
 <img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
+\ifsolutions
+{\bf Answer}:
+
+$\mathbf{r}=2a\ihat-a\jhat$,
+$\quad$
+$\ds\rhat=\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat$,
+$\quad$ $r^2=5a^2$
+
+$\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1}=\frac{kq_1}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$, which matches the solution to Problem I, as expected.
+
+\fi
+
 \newpage
 
 # Problem III - Superposition
@@ -119,32 +146,67 @@ Charge $q_1 = +q$ is at $(x, y) = (a, 0)$, charge $q_2 = +q$ is at $(x, y) = (-a
 
 2. Why does it not make sense to ask what the electric _force_ is at the origin?
 
+\ifsolutions
+There is no charge at the origin. (The electric field can be used to find the foce on a charge _if_ it was placed at the origin.)
+\else
 <div style="height:2em"/>
+\fi
 
 In the following, 
 
 3. Find the electric field at the origin due to $q_1$. Write your answer in the form $\bfvec{E}\_1=E_{x1}\ihat + E_{y1}\jhat$.
 
-<div style="height:6em"/>
+   \ifsolutions
+   {\bf Answer}: $\ds\bfvec{E}\_1=-\frac{kq}{a^2}\ihat$
+   \else
+   <div style="height:6em"/>
+   \fi
 
 4. Find the electric field at the origin due to $q_2$. Write your answer in the form $\bfvec{E}\_2=E_{x2}\ihat + E_{y2}\jhat$.
 
-<div style="height:6em"/>
+   \ifsolutions
+   {\bf Answer}: $\ds\bfvec{E}\_2=+\frac{kq}{a^2}\ihat$
+   \else
+   <div style="height:6em"/>
+   \fi
 
 5. Find the electric field at the origin due to $q_3$. Write your answer in the form $\bfvec{E}\_3=E_{x3}\ihat + E_{y3}\jhat$.
 
-<div style="height:6em"/>
+   \ifsolutions
+   {\bf Answer}: $\ds\bfvec{E}\_3=-\frac{kq}{a^2}\jhat$
+   \else
+   <div style="height:6em"/>
+   \fi
 
 6. Find the total electric field at the origin by adding $\mathbf{E}_1$, $\mathbf{E}_2$, and $\mathbf{E}_3$. Write your answer in the form $\bfvec{E}=E_{x}\ihat + E_{y}\jhat$.
 
-<div style="height:6em"/>
+   \ifsolutions
+   {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\jhat$
+   \else
+   <div style="height:6em"/>
+   \fi
 
 7. Will your answers to 3.--6. change if the problem had asked for the electric field at a different position? If so, which answers?
 
-<div style="height:6em"/>
+   \ifsolutions
+    Yes, all answers. The electric field at a given location due to each charge depends on the distance to the location. If the location changes, the distance changes.
+   \else
+   <div style="height:6em"/>
+   \fi
 
 8. Find the electric field at the origin if charge $q_1=2q$ (instead of $q$).
 
-<div style="height:12em"/>
+   \ifsolutions
+   {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\ihat-\frac{kq}{a^2}\jhat$
+   \else
+   <div style="height:6em"/>
+   \fi
 
 9. Find the electric field at the origin if charge $q_1=-2q$ (instead of $q$).
+
+   \ifsolutions
+   {\bf Answer}: $\ds\bfvec{E}=+\frac{3kq}{a^2}\ihat-\frac{kq}{a^2}\jhat$
+   \else
+   <div style="height:6em"/>
+   \fi
+ 
