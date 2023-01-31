@@ -16,12 +16,12 @@ This process requires a significant amount of calculation if there are many char
 
 If you read the textbook examples and the lecture notes, you should be able to identify the following steps (not necessarily in this order).
 
-1. Identify answer features
-2. Find $d\bfvec{E}$ (or $dE$ and its direction) for a $dQ$ on the charged object
-3. Find $dQ$ in terms of coordinates (e.g., $dx$, $dy$, $r$, $d\theta$, etc.)
-4. Simplify $d\bfvec{E}$ (if possible) using symmetry arguments
-5. Integrate $d\bfvec{E}$
-6. Check answer features
+1. Identify answer features (e.g., what should the direction of $\bfvec{E}$ be?).
+2. Find $d\bfvec{E}$ (or $dE$ and its direction) for a $dQ$ on the charged object. Use a diagram to check direction.
+3. Find $dQ$ in terms of coordinates (e.g., $dx$, $dy$, $r$, $d\theta$, etc.).
+4. Simplify $d\bfvec{E}$ (if possible) using symmetry arguments.
+5. Integrate $d\bfvec{E}$.
+6. Check answer features.
 
 In this activity, you will explicitly address all of these steps for charges that are uniformly and continuously distributed along a straight line.
 
@@ -35,13 +35,27 @@ $\displaystyle d\mathbf{E} =k\frac{dQ}{r^2}\hat{\mathbf{r}}$, which has magnitud
 
 \newpage
 
-<img src="figures/Finite_Line.svg"/>
+   \ifsolutions
+   <img src="figures/Finite_Line.svg" width="100%"/>
+   \else
+   <img src="figures/Finite_Line.svg" width="25%"/>
+   \fi
 
 1. Draw the expected directions of $dE_x$ and $dE_y$ at a location on the $+y$--axis on the diagram given the location of $dQ$ shown on the figure (assume $dQ$ is positive).
 
-2. In the diagram, the differential charge is at a positive $x$. At the same location on the $+y$--axis, draw the expected direction of $dE_x$ and $dE_y$ on the diagram with dotted lines if $dQ$ is at $-x$. 
+2. In the diagram, the differential charge is at a positive $x$. At the same location on the $+y$--axis, draw the expected direction using dotted lines of $dE_x$ and $dE_y$ on the diagram with dotted lines if $dQ$ is at $-x$. 
 
-3. Draw the expected direction of $dE_x$ and $dE_y$ on the diagram at a location on the $-y$--axis for $dQ$ at the position in the figure. 
+   \ifsolutions
+   **Solution**
+
+   <img src="figures/Finite_Line-Solution.svg" width="50%"/>
+   \fi
+
+3. Based on your diagrams, do you expect any component of electric field due to $dQ$ at $+x$ will cancel that due to $dQ$ at $-x$?
+
+   \ifsolutions
+   **Answer**: Yes, the $x$ components will cancel leaving a total field in the $+y$ direction.
+   \fi
 
 4. Find equations for the electric field components $dE_x$ and $dE_y$ at any location on the $y$--axis in terms of $dQ$, $x$, $y$, and $k$. 
 
@@ -63,7 +77,7 @@ $\displaystyle d\mathbf{E} =k\frac{dQ}{r^2}\hat{\mathbf{r}}$, which has magnitud
   <div style="height:8em"/>
   \fi
 
-5. Do your equations for $dE_x$ and $dE_y$ give the directions predicted by your answers to 1.--3.? Try plugging in values of $y=\pm a$ and $x=\pm a$.
+5. Suppose the charge $dQ$ is at $x=a$ and you want to know the electric field at $y=a$. Plug these values into the equations for $dE_x$ and $dE_y$ found above. Are the signs of $dE_x$ and $dE_y$ consistent with what you drew for part 1.? Repeat supposing the charge $dQ$ is at $x=-a$ and you want to know the electric field at $y=a$. Are the signs of $dE_x$ and $dE_y$ consistent with what you drew for part 2.? 
 
 <div style="height:3em"/>
 
@@ -85,9 +99,9 @@ If the charge per unit length on the line is $\lambda$, then we can write $dQ=\l
    Based on 2., we expect $E_x$ to be zero. Mathematically, the integrand for $E_x$ is an odd function on the integration integral, which is another justification for $E_x$ being zero. (The integrand for $E_y$ is even, so we could change its limits to $0$ to $a$ and multiply by this integral by 2.)
 
    Note that with respect to integration, $y$ can be treated as a constant because the integration is with respect to $x$, which is why $y$ can be factored out as done in the equation for $E_y$.
+   \else
+   \newpage
    \fi
-
-\newpage
 
 8. From an integral table (or using trig substitutions), we know $\displaystyle \int \frac{du}{(u^2+a^2)^{3/2}} = \frac{u}{a^2\sqrt{u^2+a^2}} + C$. Use this to find $E_y$.
 

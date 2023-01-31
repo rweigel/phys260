@@ -3,33 +3,29 @@
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,151); %set diagram left start at 0, and has height of 151
+%uncomment if require: \path (0,229); %set diagram left start at 0, and has height of 229
 
-%Shape: Rectangle [id:dp8210906295460063] 
-\draw  [color={rgb, 255:red, 215; green, 215; blue, 215 }  ,draw opacity=1 ][fill={rgb, 255:red, 215; green, 215; blue, 215 }  ,fill opacity=1 ] (39,83.35) -- (189,83.35) -- (189,89.4) -- (39,89.4) -- cycle ;
-%Straight Lines [id:da7905811268052965] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.29 ]   (39,84.35) -- (39,104) ;
-%Straight Lines [id:da6332106265679434] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.29 ]   (189,84.35) -- (189,100.75) ;
-%Straight Lines [id:da7617125394509847] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.29 ]   (110,86.4) -- (110,29.5) ;
-\draw [shift={(110,27.5)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.29 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Shape: Rectangle [id:dp9354721623618949] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 255 }  ,fill opacity=1 ] (143.2,83) -- (136,83) -- (136,89.4) -- (143.2,89.4) -- cycle ;
-%Straight Lines [id:da6324558004584633] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.29 ]   (110,86.4) -- (137.6,86.21) ;
-\draw [shift={(139.6,86.2)}, rotate = 179.61] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.29 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp08213900538372076] 
+\draw  [color={rgb, 255:red, 215; green, 215; blue, 215 }  ,draw opacity=1 ][fill={rgb, 255:red, 215; green, 215; blue, 215 }  ,fill opacity=1 ] (24.96,120) -- (288,120) -- (288,130) -- (24.96,130) -- cycle ;
+%Straight Lines [id:da5910959185464446] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (140,220) -- (140,15.19) ;
+\draw [shift={(140,13.19)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp6718865848770532] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 255 }  ,fill opacity=1 ] (200,120) -- (190,120) -- (190,130) -- (200,130) -- cycle ;
+%Straight Lines [id:da8743643813694808] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (140.09,124.35) -- (188,124.01) ;
+\draw [shift={(190,124)}, rotate = 179.6] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
 
 % Text Node
-\draw (115,17.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$y$};
+\draw (148.79,9.05) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$y$};
 % Text Node
-\draw (30,106.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$-a$};
+\draw (11,135.63) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$-a$};
 % Text Node
-\draw (186,103.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$a$};
+\draw (287.64,136.23) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$a$};
 % Text Node
-\draw (126.8,89.7) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$x$};
+\draw (158.48,128.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$x$};
 % Text Node
-\draw (131,64.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$dQ$};
+\draw (186.41,138.49) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\textcolor[rgb]{0,0,1}{dQ}$};
 
 
 \end{tikzpicture}

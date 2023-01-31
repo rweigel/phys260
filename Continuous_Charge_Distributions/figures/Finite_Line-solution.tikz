@@ -1,0 +1,65 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,229); %set diagram left start at 0, and has height of 229
+
+%Shape: Rectangle [id:dp6465032395736159] 
+\draw  [color={rgb, 255:red, 215; green, 215; blue, 215 }  ,draw opacity=1 ][fill={rgb, 255:red, 215; green, 215; blue, 215 }  ,fill opacity=1 ] (24.96,120) -- (288,120) -- (288,130) -- (24.96,130) -- cycle ;
+%Straight Lines [id:da2683620627535779] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (140,220) -- (140,15.19) ;
+\draw [shift={(140,13.19)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp4790865907403339] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 255 }  ,fill opacity=1 ] (200,120) -- (190,120) -- (190,130) -- (200,130) -- cycle ;
+%Straight Lines [id:da9395659931787033] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (140.09,124.35) -- (188,124.01) ;
+\draw [shift={(190,124)}, rotate = 179.6] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da8989907238854544] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (100,30) -- (195,125) ;
+%Straight Lines [id:da9787462337495427] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ]   (140,70) -- (101.41,31.41) ;
+\draw [shift={(100,30)}, rotate = 45] [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+%Straight Lines [id:da14311133116094732] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ]   (140,70) -- (102,70) ;
+\draw [shift={(100,70)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+%Straight Lines [id:da4022947029989541] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ]   (100,70) -- (100,32) ;
+\draw [shift={(100,30)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+%Shape: Rectangle [id:dp47402430323773626] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 255; blue, 0 }  ,fill opacity=1 ] (90,120) -- (80,120) -- (80,130) -- (90,130) -- cycle ;
+%Straight Lines [id:da6385360223212309] 
+\draw [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (85,125) -- (140,70) ;
+%Straight Lines [id:da8751832468854506] 
+\draw [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (140,70) -- (178,70) ;
+\draw [shift={(180,70)}, rotate = 180] [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+%Straight Lines [id:da10934010391900784] 
+\draw [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (140,70) -- (178.59,31.41) ;
+\draw [shift={(180,30)}, rotate = 135] [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+%Straight Lines [id:da16158724008646907] 
+\draw [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (180,70) -- (180,32) ;
+\draw [shift={(180,30)}, rotate = 90] [color={rgb, 255:red, 0; green, 255; blue, 0 }  ,draw opacity=1 ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+
+% Text Node
+\draw (152.79,9.05) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$y$};
+% Text Node
+\draw (11,135.63) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$-a$};
+% Text Node
+\draw (287.64,136.23) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$a$};
+% Text Node
+\draw (158.48,128.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$x$};
+% Text Node
+\draw (186.41,138.49) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\textcolor[rgb]{0,0,1}{dQ}$};
+% Text Node
+\draw (75.71,138.02) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\textcolor[rgb]{0,1,0}{dQ}$};
+% Text Node
+\draw (76,46.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0,0,1}{dE_{y}}$};
+% Text Node
+\draw (107,71.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0,0,1}{dE}\textcolor[rgb]{0,0,1}{_{x}}$};
+% Text Node
+\draw (181,46.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 0; green, 255; blue, 0 }  ,opacity=1 ]  {$\textcolor[rgb]{0,1,0}{dE_{y}}$};
+% Text Node
+\draw (155,71.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 0; green, 255; blue, 0 }  ,opacity=1 ]  {$\textcolor[rgb]{0,1,0}{dE}\textcolor[rgb]{0,1,0}{_{x}}$};
+
+
+\end{tikzpicture}
