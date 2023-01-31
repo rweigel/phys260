@@ -1,0 +1,56 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,200); %set diagram left start at 0, and has height of 200
+
+%Shape: Grid [id:dp331631089200787] 
+\draw  [draw opacity=0] (0,0) -- (300,0) -- (300,200) -- (0,200) -- cycle ; \draw  [color={rgb, 255:red, 220; green, 220; blue, 220 }  ,draw opacity=1 ] (50,0) -- (50,200)(100,0) -- (100,200)(150,0) -- (150,200)(200,0) -- (200,200) ; \draw  [color={rgb, 255:red, 220; green, 220; blue, 220 }  ,draw opacity=1 ] (0,50) -- (300,50)(0,100) -- (300,100)(0,150) -- (300,150) ; \draw  [color={rgb, 255:red, 220; green, 220; blue, 220 }  ,draw opacity=1 ] (0,0) -- (300,0) -- (300,200) -- (0,200) -- cycle ;
+%Straight Lines [id:da14224998842180447] 
+\draw    (50,150) -- (280.93,150) ;
+\draw [shift={(283.93,150)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da6009743108133081] 
+\draw    (150,150) -- (150,22.58) ;
+\draw [shift={(150,19.58)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Circle [id:dp897042553915123] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (145.13,50) .. controls (145.13,47.31) and (147.31,45.13) .. (150,45.13) .. controls (152.69,45.13) and (154.87,47.31) .. (154.87,50) .. controls (154.87,52.69) and (152.69,54.87) .. (150,54.87) .. controls (147.31,54.87) and (145.13,52.69) .. (145.13,50) -- cycle ;
+%Shape: Circle [id:dp06513064206546715] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (45.13,150) .. controls (45.13,147.31) and (47.31,145.13) .. (50,145.13) .. controls (52.69,145.13) and (54.87,147.31) .. (54.87,150) .. controls (54.87,152.69) and (52.69,154.87) .. (50,154.87) .. controls (47.31,154.87) and (45.13,152.69) .. (45.13,150) -- cycle ;
+%Shape: Circle [id:dp6444706106350273] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (245.13,150) .. controls (245.13,147.31) and (247.31,145.13) .. (250,145.13) .. controls (252.69,145.13) and (254.87,147.31) .. (254.87,150) .. controls (254.87,152.69) and (252.69,154.87) .. (250,154.87) .. controls (247.31,154.87) and (245.13,152.69) .. (245.13,150) -- cycle ;
+%Straight Lines [id:da4590810247872239] 
+\draw [line width=1.5]    (150,150) -- (103,150) ;
+\draw [shift={(100,150)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
+%Straight Lines [id:da5899954170232251] 
+\draw [line width=1.5]    (150,150) -- (197,150) ;
+\draw [shift={(200,150)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
+%Straight Lines [id:da04145943004324493] 
+\draw [line width=1.5]    (150,150) -- (150,103) ;
+\draw [shift={(150,100)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
+
+% Text Node
+\draw (166,41.4) node [anchor=north west][inner sep=0.75pt]    {$-q$};
+% Text Node
+\draw (41,160.4) node [anchor=north west][inner sep=0.75pt]    {$q$};
+% Text Node
+\draw (248,161.4) node [anchor=north west][inner sep=0.75pt]    {$q$};
+% Text Node
+\draw (285.93,153.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$x$};
+% Text Node
+\draw (158.93,12.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$y$};
+% Text Node
+\draw (244,124.4) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (44,126.4) node [anchor=north west][inner sep=0.75pt]    {$2$};
+% Text Node
+\draw (127,40.4) node [anchor=north west][inner sep=0.75pt]    {$3$};
+% Text Node
+\draw (120.93,157.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$E_{1}$};
+% Text Node
+\draw (162.93,157.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$E_{2}$};
+% Text Node
+\draw (157.93,115.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$E_{3}$};
+
+
+\end{tikzpicture}

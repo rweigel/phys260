@@ -6,7 +6,7 @@ Title: Electric Field and $\rhat$
 
 This activity covers topics in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_).
 
-The electric field vector, $\bfvec{E}$, is a quantity assigned to a point in space. Given this quantity, we can compute the force on a charge $Q$ will experience if it is placed at that point in space using the equation $\bfvec{F}=Q\bfvec{E}$. The direction of $\mathbf{E}$ is also the direction a charge will begin to move if released from rest.
+The electric field vector, $\bfvec{E}$, is a quantity assigned to a point in space. Given this quantity, we can compute the force on a charge $Q$ will experience if it is placed at that point using the equation $\bfvec{F}=Q\bfvec{E}$. The direction of $\bfvec{E}$ is also the direction a charge will begin to move if released from rest.
 
 To find $\bfvec{E}$ at any point in space, 
 compute the force $\bfvec{F}$ due to all other charges on a hypothetical (or "test") charge $q_o$ at a point where you want to know $\bfvec{E}$. To find $\bfvec{E}$ at that point, divide $\bfvec{F}$ by $q_o$.
@@ -17,7 +17,7 @@ $$\bfvec{E} = \frac{\bfvec{F}}{q_o}$$
 
 # Example I
 
-Charge $q_1$ is at $(x,y)=(-a,-a)$. Find the electric field at $(x,y)=(a,a)$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$. Also, find $E$. (Note that $E$ and $|\mathbf{E}|$ are used interchangebly.)
+Charge $q_1$ is at $(x,y)=(-a,-a)$. Find the electric field at $(x,y)=(a,a)$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$. Also, find $E$. (Note that $E$ and $|\bfvec{E}|$ are used interchangebly.)
 
 **Solution**
 
@@ -25,29 +25,33 @@ To find the electric field at a point in space, we put a hypothetical "test" cha
 
 $$\bfvec{E} = \frac{\bfvec{F}}{q_o}$$
 
-The force a charge $q_1$ at $(x,y)=(-a,-a)$ exerts on a charge $q_2$ at $(x,y)=(a,a)$ was computed in a previous activity. We can use that answer after replacing $q_2$ with $q_o$. The result is
+The force a positive charge $q_1$ at $(x,y)=(-a,-a)$ exerts on a positive charge $q_2$ at $(x,y)=(a, a)$ was computed in a previous activity.
 
-$$\bfvec{F}_{q_1\text{ on } q_o}=k\frac{|q_1q_o|}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat)$$
+$$\bfvec{F}_{q_1\text{ on } q_2}=k\frac{|q_1q_2|}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat)$$
 
-We also found that this equation applies when $q_1$ and $q_o$ are both positive or both are negative. If $q_1$ was positive and $q_o$ was negative, or vice-versa, we found the sign changed:
+We also found that this equation applies when $q_1$ and $q_2$ are both positive or both are negative. If $q_1$ was positive and $q_2$ was negative, or vice-versa, we found the sign changed:
 
-$$\bfvec{F}_{q_1\text{ on } q_o}=-k\frac{|q_1q_o|}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat)$$
+$$\bfvec{F}_{q_1\text{ on } q_2}=-k\frac{|q_1q_2|}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat)$$
 
 Based on this, we can write a single equation for all possibilities:
+
+$$\bfvec{F}_{q_1\text{ on } q_2}=k\frac{q_1q_2}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat)$$
+
+If we replace $q_2$ with $q_o$, this is
 
 $$\bfvec{F}_{q_1\text{ on } q_o}=k\frac{q_1q_o}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat)$$
 
 The electric field at the location of $q_o$ is then 
 
-$\ds\bfvec{E}_{\text{at }(a,a) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o} = \frac{kq_1}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat) =\frac{kq_1}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$
+$\ds\bfvec{E}_{\text{at }(a,a) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o} = \frac{kq_1}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat) =\frac{kq_1}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$,
 
-where the fact that $\sin 45^\circ=\cos 45^\circ=1/\sqrt{2}$ was used.
+where the fact that $\sin 45^\circ=\cos 45^\circ=1/\sqrt{2}$ was used. The magnitude is $E=\sqrt{E_x^2+E_y^2}=k|q_1|/8a^2$.
 
-Sign check: When computing electric fields and forces, it is easy to make a sign error. The electric field vector points in the direction a positive charge will move if released there from rest. Suppose $q_1$ is positive. Our equation predicts that a charge released from rest at $(a,a)$ will move up and to the right. Suppose $q_1$ is negative. Our equation predicts that the charge will move down and to the left. This is consistent with the fact that like charges repel and unlike charges attract.
+Sign check: When computing electric fields and forces, it is easy to make a sign error. The electric field vector points in the direction a positive charge will move if released there from rest. Suppose $q_1$ is positive. Our equation predicts that a positive charge released from rest at $(a, a)$ will move up and to the right. Suppose $q_1$ is negative. Our equation predicts that a positive charge will move down and to the left. This is consistent with the fact that like charges repel and unlike charges attract.
 
 # Problem I
 
-Charge $q_1$ is at $(x,y)=(-a,a)$. At $(x,y)=(a, 0)$, find $\mathbf{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$. Check signs of the components of $\mathbf{E}$ using the technique used in Example I. Also, find $E$.
+Charge $q_1$ is at $(x,y)=(-a,a)$. At $(x,y)=(a, 0)$, find $\bfvec{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$. Check signs of the components of $\bfvec{E}$ using the technique used in Example I. Also, find $E$.
 
 <img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
@@ -70,19 +74,19 @@ $\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o}=\frac
 
 # The $\rhat$ Unit Vector
 
-Previously, when computing the electric force between two charges, you used the formula $F=k{|q_1q_2|}/{r^2}$ to find the magnitude of the force and then used a diagram to write $\mathbf{F}$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$. A similar process was used for computing $\bfvec{E}$ above (because we calculated $\mathbf{F}$ as part of the process). The textbook provides an equation for the electric field that requires a slightly different calculation method.
+Previously, when computing the electric force between two charges, you used the formula $F=k{|q_1q_2|}/{r^2}$ to find the magnitude of the force and then used a diagram to write $\bfvec{F}$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$. A similar process was used for computing $\bfvec{E}$ above (because we calculated $\bfvec{F}$ as part of the process). The textbook provides an equation for the electric field that requires a slightly different calculation method.
 
 The equation for the electric field using a unit vector is
 
 $$\bfvec{E}_{\text{due to }q_1}=kq_1\frac{\rhat}{r^2}\thinspace,$$
 
-where $\rhat$ is the unit vector that points from the position of $q_1$ to the point in space where we want to know $\mathbf{E}$, and $r$ is the distance between $q_1$ and that point.
+where $\rhat$ is the unit vector that points from the position of $q_1$ to the point in space where we want to know $\bfvec{E}$, and $r$ is the distance between $q_1$ and that point.
 
 To find $\rhat$, 
 
-1. draw a vector, $\mathbf{r}$ from $q_1$ to the point in space where you want to know $\mathbf{E}$;
-2. Write $\mathbf{r}$ in the form $\mathbf{r}=r_x\ihat+r_y\jhat$; then
-3. $\rhat=\mathbf{r}/r$, where $r=\sqrt{r_x^2+r_y^2}$.
+1. draw a vector, $\bfvec{r}$ from $q_1$ to the point in space where you want to know $\bfvec{E}$;
+2. Write $\bfvec{r}$ in the form $\bfvec{r}=r_x\ihat+r_y\jhat$; then
+3. $\rhat=\bfvec{r}/r$, where $r=\sqrt{r_x^2+r_y^2}$.
 
 # Example II
 
@@ -100,9 +104,9 @@ $$\bfvec{E}_{\text{at }(a,a)\text{ due to }q_1}=kq_1\frac{1}{r^2}\rhat = kq_1\fr
 
 which is the same result obtained in the previous example, as expected.
 
-To calculate $\mathbf{E}$, we can use
+To calculate $\bfvec{E}$, we can use
 
-$$|\mathbf{E}|=E=\sqrt{E_x^2+E_y^2}$$
+$$|\bfvec{E}|=E=\sqrt{E_x^2+E_y^2}$$
 
 and plug in $E_x=k\frac{q_1}{8a^2}\frac{1}{\sqrt{2}}$ and $E_y=k\frac{q_1}{8a^2}\frac{1}{\sqrt{2}}$ and use $\sqrt{c^2}=|c|$ (where $c$ is a real number) to show that $E=k|q_1|/{8a^2}$. There is an easier way. Taking the magnitude of both sides of
 
@@ -116,14 +120,14 @@ $\ds|\bfvec{E}|=k|q_1|\frac{1}{r^2}=\frac{k|q_1|}{8a^2},\thickspace$ as before.
 
 # Problem II
 
-Charge $q_1$ is at $(x,y)=(-a,a)$. Find the electric field at $(x,y)=(a, 0)$ using $\bfvec{E}_{\text{at }(a,0)\text{ due to }q_1}=kq_1{\rhat}/{r^2}$. Check signs of the components of $\mathbf{E}$ using the technique used in Example I. Also, find $E$.
+Charge $q_1$ is at $(x,y)=(-a,a)$. Find the electric field at $(x,y)=(a, 0)$ using $\bfvec{E}_{\text{at }(a,0)\text{ due to }q_1}=kq_1{\rhat}/{r^2}$. Check signs of the components of $\bfvec{E}$ using the technique used in Example I. Also, find $E$.
 
 <img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
 \ifsolutions
 {\bf Answer}:
 
-$\mathbf{r}=2a\ihat-a\jhat$,
+$\bfvec{r}=2a\ihat-a\jhat$,
 $\quad$
 $\ds\rhat=\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat$,
 $\quad$ $r^2=5a^2$
@@ -136,18 +140,22 @@ $\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1}=\frac{kq_1}{5a^2}\left(\frac{
 
 # Problem III - Superposition
 
-In the previous examples, only one charge was responsible for creating the electric field $\bfvec{E}$. When there are more charges, superposition can be used to find the total electric field by summing $\mathbf{E}$ due to each charge.
+In the previous examples, only one charge was responsible for creating the electric field $\bfvec{E}$. When there are more charges, superposition can be used to find the total electric field by summing $\bfvec{E}$ due to each charge.
 
 Charge $q_1 = +q$ is at $(x, y) = (a, 0)$, charge $q_2 = +q$ is at $(x, y) = (-a, 0)$, and charge $q_3 = -q$ is at $(x, y) = (0, a)$. Assume that $q$ is a positive number.
 
 1. Draw this charge configuration below.
 
+\ifsolutions
+<img src="figures/Superposition.svg" style="width:60%"/>
+\else
 <img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
+\fi
 
 2. Why does it not make sense to ask what the electric _force_ is at the origin?
 
 \ifsolutions
-There is no charge at the origin. (The electric field can be used to find the foce on a charge _if_ it was placed at the origin.)
+There is no charge at the origin. (The electric field can be used to find the force on a charge _if_ it was placed at the origin.)
 \else
 <div style="height:2em"/>
 \fi
@@ -173,15 +181,15 @@ In the following,
 5. Find the electric field at the origin due to $q_3$. Write your answer in the form $\bfvec{E}\_3=E_{x3}\ihat + E_{y3}\jhat$.
 
    \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}\_3=-\frac{kq}{a^2}\jhat$
+   {\bf Answer}: $\ds\bfvec{E}\_3=+\frac{kq}{a^2}\jhat$
    \else
    <div style="height:6em"/>
    \fi
 
-6. Find the total electric field at the origin by adding $\mathbf{E}_1$, $\mathbf{E}_2$, and $\mathbf{E}_3$. Write your answer in the form $\bfvec{E}=E_{x}\ihat + E_{y}\jhat$.
+6. Find the total electric field at the origin by adding $\bfvec{E}_1$, $\bfvec{E}_2$, and $\bfvec{E}_3$. Write your answer in the form $\bfvec{E}=E_{x}\ihat + E_{y}\jhat$.
 
    \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\jhat$
+   {\bf Answer}: $\ds\bfvec{E}=+\frac{kq}{a^2}\jhat$
    \else
    <div style="height:6em"/>
    \fi
@@ -197,7 +205,7 @@ In the following,
 8. Find the electric field at the origin if charge $q_1=2q$ (instead of $q$).
 
    \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\ihat-\frac{kq}{a^2}\jhat$
+   {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\ihat+\frac{kq}{a^2}\jhat$
    \else
    <div style="height:6em"/>
    \fi
@@ -205,7 +213,7 @@ In the following,
 9. Find the electric field at the origin if charge $q_1=-2q$ (instead of $q$).
 
    \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}=+\frac{3kq}{a^2}\ihat-\frac{kq}{a^2}\jhat$
+   {\bf Answer}: $\ds\bfvec{E}=+\frac{3kq}{a^2}\ihat+\frac{kq}{a^2}\jhat$
    \else
    <div style="height:6em"/>
    \fi
