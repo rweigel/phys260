@@ -59,7 +59,7 @@ $\displaystyle d\mathbf{E} =k\frac{dQ}{r^2}\hat{\mathbf{r}}$, which has magnitud
 
    See the textbook for an alternative way of arriving at the same result.
 
-   The vector from $dQ$ to a point on the $y$--axis is $\mathbf{r}=-x\ihat+y\jhat$. We need to find $\ds d\mathbf{E} = k{dQ}/{r^2}\hat{\mathbf{r}}$, which can be written as $\ds d\mathbf{E}=( k{dQ}/{r^3})\mathbf{r}$ using $\rhat=\mathbf{r}/r$. This equation allows us to bypass the need to compute $\rhat$ explicitly. Using this and $\mathbf{r}$ from above gives
+   The vector from $dQ$ to a point on the $y$--axis is $\mathbf{r}=-x\ihat+y\jhat$. We need to find $\ds d\mathbf{E} = (k{dQ}/{r^2})\hat{\mathbf{r}}$, which can be written as $\ds d\mathbf{E}=( k{dQ}/{r^3})\mathbf{r}$ using $\rhat=\mathbf{r}/r$. This equation allows us to bypass the need to compute $\rhat$ explicitly. Using this and $\mathbf{r}$ from above gives
 
    $$d\mathbf{E} = k\frac{dQ}{r^3}\mathbf{r} = k\frac{dQ}{(\sqrt{x^2+y^2})^3}(-x\ihat+y\jhat)$$
 
@@ -126,10 +126,10 @@ If the charge per unit length on the line is $\lambda$, then we can write $dQ=\l
 
    \fi
 
-9. If $y$ is negative (for example $y=-a$), is your answer for $E_y$ positive or negative? Is this consistent with what you expect based on the given diagram?
+9. If $y$ is negative (for example, $y=-a$), is your answer for $E_y$ positive or negative? Is this consistent with what you expect based on the given diagram?
 
    \ifsolutions
-   **Answer**: At points on the $-y$ axis, we expect the electric field to be downwards because if the line is positively charged, the electric field due to each $dQ$ on the line will be downwards.
+   **Answer**: At points on the $-y$ axis, we expect the electric field to be downwards because if the line is positively charged, the electric field due to each $dQ$ on the line will be downwards. Plugging in $y=-a$ gives a negative $E_y$, as expected.
    \else
    <div style="height:3em"/>
    \fi
@@ -173,5 +173,5 @@ A long line of charge lies along the line $y=b$.
 2. Find the electric field magnitude and direction at $(x,y)=(b,0)$.
 
    \ifsolutions
-   **Answer** Same as 1. For a long line of charge, the electric field is always perpendicular to the line.
+   **Answer** Same as 1. For a long line of charge, the electric field is always perpendicular to the line; the field due to a long line of charge depends only on the perpendicular distance to the line, which is the same here as in part 1.
    \fi

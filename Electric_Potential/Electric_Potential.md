@@ -18,7 +18,6 @@ There are three cases:
 
 1. If a force is always perpendicular to the direction of movement, the work due to that force is zero. For example, a block sliding horizontally has a gravitational force exerted on it, but the gravitational force is downward and so is perpendicular to the direction of motion. Thus, gravity does no work.
 
-
 2. When the force on an object does not change when it is moved a distance $L$ from $a$ to $b$ and the direction of force is always in the same direction as the direction of movement, then
 
    $$W_{a\rightarrow b}=\int_a^b \bfvec{F}\cdot d\bfvec{l}=(\pm)|\bfvec{F}|L$$
@@ -96,12 +95,12 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:3em"/>
    \fi
 
-2. You move charge of $+3\text{ C}$ from $A$ to $B$. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the charge changed?
+2. You move charge of $+3\text{ C}$ from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
 
    \ifsolutions
-   {\bf Answer}: The charge naturally wants to move from $A$ to $B$ since it is a positive charge and the field line direction indicates the direction of the force on a positive charge. The force the field exerts on the charge is $\bfvec{F}=Q\bfvec{E}=(3\text{ C})(3\text { N/C})\ihat = (9\text{ N})\ihat$, where $\ihat$ points to the right. Your force is equal and opposite. So your work is $(-9\text{ N})(2\text{ m}) = -18 \text{ J}$.
+   {\bf Answer}: The charge naturally wants to move from $A$ to $B$ since it is a positive charge and the field line direction indicates the direction of the force on a positive charge. The force the field exerts on the charge is $\bfvec{F}=Q\bfvec{E}=(3\text{ C})(3\text { N/C})\ihat = (9\text{ N})\ihat$, where $\ihat$ points to the right.
 
-   (a) $(-9 \text{ N})(2\text { m})=-18\text{ J}$, (b) $(+9 \text{ N})(2\text { m})=+18\text{ J}$, and (c) $\Delta U = -18\text{ J}$ (the change in PE, $\Delta U$ is equal and opposite to the work done by the field).
+   (a) $(+9 \text{ N})(2\text { m})=+18\text{ J}$, and (b) $\Delta U = -18\text{ J}$ (the change in PE, $\Delta U$ is equal and opposite to the work done by the field).
    \else
    <div style="height:3em"/>
    \fi
@@ -114,18 +113,18 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-4. A charge of $-3\text{ C}$ is moved from $A$ to $B$. How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the charge changed?
+4. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
 
    \ifsolutions
-   {\bf Answer}: (a) $+18\text{ J}$, (b) $-18\text{ J}$, and (c) $\Delta U = +18\text{ J}$ (the change in PE, $\Delta U$ is equal and opposite to the work done by the field).
+   {\bf Answer}: (a) $-18\text{ J}$, and (b) $\Delta U = +18\text{ J}$ (the change in PE, $\Delta U$ is equal and opposite to the work done by the field).
    \else
    <div style="height:4em"/>
    \fi
 
-5. You move a charge of $-3\text{ C}$ straight downward from $A$ to $D$. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the charge changed?
+5. A charge of $-3\text{ C}$ is moved straight downward from $A$ to $D$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
 
    \ifsolutions
-   {\bf Answer}: Your force and the force due to the field are both perpendicular to the direction of movement. So the work done by both forces is zero: (a) $0\text{ J}$ (b) $0\text{ J}$ (c) $0 \text{ J}$.
+   {\bf Answer}: The force due to the field is always perpendicular to the direction of movement. So the work done is zero: (a) $0\text{ J}$; (b) $0 \text{ J}$.
    \else
    <div style="height:4em"/>
    \fi
@@ -133,7 +132,7 @@ The following diagram shows a region of space where the electric field is consta
 6. If you move a charge of $-3\text{ C}$ from $A$ to $D$ but deviate from a straight line, will your answers to the previous problem change? If no, explain why. If yes, provide new answers.
 
    \ifsolutions
-   {\bf Answer}: No, they won't change. Think of movement along a smooth and curved line as being made of a series of tiny and equal-sized steps in vertical and horizontal directions. There is no work associated with the vertical steps. There is positive work associated with steps to the right and negative work associated with steps to the left. To get from $A$ to $D$ along an arbitrary path, you must take an equal number of steps to the left and to the right. See also Figure 23.1 and 23.2 in the textbook, which describes how the work done by a conservative force does not depend on the path.
+   {\bf Answer}: No, they won't change. Think of movement along a smooth and curved line as being made of a series of tiny and equal-sized steps in vertical and horizontal directions. There is no work associated with the vertical steps. There is positive work associated with steps to the right and negative work associated with steps to the left. To get from $A$ to $D$ along an arbitrary path, you must take an equal number of steps to the left and to the right. See also [Figure 23.1 and 23.2 in the textbook](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_), which describes how the work done by a conservative force does not depend on the path.
    \else
    <div style="height:3em"/>
    \fi
@@ -148,10 +147,10 @@ In the previous problem, a charge was moved in a region of space where the elect
 
 There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for this charge are shown. To simplify the calculations, use $k=9\cdot 10^9\text{ N}\cdot \text{m}^2/\text{C}^2$.
 
-1. You move a charge of $+3\text{ C}$ from $A$ to $B$. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the moved charge changed?
+1. You move a charge of $+3\text{ C}$ from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
 
    \ifsolutions
-   {\bf Answer}: According to equation 23.8, the work done by the field, labeled $W^E$ here, when a charge $q_0$ is moved from a distance $r_a$ to a distance $r_b$ from a charge $q$ is
+   {\bf Answer}: According to [equation 23.8](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_), the work done by the field, labeled $W^E$ here, when a charge $q_0$ is moved from a distance $r_a$ to a distance $r_b$ from a charge $q$ is
 
    $$
    W^E_{a\rightarrow b} = kqq_o\left(\frac{1}{r_a}-\frac{1}{r_b}\right)
@@ -163,31 +162,31 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    W^E_{a\rightarrow b} = (9\cdot 10^9)(-6)(+3)\left(\frac{1}{3}-\frac{1}{2}\right)\text{ J} = +27\cdot 10^9\text{ J}
    $$
 
-   This is the answer for (b). Note that the work is positive as expected -- the force of the electric field on the charge is in the same direction as its movement. The work that you do is equal to and opposite of the work that the field does. The change in potential is equal to and opposite of the work done by the field. In summary, (a) $-27\cdot 10^9\text{ J}$, (b) $+27\cdot 10^9\text{ J}$, (c) $-27\cdot 10^9\text{ J}$. Note that the answer of $27\cdot 10^9\text{ J}$ is unphysically large; it is the amount of energy that you would need to lift $27\cdot 10^9\text{ kg}$ (about $5$ million elephants) by $1\text{ m}$. 
+   This is the answer for (a). Note that the work is positive as expected -- the force of the electric field on the charge is in the same direction as its movement. The change in potential is equal to and opposite of the work done by the field, so (b) $-27\cdot 10^9\text{ J}$. Note that the answer of $27\cdot 10^9\text{ J}$ is unphysically large; it is the amount of energy that you would need to lift $27\cdot 10^9\text{ kg}$ (about $5$ million elephants) by $1\text{ m}$. 
    \else
    <div style="height:4em"/>
    \fi
    
-2. You move a charge of $-3\text{ C}$ from $A$ to $B$. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the moved charge changed?
+2. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
 
    \ifsolutions
-   {\bf Answer}: (a) $+27\cdot 10^9\text{ J}$, (b) $-27\cdot 10^9\text{ J}$, (c) $+27\cdot 10^9\text{ J}$. 
+   {\bf Answer}: (a) $-27\cdot 10^9\text{ J}$, (b) $+27\cdot 10^9\text{ J}$. 
    \else
    <div style="height:4em"/>
    \fi
 
-3. You move a charge of $-3\text{ C}$ from $B$ to $D$ along the dotted line. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the moved charge changed?
+3.A charge of $-3\text{ C}$ is moved from $B$ to $D$ along the dotted line. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
 
    \ifsolutions
-   {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$, (c) $0\text{ J}$
+   {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$
    \else
    <div style="height:4em"/>
    \fi
 
-4. You move a charge of $-3\text{ C}$ from $D$ to $B$ but deviate from the dotted line. (a) How much work did you do? (b) How much work was done by the electric field? (c) By how much has the potential energy of the moved charge changed?
+4. A charge of $-3\text{ C}$ is moved from from $D$ to $B$ but deviate from the dotted line. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
 
    \ifsolutions
-   {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$, (c) $0\text{ J}$
+   {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$
    \fi
 
 \newpage
@@ -230,7 +229,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-2. You move a charge of $+3\text{ C}$ from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
+2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
 
    \ifsolutions
    {\bf Answer}: This question was already answered previously in 1.1.2. But given $\Delta V$, we can compute $\Delta U$:
@@ -240,7 +239,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-3. You move a charge of $-3\text{ C}$ from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
+3. A charge of $-3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
 
    \ifsolutions
    {\bf Answer}: This question was already answered previously in 1.1.4. But given $\Delta V$, we can compute $\Delta U$:
@@ -252,7 +251,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-4. You move a charge of $-3\text{ C}$ from $B$ to $D$. By how much has the electric potential energy of the moved charge changed?
+4. A charge of $-3\text{ C}$ is moved from $B$ to $D$. By how much has the electric potential energy of the moved charge changed?
 
    \ifsolutions
    {\bf Answer}: The move from $B$ to $D$ can be made by moving from $B$ to $A$ and then moving from $A$ to $D$. The change in potential when moving from $B$ to $A$ is opposite to the change in potential when moving from $A$ to $B$, which was found to be $-6\text{ Volts}$. The change in potential in going from $A$ to $D$ is zero. Thus,
@@ -298,7 +297,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    <div style="height:4em"/>
    \fi
 
-2. You move a charge of $-3\text{ C}$ from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
+2. A charge of $-3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
 
    \ifsolutions
    
@@ -317,7 +316,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    <div style="height:4em"/>
    \fi
 
-3. You move a charge of $-3\text{ C}$ from $B$ to $D$. By how much has the electric potential energy of the moved charge changed?
+3. Aa charge of $-3\text{ C}$ is moved from $B$ to $D$. By how much has the electric potential energy of the moved charge changed?
 
    \ifsolutions
    {\bf Answer}: $0\text{ J}$.
