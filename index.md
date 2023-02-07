@@ -47,7 +47,7 @@ Using Coulomb's law to find the electric force vector using two methods that are
 |
 * Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
-## Electric Field of a Point Charge
+## Electric Field and $\rhat$
 
 Computing the electric field due to one and three point charges.
 
