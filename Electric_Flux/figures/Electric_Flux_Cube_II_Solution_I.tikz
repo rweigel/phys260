@@ -1,0 +1,87 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,231); %set diagram left start at 0, and has height of 231
+
+%Shape: Pie [id:dp8757544809507802] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.2 ] (138.36,163.18) .. controls (134.79,162.72) and (131.22,161.44) .. (127.97,159.37) -- (139,140) -- cycle ;
+%Shape: Square [id:dp39107566339579325] 
+\draw   (99,70) -- (169,70) -- (169,140) -- (99,140) -- cycle ;
+%Straight Lines [id:da8710126107727538] 
+\draw [line width=1.5]    (169,100) -- (206.05,33.49) ;
+\draw [shift={(208,30)}, rotate = 119.12] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Straight Lines [id:da036553228152047534] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (99,140) -- (217,140) ;
+\draw [shift={(219,140)}, rotate = 180] [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da09644851790211528] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (99,140) -- (99,42) ;
+\draw [shift={(99,40)}, rotate = 90] [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da13412680651071018] 
+\draw [line width=1.5]    (98,210) -- (136.98,143.45) ;
+\draw [shift={(139,140)}, rotate = 120.36] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Straight Lines [id:da953112457460144] 
+\draw [line width=1.5]    (129,70) -- (166.05,3.49) ;
+\draw [shift={(168,0)}, rotate = 119.12] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Straight Lines [id:da5946417197466725] 
+\draw [line width=1.5]    (58,170) -- (96.98,103.45) ;
+\draw [shift={(99,100)}, rotate = 120.36] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Shape: Pie [id:dp9789969405881314] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.2 ] (169.07,77.86) .. controls (169.42,77.87) and (169.78,77.88) .. (170.14,77.9) .. controls (173.8,78.09) and (177.23,78.99) .. (180.28,80.45) -- (169,100) -- cycle ;
+%Shape: Pie [id:dp19077257181142548] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.2 ] (129.07,47.86) .. controls (129.42,47.87) and (129.78,47.88) .. (130.14,47.9) .. controls (133.63,48.08) and (136.91,48.91) .. (139.85,50.25) -- (129,70) -- cycle ;
+%Shape: Pie [id:dp05387708894606025] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.2 ] (98.45,123.27) .. controls (94.93,122.83) and (91.42,121.59) .. (88.22,119.58) -- (99,100) -- cycle ;
+%Straight Lines [id:da6287683983872696] 
+\draw [line width=1.5]    (129,70) -- (128.06,4) ;
+\draw [shift={(128,0)}, rotate = 89.18] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Straight Lines [id:da34533476333963553] 
+\draw [line width=1.5]    (169,100) -- (205,100) ;
+\draw [shift={(209,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Straight Lines [id:da2544195324607299] 
+\draw [line width=1.5]    (138,210) -- (138.94,144) ;
+\draw [shift={(139,140)}, rotate = 90.82] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Straight Lines [id:da3977375610635705] 
+\draw [line width=1.5]    (59,100) -- (95,100) ;
+\draw [shift={(99,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.13,-3.9) -- (0,0) -- (8.13,3.9) -- cycle    ;
+%Shape: Pie [id:dp09036304979526855] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.2 ] (5.68,181.23) .. controls (6.04,181.24) and (6.4,181.25) .. (6.76,181.27) .. controls (9.67,181.42) and (12.44,182.02) .. (14.98,182.99) -- (5.62,203.37) -- cycle ;
+
+% Text Node
+\draw (1,215) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {{\fontfamily{ptm}\selectfont View from} $\displaystyle +x${\fontfamily{ptm}\selectfont -axis}};
+% Text Node
+\draw (130,96.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1$};
+% Text Node
+\draw (88.97,69.24) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$5$};
+% Text Node
+\draw (156.97,144.41) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$4$};
+% Text Node
+\draw (170.17,123.24) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$2$};
+% Text Node
+\draw (210,142.4) node [anchor=north west][inner sep=0.75pt]    {$y$};
+% Text Node
+\draw (80,32.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
+% Text Node
+\draw (159,22.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{o}$};
+% Text Node
+\draw (17.29,187.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$=30^{\circ }$};
+% Text Node
+\draw (39,6.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{\perp 3} =E_{o}\cos 30^{\circ }$};
+% Text Node
+\draw (179,102.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{\perp 2} =E_{o}\sin 30^{\circ }$};
+% Text Node
+\draw (140.5,178.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{\perp 4} =E_{o}\cos 30^{\circ }$};
+% Text Node
+\draw (1,83.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{\perp 5} =E_{o}\sin 30^{\circ }$};
+% Text Node
+\draw (209,42.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{o}$};
+% Text Node
+\draw (89,182.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{o}$};
+% Text Node
+\draw (53,137.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{o}$};
+% Text Node
+\draw (156.97,56.41) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-0.7]  {$3$};
+
+
+\end{tikzpicture}
