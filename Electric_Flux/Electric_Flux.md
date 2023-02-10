@@ -4,7 +4,7 @@ Title: Electric Flux
 
 # Overview
 
-Several calculations must be performed to use Gauss's law to find the electric field for a system of charges (if possible). First, one must find the electric flux through a closed surface. Second, one must find the amount of charge inside a closed surface. In this activity, you will compute the electric flux through open and closed surfaces.
+Several calculations must be performed to use Gauss's law to find the electric field for a system of charges (if possible). First, the electric flux through a closed surface must be found. Second, the amount of charge inside the closed surface must be found. In this activity, you will compute the electric flux through open and closed surfaces.
 
 Electric flux, $\Phi_E$, is the integral of $\bfvec{E}\bfcdot d\bfvec{A}$ over a surface:
 
@@ -20,19 +20,23 @@ $$
 
 where $\hat{\mathbf{n}}$ is a unit vector perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it results from the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
 
-The textbook also discusses several other forms for $\Phi_E$. The equation $\Phi_E = \bfvec{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
+The textbook covers several other forms for $\Phi_E$. The equation $\Phi_E = \bfvec{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
 
 $$
 \Phi_E = E_{\perp}A
 $$
 
-where $E_{\perp}$ is the component of $\bfvec{E}$ that is perpendicular to $A$. If the perpendicular component of $\bfvec{E}$ is in the same direction as the normal direction for $\bfvec{A}$, the flux is positive. If the perpendicular component of $\bfvec{E}$ is in the opposite direction as the normal direction for $\bfvec{A}$, the flux is negative. A final form is
+where $E_{\perp}$ is the component of $\bfvec{E}$ that is perpendicular to $A$. If the perpendicular component of $\bfvec{E}$ is in the same direction as the normal direction for $\bfvec{A}$, $E_{\perp}$ is positive. If the perpendicular component of $\bfvec{E}$ is in the opposite direction as the normal direction for $\bfvec{A}$, $E_{\perp}$ is negative.
+
+A final form is
 
 $$
 \Phi_E = EA\cos\theta
 $$
 
-where $\theta$ is the angle between the $\mathbf{E}$ and $\mathbf{A}$ vectors. Any of these equations can be used, and students are encouraged to use the one they are more comfortable with and ideally understand the relationship between the different equations. When t finding $\theta$ is simple based on a diagram, $EA\cos\theta$ is the easiest to use. When $\bfvec{E}$ and/or $\hat{\mathbf{n}}$ as three components, $\bfvec{E}\bfcdot \hat{\mathbf{n}}A$ is usually easier to use.
+where $\theta$ is the angle between the $\bfvec{E}$ and $\bfvec{A}$ vectors.
+
+Any of these equations can be used, and students are encouraged to use the one they are more comfortable with and ideally understand the relationship between the different equations. When finding $\theta$ is simple based on a diagram, $EA\cos\theta$ is usually the easiest to use. When $\bfvec{E}$ and/or $\hat{\mathbf{n}}$ as three components, $\bfvec{E}\bfcdot \hat{\mathbf{n}}A$ is usually easier to use.
 
 \newpage
 
@@ -40,57 +44,81 @@ where $\theta$ is the angle between the $\mathbf{E}$ and $\mathbf{A}$ vectors. A
 
 ## Problem I
 
-<img src="figures/Electric_Flux_XZ_Plane.svg"/>
-
-1. a. Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the figure above, where $A$ is the area of the dotted rectangle..
+1. a. Draw an area vector $\bfvec{A}=\hat{\mathbf{n}}A$ on the following figure, where $A$ is the area of the dotted rectangle.
 
    \ifsolutions
+   **Answer**
+
    <img src="figures/Electric_Flux_XZ_Plane_Solution_a.svg"/>
+   \else
+   <img src="figures/Electric_Flux_XZ_Plane.svg"/>
    \fi
 
    b. Is there only one normal direction to this area? Discuss your reasoning with your group. 
 
    \ifsolutions
-   There are two normal directions, one in $+y$ as shown and another in $-y$ direction.
+   **Answer**: There are two normal directions, one in $+y$ as shown and another in $-y$ direction.
    \else
    \vspace{1in}
    \fi
 
 2. For each of the following $\bfvec{E}$ vectors a.-d., draw $\bfvec{E}$ and $\hat{\mathbf{n}}$ on the following diagram, which shows the area in the previous figure when viewed from a point on the positive $z$--axis that is far from the origin. Then find $\theta$ and compute $\Phi_E$.
 
-   <img src="figures/Electric_Flux_xz_Plane_Sketch.svg"/>
-
-   a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=0$
-
-   b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
-
-   c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=0$ 
-
-   d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
-
    \ifsolutions
    **Answer**
 
    <img src="figures/Electric_Flux_xz_Plane_Solution_b.svg"/>
 
-   a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=0$
+   a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=E_oA\cos 90^\circ = 0$
 
-   b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=0^\circ\qquad\qquad\Phi_E=E_oA$ 
+   b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=0^\circ\qquad\qquad\Phi_E==E_oA\cos 0^\circ=E_oA$ 
 
-   c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=0$ 
+   c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=E_oA\cos 90^\circ=0$ 
 
    d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=45^\circ\qquad\qquad\Phi_E=E_o A\cos 45^\circ=E_oA/\sqrt{2}$
-   \fi
+   \else
+   <img src="figures/Electric_Flux_xz_Plane_Sketch.svg"/>
 
-\newpage
+   a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E$
+
+   b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
+
+   c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E$ 
+
+   d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
+
+   \newpage
+   \fi
 
 ## Problem II
 
+\ifsolutions
+\else
 <img src="figures/Electric_Flux_XZ_Plane_Rotated.svg"/>
+\fi
 
 If the area from the previous problem is rotated by $\phi=45^\circ$ around the $z$--axis, draw the area as it would look from a point on the positive $z$-axis that is far from the origin (that is, draw the projection onto the $x$--$y$ plane). Then draw $\hat{\mathbf{n}}$ and $\bfvec{E}$ for each of the electric fields a.--d.
 
-<img src="figures/Electric_Flux_XZ_Plane_Sketch.svg"/>
+\ifsolutions
+**Solution** 
+
+Note that the symbol $\odot$ in c. is used to indicate a vector pointing out of the page.
+
+<img src="figures/Electric_Flux_XZ_Plane_Rotated_Solution.svg"/>
+
+a. $\quad\ds\bfvec{E}=E_o\ihat\quad\theta=\phi+90^\circ=135^\circ\quad\Phi_E=E_oA\cos 135^\circ=-E_oA\cos 45^\circ=-E_oA/\sqrt{2}$
+
+b. $\quad\ds\bfvec{E}=E_o\jhat\quad\theta=\phi=45^\circ\quad\Phi_E=E_oA\cos 45^\circ=E_oA/\sqrt{2}$ 
+
+c. $\quad\ds\bfvec{E}=E_o\khat\quad\theta=90^\circ\quad\Phi_E=E_oA\cos 90^\circ=0$ 
+
+d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\quad\theta=45^\circ-\phi=0^\circ\quad\Phi_E=E_oA\cos 0^\circ=E_oA$
+
+(Can you derive the general relationship $\theta=45^\circ-\phi$ for part d.?)
+
+\else
+
+<img src="figures/Electric_Flux_XZ_Plane_Rotated_Sketch.svg"/>
 
 a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$
 
@@ -99,18 +127,15 @@ b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=
 c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
 
 d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
+\fi
 
-   \ifsolutions
-   <img src="figures/Electric_Flux_XZ_Plane_Rotated_Solution.svg"/>
-   \fi
-   
 # $\Phi_E$ Through Closed Surface
 
-In the previous problem, you computed the flux through an open surface. You should have noted that one can associate two area vectors to an open surface -- imagine your hand being an open surface. You can put the a pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
+In the previous problem, you computed the flux through an open surface. You should have noted that there are two area vectors to an open surface -- imagine your hand being an open surface. You can put the pencil (1) on the top of your hand with the tip pointing up or (2) in your palm with the tip pointing down. The pencil represents the vector and the tip indicates the direction.
 
-Gauss's law, which involves electric flux, always involves a closed surface (if you put water inside a closed surface, it would not leak out). For Gauss's law, there is a convention for which area vector to choose -- it is the one that points outwards from the volume that the surface encloses. 
+Gauss's law, which involves electric flux, always involves a closed surface (if you put water inside a closed surface, it will not leak out). For Gauss's law, there is a convention for which area vector to choose -- it is the one that points outwards from the volume that the surface encloses. 
 
-In the following example, the electric flux is computed through a closed surface (a cube) by finding the flux through each of the faces of the cube. The total electric flux is the sum of the fluxes though each cube.
+In the following example, the electric flux is computed through a closed surface (the sides of a cube) by finding the flux through each of the sides of the cube. The total electric flux is the sum of the fluxes though each side.
 
 %The reason we are interested in knowing the flux through a closed surface is due to a remarkable mathematical result known as Gauss's law. Suppose that you can measure the electric field on an arbitrary and closed surface. The net electric flux through the surface that you compute is related to the total amount of charge inside the surface! For example, if you are given the electric field at all points on the surface of a closed cardboard box, you can compute the total charge inside the box without having to open it. 
 
@@ -120,9 +145,9 @@ With Coulomb's law, we are given the location and values of charges, and we comp
 
 <img src="figures/Electric_Flux_Cube.svg"/>
 
-Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is everywhere in the $+z$ direction with magnitude $E_o$.
+Find the flux through the six labeled faces of the cube with side area $A$ when the electric field is everywhere in the $+z$ direction with magnitude $E_o$.
 
-{\bf Answer} This example is similar to [Example 22.2a pg 728 in the textbook](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB★★★★remove★★★★). The electric field is parallel to surfaces 1, 2, 5, and 6. For each of these surfaces, $\theta=90^\circ$, and $\cos( 90^\circ)=0$). Or, thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces. 
+{\bf Answer} This example is similar to [Example 22.2a pg 728 in the textbook](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB★★★★remove★★★★). The electric field is parallel to surfaces 1, 2, 5, and 6. For each of these surfaces, $\theta=90^\circ$, and $\cos( 90^\circ)=0$. Or, thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces. 
 
 %We'll solve it using two methods. The first method is useful when the electric field is either parallel or perpendicular to all surfaces. The second method is useful for more general cases, such as problem 3.3.
 
@@ -132,15 +157,20 @@ $\Phi_E^{1}=\Phi_E^{2}=\Phi_E^{5}=\Phi_E^{6}=0$
 
 By convention, the normal direction for surface 3 is outwards from the volume, which is in the $+z$-direction. The electric field is in the same direction, so $\theta=0$ and
 
-$\Phi_E^{3}=E_oA\cos0^\circ=E_oa^2$
+$\Phi_E^{3}=E_oA\cos0^\circ=E_oA$
 
 The normal direction for the bottom surface is downwards, which is in the opposite direction as the electric field, so $\theta=180^\circ$ and
 
-$\Phi_E^{4}=E_oA\cos 180^\circ=-E_oa^2$
+$\Phi_E^{4}=E_oA\cos 180^\circ=-E_oA$
 
 The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
 
-How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed is zero.
+How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed must be zero.
+
+\ifsolutions
+\else
+\newpage
+\fi
 
 <!--
 **Method II**
@@ -171,32 +201,29 @@ $\Phi_E^{5}=\bfvec{E}\cdot \bfvec{A}_5=\bfvec{E}\cdot A\hat{\mathbf{n}}_5=E_o\ha
 $\Phi_E^{6}=\bfvec{E}\cdot \bfvec{A}_6=\bfvec{E}\cdot A\hat{\mathbf{n}}_6=E_o\hat{\mathbf{k}}\cdot (-A\ihat)=-E_oA(\khat\cdot\ihat)=0$
 -->
 
-%\newpage
-
 ## Problem
 
 <img src="figures/Electric_Flux_Cube.svg"/>
 
 Find the flux through the six labeled faces of the cube with side area $A$ when the electric field of magnitude $E_o$ is everywhere in the $+y$ direction.
 
+\ifsolutions
 **Solution**
 
 $\Phi_E^1=0$ because $\bfvec{E}$ is perpendicular to $\hat{\mathbf{n}}_1$
 
-$\Phi_E^2=E_oa^2$ because $\bfvec{E}$ points in same direction as $\hat{\mathbf{n}}_2$
+$\Phi_E^2=E_oA$ because $\bfvec{E}$ points in same direction as $\hat{\mathbf{n}}_2$
 
 $\Phi_E^3=0$ because $\bfvec{E}$ is perpendicular to $\hat{\mathbf{n}}_3$
 
 $\Phi_E^4=0$ because $\bfvec{E}$ is perpendicular to $\hat{\mathbf{n}}_4$
 
-$\Phi_E^5=-E_oa^2$ because $\bfvec{E}$ points in the opposite direction of $\hat{\mathbf{n}}_5$
+$\Phi_E^5=-E_oA$ because $\bfvec{E}$ points in the opposite direction of $\hat{\mathbf{n}}_5$, which is in the $-y$ direction.
 
 $\Phi_E^6=0$ because $\bfvec{E}$ is perpendicular to $\hat{\mathbf{n}}_6$
-
-
+\else
 \newpage
-
-
+\fi
 
 ## Problem
 
@@ -204,24 +231,16 @@ $\Phi_E^6=0$ because $\bfvec{E}$ is perpendicular to $\hat{\mathbf{n}}_6$
 
 Find the flux through the six labeled faces of the cube with side length $a$ when the electric field is as shown in the diagram. Provide diagrams to justify your equations.
 
+\ifsolutions
 **Solution**
 
-The electric field is parallel to sides 1 and 6, so
-
-$\Phi_E^1=\Phi_E^6=0$
+The electric field is parallel to sides 1 and 6, so $\Phi_E^1=\Phi_E^6=0$.
 
 *Method I*
 
 <img src="figures/Electric_Flux_Cube_II_Solution_I.svg"/>
 
-$\Phi_E^2=E_oA\cos 60^\circ$
-
-$\Phi_E^3=E_oA\cos 30^\circ$
-
-$\Phi_E^4=E_oA\cos 150^\circ$
-
-$\Phi_E^5=E_oA\cos 120^\circ$
-
+$\Phi_E^2=E_oA\cos 60^\circ$, $\Phi_E^3=E_oA\cos 30^\circ$, $\Phi_E^4=E_oA\cos 150^\circ$, $\Phi_E^5=E_oA\cos 120^\circ$
 
 *Method II*
 
@@ -239,7 +258,7 @@ $\Phi_E^4=E_{\perp 4}A=-E_oA\cos 30^\circ$
 
 $\Phi_E^5=E_{\perp 5}A=-E_oA\sin 30^\circ$
 
-The negative signs in the last two equations were inserted based on the diagram which shows the electric field points into the volume. These answers are the same as from Method I becuase $\cos 120^\circ = -\cos 30^\circ$ and $\cos 120^\circ = -\sin 30^\circ$.
+The negative signs in the last two equations were inserted based on the diagram which shows the electric field points into the volume. These answers are the same as from Method I becuase $\cos 150^\circ = -\cos 30^\circ$ and $\cos 120^\circ = -\sin 30^\circ$.
 
 *Method III*
 
@@ -265,3 +284,4 @@ $$\Phi_E^5=\mathbf{E}\cdot \hat{\mathbf{n}}_5A=E_o(\sin 30^\circ\jhat+\cos 30^\c
 $$\Phi_E^6=\mathbf{E}\cdot \hat{\mathbf{n}}_6A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\ihat A) =  -E_oA(\jhat\cdot\ihat\sin 30^\circ+\khat\cdot\ihat\cos 30^\circ)=0$$
 
 Checks: The flux is positive for faces 2 and 3. This is consistent with the diagram because if electric field lines were drawn, they would emerge from the volume out of these faces. The flux is negative for faces 4 and 5. This is consistent with the diagram because if electric field lines were drawn, they would enter the volume.
+\fi

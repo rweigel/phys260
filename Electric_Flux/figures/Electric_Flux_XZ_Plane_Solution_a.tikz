@@ -5,21 +5,26 @@
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,194); %set diagram left start at 0, and has height of 194
 
-%Straight Lines [id:da6182124976756389] 
+%Straight Lines [id:da24015226796897138] 
 \draw    (70,118.27) -- (11.41,176.85) ;
 \draw [shift={(10,178.27)}, rotate = 315] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da054400357518730846] 
+%Straight Lines [id:da043885742210110434] 
 \draw    (70,118.27) -- (168,118.27) ;
 \draw [shift={(170,118.27)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da27428028993279274] 
+%Straight Lines [id:da45391014332910573] 
 \draw    (70,38.27) -- (70,16.47) ;
 \draw [shift={(70,14.47)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da8528491936420151] 
+%Straight Lines [id:da7578656361659522] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ]   (70,118.27) -- (70,38.27) ;
-%Straight Lines [id:da7680185255594141] 
+%Straight Lines [id:da490166639581469] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (70,118.27) -- (30,158.27) ;
-%Shape: Polygon [id:ds6468536533951954] 
+%Shape: Polygon [id:ds7921940636398519] 
 \draw  [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][fill={rgb, 255:red, 220; green, 220; blue, 220 }  ,fill opacity=1 ][dash pattern={on 1.69pt off 2.76pt}][line width=1.5]  (70,38) -- (70,118.27) -- (30,158.27) -- (30,78.27) -- cycle ;
+%Straight Lines [id:da6489051662652563] 
+\draw    (50,100) -- (97,100) ;
+\draw [shift={(100,100)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Right Angle [id:dp8055728240464062] 
+\draw   (49,90) -- (59,90) -- (59,100) ;
 
 % Text Node
 \draw (15,175.67) node [anchor=north west][inner sep=0.75pt]    {$x$};
@@ -27,6 +32,8 @@
 \draw (156,126.67) node [anchor=north west][inner sep=0.75pt]    {$y$};
 % Text Node
 \draw (75.25,12.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
+% Text Node
+\draw (104,72.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{\mathbf{A}}$};
 
 
 \end{tikzpicture}
