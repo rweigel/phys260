@@ -40,7 +40,7 @@ In a similar vein, I don't see the need to ask for charge in terms of sigma in p
 # Comments after
 
 rw
-1. Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.
+1. ✓ Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.
 
 2. Start problems with a density given.
 
@@ -73,6 +73,4 @@ My only other recommended change is in part 2, Line of Charge, it should be stat
 
 I found it very eye-opening that these "easy" Gauss problems required so much struggle from the students. I always feel that I have to give them a "hard" Gauss problem, eg. nested spheres, to make the problem non-trivial. Clearly these cases are non-trivial for the students. Thanks for developing this!  It was really worthwhile.
 
-In Part 7, it should be stated that r < L/2 (not r<L), so that the diameter is not larger than L. (A student caught that one!)
- 
-
+In Part 7, it should be stated that $r < L/2$ (not $r<L$), so that the diameter is not larger than $L$. (A student caught that one!)

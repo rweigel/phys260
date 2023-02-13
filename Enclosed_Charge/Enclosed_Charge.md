@@ -4,9 +4,29 @@ title: Enclosed Charge
 
 # Overview
 
-When using Gauss’s law, one must draw an imaginary volume in space and compute how much charge is inside the volume.
+When using Gauss’s law, one must draw an imaginary volume in space and compute how much charge is inside the volume. Note that "charge enclosed" and "charge inside" are used interchangeably. 
 
 In general, an imaginary volume is chosen is one for which computation of the electric flux is easy. That is, the imaginary volume will be such that the electric field is either parallel or perpendicular to all parts of the surface. In this activity, you are given the Gaussian volume. However, you should understand the reason for the choice of each Gaussian volume given.
+
+# Densities
+
+There are three types of charge densities, linear ($\lambda$), surface ($\sigma$), and volume ($\rho$).
+
+Given a $Q$, and assuming $Q$ is uniformly distributed on (or within for a volume) an object, to find 
+
+* $\lambda$, divide $Q$ by the length over which the charge is spread;
+* $\sigma$, divide $Q$ by the area over which the charge is spread; and
+* $\rho$, divide $Q$ by the volume over which the charge is spread.
+
+To find $Q$ given a charge density, multiply the charge density by the relevant length, area, or volume.
+
+Key formulas:
+
+* $4\pi R^2$ -- surface area of sphere of radius $R$
+* $2\pi R h$ -- surface area of curved part of cylinder of radius $R$ and height $h$
+* $\pi R^2$ -- surface area of cap of cylinder of radius $R$
+* $\pi R^2$ -- volume of cylinder cylinder of radius $R$ and height $h$: $\pi R^2 h
+* $4\pi R^3/3$ -- volume of sphere of radius $R$
 
 # Line of Charge
 

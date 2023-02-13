@@ -71,11 +71,13 @@ Any of these equations can be used, and students are encouraged to use the one t
 
    a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=E_oA\cos 90^\circ = 0$
 
-   b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=0^\circ\qquad\qquad\Phi_E==E_oA\cos 0^\circ=E_oA$ 
+   b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=0^\circ\qquad\qquad\Phi_E=E_oA\cos 0^\circ=E_oA$ 
 
    c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=E_oA\cos 90^\circ=0$ 
 
    d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=45^\circ\qquad\qquad\Phi_E=E_o A\cos 45^\circ=E_oA/\sqrt{2}$
+   
+      Note that $\Phi_E=EA\cos\theta$ and so in d. we need the magnitude $E = |\bfvec{E}| = \sqrt{(E_o/\sqrt{2})^2+(E_o/\sqrt{2})^2)}=E_o$.
    \else
    <img src="figures/Electric_Flux_xz_Plane_Sketch.svg"/>
 
@@ -112,9 +114,7 @@ b. $\quad\ds\bfvec{E}=E_o\jhat\quad\theta=\phi=45^\circ\quad\Phi_E=E_oA\cos 45^\
 
 c. $\quad\ds\bfvec{E}=E_o\khat\quad\theta=90^\circ\quad\Phi_E=E_oA\cos 90^\circ=0$ 
 
-d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\quad\theta=45^\circ-\phi=0^\circ\quad\Phi_E=E_oA\cos 0^\circ=E_oA$
-
-(Can you derive the general relationship $\theta=45^\circ-\phi$ for part d.?)
+d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\quad\theta=90^\circ\quad\Phi_E=E_oA\cos 90^\circ=0$
 
 \else
 
