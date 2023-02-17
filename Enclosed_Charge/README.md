@@ -46,7 +46,7 @@ rw
 
 3. Move two cylinder problems to the end. They appear in the more difficult Gauss' law problems, and students got stuck. I had to stop them and give answers so they had time for the other problems. (Even after my explanation and the answers, I noticed students still trying to answer them.) Add a discussion for the cylindrical shell problem about how it can be solved given a linear or surface charge density. The solid cylinder problem could be solved given a linear or volume charge density, but I don't recall ever seeing a problem where its linear density was given.
 
-4. Add to the notes a definition of linear, surface, and volume charge density when the charge is uniformly distributed. I'm reluctant to give formulas for areas and volumes because it lets them think they don't need to know it without reference.
+4. ✓ Add to the notes a definition of linear, surface, and volume charge density when the charge is uniformly distributed. I'm reluctant to give formulas for areas and volumes because it lets them think they don't need to know it without reference.
 
 5. Students who had difficulty plotting the curve also had difficulty in writing down the value at various points. I'm not sure what to do about that. There could be a sentence that says "if the formula does not depend on r, ...". But the students who didn't realize this understood so little that I'm not sure it will help.
 
