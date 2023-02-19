@@ -22,11 +22,42 @@ To find $Q$ given a charge density, multiply the charge density by the relevant 
 
 Key formulas:
 
+* $2\pi R$ -- circumference of a circle
 * $4\pi R^2$ -- surface area of sphere of radius $R$
 * $2\pi R h$ -- surface area of curved part of cylinder of radius $R$ and height $h$
 * $\pi R^2$ -- surface area of cap of cylinder of radius $R$
 * $\pi R^2$ -- volume of cylinder cylinder of radius $R$ and height $h$: $\pi R^2 h
 * $4\pi R^3/3$ -- volume of sphere of radius $R$
+
+## Examples
+
+1. A total charge of $Q$ is uniformly distributed on a wire of negligible thickness that forms a circle of radius $R$. What is the charge density?
+
+   **Answer** The appropriate type of density is a linear charge density, because the charge is effectively distributed along a line. $\lambda=Q/2\pi R$.
+
+2. A total charge of $Q$ is uniformly distributed on the curved part of a cylinder of radius $R$ and height $h$. What is the surface charge density?
+
+  **Answer**: The surface charge density of the curved part is $Q$ divided by the area over which the charge is distributed, which is $\pi R^2 h$.
+
+\newpage
+
+## Problems
+
+1. A total charge of $Q$ is uniformly distributed on the two end caps of a closed cylinder of radius $R$ and height $h$. What is the surface charge density?
+
+   \ifsolutions
+   **Answer**: $\sigma = Q/ (2 \pi R^2)$ (The factor of $2$ because there are two caps, each of area $\pi R^2$.)
+   \else
+   \vspace{1in}
+   \fi
+
+2. A total charge of $Q$ is uniformly distributed on the surface of a sphere of radius $R$. What is the surface charge density?
+
+   \ifsolutions
+   **Answer**: $\sigma = Q/ (4 \pi R^2)$
+   \else
+   \vspace{1in}
+   \fi
 
 # Line of Charge
 
@@ -54,11 +85,11 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
     <div style="height:3em"/>
    </div>
 
-3. Use your equation from 2. to find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=h/100$, $r=h/2$, $r=h$, and $r=2h$.
+3. Use your equation from 2. to find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=L/100$, $r=L/2$, $r=L$, and $r=2L$.
 
    <div class="solutionstrue">
    {\bf Answer}: $Q_{\text{encl}}=\lambda h$ for all four cases.
-   </div>  
+   </div>
 
    <div class="solutionsfalse"> 
       <div style="height:3em"/>
@@ -76,115 +107,6 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
    \newpage
    </div>
 
-# Cylindrical Shell
-
-A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $+3Q$ uniformly distributed _on its curved surface_. The Gaussian cylinder shown has a length $h$, radius $r$, and the same center line as the charged cylinder.
-
-<img src="figures/Hollow_Cylinder.svg"/>
-
-1. Find the linear charge density, $\lambda$, of the charged cylinder.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}: The linear charge density is the total charge divided by the length over which the charge is distributed: $\lambda={3Q}/{H}$.
-
-   {\bf Note}: The charges are distributed on a surface, so it may seem more natural to use a surface charge density, which is $\sigma = 3Q/(2\pi R H)$, where the denominator is the surface area of the curved part of the charged cylinder. In this case, the answer to 2. does not change and the answer to 3. is $Q_{\text{encl}} = \sigma 2\pi R h$ instead of $Q_{\text{encl}}=\lambda h$. We use charge per length in this problem because the formula for $Q_{\text{encl}}$ is simpler.
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-2. Find an equation for $Q_{\text{encl}}$ for $r<R$.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}: If the Gaussian cylinder is fully inside the hollow cylinder, there would be no charge inside of it. As a result, the charge enclosed for $r< R$ is zero: $Q_{\text{encl}}=0$.
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-3. Find an equation for $Q_{\text{encl}}$ for $r>R$. Your equation should involve $\lambda$ and one or more of $h$, $r$, and $R$.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}: The amount of charge enclosed is the charge per unit length $\times h = \lambda h$, so  $Q_{\text{encl}}=\lambda h$. (The amount of charge enclosed does not depend on $r$.)
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-4. Find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=0$, $r=R/2$, $r=2R$, and $r=3R$.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}: $0, 0, \lambda h, \lambda h$
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
-
-   <div class="solutionstrue"> 
-      <img src="figures/Hollow_Cylinder_Graph.svg"/>
-   </div>
-
-\newpage
-
-# Solid Cylinder
-
-A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of $+3Q$ uniformly distributed _throughout it_. The Gaussian cylinder has length $h$, radius $r$, and the same center line as the charged cylinder.
-
-<img src="figures/Solid_Cylinder.svg"/>
-
-1. Find the volume charge density, $\rho$, of the charged cylinder.
-
-   <div class="solutionstrue"> 
-   {\bf Answer:} The volume, $V$, of the charged cylinder is its cross-sectional area, $\pi R^2$, times its height, $H$: $V=\pi R^2 H$. The volume charge density is charge/volume: $\rho=3Q/(\pi R^2 H)$.
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-2. Find an equation for $Q_{\text{encl}}$ for $r\le R$. Your equation should involve $\rho$ and one or more of $h$, $r$, and $R$.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}: When $r<R$, the Gaussian cylinder is entirely inside the charged cylinder. The charge in the Gaussian cylinder is the charge density of the charged cylinder times the volume of _the Gaussian cylinder_: $Q_{\text{encl}}(r)=\rho \pi r^2 h$.
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-3. Find an equation for $Q_{\text{encl}}$ for $r\ge R$. Your equation should involve $\rho$ and one or more of $h$, $r$, and $R$.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}: For any $r\ge R$, $Q_{\text{encl}}=\rho \pi R^2 h$, which is independent of $r$. 
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-2. Find the amount of charge enclosed in a Gaussian cylinder of radius $r=0$, $r=R/2$, $r=R$, and $r=2R$.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}:  $0, \rho\pi R^2 h/4, \rho \pi R^2 h, \rho \pi R^2 h$
-   </div>
-
-   <div class="solutionsfalse"> 
-      <div style="height:3em"/>
-   </div>
-
-3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
-
-   <div class="solutionstrue"> 
-   {\bf Answer}:
-
-    <img src="figures/Solid_Cylinder_Graph.svg"/>
-   </div>
 
 \newpage
 
@@ -314,7 +236,7 @@ A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distri
       <div style="height:3em"/>
    </div>
 
-2. Find an equation for $Q_{\text{encl}}$ for $r<L$. Your answer should involve $\sigma$ and one or more of $r$, $h$, and $L$. (In Gauss's law problems, $L$ is much larger than $r$, so we do not need to consider $r > L$.)
+2. Find an equation for $Q_{\text{encl}}$ for $r<L/2$. Your answer should involve $\sigma$ and one or more of $r$, $h$, and $L$. (In Gauss's law problems, $L$ is much larger than $r$, so we do not need to consider $r > L/2$.)
 
    <div class="solutionstrue"> 
    {\bf Answer}: $Q_{\text{encl}}=\sigma \pi r^2$.
@@ -328,4 +250,116 @@ A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distri
 
    <div class="solutionstrue"> 
       <img src="figures/Sheet_Graph.svg"/>
+   </div>
+
+\newpage
+
+# Cylindrical Shell
+
+A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $+3Q$ uniformly distributed _on its curved surface_. The Gaussian cylinder shown has a length $h$, radius $r$, and the same center line as the charged cylinder.
+
+<img src="figures/Hollow_Cylinder.svg"/>
+
+1. Find the linear charge density, $\lambda$, of the charged cylinder.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}: The linear charge density is the total charge divided by the length over which the charge is distributed: $\lambda={3Q}/{H}$.
+
+   {\bf Note}: The charges are distributed on a surface, so it may seem more natural to use a surface charge density, which is $\sigma = 3Q/(2\pi R H)$, where the denominator is the surface area of the curved part of the charged cylinder. In this case, the answer to 2. does not change and the answer to 3. is $Q_{\text{encl}} = \sigma 2\pi R h$ instead of $Q_{\text{encl}}=\lambda h$. We use charge per length in this problem because the formula for $Q_{\text{encl}}$ is simpler.
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+2. Find an equation for $Q_{\text{encl}}$ for $r<R$.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}: If the Gaussian cylinder is fully inside the hollow cylinder, there would be no charge inside of it. As a result, the charge enclosed for $r< R$ is zero: $Q_{\text{encl}}=0$.
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+3. Find an equation for $Q_{\text{encl}}$ for $r>R$. Your equation should involve $\lambda$ and one or more of $h$, $r$, and $R$.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}: The amount of charge enclosed is the charge per unit length $\times h = \lambda h$, so  $Q_{\text{encl}}=\lambda h$. (The amount of charge enclosed does not depend on $r$.)
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+4. Find the amount of charge enclosed by the Gaussian cylinder when it has radii of $r=0$, $r=R/2$, $r=2R$, and $r=3R$.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}: $0, 0, \lambda h, \lambda h$
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
+
+   <div class="solutionstrue"> 
+      <img src="figures/Hollow_Cylinder_Graph.svg"/>
+   </div>
+
+\newpage
+
+# Solid Cylinder
+
+A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of $+3Q$ uniformly distributed _throughout it_. The Gaussian cylinder has length $h$, radius $r$, and the same center line as the charged cylinder.
+
+<img src="figures/Solid_Cylinder.svg"/>
+
+1. Find the volume charge density, $\rho$, of the charged cylinder.
+
+   <div class="solutionstrue"> 
+   {\bf Answer:} The volume, $V$, of the charged cylinder is its cross-sectional area, $\pi R^2$, times its height, $H$: $V=\pi R^2 H$. The volume charge density is charge/volume: $\rho=3Q/(\pi R^2 H)$.
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+2. Find an equation for $Q_{\text{encl}}$ for $r\le R$. Your equation should involve $\rho$ and one or more of $h$, $r$, and $R$.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}: When $r<R$, the Gaussian cylinder is entirely inside the charged cylinder. The charge in the Gaussian cylinder is the charge density of the charged cylinder times the volume of _the Gaussian cylinder_: $Q_{\text{encl}}(r)=\rho \pi r^2 h$.
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+3. Find an equation for $Q_{\text{encl}}$ for $r\ge R$. Your equation should involve $\rho$ and one or more of $h$, $r$, and $R$.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}: For any $r\ge R$, $Q_{\text{encl}}=\rho \pi R^2 h$, which is independent of $r$. 
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+2. Find the amount of charge enclosed in a Gaussian cylinder of radius $r=0$, $r=R/2$, $r=R$, and $r=2R$.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}:  $0, \rho\pi R^2 h/4, \rho \pi R^2 h, \rho \pi R^2 h$
+   </div>
+
+   <div class="solutionsfalse"> 
+      <div style="height:3em"/>
+   </div>
+
+3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
+
+   <div class="solutionstrue"> 
+   {\bf Answer}:
+
+    <img src="figures/Solid_Cylinder_Graph.svg"/>
    </div>

@@ -42,19 +42,19 @@ In a similar vein, I don't see the need to ask for charge in terms of sigma in p
 rw
 1. ✓ Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.
 
-2. Start problems with a density given.
+2. ✗ Start problems with a density given. (*Will do in next revision*.)
 
 3. Move two cylinder problems to the end. They appear in the more difficult Gauss' law problems, and students got stuck. I had to stop them and give answers so they had time for the other problems. (Even after my explanation and the answers, I noticed students still trying to answer them.) Add a discussion for the cylindrical shell problem about how it can be solved given a linear or surface charge density. The solid cylinder problem could be solved given a linear or volume charge density, but I don't recall ever seeing a problem where its linear density was given.
 
 4. ✓ Add to the notes a definition of linear, surface, and volume charge density when the charge is uniformly distributed. I'm reluctant to give formulas for areas and volumes because it lets them think they don't need to know it without reference.
 
-5. Students who had difficulty plotting the curve also had difficulty in writing down the value at various points. I'm not sure what to do about that. There could be a sentence that says "if the formula does not depend on r, ...". But the students who didn't realize this understood so little that I'm not sure it will help.
+5. Students who had difficulty plotting the curve also had difficulty in writing down the value at various points. I'm not sure what to do about that. There could be a sentence that says "if the formula does not depend on $r$, ...". But the students who didn't realize this understood so little that I'm not sure it will help.
 
 6. Add a question after the spherical shell and solid sphere problem that states "if the total charge is Q in both cases, is Q_enclosed for r>R the same?" Ideally, there would be a follow-up that makes the point that if Q is uniformly distributed on a shell, thick shell, solid sphere, or on an infinitesimal sphere, E will be the same outside. I'm still trying to think about how to address the issue about this you raised earlier.
 
 7. I may add a question at the end that gives a non-uniform density for a solid sphere to make the point that the total charge/ total length, total charge/total area, and total charge/total volume formulas only work apply if the charge is uniformly distributed. Probably I'll give the integral formula for Q and show it gives the correct result for constant rho and then ask them to use it for rho that depends on r.
 
-8. State that "charge enclosed" means the same thing as "charge inside of"
+8. ✓ State that "charge enclosed" means the same thing as "charge inside of"
 
 9. Some students were tripped up by the fact that I switched from having the Gaussian volume larger than the charged object for the cylinder problems to smaller for the sphere problems. I had not noticed it. I'm not sure if it is something to leave as-is, so they get in the habit of reading the problem statement, or to change so they don't get tripped up (because there is already enough to get tripped up on when trying the first time).
 
@@ -69,8 +69,8 @@ I thought it went really well in my classes and I liked the progression of the p
 
 I agree that the idea of doing a cylindrical shape in terms of surface charge density OR linear charge density is confusing to them and requires some discussion, especially because the book problems mostly use linear density. (Personally, I would just stick with surface charge density to avoid the confusion.) Not sure what to do about that because it would make it even longer.
 
-My only other recommended change is in part 2, Line of Charge, it should be stated as r= L/100, etc, rather than h/100. I had a lot of groups that thought r= h/100 meant that h=100r and therefore changed when we changed the radius. Putting it in terms of L (the way the others are in terms of the physical radius, R) should help with that.
+✓ My only other recommended change is in part 2, Line of Charge, it should be stated as r= L/100, etc, rather than h/100. I had a lot of groups that thought r= h/100 meant that h=100r and therefore changed when we changed the radius. Putting it in terms of L (the way the others are in terms of the physical radius, R) should help with that.
 
 I found it very eye-opening that these "easy" Gauss problems required so much struggle from the students. I always feel that I have to give them a "hard" Gauss problem, eg. nested spheres, to make the problem non-trivial. Clearly these cases are non-trivial for the students. Thanks for developing this!  It was really worthwhile.
 
-In Part 7, it should be stated that $r < L/2$ (not $r<L$), so that the diameter is not larger than $L$. (A student caught that one!)
+✓ In Part 7, it should be stated that $r < L/2$ (not $r<L$), so that the diameter is not larger than $L$. (A student caught that one!)
