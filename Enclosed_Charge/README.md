@@ -65,9 +65,11 @@ About 1/4 of the students required a significant amount of explanation for why a
 ----
 ro
 
-I thought it went really well in my classes and I liked the progression of the problems as is. I edited my version to ask for answers in terms of Q in the last step (while keeping it in terms of density in the previous steps). See attached.
+I thought it went really well in my classes and I liked the progression of the problems as is.
 
-I agree that the idea of doing a cylindrical shape in terms of surface charge density OR linear charge density is confusing to them and requires some discussion, especially because the book problems mostly use linear density. (Personally, I would just stick with surface charge density to avoid the confusion.) Not sure what to do about that because it would make it even longer.
+**TODO** I edited my version to ask for answers in terms of Q in the last step (while keeping it in terms of density in the previous steps). See attached.
+
+**TODO** I agree that the idea of doing a cylindrical shape in terms of surface charge density OR linear charge density is confusing to them and requires some discussion, especially because the book problems mostly use linear density. (Personally, I would just stick with surface charge density to avoid the confusion.) Not sure what to do about that because it would make it even longer.
 
 ✓ My only other recommended change is in part 2, Line of Charge, it should be stated as r= L/100, etc, rather than h/100. I had a lot of groups that thought r= h/100 meant that h=100r and therefore changed when we changed the radius. Putting it in terms of L (the way the others are in terms of the physical radius, R) should help with that.
 

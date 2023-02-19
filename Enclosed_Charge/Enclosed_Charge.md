@@ -35,9 +35,9 @@ Key formulas:
 
    **Answer** The appropriate type of density is a linear charge density, because the charge is effectively distributed along a line. $\lambda=Q/2\pi R$.
 
-2. A total charge of $Q$ is uniformly distributed on the curved part of a cylinder of radius $R$ and height $h$. What is the surface charge density?
+2. A total charge of $Q$ is uniformly distributed on only the curved part of a cylinder of radius $R$ and height $h$. What is the surface charge density?
 
-  **Answer**: The surface charge density of the curved part is $Q$ divided by the area over which the charge is distributed, which is $\pi R^2 h$.
+  **Answer**: The surface charge density of the curved part is $Q$ divided by the area over which the charge is distributed, which is $\pi R^2 h$: $\sigma=Q/(\pi R^2 h)$.
 
 \newpage
 
@@ -106,9 +106,6 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
    <div class="solutionsfalse"> 
    \newpage
    </div>
-
-
-\newpage
 
 # Spherical Shell
 
