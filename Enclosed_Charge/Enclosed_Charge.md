@@ -26,7 +26,7 @@ Key formulas:
 * $4\pi R^2$ -- surface area of sphere of radius $R$
 * $2\pi R h$ -- surface area of curved part of cylinder of radius $R$ and height $h$
 * $\pi R^2$ -- surface area of cap of cylinder of radius $R$
-* $\pi R^2$ -- volume of cylinder cylinder of radius $R$ and height $h$: $\pi R^2 h
+* $\pi R^2h$ -- volume of cylinder cylinder of radius $R$ and height $h$
 * $4\pi R^3/3$ -- volume of sphere of radius $R$
 
 ## Examples
@@ -37,7 +37,7 @@ Key formulas:
 
 2. A total charge of $Q$ is uniformly distributed on only the curved part of a cylinder of radius $R$ and height $h$. What is the surface charge density?
 
-  **Answer**: The surface charge density of the curved part is $Q$ divided by the area over which the charge is distributed, which is $\pi R^2 h$: $\sigma=Q/(\pi R^2 h)$.
+  **Answer**: The surface charge density of the curved part is $Q$ divided by the area over which the charge is distributed, which is $2\pi R h$: $\sigma=Q/(2\pi R  h)$.
 
 \newpage
 
@@ -95,7 +95,7 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
       <div style="height:3em"/>
    </div>
 
-4. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equation found in part 2. as a smooth line.
+4. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equation found in part 2. as one or more smooth curves or lines.
 
    <div class="solutionstrue">
    {\bf Answer:}
@@ -153,7 +153,7 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly 
       <div style="height:3em"/>
    </div>
 
-5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as a smooth line.
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
    {\bf Answer}: 
@@ -209,7 +209,7 @@ A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniform
       <div style="height:3em"/>
    </div>
 
-5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as a smooth line.
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
       <img src="figures/Solid_Sphere_Graph.svg"/>
@@ -223,7 +223,7 @@ A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniform
 
 A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distributed uniformly on it. The Gaussian cylinder has a height $h$ and radius $r$, and half of it is above the sheet.
 
-1. Find the surface charge density, $\sigma$, on the sheet.
+1. Find the surface charge density, $\sigma$, of the sheet.
 
    <div class="solutionstrue"> 
    {\bf Answer}: $\sigma=3Q/L^2$
@@ -239,7 +239,7 @@ A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distri
    {\bf Answer}: $Q_{\text{encl}}=\sigma \pi r^2$.
    </div>
 
-   <div class="solutionsfalse"> 
+   <div class="solutionsfalse">
       <div style="height:3em"/>
    </div>
 
@@ -299,7 +299,7 @@ A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $
       <div style="height:3em"/>
    </div>
 
-5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
       <img src="figures/Hollow_Cylinder_Graph.svg"/>
@@ -353,7 +353,7 @@ A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of 
       <div style="height:3em"/>
    </div>
 
-3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as a smooth line.
+3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
    {\bf Answer}:
