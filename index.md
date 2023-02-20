@@ -78,7 +78,7 @@ Computing the electric field due to one and three point charges.
 ## Enclosed Charge
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md) 
-* Documents: | [pdf](Enclosed_Charge/Enclosed_Charge.pdf) | [pdf solns](Capacitance/Enclosed_Charge-solutions.pdf) |
+* Documents: | [pdf](Enclosed_Charge/Enclosed_Charge.pdf) | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf) |
 * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge) | [Markdown](Enclosed_Charge/Enclosed_Charge.md) | 
 
 ## Electric Potential
