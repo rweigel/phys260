@@ -1,5 +1,7 @@
 
-# Email
+# F2022
+
+## Email
 
 In the directory Enclosed_Charge at https://www.overleaf.com/read/btssfxsjgyzr, there is an activity that I plan on using Monday (pdfs attached). If you want to make edits, the .tex version has a switch at the top to hide the solutions.
 
@@ -21,9 +23,9 @@ I plan on spending 10 minutes doing one of the problems with the addition of doi
 
 Bob
 
-# Comments Before
+## Comments before
 
-ro -> rw
+ro
 
 I always emphasize to students that final results should be in terms of the "given" variables of the problem when it is an algebraic problem. So, I would like to see questions 4. and 5. of each section ask explicitly for answers in terms of Q, not lambda or rho or sigma. I see the reason for doing it in terms of density in the earlier parts, but I think at some point they need to plug in the "givens": R, H, etc.
 
@@ -37,9 +39,10 @@ In a similar vein, I don't see the need to ask for charge in terms of sigma in p
 >
 >I'll put this discussion in my notes for consideration for revision next time. These are all good points that ideally should be addressed.
 
-# Comments after
+## Comments after
 
 rw
+
 1. ✓ Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.
 
 2. ✗ Start problems with a density given. (*Will do in next revision*.)
@@ -63,6 +66,7 @@ rw
 About 1/4 of the students required a significant amount of explanation for why a small sphere inside of a shell has no charge inside of it. I tried about four different explanations ... the only one that seemed to work is "if your hair is charge and I put a marble inside your skull, how much hair is inside the marble?". Probably I should bring visual aids next time, especially for the charged cylindrical shell, which stumped even more students.
 
 ----
+
 ro
 
 I thought it went really well in my classes and I liked the progression of the problems as is.
@@ -76,3 +80,23 @@ I thought it went really well in my classes and I liked the progression of the p
 I found it very eye-opening that these "easy" Gauss problems required so much struggle from the students. I always feel that I have to give them a "hard" Gauss problem, eg. nested spheres, to make the problem non-trivial. Clearly these cases are non-trivial for the students. Thanks for developing this!  It was really worthwhile.
 
 ✓ In Part 7, it should be stated that $r < L/2$ (not $r<L$), so that the diameter is not larger than $L$. (A student caught that one!)
+
+# S2023
+
+## Comments after
+
+ro
+
+I like this activity, but students mostly did not have time to finish it. How far they got varied a lot, which I think is fine as long as we are not grading on completion. 
+
+There was a lot of confusion over 3.3 that asked them to find the value of Q_enc for different values of r. Nearly everyone tried to make their answer somehow a function of r (by replacing L by 100r or something), rather than think about how changing r would make a difference. I think 3 and 4 should be replaced by a simple question like "Does Q_enc depend on the radius of the Gaussian cylinder? Explain why or why not." 
+
+> Good idea. I had that same problem.
+
+Many students started doing the solid sphere instead of the shell in section 4. I'm not sure how to make it easier for them to see that Q_enc is either all or nothing. Maybe have two diagrams, one with the Gaussian surface inside the shell and one with it out? Generally, though, I think it's OK for them to have to go through the process of realizing that a shell is different from a solid sphere, even if it requires help from us. (It's also a good lesson in reading the problem carefully!)
+
+> At the start of class, I explained the answer to this problem and still got many questions! In my notes to myself for the future, I will suggest bringing in some visual aid. Apparently, a 2-D diagram on the board is not enough.
+ 
+Some were confused in section 4 by the instruction to plot their points as a "smooth line," because the actual plot has a jump discontinuity. Let's delete "smooth". 
+
+> Agreed. I think I added that due to some with the previous wording that said effectively "plot y vs x." I should probably add an example showing the point of drawing a few dots first to get a feel for how the curve will look. It is clear that students are not used to sketching curves.
