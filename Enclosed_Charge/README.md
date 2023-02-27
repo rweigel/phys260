@@ -85,6 +85,10 @@ I found it very eye-opening that these "easy" Gauss problems required so much st
 
 ## Comments after
 
+rw
+
+Grid does not show up when photocopied
+
 ro
 
 I like this activity, but students mostly did not have time to finish it. How far they got varied a lot, which I think is fine as long as we are not grading on completion. 
