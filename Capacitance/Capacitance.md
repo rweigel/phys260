@@ -95,7 +95,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
    \vspace{3em}
    \fi
 
-4. Use your answer to 3. to find the capacitance in terms of $k$, $A$, and $d$.
+4. Use your answer to 3. to find the capacitance in terms of $\epsilon_o$, $A$, and $d$.
 
    \ifsolutions
    {\bf Answer}:
@@ -173,7 +173,7 @@ Draw the Gaussian surfaces you use to answer this question on the diagram above 
    \vspace{4em}
    \fi
 
-6. Find the capacitance in terms of $k$, $a$, and $b$.
+6. Find the capacitance in terms of $\epsilon_o$, $a$, and $b$.
 
    \ifsolutions
    **Answer**: $\displaystyle C=\frac{Q}{V(b)-V(a)} = \frac{4\pi\epsilon_o}{\frac{1}{a}-\frac{1}{b}}$
