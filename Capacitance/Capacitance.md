@@ -22,7 +22,7 @@ The general technique for computing capacitance when Gauss's law applies is:
 
 **Electric Potential Energy and Electric Potential**
 
-The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force due to a static electric field, we define potential energy $U$ according to
+The general formula for work is $\ds W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force due to a static electric field, we define potential energy $U$ according to
 
 $\Delta U = U(b)-U(a) \equiv -W_{a\rightarrow b}$
 

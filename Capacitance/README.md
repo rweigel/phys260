@@ -21,3 +21,23 @@ At least three students did not know how to evaluate $\int_0^d (\sigma/\epsilon_
 Based on the results this week, this activity should be revised so that students can make more progress.
 
 ----
+
+# Spring, 2023
+
+## Email
+
+I've attached an activity on capacitance. My notes from last time make it clear that this activity is far too ambitious. If I have time on the weekend, I'll break up the first problem into two parts. Even then, I'm concerned that they have not done the activity where they integrate both a constant electric field and a 1/r^2 field, and so they'll have even more trouble with the V(b)-V(a) formula. I may change it so the formulas for V(b)-V(a) are given in the introduction for those two fields. Based on what I say below, few understand the dot product integral.
+
+## Feedback
+
+ro
+
+I was surprised how much difficulty students had with the capacitance tutorial, as I'm sure this was covered in lecture. Those who got to the spherical capacitor had no idea how to use a Gaussian surface to "prove" the things asked for. If they did answer, most of them didn't even try to draw the Gaussian surface, and those who did mostly messed it up or had unclear drawings. I would suggest we provide a drawing for them to work with, and that it have thicker conductors, to make it easier to show the Gaussian surface inside the conductor. 
+
+Many of them didn't even get to that part. 
+
+A minor point: question 4 of section 2 should ask for the answer in terms of epsilon_0, not k. 
+
+I think we need to expand section 3 to give them more guidance. Just asking for a proof leaves them stumped. 
+
+This might mean skipping section 2, because I don't think they have time to do both. 
