@@ -117,6 +117,8 @@ Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circui
 4. Use the three equations found above to solve for the three unknowns, $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$.
 
    \ifsolutions
+   **Answer**:
+
    Eqn 1: $+\mathcal{E}-I_1R-I_3R=0$
 
    Eqn 2: $I_3R-I_2R=0$
