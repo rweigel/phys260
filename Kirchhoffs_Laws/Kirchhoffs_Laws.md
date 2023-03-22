@@ -1,10 +1,10 @@
 ```mdextension
-Title: Kirchoff's Circuit Laws
+Title: Kirchhoff's Circuit Laws
 ```
 
 # Introduction
 
-To find the current through each resistor in a circuit with only batteries and resistors, Kirchhoff’s Current Law and Kirchhoff’s Voltage Rule can be used.
+To find the current through each resistor in a circuit with only batteries and resistors, Kirchhoff’s Current Law and Kirchhoff’s Voltage Law can be used.
 
 1. Kirchhoff’s Voltage Law (KVL): The sum of all voltage changes around a closed loop is zero. 
 2. Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.
@@ -74,10 +74,10 @@ Only KVL is needed to find the current in a single-loop circuit.
    \vspace{3em}
    \fi
 
-5. For the circuit considered above, if you removed the bottom resistor and replaced the top resistor with a resistor with resistance $2R$, the following circuit results. What is the current $I$ for this circuit?
+5. For the first circuit considered above, if you removed the bottom resistor and replaced the top resistor with a resistor with resistance $2R$, the following circuit results. What is the current $I$ for this circuit?
 
    \ifsolutions
-   **Answer**: $I=\mathcal{E}/2R$ in counterclockwise direction.
+   **Answer**: $I=\mathcal{E}/2R$ in counterclockwise direction. The fact that the answer here is the same as in 1. is related to the formula for the equivalent resistance of resistors in series.
    \else
    <img src="figures/Single_Loop_Equiv.svg" height="130px">
    \fi
@@ -101,7 +101,7 @@ Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circui
 2. Write the equation for KVL for loop B.
 
    \ifsolutions
-   **Answer**: $I_3R-I_2R=0$
+   **Answer**: $I_3R-I_2R=0$. A common error is to attempt to include $\mathcal{E}$ in this equation. When using KVL, the only elements that appear in the equation are elements that are stepped across when going around the chosen loop.
    \else
    \vspace{3em}
    \fi
@@ -134,6 +134,7 @@ Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circui
 5. Check your answers by plugging your values for $I_1$, $I_2$, and $I_3$ into the equations that you wrote for parts 1.-3.
 
    \ifsolutions
+   **Comment**: This is an important step. Sign errors in KVL and KCL are common as are algebraic errors, and this check will determine if you made an error.
    \else
    \vspace{3em}
    \fi
@@ -185,7 +186,13 @@ When solving circuit problems with multiple loops, you will generally find that 
    \vspace{3em}
    \fi
  
-4. attempt to use the above three equations to solve for $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$.
+4. Is it possible to use the above three equations to solve for $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$? If yes, do it. If no, explain why.
+
+   \ifsolutions
+   **Answer**: No. The equation for node X can be turned into the equation for node Y by multiplying all terms in either equation by $-1$. Thus, the equations are not independent. Given that three independent equations are needed to solve for three unknowns, a solution is not possible with the equations requested in parts 1.--3.
+   \else
+   \vspace{3em}
+   \fi
 
 \newpage
 

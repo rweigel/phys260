@@ -363,12 +363,6 @@
       border-radius: 0.5em;
     }
 
-    .solutionsfalse {
-      display: none;
-    }
-
-    .solutionstrue {}
-
     .inline {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -397,6 +391,21 @@
       margin: 0em;
     }
 
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
     @media print {
       * {
         overflow: visible !important;
@@ -404,25 +413,20 @@
 
       @page {
         size: auto;
-        margin: 0.75in;
+        margin: 0.5in 0.75in 0.75in;
       }
 
       .katex .hide-tail {
         overflow: hidden !important;
       }
 
+      .page-break {
+        border-top: none;
+      }
+
       .body {
         display: inline;
         position: relative;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        break-before: page;
       }
 
       h1,
@@ -504,7 +508,6 @@
   </style>
   <script>
     function tocClickListen() {
-      // No jQuery b/c also used in stand-alone HTML.
       let hs = document.querySelectorAll('#toc > ol ol');
       let el, ns;
       for (let i = 0; i < hs.length; i++) {
@@ -516,12 +519,11 @@
           el.addEventListener('click', event => {
             ns = event.target.parentNode.nextElementSibling;
             if (!ns) return;
-            if (nsns.style.display === 'none') {
+            if (ns.style.display === 'none') {
     ns.style.display = 'block';
-            }
-            else {
-    ns.style.display = 'none';
-            }
+            } else
+            {
+    ns.style.display = 'none';}
           });
         }
       }
@@ -539,11 +541,41 @@
 </head>
 
 <body class="body">
-  <div id="toc" style="display: none;"></div>
+  <div id="toc" style="display: block; min-width: 5em;">
+    <ol>
+      <li>
+        <a href="#2022-fall" raw="# 2022 Fall" lo="1">
+          <span class="toctext">2022 Fall</span>
+        </a>
+      </li>
+      <li>
+        <a href="#2023-spring" raw="# 2023 Spring" lo="5" class="highlighted">
+          <span class="toctext">2023 Spring</span>
+        </a>
+      </li>
+    </ol>
+  </div>
   <div id="display">
     <div class="section">
+    </div>
+    <div class="section">
       <div class="block">
-        <p class="">rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.</p>
+        <h1 lo="1" lf="1"><a name="2022-fall" number="1" lo="1" raw="# 2022 Fall" class="anchor hanchor" href="#2022-fall"><span class="hnumber">1</span>&nbsp;<span class="htext">2022 Fall</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="3" lf="3">rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="5" lf="5" class="highlighted"><a name="2023-spring" number="2" lo="5" raw="# 2023 Spring" class="anchor hanchor" href="#2023-spring"><span class="hnumber">2</span>&nbsp;<span class="htext">2023 Spring</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="7" lf="7" class="active">With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
       </div>
     </div>
   </div>
