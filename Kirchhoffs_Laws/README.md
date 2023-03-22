@@ -5,3 +5,4 @@ rsw: Mention at start that they should not solve using equivalent resistances un
 # 2023 Spring
 
 With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).
+
