@@ -291,6 +291,11 @@
       padding-left: 0.5em;
     }
 
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -400,11 +405,11 @@
     }
 
     .solutionsfalse {
-      display: block;
+      display: none;
     }
 
     .solutionstrue {
-      display: none;
+      display: block;
     }
 
     @media print {
@@ -545,7 +550,7 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#introduction" raw="# Introduction" lo="5">
+        <a href="#introduction" raw="# Introduction" lo="5" class="highlighted">
           <span class="toctext">Introduction</span>
         </a>
       </li>
@@ -565,7 +570,7 @@
         </a>
       </li>
       <li>
-        <a href="#redundant-equations" raw="# Redundant Equations" lo="161" class="highlighted">
+        <a href="#redundant-equations" raw="# Redundant Equations" lo="161">
           <span class="toctext">Redundant Equations</span>
         </a>
       </li>
@@ -590,7 +595,7 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="5" lf="5"><a name="introduction" number="1" lo="5" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
+        <h1 lo="5" lf="5" class="highlighted"><a name="introduction" number="1" lo="5" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
         <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
       <div class="block">
@@ -607,7 +612,7 @@
           </li>
           <li markerlength="3" padlength="0" lo="10" lf="12">
             <div class="block">
-              <p padlength="0" lo="10" lf="10">Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.</p>
+              <p padlength="0" lo="10" lf="10" class="active">Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.</p>
               <div class="block-info" style="display: none;"><span class="line-numbers">10</span></div>
             </div>
           </li>
@@ -1038,11 +1043,11 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="161" lf="161" class="highlighted"><a name="redundant-equations" number="5" lo="161" raw="# Redundant Equations" class="anchor hanchor" href="#redundant-equations"><span class="hnumber">5</span>&nbsp;<span class="htext">Redundant Equations</span></a></h1>
+        <h1 lo="161" lf="161"><a name="redundant-equations" number="5" lo="161" raw="# Redundant Equations" class="anchor hanchor" href="#redundant-equations"><span class="hnumber">5</span>&nbsp;<span class="htext">Redundant Equations</span></a></h1>
         <div class="block-info" style="display: none;"><span class="line-numbers">161</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="163" lf="163" class="active">When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations based on KVL and KCL but cannot find <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> unknowns, the reason is that two or more of the <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations that you wrote were not independent. To demonstrate this, for the following circuit,</p>
+        <p padlength="0" lo="163" lf="163">When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations based on KVL and KCL but cannot find <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> unknowns, the reason is that two or more of the <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations that you wrote were not independent. To demonstrate this, for the following circuit,</p>
         <div class="block-info" style="display: none;"><span class="line-numbers">163</span></div>
       </div>
       <div class="block">
