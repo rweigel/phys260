@@ -1,0 +1,959 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>RC_Circuits</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
+  <style>
+    #toc>ol ol {
+      display: none
+    }
+
+    body {
+      background-image: url("https://rweigel.github.io/biedit/img/paper.png")
+    }
+
+    .body {
+      display: flex;
+      min-width: 50%;
+      max-height: 100%;
+      position: absolute;
+      background-image: url("https://rweigel.github.io/biedit/img/paper.png");
+    }
+
+    #toc {
+      flex: 0 1 auto;
+      margin-top: 0em;
+      margin-right: 1em;
+      max-width: 12em;
+      overflow: hidden auto;
+    }
+
+    #toc .toctext {
+      color: darkblue;
+    }
+
+    #toc .toctext-empty {
+      min-width: 1em;
+      border-bottom: 1px solid blue;
+    }
+
+    #toc ol {
+      list-style-type: decimal;
+      margin: 0.25em 0em 0em 0.25em;
+      padding-inline-start: 1em;
+    }
+
+    #toc a {
+      text-decoration: none;
+    }
+
+    #display {
+      flex: 1 1 80%;
+      overflow: hidden auto;
+      overflow-wrap: break-word;
+    }
+
+    #display .abstract {
+      text-align: center;
+      font-size: 100%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display .title {
+      text-align: center;
+      font-size: 150%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+
+    #display .subtitle {
+      text-align: center;
+      font-size: 120%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.2em;
+    }
+
+    #display .date {
+      text-align: right;
+      color: black;
+    }
+
+    #display .block {
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+    #display .block>.comment {
+      display: none;
+    }
+
+    #display .hr {
+      width: 100%;
+      height: 1px;
+      display: block;
+      margin: 0.5em;
+      border-top: 1px solid black;
+    }
+
+    #display a {
+      text-decoration-line: none;
+      text-decoration-color: black;
+      color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
+    }
+
+    #display p {
+      width: 100%;
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display pre {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display h1 {
+      color: darkblue;
+      border-bottom: 2px solid darkblue;
+    }
+
+    #display h2 {
+      border-bottom: 1px solid black;
+    }
+
+    #display h3 {
+      border-bottom: 1px dotted black;
+    }
+
+    #display img {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      max-width: 100%;
+    }
+
+    figure {
+      display: block;
+      margin-block: 0em;
+      margin-inline: 0px;
+    }
+
+    details>summary {
+      font-weight: bold;
+    }
+
+    details {
+      padding-left: 0.5em;
+    }
+
+    details[open] {
+      border: 1px solid black;
+      padding: 0em 0em 0em 0.5em;
+    }
+
+    table {
+      padding: 0px;
+      display: block;
+      width: 100%;
+    }
+
+    table tr {
+      border-top: 1px solid rgb(204, 204, 204);
+      background-color: white;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table tr:nth-child(2n) {
+      background-color: rgb(248, 248, 248);
+    }
+
+    table tr th {
+      font-weight: bold;
+      border: 1px solid rgb(204, 204, 204);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr td {
+      border: 1px solid rgb(204, 204, 204);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr th :first-child,
+    table tr td :first-child {
+      margin-top: 0px;
+    }
+
+    table tr th :last-child,
+    table tr td :last-child {
+      margin-bottom: 0px;
+    }
+
+    #display code {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-radius: 0px;
+      white-space: pre-wrap;
+    }
+
+    #display code~.line-number {
+      margin-top: 3px;
+      margin-right: 3px;
+    }
+
+    #display pre {
+      width: 100%;
+      text-indent: 0.75em;
+      margin: 0.5em 0px;
+      white-space: pre-wrap;
+      border-left: 3px solid black;
+      background-color: rgba(0, 0, 0, 0.03);
+      line-height: 1.25;
+      overflow-x: clip;
+    }
+
+    #display pre code {
+      background-color: rgba(0, 0, 0, 0);
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display pre.language-python {}
+
+    #display li>div {
+      display: flex;
+    }
+
+    #display li {
+      min-height: 1em;
+      width: 100%;
+    }
+
+    #display ul {
+      width: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
+    }
+
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
+      width: 100%;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    .inline-html .block .block-info {
+      display: none;
+    }
+
+    .inline-html {
+      width: 100%;
+    }
+
+    .section>.block ol~.block-info {}
+
+    .section>.block ul~.block-info {}
+
+    .section>.block pre~.block-info {}
+
+    .section>.block code~.block-info {}
+
+    pre .block-info {
+      font-size: 8px;
+      text-align: right;
+      text-indent: 0px;
+    }
+
+    .block-info {
+      text-align: right;
+      width: 24px;
+      font-family: monospace;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+      font-size: 8px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .blockquote {
+      width: 100%;
+      display: block;
+      margin: 1em;
+      border: 1px solid black;
+      padding: 1em;
+      border-radius: 0.5em;
+    }
+
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .latex-underline {
+      text-decoration: underline;
+    }
+
+    .katex {
+      font-size: inherit !important;
+    }
+
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-display {
+      text-align: center;
+      margin: 0em;
+      font-size: 1em !important;
+    }
+
+    .katex-display.fleqn>.katex {
+      padding-left: 0em;
+      margin: 0em;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
+    @media print {
+      * {
+        overflow: visible !important;
+      }
+
+      @page {
+        size: auto;
+        margin: 0.5in 0.75in 0.75in;
+      }
+
+      .katex .hide-tail {
+        overflow: hidden !important;
+      }
+
+      .page-break {
+        border-top: none;
+      }
+
+      .body {
+        display: inline;
+        position: relative;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        width: 100%;
+        margin-block: 0.1em;
+      }
+
+      h1 {
+        font-size: 1.25em;
+        color: black;
+        border-bottom: 2px solid black;
+      }
+
+      h2 {
+        font-size: 1.15em;
+        border-bottom: 1px solid black;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+
+      h4,
+      h5,
+      h6 {
+        font-size: 1.05em;
+      }
+
+      .md-toc {
+        break-inside: avoid;
+        font-size: 14px;
+      }
+
+      pre {
+        break-inside: avoid;
+      }
+
+      p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      #toc {
+        display: none;
+        font-size: 100%;
+        margin: 0px;
+        width: 100%;
+        overflow-y: hidden;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      #display {
+        margin-left: 0em;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+        overflow-wrap: break-word;
+      }
+
+      .katex {
+        font: 1em / 1.1 KaTeX_Main, "Times New Roman", serif;
+        white-space: nowrap;
+        text-indent: 0px;
+        text-rendering: auto;
+      }
+
+      .katex-display {
+        margin-top: 0px !important;
+        font-size: 1em !important;
+      }
+    }
+  </style>
+  <script>
+    function tocClickListen() {
+      let hs = document.querySelectorAll('#toc > ol ol');
+      let el, ns;
+      for (let i = 0; i < hs.length; i++) {
+        if (hs[i].previousElementSibling) {
+          el = hs[i].previousElementSibling.firstElementChild;
+          if (el.length == 0) {
+            continue;
+          }
+          el.addEventListener('click', event => {
+            ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
+            if (ns.style.display === 'none') {
+    ns.style.display = 'block';
+            } else
+            {
+    ns.style.display = 'none';}
+          });
+        }
+      }
+    }
+    if (
+        document.readyState === "complete" ||
+        (document.readyState !== "loading" && 
+          !document.documentElement.doScroll)
+    ) {
+      tocClickListen();
+    } else {
+      document.addEventListener("DOMContentLoaded", tocClickListen);
+    }
+  </script>
+</head>
+
+<body class="body">
+  <div id="toc" style="display: block; min-width: 5em;">
+    <ol>
+      <li>
+        <a href="#introduction" raw="# Introduction" lo="1" class="highlighted">
+          <span class="toctext">Introduction</span>
+        </a>
+      </li>
+      <li>
+        <a href="#type-i" raw="# Type I" lo="15" class="">
+          <span class="toctext">Type I</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#problem" raw="## Problem" lo="32" class="">
+              <span class="toctext">Problem</span>
+            </a>
+          </li>
+          <li>
+            <a href="#example" raw="## Example" lo="40" class="">
+              <span class="toctext">Example</span>
+            </a>
+          </li>
+          <li>
+            <a href="#problem" raw="## Problem" lo="44" class="">
+              <span class="toctext">Problem</span>
+            </a>
+          </li>
+          <li>
+            <a href="#problem" raw="## Problem" lo="48">
+              <span class="toctext">Problem</span>
+            </a>
+          </li>
+          <li>
+            <a href="#problem" raw="## Problem" lo="66">
+              <span class="toctext">Problem</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#type-ii" raw="# Type II" lo="72">
+          <span class="toctext">Type II</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#example" raw="## Example" lo="78">
+              <span class="toctext">Example</span>
+            </a>
+          </li>
+          <li>
+            <a href="#problem" raw="## Problem" lo="80">
+              <span class="toctext">Problem</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <div id="display">
+    <div class="section">
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="1" lf="1" class="highlighted"><a name="introduction" number="1" lo="1" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="3" lf="3">This activity involves circuits with DC voltage supplies (e.g., batteries), resistors and capacitors.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="5" lf="5">There are generally three types of problems for such circuits:</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="7" lf="7" class="active">I. A single capacitor is charged and placed in a circuit with other resistors (and no batteries).</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="9" lf="9">II. Finding currents and voltages just before and just after a switch is closed in a circuit with DC voltage supplies (e.g., batteries), resistors and capacitors.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="11" lf="11">III. Finding the time dependence of currents and voltages after a switch is closed. </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="13" lf="13">The third type of problem is the most general and problems of type I and type II can be solved using the method demonstrated for type III problems.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">13</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="15" lf="15" class=""><a name="type-i" number="2" lo="15" raw="# Type I" class="anchor hanchor" href="#type-i"><span class="hnumber">2</span>&nbsp;<span class="htext">Type I</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">15</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="17" lf="17">From the definition of capacitance, <span len="7" raw="_C=Q/V_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>, the voltage across a capacitor is <span len="7" raw="_V=Q/C_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>. Kirchhoffs voltage law for the following circuit is </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">17</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="19" lf="19"><span len="19" raw="__IR+V_c=IR+Q/C=0__" class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">19</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="21" lf="21">Suppose that we want to know <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> and <span len="3" raw="_C_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> are given. This equation would appear to have two unknows, <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> and <span len="3" raw="_Q_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span> and so to find <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, we need another equation. We know that the current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> is related to charge according to <span len="9" raw="_I=dQ/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span>. This leaves</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">21</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="23" lf="24"><span len="39" raw="_\ds R\frac{dQ}{dt}+\frac{Q}{C}=0\quad_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span></span></span></span> or <span len="38" raw="_\quad\ds\frac{dQ}{dt}+\frac{Q}{RC}=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">23-24</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="26" lf="26">So solve for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, we first need to know <span len="7" raw="_dQ/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span>. The above is an ordinary differential equation that has solution of</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">26</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="28" lf="28" class=""><span len="21" raw="_Q(t)=Q_oe^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0824em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span>, where <span len="15" raw="_\tau\equiv RC_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4637em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span></span></span></span> and <span len="5" raw="_Q_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the charge on the capacitor at <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">28</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="30" lf="30" class=""><a name="problem" number="2.1" lo="30" raw="## Problem" class="anchor hanchor" href="#problem" lf="30"><span class="hnumber">2.1</span>&nbsp;<span class="htext">Problem</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">32</span></div>
+      </div>
+      <div class="block">
+        <ol lo="32" lf="36" class="loose">
+          <li markerlength="3" padlength="0" lo="32" lf="35" class="">
+            <div class="block">
+              <p padlength="0" lo="32" lf="33" class="">Show that <span len="18" raw="_Q=Q_oe^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0824em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> with <span len="15" raw="_\tau\equiv RC_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4637em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span></span></span></span> satisfies </p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">32-33</span></div>
+            </div>
+            <div class="block">
+              <p padlength="0" lo="34" lf="34" class=""><span len="33" raw="_\ds\frac{dQ}{dt}+\frac{Q}{RC}=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">34</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="36" lf="38" class="">
+            <div class="block">
+              <p padlength="0" lo="36" lf="37" class="">If <span len="5" raw="_Q_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is doubled, does <span len="18" raw="_Q=Q_oe^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0824em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> still satisfy the above equation?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">36-37</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">32-36</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="38" lf="38" class="">This equation </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">38</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="40" lf="40" class=""><span len="21" raw="_Q(t)=Q_oe^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0824em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span>, where <span len="15" raw="_\tau\equiv RC_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4637em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span></span></span></span> and <span len="5" raw="_Q_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is the charge on the capacitor at <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> applies to any circuit with only a single capacitor and one or more resistors. If there is more than one resistor, <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> is the equivalent resistance.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">40</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="42" lf="42" class=""><a name="example" number="2.2" lo="42" raw="## Example" class="anchor hanchor" href="#example" lf="42"><span class="hnumber">2.2</span>&nbsp;<span class="htext">Example</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">44</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="44" lf="44" class="">Find <span len="6" raw="_Q(t)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> after the switch is closed for the following circuit.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">46</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="46" lf="46" class=""><a name="problem" number="2.3" lo="46" raw="## Problem" class="anchor hanchor" href="#problem" lf="46"><span class="hnumber">2.3</span>&nbsp;<span class="htext">Problem</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">48</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="48" lf="48" class="">Find <span len="6" raw="_Q(t)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> after the switch is closed for the following circuit.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">50</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="50" lf="50"><a name="problem" number="2.4" lo="50" raw="## Problem" class="anchor hanchor" href="#problem" lf="50"><span class="hnumber">2.4</span>&nbsp;<span class="htext">Problem</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">52</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="52" lf="52">If <span len="21" raw="_Q(t)=Q_oe^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0824em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> and</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">54</span></div>
+      </div>
+      <div class="block">
+        <ol lo="54" lf="58" class="loose">
+          <li markerlength="3" padlength="0" lo="54" lf="55">
+            <div class="block">
+              <p padlength="0" lo="54" lf="55"><span len="17" raw="_Q_o=1\text{ nF}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;nF</span></span></span></span></span> and <span len="15" raw="_RC=1\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">60-62</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="56" lf="57">
+            <div class="block">
+              <p padlength="0" lo="56" lf="57"><span len="17" raw="_Q_o=1\text{ nF}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;nF</span></span></span></span></span> and <span len="15" raw="_RC=2\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">60-62</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="58" lf="60">
+            <div class="block">
+              <p padlength="0" lo="58" lf="59"><span len="17" raw="_Q_o=1\text{ nF}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;nF</span></span></span></span></span> and <span len="15" raw="_RC=4\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">RC</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">60-61</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">56-60</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="60" lf="60">find <span len="3" raw="_Q_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span></span></span></span> at <span len="14" raw="_t=1\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span>. Enter your answers below</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">62</span></div>
+      </div>
+      <div class="block">
+        <ol lo="62" lf="64" class="compact">
+          <li markerlength="3" padlength="0" lo="62" lf="62"></li>
+          <li markerlength="3" padlength="0" lo="63" lf="63"></li>
+          <li markerlength="3" padlength="0" lo="64" lf="66"></li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">64-66</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="66" lf="66">Next sketch a plot of <span len="6" raw="_Q(t)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> from <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> to <span len="14" raw="_t=8\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span>. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">68</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="68" lf="68" class=""><a name="problem" number="2.5" lo="68" raw="## Problem" class="anchor hanchor" href="#problem" lf="68"><span class="hnumber">2.5</span>&nbsp;<span class="htext">Problem</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">70</span></div>
+      </div>
+      <div class="block">
+        <ol lo="70" lf="72" class="loose">
+          <li markerlength="3" padlength="0" lo="70" lf="71" class="">
+            <div class="block">
+              <p padlength="0" lo="70" lf="71" class="">If the capacitor has a charge of <span len="14" raw="_10\text{ nC}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;nC</span></span></span></span></span> and the switch is closed, how long will it take for the charge on the capacitor to fall to half of its value?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">70-71</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="72" lf="72" class="">
+            <div class="block">
+              <p padlength="0" lo="72" lf="72" class="">If the capacitor instead had a charge of <span len="14" raw="_20\text{ nC}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;nC</span></span></span></span></span> and the switch is closed, how long will it take for the charge on the capacitor to fall to half of its value?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">72</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">70-72</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="74" lf="74"><a name="type-ii" number="3" lo="74" raw="# Type II" class="anchor hanchor" href="#type-ii" lf="74"><span class="hnumber">3</span>&nbsp;<span class="htext">Type II</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">76</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="76" lf="76">If a circuit is configured such that no current can flow through an uncharged capacitor and then a switch is closed such that current can flow, the current in all parts of the circuit can be found at the instant the switch is closed by replacing the capacitor with a zero resistance wire.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">78</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="78" lf="78">After a long time, the currents and voltages in the circuity can be found by replacing the capacitor with an open circuit.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">80</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="80" lf="80"><a name="example" number="3.1" lo="80" raw="## Example" class="anchor hanchor" href="#example" lf="80"><span class="hnumber">3.1</span>&nbsp;<span class="htext">Example</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">82</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="82" lf="82"><a name="problem" number="3.2" lo="82" raw="## Problem" class="anchor hanchor" href="#problem" lf="82"><span class="hnumber">3.2</span>&nbsp;<span class="htext">Problem</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">84</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="84" lf="86">\item The circuit above has been in position <strong raw="{\bf a}" markerlength="4"> a</strong> for a long time. At time t = 0 the switch is thrown to position <strong raw="{\bf b}" markerlength="4"> b</strong>. The values of circuit elements are: V<span len="4" raw="__b_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4861em;vertical-align:-0.15em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 12 V, C = 10 mF, R = 20<span len="8" raw="_\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Ω</span></span></span></span>
+          <br>\par a. What is the current through the resistor just <strong raw="{\bf before}" markerlength="4"> before</strong> the switch is thrown?
+        </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">86-88</span></div>
+      </div>
+      <div class="block">
+        <pre lo="88" lf="91"><div class="block"><code lo="88" lf="88">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="89" lf="89">{\bf Answer: } Just before the switch is thrown, the current across the capacitor and around this circuit is 0 (the capacitor is fully charged and no more charges can be further accumulated on the capacitor. Since the current through the resistor is zero, the voltage across the capacitor equals the voltage of the power source, $V_C = V_b = 12 V$.</code></div><div class="block"><code lo="90" lf="90">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div><div class="block"><code lo="91" lf="91">\\\\</code></div></pre>
+        <div class="block-info" style="display: none;"><span class="line-numbers">90-93</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="92" lf="92">\vspace{0.5cm}\htmlnewline</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">94</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="95" lf="95">\par b. What is the current through the resistor just <strong raw="{\bf after}" markerlength="4"> after</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">97</span></div>
+    </div>
+    <div class="block">
+      <pre lo="97" lf="99"><div class="block"><code lo="97" lf="97">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="98" lf="98">{\bf Answer: }Immediately after the switch is thrown, the capacitor starts to discharge though the resistor. By Kirchhoff's loop rule, the voltage across the resistor equals V$_C$. The current through the resistor is I = V$_C$/ R = 12/20 = 0.6 A</code></div><div class="block"><code lo="99" lf="99">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">99-101</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="100" lf="101"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">102-103</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="104" lf="104">\par c. What is the charge on the capacitor just <strong raw="{\bf before}" markerlength="4"> before</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">106</span></div>
+    </div>
+    <div class="block">
+      <pre lo="106" lf="108"><div class="block"><code lo="106" lf="106">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="107" lf="107">{\bf Answer: }  Just before the switch is thrown the charge on the capacitor is: Q = CV = (10mF)(12 V) = 120 mC  </code></div><div class="block"><code lo="108" lf="108">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">108-110</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="109" lf="110"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">111-112</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="113" lf="113">\par d. What is the charge on the capacitor just <strong raw="{\bf after}" markerlength="4"> after</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">115</span></div>
+    </div>
+    <div class="block">
+      <pre lo="115" lf="117"><div class="block"><code lo="115" lf="115">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="116" lf="116">{\bf Answer: }  Just after the switch is thrown, the change of the stored charge is zero at t=0. The charge on the capacitor just after the switch is thrown remains 120 mC.</code></div><div class="block"><code lo="117" lf="117">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">117-119</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="118" lf="119"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">120-121</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="122" lf="122">\par e. What is the charge on the capacitor at time t = 0.3 msec after the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">124</span></div>
+    </div>
+    <div class="block">
+      <pre lo="124" lf="129"><div class="block"><code lo="124" lf="124">&lt;div class="solutionstrue"&gt;</code><div class="line-number">1</div></div><div class="block"><code lo="125" lf="125">{\bf Answer: } The time constant for the RC circuit is RC= (10mF) (20 ohm) = 200 msec. At t = 0.3 msec after the switch is thrown to b, the capacitor is in the process of discharging. The charge on the capacitor:</code><div class="line-number">2</div></div><div class="block"><code lo="126" lf="126"></code><div class="line-number">3</div></div><div class="block"><code lo="127" lf="127">$$Q = Q_0e^{-t/RC} = 120 mC \times e^{-0.3/200} = 119.8 mC$$</code><div class="line-number">4</div></div><div class="block"><code lo="128" lf="128"></code><div class="line-number">5</div></div><div class="block"><code lo="129" lf="129">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code><div class="line-number">6</div></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">126-131</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="130" lf="131"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">132-133</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="134" lf="136">\item Considering the same circuit, only with the switch thrown from <strong raw="{\bf b}" markerlength="4"> b</strong> to <strong raw="{\bf a}" markerlength="4"> a</strong> at time t = 0 after having been in position <strong raw="{\bf b}" markerlength="4"> b</strong> for a long time. Data: V<span len="9" raw="__b = 12_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5169em;vertical-align:-0.15em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">12</span></span></span></span> V, C = 10 mF, R = 20<span len="8" raw="_\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Ω</span></span></span></span>
+        <br>\vspace{0.1cm}
+      </p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">136-138</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="138" lf="138">\par a. What is the current through the resistor just <strong raw="{\bf before}" markerlength="4"> before</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">140</span></div>
+    </div>
+    <div class="block">
+      <pre lo="140" lf="142"><div class="block"><code lo="140" lf="140">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="141" lf="141">{\bf Answer: }  Since the switch is on position b for a long time, the charge across the capacitor is 0 (fully discharged). There is no current in the circuit, that is, the current through the resistor is 0.  </code></div><div class="block"><code lo="142" lf="142">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">142-144</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="143" lf="144"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">145-146</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="147" lf="147">\par b. What is the current through the resistor just <strong raw="{\bf after}" markerlength="4"> after</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">149</span></div>
+    </div>
+    <div class="block">
+      <pre lo="149" lf="151"><div class="block"><code lo="149" lf="149">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="150" lf="150">{\bf Answer: }  Just after the switch is thrown to position a, the voltage across the capacitor is 0, and the voltage across the resistor is V$_b$. From Ohm’s law, the current through the resistor is $I = V_b/R = 12V/20 \Omega = 0.6A$.  </code></div><div class="block"><code lo="151" lf="151">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">151-153</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="152" lf="153"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">154-155</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="156" lf="156">\par c. What is the charge on the capacitor just <strong raw="{\bf before}" markerlength="4"> before</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">158</span></div>
+    </div>
+    <div class="block">
+      <pre lo="158" lf="160"><div class="block"><code lo="158" lf="158">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="159" lf="159">{\bf Answer: }  Before the switch is thrown, the charge on the capacitor is 0.</code></div><div class="block"><code lo="160" lf="160">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">160-162</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="161" lf="162"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">163-164</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="165" lf="165">\par d. What is the charge on the capacitor just <strong raw="{\bf after}" markerlength="4"> after</strong> the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">167</span></div>
+    </div>
+    <div class="block">
+      <pre lo="167" lf="169"><div class="block"><code lo="167" lf="167">&lt;div class="solutionstrue"&gt;</code></div><div class="block"><code lo="168" lf="168">{\bf Answer: }  The charge on the capacitor just after the switch is thrown remains zero.</code></div><div class="block"><code lo="169" lf="169">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">169-171</span></div>
+    </div>
+    <div class="block">
+      <p padlength="3" lo="170" lf="171"><br>\htmlnewline \vspace{0.5cm}\htmlnewline</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">172-173</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="174" lf="174">\par e. What is the charge on the capacitor at time t = 0.3 msec after the switch is thrown?</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">176</span></div>
+    </div>
+    <div class="block">
+      <pre lo="176" lf="180"><div class="block"><code lo="176" lf="176">&lt;div class="solutionstrue"&gt;</code><div class="line-number">1</div></div><div class="block"><code lo="177" lf="177">{\bf Answer: } After the switch is thrown, the capacitor is in a charging process. The time constant is RC=200 msec. At time=0.3, the charge accumulated on the capacitor is:</code><div class="line-number">2</div></div><div class="block"><code lo="178" lf="178">   </code><div class="line-number">3</div></div><div class="block"><code lo="179" lf="179">   $$Q = CV_b[1-e^{t/RC}] = 10 mF \times 12V[1-e^{-0.3/200}] = 0.18 mC$$</code><div class="line-number">4</div></div><div class="block"><code lo="180" lf="180">&lt;/div&gt;&lt;div class="solutionsfalse"&gt;</code><div class="line-number">5</div></div></pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">178-182</span></div>
+    </div>
+    <div class="block">
+      <pre lo="183" lf="183">\end{enumerate}</pre>
+      <div class="block-info" style="display: none;"><span class="line-numbers">185</span></div>
+    </div>
+    <div class="block">
+      <p padlength="0" lo="185" lf="185">\end{tcolorbox}</p>
+      <div class="block-info" style="display: none;"><span class="line-numbers">187</span></div>
+    </div>
+  </div>
+</body>
+
+</html>
