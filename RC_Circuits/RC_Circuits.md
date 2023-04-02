@@ -1,185 +1,187 @@
-# Introduction
+```mdextension
+Title: Capacitance
+```
 
-This activity involves circuits with DC voltage supplies (e.g., batteries), resistors and capacitors.
+# Notation and Equations
 
-There are generally three types of problems for such circuits:
+We use the the letter "C" as a label for a capacitor and in the units of capacitance. When used as a label, $C$ is usually written in itallics. Thus
 
-I. A single capacitor is charged and placed in a circuit with other resistors (and no batteries).
+"$C= 10 \text{ C}$" means "the capacitor labeled $C$ has a capacitance of $10$ Coulombs.
 
-II. Finding currents and voltages just before and just after a switch is closed in a circuit with DC voltage supplies (e.g., batteries), resistors and capacitors.
+Lower case letters are used for electrical quantities that vary in time. In circuits where there were only emfs and resistors, currents and voltages are constant and we use $I$ and $V$. In the circuits considered in this activity, the currents and voltages vary in time, so we use $i(t)$ and $v(t)$.
 
-III. Finding the time dependence of currents and voltages after a switch is closed. 
+In this activity, we also use the the relationship between the current $i$ in the wires connected to a capacitor and the charge $q$ on the capacitor is $i=dq/dt$.
 
-The third type of problem is the most general and problems of type I and type II can be solved using the method demonstrated for type III problems.
+# Discharging Capacitor
 
-# Type I
+If a single charged capacitor with capacitance $C$ is in a circuit with other resistors (and no emfs), the charge on the capacitor changes with time according to
 
-From the definition of capacitance, $C=Q/V$, the voltage across a capacitor is $V=Q/C$. Kirchhoffs voltage law for the following circuit is 
+$q(t)=Q_oe^{-t/\tau}$,
 
-$$IR+V_c=IR+Q/C=0$$
-
-Suppose that we want to know $I$ and $R$ and $C$ are given. This equation would appear to have two unknows, $I$ and $Q$ and so to find $I$, we need another equation. We know that the current $I$ is related to charge according to $I=dQ/dt$. This leaves
-
-$\ds R\frac{dQ}{dt}+\frac{Q}{C}=0\quad$ or
-$\quad\ds\frac{dQ}{dt}+\frac{Q}{RC}=0$
-
-So solve for $I$, we first need to know $dQ/dt$. The above is an ordinary differential equation that has solution of
-
-$Q(t)=Q_oe^{-t/\tau}$, where $\tau\equiv RC$ and $Q_o$ is the charge on the capacitor at $t=0$.
+where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is the equivalent resistance. The quantity $\tau$ is often referred to as the "RC time constant". This equation follows from using Kirchhoff's voltage law, which gives a differential equation, and then solving the differential equation.
 
 ## Problem
 
-1. Show that $Q=Q_oe^{-t/\tau}$ with $\tau\equiv RC$ satisfies 
+Find $\tau$ for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$.
 
-   $\ds\frac{dQ}{dt}+\frac{Q}{RC}=0$
+<img src="figures/Discharging_I.svg"/>
 
-2. If $Q_o$ is doubled, does $Q=Q_oe^{-t/\tau}$ still satisfy the above equation?
+**Answer**: Left: $R_{\text{eq}}=20\text{ k}\Omega$; $\tau = R_{\text{eq}}C = 20\cdot 10^3 \times 10^{-6}\text{ s}=.02\text{ s}$. Right: $R_{\text{eq}}=5\text{ k}\Omega$; $\tau=.005\text{ s}$ 
 
-This equation 
-
-$Q(t)=Q_oe^{-t/\tau}$, where $\tau\equiv RC$ and $Q_o$ is the charge on the capacitor at $t=0$ applies to any circuit with only a single capacitor and one or more resistors. If there is more than one resistor, $R$ is the equivalent resistance.
-
-## Example
-
-Find $Q(t)$ after the switch is closed for the following circuit.
+\ifsolutions
+\else
+\fi
 
 ## Problem
 
-Find $Q(t)$ after the switch is closed for the following circuit.
+For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}$ if the switch is closed at $t=0$ and the capacitor has an inital charge of $Q_o$ for the following three cases.
+
+1. $RC=1\text{ s}\qquad$ $q(t=2\text{ s})=\fbox{\qquad\phantom M}$
+
+2. $RC=2\text{ s}\qquad$ $q(t=2\text{ s})=\fbox{\qquad\phantom M}$
+
+3. $RC=4\text{ s}\qquad$ $q(t=2\text{ s})=\fbox{\qquad\phantom M}$
+
+Next sketch a plot of $q(t)$ from $t=0$ to $t=6\text{ s}$ for each of these three cases. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively.
+
+<img src="figures/Discharging_II.svg"/>
+
+**Answer**:
+
+$q(2)=Q_oe^{-2/RC}$, assuming $RC$ has units of seconds. So
+
+1. $q(2)=Q_oe^{-2/1}=Q_o/e^2 \simeq 0.14 Q_o$
+
+2. $q(2)=Q_oe^{-2/2}=Q_o/e \simeq 0.37 Q_o$
+
+3. $q(2)=Q_oe^{-2/4}=Q_o/\sqrt{e} \simeq 0.61 Q_o$
+
+All curves decay exponentially, start at $Q_o$, and pass through one of the values above $t=2$.
+
+\ifsolutions
+\else
+\fi
 
 ## Problem
 
-If $Q(t)=Q_oe^{-t/\tau}$ and
+<img src="figures/Discharging_III.svg"/>
 
-1. $Q_o=1\text{ nF}$ and $RC=1\text{ s}$
-
-2. $Q_o=1\text{ nF}$ and $RC=2\text{ s}$
-
-3. $Q_o=1\text{ nF}$ and $RC=4\text{ s}$
-
-find $Q$ at $t=1\text{ s}$. Enter your answers below
-
-1. 
-2. 
-3. 
-
-Next sketch a plot of $Q(t)$ from $t=0$ to $t=8\text{ s}$. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively.
-
-## Problem
+In the circuit above, the values of $R$ and $C$ are such that $RC=\tau=1\text{ s}$.
 
 1. If the capacitor has a charge of $10\text{ nC}$ and the switch is closed, how long will it take for the charge on the capacitor to fall to half of its value?
 
-2. If the capacitor instead had a charge of $20\text{ nC}$ and the switch is closed, how long will it take for the charge on the capacitor to fall to half of its value?
+2. If the capacitor instead had a charge of $20\text{ nC}$ and $RC=1\text{ s}$ and the switch is closed, how long will it take for the charge on the capacitor to fall to half of its value?
 
-# Type II
+**Answer**:
 
-If a circuit is configured such that no current can flow through an uncharged capacitor and then a switch is closed such that current can flow, the current in all parts of the circuit can be found at the instant the switch is closed by replacing the capacitor with a zero resistance wire.
+$q(t)=Q_oe^{-t/\tau}$ and we want $t$ when $q(t)=Q_o/2$, so need to solve 
 
-After a long time, the currents and voltages in the circuity can be found by replacing the capacitor with an open circuit.
+$$Q_o/2=Q_oe^{-t/\tau}$$
+
+or
+
+$$1/2=e^{-t/\tau}$$
+
+Taking the natural log of boths sides, and using $\ln(1/x)=-\ln x$, gives
+
+$$-\ln(2) = \ln e^{-t/\tau} = -\frac{t}{\tau}$$
+
+so $t=\tau\ln(2)\simeq 0.70\tau$. The answer does not depend on $Q_o$, so this is the answer for parts 1. and 2.
+
+%\ifsolutions
+%\else
+%\fi
+
+# Charging a Capacitor
+
+If a single capacitor is in a circuit with other resistors and an DC voltage source, the charge of the capacitor varies according to 
+
+$$q(t)=Q_f(1-e^{-t/\tau})$$
+
+where $\tau\equiv RC$, $R$ is the equivalent resistance, and $Q_f$ is the final charge on the capacitor, that is, the charge on the capacitor as $t\rightarrow\infty$ (instead of $t\rightarrow\infty$, it is technically more accurate to say $t\gg \tau$).
+
+To find $Q_f$, replace the capacitor with an open circuit and use Kirchoff's voltage law to find the find the voltage across the capacitor, $V_f$. Then use $Q_f=CV_f$.
 
 ## Example
 
-## Problem
+Find $q(t)$ for the following circuit, assuming that the switch is closed at $t=0$.
 
-\item The circuit above has been in position {\bf a} for a long time. At time t = 0 the switch is thrown to position {\bf b}. The values of circuit elements are: V$_b$ = 12 V, C = 10 mF, R = 20$\Omega$
-\\
-\par a. What is the current through the resistor just {\bf before} the switch is thrown?
+<img src="figures/Charging_a.svg"/>
 
-    \ifsolutions
-    {\bf Answer: } Just before the switch is thrown, the current across the capacitor and around this circuit is 0 (the capacitor is fully charged and no more charges can be further accumulated on the capacitor. Since the current through the resistor is zero, the voltage across the capacitor equals the voltage of the power source, $V_C = V_b = 12 V$.
-    \else
-    \\
-\vspace{0.5cm}
-\fi
+**Answer**: When the switch is closed, charge builds up on the capacitor. This build-up continues until the charge on the capacitor is such that no current flows in the circuit. If there is no current flowing through the capacitor, the circuit is equivalent to one in which the capacitor is replaced with an open circuit, as shown below. 
+
+<img src="figures/Charging_b.svg"/>
+
+Kirchhoff's Voltage Law gives
+
+$\mathcal{E}-i(t)R-v_C(t)=0$
+
+For large $t$, $i(t)=0$, so we are left with $v_{C}(t)=\mathcal{E}$. This is a voltage for large $t$, so we relabel it as $V_f$. Using $Q_f=CV_f$ gives $Q_f=C\mathcal{E}$, so
+
+$$q(t)=C\mathcal{E}(1-e^{-t/RC})$$
+
+# Charge/Discharge Problem
+
+## Part I
+
+<img src="figures/Charge_Discharge.svg"/>
+
+The switch in the above circuit has been in position $a$ for a long time. At time $t = 0$ the switch is moved to position $b$. The values of circuit elements are: $\mathcal{E}= 12\text{ V}$, $C = 10\text{ mF}$, and $R = 20\text{ }\Omega$.
+
+Let $t=0^-$ correspond to the time just before the switch is moved from $a$ to $b$. Let $t=0^+$ correspond to the time just after the switch is moved from $a$ to $b$.
+
+1. What is the current through the resistor at $t=0^-$?
+
+   **Answer**: Just before the switch is thrown, the current is zero. By Kirchhoff's loop rule, the voltage across the capacitor, $V_C$, must be equal to the voltage of the power source, so $V_C = \mathcal{E} = 12\text{ V}$.
+
+2. What is the current through the resistor at $t=0^+$?
+
+   **Answer**: Immediately after the switch is moved to $b$, the capacitor starts to discharge though the resistor. By Kirchhoff's loop rule, the voltage across the resistor equals the voltage across the capacitor,  $V_C$. The current through the resistor is $I = V_C/R = 12\text{ V}/20\text{ }\Omega = 0.6\text{ A}$.
+
+3. What is the charge on the capacitor at $t=0^-$?
+
+   **Answer**: Just before the switch is thrown the charge on the capacitor is: $Q = CV_C = (10 \text{ mF})(12\text{ V}) = 120\text{ mC}$.
+
+4. What is the charge on the capacitor at $t=0^+$?
+
+   **Answer**: $120\text{ mC}$
+
+5. What is the charge on the capacitor at $t = 200\text{ ms}$?
+
+   {\bf Answer: } The time constant for the RC circuit is $RC= (10\text{ mF}) (20\text{ }\Omega) = 200\text{ ms}$. At $t = 200\text{ ms}$ after the switch was moved, the capacitor is in the process of discharging. The charge on the capacitor varies according to $q(t)=Q_oe^{-t/RC}$, so
+
+   $q(200\text{ ms}) = Q_0e^{-200\text{ ms}/RC} = 120\text{ mC} \cdot e^{-200\text{ ms}/200\text{ ms}} \simeq120\text{ mC}\cdot 0.37 \simeq 44 \text{ mC}$.
+
+## Part II
+
+<img src="figures/Charge_Discharge.svg"/>
+
+The switch in the above circuit has been in position $b$ for a long time. At time $t = 0$ the switch is moved to position $a$. The values of circuit elements are: $\mathcal{E}= 12\text{ V}$, $C = 10\text{ mF}$, and $R = 20\text{ }\Omega$.
+
+Let $t=0^-$ correspond to the time just before the switch is moved from $a$ to $b$. Let $t=0^+$ correspond to the time just after the switch is moved from $a$ to $b$.
+
+1. What is the current through the resistor at $t=0^-$?
+
+   {\bf Answer: } Since the switch is on position $b$ for a long time, the charge on and voltage across the capacitor is zero. If the voltage across the capacitor is zero, then by Kirchhoff's voltage law the voltage across the resistor must be zero. So the current through the resistor is zero.  
+
+2. What is the charge on the capacitor at $t=0^-$?
+
+   {\bf Answer: } Zero.
+
+3. What is the charge on the capacitor at  $t=0^+$?
+
+   {\bf Answer: } Zero.
+
+4. What is the current through the resistor at $t=0^+$?
+
+   {\bf Answer: } Kirchhoff's voltage law at this time is
    
-\par b. What is the current through the resistor just {\bf after} the switch is thrown?
-
-    \ifsolutions
-    {\bf Answer: }Immediately after the switch is thrown, the capacitor starts to discharge though the resistor. By Kirchhoff's loop rule, the voltage across the resistor equals V$_C$. The current through the resistor is I = V$_C$/ R = 12/20 = 0.6 A
-    \else
-   \\
-\vspace{0.5cm}
-\fi
+   $\mathcal{E}-i(0^+)R-v_C(0^+)=0$
    
-\par c. What is the charge on the capacitor just {\bf before} the switch is thrown?
+   At $t=0^+$ the voltage across the capacitor is zero because it is uncharged, so $i(0^+)R=\mathcal{E}$. Thus, the current through the resistor is $i(0^+) = \mathcal{E}/R = 12\text{ V}/20\text{ }\Omega = 0.6\text{ A}$.  
 
-    \ifsolutions
-    {\bf Answer: }  Just before the switch is thrown the charge on the capacitor is: Q = CV = (10mF)(12 V) = 120 mC  
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\par d. What is the charge on the capacitor just {\bf after} the switch is thrown?
+5. What is the charge on the capacitor at time $t = 200\text{ ms}$?
 
-    \ifsolutions
-    {\bf Answer: }  Just after the switch is thrown, the change of the stored charge is zero at t=0. The charge on the capacitor just after the switch is thrown remains 120 mC.
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\par e. What is the charge on the capacitor at time t = 0.3 msec after the switch is thrown?
+   {\bf Answer: } The time constant is $RC=200\text{ ms}$. At $t=200\text{ ms}$, the charge accumulated on the capacitor is:
 
-    \ifsolutions
-    {\bf Answer: } The time constant for the RC circuit is RC= (10mF) (20 ohm) = 200 msec. At t = 0.3 msec after the switch is thrown to b, the capacitor is in the process of discharging. The charge on the capacitor:
-    
-    $$Q = Q_0e^{-t/RC} = 120 mC \times e^{-0.3/200} = 119.8 mC$$
-    
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\item Considering the same circuit, only with the switch thrown from {\bf b} to {\bf a} at time t = 0 after having been in position {\bf b} for a long time. Data: V$_b = 12$ V, C = 10 mF, R = 20$\Omega$
-\\
-\vspace{0.1cm}
-   
-\par a. What is the current through the resistor just {\bf before} the switch is thrown?
-
-    \ifsolutions
-    {\bf Answer: }  Since the switch is on position b for a long time, the charge across the capacitor is 0 (fully discharged). There is no current in the circuit, that is, the current through the resistor is 0.  
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\par b. What is the current through the resistor just {\bf after} the switch is thrown?
-
-    \ifsolutions
-    {\bf Answer: }  Just after the switch is thrown to position a, the voltage across the capacitor is 0, and the voltage across the resistor is V$_b$. From Ohm’s law, the current through the resistor is $I = V_b/R = 12V/20 \Omega = 0.6A$.  
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\par c. What is the charge on the capacitor just {\bf before} the switch is thrown?
-
-    \ifsolutions
-    {\bf Answer: }  Before the switch is thrown, the charge on the capacitor is 0.
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\par d. What is the charge on the capacitor just {\bf after} the switch is thrown?
-
-    \ifsolutions
-    {\bf Answer: }  The charge on the capacitor just after the switch is thrown remains zero.
-    \else
-   \\
-\vspace{0.5cm}
-\fi
-   
-\par e. What is the charge on the capacitor at time t = 0.3 msec after the switch is thrown?
-
-    \ifsolutions
-    {\bf Answer: } After the switch is thrown, the capacitor is in a charging process. The time constant is RC=200 msec. At time=0.3, the charge accumulated on the capacitor is:
-       
-       $$Q = CV_b[1-e^{t/RC}] = 10 mF \times 12V[1-e^{-0.3/200}] = 0.18 mC$$
-    \else
-   \fi
-   
-    \end{enumerate}
-
-\end{tcolorbox}
+   $$q(200\text{ s}) = C\mathcal{E}(1-e^{-(200\text{ s})/RC}) = (10\text{ mF} \cdot 12\text{ V})(1-e^{-200/200})$$
