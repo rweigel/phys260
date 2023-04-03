@@ -213,7 +213,7 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
 1. What is the current through the resistor at $t=0^-$?
 
    \ifsolutions
-   {\bf Answer: } Since the switch is on position $b$ for a long time, the charge on and voltage across the capacitor is zero. If the voltage across the capacitor is zero, then by Kirchhoff's voltage law, the voltage across the resistor must be zero. So the current through the resistor is zero.
+   {\bf Answer: } Since the switch is on position $b$ for a long time, the charge on and voltage across the capacitor is zero. If the voltage across the capacitor is zero, then by Kirchhoff's voltage law, the voltage across the resistor must be zero. So the current through the resistor is zero; $i_C(0^-)=0$.
    \else
    \vspace{2cm}
    \fi
@@ -221,11 +221,10 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
 2. What is the voltage across the capacitor at $t=0^-$?
 
    \ifsolutions
-   {\bf Answer: } Zero.
+   {\bf Answer: } $v_C(0^-)=0$.
    \else
    \vspace{2cm}
    \fi
-
 
 3. What is the charge on the capacitor at (a) $t=0^-$ and (b) $t=0^+$?
 
@@ -238,7 +237,7 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
 4. What is the voltage across the capacitor at $t=0^+$?
 
    \ifsolutions
-   {\bf Answer: } Zero.
+   {\bf Answer: } $v_C(0^+)=0$.
    \else
    \vspace{2cm}
    \fi
