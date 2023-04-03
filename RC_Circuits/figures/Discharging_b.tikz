@@ -1,0 +1,63 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,165); %set diagram left start at 0, and has height of 165
+
+%Straight Lines [id:da21694403558430375] 
+\draw    (63,34) -- (123,34) ;
+%Straight Lines [id:da12186668018741531] 
+\draw    (123,94) -- (123,124) ;
+%Shape: Resistor [id:dp5192799178559] 
+\draw   (63,124) -- (70.2,124) -- (71.8,114) -- (75,134) -- (78.2,114) -- (81.4,134) -- (84.6,114) -- (87.8,134) -- (91,114) -- (94.2,134) -- (95.8,124) -- (103,124) ;
+%Straight Lines [id:da4064606371405326] 
+\draw    (103,124) -- (123,124) ;
+%Straight Lines [id:da6092949468165629] 
+\draw    (43,34) -- (63,34) ;
+%Straight Lines [id:da3996966582016197] 
+\draw    (43,124) -- (63,124) ;
+%Straight Lines [id:da8432524402003263] 
+\draw    (43,34) -- (43,68.33) ;
+%Straight Lines [id:da5673924877628735] 
+\draw    (135,71.5) -- (123,94) ;
+%Straight Lines [id:da40110239263509695] 
+\draw    (123,34) -- (123,71) ;
+\draw [shift={(123,71)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Shape: Contact [id:dp4210243094531454] 
+\draw   (43,68.33) -- (43,76.33) (43,95) -- (43,87) (58,76.33) -- (28,76.33) (58,87) -- (28,87) ;
+%Straight Lines [id:da39304851837883903] 
+\draw    (43,95) -- (43,124) ;
+%Shape: Grid [id:dp4136213731791418] 
+\draw  [draw opacity=0] (206,36) -- (416,36) -- (416,120) -- (206,120) -- cycle ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (206,36) -- (206,120)(220,36) -- (220,120)(234,36) -- (234,120)(248,36) -- (248,120)(262,36) -- (262,120)(276,36) -- (276,120)(290,36) -- (290,120)(304,36) -- (304,120)(318,36) -- (318,120)(332,36) -- (332,120)(346,36) -- (346,120)(360,36) -- (360,120)(374,36) -- (374,120)(388,36) -- (388,120)(402,36) -- (402,120)(416,36) -- (416,120) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (206,36) -- (416,36)(206,50) -- (416,50)(206,64) -- (416,64)(206,78) -- (416,78)(206,92) -- (416,92)(206,106) -- (416,106)(206,120) -- (416,120) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]  ;
+%Straight Lines [id:da6371695008603995] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (206,120) -- (416,120) ;
+%Straight Lines [id:da19392406724359912] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (416,120) -- (416,36) ;
+
+%Straight Lines [id:da5115200356999086] 
+\draw    (206,25.5) -- (206,120) ;
+\draw [shift={(206,22.5)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da04281112255200381] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (206,120) -- (428,120) ;
+\draw [shift={(431,120)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da19821580998780153] 
+\draw    (276,114) -- (276,125) ;
+%Straight Lines [id:da5919180085071085] 
+\draw    (210,50) -- (201,50) ;
+
+% Text Node
+\draw (75,139.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (8,70.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+% Text Node
+\draw (208,10.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q$};
+% Text Node
+\draw (432,115.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$t$};
+% Text Node
+\draw (270,129.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$2\ s$};
+% Text Node
+\draw (183,43.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q_{o}$};
+
+
+\end{tikzpicture}

@@ -24,7 +24,7 @@ where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is
 
 Find $\tau$ for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$.
 
-<img src="figures/Discharging_I.svg"/>
+<img src="figures/Discharging_a.svg"/>
 
 \ifsolutions
 **Answer**:
@@ -52,7 +52,7 @@ For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}
 
 Next, sketch a plot of $q(t)$ from $t=0$ to $t=6\text{ s}$ for each of these three cases. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively.
 
-<img src="figures/Discharging_II.svg"/>
+<img src="figures/Discharging_b.svg"/>
 
 \ifsolutions
 **Answer**:
@@ -70,7 +70,7 @@ All curves decay exponentially. To plot, start at $Q_o$, and draw an exponential
 
 ## Problem
 
-<img src="figures/Discharging_III.svg"/>
+<img src="figures/Discharging_c.svg"/>
 
 In the circuit above, the values of $R$ and $C$ are such that $RC=1\text{ s}$.
 

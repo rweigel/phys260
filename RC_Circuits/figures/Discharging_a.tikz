@@ -1,0 +1,67 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,122); %set diagram left start at 0, and has height of 122
+
+%Shape: Resistor [id:dp05500381774764507] 
+\draw   (69,20) -- (76.2,20) -- (77.8,10) -- (81,30) -- (84.2,10) -- (87.4,30) -- (90.6,10) -- (93.8,30) -- (97,10) -- (100.2,30) -- (101.8,20) -- (109,20) ;
+%Straight Lines [id:da7355678714340006] 
+\draw    (109,20) -- (129,20) ;
+%Straight Lines [id:da527045155276259] 
+\draw    (129,80) -- (129,110) ;
+%Shape: Resistor [id:dp3594116450407856] 
+\draw   (69,110) -- (76.2,110) -- (77.8,100) -- (81,120) -- (84.2,100) -- (87.4,120) -- (90.6,100) -- (93.8,120) -- (97,100) -- (100.2,120) -- (101.8,110) -- (109,110) ;
+%Straight Lines [id:da9970092949559268] 
+\draw    (109,110) -- (129,110) ;
+%Straight Lines [id:da3476278762101743] 
+\draw    (49,20) -- (69,20) ;
+%Straight Lines [id:da4620337269837471] 
+\draw    (49,110) -- (69,110) ;
+%Straight Lines [id:da9993276379137561] 
+\draw    (49,20) -- (49,54.33) ;
+%Straight Lines [id:da14261766387593622] 
+\draw    (129,20) -- (129,80) ;
+%Shape: Contact [id:dp6430887579633948] 
+\draw   (49,54.33) -- (49,62.33) (49,81) -- (49,73) (64,62.33) -- (34,62.33) (64,73) -- (34,73) ;
+%Straight Lines [id:da5144443528570377] 
+\draw    (49,81) -- (49,110) ;
+%Shape: Resistor [id:dp9803823329759065] 
+\draw   (250,41) -- (250,48.2) -- (260,49.8) -- (240,53) -- (260,56.2) -- (240,59.4) -- (260,62.6) -- (240,65.8) -- (260,69) -- (240,72.2) -- (250,73.8) -- (250,81) ;
+%Straight Lines [id:da7114935485860634] 
+\draw    (200,20) -- (300,20) ;
+%Straight Lines [id:da5684648483404737] 
+\draw    (200,110) -- (300,110) ;
+%Straight Lines [id:da8213220787595459] 
+\draw    (200,20) -- (200,54.33) ;
+%Shape: Contact [id:dp09002842999214056] 
+\draw   (200,54.33) -- (200,62.33) (200,81) -- (200,73) (215,62.33) -- (185,62.33) (215,73) -- (185,73) ;
+%Straight Lines [id:da532030432993386] 
+\draw    (200,81) -- (200,110) ;
+%Straight Lines [id:da10367742610474684] 
+\draw    (250,81) -- (250,110) ;
+%Straight Lines [id:da011328159933985171] 
+\draw    (250,20) -- (250,48.2) ;
+%Shape: Resistor [id:dp8997079321456452] 
+\draw   (300,41) -- (300,48.2) -- (310,49.8) -- (290,53) -- (310,56.2) -- (290,59.4) -- (310,62.6) -- (290,65.8) -- (310,69) -- (290,72.2) -- (300,73.8) -- (300,81) ;
+%Straight Lines [id:da9942687754475996] 
+\draw    (300,81) -- (300,110) ;
+%Straight Lines [id:da5427177633185147] 
+\draw    (300,20) -- (300,48.2) ;
+
+% Text Node
+\draw (83,33.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (81,78.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (21,38.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+% Text Node
+\draw (312,72.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (261,72.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+% Text Node
+\draw (171,42.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+
+
+\end{tikzpicture}
