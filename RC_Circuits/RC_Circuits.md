@@ -35,6 +35,7 @@ Find $\tau$ for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\t
 \fi
 
 \newpage
+
 ## Problem
 
 For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}$ if the switch is closed at $t=0$ and the capacitor has an initial charge of $Q_o$ for the following three cases.
