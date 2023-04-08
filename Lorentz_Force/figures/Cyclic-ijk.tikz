@@ -1,0 +1,30 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,119); %set diagram left start at 0, and has height of 119
+
+%Shape: Circle [id:dp5988157550687865] 
+\draw   (25.5,65.65) .. controls (25.5,43.83) and (43.18,26.15) .. (65,26.15) .. controls (86.82,26.15) and (104.5,43.83) .. (104.5,65.65) .. controls (104.5,87.47) and (86.82,105.15) .. (65,105.15) .. controls (43.18,105.15) and (25.5,87.47) .. (25.5,65.65) -- cycle ;
+%Straight Lines [id:da42189417649788785] 
+\draw    (29,82.14) -- (27.95,78.99) ;
+\draw [shift={(27,76.14)}, rotate = 71.57] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+%Straight Lines [id:da47415096212675123] 
+\draw    (67,26.15) ;
+\draw [shift={(69,26.15)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da10747602373995879] 
+\draw    (101,82.15) -- (99.54,84.57) ;
+\draw [shift={(98,87.14)}, rotate = 300.99] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+
+% Text Node
+\draw (13,72.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{k}$};
+% Text Node
+\draw (110,75.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\jmath }$};
+% Text Node
+\draw (59,3.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\imath }$};
+
+
+\end{tikzpicture}
