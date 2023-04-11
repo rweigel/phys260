@@ -101,7 +101,7 @@ where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is
 
 \subsection{Problem}
 
-Find $\tau$ for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$.
+Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$. Note that $1 \text{ }\Omega\cdot F = 1 \text{ second}$.
 
 \input{figures/Discharging_a.tikz}
 
@@ -149,11 +149,11 @@ For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}
 
 \begin{enumerate}
 
-  \item[4.] Next, sketch a plot of $q(t)$ from $t=0$ to $t=6\text{ s}$ for each of these three cases. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively.
+  \item[4.] Next, sketch a plot of $q(t)$ from $t=0$ to $t=6\text{ s}$ for each of these three cases. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively. (Hint: For all curves $q(0)=Q_o$. Use the $q(2)$ values from parts 1.--3. to help sketch the curve.)
 
 \end{enumerate}
 
-\input{figures/Discharging_b.tikz}
+\input{figures/Discharging_b.tikz?1681236588622?1681236807928?1681236808969}
 
 \ifsolutions
 \textbf{Answer}:
@@ -225,11 +225,11 @@ To find $Q_f$, replace the capacitor with an open circuit and use Kirchhoff's vo
 
 Find $q(t)$ for the following circuit, assuming the switch is closed at $t=0$ and the capacitor is initially uncharged.
 
-\input{figures/Charging_a.tikz}
+\input{figures/Charging_a.tikz?1681236957152}
 
 \textbf{Answer}: When the switch is closed, charge builds up on the capacitor. This build--up continues until the charge on the capacitor is such that no current flows in the circuit. If no current flows through the capacitor, the circuit is equivalent to one in which the capacitor is replaced with an open circuit, as shown below. 
 
-\input{figures/Charging_b.tikz}
+\input{figures/Charging_b.tikz?1681236957976?1681237095210}
 
 Kirchhoff's voltage Law gives $\mathcal{E}-i(t)R-v_C(t)=0$, where $v_C(t)$ is the voltage across the capacitor. For large $t$, $i(t)=0$, leaving $v_{C}(t)=\mathcal{E}$. This voltage is for large $t$, so we relabel it as $V_f$. Using $Q_f=CV_f$ gives $Q_f=C\mathcal{E}$, so
 
@@ -253,13 +253,15 @@ Note that the general formula $q(t)=Q_f(1-e^{-t/\tau})$ that applies for all $t$
 
 For a circuit with any number of capacitors, DC voltage sources, and resistors, finding the equation for $q(t)$ for each capacitor requires solving a system of differential equations, which is not covered in this course. However, you can find the currents and charges on the capacitor after a long time by replacing all capacitors with open circuits and then using KVL.
 
-\input{figures/Charging_c.tikz}
+\input{figures/Charging_c.tikz?1681238567059?1681238637310?1681238643230?1681238713596}
+
+(In the above circuit, the equation used in the previous problem does not apply and so you are only asked for the state of the circuit after a long time.)
 
 \begin{enumerate}
 
   \item Find the charge on the capacitor a long time after the switch is closed.
 
-  \item Find the current in the resistor a long time after the switch is closed.
+  \item Find the current in the left, middle, and right resistors after long time after the switch is closed.
 
 \end{enumerate}
 
@@ -268,11 +270,17 @@ For a circuit with any number of capacitors, DC voltage sources, and resistors, 
 
     \begin{enumerate}
 
-      \item $Q_f=\mathcal{E}C$
+      \item $\ds Q_f=\frac{\mathcal{E}}{2}C$
 
-      \item $i_{Rf}=\mathcal{E}/R$
+      \item $\ds i_{\text{Left}}=i_{\text{Middle}}=\frac{\mathcal{E}}{2R}$ and $i_{\text{Right}}=0$.
 
     \end{enumerate}
+
+%Note that the exact equation for $q(t)$ can be found using the technique covered in the textbook because the equation for $q$ on the capacitor simplifies to a single differential equation. Using KVL and KCL, one can show
+
+%$\ds\frac{dq}{dt}+\frac{q}{\tau}=\frac{\mathcal{E}}{3R}$, where $\ds\tau=\frac{3}{2}RC$, so if the capacitor was initially uncharged, $q(t)=\frac{\mathcal{CE}}{2}(1-e^{-t/\tau})$. After a long time ($t\gg \tau$), the 
+
+%exponential term is zero and we recover the answer to part 1.
 \else
 
 \fi
@@ -286,7 +294,7 @@ For a circuit with any number of capacitors, DC voltage sources, and resistors, 
 
 \subsection{Part I}
 
-\input{figures/Charge_Discharge_a.tikz}
+\input{figures/Charge_Discharge_a.tikz?1681236947269}
 
 The switch in the above circuit has been in position $a$ for a long time. At $t = 0$, the switch is moved instantaneously to position $b$. The values of the circuit elements are $\mathcal{E}= 12\text{ V}$, $C = 10\text{ mF}$, and $R = 20\text{ }\Omega$.
 
@@ -368,7 +376,7 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $a$ to $
 
 \subsection{Part II}
 
-\input{figures/Charge_Discharge_b.tikz}
+\input{figures/Charge_Discharge_b.tikz?1681236949065}
 
 The switch in the above circuit has been in position $b$ for a long time. At $t = 0$, the switch is moved instantaneously to position $a$. The values of the circuit elements are $\mathcal{E}= 12\text{ V}$, $C = 10\text{ mF}$, and $R = 20\text{ }\Omega$.
 
@@ -379,7 +387,7 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
   \item What is the current through the resistor at $t=0^-$?
 
         \ifsolutions
-        {\bf Answer: } Since the switch is on position $b$ for a long time, the charge on and voltage across the capacitor is zero. If the voltage across the capacitor is zero, then by Kirchhoff's voltage law, the voltage across the resistor must be zero. So the current through the resistor is zero.
+        {\bf Answer: } Since the switch is on position $b$ for a long time, the charge on and voltage across the capacitor is zero. If the voltage across the capacitor is zero, then by Kirchhoff's voltage law, the voltage across the resistor must be zero. So the current through the resistor is zero; $i_C(0^-)=0$.
         \else
         \vskip 56.25pt
         \fi
@@ -390,7 +398,7 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
   \item What is the voltage across the capacitor at $t=0^-$?
 
         \ifsolutions
-        {\bf Answer: } Zero.
+        {\bf Answer: } $v_C(0^-)=0$. This follows from KVL, $i(0^-)R-v_C(0^-)=0$, and the fact that $i(0^-)=0$ because the circuit had the switch at $b$ for a long time so that the capacitor was fully discharged.
         \else
         \vskip 56.25pt
         \fi
@@ -398,61 +406,57 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
         \vskip 56.25pt
         \fi
 
-\end{enumerate}
+  \item What is the charge on the capacitor at (a) $t=0^-$ and (b) $t=0^+$?
 
-\begin{enumerate}
+        \ifsolutions
+        {\bf Answer: } (a) Zero; (b) Zero
+        \else
+        \vskip 56.25pt
+        \fi
+        \ifsolutions\else
+        \vskip 56.25pt
+        \fi
 
-  \item[3.] What is the charge on the capacitor at (a) $t=0^-$ and (b) $t=0^+$?
+  \item What is the voltage across the capacitor at $t=0^+$?
 
-            \ifsolutions
-            {\bf Answer: } (a) Zero; (b) Zero
-            \else
-            \vskip 56.25pt
-            \fi
-            \ifsolutions\else
-            \vskip 56.25pt
-            \fi
+        \ifsolutions
+        {\bf Answer: } $v_C(0^+)=0$.
+        \else
+        \vskip 56.25pt
+        \fi
+        \ifsolutions\else
+        \vskip 56.25pt
+        \fi
 
-  \item[4.] What is the voltage across the capacitor at $t=0^+$?
+  \item What is the current through the resistor at $t=0^+$?
 
-            \ifsolutions
-            {\bf Answer: } Zero.
-            \else
-            \vskip 56.25pt
-            \fi
-            \ifsolutions\else
-            \vskip 56.25pt
-            \fi
+        \ifsolutions
+        {\bf Answer:} Kirchhoff's voltage law at this time is
 
-  \item[5.] What is the current through the resistor at $t=0^+$?
+        $\mathcal{E}-i(0^+)R-v_C(0^+)=0$
 
-            \ifsolutions
-            {\bf Answer:} Kirchhoff's voltage law at this time is
+        At $t=0^+$ the voltage across the capacitor is zero because it is uncharged, so $i(0^+)R=\mathcal{E}$. Thus, $i(0^+) = \mathcal{E}/R = 12\text{ V}/20\text{ }\Omega = 0.6\text{ A}$.
+        \else
+        \vskip 56.25pt
+        \fi
+        \ifsolutions\else
+        \vskip 56.25pt
+        \fi
 
-            $\mathcal{E}-i(0^+)R-v_C(0^+)=0$
+  \item What is the charge on the capacitor at time $t = 200\text{ ms}$?
 
-            At $t=0^+$ the voltage across the capacitor is zero because it is uncharged, so $i(0^+)R=\mathcal{E}$. Thus, $i(0^+) = \mathcal{E}/R = 12\text{ V}/20\text{ }\Omega = 0.6\text{ A}$.
-            \else
-            \vskip 56.25pt
-            \fi
-            \ifsolutions\else
-            \vskip 56.25pt
-            \fi
+        \ifsolutions
+        {\bf Answer: } The time constant is $RC=200\text{ ms}$. At $t=200\text{ ms}$, the charge accumulated on the capacitor is:
 
-  \item[6.] What is the charge on the capacitor at time $t = 200\text{ ms}$?
+        \begin{equation}
+        q(200\text{ s}) = C\mathcal{E}(1-e^{-(200\text{ s})/RC}) = (10\text{ mF} \cdot 12\text{ V})(1-e^{-200/200})\simeq (120\text{ mV})(0.63)\simeq 75.9\text{ mV}
+        \end{equation}
+        \else
 
-            \ifsolutions
-            {\bf Answer: } The time constant is $RC=200\text{ ms}$. At $t=200\text{ ms}$, the charge accumulated on the capacitor is:
+        \fi
+        \ifsolutions\else
 
-            \begin{equation}
-            q(200\text{ s}) = C\mathcal{E}(1-e^{-(200\text{ s})/RC}) = (10\text{ mF} \cdot 12\text{ V})(1-e^{-200/200})\simeq (120\text{ mV})(0.63)\simeq 75.9\text{ mV}
-            \end{equation}
-            \else
-
-            \fi
-            \ifsolutions\else
-
-            \fi
+        \fi
 
 \end{enumerate}
 

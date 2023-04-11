@@ -5,29 +5,13 @@
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,165); %set diagram left start at 0, and has height of 165
 
-%Straight Lines [id:da21694403558430375] 
-\draw    (63,34) -- (123,34) ;
 %Straight Lines [id:da12186668018741531] 
-\draw    (123,94) -- (123,124) ;
-%Shape: Resistor [id:dp5192799178559] 
-\draw   (63,124) -- (70.2,124) -- (71.8,114) -- (75,134) -- (78.2,114) -- (81.4,134) -- (84.6,114) -- (87.8,134) -- (91,114) -- (94.2,134) -- (95.8,124) -- (103,124) ;
-%Straight Lines [id:da4064606371405326] 
-\draw    (103,124) -- (123,124) ;
-%Straight Lines [id:da6092949468165629] 
-\draw    (43,34) -- (63,34) ;
-%Straight Lines [id:da3996966582016197] 
-\draw    (43,124) -- (63,124) ;
-%Straight Lines [id:da8432524402003263] 
-\draw    (43,34) -- (43,68.33) ;
+\draw    (118,91) -- (118,121) ;
 %Straight Lines [id:da5673924877628735] 
-\draw    (135,71.5) -- (123,94) ;
+\draw    (128,69.5) -- (118,91) ;
 %Straight Lines [id:da40110239263509695] 
-\draw    (123,34) -- (123,71) ;
-\draw [shift={(123,71)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
-%Shape: Contact [id:dp4210243094531454] 
-\draw   (43,68.33) -- (43,76.33) (43,95) -- (43,87) (58,76.33) -- (28,76.33) (58,87) -- (28,87) ;
-%Straight Lines [id:da39304851837883903] 
-\draw    (43,95) -- (43,124) ;
+\draw    (118,31) -- (118,68) ;
+\draw [shift={(118,68)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
 %Shape: Grid [id:dp4136213731791418] 
 \draw  [draw opacity=0] (206,36) -- (416,36) -- (416,120) -- (206,120) -- cycle ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (206,36) -- (206,120)(220,36) -- (220,120)(234,36) -- (234,120)(248,36) -- (248,120)(262,36) -- (262,120)(276,36) -- (276,120)(290,36) -- (290,120)(304,36) -- (304,120)(318,36) -- (318,120)(332,36) -- (332,120)(346,36) -- (346,120)(360,36) -- (360,120)(374,36) -- (374,120)(388,36) -- (388,120)(402,36) -- (402,120)(416,36) -- (416,120) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (206,36) -- (416,36)(206,50) -- (416,50)(206,64) -- (416,64)(206,78) -- (416,78)(206,92) -- (416,92)(206,106) -- (416,106)(206,120) -- (416,120) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]  ;
 %Straight Lines [id:da6371695008603995] 
@@ -45,11 +29,27 @@
 \draw    (276,114) -- (276,125) ;
 %Straight Lines [id:da5919180085071085] 
 \draw    (210,50) -- (201,50) ;
+%Shape: Resistor [id:dp13122071046108608] 
+\draw   (58,31) -- (65.2,31) -- (66.8,21) -- (70,41) -- (73.2,21) -- (76.4,41) -- (79.6,21) -- (82.8,41) -- (86,21) -- (89.2,41) -- (90.8,31) -- (98,31) ;
+%Straight Lines [id:da48328279530987794] 
+\draw    (98,31) -- (118,31) ;
+%Shape: Resistor [id:dp9509574212109306] 
+\draw   (58,121) -- (65.2,121) -- (66.8,111) -- (70,131) -- (73.2,111) -- (76.4,131) -- (79.6,111) -- (82.8,131) -- (86,111) -- (89.2,131) -- (90.8,121) -- (98,121) ;
+%Straight Lines [id:da3895846754264447] 
+\draw    (98,121) -- (118,121) ;
+%Straight Lines [id:da875812344717507] 
+\draw    (38,31) -- (58,31) ;
+%Straight Lines [id:da38331316489780587] 
+\draw    (38,121) -- (58,121) ;
+%Straight Lines [id:da3716022806272685] 
+\draw    (38,31) -- (38,65.33) ;
+%Shape: Contact [id:dp3229950478101353] 
+\draw   (38,65.33) -- (38,73.33) (38,92) -- (38,84) (53,73.33) -- (23,73.33) (53,84) -- (23,84) ;
+%Straight Lines [id:da34921956438497426] 
+\draw    (38,92) -- (38,121) ;
 
 % Text Node
-\draw (75,139.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
-% Text Node
-\draw (8,70.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
+\draw (8,50.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
 % Text Node
 \draw (208,10.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q$};
 % Text Node
@@ -58,6 +58,10 @@
 \draw (270,129.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$2\ s$};
 % Text Node
 \draw (183,43.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q_{o}$};
+% Text Node
+\draw (63,92.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$R/2$};
+% Text Node
+\draw (63,47.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$R/2$};
 
 
 \end{tikzpicture}

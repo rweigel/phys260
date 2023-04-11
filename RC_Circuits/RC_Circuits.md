@@ -22,7 +22,7 @@ where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is
 
 ## Problem
 
-Find $\tau$ for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$.
+Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$. Note that $1 \text{ }\Omega\cdot F = 1 \text{ second}$.
 
 <img src="figures/Discharging_a.svg"/>
 
@@ -51,7 +51,7 @@ For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}
 \vspace{2cm}
 \fi
 
-4. Next, sketch a plot of $q(t)$ from $t=0$ to $t=6\text{ s}$ for each of these three cases. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively.
+4. Next, sketch a plot of $q(t)$ from $t=0$ to $t=6\text{ s}$ for each of these three cases. Used a solid, dashed, and dotted line for case 1., 2., and 3., respectively. (Hint: For all curves $q(0)=Q_o$. Use the $q(2)$ values from parts 1.--3. to help sketch the curve.)
 
 <img src="figures/Discharging_b.svg"/>
 
@@ -132,13 +132,21 @@ For a circuit with any number of capacitors, DC voltage sources, and resistors, 
 
 <img src="figures/Charging_c.svg"/>
 
+(In the above circuit, the equation used in the previous problem does not apply and so you are only asked for the state of the circuit after a long time.)
+
 1. Find the charge on the capacitor a long time after the switch is closed. 
-2. Find the current in the resistor a long time after the switch is closed.
+2. Find the current in the left, middle, and right resistors after long time after the switch is closed.
 
 \ifsolutions
 **Answer**
-1. $Q_f=\mathcal{E}C$
-2. $i_{Rf}=\mathcal{E}/R$
+1. $\ds Q_f=\frac{\mathcal{E}}{2}C$
+2. $\ds i_{\text{Left}}=i_{\text{Middle}}=\frac{\mathcal{E}}{2R}$ and $i_{\text{Right}}=0$.
+
+%Note that the exact equation for $q(t)$ can be found using the technique covered in the textbook because the equation for $q$ on the capacitor simplifies to a single differential equation. Using KVL and KCL, one can show
+
+%$\ds\frac{dq}{dt}+\frac{q}{\tau}=\frac{\mathcal{E}}{3R}$, where $\ds\tau=\frac{3}{2}RC$, so if the capacitor was initially uncharged, $q(t)=\frac{\mathcal{CE}}{2}(1-e^{-t/\tau})$. After a long time ($t\gg \tau$), the 
+
+%exponential term is zero and we recover the answer to part 1.
 \else
 \fi
 
@@ -222,7 +230,7 @@ Let $t=0^-$ correspond to the time just before the switch is moved from $b$ to $
 2. What is the voltage across the capacitor at $t=0^-$?
 
    \ifsolutions
-   {\bf Answer: } $v_C(0^-)=0$.
+   {\bf Answer: } $v_C(0^-)=0$. This follows from KVL, $i(0^-)R-v_C(0^-)=0$, and the fact that $i(0^-)=0$ because the circuit had the switch at $b$ for a long time so that the capacitor was fully discharged.
    \else
    \vspace{2cm}
    \fi
