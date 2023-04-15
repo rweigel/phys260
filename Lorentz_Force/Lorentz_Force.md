@@ -61,7 +61,7 @@ The calculation of the cross product when both vectors in the cross product are 
 
 There is a mnemonic (memory) device for remembering this table. Suppose you do the cross product of two consecutive unit vectors in the order indicated by the arrows in the circle shown in the following figure. In that case, the result is the remaining unit vector (the second row in the table). If you do the cross product of two unit vectors in reverse order, the result is the remaining unit vector with a negative sign (the third row in the table).
 
-<img src="figures/Cyclic-ijk.svg"/>
+<img src="../Cross_Products/figures/Cyclic_ijk.svg"/>
 
 \ifsolutions\else
 \newpage

@@ -1,0 +1,68 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,119); %set diagram left start at 0, and has height of 119
+
+%Shape: Circle [id:dp11294753346173558] 
+\draw   (152.5,68.65) .. controls (152.5,46.83) and (170.18,29.15) .. (192,29.15) .. controls (213.82,29.15) and (231.5,46.83) .. (231.5,68.65) .. controls (231.5,90.47) and (213.82,108.15) .. (192,108.15) .. controls (170.18,108.15) and (152.5,90.47) .. (152.5,68.65) -- cycle ;
+%Straight Lines [id:da8781956764184724] 
+\draw    (156,85.14) -- (154.95,81.99) ;
+\draw [shift={(154,79.14)}, rotate = 71.57] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da3343053817606838] 
+\draw    (194,29.15) ;
+\draw [shift={(196,29.15)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da6322375299715337] 
+\draw    (228,85.15) -- (226.54,87.57) ;
+\draw [shift={(225,90.14)}, rotate = 300.99] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Circle [id:dp5219136794940211] 
+\draw   (287.5,65.65) .. controls (287.5,43.83) and (305.18,26.15) .. (327,26.15) .. controls (348.82,26.15) and (366.5,43.83) .. (366.5,65.65) .. controls (366.5,87.47) and (348.82,105.15) .. (327,105.15) .. controls (305.18,105.15) and (287.5,87.47) .. (287.5,65.65) -- cycle ;
+%Straight Lines [id:da4362645540466372] 
+\draw    (291,82.14) -- (289.95,78.99) ;
+\draw [shift={(289,76.14)}, rotate = 71.57] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da41990577950119734] 
+\draw    (328,26.15) ;
+\draw [shift={(330,26.15)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da29652914044613565] 
+\draw    (362,82.15) -- (360.31,85.63) ;
+\draw [shift={(359,88.33)}, rotate = 295.88] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Circle [id:dp3699183091255738] 
+\draw   (19.5,70.65) .. controls (19.5,48.83) and (37.18,31.15) .. (59,31.15) .. controls (80.82,31.15) and (98.5,48.83) .. (98.5,70.65) .. controls (98.5,92.47) and (80.82,110.15) .. (59,110.15) .. controls (37.18,110.15) and (19.5,92.47) .. (19.5,70.65) -- cycle ;
+%Straight Lines [id:da3848756409828027] 
+\draw    (23,87.14) -- (21.95,83.99) ;
+\draw [shift={(21,81.14)}, rotate = 71.57] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da19025846972692007] 
+\draw    (61,31.15) ;
+\draw [shift={(63,31.15)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da7581876358143522] 
+\draw    (95,87.15) -- (93.54,89.57) ;
+\draw [shift={(92,92.14)}, rotate = 300.99] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (165,62) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Cylindrical};
+% Text Node
+\draw (305,61) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Spherical};
+% Text Node
+\draw (321,3.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{r}}$};
+% Text Node
+\draw (372,69.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{\theta }}$};
+% Text Node
+\draw (271,67.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{\phi }}$};
+% Text Node
+\draw (186,6.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{s}}$};
+% Text Node
+\draw (237,67.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{\phi }}$};
+% Text Node
+\draw (136,71.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{z}}$};
+% Text Node
+\draw (35,63) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Cartesian};
+% Text Node
+\draw (53,8.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{x}}$};
+% Text Node
+\draw (104,71.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{y}}$};
+% Text Node
+\draw (3,73.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{\mathbf{z}}$};
+
+
+\end{tikzpicture}

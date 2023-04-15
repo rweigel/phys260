@@ -100,6 +100,12 @@ Computing the electric field due to one and three point charges.
 * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws) | [Markdown](Kirchhoffs_Laws/Kirchhoffs_Laws.md) | 
 * See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)
 
+## RC Circuits
+
+* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/RC_Circuits/README.md) 
+* Document: | [pdf](RC_Circuits/RC_Circuits.pdf) | [pdf solns](RC_Circuits/RC_Circuits-solutions.pdf) |
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/RC_Circuits) | [Markdown](RC_Circuits/RC_Circuits.md) | 
+
 ## Lorentz Force Law
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.md) 
