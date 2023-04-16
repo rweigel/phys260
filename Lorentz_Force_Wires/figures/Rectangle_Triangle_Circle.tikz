@@ -20,12 +20,11 @@
 \draw  (507.93,70.5) -- (532.31,70.5)(510.37,50.42) -- (510.37,72.73) (525.31,65.5) -- (532.31,70.5) -- (525.31,75.5) (505.37,57.42) -- (510.37,50.42) -- (515.37,57.42)  ;
 \draw   ;
 
-%Shape: Ellipse [id:dp9293791039005939] 
+%Shape: Ellipse [id:dp5567770123979274] 
 \draw  [line width=1.5]  (439.5,200.92) .. controls (439.5,173.17) and (462,150.67) .. (489.75,150.67) .. controls (517.5,150.67) and (540,173.17) .. (540,200.92) .. controls (540,228.67) and (517.5,251.17) .. (489.75,251.17) .. controls (462,251.17) and (439.5,228.67) .. (439.5,200.92) -- cycle ;
-%Straight Lines [id:da13823415599894506] 
-\draw    (456.78,240.02) -- (458.4,241.2) ;
-\draw [shift={(460.82,242.97)}, rotate = 216.03] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-
+%Straight Lines [id:da23953908186484085] 
+\draw    (456.78,239.02) -- (458.4,240.2) ;
+\draw [shift={(460.82,241.97)}, rotate = 216.03] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
 %Straight Lines [id:da0293280313682327] 
 \draw    (143,110) -- (257,110) ;
 \draw [shift={(260,110)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
@@ -46,9 +45,9 @@
 % Text Node
 \draw (184,48.07) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
 % Text Node
-\draw (82,11.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {a.};
+\draw (82,11.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont a.}};
 % Text Node
-\draw (390,155.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {c.};
+\draw (391,152) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont c.}};
 % Text Node
 \draw (194.28,176.63) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
 % Text Node
@@ -56,19 +55,7 @@
 % Text Node
 \draw (511.48,36.16) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$y$};
 % Text Node
-\draw (86,148.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {b.};
-% Text Node
-\draw (483.72,241.82) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
-% Text Node
-\draw (513.8,150.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
-% Text Node
-\draw (433.8,190.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
-% Text Node
-\draw (533.35,190.41) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
-% Text Node
-\draw (459.75,215.47) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
-% Text Node
-\draw (483.8,140.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+\draw (85,151) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\fontfamily{ptm}\selectfont b.}};
 % Text Node
 \draw (274,62.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$6L_{o}$};
 % Text Node
@@ -77,6 +64,18 @@
 \draw (178,245.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$11L_{o}$};
 % Text Node
 \draw (104,192.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$6L_{o}$};
+% Text Node
+\draw (483.8,140.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (459.75,215.47) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
+% Text Node
+\draw (533.35,190.41) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (433.8,190.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (513.8,150.8) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
+% Text Node
+\draw (483.72,241.82) node [anchor=north west][inner sep=0.75pt]    {$\spot $};
 
 
 \end{tikzpicture}

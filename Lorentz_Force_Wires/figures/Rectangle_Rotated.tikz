@@ -9,15 +9,15 @@
 \draw    (70,12) -- (70,130) ;
 \draw [shift={(70,10)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
 %Shape: Polygon [id:ds49885024338948014] 
-\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=0.64 ] (70,130) -- (100,160) -- (100,80) -- (70.38,60.5) -- cycle ;
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=0.64 ][line width=1.5]  (70,130) -- (100,160) -- (100,80) -- (70.38,60.5) -- cycle ;
 %Straight Lines [id:da902234876615845] 
 \draw    (71.41,131.41) -- (98.59,158.59) ;
-\draw [shift={(100,160)}, rotate = 225] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
-\draw [shift={(70,130)}, rotate = 45] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+\draw [shift={(100,160)}, rotate = 225] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+\draw [shift={(70,130)}, rotate = 45] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
 %Straight Lines [id:da06385189717672302] 
 \draw    (100,82) -- (100,158) ;
-\draw [shift={(100,160)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
-\draw [shift={(100,80)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.32) .. controls (2.78,-0.56) and (1.32,-0.12) .. (0,0) .. controls (1.32,0.12) and (2.78,0.56) .. (4.37,1.32)   ;
+\draw [shift={(100,160)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
+\draw [shift={(100,80)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (6.56,-1.97) .. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84) .. (6.56,1.97)   ;
 %Straight Lines [id:da7901399419181652] 
 \draw    (70,130) -- (11.54,178.72) ;
 \draw [shift={(10,180)}, rotate = 320.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
@@ -31,7 +31,7 @@
 \draw [shift={(70.19,85.25)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
 
 % Text Node
-\draw (81,122.4) node [anchor=north west][inner sep=0.75pt]    {$b$};
+\draw (80,122.4) node [anchor=north west][inner sep=0.75pt]    {$w$};
 % Text Node
 \draw (22,172.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
 % Text Node
@@ -39,9 +39,9 @@
 % Text Node
 \draw (76,2.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
 % Text Node
-\draw (104,104.4) node [anchor=north west][inner sep=0.75pt]    {$c$};
+\draw (104,104.4) node [anchor=north west][inner sep=0.75pt]    {$h$};
 % Text Node
-\draw (61,154.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
+\draw (61,154.4) node [anchor=north west][inner sep=0.75pt]    {$\theta _{o}$};
 % Text Node
 \draw (45,80.4) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
 

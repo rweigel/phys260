@@ -41,7 +41,7 @@
 
 % Text Node
 \draw (6,54.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$\textcolor[rgb]{0,0,1}{\begin{aligned}
-\mathbf{F} & =I_{o} (-6L_{o}\hat{\mathbf{\jmath }} )\times (B_{o}\hat{k} )\\
+\mathbf{F} & = I_{o} (\textcolor[rgb]{0.25,0.46,0.02}{-6L}\textcolor[rgb]{0.25,0.46,0.02}{_{o}}\textcolor[rgb]{0.25,0.46,0.02}{\hat{\mathbf{\jmath }}} )\times (B_{o}\hat{k} )\\
  & =-6L_{o} I_{o} B_{o}\hat{\imath }
 \end{aligned}}$};
 % Text Node
@@ -49,7 +49,7 @@
 \mathbf{L} & =+12 L_{o}\hat{\imath }
 \end{aligned}}$};
 % Text Node
-\draw (163,84.4) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
+\draw (160,85.4) node [anchor=north west][inner sep=0.75pt]    {$I_{o}$};
 % Text Node
 \draw (293.55,2.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$y$};
 % Text Node
@@ -63,14 +63,18 @@
 \mathbf{L} & =+ 6L_{o}\hat{\jmath }
 \end{aligned}}$};
 % Text Node
-\draw (101,15.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{\begin{aligned}
+\draw (101,14.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\textcolor[rgb]{0.25,0.46,0.02}{\begin{aligned}
 \mathbf{L} & =-12 L_{o}\hat{\imath }
 \end{aligned}}$};
 % Text Node
 \draw (139,154.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$\textcolor[rgb]{0,0,1}{\begin{aligned}
-\mathbf{F} & =I_{o} (+12L_{o}\hat{\imath } )\times (B_{o}\hat{k} )\\
+\mathbf{F} & = I_{o} (\textcolor[rgb]{0.25,0.46,0.02}{+12L}\textcolor[rgb]{0.25,0.46,0.02}{_{o}}\textcolor[rgb]{0.25,0.46,0.02}{\hat{\imath }} )\times (B_{o}\hat{k} )\\
  & =-12L_{o} I_{o} B_{o}\hat{\jmath }
 \end{aligned}}$};
+% Text Node
+\draw (179,69.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,opacity=1 ]  {$\odot $};
+% Text Node
+\draw (196,71.26) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,opacity=1 ]  {$\mathbf{B}$};
 
 
 \end{tikzpicture}

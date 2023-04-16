@@ -1,16 +1,16 @@
 ```mdextension
-Title: Lorentz Force on Wires
+Title: Lorentz Force and Torque on Current Loops
 ```
 
 # Forces on Straight Wires
 
-A wire carrying a current contains many moving charges. If a current--carrying wire is in a region of space with a magnetic field, the Lorentz force on the moving charges in the wire results in force on the wire.
+A wire carrying a current contains many moving charges. If a current--carrying wire is in a region of space with a magnetic field, the Lorentz force on the moving charges in the wire results in a force on the wire.
 
-Each charge $q$ moving with a velocity $\bfvec{v}$ in a segment of wire  will have a force on it of
+Each charge $q$ moving with a velocity $\bfvec{v}$ in a segment of wire  will have a Lorentz force on it of
 
 $$\bfvec{F} = q\bfvec{v}\times\bfvec{B}$$
 
-For (1) a straight segment of wire with (2) the same $\bfvec{B}$ on all parts of it, this equation can be transformed into an equation for the force on a segment with current $\bfvec{I}$ and length $L$:
+For a straight segment of wire of length $L$ with the same $\bfvec{B}$ on all parts of it, this equation can be transformed into an equation for the force on a straight segment with current $\bfvec{I}$:
 
 $$\bfvec{F} = L\bfvec{I}\times\bfvec{B}$$
 
@@ -18,23 +18,27 @@ or, equivalently, by defining a length vector $\bfvec{L}$ with the same directio
 
 $$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
 
-As was the case for the Lorentz force equation for a charge $q$, the magnitude of this cross product can be written in a simplified form:
+As was the case for the Lorentz force equation for a charge $q$, the magnitude of this cross--product can be written in a simplified form:
 
 $$F=ILB\sin\phi$$
 
-where $\phi$ is the angle between $\bfvec{L}$ and $\bfvec{B}$ and $0 \le\phi \le 180^{\circ}$. The direction of the force is determined using the cross--product right--hand rule by  crossing $\bfvec{L}$ with $\bfvec{B}$.
+where $\phi$ is the angle between $\bfvec{L}$ and $\bfvec{B}$ and $0 \le\phi \le 180^{\circ}$. The direction of the force is determined using the cross--product right--hand rule by crossing $\bfvec{L}$ with $\bfvec{B}$.
 
-%Computing the forces when the first constraint is not satisfied is considered in Section 5 of this tutorial. Also note that to have a steady current, the current must flow in a closed loop (see pg. 820 of Sears and Zemansky's University Physics, 14th edition).
+\ifsolutions
+\else
+\fi
+
+\newpage
 
 ## Example
 
 <img src="figures/Rectangle_a.svg"/>
 
-In the figure above, a magnetic field of magnitude $B_o$ is pointing out of the page and the rectangle--shaped wire carries a current $I_o$, has a height of $6L_o$, and a width of $12L_o$.
+In the figure above, a magnetic field of magnitude $B_o$ is pointing out of the page, and the rectangle--shaped wire carries a current $I_o$, has a height of $6L_o$, and a width of $12L_o$.
 
 Determine the force on each side of the rectangle and the net force on the loop.
 
-{\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right--handed coordinate system. (In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$. A common error in a problem such as this is to choose the $+z$ direction into the page.)
+{\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right--handed coordinate system. (In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$.)
 
 <img src="figures/Rectangle_b.svg"/>
 
@@ -50,11 +54,12 @@ Determine the force on each side of the rectangle and the net force on the loop.
 
 * Top: $\bfvec{F}=I_o(-12L_o\ihat)\times (B_o\khat)=+12I_oL_oB_o\jhat$.
 
-The sum of the forces is zero. It can be shown that any current loop that has the same $\bfvec{B}$ on all parts of it will have a net force of zero. (To see this, think of computing the force by adding all of the blue vectors head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.)
+The sum of the forces is zero.
 
 ## Problem 
 
 \ifsolutions
+<img src="figures/Rectangle_Triangle_Circle_Solutions.svg"/>
 \else
 <img src="figures/Rectangle_Triangle_Circle.svg"/>
 \fi
@@ -68,33 +73,33 @@ The sum of the forces is zero. It can be shown that any current loop that has th
 
 2. For the current loop in c., determine {\bf only} the direction of the force at each of the five points shown as solid dots when $\bfvec{B}=B_o\khat$. Draw a vector on the diagram to indicate the direction of the force at that point. What is the net force on this loop?
 
-\ifsolutions
-<img src="figures/Rectangle_Triangle_Circle_Solutions.svg"/>
-\fi
+\newpage
 
 # Torques on Current Loops
 
-In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). The general result is that a closed loop in a _constant_ magnetic field will not have a net force.
+In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). The general result is that a closed loop in a _constant_ magnetic field will not have a net force. To see this, think of computing the force by adding all of the force vectors in each of the previous problems head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.
 
-However, a closed loop in a constant magnetic field can have a net torque (in which case it will tend to rotate).
+A closed loop in a constant magnetic field can have a net torque (in which case it will tend to rotate).
 
 The torque on a current loop that lies in a plane is:
 
 $$\vec{\boldsymbol{\tau}} = \vec{\boldsymbol{\mu}}\times\bfvec{B}$$
 
-where $\vec{\boldsymbol{\mu}}$ is the magnetic moment defined as $\vec{\boldsymbol{\mu}}=I\bfvec{A}$ and $\bfvec{A}=A\hat{\mathbf{n}}$ is the area vector for a loop. The magnitude of the area vector is simply the area of the loop. The direction of the area vector is determined by a right--hand rule: wrap your fingers along the direction of current and your thumb points in the direction of the area vector.
+where $\vec{\boldsymbol{\mu}}$ is the magnetic moment defined as $\vec{\boldsymbol{\mu}}=I\bfvec{A}$ and $\bfvec{A}=A\hat{\mathbf{n}}$ is the area vector for a loop. The magnitude of the area vector is simply the area of the loop. The direction of the area vector is determined by a right--hand rule: wrap your fingers along the direction of the current and your thumb points in the direction of the area vector.
 
 The equation $\vec{\boldsymbol{\tau}} = \boldsymbol{\mu}\times\bfvec{B} = I\bfvec{A}\times\bfvec{B}$ predicts that when $\bfvec{A}$ is perpendicular to $\bfvec{B}$, the torque magnitude is the largest. To see this, note that $I\bfvec{A}\times\bfvec{B}$ can be equivalently written as $IAB\sin\phi$, where $\phi$ is the angle between $\bfvec{A}$ and $\bfvec{B}$. When $\phi = 90^\circ$, the cross product will have the largest magnitude.
 
 **Interpreting the torque unit vector**
 
-1. A torque in the $+\khat$ direction corresponds to rotation in the same sense as rotation of the $+\ihat$ axis towards the $+\jhat$ axis;
-2. a torque in the $+\ihat$ direction corresponds to rotation in the same sense as rotation of the $+\jhat$ axis towards the $+\khat$ axis;
-3. a torque in the $+\jhat$ direction corresponds to rotation in the same sense as rotation of the $+\khat$ axis towards the $+\ihat$ axis.
+1. A torque in the $+\khat$ direction corresponds to a rotation in the same sense as rotation of the $+\ihat$ axis towards the $+\jhat$ axis;
+2. a torque in the $+\ihat$ direction corresponds to a rotation in the same sense as rotation of the $+\jhat$ axis towards the $+\khat$ axis;
+3. a torque in the $+\jhat$ direction corresponds to a rotation in the same sense as rotation of the $+\khat$ axis towards the $+\ihat$ axis.
 
 You do not need to memorize these -- they can be obtained from the following diagram. Rotating $\ihat$ towards $\jhat$ gives $\khat$ (item 1. above). Rotating $\jhat$ towards $\khat$ gives $\jhat$ (item 2. above), etc.
 
 <img src="../Cross_Products/figures/Cyclic_ijk.svg"/>
+
+\newpage
 
 ## Problem -- $\bfvec{B}$ $\perp$ to Loop
 
@@ -104,12 +109,12 @@ You do not need to memorize these -- they can be obtained from the following dia
 <img src="figures/Rectangle_Triangle_Torque.svg"/>
 \fi
 
-For the three current loops, the magnetic field is constant and has a magnitude of $B_o$.
+The three current loops are in a region of space with a constant magnetic field and a magnitude of $B_o$.
 
 1. Will loop a. tend to rotate? If so, what axis will it tend to rotate about? Determine this by drawing the direction of the force (determined using the right--hand rule) on each segment of the wire.
 
    \ifsolutions
-   {\bf Answer: }Yes. Will rotate about $y$ ($\jhat$) axis counterclockwise when viewed from point on $+y$ axis. (Or, rotates in the same sense as rotation of $z$ ($\khat$) towards $x$ ($\ihat$).)
+   {\bf Answer: }Yes. Will rotate about $y$ ($\jhat$) axis counterclockwise when viewed from a point on $+y$ axis. (Or, rotates in the same sense as rotation of $z$ ($\khat$) towards $x$ ($\ihat$).)
    \else
    \vspace{2cm}
    \fi
@@ -125,7 +130,7 @@ For the three current loops, the magnetic field is constant and has a magnitude 
 3. Will loop b. tend to rotate? If so, what axis will it tend to rotate about?
 
    \ifsolutions
-   {\bf Answer:} Yes. Will rotate about $y$ ($\jhat$) axis clockwise when viewed from point on $+y$ axis. (Or, rotates in the same sense as rotation of $x$ ($\ihat$) towards $z$ ($\khat$).
+   {\bf Answer:} Yes. Will rotate about $y$ ($\jhat$) axis clockwise when viewed from a point on $+y$ axis. (Or, rotates in the same sense as rotation of $x$ ($\ihat$) towards $z$ ($\khat$).
    \else
    \vspace{2cm}
    \fi
