@@ -24,10 +24,6 @@ $$F=ILB\sin\phi$$
 
 where $\phi$ is the angle between $\bfvec{L}$ and $\bfvec{B}$ and $0 \le\phi \le 180^{\circ}$. The direction of the force is determined using the cross--product right--hand rule by crossing $\bfvec{L}$ with $\bfvec{B}$.
 
-\ifsolutions
-\else
-\fi
-
 \newpage
 
 ## Example
@@ -59,9 +55,9 @@ The sum of the forces is zero.
 ## Problem 
 
 \ifsolutions
-<img src="figures/Rectangle_Triangle_Circle_Solutions.svg"/>
+<img src="figures/Rectangle_Triangle_Circle_Solutions.svg">
 \else
-<img src="figures/Rectangle_Triangle_Circle.svg"/>
+<img src="figures/Rectangle_Triangle_Circle.svg">
 \fi
 
 1. For the current loops in a. and b. in the figure above, determine the magnitude and direction of the force on each segment of the wire and the net force on the loop given that a magnetic field of magnitude $B_o$ points out of the page. Draw the force vector on the line segments and show your calculation on the figure or in the space below.

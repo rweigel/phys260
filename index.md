@@ -30,24 +30,42 @@ If you have corrections, comments, or suggestions please [submit an issue](https
 
 The figures were created using [MathCha](https://www.mathcha.io/). To edit a figure using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
 
-# Activities
+# Modules
+
+## Vector Review
+
+* Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that horizontal component is not always $\cos$ of angle given.
+* Given a diagram showing vector components, find magnitude and direction
+* Given a diagram showing two vectors with known magnitudes and directions, find net components in unit vector notation. Then find net vector magnitude and direction
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
-Using Coulomb's law to find the electric force vector using two methods that are used in the textbook.
+* Background material:
+  * PowerPoint: []()
+  * Reading: [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+  * Videos
+    * [Solving 2-- and 3--charge problems in 1-D](https://www.youtube.com/watch?v=kCp5yYjo9zE)
+    * Solving 2-- and 3--charge problems in 2-D
 
-* Documents:
+* Activity: Use Coulomb's law (without $\rhat$ notation) to find the electric force magnitude and direction between two charges 
+  * Documents:
 | [pdf](Electric_Force/Electric_Force.pdf)
 | [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
 | [html](Electric_Force/Electric_Force.html)
 |
-* Source Files:
+  * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
 |
-* Covered in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
-## Electric Field and $\rhat$
+* Demonstration:
+  * [Estimating charge using balloons](https://youtu.be/K-8nCXY-iSI?t=29)
+
+## The $\rhat$ Unit Vector
+
+Define and given and give have them solve same problems on last activity using it.
+
+## Electric Field
 
 Computing the electric field due to one and three point charges.
 
@@ -110,7 +128,7 @@ Computing the electric field due to one and three point charges.
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.md) 
 * Document: | [pdf](Lorentz_Force/Lorentz_Force.pdf) | [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force) | [Markdown](Lorentz_Force_Law/Lorentz_Force_Law.md) | 
+* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force) | [Markdown](Lorentz_Force/Lorentz_Force.md) | 
 
 ## Lorentz Force Law on Wires
 

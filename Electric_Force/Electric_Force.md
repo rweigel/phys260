@@ -42,7 +42,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
    <img src="figures/Two_Charges-b.svg"/>
 
 \ifsolutions
-\clearpage
+\newpage
 \fi
 
 # Problem I
