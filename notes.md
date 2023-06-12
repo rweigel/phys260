@@ -3,12 +3,21 @@
 
 https://www.youtube.com/watch?v=V9RLc9EX1so&ab_channel=TheOrganicChemistryTutor
 
+https://www.youtube.com/watch?v=t6S-PX14Pu4&ab_channel=WNYTutor
+short and basic 2D Coulomb force problem WITHOUT rhat vectors. The guy goes through a lot of short problems, but from what I can tell, never uses rhat.
+
+https://www.youtube.com/watch?v=n_VQjZ4OY2w&list=PL22NDeS914Hee8LUHUVMQ1Ru7HtxpuPTu&index=55&ab_channel=WNYTutor
+another reasonably short 2D electric field problem WITHOUT rhat.
+
 https://www.youtube.com/watch?v=rB83DpBJQsE&t=185s&ab_channel=3Blue1Brown
 This video is more about vector fields but is still a fantastic visualization of the concept. Electric fields and Maxwells equations are directly mentioned (around the 6:00 min mark), but may be too advanced for students in anything other than a conceptual capacity. 
 
 # Continuous Charge Distribution
 
 https://www.youtube.com/watch?v=B5UyXkFCg5s&ab_channel=TheOrganicChemistryTutor
+
+https://www.youtube.com/watch?v=r2IfBG-VOCE&list=PL22NDeS914Hee8LUHUVMQ1Ru7HtxpuPTu&index=42&ab_channel=WNYTutor
+shorter continuous charge distribution problem of an insulating rod. Probably only need to focus on parts a-d.
 
 https://www.youtube.com/watch?v=22hdENUMry0&ab_channel=Sb%C3%ADrkafyzik%C3%A1ln%C3%ADchpokus%C5%AF
 Not the most exciting, but the above video shows how charges are distributed on the surfaces of insulators and conductors. Notice how the charge stays localized near the initial induction point for the pipe, but gets evenly distributed along the surface of the conducting coffee can. 
