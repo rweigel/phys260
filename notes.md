@@ -1,19 +1,9 @@
 
+Jessica's activities: https://www.overleaf.com/project/63b5dc2dcc1a05237dad2d5e
+
 # Electric Field
 
 https://www.youtube.com/watch?v=V9RLc9EX1so&ab_channel=TheOrganicChemistryTutor
-
-https://www.youtube.com/watch?v=t6S-PX14Pu4&ab_channel=WNYTutor
-short and basic 2D Coulomb force problem WITHOUT rhat vectors. The guy goes through a lot of short problems, but from what I can tell, never uses rhat.
-
-https://www.youtube.com/watch?v=n_VQjZ4OY2w&list=PL22NDeS914Hee8LUHUVMQ1Ru7HtxpuPTu&index=55&ab_channel=WNYTutor
-another reasonably short 2D electric field problem WITHOUT rhat.
-
-https://www.youtube.com/watch?v=B5LVoU_a08c&ab_channel=uclaphysicsvideo
-The above video walks through a reproduction of the original experiment to confirm Coulomb’s Law. By charging two spheres (through static electricity) and monitoring the motion of the two bodies, the relation of Coulomb’s law is deduced.
-
-https://www.youtube.com/watch?v=rB83DpBJQsE&t=185s&ab_channel=3Blue1Brown
-This video is more about vector fields but is still a fantastic visualization of the concept. Electric fields and Maxwells equations are directly mentioned (around the 6:00 min mark), but may be too advanced for students in anything other than a conceptual capacity. 
 
 # Continuous Charge Distribution
 
