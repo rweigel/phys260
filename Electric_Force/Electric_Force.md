@@ -5,8 +5,6 @@ Title: Electric Force
 % Figures:
 % https://www.mathcha.io/editor/5wDQpF09tVvhYnVkOMFvlJp3hDwwMQ0sDKkZme
 
-This activity covers topics in [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_). If you need to review vectors, see [sections 1.6-1.8 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkXaUZ-y5jF5c2ptpJhmK-XjrsSX_hfD/view?usp=sharing_remove_) and  [Vectors](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors) at Khan Academy.
-
 # Coulomb's Law
 
 *Magnitude*
@@ -21,9 +19,11 @@ where $r$ is the distance between $q_1$ and $q_2$. To simplify notation, we are 
 
 Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges have a charge of $q$.
 
-1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
-2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
-3. If the charges have opposite signs, how will your answers to 1. and 2. change?
+1. Find the magnitude of the force of $q_1$ on $q_2$.
+2. Find the direction of the force of $q_1$ on $q_2$ in terms of an angle with respect to the $+x$--axis with counterclockwise positive.
+3. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
+4. If $q_1=q$ and $q_2=-q$, how will your answers to 1.--3. change?
+5. If $q_1=-q$ and $q_2=-q$, how will your answers to 1.--3. change?
 
 **Solution**
 
@@ -31,16 +31,39 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
    $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$$
 
-   The charges will repel each other, so the direction of forces of one on the other will be as shown in the left part of the following diagram.
+2. The charges will repel each other, so the direction of forces of one on the other will be as shown in the left part of the following diagram. The angle of $F_{1\mbox{ on } 2}$ is $+45^\circ$ with respect to the $+x$--axis with counterclockwise positive.
 
    <img src="figures/Two_Charges-a.svg" width="70%"/>
 
-2. Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. The right part of the above diagram shows the calculation of the components $F_x$ and $F_y$, from which it follows that $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. 
+3. Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. The right part of the above diagram shows the calculation of the components $F_x$ and $F_y$, from which it follows that $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. 
 
-3. The magnitude will not change (it is by definition a positive number). Assume "Opposite signs" means that one is positive and one is negative and still $|q_1|=|q_2|=q$. The force vectors will reverse direction as shown on the left in the following diagram. The diagram on the right shows the calculation of $\bfvec{F}_{1\mbox{ on } 2}$, from which it follows that $\bfvec{F}_{1\mbox{ on } 2} = -F\cos 45^\circ \ihat - F\sin 45^\circ \jhat$. Note that reversing the direction of a vector is the same as multiplying each of its components by $-1$.
+4. &nbsp;
+
+   p1
+
+   The magnitude will not change (it is by definition a positive number).
+
+   p2
+   
+   The force vectors will reverse direction as shown on the left in the following diagram. The angle of $F_{1\mbox{ on } 2}$ is $225^\circ$ with respect to the $+x$ axis with counterclockwise positive.
+ 
+   p3.
+   
+   When the angle $\theta$ of a vector $\bfvec{V}$ is given with respect to $+x$--axis, it can be written in component form without using a diagram using the formula $\bfvec{V} = V\cos\ihat + V\sin\jhat$. Thus,
+
+    $\bfvec{F}_{1\mbox{ on } 2} = F\cos 225^\circ \ihat + F\sin 225^\circ \jhat$.
+
+      Alternatively, the diagram on the right of the following figure shows the calculation of $\bfvec{F}_{1\mbox{ on } 2}$ using a different angle and manually inserting the signs of the components based on the diagram. The result is
+
+      $\bfvec{F}_{1\mbox{ on } 2} = -F\cos 45^\circ \ihat - F\sin 45^\circ \jhat$.
+
+      These two answers are identical (what trig identity can be used to show this?).
+
+      Comparing $\bfvec{F}_{1\mbox{ on } 2} = -F\cos 45^\circ \ihat - F\sin 45^\circ \jhat$ with the answer for part 3. of the original problem, we see that to reverse the direction of a vector, we can multiply each of its components by $-1$.
 
    <img src="figures/Two_Charges-b.svg"/>
 
+5. The magnitude is the same, as before. The charges repel, so the direction is the same as in the answer to 2. and the force vector is the same as the answer to 3.
 \ifsolutions
 \newpage
 \fi
@@ -49,15 +72,37 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
 Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges have a charge of $q$. Draw this charge configuration and then using the steps in the previous example,
 
-1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
-2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
-3. If the charges have opposite signs, how will your answers to 1. and 2. change?
+1. Find the magnitude of the force of $q_1$ on $q_2$.
+2. Find the direction of the force of $q_1$ on $q_2$ in terms of an angle with respect to the $+x$--axis with counterclockwise positive.
+3. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
+4. If $q_1=q$ and $q_2=-q$, how will your answers to 1. and 2. change?
+5. If $q_1=-q$ and $q_2=-q$, how will your answers to 1.--3. change?
 
 \ifsolutions
 {\bf Solution}
 1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$
-2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 45^\circ \ihat - \sin 45^\circ \jhat)$
-3. 1.: No change; 2. Assuming "Opposite signs" means that one is positive and one is negative and still $|q_1|=|q_2|=q$, $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\cos 45^\circ \ihat + \sin 45^\circ \jhat)$
+2. $315^\circ$ (or $-45^\circ$)
+3.  
+   $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 315^\circ \ihat + \sin 315^\circ \jhat)$
+
+   or
+
+   $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 45^\circ \ihat - \sin 45^\circ \jhat)$
+
+4.  
+   p1. No change.
+
+   p2. $+135^\circ$
+
+   p3. 
+      $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 135^\circ \ihat + \sin 135^\circ \jhat)$
+
+      or
+
+      $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\cos 45^\circ \ihat + \sin 45^\circ \jhat)$
+
+5. Answers to 1.--3. are the same.
+
 \else
 
 <img src="figures/grid.svg" style="width:90%"/>
@@ -68,11 +113,7 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 
 # Problem II
 
-Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ has a charge of $+q$. Charge $q_2$ has a charge of $+q$, where $q$ is a positive number. Draw this charge configuration and then using the steps in the previous example,
-
-1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
-2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
-3. If the charges have opposite signs, how will your answers to 1. and 2. change?
+Answer the questions 1.--3. of Problem I in the previous problem for charge $q_1$ at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$.
 
 \ifsolutions
 {\bf Solution}
@@ -85,8 +126,6 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
    Alternatively, from the diagram on the right, $\sin\theta = 2a/\sqrt{5}a$ and $\cos\theta = 1a/\sqrt{5}a$, so 
    $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$.
 
-3. 1.: No change; 2. Assuming "Opposite signs" means that one is positive and one is negative and still $|q_1|=|q_2|=q$, $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(-\sin \theta \ihat + \cos \theta\jhat)$; $\theta=63.4^\circ$.
-
 \else
 
 <img src="figures/grid.svg" style="width:80%"/>
@@ -95,11 +134,7 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$. Charge $q_1$ 
 
 # Problem III
 
-Charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$ has a charge of $-q$. Charge $q_2$ has a charge of $+q$, where $q$ is a positive number. Draw this charge configuration and then using the steps in the previous example,
-
-1. Find the magnitude and direction of the force of $q_1$ on $q_2$.
-2. Write the force of $q_1$ on $q_2$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$.
-3. If the charges have opposite signs, how will your answers to 1. and 2. change?
+Answer questions 1.--3. of Problem I for charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$ has a charge of $-q$. Charge $q_2$ has a charge of $+q$.
 
 \ifsolutions
 
@@ -107,12 +142,22 @@ Charge $q_1$ is at $(x,y)=(-a,0)$ and charge $q_2$ is at $(0, 3a)$. Charge $q_1$
 <img src="figures/Two_Charges-d.svg"/>
 
 1. $r=\sqrt{a^2+(3a)^2}$, $F=k|q(-q)|/r^2=kq^2/10a^2$
-2. $\bfvec{F}=-F\sin\theta\ihat - F\cos\theta\jhat$, where $\theta=\tan^{-1}(1/3)=18.4^\circ$.
 
-   Alternatively, from the diagram, $\sin\theta = a/\sqrt{10}a$ and $\cos\theta = 3a/\sqrt{10}a$, so 
-   $\ds\bfvec{F}_{1\mbox{ on } 2} = F\left(-\frac{1}{\sqrt{10}}\ihat - \frac{3}{\sqrt{10}}\jhat\right)$.
+2. The angle $\theta$ shown in the diagram is $\theta=\tan^{-1}(1/3)=18.4^\circ$, so the angle with respect to the $+x$--axis is $270-18.4=251.6^\circ$
 
-3. 1.: No change; 2.: Note: the problem statement should have been "if both charges have the _same_ sign" (the charges were given to have opposite signs). In this case: $\bfvec{F}_{1\mbox{ on } 2}=+F\sin\theta\ihat + F\cos\theta\jhat$.
+3. 
+
+   $\bfvec{F}=F\sin251.6\^\circ\ihat - F\cos251.6^\circ\jhat$
+
+   or
+
+   $\bfvec{F}=-F\sin 18.4\^\circ\ihat - F\cos18.4^\circ\jhat$
+
+   Alternatively, from the diagram, 
+   
+   $\sin\theta = a/\sqrt{10}a$ and $\cos\theta = 3a/\sqrt{10}a$, so 
+   
+   $\ds\bfvec{F}_{1\mbox{ on } 2} = F\left(-\frac{1}{\sqrt{10}}\ihat - \frac{3}{\sqrt{10}}\jhat\right)$
 
 \else
 
