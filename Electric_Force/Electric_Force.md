@@ -49,7 +49,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
  
    p3.
    
-   When the angle $\theta$ of a vector $\bfvec{V}$ is given with respect to $+x$--axis, it can be written in component form without using a diagram using the formula $\bfvec{V} = V\cos\ihat + V\sin\jhat$. Thus,
+   When the angle $\theta$ of a vector $\bfvec{V}$ is given with respect to $+x$--axis, it can be written in component form without using a diagram using the formula $\bfvec{V} = V\cos\theta\ihat + V\sin\theta\jhat$. Thus,
 
     $\bfvec{F}_{1\mbox{ on } 2} = F\cos 225^\circ \ihat + F\sin 225^\circ \jhat$.
 
