@@ -1,0 +1,884 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>README</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
+  <style>
+    #toc>ol ol {
+      display: none
+    }
+
+    body {
+      background-image: url("https://rweigel.github.io/biedit/img/paper.png")
+    }
+
+    .body {
+      display: flex;
+      min-width: 50%;
+      max-height: 100%;
+      position: absolute;
+      background-image: url("https://rweigel.github.io/biedit/img/paper.png");
+    }
+
+    #toc {
+      flex: 0 1 auto;
+      margin-top: 0em;
+      margin-right: 1em;
+      max-width: 12em;
+      overflow: hidden auto;
+    }
+
+    #toc .toctext {
+      color: darkblue;
+    }
+
+    #toc .toctext-empty {
+      min-width: 1em;
+      border-bottom: 1px solid blue;
+    }
+
+    #toc ol {
+      list-style-type: decimal;
+      margin: 0.25em 0em 0em 0.25em;
+      padding-inline-start: 1em;
+    }
+
+    #toc a {
+      text-decoration: none;
+    }
+
+    #display {
+      flex: 1 1 80%;
+      overflow: hidden auto;
+      overflow-wrap: break-word;
+    }
+
+    #display .abstract {
+      text-align: center;
+      font-size: 100%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display .title {
+      text-align: center;
+      font-size: 150%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+
+    #display .subtitle {
+      text-align: center;
+      font-size: 120%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.2em;
+    }
+
+    #display .date {
+      text-align: right;
+      color: black;
+    }
+
+    #display .block {
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+    #display .block>.comment {
+      display: none;
+    }
+
+    #display .hr {
+      width: 100%;
+      height: 1px;
+      display: block;
+      margin: 0.5em;
+      border-top: 1px solid black;
+    }
+
+    #display a {
+      text-decoration-line: none;
+      text-decoration-color: black;
+      color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
+    }
+
+    #display p {
+      width: 100%;
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display pre {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display h1 {
+      color: darkblue;
+      border-bottom: 2px solid darkblue;
+    }
+
+    #display h2 {
+      border-bottom: 1px solid black;
+    }
+
+    #display h3 {
+      border-bottom: 1px dotted black;
+    }
+
+    #display img {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      max-width: 100%;
+    }
+
+    figure {
+      display: block;
+      margin-block: 0em;
+      margin-inline: 0px;
+    }
+
+    details>summary {
+      font-weight: bold;
+    }
+
+    details {
+      padding-left: 0.5em;
+    }
+
+    details[open] {
+      border: 1px solid black;
+      padding: 0em 0em 0em 0.5em;
+    }
+
+    table {
+      padding: 0px;
+      display: block;
+      width: 100%;
+    }
+
+    table tr {
+      border-top: 1px solid rgb(204, 204, 204);
+      background-color: white;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table tr:nth-child(2n) {
+      background-color: rgb(248, 248, 248);
+    }
+
+    table tr th {
+      font-weight: bold;
+      border: 1px solid rgb(204, 204, 204);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr td {
+      border: 1px solid rgb(204, 204, 204);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr th :first-child,
+    table tr td :first-child {
+      margin-top: 0px;
+    }
+
+    table tr th :last-child,
+    table tr td :last-child {
+      margin-bottom: 0px;
+    }
+
+    #display code {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-radius: 0px;
+      white-space: pre-wrap;
+    }
+
+    #display code~.line-number {
+      margin-top: 3px;
+      margin-right: 3px;
+    }
+
+    #display pre {
+      width: 100%;
+      text-indent: 0.75em;
+      margin: 0.5em 0px;
+      white-space: pre-wrap;
+      border-left: 3px solid black;
+      background-color: rgba(0, 0, 0, 0.03);
+      line-height: 1.25;
+      overflow-x: clip;
+    }
+
+    #display pre code {
+      background-color: rgba(0, 0, 0, 0);
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display pre.language-python {}
+
+    #display li>div {
+      display: flex;
+    }
+
+    #display li {
+      min-height: 1em;
+      width: 100%;
+    }
+
+    #display ul {
+      width: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
+    }
+
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
+      width: 100%;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    .inline-html .block .block-info {
+      display: none;
+    }
+
+    .inline-html {
+      width: 100%;
+    }
+
+    .section>.block ol~.block-info {}
+
+    .section>.block ul~.block-info {}
+
+    .section>.block pre~.block-info {}
+
+    .section>.block code~.block-info {}
+
+    pre .block-info {
+      font-size: 8px;
+      text-align: right;
+      text-indent: 0px;
+    }
+
+    .block-info {
+      text-align: right;
+      width: 24px;
+      font-family: monospace;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+      font-size: 8px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .blockquote {
+      width: 100%;
+      display: block;
+      margin: 1em;
+      border: 1px solid black;
+      padding: 1em;
+      border-radius: 0.5em;
+    }
+
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .latex-underline {
+      text-decoration: underline;
+    }
+
+    .katex {
+      font-size: inherit !important;
+    }
+
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-display {
+      text-align: center;
+      margin: 0em;
+      font-size: 1em !important;
+    }
+
+    .katex-display.fleqn>.katex {
+      padding-left: 0em;
+      margin: 0em;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: block;
+    }
+
+    .solutionstrue {
+      display: none;
+    }
+
+    @media print {
+      * {
+        overflow: visible !important;
+      }
+
+      @page {
+        size: auto;
+        margin: 0.5in 0.75in 0.75in;
+      }
+
+      .katex .hide-tail {
+        overflow: hidden !important;
+      }
+
+      .page-break {
+        border-top: none;
+      }
+
+      .body {
+        display: inline;
+        position: relative;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        width: 100%;
+        margin-block: 0.1em;
+      }
+
+      h1 {
+        font-size: 1.25em;
+        color: black;
+        border-bottom: 2px solid black;
+      }
+
+      h2 {
+        font-size: 1.15em;
+        border-bottom: 1px solid black;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+
+      h4,
+      h5,
+      h6 {
+        font-size: 1.05em;
+      }
+
+      .md-toc {
+        break-inside: avoid;
+        font-size: 14px;
+      }
+
+      pre {
+        break-inside: avoid;
+      }
+
+      p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      #toc {
+        display: none;
+        font-size: 100%;
+        margin: 0px;
+        width: 100%;
+        overflow-y: hidden;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      #display {
+        margin-left: 0em;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+        overflow-wrap: break-word;
+      }
+
+      .katex {
+        font: 1em / 1.1 KaTeX_Main, "Times New Roman", serif;
+        white-space: nowrap;
+        text-indent: 0px;
+        text-rendering: auto;
+      }
+
+      .katex-display {
+        margin-top: 0px !important;
+        font-size: 1em !important;
+      }
+    }
+  </style>
+  <script>
+    function tocClickListen() {
+      let hs = document.querySelectorAll('#toc > ol ol');
+      let el, ns;
+      for (let i = 0; i < hs.length; i++) {
+        if (hs[i].previousElementSibling) {
+          el = hs[i].previousElementSibling.firstElementChild;
+          if (el.length == 0) {
+            continue;
+          }
+          el.addEventListener('click', event => {
+            ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
+            if (ns.style.display === 'none') {
+    ns.style.display = 'block';
+            } else
+            {
+    ns.style.display = 'none';}
+          });
+        }
+      }
+    }
+    if (
+        document.readyState === "complete" ||
+        (document.readyState !== "loading" && 
+          !document.documentElement.doScroll)
+    ) {
+      tocClickListen();
+    } else {
+      document.addEventListener("DOMContentLoaded", tocClickListen);
+    }
+  </script>
+</head>
+
+<body class="body">
+  <div id="toc" style="min-width: 5em;">
+    <ol>
+      <li>
+        <a href="#f2022" raw="# F2022" lo="2">
+          <span class="toctext">F2022</span>
+        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#email" raw="## Email" lo="4">
+              <span class="toctext">Email</span>
+            </a>
+          </li>
+          <li>
+            <a href="#comments-before" raw="## Comments before" lo="26">
+              <span class="toctext">Comments before</span>
+            </a>
+          </li>
+          <li>
+            <a href="#comments-after" raw="## Comments after" lo="42">
+              <span class="toctext">Comments after</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#s2023" raw="# S2023" lo="84" class="">
+          <span class="toctext">S2023</span>
+        </a>
+        <ol class="toc" style="display: block;">
+          <li>
+            <a href="#comments-after" raw="## Comments after" lo="86" class="highlighted">
+              <span class="toctext">Comments after</span>
+            </a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+  <div id="display">
+    <div class="section">
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="2" lf="2"><a name="f2022" number="1" lo="2" raw="# F2022" class="anchor hanchor" href="#f2022"><span class="hnumber">1</span>&nbsp;<span class="htext">F2022</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">2</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="4" lf="4"><a name="email" number="1.1" lo="4" raw="## Email" class="anchor hanchor" href="#email"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Email</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">4</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="6" lf="6">In the directory Enclosed_Charge at <a href="https://www.overleaf.com/read/btssfxsjgyzr">https://www.overleaf.com/read/btssfxsjgyzr</a>, there is an activity that I plan on using Monday (pdfs attached). If you want to make edits, the .tex version has a switch at the top to hide the solutions.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">6</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="8" lf="8">I used to cover the enclosed charge briefly when I covered Gauss’s law until I realized that many students weren’t able to compute the enclosed charge part (unless they remembered the answer). Instructors, including myself, and textbooks tend to spend the most time on the flux part of Gauss’s law. This activity covers many parts that students need practice on (both at the freshman and junior level, I’ve found):</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">8</span></div>
+      </div>
+      <div class="block">
+        <ol lo="10" lf="14" class="compact">
+          <li markerlength="3" padlength="0" lo="10" lf="10">
+            <div class="block">
+              <p padlength="0" lo="10" lf="10">Plotting piecewise functions (the motivation for them plotting points is because many get stuck and I tell them to plot a few points first to give themself a hint)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">10</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="11" lf="11">
+            <div class="block">
+              <p padlength="0" lo="11" lf="11">Manipulating variables instead of numbers</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="12" lf="12">
+            <div class="block">
+              <p padlength="0" lo="12" lf="12">Identifying how Q enclosed scales with the radius of the Gaussian volume (or other dimensions) and using this to check their plot and answers</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">12</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="13" lf="13">
+            <div class="block">
+              <p padlength="0" lo="13" lf="13">Computing charge densities</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">13</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="14" lf="16">
+            <div class="block">
+              <p padlength="0" lo="14" lf="14">Recalling formulas for volumes and areas (many don’t know or recall that if they know the circumference of a circle, they can figure out the surface area of a cylinder and if they know the area of the circle, they can figure out its volume)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">14</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">10-14</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="16" lf="16">For the few students who have an easy time with these problems, I ask them to</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">16</span></div>
+      </div>
+      <div class="block">
+        <ol lo="18" lf="20" class="compact">
+          <li markerlength="3" padlength="0" lo="18" lf="18">
+            <div class="block">
+              <p padlength="0" lo="18" lf="18">draw the field lines for the charged object,</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">18</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="19" lf="19">
+            <div class="block">
+              <p padlength="0" lo="19" lf="19">identify the conditions on the Gaussian volume such that the computation of flux through its surface is easy, and</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">19</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="20" lf="22">
+            <div class="block">
+              <p padlength="0" lo="20" lf="20">compute the flux</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">20</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">18-20</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="22" lf="22">I plan on spending 10 minutes doing one of the problems with the addition of doing 1.-3. above so they know the motivation for computing Q enclosed.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">22</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="24" lf="24">Bob</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">24</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="26" lf="26"><a name="comments-before" number="1.2" lo="26" raw="## Comments before" class="anchor hanchor" href="#comments-before"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Comments before</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">26</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="28" lf="28">ro</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">28</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="30" lf="30">I always emphasize to students that final results should be in terms of the “given” variables of the problem when it is an algebraic problem. So, I would like to see questions 4. and 5. of each section ask explicitly for answers in terms of Q, not lambda or rho or sigma. I see the reason for doing it in terms of density in the earlier parts, but I think at some point they need to plug in the “givens”: R, H, etc.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">30</span></div>
+      </div>
+      <div class="block">
+        <div class="blockquote" lo="32" lf="32">
+          <p>Previously, I had them plotting Q_enclosed in terms of the variables given, but switched to using densities to lead them to the form of Q_enclosed that is used to compute the usual textbook formulas, which are typically given in terms of densities … except for the case you mention below and outside a solid sphere.</p>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">32</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="34" lf="34">In a similar vein, I don’t see the need to ask for charge in terms of sigma in part 3 of section 5. I would rather have them realize that Q_encl is simply the total charge of the sphere when you are outside the sphere. I think telliing them they need to do an extra step might be more confusing than helpful. Maybe in this question we could just leave off the part that tells them what the answer should be in terms of, and then instructors could ask if they understand how to get it “the other way”?</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">34</span></div>
+      </div>
+      <div class="block">
+        <div class="blockquote" lo="36" lf="40">
+          <p>The motivation for asking for sigma was to ensure that they could compute a sigma. But it is awkward given they most likely see a formula in terms of Q and not sigma.</p>
+          <p>Perhaps I could break the parallelism and in this problem give the charge density and ask for answers in terms of net charge. Or, note that this problem is a special case in the sense that we don’t write E in terms of a charge density. Same for the solid sphere when outside.</p>
+          <p>I’ll put this discussion in my notes for consideration for revision next time. These are all good points that ideally should be addressed.</p>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">36-40</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="42" lf="42"><a name="comments-after" number="1.3" lo="42" raw="## Comments after" class="anchor hanchor" href="#comments-after"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Comments after</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">42</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="44" lf="44">rw</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">44</span></div>
+      </div>
+      <div class="block">
+        <ol lo="46" lf="64" class="loose">
+          <li markerlength="3" padlength="0" lo="46" lf="47">
+            <div class="block">
+              <p padlength="0" lo="46" lf="47">✓ Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">46-47</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="48" lf="49">
+            <div class="block">
+              <p padlength="0" lo="48" lf="49">✗ Start problems with a density given. (<em type="md" marker="*">Will do in next revision</em>.)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">48-49</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="50" lf="51">
+            <div class="block">
+              <p padlength="0" lo="50" lf="51">Move two cylinder problems to the end. They appear in the more difficult Gauss’ law problems, and students got stuck. I had to stop them and give answers so they had time for the other problems. (Even after my explanation and the answers, I noticed students still trying to answer them.) Add a discussion for the cylindrical shell problem about how it can be solved given a linear or surface charge density. The solid cylinder problem could be solved given a linear or volume charge density, but I don’t recall ever seeing a problem where its linear density was given.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">50-51</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="52" lf="53">
+            <div class="block">
+              <p padlength="0" lo="52" lf="53">✓ Add to the notes a definition of linear, surface, and volume charge density when the charge is uniformly distributed. I’m reluctant to give formulas for areas and volumes because it lets them think they don’t need to know it without reference.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">52-53</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="54" lf="55">
+            <div class="block">
+              <p padlength="0" lo="54" lf="55">Students who had difficulty plotting the curve also had difficulty in writing down the value at various points. I’m not sure what to do about that. There could be a sentence that says “if the formula does not depend on <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>, …”. But the students who didn’t realize this understood so little that I’m not sure it will help.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">54-55</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="56" lf="57">
+            <div class="block">
+              <p padlength="0" lo="56" lf="57">Add a question after the spherical shell and solid sphere problem that states “if the total charge is Q in both cases, is Q_enclosed for r&gt;R the same?” Ideally, there would be a follow-up that makes the point that if Q is uniformly distributed on a shell, thick shell, solid sphere, or on an infinitesimal sphere, E will be the same outside. I’m still trying to think about how to address the issue about this you raised earlier.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">56-57</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="58" lf="59">
+            <div class="block">
+              <p padlength="0" lo="58" lf="59">I may add a question at the end that gives a non-uniform density for a solid sphere to make the point that the total charge/ total length, total charge/total area, and total charge/total volume formulas only work apply if the charge is uniformly distributed. Probably I’ll give the integral formula for Q and show it gives the correct result for constant rho and then ask them to use it for rho that depends on r.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">58-59</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="60" lf="61">
+            <div class="block">
+              <p padlength="0" lo="60" lf="61">✓ State that “charge enclosed” means the same thing as “charge inside of”</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">60-61</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="62" lf="63">
+            <div class="block">
+              <p padlength="0" lo="62" lf="63">Some students were tripped up by the fact that I switched from having the Gaussian volume larger than the charged object for the cylinder problems to smaller for the sphere problems. I had not noticed it. I’m not sure if it is something to leave as-is, so they get in the habit of reading the problem statement, or to change so they don’t get tripped up (because there is already enough to get tripped up on when trying the first time).</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">62-63</span></div>
+            </div>
+          </li>
+          <li markerlength="4" padlength="0" lo="64" lf="66">
+            <div class="block">
+              <p padlength="0" lo="64" lf="65">I usually have about 5 students that continue working for 5-10 minutes after the period ends. For this activity, there was more. I wonder if this is because they liked the problems, the exam is coming up, or they were the few students that only got an 8 or 9 out of 10 on the previous activity.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">64-65</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">46-64</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="66" lf="66">About 1/4 of the students required a significant amount of explanation for why a small sphere inside of a shell has no charge inside of it. I tried about four different explanations … the only one that seemed to work is “if your hair is charge and I put a marble inside your skull, how much hair is inside the marble?”. Probably I should bring visual aids next time, especially for the charged cylindrical shell, which stumped even more students.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">66</span></div>
+      </div>
+      <div class="block">
+        <div class="hr" lo="68" lf="68"></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="70" lf="70">ro</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">70</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="72" lf="72">I thought it went really well in my classes and I liked the progression of the problems as is.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">72</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="74" lf="74"><strong type="md">TODO</strong> I edited my version to ask for answers in terms of Q in the last step (while keeping it in terms of density in the previous steps). See attached.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">74</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="76" lf="76"><strong type="md">TODO</strong> I agree that the idea of doing a cylindrical shape in terms of surface charge density OR linear charge density is confusing to them and requires some discussion, especially because the book problems mostly use linear density. (Personally, I would just stick with surface charge density to avoid the confusion.) Not sure what to do about that because it would make it even longer.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">76</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="78" lf="78">✓ My only other recommended change is in part 2, Line of Charge, it should be stated as r= L/100, etc, rather than h/100. I had a lot of groups that thought r= h/100 meant that h=100r and therefore changed when we changed the radius. Putting it in terms of L (the way the others are in terms of the physical radius, R) should help with that.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">78</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="80" lf="80">I found it very eye-opening that these “easy” Gauss problems required so much struggle from the students. I always feel that I have to give them a “hard” Gauss problem, eg. nested spheres, to make the problem non-trivial. Clearly these cases are non-trivial for the students. Thanks for developing this! It was really worthwhile.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">80</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="82" lf="82">✓ In Part 7, it should be stated that <span len="9" raw="_r < L/2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/2</span></span></span></span> (not <span len="5" raw="_r<L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>), so that the diameter is not larger than <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>. (A student caught that one!)</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">82</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="84" lf="84" class=""><a name="s2023" number="2" lo="84" raw="# S2023" class="anchor hanchor" href="#s2023"><span class="hnumber">2</span>&nbsp;<span class="htext">S2023</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">84</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="86" lf="86" class="highlighted"><a name="comments-after" number="2.1" lo="86" raw="## Comments after" class="anchor hanchor" href="#comments-after"><span class="hnumber">2.1</span>&nbsp;<span class="htext">Comments after</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">86</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="88" lf="88" class="">rw</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">88</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="90" lf="90" class="active">Grid does not show up when photocopied</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">90</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="92" lf="92" class="">ro</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">92</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="94" lf="94" class="">I like this activity, but students mostly did not have time to finish it. How far they got varied a lot, which I think is fine as long as we are not grading on completion. </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">94</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="96" lf="96">There was a lot of confusion over 3.3 that asked them to find the value of Q_enc for different values of r. Nearly everyone tried to make their answer somehow a function of r (by replacing L by 100r or something), rather than think about how changing r would make a difference. I think 3 and 4 should be replaced by a simple question like “Does Q_enc depend on the radius of the Gaussian cylinder? Explain why or why not.” </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">96</span></div>
+      </div>
+      <div class="block">
+        <div class="blockquote" lo="98" lf="98">
+          <p>Good idea. I had that same problem.</p>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">98</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="100" lf="100">Many students started doing the solid sphere instead of the shell in section 4. I’m not sure how to make it easier for them to see that Q_enc is either all or nothing. Maybe have two diagrams, one with the Gaussian surface inside the shell and one with it out? Generally, though, I think it’s OK for them to have to go through the process of realizing that a shell is different from a solid sphere, even if it requires help from us. (It’s also a good lesson in reading the problem carefully!)</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">100</span></div>
+      </div>
+      <div class="block">
+        <div class="blockquote" lo="102" lf="102">
+          <p>At the start of class, I explained the answer to this problem and still got many questions! In my notes to myself for the future, I will suggest bringing in some visual aid. Apparently, a 2-D diagram on the board is not enough.</p>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">102</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="104" lf="104">Some were confused in section 4 by the instruction to plot their points as a “smooth line,” because the actual plot has a jump discontinuity. Let’s delete “smooth”. </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">104</span></div>
+      </div>
+      <div class="block">
+        <div class="blockquote" lo="106" lf="106">
+          <p>Agreed. I think I added that due to some with the previous wording that said effectively “plot y vs x.” I should probably add an example showing the point of drawing a few dots first to get a feel for how the curve will look. It is clear that students are not used to sketching curves.</p>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">106</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

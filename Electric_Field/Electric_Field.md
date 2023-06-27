@@ -1,10 +1,8 @@
 ```mdextension
-Title: Electric Field and $\rhat$
+Title: Electric Field
 ```
 
 # Overview
-
-This activity covers topics in [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_).
 
 The electric field vector, $\bfvec{E}$, is a quantity assigned to a point in space. Given this quantity, we can compute the force on a charge $Q$ will experience if it is placed at that point using the equation $\bfvec{F}=Q\bfvec{E}$. The direction of $\bfvec{E}$ is also the direction a charge will begin to move if released from rest.
 
@@ -72,149 +70,15 @@ $\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o}=\frac
 
 \newpage
 
-# The $\rhat$ Unit Vector
-
-Previously, when computing the electric force between two charges, you used the formula $F=k{|q_1q_2|}/{r^2}$ to find the magnitude of the force and then used a diagram to write $\bfvec{F}$ in the form $\bfvec{F}=F_x\ihat + F_y\jhat$. A similar process was used for computing $\bfvec{E}$ above (because we calculated $\bfvec{F}$ as part of the process). The textbook provides an equation for the electric field that requires a slightly different calculation method.
-
-The equation for the electric field using a unit vector is
-
-$$\bfvec{E}_{\text{due to }q_1}=kq_1\frac{\rhat}{r^2}\thinspace,$$
-
-where $\rhat$ is the unit vector that points from the position of $q_1$ to the point in space where we want to know $\bfvec{E}$, and $r$ is the distance between $q_1$ and that point.
-
-To find $\rhat$, 
-
-1. draw a vector, $\bfvec{r}$ from $q_1$ to the point in space where you want to know $\bfvec{E}$;
-2. Write $\bfvec{r}$ in the form $\bfvec{r}=r_x\ihat+r_y\jhat$; then
-3. $\rhat=\bfvec{r}/r$, where $r=\sqrt{r_x^2+r_y^2}$.
-
-# Example II
-
-If $q_1$ is at $(x,y)=(-a,-a)$, find the electric field at $(x,y)=(a,a)$ using $\bfvec{E}_{\text{due to }q_1}=kq_1{\rhat}/{r^2}$. Also, find $E$.
-
-**Solution**
-
-The calculation of $\rhat$ is shown in the following diagram.
-
-<img src="figures/Two_Charges.svg" style="width:100%"/>
-
-Substitution gives
-
-$$\bfvec{E}_{\text{at }(a,a)\text{ due to }q_1}=kq_1\frac{1}{r^2}\rhat = kq_1\frac{1}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat) =\frac{kq_1}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]\thinspace,$$
-
-which is the same result obtained in the previous example, as expected.
-
-To calculate $\bfvec{E}$, we can use
-
-$$|\bfvec{E}|=E=\sqrt{E_x^2+E_y^2}$$
-
-and plug in $E_x=k\frac{q_1}{8a^2}\frac{1}{\sqrt{2}}$ and $E_y=k\frac{q_1}{8a^2}\frac{1}{\sqrt{2}}$ and use $\sqrt{c^2}=|c|$ (where $c$ is a real number) to show that $E=k|q_1|/{8a^2}$. There is an easier way. Taking the magnitude of both sides of
-
-$\ds\bfvec{E}=kq_1\frac{\rhat}{r^2}\quad$
-gives
-$\quad\ds|\bfvec{E}|=k|q_1|\frac{|\rhat|}{r^2}$.
-
-The magnitude of a unit vector is $1$, so
-
-$\ds|\bfvec{E}|=k|q_1|\frac{1}{r^2}=\frac{k|q_1|}{8a^2},\thickspace$ as before.
-
 # Problem II
 
-Charge $q_1$ is at $(x,y)=(-a,a)$. Find the electric field at $(x,y)=(a, 0)$ using $\bfvec{E}_{\text{at }(a,0)\text{ due to }q_1}=kq_1{\rhat}/{r^2}$. Check signs of the components of $\bfvec{E}$ using the technique used in Example I. Also, find $E$.
+Charge $q_1$ is at $(x,y)=(-a,a)$. Find the electric field at $(x,y)=(a, 0)$, find $\bfvec{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$. Check signs of the components of $\bfvec{E}$ using the technique used in Example I. Also, find $E$.
 
 <img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
 \ifsolutions
 {\bf Answer}:
 
-$\bfvec{r}=2a\ihat-a\jhat$,
-$\quad$
-$\ds\rhat=\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat$,
-$\quad$ $r^2=5a^2$
-
 $\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1}=\frac{kq_1}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$, which matches the solution to Problem I, as expected.
 
 \fi
-
-\newpage
-
-# Problem III - Superposition
-
-In the previous examples, only one charge was responsible for creating the electric field $\bfvec{E}$. When there are more charges, superposition can be used to find the total electric field by summing $\bfvec{E}$ due to each charge.
-
-Charge $q_1 = +q$ is at $(x, y) = (a, 0)$, charge $q_2 = +q$ is at $(x, y) = (-a, 0)$, and charge $q_3 = -q$ is at $(x, y) = (0, a)$. Assume that $q$ is a positive number.
-
-1. Draw this charge configuration below.
-
-\ifsolutions
-<img src="figures/Superposition.svg" style="width:60%"/>
-\else
-<img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
-\fi
-
-2. Why does it not make sense to ask what the electric _force_ is at the origin?
-
-\ifsolutions
-There is no charge at the origin. (The electric field can be used to find the force on a charge _if_ it was placed at the origin.)
-\else
-<div style="height:2em"/>
-\fi
-
-In the following, 
-
-3. Find the electric field at the origin due to $q_1$. Write your answer in the form $\bfvec{E}\_1=E_{x1}\ihat + E_{y1}\jhat$.
-
-   \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}\_1=-\frac{kq}{a^2}\ihat$
-   \else
-   <div style="height:6em"/>
-   \fi
-
-4. Find the electric field at the origin due to $q_2$. Write your answer in the form $\bfvec{E}\_2=E_{x2}\ihat + E_{y2}\jhat$.
-
-   \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}\_2=+\frac{kq}{a^2}\ihat$
-   \else
-   <div style="height:6em"/>
-   \fi
-
-5. Find the electric field at the origin due to $q_3$. Write your answer in the form $\bfvec{E}\_3=E_{x3}\ihat + E_{y3}\jhat$.
-
-   \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}\_3=+\frac{kq}{a^2}\jhat$
-   \else
-   <div style="height:6em"/>
-   \fi
-
-6. Find the total electric field at the origin by adding $\bfvec{E}_1$, $\bfvec{E}_2$, and $\bfvec{E}_3$. Write your answer in the form $\bfvec{E}=E_{x}\ihat + E_{y}\jhat$.
-
-   \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}=+\frac{kq}{a^2}\jhat$
-   \else
-   <div style="height:6em"/>
-   \fi
-
-7. Will your answers to 3.--6. change if the problem had asked for the electric field at a different position? If so, which answers?
-
-   \ifsolutions
-    Yes, all answers. The electric field at a given location due to each charge depends on the distance to the location. If the location changes, the distance changes.
-   \else
-   <div style="height:6em"/>
-   \fi
-
-8. Find the electric field at the origin if charge $q_1=2q$ (instead of $q$).
-
-   \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\ihat+\frac{kq}{a^2}\jhat$
-   \else
-   <div style="height:6em"/>
-   \fi
-
-9. Find the electric field at the origin if charge $q_1=-2q$ (instead of $q$).
-
-   \ifsolutions
-   {\bf Answer}: $\ds\bfvec{E}=+\frac{3kq}{a^2}\ihat+\frac{kq}{a^2}\jhat$
-   \else
-   <div style="height:6em"/>
-   \fi
- 

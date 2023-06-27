@@ -35,10 +35,8 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Vector Review
 
 * Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that horizontal component is not always $\cos$ of angle given.
-* Given a diagram showing vector components, find magnitude and direction
-* Given a diagram showing two vectors with known magnitudes and directions, find net components in unit vector notation. Then find net vector magnitude and direction
-
-Discuss the rhat issue here.
+* Given a diagram showing vector components, find magnitude and direction.
+* Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find net vector magnitude and direction.
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
@@ -55,6 +53,7 @@ Discuss the rhat issue here.
 | [pdf](Electric_Force/Electric_Force.pdf)
 | [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
 | [html](Electric_Force/Electric_Force.html)
+| [instructor notes](Electric_Force/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -65,10 +64,6 @@ Discuss the rhat issue here.
   * [Estimating charge using balloons](https://youtu.be/K-8nCXY-iSI?t=29) -- Balloons are charged and hung from a strings attached to a common point on the ceiling. Their charge is estimated using the distance between the balloons.
   * [Comparing Coulomb's law to experimental results](https://www.youtube.com/watch?v=B5LVoU_a08c) -- An experiment measuring the forces between two charged spheres using an experimental set--up similar to Coulomb's.
 
-## The $\rhat$ Unit Vector
-
-Define and solve same problems on last activity using it.
-
 ## Electric Field
 
 * Background material:
@@ -77,11 +72,12 @@ Define and solve same problems on last activity using it.
   * Reading: [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 * Activity
-Computing the electric field due to one and three point charges.
+Computing the electric field due to one and three point charges (without $\rhat$ notation)
   * Documents:
 | [pdf](Electric_Field/Electric_Field.pdf)
 | [pdf solns](Electric_Field/Electric_Field-solutions.pdf)
 | [html](Electric_Field/Electric_Field.html)
+| [instructor notes](Electric_Field/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -92,6 +88,34 @@ Computing the electric field due to one and three point charges.
   * [3-D visualizations of vector fields](https://www.youtube.com/watch?v=rB83DpBJQsE&t=185s). Although the video covers advanced vector calculus, is has several vector field visuals that can be used when explaining how to imagine vector fields.
   * [2-D visualization of vector field due to two charges](https://www.geogebra.org/m/MAsvESCX) -- This interactive online Geogebra application can be used to demonstrate superposition and the fact that the electric field points in the same direction as the force on a test charge. A good review is to hide the test charge and ask students to predict the direction the force will be on it.
   * [PhEt Charges and Fields Simulation](https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html) -- Similar to the Geogebra example above.
+
+## The $\rhat$ Unit Vector
+
+* Activity: Find electric field using $\rhat$ notation.
+  * Documents:
+| [pdf](rhat/rhat.pdf)
+| [pdf solns](rhat/rhat.pdf)
+| [html](rhat/rhat.html)
+| [instructor notes](rhat/README.html)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/rhat)
+|
+
+## Superposition and Symmetry
+
+* Activity: Find electric force and field due to multiple charges
+  * Documents:
+| [pdf](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
+| [pdf solns](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
+| [html](Superposition_and_Symmetry/Superposition_and_Symmetry.html)
+| [instructor notes](Superposition_and_Symmetry/README.html)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Superposition_and_Symmetry)
+|
 
 ## Continuous Charge Distributions
 
