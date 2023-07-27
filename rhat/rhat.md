@@ -2,6 +2,9 @@
 Title: The $\rhat$ Unit Vector
 ```
 
+% Figures:
+% https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
+
 # The $\rhat$ Unit Vector
 
 Previously, when computing the electric force between two charges, you used the formula $E=k{|q|}/{r^2}$ to find the electric field and then used a diagram to write $\bfvec{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$.

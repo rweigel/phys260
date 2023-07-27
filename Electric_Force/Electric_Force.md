@@ -3,7 +3,7 @@ Title: Electric Force
 ```
 
 % Figures:
-% https://www.mathcha.io/editor/5wDQpF09tVvhYnVkOMFvlJp3hDwwMQ0sDKkZme
+% https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
 
 # Coulomb's Law
 

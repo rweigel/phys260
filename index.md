@@ -22,8 +22,6 @@ The length of the tutorials are such that 1--2 students out of 30 will finish co
 
 The source files for all activities are available at [Overleaf]((https://www.overleaf.com/read/btssfxsjgyzr) and [GitHub](https://github.com/rweigel/phys260); all files are available in a [zip](https://github.com/rweigel/phys260/archive/refs/heads/master.zip) file.
 
-In each subdirectory at https://github.com/rweigel/phys260 there is a file named `README.md` with notes written after class and after reviewing student work.
-
 The master document is the `.md` file, which is converted to `.html` and `.tex`. The `.pdf` files are based on the `.html` file. The `.tex` files are auto--generated from the `.md` files and a `.pdf` created with the `.tex` file may look different than the one stored in the repository.
 
 If you have corrections, comments, or suggestions please [submit an issue](https://github.com/rweigel/phys260/issues) or email `rweigel@gmu.edu`. 
@@ -38,11 +36,19 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 * Given a diagram showing vector components, find magnitude and direction.
 * Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find net vector magnitude and direction.
 
+## Electric Charge
+
+* Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Chapter 21.1 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Chapter 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
+  * [Video](https://www.youtube.com/watch?v=Opz_Grl_vQA&t=2s&ab_channel=BozemanScience) -- includes references to early experiements related to charged object.
+  * Overview and History: https://physics.info/charge/
+
 ## Electric Force Between Point Charges (Coulomb's Law)
 
 * Background material:
-  * PowerPoint: []()
-  * Reading: [Section 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Chapter 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★)
   * Videos
     * [Solving 2-- and 3--charge problems in 1-D](https://www.youtube.com/watch?v=kCp5yYjo9zE): Very basic, and long (35 minutes)
     * [3--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at points of equilateral triangle
@@ -67,12 +73,12 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Electric Field
 
 * Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
   * Videos
     * [Electric Field Definition](https://www.youtube.com/watch?v=_4VC3IHbuW8) -- Includes details on how the electric field is related to electric force.
   * Reading: [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
-* Activity
-Computing the electric field due to one and three point charges (without $\rhat$ notation)
+* Activity: Computing the electric field due to one point charges (without $\rhat$ notation)
   * Documents:
 | [pdf](Electric_Field/Electric_Field.pdf)
 | [pdf solns](Electric_Field/Electric_Field-solutions.pdf)
@@ -91,7 +97,7 @@ Computing the electric field due to one and three point charges (without $\rhat$
 
 ## The $\rhat$ Unit Vector
 
-* Activity: Find electric field using $\rhat$ notation.
+* Activity: Computing electric field using $\rhat$ notation.
   * Documents:
 | [pdf](rhat/rhat.pdf)
 | [pdf solns](rhat/rhat.pdf)
@@ -105,7 +111,11 @@ Computing the electric field due to one and three point charges (without $\rhat$
 
 ## Superposition and Symmetry
 
-* Activity: Find electric force and field due to multiple charges
+* Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Chapter 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Chapter 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
+
+* Activity: Computing electric force and field due to multiple charges
   * Documents:
 | [pdf](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
 | [pdf solns](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
@@ -118,6 +128,9 @@ Computing the electric field due to one and three point charges (without $\rhat$
 |
 
 ## Continuous Charge Distributions
+
+* Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
 
 * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
 * Documents: | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf) |

@@ -2,6 +2,9 @@
 Title: Electric Field
 ```
 
+% Figures:
+% https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
+
 # Overview
 
 The electric field vector, $\bfvec{E}$, is a quantity assigned to a point in space. Given this quantity, we can compute the force on a charge $Q$ will experience if it is placed at that point using the equation $\bfvec{F}=Q\bfvec{E}$. The direction of $\bfvec{E}$ is also the direction a charge will begin to move if released from rest.

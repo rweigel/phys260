@@ -2,6 +2,9 @@
 Title: Superposition and Symmetry
 ```
 
+% Figures:
+% https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
+
 # Overview
 
 In previous activities, only one charge was responsible for creating the electric field. When there are more charges, superposition can be used to find the total electric field by summing $\bfvec{E}$ due to each charge. Superposition can also be used to find the total electric force on a charge due to two or more charges.
