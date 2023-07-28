@@ -1,0 +1,156 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{The r^ Unit Vector}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+% Figures:
+% https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
+
+\section{The $\rhat$ Unit Vector}
+
+Previously, when computing the electric force between two charges, you used the formula $E=k{|q|}/{r^2}$ to find the electric field and then used a diagram to write $\bfvec{E}$ in the form $\bfvec{E}=E$x\ihat + E$y\jhat$.
+
+An alternative, and more direct, approach is to use an equation for electric field using a unit vector $\rhat$:
+
+$$\bfvec{E}${\text{due to }q}=kq\frac{\rhat}{r^2}\thinspace,$$
+
+where $\rhat$ is the unit vector that points from the position of $q$1$ to the point in space where we want to know $\bfvec{E}$, and $r$ is the distance between $q$1$ and that point. Note that in this equation, we use $q$ and not $|q|$.
+
+To find $\rhat$, 
+
+\begin{enumerate}
+
+  \item draw a vector, $\bfvec{r}$ from $q$1$ to the point in space where you want to know $\bfvec{E}$;
+
+  \item Write $\bfvec{r}$ in the form $\bfvec{r}=r$x\ihat+r$y\jhat$; then
+
+  \item $\rhat=\bfvec{r}/r$, where $r=\sqrt{r$x^2+r$y^2}$.
+
+\end{enumerate}
+
+\section{Example}
+
+If $q$1$ is at $(x,y)=(-a,-a)$, find the electric field at $(x,y)=(a,a)$ using $\bfvec{E}${\text{due to }q$1}=kq$1{\rhat}/{r^2}$. Also, find $E$.
+
+\textbf{Solution}
+
+The calculation of $\rhat$ is shown in the following diagram.
+
+\input{figures/Two_Charges.tikz}
+
+Substitution gives
+
+$$\bfvec{E}${\text{at }(a,a)\text{ due to }q$1}=kq$1\frac{1}{r^2}\rhat = kq$1\frac{1}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat) =\frac{kq$1}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]\thinspace,$$
+
+which is the same result obtained in the previous example, as expected.
+
+To calculate $|\bfvec{E}|$, we can use
+
+$$|\bfvec{E}|=E=\sqrt{E$x^2+E$y^2}$$
+
+and plug in $E$x=k\frac{q$1}{8a^2}\frac{1}{\sqrt{2}}$ and $E$y=k\frac{q$1}{8a^2}\frac{1}{\sqrt{2}}$ and use $\sqrt{c^2}=|c|$ (where $c$ is a real number) to show that $E=k|q$1|/{8a^2}$. There is an easier way. Taking the magnitude of both sides of
+
+$\ds\bfvec{E}=kq$1\frac{\rhat}{r^2}\quad$
+gives
+$\quad\ds|\bfvec{E}|=k|q$1|\frac{|\rhat|}{r^2}$.
+
+The magnitude of a unit vector is $1$, so
+
+$\ds|\bfvec{E}|=k|q$1|\frac{1}{r^2}=\frac{k|q$1|}{8a^2},\thickspace$ as before.
+
+\section{Problem}
+
+Charge $q$1$ is at $(x,y)=(-a,a)$. Find the electric field at $(x,y)=(a, 0)$ using $\bfvec{E}${\text{at }(a,0)\text{ due to }q$1}=kq$1{\rhat}/{r^2}$. Check signs of the components of $\bfvec{E}$ using the technique used in the Example. Also, find $|\bfvec{E}|$.
+
+\input{../Electric_Force/figures/grid.tikz}
+
+\ifsolutions
+{\bf Answer}:
+
+$\bfvec{r}=2a\ihat-a\jhat$,
+$\quad$
+$\ds\rhat=\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat$,
+$\quad$ $r^2=5a^2$
+
+$\ds\bfvec{E}${\text{at }(a,0) \text{ due to }q$1}=\frac{kq$1}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$, which matches the solution to Problem I, as expected.
+\fi
+
+\section{Question}
+
+Can you solve an Electric Force (Coulomb's Law) problem using $\rhat$ notation? If yes, what is the equation for the electric force using $\rhat$?
+
+\end{document}

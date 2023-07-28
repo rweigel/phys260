@@ -1,0 +1,188 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Superposition and Symmetry}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+% Figures:
+% https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
+
+\section{Overview}
+
+In previous activities, only one charge was responsible for creating the electric field. When there are more charges, superposition can be used to find the total electric field by summing $\bfvec{E}$ due to each charge. Superposition can also be used to find the total electric force on a charge due to two or more charges.
+
+Superposition problems are often simplified by recognizing a symmetry. For example, if we want to know the electric field at the origin due to charges $+q$ at $(x,y)=(\pm a, 0)$, we can state the answer is zero without computing the fields due to each charge -- we know they will be equal and opposite.
+
+\section{Problem}
+
+Charge $q$1 = +q$ is at $(x, y) = (a, 0)$, charge $q$2 = +q$ is at $(x, y) = (-a, 0)$, and charge $q$3 = -q$ is at $(x, y) = (0, a)$. Assume that $q$ is a positive number.
+
+\begin{enumerate}
+
+  \item Draw this charge configuration below.
+
+\end{enumerate}
+
+\ifsolutions
+\input{figures/Superposition.tikz}
+\else
+
+\input{../Electric_Force/figures/grid.tikz}
+\fi
+
+\begin{enumerate}
+
+  \item[2.] Why does it not make sense to ask what the electric \emph{force} is at the origin?
+
+            \ifsolutions
+            Answer: There is no charge at the origin. (The electric field can be used to find the force on a charge \emph{if} it was placed at the origin.)
+            \else
+
+            \vskip 24pt
+            \fi
+
+\end{enumerate}
+
+In the following, 
+
+\begin{enumerate}
+
+  \item[3.] Find the electric field at the origin due to $q$1$. Write your answer in the form $\bfvec{E}$1=E${x1}\ihat + E${y1}\jhat$.
+
+            \ifsolutions
+            {\bf Answer}: $\ds\bfvec{E}$1=-\frac{kq}{a^2}\ihat$
+            \else
+
+            \vskip 72pt
+            \fi
+
+  \item[4.] Find the electric field at the origin due to $q$2$. Write your answer in the form $\bfvec{E}$2=E${x2}\ihat + E${y2}\jhat$.
+
+            \ifsolutions
+            {\bf Answer}: $\ds\bfvec{E}$2=+\frac{kq}{a^2}\ihat$
+            \else
+
+            \vskip 72pt
+            \fi
+
+  \item[5.] Find the electric field at the origin due to $q$3$. Write your answer in the form $\bfvec{E}$3=E${x3}\ihat + E${y3}\jhat$.
+
+            \ifsolutions
+            {\bf Answer}: $\ds\bfvec{E}$3=+\frac{kq}{a^2}\jhat$
+            \else
+
+            \vskip 72pt
+            \fi
+
+  \item[6.] Find the total electric field at the origin by adding $\bfvec{E}$1$, $\bfvec{E}$2$, and $\bfvec{E}$3$. Write your answer in the form $\bfvec{E}=E${x}\ihat + E${y}\jhat$.
+
+            \ifsolutions
+            {\bf Answer}: $\ds\bfvec{E}=+\frac{kq}{a^2}\jhat$
+            \else
+
+            \vskip 72pt
+            \fi
+
+  \item[7.] Will your answers to 3.--6. change if the problem had asked for the electric field at a different position? If so, which answers?
+
+            \ifsolutions
+            Yes, all answers. The electric field at a given location due to each charge depends on the distance to the location. If the location changes, the distance changes.
+            \else
+
+            \vskip 72pt
+            \fi
+
+  \item[8.] Find the electric field at the origin if charge $q$1=2q$ (instead of $q$).
+
+            \ifsolutions
+            {\bf Answer}: $\ds\bfvec{E}=-\frac{kq}{a^2}\ihat+\frac{kq}{a^2}\jhat$
+            \else
+
+            \vskip 72pt
+            \fi
+
+  \item[9.] Find the electric field at the origin if charge $q$1=-2q$ (instead of $q$).
+
+            \ifsolutions
+            {\bf Answer}: $\ds\bfvec{E}=+\frac{3kq}{a^2}\ihat+\frac{kq}{a^2}\jhat$
+            \else
+
+            \vskip 72pt
+            \fi
+
+\end{enumerate}
+
+\end{document}
