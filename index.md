@@ -74,9 +74,9 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 * Background material:
   * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
   * Videos
     * [Electric Field Definition](https://www.youtube.com/watch?v=_4VC3IHbuW8) -- Includes details on how the electric field is related to electric force.
-  * Reading: [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
 
 * Activity: Computing the electric field due to one point charges (without $\rhat$ notation)
   * Documents:
@@ -131,23 +131,38 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 * Background material:
   * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading:
+    * [Section 21.5](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★) of Young and Freedman 2015, 14th Edition
+    * [Section 1.5](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/) of Introduction to Electricity, Magnetism, and Circuits by Ling et al.
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
-* Documents: | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions) | [Markdown](Continuous_Charge_Distributions/Continuous_Charge_Distributions.md) | 
-* Covered in [Section 21.5](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_) of Young and Freedman 2015, 14th Edition and [Section 1.5](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/) of Introduction to Electricity, Magnetism, and Circuits by Ling et al.
+* Activity -- Computing the electric field due to a finite line of charge
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
+  * Documents: | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf) |
+  * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions) | [Markdown](Continuous_Charge_Distributions/Continuous_Charge_Distributions.md) | 
 
 ## Electric Flux
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
-* Documents: | [pdf](Electric_Flux/Electric_Flux.pdf) | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Flux) | [Markdown](Electric_Flux/Electric_Flux.md) | 
+* Background material:
+  * Reading:
+    * [Sections 22.1-22.2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/folders/1Cm5DOUs8JHwgNEFrVntJD6ubWNDODWrx★★★★remove★★★★)
+    * [Introductory Physics - Building Models to Describe Our World (Martin et al.)](https://phys.libretexts.org/Bookshelves/University_Physics/Book:_Introductory_Physics_-_Building_Models_to_Describe_Our_World_(Martin_Neary_Rinaldo_and_Woodman)/17:_Gauss_Law/17.01:_Flux_of_the_Electric_Field)
+  * Videos:
+    * [Basic overview of definition of electric flux by Khan Academy](https://www.youtube.com/watch?v=9MN0eTC-vzQ)
+    * [Basic electric flux calculations by the Organic Chemistry Tutor](https://www.youtube.com/watch?v=q1eor6oIuUo&ab_channel=TheOrganicChemistryTutor)
+
+* Activity -- Computing electric flux for open and closed rectangular surfaces
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
+  * Documents: | [pdf](Electric_Flux/Electric_Flux.pdf) | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf) |
+  * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Flux) | [Markdown](Electric_Flux/Electric_Flux.md) | 
 
 ## Enclosed Charge
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md) 
-* Documents: | [pdf](Enclosed_Charge/Enclosed_Charge.pdf) | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge) | [Markdown](Enclosed_Charge/Enclosed_Charge.md) | 
+* Comment: In solutions to Gauss' law problems, the authors typically simply write down an equation for enclosed charge without much explanation. We have found that students have difficulty solving for enclosed charge on their own, which is the motivation for the activity.
+
+* Activity -- Computing the amount of charge enclosed for common geometries used in Gauss' law problems
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md)
+  * Documents: | [pdf](Enclosed_Charge/Enclosed_Charge.pdf) | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf) |
+  * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge) | [Markdown](Enclosed_Charge/Enclosed_Charge.md) | 
 
 ## Electric Potential
 
