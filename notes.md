@@ -1,3 +1,6 @@
+Add link to my 305 notes?
+
+CU Boulder links?
 
 Jessica's activities: https://www.overleaf.com/project/63b5dc2dcc1a05237dad2d5e
 
