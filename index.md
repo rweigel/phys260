@@ -1,10 +1,12 @@
 # Overview
 
-These are activities that students work on during a weekly 50--minute recitation for PHYS 260 at GMU. To maximize time that students spend working on problems, I typically give at most a 10--minute review. Often, my 10--minute overview involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.
+These are activities that students work on during a weekly 50--minute recitation for PHYS 260 at GMU. To maximize students' time working on problems, I typically give at most a 10--minute review. Often, my 10--minute review involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.
 
-These tutorials were written in collaboration with Jessica Rosenberg over the course of four semesters. The tutorials were revised from semester-to-semester based on observations made while using them.
+These tutorials were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them.
 
-The length of the tutorials are such that 1--2 students out of 30 will finish completely. 
+The length of the tutorials is such that 1--2 students out of 30 will finish. The problems primarily involve basic calculations required to solve homework problems rather than concepts. I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
+
+The problems on these activities are generally basic and straightforward. The problems chosen, and their difficulty, are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master to solve the homework problems.) 
 
 %**Motivation**
 
@@ -12,7 +14,6 @@ The length of the tutorials are such that 1--2 students out of 30 will finish co
 
 %Prior to working on these, approximately 1/2--2/3 of the students will have attended two 75--minute lectures covering the associated chapter and content.
 
-%The problems on these activities are generally basic and simple. They emphasis the basic calculations required to solve problems rather than concepts. I generally explain the concepts and ask questions about them while the students are solving problems or when I go over a solution.
 
 %However, I find that most students only have time to attempt half of the problems and there are many questions. Based on experience, I assume that after two 75--minute lectures, most students have only knowledge of keywords and associated concepts and are not able to solve problems that require more than identifying the equation to use given variables in the problem statement.
 
@@ -32,9 +33,9 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Vector Review
 
-* Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that horizontal component is not always $\cos$ of angle given.
+* Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that the horizontal component is not always $\cos$ of angle given.
 * Given a diagram showing vector components, find magnitude and direction.
-* Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find net vector magnitude and direction.
+* Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find the net vector magnitude and direction.
 
 ## Electric Charge
 
@@ -54,7 +55,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
     * [3--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at points of equilateral triangle
     * [4--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at corners of square.
 
-* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation)
+* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see $\rhat$ module for motivation)
   * Documents:
 | [pdf](Electric_Force/Electric_Force.pdf)
 | [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
@@ -78,7 +79,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Videos
     * [Electric Field Definition](https://www.youtube.com/watch?v=_4VC3IHbuW8) -- Includes details on how the electric field is related to electric force.
 
-* Activity: Computing the electric field due to one point charges (without $\rhat$ notation)
+* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see $\rhat$ module for motivation)
   * Documents:
 | [pdf](Electric_Field/Electric_Field.pdf)
 | [pdf solns](Electric_Field/Electric_Field-solutions.pdf)
@@ -95,9 +96,10 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * [2-D visualization of vector field due to two charges](https://www.geogebra.org/m/MAsvESCX) -- This interactive online Geogebra application can be used to demonstrate superposition and the fact that the electric field points in the same direction as the force on a test charge. A good review is to hide the test charge and ask students to predict the direction the force will be on it.
   * [PhEt Charges and Fields Simulation](https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html) -- Similar to the Geogebra example above.
 
-## The $\rhat$ Unit Vector
+## Using $\rhat$ to find $\bfvec{F}$ and $\bfvec{E}$
 
-* Activity: Computing electric field using $\rhat$ notation.
+
+* Activity: Computing electric force and electric field using $\rhat$ notation. 
   * Documents:
 | [pdf](rhat/rhat.pdf)
 | [pdf solns](rhat/rhat.pdf)
@@ -114,7 +116,9 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 * Background material:
   * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
   * Reading: [Chapter 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Chapter 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
-
+* Instructor Resources:
+  * [Singh, 2006, Student understanding of symmetry and Gauss's law of electricity](https://drive.google.com/file/d/1K5x1CevuPg7kibZOom_c32tNwuke3QmG/view?usp=drive_link)
+  * [Li, 2017, Investigating and improving introductory physics students' understanding of symmetry and Gauss's law](https://drive.google.com/file/d/1y18mdxRCsMp8-N2NaupteG2zo6t8YEES/view?usp=drive_link)
 * Activity: Computing electric force and field due to multiple charges
   * Documents:
 | [pdf](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
