@@ -33,6 +33,18 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Vector Review
 
+* Activity -- Given magnitude and direction, compute components; given components, compute magnitude and direction. 
+  * Documents:
+| [pdf](Vectors/Vectors.pdf)
+| [pdf solns](Vectors/Vectors-solutions.pdf)
+| [html](Vectors/Vectors.html)
+| [instructor notes](Vectors/README.html)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+|
+
 * Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that the horizontal component is not always $\cos$ of angle given.
 * Given a diagram showing vector components, find magnitude and direction.
 * Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find the net vector magnitude and direction.

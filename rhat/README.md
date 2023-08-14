@@ -1,6 +1,6 @@
 # Motivation and Observations
 
-The motivation for this activity is textbooks and instructors use $\rhat$ for some problems but not for others with no explanation. 
+The motivation for this activity is textbooks and instructors use $\rhat$ for some problems but not for others with no explanation. Or, equations with $\rhat$ are given but $\rhat$ is not used explicity in examples.
 
 We have found that without a separate activity, students are not able to explain the meaning of $\rhat$ and when they read solutions that use it, they don't understand that the $\rhat$ method is simply an alternative method for computing $\bfvec{E}$.
 
@@ -14,14 +14,9 @@ Observations
 
 %Here we assume students are familiar with computing $\bfvec{E}$ without using $\rhat$.
 
-# Last Question on Activity
+# Absolute Value and Magnitude Subtilty
 
-A first guess is the equation
+For students who have an easy time with the problems, ask how $|\bfvec{E}|=E=\sqrt{E_x^2+E_y^2}$ with $E_x=k\frac{q_1}{8a^2}\frac{1}{\sqrt{2}}$ and $E_y=k\frac{q_1}{8a^2}\frac{1}{\sqrt{2}}$ results in an aboslute value in $E=k|q_1|/{8a^2}$.
 
-$$\bfvec{F}=kq_1q_2\frac{\rhat}{r^2}$$
+Or ask them to show that $|kq_1\frac{\rhat}{r^2}|$ is $k|q_1|\frac{1}{r^2}$, where in the first equation $|\cdot|$ means vector magnitude and in second equation it means absolute value. (Use $\rhat=r_x\ihat + r_y\jhat$, $\sqrt{r_x^2+r_y^2} = 1$, and $\sqrt{q_1^2}=|q_1|$.)
 
-which is incomplete. The complete equation is
-
-$$\bfvec{F}_{q_1 \text{ on } q_2}=kq_1q_2\frac{\rhat_{12}}{r^2}$$
-
-where $\rhat_{12}$ is a unit vector that points from $q_1$ towards $q_2$. This subtiltly is perhaps why intro textbooks only use $\rhat$ notation for electric field problems.
