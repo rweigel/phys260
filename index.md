@@ -33,6 +33,9 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Vector Review
 
+* Videos:
+  * [Vector Basics](https://www.youtube.com/watch?v=EwSHKuSxX_8&ab_channel=TheOrganicChemistryTutor)
+
 * Activity -- Given magnitude and direction, compute components; given components, compute magnitude and direction. 
   * Documents:
 | [pdf](Vectors/Vectors.pdf)
@@ -45,9 +48,9 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
 |
 
-* Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that the horizontal component is not always $\cos$ of angle given.
-* Given a diagram showing vector components, find magnitude and direction.
-* Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find the net vector magnitude and direction.
+%Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that the horizontal component is not always $\cos$ of angle given.
+%Given a diagram showing vector components, find magnitude and direction.
+%Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find the net vector magnitude and direction.
 
 ## Electric Charge
 
@@ -67,7 +70,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
     * [3--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at points of equilateral triangle
     * [4--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at corners of square.
 
-* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see $\rhat$ module for motivation)
+* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see $\rhat$ module instructor notes for motivation)
   * Documents:
 | [pdf](Electric_Force/Electric_Force.pdf)
 | [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
@@ -91,7 +94,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Videos
     * [Electric Field Definition](https://www.youtube.com/watch?v=_4VC3IHbuW8) -- Includes details on how the electric field is related to electric force.
 
-* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see $\rhat$ module for motivation)
+* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see $\rhat$ module instructor notes for motivation)
   * Documents:
 | [pdf](Electric_Field/Electric_Field.pdf)
 | [pdf solns](Electric_Field/Electric_Field-solutions.pdf)

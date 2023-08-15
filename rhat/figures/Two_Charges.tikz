@@ -33,7 +33,7 @@
 %Shape: Circle [id:dp2852233747162909] 
 \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (167.63,62) .. controls (167.63,59.31) and (169.81,57.13) .. (172.5,57.13) .. controls (175.19,57.13) and (177.37,59.31) .. (177.37,62) .. controls (177.37,64.69) and (175.19,66.87) .. (172.5,66.87) .. controls (169.81,66.87) and (167.63,64.69) .. (167.63,62) -- cycle ;
 %Shape: Brace [id:dp45230809721231746] 
-\draw   (180,162) .. controls (184.67,162) and (187,159.67) .. (187,155) -- (187,119.75) .. controls (187,113.08) and (189.33,109.75) .. (194,109.75) .. controls (189.33,109.75) and (187,106.42) .. (187,99.75)(187,102.75) -- (187,68) .. controls (187,63.33) and (184.67,61) .. (180,61) ;
+\draw   (180,161) .. controls (184.67,161) and (187,158.67) .. (187,154) -- (187,119.8) .. controls (187,113.13) and (189.33,109.8) .. (194,109.8) .. controls (189.33,109.8) and (187,106.47) .. (187,99.8)(187,102.8) -- (187,69) .. controls (187,64.33) and (184.67,62) .. (180,62) ;
 
 % Text Node
 \draw (129.5,25.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$y$};
@@ -48,13 +48,11 @@
 % Text Node
 \draw (51.5,161) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle q_{1}$};
 % Text Node
-\draw (190.5,78) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle r_{y} =r\sin 45^{\circ }$};
+\draw (193,87) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle r_{y} =2a$};
 % Text Node
-\draw (78.37,186) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle r_{x} =r\sin 45^{\circ }$};
+\draw (100,186) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle r_{x} =2a$};
 % Text Node
-\draw (101,138) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 45^{\circ }$};
-% Text Node
-\draw (153,35) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle q_{2}$};
+\draw (181,37) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle q_{2}$};
 
 
 \end{tikzpicture}
