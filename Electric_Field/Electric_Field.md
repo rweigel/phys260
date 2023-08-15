@@ -42,17 +42,13 @@ The electric field at the location of $q_o$ is then
 
 $\ds\bfvec{E}_{\text{at }(a,a) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o} = \frac{kq_1}{8a^2}(\cos 45^\circ \ihat + \sin 45^\circ \jhat) =\frac{kq_1}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$,
 
-where the fact that $\sin 45^\circ=\cos 45^\circ=1/\sqrt{2}$ was used. The magnitude is $E=\sqrt{E_x^2+E_y^2}=k|q_1|/8a^2$.
+where the fact that $\sin 45^\circ=\cos 45^\circ=1/\sqrt{2}$ was used. The magnitude is $E=k|q_1|/8a^2$.
 
 Sign check: When computing electric fields and forces, it is easy to make a sign error. The electric field vector points in the direction a positive charge will move if released there from rest. $q_1$ was given to be positive. Our equation predicts that a positive charge released from rest at $(a, a)$ will move up and to the right. Suppose $q_1$ is negative. Our equation predicts that a positive charge will move down and to the left. This is consistent with the fact that like charges repel and unlike charges attract. (Note that we only derived the equation for $\bfvec{E}$ when $q_1$ was positive, but it turns out that the equation we arrive at is correct when $q_1$ is negative.)
-
-Follow-up question: In the above, the equation $E=\sqrt{E_x^2+E_y^2}=k|q_1|/8a^2$ was given. Where did the absolute value on $q_1$ come from?
 
 # Problem I
 
 A positive charge $q_1$ is at $(x,y)=(-a,a)$. At $(x,y)=(a, 0)$, find $\bfvec{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$. Check signs of the components of $\bfvec{E}$ using the technique used in Example I. Also, find $E$.
-
-<img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
 \ifsolutions
 {\bf Answer}:
@@ -68,6 +64,8 @@ $$\bfvec{F}_{q_1\text{ on } q_o}=k\frac{q_1q_o}{5a^2}\left(\frac{2}{\sqrt{5}}\ih
 $\ds\bfvec{E}_{\text{at }(a,0) \text{ due to }q_1} = \frac{\bfvec{F}}{q_o}=\frac{kq_1}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat -\frac{2}{\sqrt{5}}\jhat\right)$
 
 $E = k|q_1|/5a^2$
+\else
+<img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 \fi
 
 \newpage
@@ -80,9 +78,7 @@ An alternative approach is to start with the equation for the magnitude of the e
 
 $E_{\text{due to }q}=k{|q|}/{r^2}$
 
-Charge $q_1$ is at $(x,y)=(a, a)$. Find the magnitude of the electric field at $(x,y)=(0, 0)$ using the above formula and then find $\bfvec{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$.
-
-<img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
+Charge $q_1$ is at $(x,y)=(a, a)$. Find the magnitude of the electric field, $E$, at $(x,y)=(0, 0)$ using the above formula and then find $\bfvec{E}$ in the form $\bfvec{E}=E_x\ihat + E_y\jhat$.
 
 \ifsolutions
 {\bf Answer}:
@@ -90,5 +86,9 @@ Charge $q_1$ is at $(x,y)=(a, a)$. Find the magnitude of the electric field at $
 $E = kq/2a^2$
 
 $\ds\bfvec{E}_{\text{at }(0,0) \text{ due to }q_1}=-\frac{kq_1}{2a^2}\left(\frac{1}{\sqrt{2}}\ihat +\frac{1}{\sqrt{2}}\jhat\right)$
+
+\else
+
+<img src="../Electric_Force/figures/grid.svg" style="width:100%"/>
 
 \fi
