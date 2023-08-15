@@ -1,0 +1,40 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,201); %set diagram left start at 0, and has height of 201
+
+%Shape: Grid [id:dp7678677023018607] 
+\draw  [draw opacity=0] (0,-50) -- (400,-50) -- (400,150) -- (0,150) -- cycle ; \draw  [color={rgb, 255:red, 220; green, 220; blue, 220 }  ,draw opacity=1 ] (50,-50) -- (50,150)(100,-50) -- (100,150)(150,-50) -- (150,150)(200,-50) -- (200,150)(250,-50) -- (250,150)(300,-50) -- (300,150)(350,-50) -- (350,150) ; \draw  [color={rgb, 255:red, 220; green, 220; blue, 220 }  ,draw opacity=1 ] (0,0) -- (400,0)(0,50) -- (400,50) ; \draw  [color={rgb, 255:red, 220; green, 220; blue, 220 }  ,draw opacity=1 ] (0,-50) -- (400,-50) -- (400,150) -- (0,150) -- cycle ;
+%Straight Lines [id:da04962468288547894] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ]   (50,50) -- (197,50) ;
+\draw [shift={(200,50)}, rotate = 180] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da3237467676353869] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ]   (50,50) -- (50,3) ;
+\draw [shift={(50,0)}, rotate = 90] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da7090426014185081] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (125,50) -- (125,150) ;
+%Straight Lines [id:da029077223942405306] 
+\draw [line width=1.5]    (50,50) -- (122.6,146.8) ;
+\draw [shift={(125,150)}, rotate = 233.13] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (11.61,-5.58) -- (0,0) -- (11.61,5.58) -- cycle    ;
+%Straight Lines [id:da08836194799357244] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (50,50) -- (125,50) ;
+
+% Text Node
+\draw (200,56.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$x$};
+% Text Node
+\draw (31,1.4) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$y$};
+% Text Node
+\draw (88,125.4) node [anchor=north west][inner sep=0.75pt]    {$\mathbf{F}$};
+% Text Node
+\draw (135,89.4) node [anchor=north west][inner sep=0.75pt]    {$4$};
+% Text Node
+\draw (87,27.4) node [anchor=north west][inner sep=0.75pt]    {$3$};
+% Text Node
+\draw (10,91.4) node [anchor=north west][inner sep=0.75pt]    {$\sqrt{3^{2} +4^{2}}$};
+% Text Node
+\draw (72,54.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
+
+
+\end{tikzpicture}
