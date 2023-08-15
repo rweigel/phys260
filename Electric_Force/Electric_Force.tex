@@ -118,7 +118,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
   \item The charges will repel each other, so the direction of forces of one on the other will be as shown in the left part of the following diagram. The angle of $F_{1\mbox{ on } 2}$ is $+45^\circ$ with respect to the $+x$--axis with counterclockwise positive.
 
-        \input{figures/Two_Charges-a.tikz}
+        \input{figures/Two_Charges-a.tikz?1692120532733}
 
   \item Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. The right part of the above diagram shows the calculation of the components $F_x$ and $F_y$, from which it follows that $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$.
 
@@ -173,7 +173,7 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 
       \item $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$
 
-      \item $315^\circ$ (or $-45^\circ$)
+      \item $315^\circ$
 
       \item $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos 315^\circ \ihat + \sin 315^\circ \jhat)$
 
@@ -183,7 +183,7 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 
       \item \textbf{p1} No change.
 
-            \textbf{p2} $+135^\circ$
+            \textbf{p2} $135^\circ$
 
             \textbf{p3}
 
@@ -199,13 +199,13 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 \else
 
 \input{figures/grid.tikz}
+\fi
 
 \newpage
-\fi
 
 \section{Problem II}
 
-Answer the questions 1.--3. of Problem I in the previous problem for charge $q_1$ at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$.
+Answer the questions 1.--3. of Problem I for charge $q_1$ at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, 0)$.
 
 \ifsolutions
 {\bf Solution}
@@ -216,10 +216,17 @@ Answer the questions 1.--3. of Problem I in the previous problem for charge $q_1
 
       \item $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{(2a)^2+a^2})^2}=\frac{kq^2}{5a^2}$
 
-      \item $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \theta \ihat - \cos \theta\jhat)$, where $\theta=\tan^{-1}(2) = 63.4^\circ$.
+      \item $\phi=(180^\circ/\pi)\tan^{-1}(2) = 63.4^\circ$, so $\theta = 270^\circ + \phi = 333.4^\circ$
 
-                Alternatively, from the diagram on the right, $\sin\theta = 2a/\sqrt{5}a$ and $\cos\theta = 1a/\sqrt{5}a$, so 
-                $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$.
+      \item $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos \theta \ihat + \sin \theta\jhat)$
+
+            or, using the acute angle and inserting signs based on the diagram,
+
+            $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \phi \ihat - \cos \phi\jhat)$
+
+            Alternatively, from the diagram on the right, $\sin\theta = 2a/\sqrt{5}a$ and $\cos\theta = 1a/\sqrt{5}a$, so
+
+            $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$.
 
     \end{enumerate}
 \else
@@ -241,13 +248,13 @@ Answer questions 1.--3. of Problem I for charge $q_1$ is at $(x,y)=(-a,0)$ and c
 
       \item $r=\sqrt{a^2+(3a)^2}$, $F=k|q(-q)|/r^2=kq^2/10a^2$
 
-      \item The angle $\theta$ shown in the diagram is $\theta=\tan^{-1}(1/3)=18.4^\circ$, so the angle with respect to the $+x$--axis is $270-18.4=251.6^\circ$
+      \item The angle $\phi$ shown in the diagram is $\phi=(180/\pi)\tan^{-1}(1/3)=18.4^\circ$, so the angle with respect to the $+x$--axis is $\theta=270^\circ-18.4^\circ=251.6^\circ$
 
-      \item $\bfvec{F}=F\sin251.6^\circ\ihat - F\cos251.6^\circ\jhat$
+      \item $\bfvec{F}_{1\mbox{ on } 2}=F\sin251.6^\circ\ihat + F\cos251.6^\circ\jhat$
 
-            or
+            or, using the acute angle and inserting signs based on the diagram,
 
-            $\bfvec{F}=-F\sin 18.4^\circ\ihat - F\cos18.4^\circ\jhat$
+            $\bfvec{F}_{1\mbox{ on } 2}=-F\sin 18.4^\circ\ihat - F\cos18.4^\circ\jhat$
 
             Alternatively, from the diagram,
 
@@ -256,11 +263,11 @@ Answer questions 1.--3. of Problem I for charge $q_1$ is at $(x,y)=(-a,0)$ and c
             $\ds\bfvec{F}_{1\mbox{ on } 2} = F\left(-\frac{1}{\sqrt{10}}\ihat - \frac{3}{\sqrt{10}}\jhat\right)$
 
     \end{enumerate}
-
-\newpage
 \else
 
 \input{figures/grid.tikz}
+
+\vskip 144pt
 \fi
 
 \section{Problem IV}

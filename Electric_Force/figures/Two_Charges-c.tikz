@@ -66,9 +66,9 @@
 % Text Node
 \draw (179.5,88) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle q_{2}$};
 % Text Node
-\draw (414,170.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F_{x} =F\sin (\theta )$};
+\draw (414,170.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F_{x} =F\sin (\phi )$};
 % Text Node
-\draw (322,130.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F_{y} =F\cos (\theta )$};
+\draw (322,130.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$F_{y} =F\cos (\phi )$};
 % Text Node
 \draw (172.25,117.04) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$a$};
 % Text Node
@@ -88,13 +88,13 @@
 % Text Node
 \draw (396,26.4) node [anchor=north west][inner sep=0.75pt]    {$a$};
 % Text Node
-\draw (417,23.4) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
+\draw (417,23.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
 % Text Node
-\draw (417.5,122.27) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
+\draw (417.5,122.27) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
 % Text Node
-\draw (319,51.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\theta =\tan^{-1}\left(\frac{2a}{a}\right)$};
+\draw (319,51.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\phi =\tan^{-1}\left(\frac{2a}{a}\right)$};
 % Text Node
-\draw (443.42,0.48) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-28.54]  {$\sqrt{( 2a)^{2} +a^{2}}$};
+\draw (435.69,-0.58) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,rotate=-27.1]  {$r=\sqrt{( 2a)^{2} +a^{2}}$};
 
 
 \end{tikzpicture}

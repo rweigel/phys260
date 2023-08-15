@@ -41,7 +41,7 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
    **p1**: The magnitude will not change (it is by definition a positive number).
 
-   **p2**: The force vectors will reverse direction as shown on the left in the following diagram. The angle of $F_{1\mbox{ on } 2}$ is $225^\circ$ with respect to the $+x$ axis with counterclockwise positive.
+   **p2**: The force vectors will reverse direction as shown on the left in the following diagram. The angle of $F_{1\mbox{ on } 2}$ is $180^\circ+45^\circ=225^\circ$ with respect to the $+x$ axis with counterclockwise positive.
  
    **p3**: When the angle $\theta$ of a vector $\bfvec{V}$ is given with respect to $+x$--axis, it can be written in component form without using a diagram using the formula $\bfvec{V} = V\cos\theta\ihat + V\sin\theta\jhat$. Thus,
 
@@ -101,9 +101,9 @@ Charge $q_1$ is at $(x,y)=(-a,a)$ and charge $q_2$ is at $(a, -a)$. Both charges
 
 <img src="figures/grid.svg" style="width:90%"/>
 
-\newpage
-
 \fi
+
+\newpage
 
 # Problem II
 
@@ -115,9 +115,18 @@ Answer the questions 1.--3. of Problem I for charge $q_1$ at $(x,y)=(-a,a)$ and 
 <img src="figures/Two_Charges-c.svg"/>
 
 1. $\ds F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{(2a)^2+a^2})^2}=\frac{kq^2}{5a^2}$
-2. $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \theta \ihat - \cos \theta\jhat)$, where $\theta=\tan^{-1}(2) = 63.4^\circ$.
 
-   Alternatively, from the diagram on the right, $\sin\theta = 2a/\sqrt{5}a$ and $\cos\theta = 1a/\sqrt{5}a$, so 
+2. $\phi=(180^\circ/\pi)\tan^{-1}(2) = 63.4^\circ$, so $\theta = 270^\circ + \phi = 333.4^\circ$
+
+3. 
+   $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\cos \theta \ihat + \sin \theta\jhat)$
+
+   or, using the acute angle and inserting signs based on the diagram,
+   
+   $\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}(\sin \phi \ihat - \cos \phi\jhat)$
+
+   Alternatively, from the diagram on the right, $\sin\phi = 2a/\sqrt{5}a$ and $\cos\phi = 1a/\sqrt{5}a$, so 
+
    $\ds\bfvec{F}_{1\mbox{ on } 2} = F_{1\mbox{ on } 2}\left(\frac{2}{\sqrt{5}}\ihat - \frac{1}{\sqrt{5}}\jhat\right)$.
 
 \else
@@ -139,15 +148,15 @@ Answer questions 1.--3. of Problem I for charge $q_1$ is at $(x,y)=(-a,0)$ and c
 
 1. $r=\sqrt{a^2+(3a)^2}$, $F=k|q(-q)|/r^2=kq^2/10a^2$
 
-2. The angle $\theta$ shown in the diagram is $\theta=\tan^{-1}(1/3)=18.4^\circ$, so the angle with respect to the $+x$--axis is $270-18.4=251.6^\circ$
+2. The angle $\phi$ shown in the diagram is $\phi=(180/\pi)\tan^{-1}(1/3)=18.4^\circ$, so the angle with respect to the $+x$--axis is $\theta=270^\circ-18.4^\circ=251.6^\circ$
 
 3. 
 
-   $\bfvec{F}=F\sin251.6\^\circ\ihat - F\cos251.6^\circ\jhat$
+   $\bfvec{F}_{1\mbox{ on } 2}=F\sin251.6\^\circ\ihat + F\cos251.6^\circ\jhat$
 
-   or
+   or, using the acute angle and inserting signs based on the diagram,
 
-   $\bfvec{F}=-F\sin 18.4\^\circ\ihat - F\cos18.4^\circ\jhat$
+   $\bfvec{F}_{1\mbox{ on } 2}=-F\sin 18.4\^\circ\ihat - F\cos18.4^\circ\jhat$
 
    Alternatively, from the diagram, 
    
@@ -155,11 +164,11 @@ Answer questions 1.--3. of Problem I for charge $q_1$ is at $(x,y)=(-a,0)$ and c
    
    $\ds\bfvec{F}_{1\mbox{ on } 2} = F\left(-\frac{1}{\sqrt{10}}\ihat - \frac{3}{\sqrt{10}}\jhat\right)$
 
-\newpage
-
 \else
 
 <img src="figures/grid.svg" style="width:75%"/>
+
+\vspace{2in}
 
 \fi
 
