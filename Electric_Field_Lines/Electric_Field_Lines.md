@@ -33,29 +33,46 @@ In addition, keep in mind that the electric field line tells you the direction o
 
 1. In the previous example, how much larger is the magnitude of electric field vector 1 than electric field vector 2? (State the ratio of their magnitudes.)
 
+\ifsolutions
+\else
 <div style="height:2em"/>
+\fi
 
 2. Draw field lines with start points of (a.) $(x,y)=(2,1)$ and (b.) $(x,y)=(3,1)$ on the diagram in the previous example.
 
-3. If the point charge in the previous example was replaced with a charge of magnitude $10q$, how would field lines that you drew change?
+3. If the point charge in the previous example was replaced with a charge of magnitude $10q$, will the field lines you drew change? If yes, how?
+
+\ifsolutions
+**Answer**
+
+<img src="figures/Single_Charge_Solution.svg"/>
+
+3. Field lines will not change.
+\fi
 
 \newpage
 
 # Problem -- Two Charges
 
 Draw field lines with the starting points
-1. $(x,y)=(0,1)$
-2. $(x,y)=(3,1)$
-3. $(x,y)=(1,1)$
+1. $(x,y)=(1,0)$
+2. $(x,y)=(3,0)$
+3. $(x,y)=(2,2)$
+3. $(x,y)=(0,1)$
 
+
+\ifsolutions
+<img src="figures/Two_Positive_Charges_Solution.svg"/>
+\else
 <img src="figures/Two_Positive_Charges.svg"/>
+\fi
 
 # Problem -- Dipole
 
-Draw field lines with the starting points
+Draw a field line with the starting point $(x,y)=(2,2)$.
 
-1. $(x,y)=(0,4)$
-2. $(x,y)=(3,0)$
-
+\ifsolutions
+<img src="figures/Dipole_Solution.svg"/>
+\else
 <img src="figures/Dipole.svg"/>
-
+\fi
