@@ -1,3 +1,4 @@
+In solutions to Gauss' law problems, the authors typically simply write down an equation for enclosed charge without much explanation. We have found that students have difficulty solving for enclosed charge on their own, which is the motivation for the activity.
 
 # F2022
 

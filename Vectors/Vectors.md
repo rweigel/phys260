@@ -26,7 +26,7 @@ A vector $\bfvec{F}$ has a magnitude of $2$ and makes an angle of $30^\circ$ wit
 
 # Problem II
 
-Given $\bfvec{F}=3\ihat -4\jhat$, find
+Given $\bfvec{F}=3\ihat - 4\jhat$,
 
 1. Draw $\bfvec{F}$.
 2. Compute $F$.

@@ -41,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -291,11 +291,6 @@
       padding-left: 0.5em;
     }
 
-    #display>.section>.block &>ol.compact {
-      margin-top: 0.25em;
-      margin-bottom: 0.25em;
-    }
-
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -382,10 +377,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -397,6 +388,16 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
     .page-break {
       break-after: page;
       width: 100%;
@@ -405,11 +406,11 @@
     }
 
     .solutionsfalse {
-      display: block;
+      display: none;
     }
 
     .solutionstrue {
-      display: none;
+      display: block;
     }
 
     @media print {
@@ -550,12 +551,12 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#f2022" raw="# F2022" lo="2">
+        <a href="#f2022" raw="# F2022" lo="2" class="">
           <span class="toctext">F2022</span>
         </a>
         <ol class="toc" style="display: none;">
           <li>
-            <a href="#email" raw="## Email" lo="4">
+            <a href="#email" raw="## Email" lo="4" class="">
               <span class="toctext">Email</span>
             </a>
           </li>
@@ -572,12 +573,12 @@
         </ol>
       </li>
       <li>
-        <a href="#s2023" raw="# S2023" lo="84" class="">
+        <a href="#s2023" raw="# S2023" lo="84">
           <span class="toctext">S2023</span>
         </a>
-        <ol class="toc" style="display: block;">
+        <ol class="toc" style="display: none;">
           <li>
-            <a href="#comments-after" raw="## Comments after" lo="86" class="highlighted">
+            <a href="#comments-after" raw="## Comments after" lo="86">
               <span class="toctext">Comments after</span>
             </a>
           </li>
@@ -587,295 +588,299 @@
   </div>
   <div id="display">
     <div class="section">
-    </div>
-    <div class="section">
       <div class="block">
-        <h1 lo="2" lf="2"><a name="f2022" number="1" lo="2" raw="# F2022" class="anchor hanchor" href="#f2022"><span class="hnumber">1</span>&nbsp;<span class="htext">F2022</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">2</span></div>
+        <p padlength="0" lo="1" lf="1" class="active">In solutions to Gauss’ law problems, the authors typically simply write down an equation for enclosed charge without much explanation. We have found that students have difficulty solving for enclosed charge on their own, which is the motivation for the activity.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="4" lf="4"><a name="email" number="1.1" lo="4" raw="## Email" class="anchor hanchor" href="#email"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Email</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">4</span></div>
+        <h1 lo="3" lf="3" class=""><a name="f2022" number="1" lo="3" raw="# F2022" class="anchor hanchor" href="#f2022" lf="3"><span class="hnumber">1</span>&nbsp;<span class="htext">F2022</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="5" lf="5" class=""><a name="email" number="1.1" lo="5" raw="## Email" class="anchor hanchor" href="#email" lf="5"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Email</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="6" lf="6">In the directory Enclosed_Charge at <a href="https://www.overleaf.com/read/btssfxsjgyzr">https://www.overleaf.com/read/btssfxsjgyzr</a>, there is an activity that I plan on using Monday (pdfs attached). If you want to make edits, the .tex version has a switch at the top to hide the solutions.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">6</span></div>
+        <p padlength="0" lo="7" lf="7">In the directory Enclosed_Charge at <a href="https://www.overleaf.com/read/btssfxsjgyzr">https://www.overleaf.com/read/btssfxsjgyzr</a>, there is an activity that I plan on using Monday (pdfs attached). If you want to make edits, the .tex version has a switch at the top to hide the solutions.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="8" lf="8">I used to cover the enclosed charge briefly when I covered Gauss’s law until I realized that many students weren’t able to compute the enclosed charge part (unless they remembered the answer). Instructors, including myself, and textbooks tend to spend the most time on the flux part of Gauss’s law. This activity covers many parts that students need practice on (both at the freshman and junior level, I’ve found):</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">8</span></div>
+        <p padlength="0" lo="9" lf="9">I used to cover the enclosed charge briefly when I covered Gauss’s law until I realized that many students weren’t able to compute the enclosed charge part (unless they remembered the answer). Instructors, including myself, and textbooks tend to spend the most time on the flux part of Gauss’s law. This activity covers many parts that students need practice on (both at the freshman and junior level, I’ve found):</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
       </div>
       <div class="block">
-        <ol lo="10" lf="14" class="compact">
-          <li markerlength="3" padlength="0" lo="10" lf="10">
-            <div class="block">
-              <p padlength="0" lo="10" lf="10">Plotting piecewise functions (the motivation for them plotting points is because many get stuck and I tell them to plot a few points first to give themself a hint)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">10</span></div>
-            </div>
-          </li>
+        <ol lo="11" lf="15" class="compact">
           <li markerlength="3" padlength="0" lo="11" lf="11">
             <div class="block">
-              <p padlength="0" lo="11" lf="11">Manipulating variables instead of numbers</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+              <p padlength="0" lo="11" lf="11">Plotting piecewise functions (the motivation for them plotting points is because many get stuck and I tell them to plot a few points first to give themself a hint)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">15-17</span></div>
             </div>
           </li>
           <li markerlength="3" padlength="0" lo="12" lf="12">
             <div class="block">
-              <p padlength="0" lo="12" lf="12">Identifying how Q enclosed scales with the radius of the Gaussian volume (or other dimensions) and using this to check their plot and answers</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">12</span></div>
+              <p padlength="0" lo="12" lf="12">Manipulating variables instead of numbers</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">15-17</span></div>
             </div>
           </li>
           <li markerlength="3" padlength="0" lo="13" lf="13">
             <div class="block">
-              <p padlength="0" lo="13" lf="13">Computing charge densities</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">13</span></div>
+              <p padlength="0" lo="13" lf="13">Identifying how Q enclosed scales with the radius of the Gaussian volume (or other dimensions) and using this to check their plot and answers</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">15-17</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="14" lf="16">
+          <li markerlength="3" padlength="0" lo="14" lf="14">
             <div class="block">
-              <p padlength="0" lo="14" lf="14">Recalling formulas for volumes and areas (many don’t know or recall that if they know the circumference of a circle, they can figure out the surface area of a cylinder and if they know the area of the circle, they can figure out its volume)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">14</span></div>
+              <p padlength="0" lo="14" lf="14">Computing charge densities</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">15-17</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="15" lf="17">
+            <div class="block">
+              <p padlength="0" lo="15" lf="15">Recalling formulas for volumes and areas (many don’t know or recall that if they know the circumference of a circle, they can figure out the surface area of a cylinder and if they know the area of the circle, they can figure out its volume)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">15</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">10-14</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">11-15</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="16" lf="16">For the few students who have an easy time with these problems, I ask them to</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">16</span></div>
+        <p padlength="0" lo="17" lf="17">For the few students who have an easy time with these problems, I ask them to</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">17</span></div>
       </div>
       <div class="block">
-        <ol lo="18" lf="20" class="compact">
-          <li markerlength="3" padlength="0" lo="18" lf="18">
-            <div class="block">
-              <p padlength="0" lo="18" lf="18">draw the field lines for the charged object,</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">18</span></div>
-            </div>
-          </li>
+        <ol lo="19" lf="21" class="compact">
           <li markerlength="3" padlength="0" lo="19" lf="19">
             <div class="block">
-              <p padlength="0" lo="19" lf="19">identify the conditions on the Gaussian volume such that the computation of flux through its surface is easy, and</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">19</span></div>
+              <p padlength="0" lo="19" lf="19">draw the field lines for the charged object,</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">21-23</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="20" lf="22">
+          <li markerlength="3" padlength="0" lo="20" lf="20">
             <div class="block">
-              <p padlength="0" lo="20" lf="20">compute the flux</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">20</span></div>
+              <p padlength="0" lo="20" lf="20">identify the conditions on the Gaussian volume such that the computation of flux through its surface is easy, and</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">21-23</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="21" lf="23">
+            <div class="block">
+              <p padlength="0" lo="21" lf="21">compute the flux</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">21</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">18-20</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">19-21</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="22" lf="22">I plan on spending 10 minutes doing one of the problems with the addition of doing 1.-3. above so they know the motivation for computing Q enclosed.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">22</span></div>
+        <p padlength="0" lo="23" lf="23">I plan on spending 10 minutes doing one of the problems with the addition of doing 1.-3. above so they know the motivation for computing Q enclosed.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">23</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="24" lf="24">Bob</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">24</span></div>
+        <p padlength="0" lo="25" lf="25">Bob</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">25</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="26" lf="26"><a name="comments-before" number="1.2" lo="26" raw="## Comments before" class="anchor hanchor" href="#comments-before"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Comments before</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">26</span></div>
+        <h2 lo="27" lf="27"><a name="comments-before" number="1.2" lo="27" raw="## Comments before" class="anchor hanchor" href="#comments-before" lf="27"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Comments before</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">27</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="28" lf="28">ro</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">28</span></div>
+        <p padlength="0" lo="29" lf="29">ro</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">29</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="30" lf="30">I always emphasize to students that final results should be in terms of the “given” variables of the problem when it is an algebraic problem. So, I would like to see questions 4. and 5. of each section ask explicitly for answers in terms of Q, not lambda or rho or sigma. I see the reason for doing it in terms of density in the earlier parts, but I think at some point they need to plug in the “givens”: R, H, etc.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">30</span></div>
+        <p padlength="0" lo="31" lf="31">I always emphasize to students that final results should be in terms of the “given” variables of the problem when it is an algebraic problem. So, I would like to see questions 4. and 5. of each section ask explicitly for answers in terms of Q, not lambda or rho or sigma. I see the reason for doing it in terms of density in the earlier parts, but I think at some point they need to plug in the “givens”: R, H, etc.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">31</span></div>
       </div>
       <div class="block">
-        <div class="blockquote" lo="32" lf="32">
+        <div class="blockquote" lo="33" lf="33">
           <p>Previously, I had them plotting Q_enclosed in terms of the variables given, but switched to using densities to lead them to the form of Q_enclosed that is used to compute the usual textbook formulas, which are typically given in terms of densities … except for the case you mention below and outside a solid sphere.</p>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">32</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">33</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="34" lf="34">In a similar vein, I don’t see the need to ask for charge in terms of sigma in part 3 of section 5. I would rather have them realize that Q_encl is simply the total charge of the sphere when you are outside the sphere. I think telliing them they need to do an extra step might be more confusing than helpful. Maybe in this question we could just leave off the part that tells them what the answer should be in terms of, and then instructors could ask if they understand how to get it “the other way”?</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">34</span></div>
+        <p padlength="0" lo="35" lf="35">In a similar vein, I don’t see the need to ask for charge in terms of sigma in part 3 of section 5. I would rather have them realize that Q_encl is simply the total charge of the sphere when you are outside the sphere. I think telliing them they need to do an extra step might be more confusing than helpful. Maybe in this question we could just leave off the part that tells them what the answer should be in terms of, and then instructors could ask if they understand how to get it “the other way”?</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">35</span></div>
       </div>
       <div class="block">
-        <div class="blockquote" lo="36" lf="40">
+        <div class="blockquote" lo="37" lf="41">
           <p>The motivation for asking for sigma was to ensure that they could compute a sigma. But it is awkward given they most likely see a formula in terms of Q and not sigma.</p>
           <p>Perhaps I could break the parallelism and in this problem give the charge density and ask for answers in terms of net charge. Or, note that this problem is a special case in the sense that we don’t write E in terms of a charge density. Same for the solid sphere when outside.</p>
           <p>I’ll put this discussion in my notes for consideration for revision next time. These are all good points that ideally should be addressed.</p>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">36-40</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">37-41</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="42" lf="42"><a name="comments-after" number="1.3" lo="42" raw="## Comments after" class="anchor hanchor" href="#comments-after"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Comments after</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">42</span></div>
+        <h2 lo="43" lf="43"><a name="comments-after" number="1.3" lo="43" raw="## Comments after" class="anchor hanchor" href="#comments-after" lf="43"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Comments after</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="44" lf="44">rw</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">44</span></div>
+        <p padlength="0" lo="45" lf="45">rw</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">45</span></div>
       </div>
       <div class="block">
-        <ol lo="46" lf="64" class="loose">
-          <li markerlength="3" padlength="0" lo="46" lf="47">
+        <ol lo="47" lf="65" class="loose">
+          <li markerlength="3" padlength="0" lo="47" lf="48">
             <div class="block">
-              <p padlength="0" lo="46" lf="47">✓ Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">46-47</span></div>
+              <p padlength="0" lo="47" lf="48">✓ Have a stand-alone section at the start for computing charge density given Q on all surfaces and volumes given.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="48" lf="49">
+          <li markerlength="3" padlength="0" lo="49" lf="50">
             <div class="block">
-              <p padlength="0" lo="48" lf="49">✗ Start problems with a density given. (<em type="md" marker="*">Will do in next revision</em>.)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">48-49</span></div>
+              <p padlength="0" lo="49" lf="50">✗ Start problems with a density given. (<em type="md" marker="*">Will do in next revision</em>.)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="50" lf="51">
+          <li markerlength="3" padlength="0" lo="51" lf="52">
             <div class="block">
-              <p padlength="0" lo="50" lf="51">Move two cylinder problems to the end. They appear in the more difficult Gauss’ law problems, and students got stuck. I had to stop them and give answers so they had time for the other problems. (Even after my explanation and the answers, I noticed students still trying to answer them.) Add a discussion for the cylindrical shell problem about how it can be solved given a linear or surface charge density. The solid cylinder problem could be solved given a linear or volume charge density, but I don’t recall ever seeing a problem where its linear density was given.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">50-51</span></div>
+              <p padlength="0" lo="51" lf="52">Move two cylinder problems to the end. They appear in the more difficult Gauss’ law problems, and students got stuck. I had to stop them and give answers so they had time for the other problems. (Even after my explanation and the answers, I noticed students still trying to answer them.) Add a discussion for the cylindrical shell problem about how it can be solved given a linear or surface charge density. The solid cylinder problem could be solved given a linear or volume charge density, but I don’t recall ever seeing a problem where its linear density was given.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="52" lf="53">
+          <li markerlength="3" padlength="0" lo="53" lf="54">
             <div class="block">
-              <p padlength="0" lo="52" lf="53">✓ Add to the notes a definition of linear, surface, and volume charge density when the charge is uniformly distributed. I’m reluctant to give formulas for areas and volumes because it lets them think they don’t need to know it without reference.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">52-53</span></div>
+              <p padlength="0" lo="53" lf="54">✓ Add to the notes a definition of linear, surface, and volume charge density when the charge is uniformly distributed. I’m reluctant to give formulas for areas and volumes because it lets them think they don’t need to know it without reference.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="54" lf="55">
+          <li markerlength="3" padlength="0" lo="55" lf="56">
             <div class="block">
-              <p padlength="0" lo="54" lf="55">Students who had difficulty plotting the curve also had difficulty in writing down the value at various points. I’m not sure what to do about that. There could be a sentence that says “if the formula does not depend on <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>, …”. But the students who didn’t realize this understood so little that I’m not sure it will help.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">54-55</span></div>
+              <p padlength="0" lo="55" lf="56">Students who had difficulty plotting the curve also had difficulty in writing down the value at various points. I’m not sure what to do about that. There could be a sentence that says “if the formula does not depend on <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>, …”. But the students who didn’t realize this understood so little that I’m not sure it will help.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="56" lf="57">
+          <li markerlength="3" padlength="0" lo="57" lf="58">
             <div class="block">
-              <p padlength="0" lo="56" lf="57">Add a question after the spherical shell and solid sphere problem that states “if the total charge is Q in both cases, is Q_enclosed for r&gt;R the same?” Ideally, there would be a follow-up that makes the point that if Q is uniformly distributed on a shell, thick shell, solid sphere, or on an infinitesimal sphere, E will be the same outside. I’m still trying to think about how to address the issue about this you raised earlier.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">56-57</span></div>
+              <p padlength="0" lo="57" lf="58">Add a question after the spherical shell and solid sphere problem that states “if the total charge is Q in both cases, is Q_enclosed for r&gt;R the same?” Ideally, there would be a follow-up that makes the point that if Q is uniformly distributed on a shell, thick shell, solid sphere, or on an infinitesimal sphere, E will be the same outside. I’m still trying to think about how to address the issue about this you raised earlier.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="58" lf="59">
+          <li markerlength="3" padlength="0" lo="59" lf="60">
             <div class="block">
-              <p padlength="0" lo="58" lf="59">I may add a question at the end that gives a non-uniform density for a solid sphere to make the point that the total charge/ total length, total charge/total area, and total charge/total volume formulas only work apply if the charge is uniformly distributed. Probably I’ll give the integral formula for Q and show it gives the correct result for constant rho and then ask them to use it for rho that depends on r.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">58-59</span></div>
+              <p padlength="0" lo="59" lf="60">I may add a question at the end that gives a non-uniform density for a solid sphere to make the point that the total charge/ total length, total charge/total area, and total charge/total volume formulas only work apply if the charge is uniformly distributed. Probably I’ll give the integral formula for Q and show it gives the correct result for constant rho and then ask them to use it for rho that depends on r.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="60" lf="61">
+          <li markerlength="3" padlength="0" lo="61" lf="62">
             <div class="block">
-              <p padlength="0" lo="60" lf="61">✓ State that “charge enclosed” means the same thing as “charge inside of”</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">60-61</span></div>
+              <p padlength="0" lo="61" lf="62">✓ State that “charge enclosed” means the same thing as “charge inside of”</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="62" lf="63">
+          <li markerlength="3" padlength="0" lo="63" lf="64">
             <div class="block">
-              <p padlength="0" lo="62" lf="63">Some students were tripped up by the fact that I switched from having the Gaussian volume larger than the charged object for the cylinder problems to smaller for the sphere problems. I had not noticed it. I’m not sure if it is something to leave as-is, so they get in the habit of reading the problem statement, or to change so they don’t get tripped up (because there is already enough to get tripped up on when trying the first time).</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">62-63</span></div>
+              <p padlength="0" lo="63" lf="64">Some students were tripped up by the fact that I switched from having the Gaussian volume larger than the charged object for the cylinder problems to smaller for the sphere problems. I had not noticed it. I’m not sure if it is something to leave as-is, so they get in the habit of reading the problem statement, or to change so they don’t get tripped up (because there is already enough to get tripped up on when trying the first time).</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-67</span></div>
             </div>
           </li>
-          <li markerlength="4" padlength="0" lo="64" lf="66">
+          <li markerlength="4" padlength="0" lo="65" lf="67">
             <div class="block">
-              <p padlength="0" lo="64" lf="65">I usually have about 5 students that continue working for 5-10 minutes after the period ends. For this activity, there was more. I wonder if this is because they liked the problems, the exam is coming up, or they were the few students that only got an 8 or 9 out of 10 on the previous activity.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">64-65</span></div>
+              <p padlength="0" lo="65" lf="66">I usually have about 5 students that continue working for 5-10 minutes after the period ends. For this activity, there was more. I wonder if this is because they liked the problems, the exam is coming up, or they were the few students that only got an 8 or 9 out of 10 on the previous activity.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">65-66</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">46-64</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">47-65</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="66" lf="66">About 1/4 of the students required a significant amount of explanation for why a small sphere inside of a shell has no charge inside of it. I tried about four different explanations … the only one that seemed to work is “if your hair is charge and I put a marble inside your skull, how much hair is inside the marble?”. Probably I should bring visual aids next time, especially for the charged cylindrical shell, which stumped even more students.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">66</span></div>
+        <p padlength="0" lo="67" lf="67">About 1/4 of the students required a significant amount of explanation for why a small sphere inside of a shell has no charge inside of it. I tried about four different explanations … the only one that seemed to work is “if your hair is charge and I put a marble inside your skull, how much hair is inside the marble?”. Probably I should bring visual aids next time, especially for the charged cylindrical shell, which stumped even more students.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">67</span></div>
       </div>
       <div class="block">
-        <div class="hr" lo="68" lf="68"></div>
+        <div class="hr" lo="69" lf="69"></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="70" lf="70">ro</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">70</span></div>
+        <p padlength="0" lo="71" lf="71">ro</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">71</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="72" lf="72">I thought it went really well in my classes and I liked the progression of the problems as is.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">72</span></div>
+        <p padlength="0" lo="73" lf="73">I thought it went really well in my classes and I liked the progression of the problems as is.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">73</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="74" lf="74"><strong type="md">TODO</strong> I edited my version to ask for answers in terms of Q in the last step (while keeping it in terms of density in the previous steps). See attached.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">74</span></div>
+        <p padlength="0" lo="75" lf="75"><strong type="md">TODO</strong> I edited my version to ask for answers in terms of Q in the last step (while keeping it in terms of density in the previous steps). See attached.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">75</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="76" lf="76"><strong type="md">TODO</strong> I agree that the idea of doing a cylindrical shape in terms of surface charge density OR linear charge density is confusing to them and requires some discussion, especially because the book problems mostly use linear density. (Personally, I would just stick with surface charge density to avoid the confusion.) Not sure what to do about that because it would make it even longer.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">76</span></div>
+        <p padlength="0" lo="77" lf="77"><strong type="md">TODO</strong> I agree that the idea of doing a cylindrical shape in terms of surface charge density OR linear charge density is confusing to them and requires some discussion, especially because the book problems mostly use linear density. (Personally, I would just stick with surface charge density to avoid the confusion.) Not sure what to do about that because it would make it even longer.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">77</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="78" lf="78">✓ My only other recommended change is in part 2, Line of Charge, it should be stated as r= L/100, etc, rather than h/100. I had a lot of groups that thought r= h/100 meant that h=100r and therefore changed when we changed the radius. Putting it in terms of L (the way the others are in terms of the physical radius, R) should help with that.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">78</span></div>
+        <p padlength="0" lo="79" lf="79">✓ My only other recommended change is in part 2, Line of Charge, it should be stated as r= L/100, etc, rather than h/100. I had a lot of groups that thought r= h/100 meant that h=100r and therefore changed when we changed the radius. Putting it in terms of L (the way the others are in terms of the physical radius, R) should help with that.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">79</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="80" lf="80">I found it very eye-opening that these “easy” Gauss problems required so much struggle from the students. I always feel that I have to give them a “hard” Gauss problem, eg. nested spheres, to make the problem non-trivial. Clearly these cases are non-trivial for the students. Thanks for developing this! It was really worthwhile.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">80</span></div>
+        <p padlength="0" lo="81" lf="81">I found it very eye-opening that these “easy” Gauss problems required so much struggle from the students. I always feel that I have to give them a “hard” Gauss problem, eg. nested spheres, to make the problem non-trivial. Clearly these cases are non-trivial for the students. Thanks for developing this! It was really worthwhile.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">81</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="82" lf="82">✓ In Part 7, it should be stated that <span len="9" raw="_r < L/2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/2</span></span></span></span> (not <span len="5" raw="_r<L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>), so that the diameter is not larger than <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>. (A student caught that one!)</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">82</span></div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h1 lo="84" lf="84" class=""><a name="s2023" number="2" lo="84" raw="# S2023" class="anchor hanchor" href="#s2023"><span class="hnumber">2</span>&nbsp;<span class="htext">S2023</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">84</span></div>
+        <p padlength="0" lo="83" lf="83">✓ In Part 7, it should be stated that <span len="9" raw="_r < L/2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/2</span></span></span></span> (not <span len="5" raw="_r<L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>), so that the diameter is not larger than <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>. (A student caught that one!)</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">83</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="86" lf="86" class="highlighted"><a name="comments-after" number="2.1" lo="86" raw="## Comments after" class="anchor hanchor" href="#comments-after"><span class="hnumber">2.1</span>&nbsp;<span class="htext">Comments after</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">86</span></div>
+        <h1 lo="85" lf="85"><a name="s2023" number="2" lo="85" raw="# S2023" class="anchor hanchor" href="#s2023" lf="85"><span class="hnumber">2</span>&nbsp;<span class="htext">S2023</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">85</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="87" lf="87"><a name="comments-after" number="2.1" lo="87" raw="## Comments after" class="anchor hanchor" href="#comments-after" lf="87"><span class="hnumber">2.1</span>&nbsp;<span class="htext">Comments after</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">87</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="88" lf="88" class="">rw</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">88</span></div>
+        <p padlength="0" lo="89" lf="89">rw</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">89</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="90" lf="90" class="active">Grid does not show up when photocopied</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">90</span></div>
+        <p padlength="0" lo="91" lf="91">Grid does not show up when photocopied</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">91</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="92" lf="92" class="">ro</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">92</span></div>
+        <p padlength="0" lo="93" lf="93">ro</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">93</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="94" lf="94" class="">I like this activity, but students mostly did not have time to finish it. How far they got varied a lot, which I think is fine as long as we are not grading on completion. </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">94</span></div>
+        <p padlength="0" lo="95" lf="95">I like this activity, but students mostly did not have time to finish it. How far they got varied a lot, which I think is fine as long as we are not grading on completion. </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">95</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="96" lf="96">There was a lot of confusion over 3.3 that asked them to find the value of Q_enc for different values of r. Nearly everyone tried to make their answer somehow a function of r (by replacing L by 100r or something), rather than think about how changing r would make a difference. I think 3 and 4 should be replaced by a simple question like “Does Q_enc depend on the radius of the Gaussian cylinder? Explain why or why not.” </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">96</span></div>
+        <p padlength="0" lo="97" lf="97">There was a lot of confusion over 3.3 that asked them to find the value of Q_enc for different values of r. Nearly everyone tried to make their answer somehow a function of r (by replacing L by 100r or something), rather than think about how changing r would make a difference. I think 3 and 4 should be replaced by a simple question like “Does Q_enc depend on the radius of the Gaussian cylinder? Explain why or why not.” </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">97</span></div>
       </div>
       <div class="block">
-        <div class="blockquote" lo="98" lf="98">
+        <div class="blockquote" lo="99" lf="99">
           <p>Good idea. I had that same problem.</p>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">98</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">99</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="100" lf="100">Many students started doing the solid sphere instead of the shell in section 4. I’m not sure how to make it easier for them to see that Q_enc is either all or nothing. Maybe have two diagrams, one with the Gaussian surface inside the shell and one with it out? Generally, though, I think it’s OK for them to have to go through the process of realizing that a shell is different from a solid sphere, even if it requires help from us. (It’s also a good lesson in reading the problem carefully!)</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">100</span></div>
+        <p padlength="0" lo="101" lf="101">Many students started doing the solid sphere instead of the shell in section 4. I’m not sure how to make it easier for them to see that Q_enc is either all or nothing. Maybe have two diagrams, one with the Gaussian surface inside the shell and one with it out? Generally, though, I think it’s OK for them to have to go through the process of realizing that a shell is different from a solid sphere, even if it requires help from us. (It’s also a good lesson in reading the problem carefully!)</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">101</span></div>
       </div>
       <div class="block">
-        <div class="blockquote" lo="102" lf="102">
+        <div class="blockquote" lo="103" lf="103">
           <p>At the start of class, I explained the answer to this problem and still got many questions! In my notes to myself for the future, I will suggest bringing in some visual aid. Apparently, a 2-D diagram on the board is not enough.</p>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">102</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">103</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="104" lf="104">Some were confused in section 4 by the instruction to plot their points as a “smooth line,” because the actual plot has a jump discontinuity. Let’s delete “smooth”. </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">104</span></div>
+        <p padlength="0" lo="105" lf="105">Some were confused in section 4 by the instruction to plot their points as a “smooth line,” because the actual plot has a jump discontinuity. Let’s delete “smooth”. </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">105</span></div>
       </div>
       <div class="block">
-        <div class="blockquote" lo="106" lf="106">
+        <div class="blockquote" lo="107" lf="107">
           <p>Agreed. I think I added that due to some with the previous wording that said effectively “plot y vs x.” I should probably add an example showing the point of drawing a few dots first to get a feel for how the curve will look. It is clear that students are not used to sketching curves.</p>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">106</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">107</span></div>
       </div>
     </div>
   </div>

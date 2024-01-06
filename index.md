@@ -2,11 +2,13 @@
 
 These are activities that students work on during a weekly 50--minute recitation for PHYS 260 at GMU. To maximize students' time working on problems, I typically give at most a 10--minute review. Often, my 10--minute review involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.
 
-These tutorials were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them.
+Associated with each of the activies is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts, which are typically covered in lecture. The problems primarily involve basic calculations required to solve homework problems.
 
-The length of the tutorials is such that 1--2 students out of 30 will finish. The problems primarily involve basic calculations required to solve homework problems rather than concepts. I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
+These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them.
 
-The problems on these activities are generally basic and straightforward. The problems chosen, and their difficulty, are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master to solve the homework problems.) 
+The length of the activities is such that 1--2 students out of 30 will finish.  I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
+
+The problems on these activities are generally basic and straightforward. The problems chosen, and their difficulty, are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master in order to understand how to approach the homework problems.
 
 %**Motivation**
 
@@ -31,10 +33,44 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 # Modules
 
-## Vector Review
+## Logarithm Review
 
-* Videos:
-  * [Vector Basics](https://www.youtube.com/watch?v=EwSHKuSxX_8&ab_channel=TheOrganicChemistryTutor)
+* Activity -- A review of base 10 and base $e$ logarithms and associated identites used in the Sound Intensity Level Activity. 
+  * Documents:
+| [pdf](Logarithms/Logarithms.pdf)
+| [pdf solns](Logarithms/Logarithms-solutions.pdf)
+| [html](Logarithms/Logarithms.html)
+| [instructor notes](Logarithms/README.html)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+|
+
+## Sound Intensity Level
+
+* Activity -- Calculations related to sound intensity, $I$, and sound intensity level, $\beta$.
+  * Documents:
+| [pdf](Sound_Intensity_Level/Sound_Intensity_Level.pdf)
+| [pdf solns](Sound_Intensity_Level/Sound_Intensity_Level-solutions.pdf)
+| [html](Sound_Intensity_Level/Sound_Intensity_Level.html)
+| [instructor notes](Sound_Intensity_Level/README.html)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+|
+
+* Background material:
+  * Reading:
+    * [Section 16.3 of Young and Freedman, 2015, 14th Edition](https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing★★★★remove★★★★)
+    * [Section 17.4 of Halliday and Resnick, 2014, 10th Edition](https://drive.google.com/file/d/1TrXkPpdcDHBRtA0P0F3ByJHRPrQxwaaw/view?usp=sharing★★★★remove★★★★) has a better explanation of $I=P/A$ and include several diagrams; Sample Problem 17.03 covers an example of a line source of sound, in which case the intensity depends on $1/r$ insted or $1/r^2$ as it is for a point source.
+    * The relationship between the Noise Reduction Ratio (NRR) rating of ear protection and sound intensity level, $\beta$, is described at [gruseckiaudiology.com](https://gruseckiaudiology.com/earplug-and-noise-reduction-ratings-explained/) and [sensear.com](https://www.sensear.com/blog/how-do-you-calculate-a-noise-reduction-rating-nrr).
+  * Videos:
+    * Audio University has [a video](https://www.youtube.com/watch?v=umTSWJ3POOk) with visualizations and explanations of spherical waves and the inverse square dependence of $I$.
+    * The Organic Chemistry Tutor has a [video](https://www.youtube.com/watch?v=6ZQYALZqZNQ) demonstrating some of the calucations performed in this activity. Note that the formula $I=P/4\pi r^2$ is used without discussion of the assumptions required for it to apply.
+
+## Vector Review
 
 * Activity -- Given magnitude and direction, compute components; given components, compute magnitude and direction. 
   * Documents:
@@ -48,29 +84,27 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
 |
 
+* Background material:
+  * Reading:  [Sections 1.7--1.8 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing★★★★remove★★★★)
+  * Videos: [Vector Basics](https://www.youtube.com/watch?v=EwSHKuSxX_8&ab_channel=TheOrganicChemistryTutor)
+
+
 %Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that the horizontal component is not always $\cos$ of angle given.
 %Given a diagram showing vector components, find magnitude and direction.
 %Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find the net vector magnitude and direction.
 
 ## Electric Charge
 
+* Activity -- There is no activity for this topic.
 * Background material:
   * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
-  * Reading: [Chapter 21.1 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Chapter 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
+  * Reading: [Sections 21.1 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Sections 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
   * [Video](https://www.youtube.com/watch?v=Opz_Grl_vQA&t=2s&ab_channel=BozemanScience) -- includes references to early experiements related to charged object.
   * Overview and History: https://physics.info/charge/
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
-* Background material:
-  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
-  * Reading: [Chapter 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★)
-  * Videos
-    * [Solving 2-- and 3--charge problems in 1-D](https://www.youtube.com/watch?v=kCp5yYjo9zE): Very basic, and long (35 minutes)
-    * [3--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at points of equilateral triangle
-    * [4--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at corners of square.
-
-* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see $\rhat$ module instructor notes for motivation)
+* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see $\rhat$ module instructor notes for motivation).
   * Documents:
 | [pdf](Electric_Force/Electric_Force.pdf)
 | [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
@@ -82,19 +116,21 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
 |
 
-* Demonstrations:
-  * [Estimating charge using balloons](https://youtu.be/K-8nCXY-iSI?t=29) -- Balloons are charged and hung from a strings attached to a common point on the ceiling. Their charge is estimated using the distance between the balloons.
-  * [Comparing Coulomb's law to experimental results](https://www.youtube.com/watch?v=B5LVoU_a08c) -- An experiment measuring the forces between two charged spheres using an experimental set--up similar to Coulomb's.
+* Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Sections 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★)
+  * Videos
+    * [Solving 2-- and 3--charge problems in 1-D](https://www.youtube.com/watch?v=kCp5yYjo9zE): Very basic, and long (35 minutes)
+    * [3--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at points of equilateral triangle
+    * [4--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at corners of square.
+
+   * Demonstrations:
+     * [Estimating charge using balloons](https://youtu.be/K-8nCXY-iSI?t=29) -- Balloons are charged and hung from a strings attached to a common point on the ceiling. Their charge is estimated using the distance between the balloons.
+     * [Comparing Coulomb's law to experimental results](https://www.youtube.com/watch?v=B5LVoU_a08c) -- An experiment measuring the forces between two charged spheres using an experimental set--up similar to Coulomb's.
 
 ## Electric Field
 
-* Background material:
-  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
-  * Reading: [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
-  * Videos
-    * [Electric Field Definition](https://www.youtube.com/watch?v=_4VC3IHbuW8) -- Includes details on how the electric field is related to electric force.
-
-* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see $\rhat$ module instructor notes for motivation)
+* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see instructor notes for the "Using $\rhat$ ..." activity for motivation).
   * Documents:
 | [pdf](Electric_Field/Electric_Field.pdf)
 | [pdf solns](Electric_Field/Electric_Field-solutions.pdf)
@@ -106,10 +142,16 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Field)
 |
 
-* Visualizations
-  * [3-D visualizations of vector fields](https://www.youtube.com/watch?v=rB83DpBJQsE&t=185s). Although the video covers advanced vector calculus, is has several vector field visuals that can be used when explaining how to imagine vector fields.
-  * [2-D visualization of vector field due to two charges](https://www.geogebra.org/m/MAsvESCX) -- This interactive online Geogebra application can be used to demonstrate superposition and the fact that the electric field points in the same direction as the force on a test charge. A good review is to hide the test charge and ask students to predict the direction the force will be on it.
-  * [PhEt Charges and Fields Simulation](https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html) -- Similar to the Geogebra example above.
+* Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Section 21.4 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_)
+  * Videos
+    * [Electric Field Definition](https://www.youtube.com/watch?v=_4VC3IHbuW8) -- Includes details on how the electric field is related to electric force.
+
+   * Visualizations
+     * [3-D visualizations of vector fields](https://www.youtube.com/watch?v=rB83DpBJQsE&t=185s). Although the video covers advanced vector calculus, is has several vector field visuals that can be used when explaining how to imagine vector fields.
+     * [2-D visualization of vector field due to two charges](https://www.geogebra.org/m/MAsvESCX) -- This interactive online Geogebra application can be used to demonstrate superposition and the fact that the electric field points in the same direction as the force on a test charge. A good review is to hide the test charge and ask students to predict the direction the force will be on it.
+     * [PhEt Charges and Fields Simulation](https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html) -- Similar to the Geogebra example above.
 
 ## Using $\rhat$ to find $\bfvec{F}$ and $\bfvec{E}$
 
@@ -128,12 +170,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Superposition and Symmetry
 
-* Background material:
-  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
-  * Reading: [Chapter 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Chapter 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
-* Instructor Resources:
-  * [Singh, 2006, Student understanding of symmetry and Gauss's law of electricity](https://drive.google.com/file/d/1K5x1CevuPg7kibZOom_c32tNwuke3QmG/view?usp=drive_link)
-  * [Li, 2017, Investigating and improving introductory physics students' understanding of symmetry and Gauss's law](https://drive.google.com/file/d/1y18mdxRCsMp8-N2NaupteG2zo6t8YEES/view?usp=drive_link)
 * Activity: Computing electric force and field due to multiple charges
   * Documents:
 | [pdf](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
@@ -146,7 +182,27 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Superposition_and_Symmetry)
 |
 
+* Background material:
+  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+  * Reading: [Sections 21.5 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Sections 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
+
+* Instructor Resources:
+  * [Singh, 2006, Student understanding of symmetry and Gauss's law of electricity](https://drive.google.com/file/d/1K5x1CevuPg7kibZOom_c32tNwuke3QmG/view?usp=drive_link)
+  * [Li, 2017, Investigating and improving introductory physics students' understanding of symmetry and Gauss's law](https://drive.google.com/file/d/1y18mdxRCsMp8-N2NaupteG2zo6t8YEES/view?usp=drive_link)
+
 ## Continuous Charge Distributions
+
+* Activity -- Computing the electric field due to a finite line of charge
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
+  * Documents:
+| [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf)
+| [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions)
+| [Markdown](Continuous_Charge_Distributions/Continuous_Charge_Distributions.md)
+| 
 
 * Background material:
   * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
@@ -154,12 +210,18 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
     * [Section 21.5](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★) of Young and Freedman 2015, 14th Edition
     * [Section 1.5](https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/) of Introduction to Electricity, Magnetism, and Circuits by Ling et al.
 
-* Activity -- Computing the electric field due to a finite line of charge
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
-  * Documents: | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf) | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf) |
-  * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions) | [Markdown](Continuous_Charge_Distributions/Continuous_Charge_Distributions.md) | 
-
 ## Electric Flux
+
+* Activity -- Computing electric flux for open and closed rectangular surfaces
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
+  * Documents:
+| [pdf](Electric_Flux/Electric_Flux.pdf)
+| [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Flux)
+| [Markdown](Electric_Flux/Electric_Flux.md) | 
 
 * Background material:
   * Reading:
@@ -169,62 +231,100 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
     * [Basic overview of definition of electric flux by Khan Academy](https://www.youtube.com/watch?v=9MN0eTC-vzQ)
     * [Basic electric flux calculations by the Organic Chemistry Tutor](https://www.youtube.com/watch?v=q1eor6oIuUo&ab_channel=TheOrganicChemistryTutor)
 
-* Activity -- Computing electric flux for open and closed rectangular surfaces
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
-  * Documents: | [pdf](Electric_Flux/Electric_Flux.pdf) | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf) |
-  * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Flux) | [Markdown](Electric_Flux/Electric_Flux.md) | 
-
 ## Enclosed Charge
-
-* Comment: In solutions to Gauss' law problems, the authors typically simply write down an equation for enclosed charge without much explanation. We have found that students have difficulty solving for enclosed charge on their own, which is the motivation for the activity.
 
 * Activity -- Computing the amount of charge enclosed for common geometries used in Gauss' law problems
   * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md)
-  * Documents: | [pdf](Enclosed_Charge/Enclosed_Charge.pdf) | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf) |
-  * Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge) | [Markdown](Enclosed_Charge/Enclosed_Charge.md) | 
+  * Documents:
+| [pdf](Enclosed_Charge/Enclosed_Charge.pdf)
+| [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge)
+| [Markdown](Enclosed_Charge/Enclosed_Charge.md)
+|
 
 ## Electric Potential
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.md) 
-* Documents: | [pdf](Electric_Potential/Electric_Potential.pdf) | [pdf solns](Electric_Potential/Electric_Potential-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Potential) | [Markdown](Electric_Potential/Electric_Potential.md) | 
+* Activity
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.md) 
+  * Documents:
+| [pdf](Electric_Potential/Electric_Potential.pdf)
+| [pdf solns](Electric_Potential/Electric_Potential-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Electric_Potential)
+| [Markdown](Electric_Potential/Electric_Potential.md)
+|
 
 ## Capacitance
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.md) 
-* Document: | [pdf](Capacitance/Capacitance.pdf) | [pdf solns](Capacitance/Capacitance-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Capacitance) | [Markdown](Capacitance/Capacitance.md) |
+* Activity
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.md) 
+  * Documents:
+| [pdf](Capacitance/Capacitance.pdf)
+| [pdf solns](Capacitance/Capacitance-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Capacitance)
+| [Markdown](Capacitance/Capacitance.md)
+|
 
 ## Kirchhoff's Circuit Laws
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.md) 
-* Document: | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf) | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws) | [Markdown](Kirchhoffs_Laws/Kirchhoffs_Laws.md) | 
-* See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)
+* Activity
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.md) 
+  * Documents:
+| [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf)
+| [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws)
+| [Markdown](Kirchhoffs_Laws/Kirchhoffs_Laws.md)
+|
+  * See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)
 
 ## RC Circuits
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/RC_Circuits/README.md) 
-* Document: | [pdf](RC_Circuits/RC_Circuits.pdf) | [pdf solns](RC_Circuits/RC_Circuits-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/RC_Circuits) | [Markdown](RC_Circuits/RC_Circuits.md) | 
+* Activity
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/RC_Circuits/README.md) 
+  * Documents:
+| [pdf](RC_Circuits/RC_Circuits.pdf)
+| [pdf solns](RC_Circuits/RC_Circuits-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/RC_Circuits)
+| [Markdown](RC_Circuits/RC_Circuits.md)
+|
 
 ## Lorentz Force Law
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.md) 
-* Document: | [pdf](Lorentz_Force/Lorentz_Force.pdf) | [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf) |
-* Source: | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr) | [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force) | [Markdown](Lorentz_Force/Lorentz_Force.md) | 
+* Activity
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.md) 
+  * Documents:
+| [pdf](Lorentz_Force/Lorentz_Force.pdf)
+| [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force)
+| [Markdown](Lorentz_Force/Lorentz_Force.md)
+|
 
 ## Lorentz Force Law on Wires
 
-* [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires/README.md) 
-* Document:
-[pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
-|
-[pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
-
+* Activity
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires/README.md) 
+  * Documents:
+| [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
+| [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
 * Source:
-[Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
-|
-[Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires)
-|
-[Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md) | 
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires)
+| [Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md)
+| 
