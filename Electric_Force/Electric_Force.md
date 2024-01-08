@@ -5,7 +5,7 @@ Title: Electric Force
 % Figures:
 % https://www.mathcha.io/editor/M55KMuQLiLmH9Vgp0Ptw6QGB3HnpzJnnuM6VoB7
 
-# Coulomb's Law
+# Introduction -- Coulomb's Law
 
 *Magnitude*
 
@@ -13,7 +13,7 @@ $$F_{1\mbox{ on } 2}=F_{2\mbox{ on } 1}=k\frac{|q_1q_2|}{r^2}$$
 
 where $r$ is the distance between $q_1$ and $q_2$. To simplify notation, we are using $k$ in place of $1/4\pi\epsilon_o$. Note that by definition, the magnitude of a vector is positive, which is the reason for the use of the absolute value.
 
-*Direction*: Along line that connects $q_1$ and $q_2$. Direction depends on signs of $q_1$ and $q_2$. (Likes repel, opposites attract.).
+*Direction*: Along line that connects $q_1$ and $q_2$. The direction depends on signs of $q_1$ and $q_2$. (Likes repel, opposites attract.).
 
 # Example
 
@@ -29,11 +29,11 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Both charges
 
 1. The distance between the charges is $r=\sqrt{(2a)^2+(2a)^2}=\sqrt{8a^2}$, so
 
-   $$F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$$
+   $F_{1\mbox{ on } 2}=k\frac{|q_1q_2|}{r^2}=\frac{k|qq|}{(\sqrt{8a^2})^2}=\frac{kq^2}{8a^2}$
 
 2. The charges will repel each other, so the direction of forces of one on the other will be as shown in the left part of the following diagram. The angle of $F_{1\mbox{ on } 2}$ is $+45^\circ$ with respect to the $+x$--axis with counterclockwise positive.
 
-   <img src="figures/Two_Charges-a.svg" width="70%"/>
+   <img src="figures/Two_Charges-a.svg" width="50%"/>
 
 3. Let $F = F_{1\mbox{ on } 2}$ from part 1. to simplify notation. The right part of the above diagram shows the calculation of the components $F_x$ and $F_y$, from which it follows that $\bfvec{F} = F\cos 45^\circ \ihat + F\sin 45^\circ \jhat$. 
 

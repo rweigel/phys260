@@ -4,7 +4,7 @@ These are activities that students work on during a weekly 50--minute recitation
 
 Associated with each of the activies is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts, which are typically covered in lecture. The problems primarily involve basic calculations required to solve homework problems.
 
-These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them.
+These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, Michael Reefe have contributed edits, video solutions, or links to resources.
 
 The length of the activities is such that 1--2 students out of 30 will finish.  I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
 
@@ -31,34 +31,36 @@ If you have corrections, comments, or suggestions please [submit an issue](https
 
 The figures were created using [MathCha](https://www.mathcha.io/). To edit a figure using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
 
-# Modules
+# Activities
 
 ## Logarithm Review
 
 * Activity -- A review of base 10 and base $e$ logarithms and associated identites used in the Sound Intensity Level Activity. 
+  * [Instructor notes](Logarithms/README.html)
   * Documents:
 | [pdf](Logarithms/Logarithms.pdf)
 | [pdf solns](Logarithms/Logarithms-solutions.pdf)
 | [html](Logarithms/Logarithms.html)
-| [instructor notes](Logarithms/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+| [Markdown](Logarithms/Logarithms.md)
 |
 
 ## Sound Intensity Level
 
 * Activity -- Calculations related to sound intensity, $I$, and sound intensity level, $\beta$.
+  * [Instructor notes](Sound_Intensity_Level/README.html)
   * Documents:
 | [pdf](Sound_Intensity_Level/Sound_Intensity_Level.pdf)
 | [pdf solns](Sound_Intensity_Level/Sound_Intensity_Level-solutions.pdf)
 | [html](Sound_Intensity_Level/Sound_Intensity_Level.html)
-| [instructor notes](Sound_Intensity_Level/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+| [Markdown](Sound_Intensity_Level/Sound_Intensity_Level.md)
 |
 
 * Background material:
@@ -73,25 +75,20 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Vector Review
 
 * Activity -- Given magnitude and direction, compute components; given components, compute magnitude and direction. 
+  * [Instructor notes](Vectors/README.html)
   * Documents:
 | [pdf](Vectors/Vectors.pdf)
 | [pdf solns](Vectors/Vectors-solutions.pdf)
 | [html](Vectors/Vectors.html)
-| [instructor notes](Vectors/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+| [Markdown](Vectors/Vectors.md)
 |
-
 * Background material:
   * Reading:  [Sections 1.7--1.8 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing★★★★remove★★★★)
   * Videos: [Vector Basics](https://www.youtube.com/watch?v=EwSHKuSxX_8&ab_channel=TheOrganicChemistryTutor)
-
-
-%Given a diagram showing a vector with a known magnitude and direction, find components in unit vector notation. Deal with the fact that the horizontal component is not always $\cos$ of angle given.
-%Given a diagram showing vector components, find magnitude and direction.
-%Given a diagram showing two vectors with known magnitudes and directions, find components in unit vector notation. Then find the net vector magnitude and direction.
 
 ## Electric Charge
 
@@ -104,21 +101,24 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
-* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see $\rhat$ module instructor notes for motivation).
+* Activity: Using Coulomb's law to find the electric force magnitude and direction between two charges (without $\rhat$ notation; see [$\rhat$ module instructor notes](rhat/README.html) for motivation).
+  * [Instructor notes](Electric_Force/README.html)
   * Documents:
 | [pdf](Electric_Force/Electric_Force.pdf)
 | [pdf solns](Electric_Force/Electric_Force-solutions.pdf)
 | [html](Electric_Force/Electric_Force.html)
-| [instructor notes](Electric_Force/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Force)
+| [Markdown](Electric_Force/Electric_Force.md)
 |
 
 * Background material:
   * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+
   * Reading: [Sections 21.3 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★)
+
   * Videos
     * [Solving 2-- and 3--charge problems in 1-D](https://www.youtube.com/watch?v=kCp5yYjo9zE): Very basic, and long (35 minutes)
     * [3--charge problem](https://www.youtube.com/watch?v=t6S-PX14Pu4): Charges at points of equilateral triangle
@@ -130,16 +130,17 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Electric Field
 
-* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see instructor notes for the "Using $\rhat$ ..." activity for motivation).
+* Activity: Computing the electric field due to one point charges (without $\rhat$ notation; see [$\rhat$ module instructor notes](rhat/README.html) for motivation).
+  * [Instructor notes](Electric_Field/README.html)
   * Documents:
 | [pdf](Electric_Field/Electric_Field.pdf)
 | [pdf solns](Electric_Field/Electric_Field-solutions.pdf)
 | [html](Electric_Field/Electric_Field.html)
-| [instructor notes](Electric_Field/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Electric_Field)
+| [Markdown](Electric_Field/Electric_Field.md)
 |
 
 * Background material:
@@ -155,31 +156,32 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Using $\rhat$ to find $\bfvec{F}$ and $\bfvec{E}$
 
-
 * Activity: Computing electric force and electric field using $\rhat$ notation. 
+  * [Instructor notes](rhat/README.html)
   * Documents:
 | [pdf](rhat/rhat.pdf)
-| [pdf solns](rhat/rhat.pdf)
+| [pdf solns](rhat/rhat-solutions.pdf)
 | [html](rhat/rhat.html)
-| [instructor notes](rhat/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/rhat)
+| [Markdown](rhat/rhat.md)
 |
 
 ## Superposition and Symmetry
 
 * Activity: Computing electric force and field due to multiple charges
+  * [Instructor notes](Superposition_and_Symmetry/README.html)
   * Documents:
 | [pdf](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
-| [pdf solns](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
+| [pdf solns](Superposition_and_Symmetry/Superposition_and_Symmetry-solutions.pdf)
 | [html](Superposition_and_Symmetry/Superposition_and_Symmetry.html)
-| [instructor notes](Superposition_and_Symmetry/README.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Superposition_and_Symmetry)
+| [Markdown](Superposition_and_Symmetry/Superposition_and_Symmetry.md)
 |
 
 * Background material:
@@ -193,7 +195,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Continuous Charge Distributions
 
 * Activity -- Computing the electric field due to a finite line of charge
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.html)
   * Documents:
 | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf)
 | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf)
@@ -213,7 +215,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Electric Flux
 
 * Activity -- Computing electric flux for open and closed rectangular surfaces
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.html)
   * Documents:
 | [pdf](Electric_Flux/Electric_Flux.pdf)
 | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf)
@@ -234,7 +236,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Enclosed Charge
 
 * Activity -- Computing the amount of charge enclosed for common geometries used in Gauss' law problems
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.md)
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.html)
   * Documents:
 | [pdf](Enclosed_Charge/Enclosed_Charge.pdf)
 | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf)
@@ -248,7 +250,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Electric Potential
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.html)
   * Documents:
 | [pdf](Electric_Potential/Electric_Potential.pdf)
 | [pdf solns](Electric_Potential/Electric_Potential-solutions.pdf)
@@ -262,7 +264,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Capacitance
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.html)
   * Documents:
 | [pdf](Capacitance/Capacitance.pdf)
 | [pdf solns](Capacitance/Capacitance-solutions.pdf)
@@ -276,11 +278,11 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Kirchhoff's Circuit Laws
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.html)
   * Documents:
 | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf)
 | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf)
-|
+| 
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws)
@@ -291,7 +293,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## RC Circuits
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/RC_Circuits/README.md) 
+  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/RC_Circuits/README.html) 
   * Documents:
 | [pdf](RC_Circuits/RC_Circuits.pdf)
 | [pdf solns](RC_Circuits/RC_Circuits-solutions.pdf)
@@ -305,7 +307,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Lorentz Force Law
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.html) 
   * Documents:
 | [pdf](Lorentz_Force/Lorentz_Force.pdf)
 | [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf)
@@ -319,7 +321,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Lorentz Force Law on Wires
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires/README.md) 
+  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires/README.html) 
   * Documents:
 | [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
 | [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
