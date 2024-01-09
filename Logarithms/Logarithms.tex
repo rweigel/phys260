@@ -1,0 +1,254 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Logarithms}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Introduction -- Base $10$ Logarithms}
+
+The motivation for the base 10 logarithm is that it reduces numbers raised by a power of 10 to the power the number was raised to. So $10^2$ becomes $2$, $10^3$ becomes $3$, etc. The base 10 logarithm is sometimes called the ``common logarithm".
+
+In mathematical notation,
+
+$\log_{10}(10^x) = x$
+
+For example,
+
+$\log_{10}(10^{-5}) = -5$ and $\log_{10}(10^7) = 7$
+
+(To take the base 10 logarithm of a number that is not exactly a power of $10$, use a calculator.)
+
+Several identities follow as a result:
+
+\begin{enumerate}
+
+  \item If you raise a base 10 logged number by $10$, you get back the number that was logged.
+
+        $10^{\log_{10}(x)} = x$
+
+        For example,
+
+        $10^{\log_{10}(7)} = 7$ and  $10^{\log_{10}(8.8)} = 8.8$
+
+  \item The sum of two logged numbers is the log of the product of the numbers:
+
+        $\log_{10}y + \log_{10}x = \log_{10}(yx)$;
+
+        For example,
+
+        $\log_{10}10 + \log_{10}100 = \log_{10}10\cdot 100 = \log_{10}10^3 = 3$
+
+  \item The difference between two logged number is the log of the ratio of the numbers:
+
+        $\log_{10}y - \log_{10}x = \log_{10}(y/x)$
+
+        For example,
+
+        $\log_{10}10 - \log_{10}100 = \log_{10}(10/100) = \log_{10}10^{-1} = -1$
+
+\end{enumerate}
+
+\subsection{Problems}
+
+\begin{enumerate}
+
+  \item What is $\log_{10}(0.000000001)$?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 24pt
+        \fi
+
+  \item What is $\log_{10}(10,000)$?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 24pt
+        \fi
+
+\end{enumerate}
+
+\begin{enumerate}
+
+  \item[3.] What is $\log_{10}(10,000)+\log_{10}(0.000000001)$?
+
+            \ifsolutions
+            \textbf{Answer}:
+            \else
+            \vskip 24pt
+            \fi
+
+  \item[4.] What is $\log_{10}(10,000)-\log_{10}(0.000000001)$?
+
+            \ifsolutions
+            \textbf{Answer}:
+            \else
+            \vskip 24pt
+            \fi
+
+  \item[5.] If $x = x_o\log_{10}(y/y_o)$, solve for $y$ in terms of $x$.
+
+            \ifsolutions
+            \textbf{Answer}:
+            \else
+            \vskip 24pt
+            \fi
+
+\end{enumerate}
+
+\section{Introduction -- Base $e$ Logarithm}
+
+The base $10$ logarithm reduces numbers raised by a power of 10 to the power the number was raised to.
+
+The base $e$ logarithm reduces numbers raised by a power of $e$ to the power the number was raised to. It is represented by $\log_{e}x$, or more commonly, $\ln(x)$.
+
+``$\ln$" represents the ``natural logarithm". The term ``natural" is used because the exponential $e$ appears in many natural problems, for example, some populations grow in proportion to $e^{t/\tau}$, where the constant $\tau$ is a growth rate.
+
+In mathematical notation,
+
+$\ln(e^x) = x$; for example $\ln(e^{-5}) = -5$ and $\ln(e^7) = 7$
+
+Several identities follow as a result:
+
+\begin{enumerate}
+
+  \item If you raise a base $e$ logged number by $e$, you get back the number that was logged.
+
+        $e^{\ln(x)} = x$
+
+  \item The sum of two logged numbers is the log of the product of the numbers:
+
+        $\ln(y) + \ln(x) = \ln(yx)$;
+
+  \item The difference between two logged number is the log of the ratio of the numbers:
+
+        $\ln(y) - \ln(x) = \ln(y/x)$
+
+\end{enumerate}
+
+\subsection{Problems}
+
+\begin{enumerate}
+
+  \item What is $\ln(e^3)$?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 24pt
+        \fi
+
+  \item What is $\ln(1/e^3)$?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 24pt
+        \fi
+
+  \item What is $\ln(e^{-4})+\ln(e^{3})$?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 24pt
+        \fi
+
+  \item What is $\ln(e^3)-\ln(e^{-2})$?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 24pt
+        \fi
+
+\end{enumerate}
+
+\begin{enumerate}
+
+  \item[5.] If $x = x_o\ln(y/y_o)$, solve for $y$ in terms of $x$.
+
+            \ifsolutions
+            \textbf{Answer}:
+            \else
+            \vskip 24pt
+            \fi
+
+\end{enumerate}
+
+\end{document}

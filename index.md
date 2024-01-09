@@ -332,7 +332,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Lorentz Force Law on Wires
 
-* Activity - Lorentz Force on Charged Particles
+* Activity - Lorentz Force on Wires
   * Documents:
 | [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
 | [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)

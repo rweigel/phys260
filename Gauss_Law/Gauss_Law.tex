@@ -1,0 +1,277 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Gauss's Law}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Introduction}
+
+Gauss's law is derived from Coulomb's law, so they are both equally valid. Coulomb's law can always be used to find the electric field due to a continuous charge distribution when the charge density is known. Gauss's law is only useful for computing the electric field for certain continuous charge distributions. The list includes all of the charge distributions considered in the Enclosed Charge activity:
+
+\begin{itemize}
+
+  \item near the center of a long and uniformly charged line,
+
+  \item near the center of a long and uniformly charged cylindrical shell,
+
+  \item at any location for a uniformly charged spherical shell, and
+
+  \item near the center of a large and uniformly charged sheet.
+
+\end{itemize}
+
+Gauss's law can also be used to find the electric field due to a long and uniformly charged solid cylinder and a uniformly charged solid sphere because they can be created by nesting shells together and using a superposition argument.
+
+Gauss's law states that the total electric flux through any closed surface is proportional to the total charge inside the surface.
+
+$$\text{Gauss's law}\qquad\oint \bfvec{E}\cdot d\mathbf{A}=\frac{Q_{\text{encl}}}{\epsilon_o}$$
+
+In the following diagram, a closed spherical surface is shown. Gauss's law states that if we add all of the differential fluxes $\bfvec{E}\cdot d\mathbf{A}$ over the closed surface, the result will be ${Q_{\text{encl}}}/{\epsilon_o}$. The surface does not need to be spherical -- Gauss's law is valid for any closed surface. Any imaginary surface that we use in Gauss's law is referred to as a Gaussian surface.
+
+\input{figures/Flux_Differential.tikz}
+
+Gauss's law can be used for computing the electric field due to a continuous charge distribution when the integral can be simplified.
+
+If we can imagine a Gaussian surface on which the electric field is always
+
+\begin{itemize}
+
+  \item perpendicular to the Gaussian surface (or zero),
+
+  \item constant in magnitude (or zero)
+
+\end{itemize}
+
+There are two types of Gaussian surfaces that are used when Gauss's law can be used to find the electric field.
+
+\begin{enumerate}
+
+  \item For a spherical Gaussian surface, Gauss's law simplifies to
+
+        $$EA = \frac{Q_{\text{encl}}}{\epsilon_o}$$
+
+        where $A=4\pi r^2$ is a spherical shell with $Q_{\text{encl}}$ inside of it.
+
+  \item For a cylindrical Gaussian surface, we must consider three surfaces, the two end caps and the curved surface, and the area or areas to use depend on the continuous charge distribution. In this activity, we only consider the first case.
+
+\end{enumerate}
+
+\section{Example -- Point Charge}
+
+Consider a point charge $q$ at the origin and a Gaussian surface centered on the point charge. Because the electric field due to a point charge is radial, the electric field on a spherical surface of any radius will have the electric field perpendicular to its surface, so
+
+$\ds EA = \frac{Q_{\text{encl}}}{\epsilon_o}$ applies. The area of the surface of a sphere is $A = 4\pi r^2$, so
+
+$\ds E 4\pi r^2 = \frac{q}{\epsilon_o}$ solving for $E$ gives
+
+$\ds E = \frac{1}{4\pi\epsilon_o}\frac{q}{r^2}$, which is what we expect from Coulomb's law.
+
+\section{Example -- Spherical Shell}
+
+In the Enclosed Charge activity, a non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly distributed \emph{on its surface} was considered. Its cross--section is shown along with that of a Gaussian sphere with the same center and a radius $r$.
+
+\input{../Enclosed_Charge/figures/Spherical_Shell_Graph_Continuous.tikz}
+
+It was found that when the radius $r$ of the Gaussian sphere is less than $R$, $Q_{\text{encl}}=0$. When the $r>R$, $Q_{\text{encl}}=+3Q$:
+
+$$
+   Q_{\text{encl}} = \begin{cases}
+     0   &\text{if } r < R \\
+     +3Q &\text{if } r > R
+   \end{cases}
+   $$
+
+\begin{enumerate}
+
+  \item Why can we assume that if there is an electric field, it must be radial so that the electric field will always be perpendicular to the Gaussian surface?
+
+  \item Find $E(r)$
+
+  \item Plot $E(r)$
+
+\end{enumerate}
+
+\newpage
+
+\textbf{Answer}
+
+\input{../Enclosed_Charge/figures/Spherical_Shell_Graph_Continuous.tikz}
+
+\begin{enumerate}
+
+  \item Pick a point in space at an arbitrary location to find the electric field. For any point, one can always find two charges on the shell whose electric field's sum is radial. Given that one can construct a uniformly charged shell by placing such pairs of points on a shell, the net electric field due to all charges on the shell must be radial. \emph{Draw a diagram to demonstrate this}.
+
+  \item Because of our answer to 1., we can use
+
+        $$EA = E 4\pi r^2 = \frac{Q_{\text{encl}}}{\epsilon_o}$$
+
+        $Q_{\text{encl}}$ depends on $r$, so our answer for $E$ must also depend on $r$:
+
+        $$
+        E = \begin{cases}
+          0   &\text{if } r < R \\\\
+          \ds\frac{1}{4\pi\epsilon_o}\frac{3Q}{r^2} &\text{if } r > R
+        \end{cases}
+        $$
+
+  \item The plot is shown below. Notice that inside the uniformly charged shell, the electric field is zero. Outside, the electric field is the same as if all of the charge ($3Q$) was at the origin. This is a result that is often used when solving other problems. You may recall from mechanics that a similar result held -- Newton showed that if the mass was uniformly distributed on a spherical shell, the gravitational force on an object inside the shell was zero; outside the shell, the gravitational force was the same as if all of the mass was at the center of the shell.
+
+        \input{figures/Spherical_Shell_Solution.tikz}
+
+\end{enumerate}
+
+\newpage
+
+\section{Problem -- Solid Sphere With Uniform Charge Density}
+
+In the Enclosed Charge activity, a non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniformly \emph{throughout} it was considered. The cross--section of the sphere is shown along with a dashed line representing the surface of a Gaussian sphere, which has the same center as the charged sphere and a radius $r$.
+
+\input{../Enclosed_Charge/figures/Solid_Sphere.tikz}
+
+$$
+Q_{\text{encl}} = \begin{cases}
+  \rho_o [(4/3)\pi r^3]   &\text{if  }r \le R \\\\
+  \rho_o [(4/3)\pi R^3] &\text{if } r \ge R
+\end{cases}
+$$
+
+where $\ds \rho_o=3Q/[(4/3)\pi R^3]$
+
+\begin{enumerate}
+
+  \item Why can we assume that if there is an electric field, it must be radial so that the electric field will always be perpendicular to the Gaussian surface?
+
+        \ifsolutions
+
+        \else
+        \vskip 96pt
+        \fi
+
+  \item Find $E(r)$
+
+        \ifsolutions
+
+        \else
+        \vskip 96pt
+        \fi
+
+  \item Plot $E(r)$
+
+        \ifsolutions
+
+        \else
+        \vskip 96pt
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Problem -- Solid Sphere With Non--Uniform Charge Density}
+
+Suppose the charged sphere in the previous problem had a charge density that varied with radius according to $\rho(r) = \rho_o r/R$.
+
+\begin{enumerate}
+
+  \item Why can we assume that if there is an electric field, it must be radial so that the electric field will always be perpendicular to the Gaussian surface?
+
+        \ifsolutions
+
+        \else
+        \vskip 96pt
+        \fi
+
+  \item Find $Q_{\text{encl}}(r)$
+
+        \ifsolutions
+
+        \else
+        \vskip 144pt
+        \fi
+
+  \item Find $E(r)$
+
+        \ifsolutions
+
+        \else
+        \vskip 144pt
+        \fi
+
+  \item Plot $E(r)$
+
+\end{enumerate}
+
+\end{document}
