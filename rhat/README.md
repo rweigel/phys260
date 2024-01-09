@@ -1,14 +1,14 @@
 # Motivation and Observations
 
-The motivation for this activity is textbooks and instructors use $\rhat$ for some Coulomb law and electric field problems but not for others with no explanation. Or, equations with $\rhat$ are given but $\rhat$ is not used explicity in examples.
+The motivation for this activity is textbooks and instructors use $\rhat$ for some Coulomb law and electric field problems but not for others with no explanation. Or, equations with $\rhat$ are given, but $\rhat$ is not used explicitly in examples.
 
-For example, Young and Freedman ([Chapter 21 of  2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★)) and Halliday and Resnick do not use $\rhat$ for Coulomb's law problems. Both give the equation for electric field in terms of $\rhat$. Young and Friedman use $\rhat$ their electric field examples, but only profide the definition $\rhat=\rhat/r$ (with no reference to Section 1.9 where they review unit vectors). Halliday and Resnick do not use in their examples.
+For example, Young and Freedman ([Chapter 21 of  2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★)) and Halliday and Resnick do not use $\rhat$ for Coulomb's law problems. Both give the equation for electric field in terms of $\rhat$. Young and Friedman use $\rhat$ their electric field examples but only provide the definition $\rhat=\rhat/r$ (with no reference to Section 1.9 where they review unit vectors). Halliday and Resnick do not use $\rhat$ their examples.
 
-We have found that without a separate activity, students are not able to explain the meaning of $\rhat$ and when they read solutions that use it, and they don't understand that the $\rhat$ method is simply an alternative method for computing $\bfvec{E}$.
+We have found that without a separate activity, students are not able to explain the meaning of $\rhat$, and when they read solutions that use it, they don't understand that the $\rhat$ method is simply an alternative method for computing $\bfvec{E}$.
 
 Observations
 
-* In principle, all electric force and field problems in this course can be solved with or without using $\rhat$. Students tend to not use the $\rhat$ method unless they have done an activity that introduces it.
+* In principle, all electric force and field problems in this course can be solved with or without using $\rhat$. Students tend not to use the $\rhat$ method unless they have done an activity that introduces it.
 
 * Most solutions to electric force and field problems the students will find do not use $\rhat$. As a result, some instructors avoid its use entirely.
 

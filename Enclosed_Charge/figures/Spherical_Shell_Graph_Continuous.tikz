@@ -1,0 +1,54 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,128); %set diagram left start at 0, and has height of 128
+
+%Shape: Circle [id:dp48987257334075207] 
+\draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (32.49,65) .. controls (32.49,47.04) and (47.04,32.49) .. (65,32.49) .. controls (82.96,32.49) and (97.51,47.04) .. (97.51,65) .. controls (97.51,82.96) and (82.96,97.51) .. (65,97.51) .. controls (47.04,97.51) and (32.49,82.96) .. (32.49,65) -- cycle ;
+%Shape: Circle [id:dp6052140120773126] 
+\draw  [line width=1.5]  (10,65) .. controls (10,34.62) and (34.62,10) .. (65,10) .. controls (95.38,10) and (120,34.62) .. (120,65) .. controls (120,95.38) and (95.38,120) .. (65,120) .. controls (34.62,120) and (10,95.38) .. (10,65) -- cycle ;
+%Straight Lines [id:da3700667290172912] 
+\draw    (65,65) -- (94.51,65) ;
+\draw [shift={(97.51,65)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Straight Lines [id:da8052508879762954] 
+\draw    (65,65) -- (24.33,31.89) ;
+\draw [shift={(22,30)}, rotate = 39.14] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (6.25,-3) -- (0,0) -- (6.25,3) -- cycle    ;
+%Shape: Grid [id:dp11369043107613086] 
+\draw  [draw opacity=0] (170,40) -- (320,40) -- (320,100) -- (170,100) -- cycle ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ] (170,40) -- (170,100)(180,40) -- (180,100)(190,40) -- (190,100)(200,40) -- (200,100)(210,40) -- (210,100)(220,40) -- (220,100)(230,40) -- (230,100)(240,40) -- (240,100)(250,40) -- (250,100)(260,40) -- (260,100)(270,40) -- (270,100)(280,40) -- (280,100)(290,40) -- (290,100)(300,40) -- (300,100)(310,40) -- (310,100) ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ] (170,40) -- (320,40)(170,50) -- (320,50)(170,60) -- (320,60)(170,70) -- (320,70)(170,80) -- (320,80)(170,90) -- (320,90) ; \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]  ;
+%Straight Lines [id:da9234529016787134] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]   (170,100) -- (320,100) ;
+%Straight Lines [id:da02274810740903832] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=0.1 ]   (320,100) -- (320,40) ;
+
+%Straight Lines [id:da5709555724750504] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (180,43) -- (180,100) ;
+\draw [shift={(180,40)}, rotate = 90] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da2981521914099221] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (170,90) -- (316,90) ;
+\draw [shift={(319,90)}, rotate = 180] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da12077626612661096] 
+\draw    (220,84) -- (220,95) ;
+%Straight Lines [id:da7611114679170365] 
+\draw [line width=1.5]    (180,90) -- (220,90) ;
+%Straight Lines [id:da004562646293197803] 
+\draw [line width=1.5]    (220,60) -- (320,60) ;
+%Straight Lines [id:da9946915067147775] 
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (175,60) -- (185,60) ;
+
+% Text Node
+\draw (32,25.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$R$};
+% Text Node
+\draw (77,52.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
+% Text Node
+\draw (171,22.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q_{\mathrm{encl}}$};
+% Text Node
+\draw (216,98.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$R$};
+% Text Node
+\draw (321,88.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
+% Text Node
+\draw (127,54.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3Q=\sigma 4\pi R^{2}$};
+
+
+\end{tikzpicture}

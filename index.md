@@ -247,6 +247,19 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Markdown](Enclosed_Charge/Enclosed_Charge.md)
 |
 
+## Gauss's Law
+
+* Activity -- Using Gauss's law to find the electric field for spherically symmetric continuous charge distributions.
+  * Documents:
+| [pdf](Gauss_Law/Gauss_Law.pdf)
+| [pdf solns](Gauss_Law/Gauss_Law-solutions.pdf)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Gauss_Law)
+| [Markdown](Gauss_Law/Gauss_Law.md)
+|
+
 ## Electric Potential
 
 * Activity
