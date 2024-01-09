@@ -146,7 +146,6 @@ Several identities follow as a result:
    \vspace{2em}
    \fi
 
-
 5. If $x = x_o\ln(y/y_o)$, solve for $y$ in terms of $x$.
 
    \ifsolutions

@@ -326,7 +326,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Lorentz Force Law
 
 * Activity - Lorentz Force on Charged Particles
-  * [Instructor notes](Lorentz_Force/README.html) 
+  * [Instructor notes](Lorentz_Force/README.html)
   * Documents:
 | [pdf](Lorentz_Force/Lorentz_Force.pdf)
 | [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf)
