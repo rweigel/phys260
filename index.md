@@ -196,6 +196,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf)
 | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf)
+| [html](Continuous_Charge_Distributions/Continuous_Charge_Distributions.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -216,6 +217,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Electric_Flux/Electric_Flux.pdf)
 | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf)
+| [html](Electric_Flux/Electric_Flux.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -237,6 +239,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Enclosed_Charge/Enclosed_Charge.pdf)
 | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf)
+| [html](Enclosed_Charge/Enclosed_Charge.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -250,6 +253,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Gauss_Law/Gauss_Law.pdf)
 | [pdf solns](Gauss_Law/Gauss_Law-solutions.pdf)
+| [html](Gauss_Law/Gauss_Law.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -264,6 +268,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Electric_Potential/Electric_Potential.pdf)
 | [pdf solns](Electric_Potential/Electric_Potential-solutions.pdf)
+| [html](Electric_Potential/Electric_Potential.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -278,6 +283,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Capacitance/Capacitance.pdf)
 | [pdf solns](Capacitance/Capacitance-solutions.pdf)
+| [html](Capacitance/Capacitance.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -294,6 +300,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf)
 | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf)
+| [html](Kirchhoffs_Laws/Kirchhoffs_Laws.html)
 | 
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -308,6 +315,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](RC_Circuits/RC_Circuits.pdf)
 | [pdf solns](RC_Circuits/RC_Circuits-solutions.pdf)
+| [html](RC_Circuits/RC_Circuits.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -322,6 +330,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Lorentz_Force/Lorentz_Force.pdf)
 | [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf)
+| [html](Lorentz_Force/Lorentz_Force.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
@@ -335,6 +344,8 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Documents:
 | [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
 | [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
+| [html](Lorentz_Force_Wires/Lorentz_Force_Wires.html)
+|
 * Source:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires)
