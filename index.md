@@ -193,7 +193,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Continuous Charge Distributions
 
 * Activity -- Computing the electric field due to a finite line of charge
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions/README.html)
+  * [Instructor notes](Continuous_Charge_Distributions/README.html)
   * Documents:
 | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf)
 | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf)
@@ -213,7 +213,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Electric Flux
 
 * Activity -- Computing electric flux for open and closed rectangular surfaces
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Electric_Flux/README.html)
+  * [Instructor notes](Electric_Flux/README.html)
   * Documents:
 | [pdf](Electric_Flux/Electric_Flux.pdf)
 | [pdf solns](Electric_Flux/Electric_Flux-solutions.pdf)
@@ -234,7 +234,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Enclosed Charge
 
 * Activity -- Computing the amount of charge enclosed for common geometries used in Gauss' law problems
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Enclosed_Charge/README.html)
+  * [Instructor notes](Enclosed_Charge/README.html)
   * Documents:
 | [pdf](Enclosed_Charge/Enclosed_Charge.pdf)
 | [pdf solns](Enclosed_Charge/Enclosed_Charge-solutions.pdf)
@@ -261,7 +261,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Electric Potential
 
 * Activity -- Computing elelctric potential energy differences and electric potential differences
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.html)
+  * [Instructor notes](Electric_Potential/README.html)
   * Documents:
 | [pdf](Electric_Potential/Electric_Potential.pdf)
 | [pdf solns](Electric_Potential/Electric_Potential-solutions.pdf)
@@ -275,7 +275,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Capacitance
 
 * Activity -- Computing capacitance of a parallel plate and spherical capacitor
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.html)
+  * [Instructor notes](Capacitance/README.html)
   * Documents:
 | [pdf](Capacitance/Capacitance.pdf)
 | [pdf solns](Capacitance/Capacitance-solutions.pdf)
@@ -290,8 +290,8 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Kirchhoff's Circuit Laws
 
-* Activity
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws/README.html)
+* Activity - Using KVL and KCL
+  * [Instructor notes](Kirchhoffs_Laws/README.html)
   * Documents:
 | [pdf](Kirchhoffs_Laws/Kirchhoffs_Laws.pdf)
 | [pdf solns](Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf)
@@ -306,7 +306,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## RC Circuits
 
 * Activity
-  * [Instructor Notes](https://github.com/rweigel/phys260/tree/master/RC_Circuits/README.html) 
   * Documents:
 | [pdf](RC_Circuits/RC_Circuits.pdf)
 | [pdf solns](RC_Circuits/RC_Circuits-solutions.pdf)
@@ -319,8 +318,8 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Lorentz Force Law
 
-* Activity
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force/README.html) 
+* Activity - Lorentz Force on Charged Particles
+  * [Instructor notes](Lorentz_Force/README.html) 
   * Documents:
 | [pdf](Lorentz_Force/Lorentz_Force.pdf)
 | [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf)
@@ -333,8 +332,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Lorentz Force Law on Wires
 
-* Activity
-  * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires/README.html) 
+* Activity - Lorentz Force on Charged Particles
   * Documents:
 | [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
 | [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
