@@ -83,31 +83,31 @@ Several calculations must be performed to use Gauss's law to find the electric f
 
 Electric flux, $\Phi_E$, is the integral of $\bfvec{E}\bfcdot d\bfvec{A}$ over a surface:
 
-\begin{equation}
+$$
 \Phi_E=\int\bfvec{E}\bfcdot d\bfvec{A}
-\end{equation}
+$$
 
 When the magnitude and direction of $\bfvec{E}$ is the same at all points on the surface, the integral simplifies to 
 
-\begin{equation}
+$$
 \Phi_E = \bfvec{E}\bfcdot \bfvec{A}=\bfvec{E}\bfcdot \hat{\mathbf{n}}A
-\end{equation}
+$$
 
 where $\hat{\mathbf{n}}$ is a unit vector perpendicular to the surface with area $A$. Electric flux is a scalar quantity because it results from the dot product of two vectors (similar to work, which is the dot product of a force vector and displacement vector).
 
 The textbook covers several other forms for $\Phi_E$. The equation $\Phi_E = \bfvec{E}\bfcdot \hat{\mathbf{n}}A$ can also be written as
 
-\begin{equation}
+$$
 \Phi_E = E_{\perp}A
-\end{equation}
+$$
 
 where $E_{\perp}$ is the component of $\bfvec{E}$ that is perpendicular to $A$. If the perpendicular component of $\bfvec{E}$ is in the same direction as the normal direction for $\bfvec{A}$, $E_{\perp}$ is positive. If the perpendicular component of $\bfvec{E}$ is in the opposite direction as the normal direction for $\bfvec{A}$, $E_{\perp}$ is negative.
 
 A final form is
 
-\begin{equation}
+$$
 \Phi_E = EA\cos\theta
-\end{equation}
+$$
 
 where $\theta$ is the angle between the $\bfvec{E}$ and $\bfvec{A}$ vectors.
 
@@ -131,18 +131,12 @@ Any of these equations can be used, and students are encouraged to use the one t
 
         \input{figures/Electric_Flux_XZ_Plane.tikz}
         \fi
-        \ifsolutions\else
-        \input{figures/Electric_Flux_XZ_Plane.tikz}
-        \fi
 
         b. Is there only one normal direction to this area? Discuss your reasoning with your group.
 
         \ifsolutions
         \textbf{Answer}: There are two normal directions, one in $+y$ as shown and another in $-y$ direction.
         \else
-        \vskip 72pt
-        \fi
-        \ifsolutions\else
         \vskip 72pt
         \fi
 
@@ -155,11 +149,13 @@ Any of these equations can be used, and students are encouraged to use the one t
 
         a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=E_oA\cos 90^\circ = 0$
 
-        b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=0^\circ\qquad\qquad\Phi_E==E_oA\cos 0^\circ=E_oA$ 
+        b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=0^\circ\qquad\qquad\Phi_E=E_oA\cos 0^\circ=E_oA$ 
 
         c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=90^\circ\qquad\qquad\Phi_E=E_oA\cos 90^\circ=0$ 
 
         d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=45^\circ\qquad\qquad\Phi_E=E_o A\cos 45^\circ=E_oA/\sqrt{2}$
+
+        Note that $\Phi_E=EA\cos\theta$ and so in d. we need the magnitude $E = |\bfvec{E}| = \sqrt{(E_o/\sqrt{2})^2+(E_o/\sqrt{2})^2)}=E_o$.
         \else
 
         \input{figures/Electric_Flux_xz_Plane_Sketch.tikz}
@@ -174,19 +170,6 @@ Any of these equations can be used, and students are encouraged to use the one t
 
         \newpage
         \fi
-        \ifsolutions\else
-        \input{figures/Electric_Flux_xz_Plane_Sketch.tikz}
-
-          a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E$
-
-          b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
-
-          c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E$ 
-
-          d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
-
-          \newpage
-        \fi
 
 \end{enumerate}
 
@@ -196,9 +179,6 @@ Any of these equations can be used, and students are encouraged to use the one t
 
 \else
 
-\input{figures/Electric_Flux_XZ_Plane_Rotated.tikz}
-\fi
-\ifsolutions\else
 \input{figures/Electric_Flux_XZ_Plane_Rotated.tikz}
 \fi
 
@@ -217,9 +197,7 @@ b. $\quad\ds\bfvec{E}=E_o\jhat\quad\theta=\phi=45^\circ\quad\Phi_E=E_oA\cos 45^\
 
 c. $\quad\ds\bfvec{E}=E_o\khat\quad\theta=90^\circ\quad\Phi_E=E_oA\cos 90^\circ=0$ 
 
-d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\quad\theta=45^\circ-\phi=0^\circ\quad\Phi_E=E_oA\cos 0^\circ=E_oA$
-
-(Can you derive the general relationship $\theta=45^\circ-\phi$ for part d.?)
+d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\quad\theta=90^\circ\quad\Phi_E=E_oA\cos 90^\circ=0$
 \else
 
 \input{figures/Electric_Flux_XZ_Plane_Rotated_Sketch.tikz}
@@ -231,17 +209,6 @@ b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=
 c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
 
 d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
-\fi
-\ifsolutions\else
-\input{figures/Electric_Flux_XZ_Plane_Rotated_Sketch.tikz}
-
-  a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$
-
-  b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
-
-  c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
-
-  d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
 \fi
 
 \section{$\Phi_E$ Through Closed Surface}
@@ -278,7 +245,7 @@ The normal direction for the bottom surface is downwards, which is in the opposi
 
 $\Phi_E^{4}=E_oA\cos 180^\circ=-E_oA$
 
-The total flux through the cube, $\Phi_E^1+…+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
+The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
 
 How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed must be zero.
 
@@ -286,9 +253,6 @@ How much charge is inside the cube? The net flux through the cube's surface is z
 
 \else
 
-\newpage
-\fi
-\ifsolutions\else
 \newpage
 \fi
 
@@ -314,9 +278,6 @@ $\Phi_E^5=-E_oA$ because $\bfvec{E}$ points in the opposite direction of $\hat{\
 $\Phi_E^6=0$ because $\bfvec{E}$ is perpendicular to $\hat{\mathbf{n}}_6$
 \else
 
-\newpage
-\fi
-\ifsolutions\else
 \newpage
 \fi
 
@@ -366,29 +327,17 @@ Also from the diagram, $\mathbf{E}=E_o\sin30^\circ\jhat+E_o\cos30^\circ\khat$.
 
 What remains is to evaluate dot products (you should be able to skip most of the intermediate steps). Using $\mathbf{E}\cdot\mathbf{A}=\mathbf{E}\cdot A\hat{\mathbf{n}}$,
 
-\begin{equation}
-\Phi_E^1=\mathbf{E}\cdot \hat{\mathbf{n}}_1A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot\ihat A = E_oA(\jhat\cdot\ihat\sin 30^\circ+\khat\cdot\ihat\cos 30^\circ)=0
-\end{equation}
+$$\Phi_E^1=\mathbf{E}\cdot \hat{\mathbf{n}}_1A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot\ihat A = E_oA(\jhat\cdot\ihat\sin 30^\circ+\khat\cdot\ihat\cos 30^\circ)=0$$
 
-\begin{equation}
-\Phi_E^2=\mathbf{E}\cdot \hat{\mathbf{n}}_2A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot\jhat A = E_oA(\jhat\cdot\jhat\sin 30^\circ+\khat\cdot\jhat\cos 30^\circ)=E_oA\sin 30^\circ
-\end{equation}
+$$\Phi_E^2=\mathbf{E}\cdot \hat{\mathbf{n}}_2A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot\jhat A = E_oA(\jhat\cdot\jhat\sin 30^\circ+\khat\cdot\jhat\cos 30^\circ)=E_oA\sin 30^\circ$$
 
-\begin{equation}
-\Phi_E^3=\mathbf{E}\cdot \hat{\mathbf{n}}_3A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot\khat A = E_oA(\jhat\cdot\khat\sin 30^\circ+\khat\cdot\khat\cos 30^\circ)=E_oA\cos 30^\circ
-\end{equation}
+$$\Phi_E^3=\mathbf{E}\cdot \hat{\mathbf{n}}_3A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot\khat A = E_oA(\jhat\cdot\khat\sin 30^\circ+\khat\cdot\khat\cos 30^\circ)=E_oA\cos 30^\circ$$
 
-\begin{equation}
-\Phi_E^4=\mathbf{E}\cdot \hat{\mathbf{n}}_4A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\khat A) = -E_oA(\jhat\cdot\khat\sin 30^\circ+\khat\cdot\khat\cos 30^\circ)=-E_oA\cos 30^\circ
-\end{equation}
+$$\Phi_E^4=\mathbf{E}\cdot \hat{\mathbf{n}}_4A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\khat A) = -E_oA(\jhat\cdot\khat\sin 30^\circ+\khat\cdot\khat\cos 30^\circ)=-E_oA\cos 30^\circ$$
 
-\begin{equation}
-\Phi_E^5=\mathbf{E}\cdot \hat{\mathbf{n}}_5A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\jhat A) = -E_oA(\jhat\cdot\jhat\sin 30^\circ+\khat\cdot\jhat\cos 30^\circ)=-E_oA\sin 30^\circ
-\end{equation}
+$$\Phi_E^5=\mathbf{E}\cdot \hat{\mathbf{n}}_5A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\jhat A) = -E_oA(\jhat\cdot\jhat\sin 30^\circ+\khat\cdot\jhat\cos 30^\circ)=-E_oA\sin 30^\circ$$
 
-\begin{equation}
-\Phi_E^6=\mathbf{E}\cdot \hat{\mathbf{n}}_6A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\ihat A) =  -E_oA(\jhat\cdot\ihat\sin 30^\circ+\khat\cdot\ihat\cos 30^\circ)=0
-\end{equation}
+$$\Phi_E^6=\mathbf{E}\cdot \hat{\mathbf{n}}_6A=E_o(\sin 30^\circ\jhat+\cos 30^\circ\khat)\cdot(-\ihat A) =  -E_oA(\jhat\cdot\ihat\sin 30^\circ+\khat\cdot\ihat\cos 30^\circ)=0$$
 
 Checks: The flux is positive for faces 2 and 3. This is consistent with the diagram because if electric field lines were drawn, they would emerge from the volume out of these faces. The flux is negative for faces 4 and 5. This is consistent with the diagram because if electric field lines were drawn, they would enter the volume.
 \fi

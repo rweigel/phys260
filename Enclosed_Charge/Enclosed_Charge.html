@@ -41,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -382,10 +382,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -397,6 +393,16 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
     .page-break {
       break-after: page;
       width: 100%;
@@ -405,11 +411,11 @@
     }
 
     .solutionsfalse {
-      display: block;
+      display: none;
     }
 
     .solutionstrue {
-      display: none;
+      display: block;
     }
 
     @media print {
@@ -587,7 +593,7 @@
         </a>
       </li>
       <li>
-        <a href="#large-sheet" raw="# Large Sheet" lo="220" class="highlighted">
+        <a href="#large-sheet" raw="# Large Sheet" lo="220">
           <span class="toctext">Large Sheet</span>
         </a>
       </li>
@@ -763,12 +769,12 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="48" lf="51">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: <span len="25" raw="_\sigma = Q/ (2 \pi R^2)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> (The factor of <span len="3" raw="_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> because there are two caps, each of area <span len="9" raw="_\pi R^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.)</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{1in}" style="height:1in"></div>
@@ -786,12 +792,12 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="56" lf="60">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: <span len="25" raw="_\sigma = Q/ (4 \pi R^2)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{1in}" style="height:1in"></div>
@@ -830,7 +836,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="70" lf="72">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The linear charge density is the total charge divided by the length over which the charge is distributed: <span len="18" raw="_\lambda={3Q}/{L}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">3</span><span class="mord mathnormal">Q</span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">L</span></span></span></span></span>.</p>
                   </div>
@@ -840,7 +846,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="74" lf="75">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -858,7 +864,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="80" lf="82">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The dashed line in the figure is the part of the line inside of the Gaussian cylinder. The length of the dashed line is <span len="3" raw="_h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>, so <span len="27" raw="_Q_{\text{encl}}=\lambda h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λh</span></span></span></span>. Another way of arriving at this is by noting that the charge enclosed is the total charge <span len="8" raw="_\times_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">×</span></span></span></span> the ratio <span len="5" raw="_h/L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mord">/</span><span class="mord mathnormal">L</span></span></span></span>, so <span len="37" raw="_Q_{\text{encl}}=3Q(h/L) = \lambda h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">h</span><span class="mord">/</span><span class="mord mathnormal">L</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λh</span></span></span></span>.</p>
                   </div>
@@ -868,7 +874,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="84" lf="85">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -886,7 +892,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="90" lf="92">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="27" raw="_Q_{\text{encl}}=\lambda h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λh</span></span></span></span> for all four cases.</p>
                   </div>
@@ -896,7 +902,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="94" lf="95">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -914,7 +920,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="100" lf="104">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer:}" markerlength="4"> Answer:</strong></p>
                   </div>
@@ -929,7 +935,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="106" lf="108">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div class="newpage">
@@ -971,7 +977,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="118" lf="120">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="22" raw="_\sigma = 3Q/4\pi R^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord mathnormal">Q</span><span class="mord">/4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
                   </div>
@@ -981,7 +987,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="122" lf="123">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -999,7 +1005,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="128" lf="130">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="19" raw="_Q_{\text{encl}}=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
                   </div>
@@ -1009,7 +1015,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="132" lf="133">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1027,7 +1033,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="138" lf="140">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="33" raw="_Q_{\text{encl}}=\sigma 4\pi R^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
                   </div>
@@ -1037,7 +1043,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="142" lf="143">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1055,7 +1061,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="148" lf="150">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="41" raw="_0, 0, \sigma 4 \pi R^2, \sigma 4\pi R^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
                   </div>
@@ -1065,7 +1071,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="152" lf="153">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1083,7 +1089,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="158" lf="162">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: </p>
                   </div>
@@ -1133,7 +1139,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="174" lf="176">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="28" raw="_\ds \rho=3Q/[(4/3)\pi R^3]_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1141em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mopen">[(</span><span class="mord">4/3</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></p>
                   </div>
@@ -1143,7 +1149,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="178" lf="179">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1161,7 +1167,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="184" lf="186">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: For <span len="9" raw="_r \le R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, <span len="37" raw="_Q_{\text{encl}}=\rho [(4/3)\pi r^3]_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">[(</span><span class="mord">4/3</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></p>
                   </div>
@@ -1171,7 +1177,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="188" lf="189">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1189,7 +1195,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="194" lf="196">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: For <span len="9" raw="_r \ge R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, <span len="37" raw="_Q_{\text{encl}}=\rho [(4/3)\pi R^3]_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">[(</span><span class="mord">4/3</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span>, which is independent of <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>.</p>
                   </div>
@@ -1199,7 +1205,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="198" lf="199">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1217,7 +1223,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="204" lf="206">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="63" raw="_0, (1/8)\rho (4/3)\pi R^3, \rho(4/3)\pi R^3, \rho(4/3)\pi R^3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">(</span><span class="mord">1/8</span><span class="mclose">)</span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord">4/3</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord">4/3</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mopen">(</span><span class="mord">4/3</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></p>
                   </div>
@@ -1227,7 +1233,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="208" lf="209">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1245,7 +1251,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="214" lf="216">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <div class="inline-html">
                       <img src="figures/Solid_Sphere_Graph.svg">
@@ -1270,7 +1276,7 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="220" lf="220" class="highlighted"><a name="large-sheet" number="6" lo="220" raw="# Large Sheet" class="anchor hanchor" href="#large-sheet"><span class="hnumber">6</span>&nbsp;<span class="htext">Large Sheet</span></a></h1>
+        <h1 lo="220" lf="220"><a name="large-sheet" number="6" lo="220" raw="# Large Sheet" class="anchor hanchor" href="#large-sheet"><span class="hnumber">6</span>&nbsp;<span class="htext">Large Sheet</span></a></h1>
         <div class="block-info" style="display: none;"><span class="line-numbers">220</span></div>
       </div>
       <div class="block">
@@ -1292,7 +1298,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="228" lf="230">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="15" raw="_\sigma=3Q/L^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
                   </div>
@@ -1301,8 +1307,8 @@
               <div class="block-info" style="display: none;"><span class="line-numbers">228-230</span></div>
             </div>
             <div class="block">
-              <div class="inline-html active" lo="232" lf="233">
-                <div class="solutionsfalse">
+              <div class="inline-html" lo="232" lf="233">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1320,7 +1326,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="238" lf="240">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="32" raw="_Q_{\text{encl}}=\sigma \pi r^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σπ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
                   </div>
@@ -1330,7 +1336,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="242" lf="243">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1348,7 +1354,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="248" lf="250">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <div class="inline-html">
                       <img src="figures/Sheet_Graph.svg">
@@ -1395,7 +1401,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="262" lf="266">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The linear charge density is the total charge divided by the length over which the charge is distributed: <span len="18" raw="_\lambda={3Q}/{H}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">3</span><span class="mord mathnormal">Q</span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span></span>.</p>
                   </div>
@@ -1408,7 +1414,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="268" lf="269">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1426,7 +1432,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="274" lf="276">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: If the Gaussian cylinder is fully inside the hollow cylinder, there would be no charge inside of it. As a result, the charge enclosed for <span len="6" raw="_r< R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> is zero: <span len="19" raw="_Q_{\text{encl}}=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>.</p>
                   </div>
@@ -1436,7 +1442,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="278" lf="279">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1454,7 +1460,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="284" lf="286">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The amount of charge enclosed is the charge per unit length <span len="22" raw="_\times h = \lambda h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord">×</span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λh</span></span></span></span>, so <span len="27" raw="_Q_{\text{encl}}=\lambda h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λh</span></span></span></span>. (The amount of charge enclosed does not depend on <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>.)</p>
                   </div>
@@ -1464,7 +1470,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="288" lf="289">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1482,7 +1488,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="294" lf="296">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="28" raw="_0, 0, \lambda h, \lambda h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">λh</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">λh</span></span></span></span></p>
                   </div>
@@ -1492,7 +1498,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="298" lf="299">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1510,7 +1516,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="304" lf="306">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <div class="inline-html">
                       <img src="figures/Hollow_Cylinder_Graph.svg">
@@ -1557,7 +1563,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="318" lf="320">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer:}" markerlength="4"> Answer:</strong> The volume, <span len="3" raw="_V_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>, of the charged cylinder is its cross-sectional area, <span len="9" raw="_\pi R^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>, times its height, <span len="3" raw="_H_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>: <span len="13" raw="_V=\pi R^2 H_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>. The volume charge density is charge/volume: <span len="21" raw="_\rho=3Q/(\pi R^2 H)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord mathnormal">Q</span><span class="mord">/</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mclose">)</span></span></span></span>.</p>
                   </div>
@@ -1567,7 +1573,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="322" lf="323">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1585,7 +1591,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="328" lf="330">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: When <span len="5" raw="_r<R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, the Gaussian cylinder is entirely inside the charged cylinder. The charge in the Gaussian cylinder is the charge density of the charged cylinder times the volume of <em type="md" marker="_">the Gaussian cylinder</em>: <span len="35" raw="_Q_{\text{encl}}(r)=\rho \pi r^2 h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span></span></span></span>.</p>
                   </div>
@@ -1595,7 +1601,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="332" lf="333">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1613,7 +1619,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="338" lf="340">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: For any <span len="8" raw="_r\ge R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, <span len="32" raw="_Q_{\text{encl}}=\rho \pi R^2 h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">encl</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span></span></span></span>, which is independent of <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>. </p>
                   </div>
@@ -1623,7 +1629,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="342" lf="343">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1641,7 +1647,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="348" lf="350">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="52" raw="_0, \rho\pi R^2 h/4, \rho \pi R^2 h, \rho \pi R^2 h_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span><span class="mord">/4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span></span></span></span></p>
                   </div>
@@ -1651,7 +1657,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="352" lf="353">
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: block;">
                   <div class="block">
                     <div class="inline-html">
                       <div style="height:3em"></div>
@@ -1669,7 +1675,7 @@
             </div>
             <div class="block">
               <div class="inline-html" lo="358" lf="361">
-                <div class="solutionstrue">
+                <div class="solutionstrue" style="display: none;">
                   <div class="block">
                     <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>:</p>
                   </div>

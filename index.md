@@ -2,13 +2,13 @@
 
 These are activities that students work on during a weekly 50--minute recitation for PHYS 260 at GMU. To maximize students' time working on problems, I typically give at most a 10--minute review. Often, my 10--minute review involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.
 
-Associated with each of the activies is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts, which are typically covered in lecture. The problems primarily involve basic calculations required to solve homework problems.
+Associated with each of the activities is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts because they are covered in the lectures. The problems primarily involve basic calculations required to solve homework problems. I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
 
-These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, Michael Reefe have contributed edits, video solutions, or links to resources.
+These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, and Michael Reefe have contributed edits, video solutions, or links to resources.
 
-The length of the activities is such that 1--2 students out of 30 will finish.  I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
+The length of the activities is such that 1--4 students out of 30 will finish.
 
-The problems on these activities are generally basic and straightforward. The problems chosen, and their difficulty, are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master in order to understand how to approach the homework problems.
+The problems on these activities are generally basic and straightforward. The problems chosen and their difficulty are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master in order to understand how to approach the homework problems.
 
 %**Motivation**
 
@@ -36,7 +36,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Logarithm Review
 
 * Activity -- A review of base 10 and base $e$ logarithms and associated identites used in the Sound Intensity Level Activity. 
-  * [Instructor notes](Logarithms/README.html)
   * Documents:
 | [pdf](Logarithms/Logarithms.pdf)
 | [pdf solns](Logarithms/Logarithms-solutions.pdf)
@@ -74,8 +73,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Vector Review
 
-* Activity -- Given magnitude and direction, compute components; given components, compute magnitude and direction. 
-  * [Instructor notes](Vectors/README.html)
+* Activity -- Given magnitude and direction, compute components; given components, compute magnitude and direction. (This activity requires only 10--15 minutes.)
   * Documents:
 | [pdf](Vectors/Vectors.pdf)
 | [pdf solns](Vectors/Vectors-solutions.pdf)
@@ -262,7 +260,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Electric Potential
 
-* Activity
+* Activity -- Computing elelctric potential energy differences and electric potential differences
   * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Electric_Potential/README.html)
   * Documents:
 | [pdf](Electric_Potential/Electric_Potential.pdf)
@@ -276,7 +274,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Capacitance
 
-* Activity
+* Activity -- Computing capacitance of a parallel plate and spherical capacitor
   * [Instructor notes](https://github.com/rweigel/phys260/tree/master/Capacitance/README.html)
   * Documents:
 | [pdf](Capacitance/Capacitance.pdf)
@@ -287,6 +285,8 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Capacitance)
 | [Markdown](Capacitance/Capacitance.md)
 |
+
+## Current and Resistance
 
 ## Kirchhoff's Circuit Laws
 
@@ -343,3 +343,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires)
 | [Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md)
 | 
+
+## The Biot--Savart law
+
+## RLC and AC Circuits
