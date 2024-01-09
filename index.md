@@ -50,7 +50,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Sound Intensity Level
 
 * Activity -- Calculations related to sound intensity, $I$, and sound intensity level, $\beta$.
-  * [Instructor notes](Sound_Intensity_Level/README.html)
   * Documents:
 | [pdf](Sound_Intensity_Level/Sound_Intensity_Level.pdf)
 | [pdf solns](Sound_Intensity_Level/Sound_Intensity_Level-solutions.pdf)
