@@ -4,7 +4,7 @@ These are activities that students work on during a weekly 50--minute recitation
 
 Associated with each of the activities is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts because they are covered in the lectures. The problems primarily involve basic calculations required to solve homework problems. I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.
 
-These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, and Michael Reefe have contributed edits, video solutions, or links to resources.
+These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, Patrick Vora, and Michael Reefe have contributed edits, video solutions, or links to resources.
 
 The length of the activities is such that 1--4 students out of 30 will finish.
 
@@ -169,7 +169,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Superposition and Symmetry
 
 * Activity: Computing electric force and field due to multiple charges
-  * [Instructor notes](Superposition_and_Symmetry/README.html)
   * Documents:
 | [pdf](Superposition_and_Symmetry/Superposition_and_Symmetry.pdf)
 | [pdf solns](Superposition_and_Symmetry/Superposition_and_Symmetry-solutions.pdf)
@@ -192,7 +191,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Continuous Charge Distributions
 
 * Activity -- Computing the electric field due to a finite line of charge
-  * [Instructor notes](Continuous_Charge_Distributions/README.html)
   * Documents:
 | [pdf](Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf)
 | [pdf solns](Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf)

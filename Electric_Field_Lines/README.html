@@ -25,6 +25,7 @@
     #toc {
       flex: 0 1 auto;
       margin-top: 0em;
+      margin-right: 1em;
       max-width: 12em;
       overflow: hidden auto;
     }
@@ -39,8 +40,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0.5em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -90,12 +91,8 @@
       flex: 1 1 auto;
     }
 
-    #display .block.comment {
+    #display .block>.comment {
       display: none;
-    }
-
-    #display .block.inline-html {
-      display: block;
     }
 
     #display .hr {
@@ -107,9 +104,26 @@
     }
 
     #display a {
-      text-decoration: none black;
-      text-underline-offset: 2px;
+      text-decoration-line: none;
+      text-decoration-color: black;
       color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
     }
 
     #display p {
@@ -122,22 +136,6 @@
     #display pre {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-    }
-
-    #display ul {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.35em;
-    }
-
-    #display ol {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.5em;
     }
 
     #display h1,
@@ -273,20 +271,66 @@
       width: 100%;
     }
 
-    #display li p {
+    #display ul {
       width: 100%;
-      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
     }
 
-    #display li .block:first-of-type p {
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
       width: 100%;
-      display: block;
-      margin-top: 0em;
-      margin-bottom: 0em;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
     .inline-html .block .block-info {
       display: none;
+    }
+
+    .inline-html {
+      width: 100%;
     }
 
     .section>.block ol~.block-info {}
@@ -324,12 +368,17 @@
       border-radius: 0.5em;
     }
 
-    .katex {
-      font-size: inherit !important;
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
     }
 
-    .katex-warning {
-      border-right: 3px solid red;
+    .latex-underline {
+      text-decoration: underline;
+    }
+
+    .katex {
+      font-size: inherit !important;
     }
 
     .katex-display {
@@ -343,6 +392,31 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
     @media print {
       * {
         overflow: visible !important;
@@ -350,25 +424,20 @@
 
       @page {
         size: auto;
-        margin: 0.75in;
+        margin: 0.5in 0.75in 0.75in;
       }
 
       .katex .hide-tail {
         overflow: hidden !important;
       }
 
+      .page-break {
+        border-top: none;
+      }
+
       .body {
         display: inline;
         position: relative;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        break-before: page;
       }
 
       h1,
@@ -450,7 +519,6 @@
   </style>
   <script>
     function tocClickListen() {
-      // No jQuery b/c also used in stand-alone HTML.
       let hs = document.querySelectorAll('#toc > ol ol');
       let el, ns;
       for (let i = 0; i < hs.length; i++) {
@@ -461,11 +529,12 @@
           }
           el.addEventListener('click', event => {
             ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
             if (ns.style.display === 'none') {
     ns.style.display = 'block';
-            } else {
-    ns.style.display = 'none';
-            }
+            } else
+            {
+    ns.style.display = 'none';}
           });
         }
       }
@@ -487,7 +556,8 @@
   <div id="display">
     <div class="section">
       <div class="block">
-        <p lo="1" lf="1" class="">For solution, discuss this app: <a href="https://academo.org/demos/electric-field-line-simulator/">https://academo.org/demos/electric-field-line-simulator/</a></p>
+        <p padlength="0" lo="1" lf="1" class="active">For solution, discuss this app: <a href="https://academo.org/demos/electric-field-line-simulator/">https://academo.org/demos/electric-field-line-simulator/</a></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
       </div>
     </div>
   </div>

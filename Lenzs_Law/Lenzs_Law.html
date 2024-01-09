@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lenz's Law</title>
+  <title>Lenz’s Law</title>
   <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
@@ -41,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -291,6 +291,11 @@
       padding-left: 0.5em;
     }
 
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -364,14 +369,6 @@
       border-radius: 0.5em;
     }
 
-    .solutionsfalse {
-      display: block;
-    }
-
-    .solutionstrue {
-      display: block;
-    }
-
     .inline {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -385,10 +382,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -400,6 +393,31 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
     @media print {
       * {
         overflow: visible !important;
@@ -407,11 +425,15 @@
 
       @page {
         size: auto;
-        margin: 0.75in;
+        margin: 0.5in 0.75in 0.75in;
       }
 
       .katex .hide-tail {
         overflow: hidden !important;
+      }
+
+      .page-break {
+        border-top: none;
       }
 
       .body {
@@ -496,6 +518,38 @@
       }
     }
   </style>
+  <script>
+    function tocClickListen() {
+      let hs = document.querySelectorAll('#toc > ol ol');
+      let el, ns;
+      for (let i = 0; i < hs.length; i++) {
+        if (hs[i].previousElementSibling) {
+          el = hs[i].previousElementSibling.firstElementChild;
+          if (el.length == 0) {
+            continue;
+          }
+          el.addEventListener('click', event => {
+            ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
+            if (ns.style.display === 'none') {
+    ns.style.display = 'block';
+            } else
+            {
+    ns.style.display = 'none';}
+          });
+        }
+      }
+    }
+    if (
+        document.readyState === "complete" ||
+        (document.readyState !== "loading" && 
+          !document.documentElement.doScroll)
+    ) {
+      tocClickListen();
+    } else {
+      document.addEventListener("DOMContentLoaded", tocClickListen);
+    }
+  </script>
 </head>
 
 <body class="body">
@@ -507,7 +561,7 @@
         </a>
         <ol class="toc" style="display: none;">
           <li>
-            <a href="#magnetic-flux" raw="## Magnetic Flux" lo="7">
+            <a href="#magnetic-flux" raw="## Magnetic Flux" lo="7" class="highlighted">
               <span class="toctext">Magnetic Flux</span>
             </a>
           </li>
@@ -529,24 +583,24 @@
         </a>
         <ol class="toc" style="display: none;">
           <li>
-            <a href="#-b-changing" raw="## $B$ Changing" lo="68">
+            <a href="#b-changing" raw="## $B$ Changing" lo="68">
               <span class="toctext"><span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> Changing</span>
             </a>
           </li>
           <li>
-            <a href="#-a-changing" raw="## $A$ Changing" lo="74">
+            <a href="#a-changing" raw="## $A$ Changing" lo="74">
               <span class="toctext"><span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> Changing</span>
             </a>
           </li>
         </ol>
       </li>
       <li>
-        <a href="#examples" raw="# Examples" lo="80" class="">
+        <a href="#examples" raw="# Examples" lo="80">
           <span class="toctext">Examples</span>
         </a>
-        <ol class="toc" style="display: block;">
+        <ol class="toc" style="display: none;">
           <li>
-            <a href="#changing-b" raw="## Changing $B$" lo="82" class="">
+            <a href="#changing-b" raw="## Changing $B$" lo="82">
               <span class="toctext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span>
             </a>
           </li>
@@ -558,32 +612,32 @@
         </ol>
       </li>
       <li>
-        <a href="#problems" raw="# Problems" lo="116" class="">
+        <a href="#problems" raw="# Problems" lo="116">
           <span class="toctext">Problems</span>
         </a>
-        <ol class="toc" style="display: block;">
+        <ol class="toc" style="display: none;">
           <li>
-            <a href="#changing-b---i" raw="## Changing $B$ - I" lo="118" class="">
+            <a href="#changing-b-i" raw="## Changing $B$ - I" lo="118">
               <span class="toctext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> - I</span>
             </a>
           </li>
           <li>
-            <a href="#changing-b---ii" raw="## Changing $B$ - II" lo="138" class="">
+            <a href="#changing-b-ii" raw="## Changing $B$ - II" lo="138">
               <span class="toctext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> - II</span>
             </a>
           </li>
           <li>
-            <a href="#changing-area-i" raw="## Changing Area I" lo="174" class="">
+            <a href="#changing-area-i" raw="## Changing Area I" lo="174">
               <span class="toctext">Changing Area I</span>
             </a>
           </li>
           <li>
-            <a href="#changing-area-ii" raw="## Changing Area II" lo="195" class="">
+            <a href="#changing-area-ii" raw="## Changing Area II" lo="195">
               <span class="toctext">Changing Area II</span>
             </a>
           </li>
           <li>
-            <a href="#loop-in-wire-field" raw="## Loop in Wire Field" lo="215" class="">
+            <a href="#loop-in-wire-field" raw="## Loop in Wire Field" lo="215">
               <span class="toctext">Loop in Wire Field</span>
             </a>
           </li>
@@ -594,32 +648,40 @@
   <div id="display">
     <div class="section">
       <div class="block">
-        <p class="title">Lenz's Law</p>
+        <p padlength="0" lo="2" lf="2" class="title">Lenz’s Law</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">2</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1><a name="introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
+        <h1 lo="5" lf="5"><a name="introduction" number="1" lo="5" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2><a name="magnetic-flux" class="anchor hanchor" href="#magnetic-flux"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Magnetic Flux</span></a></h2>
+        <h2 lo="7" lf="7" class="highlighted"><a name="magnetic-flux" number="1.1" lo="7" raw="## Magnetic Flux" class="anchor hanchor" href="#magnetic-flux"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Magnetic Flux</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
       </div>
       <div class="block">
-        <p>A changing magnetic flux through a closed conducting loop can <em>induce</em> the flow of a current in the conducting loop.</p>
+        <p padlength="0" lo="9" lf="9" class="active">A changing magnetic flux through a closed conducting loop can <em type="md" marker="_">induce</em> the flow of a current in the conducting loop.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
       </div>
       <div class="block">
-        <p>In this activity, we will deal with a conducting loop that has a current that is not driven by a battery – it will be driven by a change in magnetic flux through the loop. This change will <em>induce</em> a current and this induced current will create what we will refer to as an <em>induced</em> magnetic field.</p>
+        <p padlength="0" lo="11" lf="11">In this activity, we will deal with a conducting loop that has a current that is not driven by a battery – it will be driven by a change in magnetic flux through the loop. This change will <em type="md" marker="_">induce</em> a current and this induced current will create what we will refer to as an <em type="md" marker="_">induced</em> magnetic field.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
       </div>
       <div class="block">
-        <div class="comment">%Some modern cell phones can be “wirelessly” re–charged using induced currents. Instead of charging a cell phone using currents from a power outlet (which can be thought of as a battery), the cell phone is charged using currents induced by a changing magnetic flux through a conducting loop in your cell phone.</div>
+        <div class="comment" lo="13" lf="13">%Some modern cell phones can be “wirelessly” re–charged using induced currents. Instead of charging a cell phone using currents from a power outlet (which can be thought of as a battery), the cell phone is charged using currents induced by a changing magnetic flux through a conducting loop in your cell phone.</div>
       </div>
       <div class="block">
-        <p>The general equation for magnetic flux is:</p>
+        <p padlength="0" lo="15" lf="15">The general equation for magnetic flux is:</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">15</span></div>
       </div>
       <div class="block">
-        <p><span class="katex-display fleqn"><span class="katex katex-display" style="display: block"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+        <p padlength="0" lo="17" lf="19"><span len="45" raw="__
+\Phi_B = \int \bfvec{B}\cdot d\bfvec{A}
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2222em;vertical-align:-0.8622em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                   <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -636,12 +698,16 @@ c-16-25.333-24-45-24-59z"></path>
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
                                 </svg></span></span></span></span></span></span></span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">17-19</span></div>
       </div>
       <div class="block">
-        <p>If the magnitude (strength) of the magnetic field is not changing and the angle between the magnetic field vector and the area vector does not change over the surface, then integration is not required and we can write</p>
+        <p padlength="0" lo="21" lf="21">If the magnitude (strength) of the magnetic field is not changing and the angle between the magnetic field vector and the area vector does not change over the surface, then integration is not required and we can write</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">21</span></div>
       </div>
       <div class="block">
-        <p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+        <p padlength="0" lo="23" lf="29"><span len="37" raw="_
+\Phi_B = \bfvec{B}\cdot \bfvec{A}
+_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                 <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -657,10 +723,13 @@ c-16-25.333-24-45-24-59z"></path>
 -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
-                              </svg></span></span></span></span></span></span></span></span></span></span> or, equivalently, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span></span></span></span></p>
+                              </svg></span></span></span></span></span></span></span></span></span></span> or, equivalently, <span len="23" raw="_
+\Phi_B = BA\cos\phi
+_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">23-29</span></div>
       </div>
       <div class="block">
-        <p>where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> is the angle between the area vector and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+        <p padlength="0" lo="31" lf="31">where <span len="6" raw="_\phi_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> is the angle between the area vector and <span len="11" raw="_\bfvec{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                 <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -669,15 +738,17 @@ c-16-25.333-24-45-24-59z"></path>
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
                               </svg></span></span></span></span></span></span></span></span></span></span>.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">31</span></div>
       </div>
       <div class="block">
-        <p>There are three ways in which flux can change:</p>
+        <p padlength="0" lo="33" lf="33">There are three ways in which flux can change:</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">33</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="35" lf="39" class="loose">
+          <li markerlength="3" padlength="0" lo="35" lf="36">
             <div class="block">
-              <p>The magnitude of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+              <p padlength="0" lo="35" lf="36">The magnitude of <span len="11" raw="_\bfvec{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                       <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -685,376 +756,449 @@ c-16-25.333-24-45-24-59z"></path>
 -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
-                                    </svg></span></span></span></span></span></span></span></span></span></span> (that is, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>) can change. To do this, a magnet can be moved closer or farther away from a conducting loop, a loop can be moved closer or farther away from a magnet, or the current in the loop that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field with an electromagnet.</p>
+                                    </svg></span></span></span></span></span></span></span></span></span></span> (that is, <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>) can change. To do this, a magnet can be moved closer or farther away from a conducting loop, a loop can be moved closer or farther away from a magnet, or the current in the loop that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field with an electromagnet.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">35-36</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="37" lf="38">
+          <li markerlength="3" padlength="0" lo="37" lf="38">
             <div class="block">
-              <p>The area <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> can change. To do this, the loop cross–section can be expanded or contracted, either by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5 and 29.6).</p>
+              <p padlength="0" lo="37" lf="38">The area <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> can change. To do this, the loop cross–section can be expanded or contracted, either by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5 and 29.6).</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">37-38</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="39" lf="41">
+          <li markerlength="3" padlength="0" lo="39" lf="41">
             <div class="block">
-              <p>The angle <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> can change. To do this, a conducting loop can be rotated (see Example 29.3). Electric motors use changes in <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> to convert mechanical energy to electrical energy (or vice versa).</p>
+              <p padlength="0" lo="39" lf="40">The angle <span len="6" raw="_\phi_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> can change. To do this, a conducting loop can be rotated (see Example 29.3). Electric motors use changes in <span len="6" raw="_\phi_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> to convert mechanical energy to electrical energy (or vice versa).</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">39-40</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">35-39</span></div>
       </div>
       <div class="block">
-        <p>In this activity, you will determine the direction of the induced current in a conducting loop due to a changing magnetic flux through its area using Lenz’s law for cases 1. and 2. Although Lenz’s law can be used for case 3., we generally use Faraday’s law first and then ask if our answer is consisten with Lenz’s law. This is covered in a separate activity. Additionally, Lenz’s law can be used to determine the direction of force or torque required by an external agent to cause the change in flux through the loop. This is also covered in a separate activity.</p>
+        <p padlength="0" lo="41" lf="41">In this activity, you will determine the direction of the induced current in a conducting loop due to a changing magnetic flux through its area using Lenz’s law for cases 1. and 2. Although Lenz’s law can be used for case 3., we generally use Faraday’s law first and then ask if our answer is consisten with Lenz’s law. This is covered in a separate activity. Additionally, Lenz’s law can be used to determine the direction of force or torque required by an external agent to cause the change in flux through the loop. This is also covered in a separate activity.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">41</span></div>
       </div>
       <div class="block">
-        <p>Lenz’s law follows from Faraday’s law. In principle, Faraday’s law with careful attention paid to signs can be used to determine the direction of induced current, in which case Lenz’s law is not needed. In a similar way that using the right–hand rules to get the general direction for force can be used to check your math on a cross–product, Lenz’s Law provides a check on the direction of the induced current when using Faraday’s law.</p>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2><a name="field-due-to-current-loop" class="anchor hanchor" href="#field-due-to-current-loop"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Field Due to Current Loop</span></a></h2>
-      </div>
-      <div class="block">
-        <p>Given a loop of current in a plane, one can determine the direction of the magnetic field near the center of loop created by the current using a right–hand rule. Wrap your fingers around the loop in the direction of the current and your thumb points in the direction of the magnetic field.</p>
-      </div>
-      <div class="block">
-        <p><img src="figures/Figure-28.12_Young_Freedman_14th_Edition.png"><span>
-            <strong>Figure 28.12 of Young and Freedman 14th Edition</strong></span></p>
+        <p padlength="0" lo="43" lf="43">Lenz’s law follows from Faraday’s law. In principle, Faraday’s law with careful attention paid to signs can be used to determine the direction of induced current, in which case Lenz’s law is not needed. In a similar way that using the right–hand rules to get the general direction for force can be used to check your math on a cross–product, Lenz’s Law provides a check on the direction of the induced current when using Faraday’s law.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2><a name="lenz-s-law" class="anchor hanchor" href="#lenz-s-law"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Lenz’s Law</span></a></h2>
+        <h2 lo="45" lf="45"><a name="field-due-to-current-loop" number="1.2" lo="45" raw="## Field Due to Current Loop" class="anchor hanchor" href="#field-due-to-current-loop"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Field Due to Current Loop</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">45</span></div>
       </div>
       <div class="block">
-        <p>As described in the textbook,</p>
+        <p padlength="0" lo="47" lf="47">Given a loop of current in a plane, one can determine the direction of the magnetic field near the center of loop created by the current using a right–hand rule. Wrap your fingers around the loop in the direction of the current and your thumb points in the direction of the magnetic field.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">47</span></div>
       </div>
       <div class="block">
-        <p><strong markerlength="4"> Lenz’s Law:</strong> The direction of any magnetic induction effect is such as to oppose the cause of the effect.</p>
-      </div>
-      <div class="block">
-        <p>Here, we’ll use a longer, but more descriptive definition.</p>
-      </div>
-      <div class="block">
-        <p><strong markerlength="4"> Lenz’s Law alternative</strong>: When the external magnetic flux through a conducting loop changes, a current appears (is induced) in the loop. This induced current creates an induced magnetic field. The direction of the induced current is such that the induced magnetic field it creates attempts to keep the magnetic flux unchanged.</p>
-      </div>
-      <div class="block">
-        <p>In the examples given, we will first find the direction of the induced magnetic field. Then we will ask what direction of induced current is consistent with this induced magnetic field.</p>
+        <p padlength="0" lo="49" lf="50"><img src="figures/Figure-28.12_Young_Freedman_14th_Edition.png"><span>
+            <strong type="md">Figure 28.12 of Young and Freedman 14th Edition</strong></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">49-50</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1><a name="a-method-of-solution" class="anchor hanchor" href="#a-method-of-solution"><span class="hnumber">2</span>&nbsp;<span class="htext">A Method of Solution</span></a></h1>
+        <h2 lo="52" lf="52"><a name="lenz-s-law" number="1.3" lo="52" raw="## Lenz's Law" class="anchor hanchor" href="#lenz-s-law"><span class="hnumber">1.3</span>&nbsp;<span class="htext">Lenz’s Law</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">52</span></div>
       </div>
       <div class="block">
-        <p>For cases 1. and 2., it is useful to draw the system before and after the change in magnetic field magnitude or area. </p>
+        <p padlength="0" lo="54" lf="54">As described in the textbook,</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">54</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="56" lf="56"><strong raw="{\bf Lenz’s Law:}" markerlength="4"> Lenz’s Law:</strong> The direction of any magnetic induction effect is such as to oppose the cause of the effect.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">56</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="58" lf="58">Here, we’ll use a longer, but more descriptive definition.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">58</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="60" lf="60"><strong raw="{\bf Lenz’s Law alternative}" markerlength="4"> Lenz’s Law alternative</strong>: When the external magnetic flux through a conducting loop changes, a current appears (is induced) in the loop. This induced current creates an induced magnetic field. The direction of the induced current is such that the induced magnetic field it creates attempts to keep the magnetic flux unchanged.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">60</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="62" lf="62">In the examples given, we will first find the direction of the induced magnetic field. Then we will ask what direction of induced current is consistent with this induced magnetic field.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">62</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2><a name="-b-changing" class="anchor hanchor" href="#-b-changing"><span class="hnumber">2.1</span>&nbsp;<span class="htext"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> Changing</span></a></h2>
+        <h1 lo="64" lf="64"><a name="a-method-of-solution" number="2" lo="64" raw="# A Method of Solution" class="anchor hanchor" href="#a-method-of-solution"><span class="hnumber">2</span>&nbsp;<span class="htext">A Method of Solution</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">64</span></div>
       </div>
       <div class="block">
-        <p>When the magnetic field magnitude changes and is out of the page, draw the loop with a few dots representing a magnetic field pointing out of the page. Next, draw the loop after an increase or decrease in the magnetic field magnitude. If the magnitude increases, draw more dots. If the magnitude decreases, draw fewer dots. Then, ask what direction of induced field will be needed to give the same number of dots. Finally ask what direction of current in the loop will create this induced field. (If the magnetic field is into the page, use crosses instead of dots in this perscription.)</p>
+        <p padlength="0" lo="66" lf="66">For cases 1. and 2., it is useful to draw the system before and after the change in magnetic field magnitude or area. </p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">66</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="68" lf="68"><a name="b-changing" number="2.1" lo="68" raw="## $B$ Changing" class="anchor hanchor" href="#b-changing"><span class="hnumber">2.1</span>&nbsp;<span class="htext"><span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> Changing</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">68</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <p padlength="0" lo="70" lf="70">When the magnetic field magnitude changes and is out of the page, draw the loop with a few dots representing a magnetic field pointing out of the page. Next, draw the loop after an increase or decrease in the magnetic field magnitude. If the magnitude increases, draw more dots. If the magnitude decreases, draw fewer dots. Then, ask what direction of induced field will be needed to give the same number of dots. Finally ask what direction of current in the loop will create this induced field. (If the magnetic field is into the page, use crosses instead of dots in this perscription.)</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">70</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="72" lf="72">
           <img src="figures/Field_out_of_Page_Field_Increasing.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">72</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2><a name="-a-changing" class="anchor hanchor" href="#-a-changing"><span class="hnumber">2.2</span>&nbsp;<span class="htext"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> Changing</span></a></h2>
+        <h2 lo="74" lf="74"><a name="a-changing" number="2.2" lo="74" raw="## $A$ Changing" class="anchor hanchor" href="#a-changing"><span class="hnumber">2.2</span>&nbsp;<span class="htext"><span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> Changing</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">74</span></div>
       </div>
       <div class="block">
-        <p>If the magnetic field is constant and out of the page and the area of the loop changes, draw the loop with a uniformly spaced dots inside and outside of it. Next draw the loop after the area has changed. If there are more dots in the area, an induced field, represented with crosses, will into the page will be needed to “kill off” the extra dots. If there are fewer dots in the area, an induced field out of the page will be needed to replace the lost dots. (If the magnetic field is constant and into the page, swap “dots” and “crosses” in this perscription.)</p>
+        <p padlength="0" lo="76" lf="76">If the magnetic field is constant and out of the page and the area of the loop changes, draw the loop with a uniformly spaced dots inside and outside of it. Next draw the loop after the area has changed. If there are more dots in the area, an induced field, represented with crosses, will into the page will be needed to “kill off” the extra dots. If there are fewer dots in the area, an induced field out of the page will be needed to replace the lost dots. (If the magnetic field is constant and into the page, swap “dots” and “crosses” in this perscription.)</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">76</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="78" lf="78">
           <img src="figures/Field_out_of_Page_Area_Increasing.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">78</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 class=""><a name="examples" class="anchor hanchor" href="#examples"><span class="hnumber">3</span>&nbsp;<span class="htext">Examples</span></a></h1>
+        <h1 lo="80" lf="80"><a name="examples" number="3" lo="80" raw="# Examples" class="anchor hanchor" href="#examples"><span class="hnumber">3</span>&nbsp;<span class="htext">Examples</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">80</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class=""><a name="changing-b" class="anchor hanchor" href="#changing-b"><span class="hnumber">3.1</span>&nbsp;<span class="htext">Changing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span></a></h2>
+        <h2 lo="82" lf="82"><a name="changing-b" number="3.1" lo="82" raw="## Changing $B$" class="anchor hanchor" href="#changing-b"><span class="hnumber">3.1</span>&nbsp;<span class="htext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">82</span></div>
       </div>
       <div class="block">
-        <p class="">A spatially uniform external magnetic field points out of the page and its magnitude is increasing in time.</p>
+        <p padlength="0" lo="84" lf="84">A spatially uniform external magnetic field points out of the page and its magnitude is increasing in time.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">84</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="86" lf="86">
           <img src="figures/Single_Loop_I.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">86</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="88" lf="90" class="loose">
+          <li markerlength="3" padlength="0" lo="88" lf="89">
             <div class="block">
-              <p>What is the direction of an induced magnetic field in the gray region that will counteract the change in the magnetic flux?</p>
+              <p padlength="0" lo="88" lf="89">What is the direction of an induced magnetic field in the gray region that will counteract the change in the magnetic flux?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">88-89</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="90" lf="92">
+          <li markerlength="3" padlength="0" lo="90" lf="92">
             <div class="block">
-              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <p padlength="0" lo="90" lf="91">What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">90-91</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">88-90</span></div>
       </div>
       <div class="block">
-        <p><strong markerlength="4"> Answer</strong>:</p>
+        <p padlength="0" lo="92" lf="92"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>:</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">92</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="94" lf="96" class="loose">
+          <li markerlength="3" padlength="0" lo="94" lf="95">
             <div class="block">
-              <p>Into the page.</p>
+              <p padlength="0" lo="94" lf="95">Into the page.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">94-95</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="96" lf="96">
+          <li markerlength="3" padlength="0" lo="96" lf="98">
             <div class="block">
-              <p>By the right–hand rule, a clockwise current creates a magnetic field directed into the page.</p>
+              <p padlength="0" lo="96" lf="97">By the right–hand rule, a clockwise current creates a magnetic field directed into the page.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">96-97</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">94-96</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2><a name="changing-area" class="anchor hanchor" href="#changing-area"><span class="hnumber">3.2</span>&nbsp;<span class="htext">Changing Area</span></a></h2>
+        <h2 lo="98" lf="98"><a name="changing-area" number="3.2" lo="98" raw="## Changing Area" class="anchor hanchor" href="#changing-area"><span class="hnumber">3.2</span>&nbsp;<span class="htext">Changing Area</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">98</span></div>
       </div>
       <div class="block">
-        <p>A spatially uniform external magnetic field points out of the page and it is not changing with time.</p>
+        <p padlength="0" lo="100" lf="100">A spatially uniform external magnetic field points out of the page and it is not changing with time.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">100</span></div>
       </div>
       <div class="block">
-        <p>The conducting loop is heated causing the gray cross–sectional area to increase with time.</p>
+        <p padlength="0" lo="102" lf="102">The conducting loop is heated causing the gray cross–sectional area to increase with time.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">102</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="104" lf="104">
           <img src="figures/Single_Loop_I.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">104</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="106" lf="108" class="loose">
+          <li markerlength="3" padlength="0" lo="106" lf="107">
             <div class="block">
-              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+              <p padlength="0" lo="106" lf="107">What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">106-107</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="108" lf="110">
+          <li markerlength="3" padlength="0" lo="108" lf="110">
             <div class="block">
-              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <p padlength="0" lo="108" lf="109">What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">108-109</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">106-108</span></div>
       </div>
       <div class="block">
-        <p><strong markerlength="4"> Answer</strong>:</p>
+        <p padlength="0" lo="110" lf="110"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>:</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">110</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="112" lf="114" class="loose">
+          <li markerlength="3" padlength="0" lo="112" lf="113">
             <div class="block">
-              <p>Into the page.</p>
+              <p padlength="0" lo="112" lf="113">Into the page.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">112-113</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="114" lf="116">
+          <li markerlength="3" padlength="0" lo="114" lf="116">
             <div class="block">
-              <p>A clockwise current creates a magnetic field into the page.</p>
+              <p padlength="0" lo="114" lf="115">A clockwise current creates a magnetic field into the page.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">114-115</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">112-114</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 class=""><a name="problems" class="anchor hanchor" href="#problems"><span class="hnumber">4</span>&nbsp;<span class="htext">Problems</span></a></h1>
+        <h1 lo="116" lf="116"><a name="problems" number="4" lo="116" raw="# Problems" class="anchor hanchor" href="#problems"><span class="hnumber">4</span>&nbsp;<span class="htext">Problems</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">116</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class=""><a name="changing-b---i" class="anchor hanchor" href="#changing-b---i"><span class="hnumber">4.1</span>&nbsp;<span class="htext">Changing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> - I</span></a></h2>
+        <h2 lo="118" lf="118"><a name="changing-b-i" number="4.1" lo="118" raw="## Changing $B$ - I" class="anchor hanchor" href="#changing-b-i"><span class="hnumber">4.1</span>&nbsp;<span class="htext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> - I</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">118</span></div>
       </div>
       <div class="block">
-        <p>A spatially uniform external magnetic field points into of the page and its magnitude is decreasing in time.</p>
+        <p padlength="0" lo="120" lf="120">A spatially uniform external magnetic field points into of the page and its magnitude is decreasing in time.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">120</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="122" lf="122">
           <img src="figures/Single_Loop_II.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">122</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="124" lf="136" class="loose">
+          <li markerlength="3" padlength="0" lo="124" lf="130">
             <div class="block">
-              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+              <p padlength="0" lo="124" lf="125">What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">124-125</span></div>
             </div>
             <div class="block">
-              <div class="inline-html">
+              <div class="inline-html" lo="126" lf="128">
                 <div class="solutionstrue">
                   <div class="block">
-                    <p><strong markerlength="4"> Answer</strong>: Into the page.</p>
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Into the page.</p>
                   </div>
                 </div>
                 <div class="solutionsfalse">
                 </div>
               </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">126-128</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="131" lf="138">
+          <li markerlength="3" padlength="0" lo="131" lf="138">
             <div class="block">
-              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <p padlength="0" lo="131" lf="132">What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">131-132</span></div>
             </div>
             <div class="block">
-              <div class="inline-html">
+              <div class="inline-html" lo="133" lf="136">
                 <div class="solutionstrue">
                   <div class="block">
-                    <p><strong markerlength="4"> Answer</strong>: Clockwise.</p>
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Clockwise.</p>
                   </div>
                 </div>
                 <div class="solutionsfalse">
                 </div>
               </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">133-136</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">124-136</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class=""><a name="changing-b---ii" class="anchor hanchor" href="#changing-b---ii"><span class="hnumber">4.2</span>&nbsp;<span class="htext">Changing <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> - II</span></a></h2>
+        <h2 lo="138" lf="138"><a name="changing-b-ii" number="4.2" lo="138" raw="## Changing $B$ - II" class="anchor hanchor" href="#changing-b-ii"><span class="hnumber">4.2</span>&nbsp;<span class="htext">Changing <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> - II</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">138</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="140" lf="140">
           <img src="figures/Ring_and_Solenoid.png">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">140</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="142" lf="172" class="loose">
+          <li markerlength="3" padlength="0" lo="142" lf="164">
             <div class="block">
-              <p>A conducting wire loop is placed in the magnetic field of a solenoid as shown. Determine if an induced magnetic field will appear and if so, its direction.</p>
+              <p padlength="0" lo="142" lf="143">A conducting wire loop is placed in the magnetic field of a solenoid as shown. Determine if an induced magnetic field will appear and if so, its direction.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">142-143</span></div>
             </div>
             <div class="block">
-              <ol class="loose">
-                <li markerlength="3">
+              <ol lo="144" lf="163" class="loose">
+                <li markerlength="3" padlength="0" lo="144" lf="150">
                   <div class="block">
-                    <p>The loop is stationary.</p>
+                    <p padlength="0" lo="144" lf="145">The loop is stationary.</p>
+                    <div class="block-info" style="display: none;"><span class="line-numbers">144-145</span></div>
                   </div>
                   <div class="block">
-                    <div class="inline-html">
+                    <div class="inline-html" lo="146" lf="148">
                       <div class="solutionstrue">
                         <div class="block">
-                          <p><strong markerlength="4"> Answer</strong>: No flux change, so no induced magnetic field.</p>
+                          <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: No flux change, so no induced magnetic field.</p>
                         </div>
                       </div>
                       <div class="solutionsfalse">
                       </div>
                     </div>
+                    <div class="block-info" style="display: none;"><span class="line-numbers">146-148</span></div>
                   </div>
                 </li>
-                <li markerlength="3" lo="151" lf="157">
+                <li markerlength="3" padlength="0" lo="151" lf="157">
                   <div class="block">
-                    <p>The loop is moving to the right.</p>
+                    <p padlength="0" lo="151" lf="152">The loop is moving to the right.</p>
+                    <div class="block-info" style="display: none;"><span class="line-numbers">151-152</span></div>
                   </div>
                   <div class="block">
-                    <div class="inline-html">
+                    <div class="inline-html" lo="153" lf="155">
                       <div class="solutionstrue">
                         <div class="block">
-                          <p><strong markerlength="4"> Answer</strong>: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). To keep the flux the same, an induced magnetic field pointing to the left will appear.</p>
+                          <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). To keep the flux the same, an induced magnetic field pointing to the left will appear.</p>
                         </div>
                       </div>
                       <div class="solutionsfalse">
                       </div>
                     </div>
+                    <div class="block-info" style="display: none;"><span class="line-numbers">153-155</span></div>
                   </div>
                 </li>
-                <li markerlength="3" lo="158" lf="164">
+                <li markerlength="3" padlength="0" lo="158" lf="164">
                   <div class="block">
-                    <p>The loop is moving to the left.</p>
+                    <p padlength="0" lo="158" lf="159">The loop is moving to the left.</p>
+                    <div class="block-info" style="display: none;"><span class="line-numbers">158-159</span></div>
                   </div>
                   <div class="block">
-                    <div class="inline-html">
+                    <div class="inline-html" lo="160" lf="162">
                       <div class="solutionstrue">
                         <div class="block">
-                          <p><strong markerlength="4"> Answer</strong>: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). To keep the flux the same, an induced magnetic field pointing to the right will appear in the cross section of the loop.</p>
+                          <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). To keep the flux the same, an induced magnetic field pointing to the right will appear in the cross section of the loop.</p>
                         </div>
                       </div>
                       <div class="solutionsfalse">
                       </div>
                     </div>
+                    <div class="block-info" style="display: none;"><span class="line-numbers">160-162</span></div>
                   </div>
                 </li>
               </ol>
+              <div class="block-info" style="display: none;"><span class="line-numbers">144-163</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="165" lf="172">
+          <li markerlength="3" padlength="0" lo="165" lf="174">
             <div class="block">
-              <p>For each case in your answer to question 1. where there is an induced magnetic field, find the direction of the current in the loop.</p>
+              <p padlength="0" lo="165" lf="166">For each case in your answer to question 1. where there is an induced magnetic field, find the direction of the current in the loop.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">165-166</span></div>
             </div>
             <div class="block">
-              <div class="inline-html">
+              <div class="inline-html" lo="167" lf="172">
                 <div class="solutionstrue">
                   <div class="block">
-                    <p><strong markerlength="4"> Answer</strong>: Moving to the right: counter–clockwise when viewed from a point to the the left of the loop.</p>
+                    <p padlength="3"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Moving to the right: counter–clockwise when viewed from a point to the the left of the loop.</p>
                   </div>
                   <div class="block">
-                    <p>Moving to the left: clockwise when viewed from a point to the the left of the loop.</p>
+                    <p padlength="3">Moving to the left: clockwise when viewed from a point to the the left of the loop.</p>
                   </div>
                 </div>
                 <div class="solutionsfalse">
                 </div>
               </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">167-172</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">142-172</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class=""><a name="changing-area-i" class="anchor hanchor" href="#changing-area-i"><span class="hnumber">4.3</span>&nbsp;<span class="htext">Changing Area I</span></a></h2>
+        <h2 lo="174" lf="174"><a name="changing-area-i" number="4.3" lo="174" raw="## Changing Area I" class="anchor hanchor" href="#changing-area-i"><span class="hnumber">4.3</span>&nbsp;<span class="htext">Changing Area I</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">174</span></div>
       </div>
       <div class="block">
-        <p>An external magnetic field points into the page and it is not changing with time.</p>
+        <p padlength="0" lo="176" lf="176">An external magnetic field points into the page and it is not changing with time.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">176</span></div>
       </div>
       <div class="block">
-        <p>The conducting loop is cooled causing the gray cross–sectional area to decrease with time.</p>
+        <p padlength="0" lo="178" lf="178">The conducting loop is cooled causing the gray cross–sectional area to decrease with time.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">178</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="181" lf="181">
           <img src="figures/Single_Loop_II.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">181</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="183" lf="193" class="loose">
+          <li markerlength="3" padlength="0" lo="183" lf="184">
             <div class="block">
-              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux through the loop?</p>
+              <p padlength="0" lo="183" lf="184">What direction would an induced magnetic field have to be to oppose the change in the magnetic flux through the loop?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">183-184</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="185" lf="193">
+          <li markerlength="3" padlength="0" lo="185" lf="195">
             <div class="block">
-              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <p padlength="0" lo="185" lf="186">What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">185-186</span></div>
             </div>
             <div class="block">
-              <div class="inline-html">
+              <div class="inline-html" lo="187" lf="193">
                 <div class="solutionstrue">
                   <div class="block">
-                    <p><strong markerlength="4"> Answer</strong>:</p>
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>:</p>
                   </div>
                   <div class="block">
                     <ol class="loose">
-                      <li markerlength="3">
+                      <li markerlength="3" padlength="0">
                         <div class="block">
-                          <p>The induced magnetic field will be into the page.</p>
+                          <p padlength="0">The induced magnetic field will be into the page.</p>
                         </div>
                       </li>
-                      <li markerlength="3" lo="191" lf="192">
+                      <li markerlength="3" padlength="0" lo="191" lf="192">
                         <div class="block">
-                          <p>By the right–hand rule, a clockwise current creates a magnetic field directed into the page.</p>
+                          <p padlength="0">By the right–hand rule, a clockwise current creates a magnetic field directed into the page.</p>
                         </div>
                       </li>
                     </ol>
@@ -1063,80 +1207,94 @@ c-16-25.333-24-45-24-59z"></path>
                 <div class="solutionsfalse">
                 </div>
               </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">187-193</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">183-193</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class=""><a name="changing-area-ii" class="anchor hanchor" href="#changing-area-ii"><span class="hnumber">4.4</span>&nbsp;<span class="htext">Changing Area II</span></a></h2>
+        <h2 lo="195" lf="195"><a name="changing-area-ii" number="4.4" lo="195" raw="## Changing Area II" class="anchor hanchor" href="#changing-area-ii"><span class="hnumber">4.4</span>&nbsp;<span class="htext">Changing Area II</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">195</span></div>
       </div>
       <div class="block">
-        <p class="">A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform. (This is known as a “slidewire generator”).</p>
+        <p padlength="0" lo="197" lf="197">A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform. (This is known as a “slidewire generator”).</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">197</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="199" lf="199">
           <img src="figures/Slide_Wire.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">199</span></div>
       </div>
       <div class="block">
-        <ol class="loose">
-          <li markerlength="3">
+        <ol lo="201" lf="213" class="loose">
+          <li markerlength="3" padlength="0" lo="201" lf="207">
             <div class="block">
-              <p>What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+              <p padlength="0" lo="201" lf="202">What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">201-202</span></div>
             </div>
             <div class="block">
-              <div class="inline-html">
+              <div class="inline-html" lo="203" lf="205">
                 <div class="solutionstrue">
                   <div class="block">
-                    <p><strong markerlength="4"> Answer</strong>: Into the page.</p>
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Into the page.</p>
                   </div>
                 </div>
                 <div class="solutionsfalse">
                 </div>
               </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">203-205</span></div>
             </div>
           </li>
-          <li markerlength="3" lo="208" lf="215">
+          <li markerlength="3" padlength="0" lo="208" lf="215">
             <div class="block">
-              <p>What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <p padlength="0" lo="208" lf="209">What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">208-209</span></div>
             </div>
             <div class="block">
-              <div class="inline-html">
+              <div class="inline-html" lo="210" lf="213">
                 <div class="solutionstrue">
                   <div class="block">
-                    <p><strong markerlength="4"> Answer</strong>: Clockwise.</p>
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Clockwise.</p>
                   </div>
                 </div>
                 <div class="solutionsfalse">
                 </div>
               </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">210-213</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">201-213</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 class=""><a name="loop-in-wire-field" class="anchor hanchor" href="#loop-in-wire-field"><span class="hnumber">4.5</span>&nbsp;<span class="htext">Loop in Wire Field</span></a></h2>
+        <h2 lo="215" lf="215"><a name="loop-in-wire-field" number="4.5" lo="215" raw="## Loop in Wire Field" class="anchor hanchor" href="#loop-in-wire-field"><span class="hnumber">4.5</span>&nbsp;<span class="htext">Loop in Wire Field</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">215</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="217" lf="217">
           <img src="figures/Loops_in_Wire_Field.svg">
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">217</span></div>
       </div>
       <div class="block">
-        <p>In the figure above, there is a current <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> running through a long straight wire as shown.</p>
+        <p padlength="0" lo="219" lf="219">In the figure above, there is a current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> running through a long straight wire as shown.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">219</span></div>
       </div>
       <div class="block">
-        <p class="">For conducting loops A–D that are moving with a velocity in the direction shown, determine if the current flow in each the loop is zero, clockwise, or counterclockwise.</p>
+        <p padlength="0" lo="221" lf="221">For conducting loops A–D that are moving with a velocity in the direction shown, determine if the current flow in each the loop is zero, clockwise, or counterclockwise.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">221</span></div>
       </div>
       <div class="block">
-        <div class="inline-html">
+        <div class="inline-html" lo="223" lf="234">
           <div class="solutionstrue">
             <div class="block">
-              <p><strong markerlength="4"> Answer</strong>: Above the long straight wire, the field is out of the page. Below, it is into the page (See section 28.3 of Textbook). The magnitude of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+              <p padlength="3"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Above the long straight wire, the field is out of the page. Below, it is into the page (See section 28.3 of Textbook). The magnitude of <span len="11" raw="_\bfvec{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">B</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                       <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -1147,58 +1305,25 @@ c-16-25.333-24-45-24-59z"></path>
                                     </svg></span></span></span></span></span></span></span></span></span></span> is larger near the wire.</p>
             </div>
             <div class="block">
-              <p>A. Induced field is into page. Current is clockwise.</p>
+              <p padlength="3">A. Induced field is into page. Current is clockwise.</p>
             </div>
             <div class="block">
-              <p>B. No current.</p>
+              <p padlength="3">B. No current.</p>
             </div>
             <div class="block">
-              <p>C. No current.</p>
+              <p padlength="3">C. No current.</p>
             </div>
             <div class="block">
-              <p>D. Induced field is into page. Current is clockwise.</p>
+              <p padlength="3">D. Induced field is into page. Current is clockwise.</p>
             </div>
           </div>
           <div class="solutionsfalse">
           </div>
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">223-234</span></div>
       </div>
     </div>
   </div>
-  <script>
-    function tocClickListen() {
-      // No jQuery b/c also used in stand-alone HTML.
-      let hs = document.querySelectorAll('#toc > ol ol');
-      let el, ns;
-      for (let i = 0; i < hs.length; i++) {
-        if (hs[i].previousElementSibling) {
-          el = hs[i].previousElementSibling.firstElementChild;
-          if (el.length == 0) {
-            continue;
-          }
-          el.addEventListener('click', event => {
-            ns = event.target.parentNode.nextElementSibling;
-            if (!ns) return;
-            if (ns.style.display === 'none') {
-    ns.style.display = 'block';
-            }
-            else {
-    ns.style.display = 'none';
-            }
-          });
-        }
-      }
-    }
-    if (
-        document.readyState === "complete" ||
-        (document.readyState !== "loading" && 
-          !document.documentElement.doScroll)
-    ) {
-      tocClickListen();
-    } else {
-      document.addEventListener("DOMContentLoaded", tocClickListen);
-    }
-  </script>
 </body>
 
 </html>

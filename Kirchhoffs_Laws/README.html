@@ -40,8 +40,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -290,6 +290,11 @@
       padding-left: 0.5em;
     }
 
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -376,10 +381,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -389,6 +390,16 @@
     .katex-display.fleqn>.katex {
       padding-left: 0em;
       margin: 0em;
+    }
+
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
     }
 
     .page-break {
@@ -541,7 +552,7 @@
 </head>
 
 <body class="body">
-  <div id="toc" style="display: block; min-width: 5em;">
+  <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
         <a href="#2022-fall" raw="# 2022 Fall" lo="1">
@@ -570,11 +581,11 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="5" lf="5" class="highlighted"><a name="2023-spring" number="2" lo="5" raw="# 2023 Spring" class="anchor hanchor active" href="#2023-spring"><span class="hnumber">2</span>&nbsp;<span class="htext">2023 Spring</span></a></h1>
+        <h1 lo="5" lf="5" class="highlighted"><a name="2023-spring" number="2" lo="5" raw="# 2023 Spring" class="anchor hanchor" href="#2023-spring"><span class="hnumber">2</span>&nbsp;<span class="htext">2023 Spring</span></a></h1>
         <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="7" lf="7" class="">With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).</p>
+        <p padlength="0" lo="7" lf="7" class="active">With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).</p>
         <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
       </div>
     </div>

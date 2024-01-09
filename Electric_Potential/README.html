@@ -41,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -291,6 +291,11 @@
       padding-left: 0.5em;
     }
 
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -364,14 +369,6 @@
       border-radius: 0.5em;
     }
 
-    .solutionsfalse {
-      display: none;
-    }
-
-    .solutionstrue {
-      display: block;
-    }
-
     .inline {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -385,10 +382,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -400,6 +393,31 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
     @media print {
       * {
         overflow: visible !important;
@@ -407,11 +425,15 @@
 
       @page {
         size: auto;
-        margin: 0.75in;
+        margin: 0.5in 0.75in 0.75in;
       }
 
       .katex .hide-tail {
         overflow: hidden !important;
+      }
+
+      .page-break {
+        border-top: none;
       }
 
       .body {
@@ -496,61 +518,8 @@
       }
     }
   </style>
-</head>
-
-<body class="body">
-  <div id="toc" style="min-width: 5em;">
-    <ol>
-      <li>
-        <a href="#fall-2022" raw="# Fall, 2022" lo="1" class="">
-          <span class="toctext">Fall, 2022</span>
-        </a>
-      </li>
-    </ol>
-  </div>
-  <div id="display">
-    <div class="section">
-    </div>
-    <div class="section">
-      <div class="block">
-        <h1 class=""><a name="fall-2022" class="anchor hanchor" href="#fall-2022"><span class="hnumber">1</span>&nbsp;<span class="htext">Fall, 2022</span></a></h1>
-      </div>
-      <div class="block">
-        <ol class="compact">
-          <li markerlength="3">
-            <div class="block">
-              <p>The parts on “the work you do” should be removed. It is difficult to explain how you do negative work, and one runs into many complications (see references).</p>
-            </div>
-          </li>
-          <li markerlength="3" lo="4" lf="6">
-            <div class="block">
-              <p>In 1.1, students find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span></span></span></span></span></span></span> and then find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> using <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span>. In 2.1, they are given a formula for <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> and then use it to find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span></span></span></span></span></span></span>. Can we be consistent? Perhaps a section on the integration for both cases?</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p class=""><strong>References</strong></p>
-      </div>
-      <div class="block">
-        <ul class="compact">
-          <li markerlength="2">
-            <div class="block">
-              <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392548/pdf/jphysiol01441-0129.pdf">THE PHYSIOLOGICAL COST OF NEGATIVE WORK</a></p>
-            </div>
-          </li>
-          <li markerlength="2" lo="9" lf="9">
-            <div class="block">
-              <p><a href="https://drive.google.com/drive/folders/1GI5c6CiWc6HCOUs6Rr0-gIHd38D3fbBJ">https://drive.google.com/drive/folders/1GI5c6CiWc6HCOUs6Rr0-gIHd38D3fbBJ</a></p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
   <script>
     function tocClickListen() {
-      // No jQuery b/c also used in stand-alone HTML.
       let hs = document.querySelectorAll('#toc > ol ol');
       let el, ns;
       for (let i = 0; i < hs.length; i++) {
@@ -564,10 +533,9 @@
             if (!ns) return;
             if (ns.style.display === 'none') {
     ns.style.display = 'block';
-            }
-            else {
-    ns.style.display = 'none';
-            }
+            } else
+            {
+    ns.style.display = 'none';}
           });
         }
       }
@@ -582,6 +550,66 @@
       document.addEventListener("DOMContentLoaded", tocClickListen);
     }
   </script>
+</head>
+
+<body class="body">
+  <div id="toc" style="min-width: 5em;">
+    <ol>
+      <li>
+        <a href="#fall-2022" raw="# Fall, 2022" lo="1">
+          <span class="toctext">Fall, 2022</span>
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div id="display">
+    <div class="section">
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="1" lf="1"><a name="fall-2022" number="1" lo="1" raw="# Fall, 2022" class="anchor hanchor" href="#fall-2022"><span class="hnumber">1</span>&nbsp;<span class="htext">Fall, 2022</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
+      </div>
+      <div class="block">
+        <ol lo="3" lf="4" class="compact">
+          <li markerlength="3" padlength="0" lo="3" lf="3">
+            <div class="block">
+              <p padlength="0" lo="3" lf="3">The parts on “the work you do” should be removed. It is difficult to explain how you do negative work, and one runs into many complications (see references).</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="4" lf="6">
+            <div class="block">
+              <p padlength="0" lo="4" lf="4">In 1.1, students find <span len="5" raw="_W^E_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span></span></span></span></span></span></span> and then find <span len="10" raw="_\Delta U_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> using <span len="15" raw="_W^E=-\Delta U_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span>. In 2.1, they are given a formula for <span len="3" raw="_U_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> and then use it to find <span len="5" raw="_W^E_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span></span></span></span></span></span></span>. Can we be consistent? Perhaps a section on the integration for both cases?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">4</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">3-4</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="6" lf="6"><strong type="md">References</strong></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">6</span></div>
+      </div>
+      <div class="block">
+        <ul lo="8" lf="9" class="compact">
+          <li markerlength="2" padlength="0" lo="8" lf="8">
+            <div class="block">
+              <p padlength="0" lo="8" lf="8"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392548/pdf/jphysiol01441-0129.pdf">THE PHYSIOLOGICAL COST OF NEGATIVE WORK</a></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">8</span></div>
+            </div>
+          </li>
+          <li markerlength="2" padlength="0" lo="9" lf="9">
+            <div class="block">
+              <p padlength="0" lo="9" lf="9"><a href="https://drive.google.com/drive/folders/1GI5c6CiWc6HCOUs6Rr0-gIHd38D3fbBJ">https://drive.google.com/drive/folders/1GI5c6CiWc6HCOUs6Rr0-gIHd38D3fbBJ</a></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+            </div>
+          </li>
+        </ul>
+        <div class="block-info" style="display: none;"><span class="line-numbers">8-9</span></div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
