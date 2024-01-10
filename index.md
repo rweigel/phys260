@@ -248,6 +248,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Gauss's Law
 
 * Activity -- Using Gauss's law to find the electric field for spherically symmetric continuous charge distributions.
+  * [Instructor notes](Gauss_Law/README.html)
   * Documents:
 | [pdf](Gauss_Law/Gauss_Law.pdf)
 | [pdf solns](Gauss_Law/Gauss_Law-solutions.pdf)

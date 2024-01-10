@@ -1,0 +1,1 @@
+[Physics Education Research Articles on Gauss's Law](https://drive.google.com/drive/folders/1Kf63Doxy0qghdGz7sd49w5GZ7zh5pQe_?usp=drive_link★★★★remove★★★★)
