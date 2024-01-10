@@ -4,11 +4,11 @@ Title: Sound Intensity Level
 
 # Introduction
 
-The intensity of a sound wave, $I$, is the average power rate per unit area of energy from a sound wave that passes through or into a surface,
+The intensity of a sound wave, $I$, is the average powerm $P$ per unit area from a sound wave that passes through or into a surface if area $A$,
 
 $$I = \frac{P}{A}$$
 
-$I$ has units of Power/Area, which has SI units of $\text{Watts}/\text{m}^2$. The intensity of various sources of sound is shown in the third column of the following table from Young and Freedman, 14th Edition. The second column is discussed in section 3 of this activity.
+$I$ has units of Power/Area, which has SI units of $(\text{Joules/s})/\text{m}^2=\text{Watts}/\text{m}^2$. The intensity of various sources of sound is shown in the third column of the following table from Young and Freedman, 14th Edition. The second column is discussed in section 3 of this activity.
 
 <img src="figures/Table16.2.png" width=50%/>
 
@@ -24,22 +24,22 @@ Because $I$ is proportional to $r^2$, if the disance from the source doubles, th
 
 Suppose a bird sitting on the top of a lamp post emits sound with a power of $1\text{ W}$; assume that the relationship $I = P/4\pi r^2$ applies.
 
-1. What is $I$ at a point $5\text{ m}$ away?
+1. What is $I$ at a point $1\text{ m}$ away?
 
    \ifsolutions
    **Answer**:
 
-   $$I = \frac{1\text{ W}}{4\pi (5\text{ m})^2} \simeq \frac{1}{314} \frac{\text{ W}\phantom{^2}}{\text{m}^2}$$
+   $$I = \frac{1\text{ W}}{4\pi (1\text{ m})^2} = \frac{1}{4\pi} \frac{\text{ W}\phantom{^2}}{\text{m}^2}$$
    \else
    \vspace{10em}
    \fi
 
-2. What is $I$ at a point $50\text{ m}$ away?
+2. What is $I$ at a point $10\text{ m}$ away?
 
    \ifsolutions
    **Answer**: If the distance increases by a factor of $10$, we expect $I$ to descrease a factor of $100$ (because $I$ is inversely proportional to area and area depends on the square of the distance). So
 
-   $$I = \frac{1}{3140} \frac{\text{ W}\phantom{^2}}{\text{m}^2}$$
+   $$I = \frac{1}{400\pi} \frac{\text{ W}\phantom{^2}}{\text{m}^2}$$
 
    \else
    \vspace{10em}
@@ -47,7 +47,7 @@ Suppose a bird sitting on the top of a lamp post emits sound with a power of $1\
 
 ----
 
-A siren is emitting sound at a constant intensity level; assume assume that the relationship $I = P/4\pi r^2$ applies.
+A siren is emitting sound at a constant intensity level; assume that the relationship $I = P/4\pi r^2$ applies.
 
 3. If you move three times farther away from the siren, by what ratio does the sound intensity change?
 
@@ -56,13 +56,11 @@ A siren is emitting sound at a constant intensity level; assume assume that the 
 
    Because intensity is proportional to $1/r^2$, moving 3 time farther away will decrease the intensity by a factor of $1/9$. This can be shown in more detail by noting that $I_1 = P_1/A_1$, $I_2=P_2/A_2$ and the power is constant, so $P_1=P_2$. Thus,
    
-   $$\frac{I_2}{I_1} = \frac{A_1}{A_1} = \frac{4\pi d_1^2}{4\pi d_2^2} =  \frac{d_1^2}{d_2^2}$$
+   $$\frac{I_2}{I_1} = \frac{P/A_2}{P/A_1} = \frac{4\pi d_1^2}{4\pi d_2^2} =  \frac{d_1^2}{d_2^2}$$
 
    If $I_1$ is your initial position at $d_1$, then $d_2 = 3d_1$ and
 
    $$\frac{I_2}{I_1} =  \frac{d_1^2}{d_2^2} = \frac{d_1^2}{(3d_1)^2} = \frac{1}{9}$$
-
-   So decreases by a factor of $9$.
 
    \else
    \vspace{10em}
@@ -82,7 +80,7 @@ A siren is emitting sound at a constant intensity level; assume assume that the 
 
 # Sound Intensity Level, $\beta$
 
-Because of the sound intensity values of human hearing span a very large range, from $0.0000000000001$ to $100$ $\text{Watts}/\text{m}^2$ (see the table in the introduction), we define an alternative measure of intensity called the sound intensity _level_, $\beta$. The equation that relates sound intensity level $I$, with sound intensity, $\beta$, is
+Because of the sound intensity values of human hearing span a very large range, from $0.0000000000001$ to $100$ $\text{W}/\text{m}^2$ (see the table in the introduction), we define an alternative measure of intensity called the sound intensity _level_, $\beta$. The equation that relates sound intensity level $I$, with sound intensity, $\beta$, is
 
 $$\beta = (10 \text{ dB})\log_{10}\left(\frac{I}{I_o}\right)$$
 
@@ -123,6 +121,8 @@ One advantage to using this formula is that its values span a much smaller range
 
 3. If you increase the sound intensity level of a speaker on a TV from $\beta_1$ to $\beta_2$ and $\beta_2-\beta_1=20\text{ dB}$, what is $I_2/I_1$?
 
+   \ifsolutions
+
    **Answer**: 
    
    $$20\text{ dB} = (10 \text{ dB})\left[\log_{10}\left(\frac{I_2}{I_1}\right)\right]$$
@@ -135,8 +135,7 @@ One advantage to using this formula is that its values span a much smaller range
 
    $$10^2 = \frac{I_2}{I_1}$$
 
-   This could also have been determined using the table in the introduction. The difference in $\beta$ for a whisper ($20\text{ dB}$) to $\beta$ for the threshold of hearing ($0\text{ dB}$) is $20\text{ dB}$. The ratio of $I$ for a whisper ($10^{-10}\text{ W}/\text{m}^2$) to $I$ for the threshold of hearing ($10^{-12}\text{ W}/\text{m}^2$) is $10^{-10}/10^{-12}=100$.
-   \ifsolutions
+   This could also have been determined using the table in the introduction. The difference in $\beta$ for a whisper ($20\text{ dB}$) to $\beta$ for the threshold of hearing ($0\text{ dB}$) is $20\text{ dB}$. The ratio of $I$ for a whisper ($10^{-10}\text{ W}/\text{m}^2$) to $I$ for the threshold of hearing ($10^{-12}\text{ W}/\text{m}^2$) is $10^{-10}/10^{-12}=10^2$.
    \else
    \vspace{6em}
    \fi
@@ -156,7 +155,7 @@ One advantage to using this formula is that its values span a much smaller range
 
    $$(70-95)\text{ dB} =  (10 \text{ dB})\log_{10}\left(\frac{I_2}{I_1}\right)$$
 
-   $$-2.5 = \left(\frac{I_2}{I_1}\right)$$
+   $$-2.5 = \log_{10}\left(\frac{I_2}{I_1}\right)$$
    
    $$10^{-2.5} = \frac{I_2}{I_1}$$
 
@@ -168,25 +167,37 @@ One advantage to using this formula is that its values span a much smaller range
 
 ----
 
-A siren is emitting sound at a constant intensity level
+A siren is emitting sound at a constant intensity level; assume that the relationship $I = P/4\pi r^2$ applies.
 
-5. If you move three times closer to the siren, what is the change in the sound intensity level?
+5. If you move three times farther away from the siren, what is the change in the sound intensity level?
 
    \ifsolutions
+   **Answer**: From problem 3.2,
+   
+   $$\beta_2-\beta_1 = (10 \text{ dB})\left[\log_{10}\left(\frac{I_2}{I_1}\right)\right]$$
+
+   If you three times closer, $I_2/I_1=1/9$, so
+
+   $$\beta_2-\beta_1 = (10 \text{ dB})\log_{10}(1/9) \simeq -9.5\text{ dB}$$
+   
    \else
    \vspace{8em}
    \fi
 
-6. If instead you moved four times closer to the siren,, what is the change in the sound intensity level ?
+6. If instead you moved four times closer to the siren, what is the change in the sound intensity level ?
 
    \ifsolutions
+   **Answer**:
+
+   $$\beta_2-\beta_1 = (10 \text{ dB})\log_{10}(16) \simeq 12\text{ dB}$$
+
    \else
    \vspace{8em}
    \fi
 
 ----
 
-7. You are trying to hear a juicy conversation, but from your distance of 15.0 m it sounds like only an average whisper of 20.0 dB. How close should you move to the chatterboxes for the sound level to be 60.0 dB? Show your work.
+7. You are trying to hear a juicy conversation, but from your distance of 15.0 m the sound intensity level is that of only an average whisper, $20.0 \text{ dB}$. How close should you move for the sound intensity level to the same as a quiet radio in your home? Show your work.
 
    \ifsolutions
    From the solution to problem 3.2,
@@ -197,6 +208,17 @@ A siren is emitting sound at a constant intensity level
    
    $$\frac{I_2}{I_1} = \frac{d_1^2}{d_2^2}$$
 
+   $$\beta_2-\beta_1 = (10 \text{ dB})\left[\log_{10}\left(\frac{d_1^2}{d_2^2}\right)\right]$$
+
+   From the table in the introduction the sound intensity level for a quiet radio in your home is $40.0\text{ dB}$. Let $\beta_2=40.0\text{ dB}$ be the level after you move to $d_2$.
+
+   $$(40-20)\text{ dB} = (10 \text{ dB})\left[\log_{10}\left(\frac{d_1^2}{d_2^2}\right)\right]$$
+
+   $$2 = \left[\log_{10}\left(\frac{d_1^2}{d_2^2}\right)\right]$$
+   
+   $$10^2 = \frac{d_1^2}{d_2^2}$$
+
+   $\ds10 = \frac{d_1}{d_2} \Rightarrow d_2 = d_1/10 = (15 \text{ m})/100 = 1.5\text{ m}$
    \else
    \vspace{8em}
    \fi
