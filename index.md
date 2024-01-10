@@ -31,6 +31,10 @@ If you have corrections, comments, or suggestions please [submit an issue](https
 
 The figures were created using [MathCha](https://www.mathcha.io/). To edit a figure using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
 
+# Resources
+
+* CU Boulder Science Education Initiative has  [resources related to Junior--level E&M](https://www.colorado.edu/sei/departments/physics/activities/courses/electricity-magnetism-i-course-materials).
+
 # Activities
 
 ## Logarithm Review
@@ -291,6 +295,13 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 |
 
 ## Current and Resistance
+
+* Activity - Using Ohm's law and definitions related to current
+  * Documents:
+| [pdf](Current_and_Resistance/Current_and_Resistance.pdf)
+| [pdf solns](Current_and_Resistance/Current_and_Resistance-solutions.pdf)
+| [html](Current_and_Resistance/Current_and_Resistance.html)
+| 
 
 ## Kirchhoff's Circuit Laws
 

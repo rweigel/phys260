@@ -1,0 +1,230 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\begin{document}
+
+\section{Introduction}
+
+\subsection{Definitions}
+
+Current is defined as the rate of change of charge, $Q$, per time. If you were able to count the number of charges passing a cross--section of a wire over $1\text{ s}$, the current would be $Q/t$. If the amount of time was small, say $\Delta t$, and your labeled your count as $\Delta Q$, then $I = {\Delta Q}/{\Delta t}$. In the limit that $\Delta t$ approaches zero, we have the definition 
+
+$$I = \frac{dQ}{dt}$$
+
+If $n$ is the number of charges with charge $q$ per volume and $v_d$ is the average velocity of the charges (called the ``drift velocity"), then
+
+$$I = nqv_dA$$
+
+where $A$ is the cross--sectional area of the wire.
+
+We also define a quantity called the current density, $J$, which is the current per unit cross--sectional area, $A$:
+
+$$J = \frac{I}{A}$$
+
+\subsection{Ohm's Law}
+
+If an electric field exists in a wire (by, for example, connected its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (resist the flow). The net result will be a flow of charges with a drift velocity. Experimentally, it has been shown that in many materials, the ratio of the electric field to current density is 
+
+$$\rho = \frac{E}{J}$$
+
+where the value of the constant $\rho$ depends on the material.
+
+Ohm's law is
+
+$$I = V/R$$
+
+which means a voltage $V$ applied to a wire will result in a current $I$, and this current depends on $R$.
+
+The resistance is larger the longer wire and smaller for a larger cross--section of wire. The result is
+
+$$R = \frac{\rho L}{A}$$
+
+\newpage
+
+\section{Problem I -- Definitions and Ohm's Law}
+
+A $9$ Volt battery is connected to a wire of length $10$ meters with circular cross section of radius of $0.01$ meters. The wire has a resistivity of $10^{-8}\Omega\cdot\text{m}$. The density of charge carriers is $10^{28}/\text{m}^3$. Assume Ohm's law applies.
+
+\begin{enumerate}
+
+  \item What is the resistance (with units) of the wire?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item How much charge (with units) flows past a cross section of the wire per second?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item What is the current (with units) in the wire?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item What is the current density (with units) that flows through the wire?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item What is the drift velocity of electrons in the wire? (The charge on an electron is $-1.6·10^{-19}\text{ C}$.)
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item Based on the description of how charged particles flow in a wire, explain why the resitance of a cylindrical wire is proportional to its length and inversely proportinal to the square of its radius.
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Problem II -- Definitions and Ohm's Law}
+
+A battery is connected to a wire of length $20$ meters with circular cross section and a radius of $0.01$ meters. The wire has a resistivity of $10^{-7}\Omega\cdot\text{m}$. The density of charge carriers is $10^{27}/\text{m}^3$. The current in the wire was measured and found to be $1$ Ampere. Assume Ohm's law applies.
+
+\begin{enumerate}
+
+  \item What is the resistance (with units) of the wire?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item How much charge (with units) flows past a cross section of the wire per second?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item What is the current (with units) in the wire?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item What is the current density (with units) that flows through the wire?
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+  \item What is the drift velocity of electrons in the wire? (The charge on an electron is $-1.6·10^{-19}\text{ C}$.)
+
+        \ifsolutions
+        \textbf{Answer}:
+        \else
+        \vskip 84pt
+        \fi
+
+\end{enumerate}
+
+\newpage
+
+\section{Problem III -- $I = nqv_dA$ derivation}
+
+Derive the relationship $I = nqv_dA$. Provide a diagram.
+
+\ifsolutions
+\textbf{Answer}: See textbook.
+\else
+
+\fi
+
+\end{document}
