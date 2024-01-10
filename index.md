@@ -87,14 +87,14 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Reading:  [Sections 1.7--1.8 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing★★★★remove★★★★)
   * Videos: [Vector Basics](https://www.youtube.com/watch?v=EwSHKuSxX_8&ab_channel=TheOrganicChemistryTutor)
 
-## Electric Charge
-
-* Activity -- There is no activity for this topic.
-* Background material:
-  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
-  * Reading: [Sections 21.1 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Sections 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
-  * [Video](https://www.youtube.com/watch?v=Opz_Grl_vQA&t=2s&ab_channel=BozemanScience) -- includes references to early experiements related to charged object.
-  * Overview and History: https://physics.info/charge/
+%## Electric Charge
+%
+%* Activity -- There is no activity for this topic.
+%* Background material:
+%  * [PowerPoint](https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU)
+%  * Reading: [Sections 21.1 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link★★★★remove★★★★); see also [Sections 18.1 at openstax Physics](https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge)
+%  * [Video](https://www.youtube.com/watch?v=Opz_Grl_vQA&t=2s&ab_channel=BozemanScience) -- includes references to early experiements related to charged object.
+%  * Overview and History: https://physics.info/charge/
 
 ## Electric Force Between Point Charges (Coulomb's Law)
 
