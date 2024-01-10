@@ -302,6 +302,11 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [pdf solns](Current_and_Resistance/Current_and_Resistance-solutions.pdf)
 | [html](Current_and_Resistance/Current_and_Resistance.html)
 | 
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Current_and_Resistance)
+| [Markdown](Current_and_Resistance/Current_and_Resistance.md)
+|
 
 ## Kirchhoff's Circuit Laws
 
