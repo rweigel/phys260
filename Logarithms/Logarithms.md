@@ -10,9 +10,7 @@ In mathematical notation,
 
 $\log_{10}(10^x) = x$
 
-For example,
-
-$\log_{10}(10^{-5}) = -5$ and $\log_{10}(10^7) = 7$
+For example, $\log_{10}(10^{-5}) = -5$ and $\log_{10}(10^7) = 7$
 
 (To take the base 10 logarithm of a number that is not exactly a power of $10$, use a calculator.)
 
@@ -47,7 +45,7 @@ Several identities follow as a result:
 1. What is $\log_{10}(0.000000001)$?
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\log_{10}(0.000000001)=\log_{10}(10^{-9})=-9$
    \else
    \vspace{2em}
    \fi
@@ -55,32 +53,32 @@ Several identities follow as a result:
 2. What is $\log_{10}(10,000)$?
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\log_{10}(10,000)=\log_{10}(10^{4})=4$
    \else
    \vspace{2em}
    \fi
 
-
-3. What is $\log_{10}(10,000)+\log_{10}(0.000000001)$?
+3. $\log_{10}(10,000)+\log_{10}(0.000000001)=\log_{10}(x)$. Find $x$.
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\log_{10}(10^{4}) + \log_{10}(10^{-9}) = \log_{10}(10^{4}\cdot 10^{-9}) = \log_{10}(10^{-5})\Rightarrow x = 10^{-9}$
+
    \else
    \vspace{2em}
    \fi
 
-3. What is $\log_{10}(10,000)-\log_{10}(0.000000001)$?
+3.  $\log_{10}(10,000)-\log_{10}(0.000000001)=\log_{10}(x)$. Find $x$.
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\log_{10}(10^{4}) - \log_{10}(10^{-9}) = \log_{10}(10^{4}/10^{-9}) = \log_{10}(10^{13})\Rightarrow x = 10^{13}$
    \else
    \vspace{2em}
    \fi
 
-5. If $x = x_o\log_{10}(y/y_o)$, solve for $y$ in terms of $x$.
+5. If $x = x_o\log_{10}(y/y_o)$, solve for $y$.
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $x/x_o = \log_{10}(y/y_o)$; $10^{x/x_o} = 10^{\log_{10}(y/y_o)}=y/y_o \Rightarrow y = y_o10^{x/x_o}$
    \else
    \vspace{2em}
    \fi
@@ -93,13 +91,11 @@ The base $e$ logarithm reduces numbers raised by a power of $e$ to the power the
 
 "$\ln$" represents the "natural logarithm". The term "natural" is used because the exponential $e$ appears in many natural problems, for example, some populations grow in proportion to $e^{t/\tau}$, where the constant $\tau$ is a growth rate.
 
-In mathematical notation,
-
-$\ln(e^x) = x$; for example $\ln(e^{-5}) = -5$ and $\ln(e^7) = 7$
+In mathematical notation, $\ln(e^x) = x$; for example $\ln(e^{-5}) = -5$ and $\ln(e^7) = 7$
 
 Several identities follow as a result:
 
-1. If you raise a base $e$ logged number by $e$, you get back the number that was logged.
+1. If you raise a base-$e$ logged number by $e$, you get back the number that was logged.
 
    $e^{\ln(x)} = x$
 
@@ -117,7 +113,7 @@ Several identities follow as a result:
 1. What is $\ln(e^3)$?
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $3$
    \else
    \vspace{2em}
    \fi
@@ -125,23 +121,23 @@ Several identities follow as a result:
 2. What is $\ln(1/e^3)$?
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $-3$
    \else
    \vspace{2em}
    \fi
 
-3. What is $\ln(e^{-4})+\ln(e^{3})$?
+3. $\ln(e^{-4})+\ln(e^{3}) = \ln(x)$. Find $x$
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\ln(e^{-4})+\ln(e^{3})=\ln(e^{-4}\cdot e^{3})=\ln(e^{-1})=-1$
    \else
    \vspace{2em}
    \fi
 
-4. What is $\ln(e^3)-\ln(e^{-2})$?
+4. $\ln(e^{-4})-\ln(e^{3}) = \ln(x)$. Find $x$.
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\ln(e^{-4})-\ln(e^{3})=\ln(e^{-4}/e^{3})=\ln(e^{-7})=-7$
    \else
    \vspace{2em}
    \fi
@@ -149,7 +145,7 @@ Several identities follow as a result:
 5. If $x = x_o\ln(y/y_o)$, solve for $y$ in terms of $x$.
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $x/x_o = \ln(y/y_o)$; $e^{x/x_o} = e^{\ln(y/y_o)}=y/y_o \Rightarrow y = y_oe^{x/x_o}$
    \else
    \vspace{2em}
    \fi
