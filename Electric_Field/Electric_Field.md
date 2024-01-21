@@ -7,7 +7,7 @@ Title: Electric Field
 
 # Overview
 
-The electric field vector, $\bfvec{E}$, is a quantity assigned to a point in space. Given this quantity, we can compute the force a charge $Q$ will experience if it is placed at that point using the equation $\bfvec{F}=Q\bfvec{E}$. The direction of $\bfvec{E}$ is also the direction a positve charge will begin to move if released from rest.
+The electric field vector, $\bfvec{E}$, is a quantity assigned to a point in space. Given this quantity, we can compute the force a charge $Q$ will experience if it is placed at that point using the equation $\bfvec{F}=Q\bfvec{E}$. The direction of $\bfvec{E}$ is also the direction a positive charge will begin to move if released from rest.
 
 To find $\bfvec{E}$ at any point in space, 
 compute the force $\bfvec{F}$ due to all other charges on a hypothetical (or "test") charge $q_o$ that has an infinitesimal charge and size at a point where you want to know $\bfvec{E}$. To find $\bfvec{E}$ at that point, divide $\bfvec{F}$ by $q_o$.
@@ -83,7 +83,7 @@ Charge $q_1$ is at $(x,y)=(a, a)$. Find the magnitude of the electric field, $E$
 \ifsolutions
 {\bf Answer}:
 
-$E = kq/2a^2$
+$E = k|q_1|/2a^2$
 
 $\ds\bfvec{E}_{\text{at }(0,0) \text{ due to }q_1}=-\frac{kq_1}{2a^2}\left(\frac{1}{\sqrt{2}}\ihat +\frac{1}{\sqrt{2}}\jhat\right)$
 
