@@ -6,11 +6,11 @@ title: Enclosed Charge
 
 When using Gauss’s law, one must draw an imaginary volume in space and compute how much charge is inside the volume. Note that "charge enclosed" and "charge inside" are used interchangeably. 
 
-In general, an imaginary volume is chosen is one for which computation of the electric flux is easy. That is, the imaginary volume will be such that the electric field is either parallel or perpendicular to all parts of the surface. In this activity, you are given the Gaussian volume. However, you should understand the reason for the choice of each Gaussian volume given.
+In general, the imaginary volume chosen is one for which computation of the electric flux is easy. That is, the imaginary volume will be such that the electric field is either parallel or perpendicular to all parts of the surface. In this activity, you are given the Gaussian volume. However, you should understand the reason for the choice of each Gaussian volume given.
 
 # Densities
 
-There are three types of charge densities, linear ($\lambda$), surface ($\sigma$), and volume ($\rho$).
+There are three types of charge densities: linear ($\lambda$), surface ($\sigma$), and volume ($\rho$).
 
 Given a $Q$, and assuming $Q$ is uniformly distributed on (or within for a volume) an object, to find 
 
@@ -33,7 +33,7 @@ Key formulas:
 
 1. A total charge of $Q$ is uniformly distributed on a wire of negligible thickness that forms a circle of radius $R$. What is the charge density?
 
-   **Answer** The appropriate type of density is a linear charge density, because the charge is effectively distributed along a line. $\lambda=Q/2\pi R$.
+   **Answer** The appropriate density type is a linear charge density because the charge is uniformly distributed along a line. $\lambda=Q/2\pi R$.
 
 2. A total charge of $Q$ is uniformly distributed on only the curved part of a cylinder of radius $R$ and height $h$. What is the surface charge density?
 
@@ -61,7 +61,7 @@ Key formulas:
 
 # Line of Charge
 
-A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. The Gaussian cylinder shown has a length $h$, radius $r$, and the same center line as the charged line.
+A total charge of $+3Q$ is uniformly distributed on a non--conducting line of length $L$. The Gaussian cylinder shown has a length $h$, radius $r$, and the same center line as the charged line.
 
 <img src="figures/Line.svg"/>
 
@@ -95,7 +95,7 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
       <div style="height:3em"/>
    </div>
 
-4. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equation found in part 2. as one or more smooth curves or lines.
+4. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then, plot the equation found in part 2. as one or more smooth curves or lines.
 
    <div class="solutionstrue">
    {\bf Answer:}
@@ -109,7 +109,7 @@ A total of $+3Q$ is uniformly distributed a non--conducting line of length $L$. 
 
 # Spherical Shell
 
-A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly distributed _on its surface_. Its cross--section is shown along with that of a Gaussian sphere with the same center and a radius $r$.
+A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly distributed _on its surface_. Its cross--section is shown along with that of a Gaussian sphere of radius $r$ with the same center as the charged shell.
 
 <img src="figures/Spherical_Shell.svg"/>
 
@@ -143,7 +143,7 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly 
       <div style="height:3em"/>
    </div>
 
-4. Find the amount of charge enclosed in Gaussian sphere of radii $r=0$, $r=R/2$, $r=2R$, and $r=3R$.
+4. Find the amount of charge enclosed in the Gaussian sphere of radii $r=0$, $r=R/2$, $r=2R$, and $r=3R$.
 
    <div class="solutionstrue"> 
    {\bf Answer}: $0, 0, \sigma 4 \pi R^2, \sigma 4\pi R^2$
@@ -153,7 +153,7 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly 
       <div style="height:3em"/>
    </div>
 
-5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then, plot the equations found in parts 2. and 3. as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
    {\bf Answer}: 
@@ -165,7 +165,7 @@ A non--conducting spherical shell of radius $R$ has a charge of $+3Q$ uniformly 
 
 # Solid Sphere
 
-A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniformly _throughout_ it. The cross--section of the sphere is shown along with a dashed line representing the surface of a Gaussian sphere, which has the same center as the charged sphere and a radius $r$.
+A non--conducting solid sphere of radius $R$ has a charge of $+3Q$ distributed uniformly _throughout_ it. Its cross--section is shown along with that of a Gaussian sphere of radius $r$ with the same center as the charged sphere.
 
 <img src="figures/Solid_Sphere.svg"/>
 
@@ -209,7 +209,7 @@ A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniform
       <div style="height:3em"/>
    </div>
 
-5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
+5. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian sphere. Then, plot the equations found in parts 2. and 3. as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
       <img src="figures/Solid_Sphere_Graph.svg"/>
@@ -219,9 +219,9 @@ A non--conducting sphere of radius $R$ has a charge of $+3Q$ distributed uniform
 
 # Large Sheet
 
-<img src="figures/Sheet.svg"/>
+A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distributed uniformly on it. It is shown with a Gaussian cylinder of height $h$ and radius $r$ that is centered on the sheet, with half of it above the charged sheet.
 
-A non--conducting square sheet with side length $L$ has a charge of $+3Q$ distributed uniformly on it. The Gaussian cylinder has a height $h$ and radius $r$, and half of it is above the sheet.
+<img src="figures/Sheet.svg"/>
 
 1. Find the surface charge density, $\sigma$, of the sheet.
 
@@ -262,7 +262,7 @@ A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $
    <div class="solutionstrue"> 
    {\bf Answer}: The linear charge density is the total charge divided by the length over which the charge is distributed: $\lambda={3Q}/{H}$.
 
-   {\bf Note}: The charges are distributed on a surface, so it may seem more natural to use a surface charge density, which is $\sigma = 3Q/(2\pi R H)$, where the denominator is the surface area of the curved part of the charged cylinder. In this case, the answer to 2. does not change and the answer to 3. is $Q_{\text{encl}} = \sigma 2\pi R h$ instead of $Q_{\text{encl}}=\lambda h$. We use charge per length in this problem because the formula for $Q_{\text{encl}}$ is simpler.
+   {\bf Note}: The charges are distributed on a surface, so it may seem more natural to use a surface charge density, which is $\sigma = 3Q/(2\pi R H)$, where the denominator is the surface area of the curved part of the charged cylinder. In this case, the answer to 2. does not change and the answer to 3. is $Q_{\text{encl}} = \sigma 2\pi R h$ instead of $Q_{\text{encl}}=\lambda h$. We use charge per length in this problem because the $Q_{\text{encl}}$ formula is more straightforward.
    </div>
 
    <div class="solutionsfalse"> 
@@ -309,7 +309,7 @@ A non--conducting hollow cylinder of radius $R$ and length $H$ has a charge of $
 
 # Solid Cylinder
 
-A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of $+3Q$ uniformly distributed _throughout it_. The Gaussian cylinder has length $h$, radius $r$, and the same center line as the charged cylinder.
+A non--conducting solid cylinder of radius, $R$ and length $H$ has a charge of $+3Q$ uniformly distributed _throughout it_. The Gaussian cylinder has length $h$, radius $r$, and the same center line as the charged cylinder.
 
 <img src="figures/Solid_Cylinder.svg"/>
 
@@ -353,7 +353,7 @@ A non--conducting solid cylinder of radius, $R$ and length, $L$ has a charge of 
       <div style="height:3em"/>
    </div>
 
-3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then plot the equations found in parts 2. and 3 as one or more smooth curves or lines.
+3. Plot the four values of enclosed charge calculated above versus the radius of the Gaussian cylinder. Then, plot the equations found in parts 2. and 3. as one or more smooth curves or lines.
 
    <div class="solutionstrue"> 
    {\bf Answer}:
