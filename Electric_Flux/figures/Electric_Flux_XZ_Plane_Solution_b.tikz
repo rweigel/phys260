@@ -5,67 +5,67 @@
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,171); %set diagram left start at 0, and has height of 171
 
-%Straight Lines [id:da8293192343895168] 
+%Straight Lines [id:da2836625699838895] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (13,100) -- (13,20) ;
-%Straight Lines [id:da7185003092691562] 
+%Straight Lines [id:da4791715016412119] 
 \draw    (13,90) -- (13,118) ;
 \draw [shift={(13,120)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da7605301891813645] 
+%Straight Lines [id:da3672086504331853] 
 \draw    (13,20) -- (111,20) ;
 \draw [shift={(113,20)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da978321976579168] 
+%Straight Lines [id:da3288023942564138] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (143,100) -- (143,20) ;
-%Straight Lines [id:da2816948224143436] 
+%Straight Lines [id:da06205823503235064] 
 \draw    (143,90) -- (143,118) ;
 \draw [shift={(143,120)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da5607757856508941] 
+%Straight Lines [id:da10027113668203746] 
 \draw    (143,20) -- (241,20) ;
 \draw [shift={(243,20)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da3063072608645312] 
+%Straight Lines [id:da7574531844005206] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (273,100) -- (273,20) ;
-%Straight Lines [id:da20354008208679186] 
+%Straight Lines [id:da8924970907281793] 
 \draw    (273,90) -- (273,118) ;
 \draw [shift={(273,120)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da06688182588188663] 
+%Straight Lines [id:da781327596676] 
 \draw    (273,20) -- (371,20) ;
 \draw [shift={(373,20)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da5209536107017596] 
+%Straight Lines [id:da6609734917478578] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 255 }  ,draw opacity=1 ][line width=1.5]  [dash pattern={on 1.69pt off 2.76pt}]  (403,100) -- (403,20) ;
-%Straight Lines [id:da09897488964677259] 
+%Straight Lines [id:da9687687871947994] 
 \draw    (403,90) -- (403,118) ;
 \draw [shift={(403,120)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da07093865337466276] 
+%Straight Lines [id:da7560644823714548] 
 \draw    (403,20) -- (501,20) ;
 \draw [shift={(503,20)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da0399101978562848] 
+%Straight Lines [id:da5162504602425002] 
 \draw    (20,60) -- (77,60) ;
 \draw [shift={(80,60)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da435238655404248] 
+%Straight Lines [id:da9216860152486386] 
 \draw    (20,60) -- (20,102) ;
 \draw [shift={(20,105)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da5833731815428231] 
+%Straight Lines [id:da3813514776904292] 
 \draw    (150,60) -- (207,60) ;
 \draw [shift={(210,60)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da42884380740898886] 
+%Straight Lines [id:da5006127406298928] 
 \draw    (150,50) -- (187,50) ;
 \draw [shift={(190,50)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da8283612935634093] 
+%Straight Lines [id:da3223267435316297] 
 \draw    (292,60) -- (349,60) ;
 \draw [shift={(352,60)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da2517225713080955] 
+%Straight Lines [id:da1512550060086102] 
 \draw    (410,70) -- (467,70) ;
 \draw [shift={(470,70)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Straight Lines [id:da8946284009727197] 
-\draw    (410,70) -- (447.88,32.12) ;
-\draw [shift={(450,30)}, rotate = 135] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
-%Shape: Right Angle [id:dp6487340397139716] 
+%Straight Lines [id:da45864200654078924] 
+\draw    (410,70) -- (437.88,97.88) ;
+\draw [shift={(440,100)}, rotate = 225] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Right Angle [id:dp687875208585023] 
 \draw   (30,60) -- (30,70) -- (20,70) ;
-%Shape: Right Angle [id:dp42097022050011645] 
+%Shape: Right Angle [id:dp041164017908908335] 
 \draw   (160,60) -- (160,70) -- (150,70) ;
-%Shape: Right Angle [id:dp6910046922022506] 
+%Shape: Right Angle [id:dp5425506703639271] 
 \draw   (300,60) -- (300,70) -- (290,70) ;
-%Shape: Right Angle [id:dp45934601813272224] 
-\draw   (420,70) -- (420,80) -- (410,80) ;
+%Shape: Right Angle [id:dp7437355955295764] 
+\draw   (410,60) -- (420,60) -- (420,70) ;
 
 % Text Node
 \draw (15,123.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
@@ -100,7 +100,7 @@
 % Text Node
 \draw (287,26.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{\mathbf{E}}$};
 % Text Node
-\draw (417,26.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{\mathbf{E}}$};
+\draw (442,96.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{\mathbf{E}}$};
 % Text Node
 \draw (31,96.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{\mathbf{E}}$};
 % Text Node
@@ -112,7 +112,7 @@
 % Text Node
 \draw (30,71.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\theta $};
 % Text Node
-\draw (427,55.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\theta $};
+\draw (424,72.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\theta $};
 
 
 \end{tikzpicture}

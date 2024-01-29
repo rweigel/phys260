@@ -36,7 +36,7 @@ $$
 
 where $\theta$ is the angle between the $\bfvec{E}$ and $\bfvec{A}$ vectors.
 
-Any of these equations can be used, and students are encouraged to use the one they are more comfortable with and ideally understand the relationship between the different equations. When finding $\theta$ is simple based on a diagram, $EA\cos\theta$ is usually the easiest to use. When $\bfvec{E}$ and/or $\hat{\mathbf{n}}$ as three components, $\bfvec{E}\bfcdot \hat{\mathbf{n}}A$ is usually easier to use.
+Any of these equations can be used, and students are encouraged to use the one they are more comfortable with and ideally understand the relationship between the different equations. When finding $\theta$ is simple based on a diagram, $EA\cos\theta$ is usually the easiest to use. When $\bfvec{E}$ and/or $\hat{\mathbf{n}}$ has three components, $\bfvec{E}\bfcdot \hat{\mathbf{n}}A$ is usually easier to use.
 
 \newpage
 
@@ -81,11 +81,11 @@ Any of these equations can be used, and students are encouraged to use the one t
    \else
    <img src="figures/Electric_Flux_xz_Plane_Sketch.svg"/>
 
-   a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E$
+   a. $\quad\ds\bfvec{E}=E_o\ihat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$
 
    b. $\quad\ds\bfvec{E}=E_o\jhat\qquad\phantom{+ \frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
 
-   c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E$ 
+   c. $\quad\ds\bfvec{E}=E_o\khat\qquad\phantom{+\frac{E_o}{\sqrt{2}}\jhat}\theta=\qquad\qquad\Phi_E=$ 
 
    d. $\quad\ds\bfvec{E}=\frac{E_o}{\sqrt{2}}\ihat + \frac{E_o}{\sqrt{2}}\jhat\qquad\theta=\qquad\qquad\Phi_E=$
 
@@ -262,7 +262,7 @@ The negative signs in the last two equations were inserted based on the diagram 
 
 *Method III*
 
-This is a problem for which using unit vectors is easier in that an additional diagram is not needed. Compare it to the approach taken in [Example 22.2b, pg 728 in the textbook](https://drive.google.com/file/d/1xt3U54huNwt9epviaBRbu2GJ64poSEWB★★★★remove★★★★), which is similar to Method I except that an additional diagram was not given (but was likely used to figure out the answer given).
+This is a problem for which using unit vectors is easier in that an additional diagram is not needed. Compare it to the approach taken in [Example 22.2b, pg 728 in the textbook](https://drive.google.com/file/d/1oOs-vfig3K9_xnXgghFwS-Ef99D4oQqB/view?usp=sharing★★★★remove★★★★), which is similar to Method I except that an additional diagram was not given (but was likely used to figure out the answer given).
 
 Based on the diagram, $\hat{\mathbf{n}}_1=\ihat$, $\hat{\mathbf{n}}_2=\jhat$, $\hat{\mathbf{n}}_3=\khat$, $\hat{\mathbf{n}}_4=-\khat$
 $\hat{\mathbf{n}}_5=-\jhat$, $\hat{\mathbf{n}}_6=-\ihat$
