@@ -19,7 +19,7 @@ $$\text{Gauss's law}\qquad\oint \bfvec{E}\cdot d\mathbf{A}=\frac{Q_{\text{encl}}
 
 In the following diagram, a closed spherical surface is shown. According to Gauss's law, if we add all of the differential fluxes $\bfvec{E}\cdot d\mathbf{A}$ over a closed surface, the result will be ${Q_{\text{encl}}}/{\epsilon_o}$. The surface does not need to be spherical -- Gauss's law is valid for any closed surface. Any imaginary surface that we use in Gauss's law is referred to as a Gaussian surface.
 
-<img src="figures/Flux_Differential.svg" width="10%"/>
+<img src="figures/Flux_Differential.svg" width="15%"/>
 
 Gauss's law can be used for computing the electric field due to a continuous charge distribution when the integral can be simplified. The required simplification occurs for a Gaussian surface on which the electric field is always
 
@@ -33,7 +33,7 @@ There are two types of Gaussian surfaces that are used when Gauss's law can be u
 
 2. For a cylindrical Gaussian surface, we must consider three surfaces: the two end caps and the curved surface.
 
-\newpage
+%\newpage
 
 # Example -- Point Charge
 
