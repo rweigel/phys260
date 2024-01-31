@@ -11,41 +11,43 @@ Gauss's law is derived from Coulomb's law. Coulomb's law can always be used to f
 * at any location for a uniformly charged spherical shell, and
 * near the center of a large and uniformly charged sheet.
 
-Gauss's law can also be used to find the electric field due to a long and uniformly charged solid cylinder and a uniformly charged solid sphere -- the justification is that they can be created by nesting shells together and that the total electric field is the superposition of the electric field of each shell.
+Gauss's law can also be used to find the electric field due to a long and uniformly charged solid cylinder and a uniformly charged solid sphere -- the justification is that they can be created by nesting shells together, and the total electric field is the superposition of the electric field of each shell.
 
 Gauss’s law states that the total electric flux through any closed surface is proportional to the total charge inside the surface.
 
 $$\text{Gauss's law}\qquad\oint \bfvec{E}\cdot d\mathbf{A}=\frac{Q_{\text{encl}}}{\epsilon_o}$$
 
-In the following diagram, a closed spherical surface is shown. Gauss's law states that if we add all of the differential fluxes $\bfvec{E}\cdot d\mathbf{A}$ over a closed surface, the result will be ${Q_{\text{encl}}}/{\epsilon_o}$. The surface does not need to be spherical -- Gauss's law is valid for any closed surface. Any imaginary surface that we use in Gauss's law is referred to as a Gaussian surface.
+In the following diagram, a closed spherical surface is shown. According to Gauss's law, if we add all of the differential fluxes $\bfvec{E}\cdot d\mathbf{A}$ over a closed surface, the result will be ${Q_{\text{encl}}}/{\epsilon_o}$. The surface does not need to be spherical -- Gauss's law is valid for any closed surface. Any imaginary surface that we use in Gauss's law is referred to as a Gaussian surface.
 
 <img src="figures/Flux_Differential.svg" width="10%"/>
 
-Gauss's law can be used for computing the electric field due to a continuous charge distribution when the integral can be simplified. If we can imagine a Gaussian surface on which the electric field is always
+Gauss's law can be used for computing the electric field due to a continuous charge distribution when the integral can be simplified. The required simplification occurs for a Gaussian surface on which the electric field is always
 
-* perpendicular to the Gaussian surface and
-* constant in magnitude (or zero).
+* zero, parallel, or perpendicular and
+* if perpendicular, constant in magnitude.
 
 There are two types of Gaussian surfaces that are used when Gauss's law can be used to find the electric field. (In this activity, we only consider the first case.)
 
 
-1. For a spherical Gaussian surface, Gauss's law simplifies to $\ds E_rA = \frac{Q_{\text{encl}}}{\epsilon_o}$, where $A=4\pi r^2$ is a spherical shell with $Q_{\text{encl}}$ inside of it and $E_r$ is the radial electric field.
+1. For a spherical Gaussian surface, Gauss's law simplifies to $\ds E_rA = {Q_{\text{encl}}}/{\epsilon_o}$, where $A=4\pi r^2$ is a spherical shell with $Q_{\text{encl}}$ inside of it and $E_r$ is the radial electric field.
 
-2. For a cylindrical Gaussian surface, we must consider three surfaces, the two end caps and the curved surface.
+2. For a cylindrical Gaussian surface, we must consider three surfaces: the two end caps and the curved surface.
+
+\newpage
 
 # Example -- Point Charge
 
-A spherical Gaussian surface centered on a point charge $q$. Because the electric field due to a point charge is radial, the electric field on a the Gaussian surface of any radius will have the electric field perpendicular to its surface, so
+A spherical Gaussian surface of radius $r$ is centered on a point charge $q$. Because the electric field due to a point charge is radial, the electric field will be perpendicular to the Gaussian surface for any $r$, so
 
-$\ds E_rA = \frac{Q_{\text{encl}}}{\epsilon_o}$ applies. The area of the surface of a sphere is $A = 4\pi r^2$, so
+$\ds E_rA = {Q_{\text{encl}}}/{\epsilon_o}$ applies. The area of the surface of a sphere is $A = 4\pi r^2$, so
 
-$\ds E_r 4\pi r^2 = \frac{q}{\epsilon_o}$ solving for $E_r$ gives
+$\ds E_r 4\pi r^2 = {q}/{\epsilon_o}$. Solving for $E_r$ gives
 
 $\ds E_r = \frac{1}{4\pi\epsilon_o}\frac{q}{r^2}$, which is what we expect from Coulomb's law.
 
 # Example -- Spherical Shell
 
-In the Enclosed Charge activity, a non--conducting spherical shell of radius $R$ with a charge of $+3Q$ uniformly distributed _on its surface_ was considered. Its cross--section is shown along with that of a Gaussian sphere of radius $r$ and the same center.
+In the Enclosed Charge activity, a non--conducting spherical shell of radius $R$ with a charge of $+3Q$ uniformly distributed on its surface was considered. Its cross--section is shown along with that of a Gaussian sphere of radius $r$ and the same center.
 
 It was found that when the radius $r$ of the Gaussian sphere is less than $R$, $Q_{\text{encl}}=0$. When the $r>R$, $Q_{\text{encl}}=+3Q$:
 
@@ -68,11 +70,11 @@ It was found that when the radius $r$ of the Gaussian sphere is less than $R$, $
 
 <img src="../Enclosed_Charge/figures/Spherical_Shell_Graph_Continuous.svg"/>
 
-1. Pick a point in space at an arbitrary location to find the electric field. For any point, one can always find two charges on the shell whose electric field sum to be radial. Given that one can construct a uniformly charged shell by placing such pairs of points on a shell, the net electric field due to all charges on the shell must be radial. _Draw a diagram to demonstrate this_.
+1. Pick a point in space at an arbitrary location to find the electric field. For any point, one can always find two charges on the shell whose electric field sum is radial. Given that one can construct a uniformly charged shell by placing such pairs of charges on a shell, the net electric field due to all charges on the shell must be radial. _Draw a diagram to demonstrate this_.
 
 2. Because of our answer to 1., we can use
 
-   $$E_rA = E_r 4\pi r^2 = \frac{Q_{\text{encl}}}{\epsilon_o}$$
+   $$E_rA = E_r 4\pi r^2 = {Q_{\text{encl}}}/{\epsilon_o}$$
 
    $Q_{\text{encl}}$ depends on $r$, so our answer for $E_r$ must also depend on $r$:
 
@@ -83,7 +85,9 @@ It was found that when the radius $r$ of the Gaussian sphere is less than $R$, $
    \end{cases}
    $$
 
-3. The plot is shown below. Notice that inside the uniformly charged shell, the electric field is zero. Outside, the electric field is the same as if all of the charge ($3Q$) was at the origin. This is a result that is often used when solving other problems. You may recall from mechanics that a similar result held -- Newton showed that if mass was uniformly distributed on a spherical shell, the gravitational force on an object anywhere inside the shell was zero; outside the shell, the gravitational force was the same as if all of the mass was at the center of the shell.
+3. The plot is shown below. Notice that inside the uniformly charged shell, the electric field is zero. Outside, the electric field is the same as if all of the charge ($3Q$) was at the origin. This is a result that is often used when solving other problems and should be memorized.
+ 
+   (You may recall from mechanics that a similar result held -- Newton showed that if mass was uniformly distributed on a spherical shell, the gravitational force on an object anywhere inside the shell was zero; outside the shell, the gravitational force was the same as if all of the mass was at the center of the shell.)
 
    <img src="figures/Spherical_Shell_Solution.svg"/>
 
@@ -119,11 +123,7 @@ where $\ds \rho_o=3Q/[(4/3)\pi R^3]$
    \ifsolutions
    **Answer**
 
-   Because of our answer to 1., we can use
-
-   $$E_rA = E_r 4\pi r^2 = \frac{Q_{\text{encl}}}{\epsilon_o}$$
-
-   $Q_{\text{encl}}$ can be written in terms of the variables given as
+   Because of our answer to 1., we can use $E_rA = E_r 4\pi r^2 = {Q_{\text{encl}}}/{\epsilon_o}$. $Q_{\text{encl}}$ can be written in terms of the variables given as
    
    $$
    Q_{\text{encl}} = \begin{cases}
@@ -164,7 +164,7 @@ Suppose the charged sphere in the previous problem had a charge density that var
 1. Why can we assume that if there is an electric field, it must be radial so that the electric field will always be perpendicular to the Gaussian surface?
 
    \ifsolutions
-   **Answer**: We can create a charged sphere with a charge density that depends on $r$ by nesting charged shells with a surface charge density that depends on $r$. Each shell produces an electric field that is radial. Therefore, by superposition, the electric field of a solid sphere will also be radial. Note that this argument only applies when the charge density of the solid sphere varies with $r$ (why?).
+   **Answer**: We can create a charged sphere with a charge density that depends on $r$ by nesting charged shells with a surface charge density that depends on $r$. Each shell produces an electric field that is radial. Therefore, by superposition, the electric field of this solid sphere will also be radial. Note that this argument only applies when the charge density of a solid sphere varies with $r$ (and not $\theta$ and $\phi$; why?).
    \else
    \vspace{8em}
    \fi
@@ -172,7 +172,7 @@ Suppose the charged sphere in the previous problem had a charge density that var
 2. Find and plot $Q_{\text{encl}}(r)$.
 
    \ifsolutions
-   **Answer**: In general, $Q_{\text{encl}} = \int \rho dv$ -- the enclosed charge is determined by integrating the charge density over a volume. If the charge density only depends on $r$, we have
+   **Answer**: In general, $Q_{\text{encl}} = \int \rho dv$ -- enclosed charge is determined by integrating charge density over a volume. If the charge density only depends on $r$, we have
    
    $$Q_{\text{encl}}(r) = \int_0^r \rho(r') 4\pi r'^2 dr'$$
    
@@ -206,11 +206,7 @@ Suppose the charged sphere in the previous problem had a charge density that var
    \ifsolutions
    **Answer**
 
-   Because of our answer to 1., we can use
-
-   $$E_rA = E_r 4\pi r^2 = \frac{Q_{\text{encl}}}{\epsilon_o}$$
-
-   Substitution gives
+   Because of our answer to 1., we can use $E_rA = E_r 4\pi r^2 = {Q_{\text{encl}}}/{\epsilon_o}$. Substitution gives
 
    $$
    E_r = \begin{cases}
