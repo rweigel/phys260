@@ -29,7 +29,7 @@ Gauss's law can be used for computing the electric field due to a continuous cha
 There are two types of Gaussian surfaces that are used when Gauss's law can be used to find the electric field. (In this activity, we only consider the first case.)
 
 
-1. For a spherical Gaussian surface, Gauss's law simplifies to $\ds E_rA = {Q_{\text{encl}}}/{\epsilon_o}$, where $A=4\pi r^2$ is a spherical shell with $Q_{\text{encl}}$ inside of it and $E_r$ is the radial electric field.
+1. For a spherical Gaussian surface, Gauss's law simplifies to $\ds E_rA = {Q_{\text{encl}}}/{\epsilon_o}$, where $A=4\pi r^2$ is the area of a spherical shell with $Q_{\text{encl}}$ inside of it and $E_r$ is the radial electric field.
 
 2. For a cylindrical Gaussian surface, we must consider three surfaces: the two end caps and the curved surface.
 
@@ -49,7 +49,8 @@ $\ds E_r = \frac{1}{4\pi\epsilon_o}\frac{q}{r^2}$, which is what we expect from 
 
 In the Enclosed Charge activity, a non--conducting spherical shell of radius $R$ with a charge of $+3Q$ uniformly distributed on its surface was considered. Its cross--section is shown along with that of a Gaussian sphere of radius $r$ and the same center.
 
-It was found that when the radius $r$ of the Gaussian sphere is less than $R$, $Q_{\text{encl}}=0$. When the $r>R$, $Q_{\text{encl}}=+3Q$:
+It was found that
+$Q_{\text{encl}}=+3Q$:
 
    $$
    Q_{\text{encl}} = \begin{cases}
@@ -85,11 +86,14 @@ It was found that when the radius $r$ of the Gaussian sphere is less than $R$, $
    \end{cases}
    $$
 
-3. The plot is shown below. Notice that inside the uniformly charged shell, the electric field is zero. Outside, the electric field is the same as if all of the charge ($3Q$) was at the origin. This is a result that is often used when solving other problems and should be memorized.
- 
-   (You may recall from mechanics that a similar result held -- Newton showed that if mass was uniformly distributed on a spherical shell, the gravitational force on an object anywhere inside the shell was zero; outside the shell, the gravitational force was the same as if all of the mass was at the center of the shell.)
+3. &nbsp;
 
    <img src="figures/Spherical_Shell_Solution.svg"/>
+
+   Notice that inside the uniformly charged shell, the electric field is zero. Outside, the electric field is the same as if all of the charge ($3Q$) was at the origin. This is a result that is often used when solving other problems and should be memorized.
+ 
+   (You may recall from mechanics that a similar result held -- Newton showed that if mass is uniformly distributed on a spherical shell, the gravitational force on an object anywhere inside the shell is zero; outside the shell, the gravitational force is the same as if all of the mass is at the center of the shell.)
+
 
 \newpage
 
