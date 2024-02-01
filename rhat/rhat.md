@@ -56,11 +56,11 @@ Charge $q_1$ is at $(x,y)=(-a,-a)$ and charge $q_2$ is at $(a, a)$. Find
 
 <img src="figures/Two_Charges.svg" style="width:90%"/>
 
-The sides of the right triangle have length $2a$, so the hypotenuse $r=\sqrt{(2a)^2+(2a)^2}=\sqrt{8}a$. 
+The sides of the right triangle have length $2a$, so the hypotenuse $r=\sqrt{(2a)^2+(2a)^2}=\sqrt{8}a=2\sqrt{2}a$. 
 
-From the diagram, $\bfvec{r}_{12}=2a\ihat + 2a\jhat$, so $\ds\rhat_{12}=\frac{\bfvec{r}_{12}}{r}=\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat$
+From the diagram, $\bfvec{r}_{12}=2a\ihat + 2a\jhat$, so $\ds\rhat_{12}=\frac{\bfvec{r}_{12}}{r}=\frac{2a}{2\sqrt{2}a}\ihat + \frac{2a}{2\sqrt{2}a}\jhat=\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat$
 
-Note that the magnitude of $\rhat_{12}=1$: $|\rhat_{12}|=\sqrt{(1/2)^2+(1/2)^2}=1$
+Note that the magnitude of $\rhat_{12}=1$: $\ds|\rhat_{12}|=\sqrt{\left(\frac{1}{\sqrt{2}}\right)^2+\left(\frac{1}{\sqrt{2}}\right)^2}=1$
 
 Substitution gives
 
@@ -94,7 +94,7 @@ $r = \sqrt{5}a$
 
 $\bfvec{r}_{12}=2a\ihat-a\jhat$
 
-1. $\rhat_{12}=\bfvec{r}_{12}/r=\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat$
+1. $\ds\rhat_{12}=\bfvec{r}_{12}/r=\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat$
 
 2. $\ds\bfvec{F}_{q_1\text{ on }q_2}=kq_1q_2\frac{\rhat_{12}}{r^2}=\frac{kq_1q_2}{5a^2}\left(\frac{2}{\sqrt{5}}\ihat-\frac{1}{\sqrt{5}}\jhat\right)$
 
