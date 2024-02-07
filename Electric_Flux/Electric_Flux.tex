@@ -135,12 +135,12 @@ Any of these equations can be used, and students are encouraged to use the one t
         b. Is there only one normal direction to this area? Discuss your reasoning with your group.
 
         \ifsolutions
-        \textbf{Answer}: There are two normal directions, one in $+y$ as shown and another in $-y$ direction.
+        \textbf{Answer}: There are two normal directions, one in $+y$ as shown and another in $-y$ direction. Any surface has two normal vectors. In problems involving a closed surface, the normal direction to use is defined to be the one pointing outwards from the volume the surface encloses. In problems involving an open surface such as this one, you may use either normal direction if the one to use is not specified.
         \else
         \vskip 72pt
         \fi
 
-  \item For each of the following $\bfvec{E}$ vectors a.-d., draw $\bfvec{E}$ and $\hat{\mathbf{n}}$ on the following diagram, which shows the area in the previous figure when viewed from a point on the positive $z$--axis that is far from the origin. Then find $\theta$ and compute $\Phi_E$.
+  \item In this part, use the normal vector for the area in the $y$--direction. For each of the following $\bfvec{E}$ vectors a.-d., draw $\bfvec{E}$ and $\hat{\mathbf{n}}$ on the following diagram, which shows the area in the previous figure when viewed from a point on the positive $z$--axis that is far from the origin. Then, find $\theta$ and compute $\Phi_E$ in terms of the constants $E_o$ and $A$.
 
         \ifsolutions
         \textbf{Answer}
@@ -229,7 +229,7 @@ With Coulomb's law, we are given the location and values of charges, and we comp
 
 Find the flux through the six labeled faces of the cube with side area $A$ when the electric field is everywhere in the $+z$ direction with magnitude $E_o$.
 
-{\bf Answer} This example is similar to Example 22.2a pg 728 in the textbook. The electric field is parallel to surfaces 1, 2, 5, and 6. For each of these surfaces, $\theta=90^\circ$, and $\cos( 90^\circ)=0$. Or, thinking in terms of the analogy of the electric field representing lines of flow, the flux is zero through these faces. 
+{\bf Answer} This example is similar to Example 22.2a pg 728 in the textbook. The electric field is parallel to surfaces 1, 2, 5, and 6. For each of these surfaces, $\theta=90^\circ$, and $\cos( 90^\circ)=0$. 
 
 %We'll solve it using two methods. The first method is useful when the electric field is either parallel or perpendicular to all surfaces. The second method is useful for more general cases, such as problem 3.3.
 
@@ -245,9 +245,9 @@ The normal direction for the bottom surface is downwards, which is in the opposi
 
 $\Phi_E^{4}=E_oA\cos 180^\circ=-E_oA$
 
-The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Thinking again in terms of the electric field representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, flow out of a volume corresponds to a positive flux. The reason for this convention for flux is that from Gauss's law, a net positive flow out of a closed surface corresponds to a net positive charge inside the surface.)
+The total flux through the cube, $\Phi_E^1+...+\Phi_E^6$, is zero. Using the analogy of electric field lines representing flow lines, every electric field line that enters the cube exits, so the flow in equals the flow out. (Perhaps confusingly, by convention, flow out of a volume corresponds to a positive flux. This convention for electric flux is used because in Gauss's law, a net flux out of a closed surface corresponds to a net positive charge inside the surface.)
 
-How much charge is inside the cube? The net flux through the cube's surface is zero, so it follows from Gauss's law that the total charge enclosed must be zero.
+The motivation for computing electric flux through a closed surface is that it appears in Gauss's law, which is covered in a later activity. Based on Gauss's law, we can conclude that the net charge in the cube is zero because the net flux through the cube's surface is zero.
 
 \ifsolutions
 
@@ -300,7 +300,7 @@ $\Phi_E^2=E_oA\cos 60^\circ$, $\Phi_E^3=E_oA\cos 30^\circ$, $\Phi_E^4=E_oA\cos 1
 
 \emph{Method II}
 
-When using this method, it is necessary to draw a diagram to ensure the calculations are correct. In the following, the cube viewed from a point on the $+x$-axis is shown.
+When using this method, it is necessary to draw a diagram to ensure the calculations are correct. The following shows the cube viewed from a point on the $+x$-axis.
 
 \input{figures/Electric_Flux_Cube_II_Solution_II.tikz}
 
