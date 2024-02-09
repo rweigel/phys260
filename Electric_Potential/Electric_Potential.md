@@ -4,7 +4,7 @@ Title: Electric Potential
 
 # Electric Potential Energy Differences, $\Delta U$
 
-Recall from mechanics that the symbol $U$ was used to represent potential energy. The potential energy of an object increases when you do a positive amount of work on it. For example, if you lift a mass from the floor, you increase its potential energy. In addition, recall that work done on an object {\it changes} its potential energy, and this change is represented by $\Delta U$.
+%Recall from mechanics that the symbol $U$ was used to represent potential energy. The potential energy of an object increases when you do a positive amount of work on it. For example, if you lift a mass from the floor, you increase its potential energy. In addition, recall that work done on an object {\it changes} its potential energy, and this change is represented by $\Delta U$.
 
 Mathematically, the work done by a force $\bfvec{F}$ in moving an object from position $a$ to position $b$ is
 
@@ -14,7 +14,7 @@ $$
 
 Another way of writing $\bfvec{F}\bfcdot d\bfvec{l}$ is $|F|dl\cos\phi$, where $\phi$ is the angle between $\bfvec{F}$ and $d{\bfvec l}$.
 
-There are three cases:
+There are three cases that you will encounter when evaluating this integral:
 
 1. If a force is always perpendicular to the direction of movement, the work due to that force is zero. For example, a block sliding horizontally has a gravitational force exerted on it, but the gravitational force is downward and so is perpendicular to the direction of motion. Thus, gravity does no work.
 
@@ -25,18 +25,7 @@ There are three cases:
    where $L$ is positive; the $+$ sign is used for a force that is in the direction of movement, and the $-$ sign is used for a force that is in the opposite direction of movement. For example, if you lift a mass $m$ upwards by a distance $L$, the force you exert is in the same direction of movement, so you do a work of $mgL$. The gravitational force on the mass is in the opposite direction of movement, so the work done by the gravitational force is $-mgL$. If, instead, you lower the mass, your force is upwards, and the direction of motion is downwards, so the work you do is now $-mgL$, and the work done by the gravitational force is $+mgL$.
 
 
-3. When the direction of force relative to the direction of movement changes (so the dot product changes) and/or the magnitude of force changes. This is covered on [page 755 of the textbook](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_).
-
-
-One of the most common difficulties in calculating work and change in potential energy is getting the correct sign for the answer. The following two problems have questions that help you determine the correct sign of work and changes in potential energy.
-
-In general, determine the direction an object would move when released from rest (call this the "release direction"). If the object moves or is moved a small step in the release direction, its potential energy will decrease. If the object moves or is moved a small step in a direction opposite to the release direction, its potential energy will increase.
-
-* The potential energy of an object increases when you do positive work on it. That is, when your force on the object is in the direction that you move the object. One way of determining if an object's potential is higher is if it has more potential to do something. A mass lifted upwards has more potential to crush something below it. If you lower a mass, it will have less potential to crush something.
-
-* Potential energy increases when a conservative force (defined next) does negative work. 
-
-**Conservative Forces**
+3. When the direction of force relative to the direction of movement changes (so the dot product changes) and/or the magnitude of force changes. This is covered on [page 755 of the textbook](https://drive.google.com/file/d/10Zsubt69yu6wn-AWBvKEjyezXSiaeIup/view?usp=sharing★★★★remove★★★★).
 
 If $\bfvec{F}$ is a special kind of force, called a _conservative_ force, we do not need to perform integration to every time that we want to compute the work. For each conservative force, there is an equation for $U$ (called potential energy, or PE) such that one needs to only know $U$ at $b$ and $a$. In this case,
 
@@ -52,6 +41,16 @@ In mechanics, you have encountered two conservative forces
 2. A force that varies according to $\rhat/r^2$ (e.g., the gravitational force between two objects separated by a large distance)
 
 In E&M, we encounter these same two types of conservative forces.
+
+One of the most common difficulties in calculating work and change in potential energy is getting the correct sign for the answer. The following two problems have questions that help you determine the correct sign of work and changes in potential energy.
+
+In general, determine the direction an object would move when released from rest (call this the "release direction"). If the object moves or is moved a small step in the release direction, its potential energy will decrease. If the object moves or is moved a small step in a direction opposite to the release direction, its potential energy will increase.
+
+* The potential energy of an object increases when you do positive work on it. That is, when your force on the object is in the direction that you move the object. One way of determining if an object's potential is higher is if it has more potential to do something. A mass lifted upwards has more potential to crush something below it. If you lower a mass, it will have less potential to crush something.
+
+* Potential energy increases when a conservative force does negative work. 
+
+
 
 **Example**
 
@@ -87,7 +86,7 @@ The following diagram shows a region of space where the electric field is consta
 
 <img src="figures/Uniform_Field.svg"/>
 
-1. You place a charge of $+3\text{ C}$ at point $A$. What happens to that charge when it is released?
+1. A charge of $+3\text{ C}$ is placed at point $A$. What happens to that charge when it is released?
 
    \ifsolutions
    {\bf Answer}: Moves to right. By convention, electric field lines point in the direction of the force on a positive charge.
@@ -95,7 +94,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:3em"/>
    \fi
 
-2. You move charge of $+3\text{ C}$ from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
+2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
 
    \ifsolutions
    {\bf Answer}: The charge naturally wants to move from $A$ to $B$ since it is a positive charge and the field line direction indicates the direction of the force on a positive charge. The force the field exerts on the charge is $\bfvec{F}=Q\bfvec{E}=(3\text{ C})(3\text { N/C})\ihat = (9\text{ N})\ihat$, where $\ihat$ points to the right.
@@ -105,7 +104,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:3em"/>
    \fi
 
-3. You place a charge of $-3\text{ C}$ at point $A$. What happens to that charge when it is released?
+3. A charge of $-3\text{ C}$ is placed at point $A$. What happens to that charge when it is released?
 
    \ifsolutions
    {\bf Answer}: Moves to left.
@@ -129,7 +128,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-6. If you move a charge of $-3\text{ C}$ from $A$ to $D$ but deviate from a straight line, will your answers to the previous problem change? If no, explain why. If yes, provide new answers.
+6. If a charge of $-3\text{ C}$ is moved from $A$ to $D$ on a path that is not a straight line, will your answers to the previous problem change? If no, explain why. If yes, provide new answers.
 
    \ifsolutions
    {\bf Answer}: No, they won't change. Think of movement along a smooth and curved line as being made of a series of tiny and equal-sized steps in vertical and horizontal directions. There is no work associated with the vertical steps. There is positive work associated with steps to the right and negative work associated with steps to the left. To get from $A$ to $D$ along an arbitrary path, you must take an equal number of steps to the left and to the right. See also [Figure 23.1 and 23.2 in the textbook](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_), which describes how the work done by a conservative force does not depend on the path.
@@ -147,7 +146,7 @@ In the previous problem, a charge was moved in a region of space where the elect
 
 There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for this charge are shown. To simplify the calculations, use $k=9\cdot 10^9\text{ N}\cdot \text{m}^2/\text{C}^2$.
 
-1. You move a charge of $+3\text{ C}$ from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
+1. A charge of $+3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
 
    \ifsolutions
    {\bf Answer}: According to [equation 23.8](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_), the work done by the field, labeled $W^E$ here, when a charge $q_0$ is moved from a distance $r_a$ to a distance $r_b$ from a charge $q$ is
@@ -193,9 +192,9 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
 
 # Electric potential difference, $\Delta V$
 
-In the previous section, we considered moving an arbitrary amount of charge (either positive or negative) from point $a$ to point $b$ and computed its change in potential energy $\Delta U$. 
+In the previous section, we considered moving an arbitrary amount of charge (either positive or negative) from point $a$ to point $b$ and computed its change in potential energy $\Delta U$.
 
-An electric potential difference $\Delta V$ is defined to be the change in electric potential energy of a (positive by convention) test charge when it is moved from point $a$ to point $b$ divided by the charge on the test charge.
+An electric potential difference $\Delta V$ is defined to be the change in electric potential energy of a (positive by convention) test charge, $q_o$ when it is moved from point $a$ to point $b$ divided by $q_o$.
 
 As a result, the only difference between the $\Delta U$ calculations performed previously and $\Delta V$ calculations is that we first compute $\Delta U$ for a $+1\text{ C}$ charge. To get $\Delta V$, we simply divide by $\Delta U$ by $+1\text{ C}$.
 
