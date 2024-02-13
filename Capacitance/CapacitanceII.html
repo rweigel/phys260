@@ -41,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -382,10 +382,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -395,6 +391,16 @@
     .katex-display.fleqn>.katex {
       padding-left: 0em;
       margin: 0em;
+    }
+
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
     }
 
     .page-break {
