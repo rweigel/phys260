@@ -17,6 +17,8 @@ The general technique for computing capacitance when Gauss's law applies is:
 
 **Conductors**
 
+When charges are placed on or in a conductor, they will quickly configure themselves to make the electric field inside the conductor zero.
+
 1. When charges are placed on an isolated conductor (meaning it is far away from other charges), they will reconfigure themselves to make the electric field inside the conductor zero.
 2. If a charged conductor is not isolated, the charges on the conductor will reconfigure themselves to make the electric field inside the conductor zero. The total field in the conductor is the field due to the charges on the conductor and charges elsewhere.
 
