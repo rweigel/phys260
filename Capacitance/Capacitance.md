@@ -6,21 +6,21 @@ Title: Capacitance
 
 ## Technique
 
-The general technique for computing capacitance when Gauss's law applies is:
+A technique for computing capacitance when Gauss's law can be used to compute the electric field is:
 
-1. Place a positive charge $Q$ on one conductor and $-Q$ on the other conductor.
-2. Use Gauss's law to compute the electric field between the conductors.
-3. Use $V(b)-V(a)=-\int^b_a \mathbf{E}\bfcdot d\mathbf{l}$ to find the potential difference between the conductors. Point $a$ is any point on the negatively charged conductor, and point $b$ is any point on the positively charged conductor.
-4. Compute $C$ using $\ds C = {Q}/{\Delta V} = Q/\big(V(b)-V(a)\big)$. (Note that capacitance should always be positive.)
+1. place a positive charge $Q$ on one conductor and $-Q$ on the other conductor;
+2. use Gauss's law to compute the electric field between the conductors;
+3. use $V(b)-V(a)=-\int^b_a \mathbf{E}\bfcdot d\mathbf{l}$ to find the potential difference between the conductors. Point $a$ is any point on the negatively charged conductor, and point $b$ is any point on the positively charged conductor; and
+4. Compute $C$ using $\ds C = {Q}/{\Delta V} = Q/\big(V(b)-V(a)\big)$.
 
 ## Review of Related Topics
 
-**Conductors**: The electric field at any location in space is the superposition (vector sum) of electric fields due to every charge in the universe. For locations inside a conductor, the electric field will be zero. The reason is that charges on or in a conductor are free to move and will position themselves, effectively instantaneously, on the surface in a way that makes the electric field inside the conductor zero.
+**Conductors**: The electric field at any location in space is the superposition (vector sum) of electric fields due to every charge in the universe. For locations inside a conductor, the electric field will be zero. The reason is that charges on or in a conductor are free to move and position themselves, effectively instantaneously, on the surface in a way that makes the electric field inside the conductor zero.
 
 1. If a conductor is isolated (meaning other charges are far enough away that we can ignore their electric fields), the electric field inside it is the superposition of the electric fields due to each charge on the conductor.
 2. If a conductor is not isolated, the electric field inside it is the superposition of the electric fields due to each charge on the conductor and all other charges in the universe.
 
-**Electric Potential Energy and Electric Potential**: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force due to a static electric field, we define potential energy $U$ according to
+**Electric Potential Energy and Electric Potential**: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to a electric field, we define potential energy $U$ according to
 
 $\Delta U = U(b)-U(a) \equiv -W_{a\rightarrow b}$
 
@@ -33,17 +33,13 @@ Defining electric potential as $V\equiv U/q_o$ gives $V(b)-V(a) = -\int_a^b\bfve
 1. how much work (in Joules) the electric field did on the charge: $-q_o(V(b)-V(a))$, and
 2. the change in electric potential energy (in Joules): $+q_o(V(b)-V(a))$.
 
-\ifsolutions\else
-   \newpage
-\fi
-
 # Parallel Plates
 
-An equal and opposite amount of charge is placed on two conducting and parallel plates, as shown on the left in the following figure. On the right, a side view of the plates is shown. The area of the plates, $A = w^2$, is much larger than shown, such that the width, $w$, is much larger than the separation distance, $d$. Assume $Q$ is a positive number.
+An equal and opposite amount of charge is placed on two conducting and parallel plates, as shown on the left in the following figure. On the right, a side view of the plates is shown. The area of the plates, $A = w^2$, is much larger than shown, so the width, $w$, is much larger than the separation distance, $d$. Assume $Q$ is positive.
 
 <img src="figures/Parallel_Plate.svg" height="200px">
 
-1. How will the charges be distributed on each of the plates? That is, how much charge is on each of the four faces that have an area $A$? Assume that no charge appears on the other (thin and having thickness $t$) faces of the plates.
+1. How will the charges be distributed on each of the plates? That is, how much charge is on each of the four large faces with area $A$? Assume the charges are uniformly distributed on these four faces and that no charge appears on the thin edge faces with thickness $t$.
 
    \ifsolutions
    {\bf Answer}: The charges will move to the inner faces, as shown in the following diagram. Electric field vectors for the positive and negative charges are shown.
@@ -53,7 +49,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
    \vspace{3em}
    \fi
 
-2. What is the electric field in each of the five regions? Assume the charges are uniformly distributed. (Hint: The magnitude of the electric field due to charges uniformly distributed on a large plane is $|\sigma|/2\epsilon_o$. The electric field in each region will be the sum of the electric field due to charges on each plate. Your answer should be such that the electric field inside the conducting plates is zero!)  
+2. What is the electric field in each of the five regions? (Hint: The magnitude of the electric field due to charges uniformly distributed on a large plane is $|\sigma|/2\epsilon_o$. The electric field in each region will be the sum of the electric field due to charges on each plate. Your answer should be such that the electric field inside the conducting plates is zero!)  
 
    \ifsolutions
    {\bf Answer}: The magnitude of the field due to each charged surface is $|\sigma|/2\epsilon_o$, where $\sigma$ is the surface charge density. The surface charge densities are $\pm Q/A$.
@@ -62,11 +58,9 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 
    From the diagram in the answer to part 1., the electric fields cancel except between the plates where it is 
 
-   $\ds\frac{|+Q/A|}{2\epsilon_o} + \frac{|-Q/A|}{2\epsilon_o} = \frac{Q}{A\epsilon_o}$
+   $$\frac{|+Q/A|}{2\epsilon_o} + \frac{|-Q/A|}{2\epsilon_o} = \frac{Q}{A\epsilon_o}$$
 
-   to the left, so
-   
-   $\ds\bfvec{E}=-\frac{Q}{A\epsilon_o}\ihat$
+   to the left, so $\ds\bfvec{E}=-\frac{Q}{A\epsilon_o}\ihat$ between the plates. The electric field is zero in all other regions.
 
    \else
    \vspace{3em}
@@ -95,8 +89,8 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 
    \ifsolutions
    {\bf Answer}:
-
-   $$C = \frac{Q}{|\Delta V|} = \frac{Q}{\frac{Qd}{A\epsilon_o}}=\frac{\epsilon_oA}{d}$$
+   
+   $$C = \frac{Q}{|\Delta V|} = \frac{Q}{V(d)-V(0)} = \frac{Q}{\frac{Qd}{A\epsilon_o}}=\frac{\epsilon_oA}{d}$$
    \else
    \vspace{3em}
    \fi
@@ -121,7 +115,7 @@ Charge placed on two spherical conducting shells, the cross--section of which is
 
 <img src="figures/Spherical.svg">
 
-It can be shown (see challenge questions below) that the surface at $r=a$ will have $-Q$ uniformly distributed on it, and the surface at $r=b$ will have $Q$ uniformly distributed on it. The inner surface of the inner conductor and the outer surface of the outer conductor will not have any charge.
+It can be shown (see challenge questions below) that the surface at $r=a$ will have $-Q$ uniformly distributed on it, and the surface at $r=b$ will have $Q$ uniformly distributed on it. Given this, we can conclude that the inner surface of the inner conductor and the outer surface of the outer conductor will not have any charge (why?).
 
 1. What is the electric field in each of the five labeled regions? Region 1. is the empty volume inside of the inner conductor, region 2. is the inner conductor, region 3. is the empty volume between the conductors, region 4. is the outer conductor, and region 5. is the region outside of the outer conductor. (Hint: Use Gauss's law several times; when not zero, the electric field should be proportional to $1/r^2$.)
  
@@ -151,10 +145,10 @@ It can be shown (see challenge questions below) that the surface at $r=a$ will h
    \vspace{6em}
    \fi
 
-4. (Review question) How much work would the electric field do on a positive charge $q_o$ that is moved from $r=a$ to $r=b$? What will be the change in electric potential energy?
+4. (Review question) How much work would the electric field do on a charge $q$ that is moved from $r=a$ to $r=b$? What will be the change in electric potential energy?
 
    \ifsolutions
-   **Answer**: $-q_o(V(b)-V(a))$ and $q_o(V(b)-V(a))$.
+   **Answer**: $-q(V(b)-V(a))$ and $q(V(b)-V(a))$.
    \fi
 
 \newpage
@@ -170,7 +164,7 @@ Use Gauss's law and the fact that the electric field inside a conductor must be 
 5. there can be no charge on the inner surface of the inner conductor,
 
    \ifsolutions
-    **Answer**: A Gaussian sphere with a surface inside the inner conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{l}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. (Note that all charges must be on the surface of a conductor, so the only possible location for the charge is on the inner and outer surfaces.)
+    **Answer**: A Gaussian sphere of radius $r$ with a surface inside the inner conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). It follows from $\oint \bfvec{E}\bfcdot d\bfvec{A}=Q_{\text{encl}}/\epsilon_o$ that $Q_{\text{encl}}=0$. (Note that all charges must be on the surface of a conductor, so the only possible location for the charge is on the inner and outer surfaces.)
    \else
    \vspace{10em}
    \fi
@@ -178,7 +172,7 @@ Use Gauss's law and the fact that the electric field inside a conductor must be 
 6. the charge on the inner surface of the outer conductor is $+Q$, and
 
    \ifsolutions
-    **Answer**: A Gaussian sphere with its surface inside the outer conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{l}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. We know the charge on the inner conductor must be $-Q$. To make the charge inside this sphere zero, we need $+Q$ on the inner surface of the inner conductor to get $Q_{\text{encl}}=0$.
+    **Answer**: A Gaussian sphere with its surface inside the outer conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{\bfvec{A}}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. The charge on the inner conductor was given as $-Q$. To make the charge inside this sphere zero ($Q_{\text{encl}}=0$), we need $+Q$ on the inner surface of the inner conductor.
    \else
    \vspace{10em}
    \fi
@@ -186,23 +180,18 @@ Use Gauss's law and the fact that the electric field inside a conductor must be 
 7. there is no charge on the outer surface of the outer conductor.
 
    \ifsolutions
-    **Answer**: If the total charge on the outer conductor is $+Q$ and all of it is on its inner surface, but conservation of charge, there is no charge on its outer surface. Recall that charges arrange themselves on a conductor to make the electric field inside all conductors zero. With this charge arrangement, the electric field due to the charges on the outer surface of the inner conductor cancels the electric field due to the charge on the inner surface of the outer conductor for $r>b$.
+    **Answer**: If the total charge on the outer conductor is $+Q$ and all of it is on its inner surface, but conservation of charge, there is no charge on its outer surface.
    \else
+   \newpage
    \fi
-
-
-\newpage
-
 
 # Cylindrical
 
 Charge placed on two long cylindrical conducting shells, the cross--section of which is shown. Both shells have a thickness of $t$. The inner shell has an outer radius of $a$ and a net charge of $-Q$. The outer shell has an inner radius of $b$ and a net charge of $+Q$. Assume that $Q$ is positive and the cylinders have length $L$.
 
-<img src="figures/Spherical.svg">
-
 <img src="figures/Cylinder_3D.svg">
 
-1. How will the charges distribute on each surface? (Assume no charge appears on the ends of the cylinders and any surface charge is uniformly distributed.) That is, find the charge density on
+1. What is the net charge and surface charge density on each surface? Assume the charges are uniformly distributed on long surfaces and that no charge appears on end surfaces. That is, find the charge density on
 
    * the inner surface of the inner cylinder,
    * the outer surface of the inner cylinder,
@@ -211,18 +200,26 @@ Charge placed on two long cylindrical conducting shells, the cross--section of w
 
    \ifsolutions
     **Answer**:
+    * Net charge: $0$, $-Q$, $Q$, and $0$
+    * Surface charge density: $\lambda$ = $0$, $-Q/2\pi a L$, $Q/2\pi b L$, $0$
+    * Linear charge density: $\sigma$ = $0$, $-Q/L$, $Q/L$, $0$
+    See the cylindrical shell problem in [the solutions for the Enclosed Charge activity](https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf) for a discussion of why we can describe the charge density in terms of both surface and linear densities.
+   \else
+   \newpage
    \fi
 
-\newpage
 
+\ifsolutions
+\else
 <img src="figures/Spherical.svg">
 
-The cross--section figure from previous page is repeated above.
+The cross--section figure from the previous page is repeated above.
+\fi
 
 2. Given your answer to part 1. of this problem, what is the electric field in each of the five regions? (Hint: Use Gauss's law)
 
    \ifsolutions
-    **Answer**:
+    **Answer**: The field points in the radial direction and inward: $\ds E_r = -\frac{\lambda }{2\pi\epsilon_o}\frac{1}{r} = -\frac{Q/L}{2\pi\epsilon_o}\frac{1}{r}$
    \else
    \vspace{8em}
    \fi
@@ -230,7 +227,7 @@ The cross--section figure from previous page is repeated above.
 3. What is the electric potential difference, $V(b)-V(a)$, between the outer an inner cylinder? (Make sure the sign of your result matches your expectation based on the techniques covered in the last activity.)
 
    \ifsolutions
-    **Answer**:
+    **Answer**: $\ds V(b)-V(a) =  \frac{\lambda}{2\pi\epsilon_o}\ln(b/a) = \frac{Q/L}{2\pi\epsilon_o}\ln(b/a) $
    \else
    \vspace{8em}
    \fi
@@ -238,13 +235,9 @@ The cross--section figure from previous page is repeated above.
 4. Find the capacitance in terms of $\epsilon_o$, $L$, $a$, and $b$.
 
    \ifsolutions
-   **Answer**:
+   **Answer**: $\displaystyle C= \frac{Q}{V(b)-V(a)} = \frac{Q}{\frac{Q/L}{2\pi\epsilon_o}\ln(b/a)}=\frac{2\pi \epsilon_o L}{\ln(b/a)}$.
+   
+   Note that sometimes the capacitance for this case is written in terms of capacitance per unit length: $\ds C/L=\frac{2\pi \epsilon_o}{\ln(b/a)}$.
    \else
    \vspace{10em}
-   \fi
-
-7. How much work would the electric field do on a charge $q_o$ moved from $r=a$ to $r=b$? What would be the change in $q_o$'s electric potential energy?
-
-   \ifsolutions
-   **Answer**:
    \fi
