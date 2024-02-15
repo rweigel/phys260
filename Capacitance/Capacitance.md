@@ -20,7 +20,7 @@ A technique for computing capacitance when Gauss's law can be used to compute th
 1. If a conductor is isolated (meaning other charges are far enough away that we can ignore their electric fields), the electric field inside it is the superposition of the electric fields due to each charge on the conductor.
 2. If a conductor is not isolated, the electric field inside it is the superposition of the electric fields due to each charge on the conductor and all other charges in the universe.
 
-**Electric Potential Energy and Electric Potential**: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to a electric field, we define potential energy $U$ according to
+**Electric Potential Energy and Electric Potential**: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to an electric field, we define potential energy $U$ according to
 
 $\Delta U = U(b)-U(a) \equiv -W_{a\rightarrow b}$
 
@@ -39,10 +39,10 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 
 <img src="figures/Parallel_Plate.svg" height="200px">
 
-1. How will the charges be distributed on each of the plates? That is, how much charge is on each of the four large faces with area $A$? Assume the charges are uniformly distributed on these four faces and that no charge appears on the thin edge faces with thickness $t$.
+1. How will the charges be distributed on the plates? That is, how much charge is on each of the four large faces with area $A$? Assume the charges are uniformly distributed on these four faces and that no charge appears on the thin edge faces with thickness $t$.
 
    \ifsolutions
-   {\bf Answer}: The charges will move to the inner faces, as shown in the following diagram. Electric field vectors for the positive and negative charges are shown.
+   {\bf Answer}: The charges will move to the inner faces, as shown in the following diagram. Electric field vectors associated with the positive and negative charges are shown.
 
    <img src="figures/Parallel_Plate_Fields.svg"/>
    \else
@@ -52,11 +52,10 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 2. What is the electric field in each of the five regions? (Hint: The magnitude of the electric field due to charges uniformly distributed on a large plane is $|\sigma|/2\epsilon_o$. The electric field in each region will be the sum of the electric field due to charges on each plate. Your answer should be such that the electric field inside the conducting plates is zero!)  
 
    \ifsolutions
-   {\bf Answer}: The magnitude of the field due to each charged surface is $|\sigma|/2\epsilon_o$, where $\sigma$ is the surface charge density. The surface charge densities are $\pm Q/A$.
-   
+   {\bf Answer}: The magnitude of the field due to each charged surface is $|\sigma|/2\epsilon_o$, where $\sigma$ is the surface charge density. The surface charge densities are $\pm Q/A$. Adding the electric field vectors shown in the the answer to part 1. gives a total electric field that is zero except between the plates.
+
    <img src="figures/Parallel_Plate_Solution.svg"/>
 
-   From the diagram in the answer to part 1., the electric fields cancel except between the plates where it is 
 
    $$\frac{|+Q/A|}{2\epsilon_o} + \frac{|-Q/A|}{2\epsilon_o} = \frac{Q}{A\epsilon_o}$$
 
@@ -95,10 +94,10 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
    \vspace{3em}
    \fi
 
-5. (Review question) How much work would the electric field do on a positive charge $q_o$ that is moved from the left plate to the right plate? What would be the change in electric potential energy?
+5. (Review question) How much work will the electric field do on a charge $q$ that is moved from the left plate to the right plate? What will be the change in electric potential energy?
 
    \ifsolutions
-  {\bf Answer}: $\ds W=-q_o(V(d)-V(0))=-q_o\frac{Qd}{A\epsilon_o}$. Sign check: The force of the electric field on the positive charge $q_o$ is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
+  {\bf Answer}: $\ds W=-q(V(d)-V(0))=-q\frac{Qd}{A\epsilon_o}$. Sign check: The force of the electric field on the positive charge $q$ is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
 
   $\ds\Delta U=-W=q_o(V(d)-V(0))=+q_o\frac{Qd}{A\epsilon_o}$
    \else
@@ -157,14 +156,14 @@ It can be shown (see challenge questions below) that the surface at $r=a$ will h
 
 <img src="figures/Spherical.svg">
 
-Draw the Gaussian surfaces you use to answer each of the following questions on the diagram above or a new diagram in the space below.
+Draw the cross-section of Gaussian surfaces you use to answer any of the following questions on the diagram above.
 
 Use Gauss's law and the fact that the electric field inside a conductor must be zero to show
 
 5. there can be no charge on the inner surface of the inner conductor,
 
    \ifsolutions
-    **Answer**: A Gaussian sphere of radius $r$ with a surface inside the inner conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). It follows from $\oint \bfvec{E}\bfcdot d\bfvec{A}=Q_{\text{encl}}/\epsilon_o$ that $Q_{\text{encl}}=0$. (Note that all charges must be on the surface of a conductor, so the only possible location for the charge is on the inner and outer surfaces.)
+    **Answer**: A Gaussian sphere with its surface inside the inner conductor has $E=0$ on its surface (because $E$ inside a conductor is zero). It follows from $\oint \bfvec{E}\bfcdot d\bfvec{A}=Q_{\text{encl}}/\epsilon_o$ that $Q_{\text{encl}}=0$. (Note that all charges must be on the surface of a conductor, so the only possible location for the charge is on the inner and outer surfaces.)
    \else
    \vspace{10em}
    \fi
@@ -172,7 +171,7 @@ Use Gauss's law and the fact that the electric field inside a conductor must be 
 6. the charge on the inner surface of the outer conductor is $+Q$, and
 
    \ifsolutions
-    **Answer**: A Gaussian sphere with its surface inside the outer conductor has $E=0$ on its surface (b/c $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{\bfvec{A}}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. The charge on the inner conductor was given as $-Q$. To make the charge inside this sphere zero ($Q_{\text{encl}}=0$), we need $+Q$ on the inner surface of the inner conductor.
+    **Answer**: A Gaussian sphere with its surface inside the outer conductor has $E=0$ on its surface (because $E$ inside a conductor is zero). Based on $\oint \bfvec{E}\bfcdot d\mathbf{\bfvec{A}}=Q_{\text{encl}}/\epsilon_o$, this implies $Q_{\text{encl}}=0$. The charge on the inner conductor was given as $-Q$. To make the charge inside this sphere zero (so that $Q_{\text{encl}}=0$), we need $+Q$ on the inner surface of the inner conductor.
    \else
    \vspace{10em}
    \fi
@@ -180,7 +179,7 @@ Use Gauss's law and the fact that the electric field inside a conductor must be 
 7. there is no charge on the outer surface of the outer conductor.
 
    \ifsolutions
-    **Answer**: If the total charge on the outer conductor is $+Q$ and all of it is on its inner surface, but conservation of charge, there is no charge on its outer surface.
+    **Answer**: If the total charge on the outer conductor is $+Q$ and all of it is on its inner surface, by conservation of charge, there is no charge on its outer surface.
    \else
    \newpage
    \fi
@@ -202,8 +201,7 @@ Charge placed on two long cylindrical conducting shells, the cross--section of w
     **Answer**:
     * Net charge: $0$, $-Q$, $Q$, and $0$
     * Surface charge density: $\lambda$ = $0$, $-Q/2\pi a L$, $Q/2\pi b L$, $0$
-    * Linear charge density: $\sigma$ = $0$, $-Q/L$, $Q/L$, $0$
-    See the cylindrical shell problem in [the solutions for the Enclosed Charge activity](https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf) for a discussion of why we can describe the charge density in terms of both surface and linear densities.
+    * Linear charge density: $\sigma$ = $0$, $-Q/L$, $Q/L$, $0$. See the cylindrical shell problem in [the solutions for the Enclosed Charge activity](https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf) for a discussion of why we can describe the charge density in terms of both surface and linear densities.
    \else
    \newpage
    \fi
