@@ -99,7 +99,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
    \ifsolutions
   {\bf Answer}: $\ds W=-q(V(d)-V(0))=-q\frac{Qd}{A\epsilon_o}$. Sign check: The force of the electric field on the positive charge $q$ is to the left and the displacement is to the right, so $\bfvec{F}\bfcdot d\bfvec{l}$ will be negative.
 
-  $\ds\Delta U=-W=q_o(V(d)-V(0))=+q_o\frac{Qd}{A\epsilon_o}$
+  $\ds\Delta U=-W=q(V(d)-V(0))=+q\frac{Qd}{A\epsilon_o}$
    \else
    \vspace{3em}
    \fi
@@ -110,7 +110,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 
 # Spherical
 
-Charge placed on two spherical conducting shells, the cross--section of which is shown. Both shells have a thickness of $t$. The inner shell has an outer radius of $a$ and a net charge of $-Q$. The outer shell has an inner radius of $b$ and a net charge of $+Q$. Assume that $Q$ is positive.
+Charge is placed on two spherical conducting shells, the cross--section of which is shown. Both shells have a thickness of $t$. The inner shell has an outer radius of $a$ and a net charge of $-Q$. The outer shell has an inner radius of $b$ and a net charge of $+Q$. Assume that $Q$ is positive.
 
 <img src="figures/Spherical.svg">
 
@@ -186,7 +186,7 @@ Use Gauss's law and the fact that the electric field inside a conductor must be 
 
 # Cylindrical
 
-Charge placed on two long cylindrical conducting shells, the cross--section of which is shown. Both shells have a thickness of $t$. The inner shell has an outer radius of $a$ and a net charge of $-Q$. The outer shell has an inner radius of $b$ and a net charge of $+Q$. Assume that $Q$ is positive and the cylinders have length $L$.
+Charge is placed on two long cylindrical conducting shells, the cross--section of which is shown. Both shells have a thickness of $t$. The inner shell has an outer radius of $a$ and a net charge of $-Q$. The outer shell has an inner radius of $b$ and a net charge of $+Q$. Assume that $Q$ is positive and the cylinders have length $L$.
 
 <img src="figures/Cylinder_3D.svg">
 
@@ -217,12 +217,14 @@ The cross--section figure from the previous page is repeated above.
 2. Given your answer to part 1. of this problem, what is the electric field in each of the five regions? (Hint: Use Gauss's law)
 
    \ifsolutions
-    **Answer**: The field points in the radial direction and inward: $\ds E_r = -\frac{\lambda }{2\pi\epsilon_o}\frac{1}{r} = -\frac{Q/L}{2\pi\epsilon_o}\frac{1}{r}$
+    **Answer**: In region 3., the field points in the radial direction and inward: $\ds E_r = -\frac{\lambda }{2\pi\epsilon_o}\frac{1}{r} = -\frac{Q/L}{2\pi\epsilon_o}\frac{1}{r}$
+    
+    The field is zero in all other regions.
    \else
    \vspace{8em}
    \fi
 
-3. What is the electric potential difference, $V(b)-V(a)$, between the outer an inner cylinder? (Make sure the sign of your result matches your expectation based on the techniques covered in the last activity.)
+3. What is the electric potential difference, $V(b)-V(a)$, between the outer and inner cylinder? (Make sure the sign of your result matches your expectation based on the techniques covered in the last activity.)
 
    \ifsolutions
     **Answer**: $\ds V(b)-V(a) =  \frac{\lambda}{2\pi\epsilon_o}\ln(b/a) = \frac{Q/L}{2\pi\epsilon_o}\ln(b/a) $
@@ -235,7 +237,7 @@ The cross--section figure from the previous page is repeated above.
    \ifsolutions
    **Answer**: $\displaystyle C= \frac{Q}{V(b)-V(a)} = \frac{Q}{\frac{Q/L}{2\pi\epsilon_o}\ln(b/a)}=\frac{2\pi \epsilon_o L}{\ln(b/a)}$.
    
-   Note that sometimes the capacitance for this case is written in terms of capacitance per unit length: $\ds C/L=\frac{2\pi \epsilon_o}{\ln(b/a)}$.
+   Note that sometimes the capacitance for this case is written in terms of capacitance per unit length: $\ds C/L={2\pi \epsilon_o}/{\ln(b/a)}$.
    \else
    \vspace{10em}
    \fi
