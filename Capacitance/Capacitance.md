@@ -206,7 +206,6 @@ Charge is placed on two long cylindrical conducting shells, the cross--section o
    \newpage
    \fi
 
-
 \ifsolutions
 \else
 <img src="figures/Spherical.svg">
@@ -236,7 +235,6 @@ The cross--section figure from the previous page is repeated above.
 
    \ifsolutions
    **Answer**: $\displaystyle C= \frac{Q}{V(b)-V(a)} = \frac{Q}{\frac{Q/L}{2\pi\epsilon_o}\ln(b/a)}=\frac{2\pi \epsilon_o L}{\ln(b/a)}$.
-   
    Note that sometimes the capacitance for this case is written in terms of capacitance per unit length: $\ds C/L={2\pi \epsilon_o}/{\ln(b/a)}$.
    \else
    \vspace{10em}
