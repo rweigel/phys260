@@ -14,7 +14,7 @@ $$I = n|q|v_dA$$
 
 where $A$ is the cross--sectional area of the wire.
 
-We also define the current density, $J = n|q|v_d$, which is the current per cross--sectional area:
+We also define the average current density, $J = n|q|v_d$, which is the current per cross--sectional area:
 
 $$J=\frac{I}{A}$$
 
