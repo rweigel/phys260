@@ -2,23 +2,25 @@
 
 ## Definitions
 
-Current is defined as the rate of change of charge, $Q$, per time. If you were able to count the number of charges passing a cross--section of a wire over $1\text{ s}$, the current would be $Q/t$. If the amount of time was small, say $\Delta t$, and your labeled your count as $\Delta Q$, then $I = {\Delta Q}/{\Delta t}$. In the limit that $\Delta t$ approaches zero, we have the definition 
+The electric current in a wire is defined as 
 
 $$I = \frac{dQ}{dt}$$
 
-If $n$ is the number of charges with charge $q$ per volume and $v_d$ is the average velocity of the charges (called the "drift velocity"), then
+where $dQ$ is the total amount of charge that passes through a cross--section of the wire in a differential amount of time, $dt$.
 
-$$I = nqv_dA$$
+If $q$ is the charge (in Coulombs) of each flowing charge, $n$ is their number per volume, $v_d$ their average speed along the wire (called the "drift velocity"), then
+
+$$I = n|q|v_dA$$
 
 where $A$ is the cross--sectional area of the wire.
 
-We also define a quantity called the current density, $J$, which is the current per unit cross--sectional area, $A$:
+We also define the current density, $J = n|q|v_d$, which is the current per cross--sectional area:
 
-$$J = \frac{I}{A}$$
+$$J=\frac{I}{A}$$
 
 ## Ohm's Law
 
-If an electric field exists in a wire (by, for example, connected its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (resist the flow). The net result will be a flow of charges with a drift velocity. Experimentally, it has been shown that in many materials, the ratio of the electric field to current density is 
+If an electric field exists in a wire (by, for example, connecting its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (collisions resist the flow). The net result will be a flow of charges with a drift velocity. Experimentally, it has been shown that in many materials, the ratio of the electric field to current density is 
 
 $$\rho = \frac{E}{J}$$
 
@@ -30,7 +32,7 @@ $$I = V/R$$
 
 which means a voltage $V$ applied to a wire will result in a current $I$, and this current depends on $R$.
 
-The resistance is larger the longer wire and smaller for a larger cross--section of wire. The result is
+For a wire of length $L$ with a constant cross--sectional area $A$, resistance is proportional to $L$ and inversely proportional $A$:
 
 $$R = \frac{\rho L}{A}$$
 
@@ -38,17 +40,9 @@ $$R = \frac{\rho L}{A}$$
 
 # Problem I -- Definitions and Ohm's Law
 
-A $9$ Volt battery is connected to a wire of length $10$ meters with circular cross section of radius of $0.01$ meters. The wire has a resistivity of $10^{-8}\Omega\cdot\text{m}$. The density of charge carriers is $10^{28}/\text{m}^3$. Assume Ohm's law applies.
+A $9$--volt battery is connected to a wire of length $10$ meters with a circular cross--section and radius of $0.01$ meters. The wire has a resistivity of $10^{-8}\Omega\cdot\text{m}$. The density of charge carriers is $10^{28}/\text{m}^3$. Assume Ohm's law applies.
 
-1.  What is the resistance (with units) of the wire?
-
-    \ifsolutions
-    **Answer**:
-    \else
-    \vspace{7em}
-    \fi
-
-2.  How much charge (with units) flows past a cross section of the wire per second?
+1. What is the resistance (with units) of the wire?
 
     \ifsolutions
     **Answer**:
@@ -56,7 +50,7 @@ A $9$ Volt battery is connected to a wire of length $10$ meters with circular cr
     \vspace{7em}
     \fi
 
-3.  What is the current (with units) in the wire?
+2. What is the current (with units) in the wire?
 
     \ifsolutions
     **Answer**:
@@ -64,7 +58,7 @@ A $9$ Volt battery is connected to a wire of length $10$ meters with circular cr
     \vspace{7em}
     \fi
 
-4.  What is the current density (with units) that flows through the wire?
+3. How much charge (with units) flows past a cross--section of the wire per second?
 
     \ifsolutions
     **Answer**:
@@ -72,7 +66,7 @@ A $9$ Volt battery is connected to a wire of length $10$ meters with circular cr
     \vspace{7em}
     \fi
 
-5.  What is the drift velocity of electrons in the wire? (The charge on an electron is $-1.6·10^{-19}\text{ C}$.)
+4. What is the current density (with units) that flows through the wire?
 
     \ifsolutions
     **Answer**:
@@ -80,7 +74,15 @@ A $9$ Volt battery is connected to a wire of length $10$ meters with circular cr
     \vspace{7em}
     \fi
 
-6. Based on the description of how charged particles flow in a wire, explain why the resitance of a cylindrical wire is proportional to its length and inversely proportinal to the square of its radius.
+5. What is the drift velocity of electrons in the wire? (The charge on an electron is $-1.6·10^{-19}\text{ C}$.)
+
+    \ifsolutions
+    **Answer**:
+    \else
+    \vspace{7em}
+    \fi
+
+6. Based on the description of how charged particles flow in a wire, explain why the resistance of a cylindrical wire is proportional to its length and inversely proportional to the square of its radius.
 
     \ifsolutions
     **Answer**:
@@ -91,17 +93,9 @@ A $9$ Volt battery is connected to a wire of length $10$ meters with circular cr
 
 # Problem II -- Definitions and Ohm's Law
  
-A battery is connected to a wire of length $20$ meters with circular cross section and a radius of $0.01$ meters. The wire has a resistivity of $10^{-7}\Omega\cdot\text{m}$. The density of charge carriers is $10^{27}/\text{m}^3$. The current in the wire was measured and found to be $1$ Ampere. Assume Ohm's law applies.
+A battery is connected to a wire of length $20$ meters with a circular cross--section and a radius of $0.01$ meters. The wire has a resistivity of $10^{-7}\Omega\cdot\text{m}$. The density of charge carriers is $10^{27}/\text{m}^3$. The current in the wire was measured and found to be $1$ Ampere. Assume Ohm's law applies.
 
-1.  What is the resistance (with units) of the wire?
-
-    \ifsolutions
-    **Answer**:
-    \else
-    \vspace{7em}
-    \fi
-
-2.  How much charge (with units) flows past a cross section of the wire per second?
+1. What is the resistance (with units) of the wire?
 
     \ifsolutions
     **Answer**:
@@ -109,7 +103,7 @@ A battery is connected to a wire of length $20$ meters with circular cross secti
     \vspace{7em}
     \fi
 
-3.  What is the current (with units) in the wire?
+2. How much charge (with units) flows past a cross--section of the wire per second?
 
     \ifsolutions
     **Answer**:
@@ -117,7 +111,7 @@ A battery is connected to a wire of length $20$ meters with circular cross secti
     \vspace{7em}
     \fi
 
-4.  What is the current density (with units) that flows through the wire?
+3. What is the current density (with units) that flows through the wire?
 
     \ifsolutions
     **Answer**:
@@ -125,7 +119,7 @@ A battery is connected to a wire of length $20$ meters with circular cross secti
     \vspace{7em}
     \fi
 
-5.  What is the drift velocity of electrons in the wire? (The charge on an electron is $-1.6·10^{-19}\text{ C}$.)
+4. What is the drift velocity of electrons in the wire? (The charge on an electron is $-1.6·10^{-19}\text{ C}$.)
 
     \ifsolutions
     **Answer**:
@@ -135,9 +129,19 @@ A battery is connected to a wire of length $20$ meters with circular cross secti
 
 \newpage
 
-# Problem III -- $I = nqv_dA$ derivation
+# Problem III -- Current Through a Cylindrical Shell
 
-Derive the relationship $I = nqv_dA$. Provide a diagram.
+If a cylindrical wire with an inner radius $a$ and outer radius $b$ carries a current $I$, what is $J$?
+
+\ifsolutions
+**Answer**: $$J=\frac{I}{\pi(b^2-a^2)}$$
+\else
+\vspace{7em}
+\fi
+
+# Problem IV -- $I = n|q|v_dA$ derivation
+
+Derive the relationship $I = n|q|v_dA$. Provide a diagram.
 
 \ifsolutions
 **Answer**: See textbook.
