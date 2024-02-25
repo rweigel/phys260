@@ -228,7 +228,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 * Background material:
   * Reading:
-    * [Sections 22.1-22.2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/drive/folders/1Cm5DOUs8JHwgNEFrVntJD6ubWNDODWrx★★★★remove★★★★)
+    * [Sections 22.1-22.2 of Young and Freedman 2015, 14th Edition](https://drive.google.com/file/d/1oOs-vfig3K9_xnXgghFwS-Ef99D4oQqB/view?usp=sharing★★★★remove★★★★)
     * [Introductory Physics - Building Models to Describe Our World (Martin et al.)](https://phys.libretexts.org/Bookshelves/University_Physics/Book:_Introductory_Physics_-_Building_Models_to_Describe_Our_World_(Martin_Neary_Rinaldo_and_Woodman)/17:_Gauss_Law/17.01:_Flux_of_the_Electric_Field)
   * Videos:
     * [Basic overview of definition of electric flux by Khan Academy](https://www.youtube.com/watch?v=9MN0eTC-vzQ)

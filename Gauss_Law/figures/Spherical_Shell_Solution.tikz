@@ -33,9 +33,9 @@
 %Straight Lines [id:da24478782587243564] 
 \draw [line width=1.5]    (180,90) -- (220,90) ;
 %Straight Lines [id:da27346654142823046] 
-\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (175,60) -- (185,60) ;
+\draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (175,50) -- (185,50) ;
 %Curve Lines [id:da46273645063648505] 
-\draw [line width=1.5]    (220,60) .. controls (249.2,83.28) and (267.2,82.28) .. (310,87) ;
+\draw [line width=1.5]    (220,50) .. controls (244.67,82.08) and (265.2,84.08) .. (310,87) ;
 %Curve Lines [id:da7493706286742585] 
 \draw    (231.84,57.37) .. controls (240.87,45.94) and (252.71,50.72) .. (260,57) ;
 \draw [shift={(230,60)}, rotate = 302.01] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
@@ -47,13 +47,13 @@
 % Text Node
 \draw (77,52.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
 % Text Node
-\draw (174,24.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E$};
+\draw (174,24.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$E_{r}$};
 % Text Node
 \draw (216,98.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$R$};
 % Text Node
 \draw (321,88.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$r$};
 % Text Node
-\draw (130,54.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3Q/4\pi \epsilon _{o} R^{2}$};
+\draw (130,46.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3Q/4\pi \epsilon _{o} R^{2}$};
 % Text Node
 \draw (262,53.4) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$3Q/4\pi \epsilon _{o} r^{2}$};
 % Text Node
