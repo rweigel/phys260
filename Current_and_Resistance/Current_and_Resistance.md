@@ -8,7 +8,7 @@ $$I = \frac{dQ}{dt}$$
 
 where $dQ$ is the total amount of charge that passes through a cross--section of the wire in a differential amount of time, $dt$.
 
-If $q$ is the charge (in Coulombs) of each flowing charge, $n$ is their number per volume ("number density"), $v_d$ their average speed along the wire (called the "drift velocity"), then
+If $q$ is the charge (in Coulombs) of each flowing charge, $n$ is their number per volume ("number density"), $v_d$ their average speed along the wire (called the "drift speed"), then
 
 $I = n|q|v_dA$, where $A$ is the cross--sectional area of the wire.
 
@@ -18,7 +18,7 @@ $\ds J=\frac{I}{A}$, which can be written as $J = n|q|v_d$.
 
 ## Ohm's Law
 
-If an electric field exists in a wire (by, for example, connecting its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (collisions resist the flow). The net result will be current -- a flow of charges with an average drift velocity. Experimentally, it has been shown that in many materials, the electric field is proportional to the current density: 
+If an electric field exists in a wire (by, for example, connecting its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (collisions resist the flow). The net result will be current -- a flow of charges with an average drift speed. Experimentally, it has been shown that in many materials, the electric field is proportional to the current density: 
 
 $$E = \rho J$$
 
@@ -28,13 +28,13 @@ For a wire of length $L$ and constant cross--sectional area $A$, Ohm's law can a
 
 $V = I R$.
 
-In this form, the interpretation is that the voltage across a wire is proportional to the current in the wire, with the proportionality constant of $R$.
+In this form, the interpretation is that the voltage between the ends of a wire is proportional to the current in the wire, with the proportionality constant of $R$.
 
 \newpage
 
 # Problem I -- Definitions and Ohm's Law
 
-A $9$--volt power source is connected to a wire of length $10$ meters with a circular cross--section and radius of $0.01$ meters. The wire has a resistivity of $10^{-8}\text{ }\Omega\cdot\text{m}$. The number density of charge carriers is $10^{28}/\text{m}^3$. Assume Ohm's law applies and the charges that flow are electrons.
+A $9$--volt power source is connected to a wire of length $10$ meters with a circular cross--section and radius of $0.01$ meters. The wire has a resistivity of $10^{-8}\text{ }\Omega\cdot\text{m}$. The number density of flowing charges is $10^{28}/\text{m}^3$. Assume Ohm's law applies and the charges that flow are electrons.
 
 1. What is the resistance (with units) of the wire?
 
@@ -47,7 +47,7 @@ A $9$--volt power source is connected to a wire of length $10$ meters with a cir
 2. What is the current (with units) in the wire?
 
     \ifsolutions
-    **Answer**: $\ds I = \frac{9\text{ v}}{\frac{10^{-3}}{\pi}\text{ }\Omega}=9,000\pi\text{ A}$. This is a huge current. If you look at the back of an electronic device, you will see a rating on the order of $1\text{ A}$. Household circuit breakers are set to break at approximately $15\text{ A}$. Most power sources cannot supply current at this rate; even if the power source could supply this current, the amount of heat created would lead to a fire or melting of the wire.
+    **Answer**: $\ds I = \frac{9\text{ v}}{\frac{10^{-3}}{\pi}\text{ }\Omega}=9,000\pi\text{ A}$. This is a huge current. If you look at the back of an electronic device, you will see a rating on the order of $1\text{ A}$. Household circuit breakers are set to open ("trip") at approximately $15\text{ A}$. Most power sources cannot supply current at this rate; even if the power source could supply this current, the amount of heat created would lead to a fire or melting of the wire.
     \else
     \vspace{7em}
     \fi
@@ -92,7 +92,7 @@ A $9$--volt power source is connected to a wire of length $10$ meters with a cir
 
 # Problem II -- Definitions and Ohm's Law
  
-A power source is connected to a wire of length $20$ meters with a circular cross--section and a radius of $0.01$ meters. The wire has a resistivity of $10^{-7}\text{ }\Omega\cdot\text{m}$. The number density of charge carriers is $10^{27}/\text{m}^3$. The current in the wire was measured and found to be $1\text{ A}$. Assume Ohm's law applies and the charges that flow are electrons.
+A power source is connected to a $20$ meter long wire with a circular cross--section and radius of $0.01$ meters. The wire has a resistivity of $10^{-7}\text{ }\Omega\cdot\text{m}$. The number density of flowing charges is $10^{27}/\text{m}^3$. The current in the wire was measured and found to be $1\text{ A}$. Assume Ohm's law applies and the charges that flow are electrons.
 
 1. What is the resistance (with units) of the wire?
 
