@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>README</title>
+  <title>Equivalent Resistance</title>
   <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
     #toc>ol ol {
       display: none
@@ -552,56 +553,180 @@
 </head>
 
 <body class="body">
-  <div id="toc" style="min-width: 5em;">
+  <div id="toc" style="display: block; min-width: 5em;">
     <ol>
       <li>
-        <a href="#general" raw="# General" lo="1" class="highlighted">
-          <span class="toctext">General</span>
+        <a href="#introduction" raw="# Introduction" lo="5" class="highlighted">
+          <span class="toctext">Introduction</span>
         </a>
       </li>
       <li>
-        <a href="#2022-fall" raw="# 2022 Fall" lo="5" class="">
-          <span class="toctext">2022 Fall</span>
+        <a href="#single-loop" raw="# Single Loop" lo="22" class="">
+          <span class="toctext">Single Loop</span>
         </a>
       </li>
       <li>
-        <a href="#2023-spring" raw="# 2023 Spring" lo="9">
-          <span class="toctext">2023 Spring</span>
+        <a href="#multiple-loops-i" raw="# Multiple Loops I" lo="33" class="">
+          <span class="toctext">Multiple Loops I</span>
+        </a>
+      </li>
+      <li>
+        <a href="#multiple-loops-ii" raw="# Multiple Loops II" lo="39" class="">
+          <span class="toctext">Multiple Loops II</span>
+        </a>
+      </li>
+      <li>
+        <a href="#rebuilding-i" raw="# Rebuilding I" lo="45">
+          <span class="toctext">Rebuilding I</span>
+        </a>
+      </li>
+      <li>
+        <a href="#rebuilding-ii" raw="# Rebuilding II" lo="47" class="">
+          <span class="toctext">Rebuilding II</span>
         </a>
       </li>
     </ol>
   </div>
   <div id="display">
     <div class="section">
-    </div>
-    <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1" class="highlighted"><a name="general" number="1" lo="1" raw="# General" class="anchor hanchor" href="#general"><span class="hnumber">1</span>&nbsp;<span class="htext">General</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="3" lf="3" class="active">The introduction of this activity does not describe how to determine the voltage changes across batteries and resistors. It is expected that the instructor will review this.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
+        <p padlength="0" lo="2" lf="2" class="title">Equivalent Resistance</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">2</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="5" lf="5" class=""><a name="2022-fall" number="2" lo="5" raw="# 2022 Fall" class="anchor hanchor" href="#2022-fall"><span class="hnumber">2</span>&nbsp;<span class="htext">2022 Fall</span></a></h1>
+        <h1 lo="5" lf="5" class="highlighted"><a name="introduction" number="1" lo="5" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
         <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="7" lf="7">rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.</p>
+        <p padlength="0" lo="7" lf="7" class="">The current in all parts of a circuit with resistors and batteries can always be found by writing equations for KVL and KCL and solving for the unknown currents. This was the approach taken in the Kirchhoff’s law activity.</p>
         <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="9" lf="9">There is an alternative approach that is often faster:</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+      </div>
+      <div class="block">
+        <ol lo="11" lf="13" class="compact">
+          <li markerlength="3" padlength="0" lo="11" lf="11" class="">
+            <div class="block">
+              <p padlength="0" lo="11" lf="11" class="">replace resistors that are in series or parallel with equivalent resistances to create a new circuit. If no resistors are in series or parallel skip to step 3.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="12" lf="12" class="">
+            <div class="block">
+              <p padlength="0" lo="12" lf="12" class="">repeat step 1.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">12</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="13" lf="15" class="">
+            <div class="block">
+              <p padlength="0" lo="13" lf="13" class="">Use KCL and KVL to find currents in the remaining equivalent circuit.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">13</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">11-13</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="15" lf="15" class="active">In many problems, we are only interested in the currents through the batteries, in which case no further analysis is needed beyond step 3. If the currents in the resistors of the original circuit are needed, re-build it step–by–step finding all currents at each step using KCL and KVL.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">15</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="17" lf="20">
+          <div class="solutionstrue">
+          </div>
+          <div class="solutionsfalse">
+            <div class="block">
+              <div class="inline-html">
+                <div class="newpage">
+                  <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">17-20</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="9" lf="9"><a name="2023-spring" number="3" lo="9" raw="# 2023 Spring" class="anchor hanchor" href="#2023-spring"><span class="hnumber">3</span>&nbsp;<span class="htext">2023 Spring</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+        <h1 lo="22" lf="22" class=""><a name="single-loop" number="2" lo="22" raw="# Single Loop" class="anchor hanchor" href="#single-loop"><span class="hnumber">2</span>&nbsp;<span class="htext">Single Loop</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">22</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="11" lf="11">With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+        <p padlength="0" lo="24" lf="24" class="">Reduce the following circuit as much as possible using equivalent resistances. Then find <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">24</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="26" lf="26">
+          <img src="../Kirchhoffs_Laws/figures/Single_Loop_CCW.svg" height="130px">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">26</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="28" lf="31">
+          <div class="solutionstrue">
+          </div>
+          <div class="solutionsfalse">
+            <div class="block">
+              <div class="inline-html">
+                <div class="newpage">
+                  <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">28-31</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="33" lf="33" class=""><a name="multiple-loops-i" number="3" lo="33" raw="# Multiple Loops I" class="anchor hanchor" href="#multiple-loops-i"><span class="hnumber">3</span>&nbsp;<span class="htext">Multiple Loops I</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">33</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="35" lf="35" class="">Reduce the following circuit as much as possible using equivalent resistances. Then find <span len="5" raw="_I_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">35</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="37" lf="37">
+          <img src="../Kirchhoffs_Laws/figures/Parallel_No_Annotation.svg" height="200px">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">37</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="39" lf="39" class=""><a name="multiple-loops-ii" number="4" lo="39" raw="# Multiple Loops II" class="anchor hanchor" href="#multiple-loops-ii"><span class="hnumber">4</span>&nbsp;<span class="htext">Multiple Loops II</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">39</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="41" lf="41" class="">Reduce the following circuit as much as possible using equivalent resistances. Then find <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">41</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="43" lf="43">
+          <img src="../Kirchhoffs_Laws/figures/Multiple_Loops_I_No_Annotation.svg" height="200px">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="45" lf="45"><a name="rebuilding-i" number="5" lo="45" raw="# Rebuilding I" class="anchor hanchor" href="#rebuilding-i"><span class="hnumber">5</span>&nbsp;<span class="htext">Rebuilding I</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">45</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="47" lf="47" class=""><a name="rebuilding-ii" number="6" lo="47" raw="# Rebuilding II" class="anchor hanchor" href="#rebuilding-ii"><span class="hnumber">6</span>&nbsp;<span class="htext">Rebuilding II</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">47</span></div>
       </div>
     </div>
   </div>

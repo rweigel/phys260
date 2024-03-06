@@ -71,7 +71,7 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Kirchoff's Circuit Laws}
+\lhead{Kirchhoff's Circuit Laws}
 \rhead{\thepage}
 \fancyfoot{}
 
@@ -79,59 +79,160 @@
 
 \section{Introduction}
 
-To find the current through each resistor in a circuit with only batteries and resistors, Kirchhoff's Current Law and Kirchhoff's Voltage Rule can be used.
+To find the current through each resistor in a circuit with only resistors and batteries, Kirchhoff's Current Law and Kirchhoff's Voltage Law can be used.
 
 \begin{enumerate}
 
-  \item Kirchhoff's Voltage Law (KVL): The sum of all voltage changes around a closed loop must equal zero.
+  \item Kirchhoff's Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.
 
-  \item Kirchhoff's Current Law (KCL): The sum of all currents entering and exiting a junction must equal zero.
+  \item Kirchhoff's Voltage Law (KVL): The sum of all voltage changes around a closed loop is zero.
 
 \end{enumerate}
 
 \textbf{General procedure}
 
+To find the values of currents in a circuit, 
+
 \begin{enumerate}
 
-  \item Assume directions of current.
+  \item assume directions of current,
 
-  \item Write equations for KCL for nodes.
+  \item write equations for KCL for junctions,
 
-  \item Write equations for KVL for loops using the assumed direction of current.
+  \item write equations for KVL for loops, and
 
-  \item Solve for currents.
+  \item solve for currents. If you get a negative value for a current, the actual direction of current flow is opposite to what you assumed in 1.
 
 \end{enumerate}
 
-\textbf{Sign conventions}
-
-If you get a negative number for a current, your assumed direction was wrong.
-
-When you write KVL, you must choose a direction that you move around the loop. If you ``step" across a resistor $R$ in the direction of an assumed current $i$, the voltage change is $-iR$. If you ``step" across in the direction opposite of $i$, the voltage change is $iR$.
-
-If you step across a battery with emf $\mathcal{E}$ from the $-$ to the $+$, the voltage change is $+\mathcal{E}$. If you step across a battery with emf $\mathcal{E}$ from the $+$ to the $-$, the voltage change is $-\mathcal{E}$. \emph{The direction of the assumed current does not matter.}
-
-\newpage
-
-\section{Single Loop Circuit}
-
-In a single loop circuit, only KVL is needed to find the current.
-
-\input{figures/Single_Loop.tikz}
+To apply KVL, draw a closed loop and choose a direction to step around the loop. 
 
 \begin{enumerate}
 
-  \item Assume the direction of current $I$ in the above circuit is counterclockwise. Write the equation for KVL and then solve for $I$.
+  \item If stepping around the loop requires a step across a battery with emf $\mathcal{E}$ and the $-$ side is encountered first, the voltage change is $+\mathcal{E}$. If the $+$ side is encountered first, the voltage change is $-\mathcal{E}$. \emph{The direction of current through the battery does not matter.}
 
-  \item Assume the direction of current $I$ in the following circuit is clockwise. Write the equation for KVL and then solve for $I$.
+  \item If stepping around the loop requires a step across a resistor $R$ and the direction of current $I$ through the resistor is the same as the step direction, the voltage change is $-IR$. If the current is opposite the step direction, the voltage change is $+IR$.
+
+\end{enumerate}
+
+A common error is to assume every loop equation requires an emf.
+
+\textbf{Note on Equivalent Resistances}
+
+You may have already had experience solving for currents in circuits using equivalent resistances. In this activity, do not use equivalent resistances unless asked. The motivation is that you will better understand their interpretation and derivation after solving for currents without using equivalent resistances.
+
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\section{Single Loop}
+
+Only KVL is needed to find the current in a single-loop circuit.
+
+\begin{enumerate}
+
+  \item The direction of the unknown current $I$ in the following circuit is assumed to be counterclockwise. Write the equation for KVL by stepping around the loop counterclockwise; then solve for $I$ in terms of $\mathcal{E}$ and $R$.
+
+        \input{figures/Single_Loop_CCW.tikz}
+
+        \ifsolutions
+        \textbf{Answer:} $\mathcal{E}-IR-IR=0 \quad \Rightarrow \quad I=\mathcal{E}/2R$
+        \fi
+
+  \item The direction of current $I$ in the following circuit was assumed to be clockwise. Write the equation for KVL stepping around the loop counterclockwise; then solve for $I$ in terms of $\mathcal{E}$ and $R$.
+
+        \input{figures/Single_Loop_CW.tikz}
+
+        \ifsolutions
+        \textbf{Answer:} $\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=-\mathcal{E}/2R$
+        \fi
 
   \item Which value for $I$ found above is correct?
 
-  \item If you removed the bottom resistor and replaced the top resistor with a resistor with resistance $2R$, would $I$ change?
+        \ifsolutions
+        \textbf{Answer}: Both are correct. A negative current is equivalent to a positive current in the opposite direction.
+        \else
+        \vskip 36pt
+        \fi
+
+  \item In part 1., a counterclockwise current was assumed, and you stepped in the counterclockwise direction. If you stepped clockwise, would your answer for $I$ be different?
+
+        \ifsolutions
+        \textbf{Answer}: Answer same. KVL is $-\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=\mathcal{E}/2R$
+        \else
+        \vskip 36pt
+        \fi
+
+  \item For the first circuit considered above, if you remove the bottom resistor and replace the top resistor with a resistor with resistance $2R$, the following circuit results. What is the current $I$ for this circuit?
+
+        \input{figures/Single_Loop_Equiv.tikz}
+
+        \ifsolutions
+        \textbf{Answer}: $I=\mathcal{E}/2R$ in counterclockwise direction. The fact that the answer here is the same as in 1. is related to the formula for the equivalent resistance of resistors in series: $R_{\text{eq}}=R_1+R_2$. Two resistors are in series if only one current path exists between them.
+        \fi
 
 \end{enumerate}
 
-\section{Multiple Loop Circuit I}
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\section{Multiple Loops I}
+
+\input{figures/Parallel.tikz}
+
+\begin{enumerate}
+
+  \item Use KCL at junction $X$ and KVL for loops $A$ and $B$ to show that $I_o=\mathcal{E}\left(\frac{1}{R_1}+\frac{1}{R_2}\right)$.
+
+        \ifsolutions
+        \textbf{Answer}:
+
+        KVL for $A$: $+\mathcal{E}-I_1R_1=0\quad\Rightarrow\quad I_1=\mathcal{E}/R_1$
+
+        KVL for $B$: $+I_1R_1-I_2R_2=0 \quad\Rightarrow\quad I_2 = I_1 R_1/R_2 = \mathcal{E}/R_2$
+
+        KCL at $X$: $I_o=I_1+I_2 = \mathcal{E}/R_1 + \mathcal{E}/R_2 = \mathcal{E}\left(\frac{1}{R_1}+\frac{1}{R_2}\right)$
+        \else
+        \vskip 120pt
+        \fi
+
+\end{enumerate}
+
+\begin{enumerate}
+
+  \item[2.] If $R_2 > R_1$, which resistor will have more current?
+
+            \ifsolutions
+            \textbf{Answer}:
+
+            $$\frac{I_2}{I_1} = \frac{R_1}{R_2} \quad \Rightarrow \quad I_2 < I_1$$ 
+
+            One can also use the water flow analogy. If $R_2$ resists flow more than $R_1$, there will be more flow through $R_1$.
+            \else
+            \vskip 60pt
+            \fi
+
+  \item[3.] If $R_1 \rightarrow 0$, what happens to $I_o$, $I_1$, and $I_2$?
+
+            \ifsolutions
+            \textbf{Answer}: $I_o \rightarrow \infty$, $I_1 \rightarrow \infty$, and $I_2\rightarrow 0$. In this case, we say that resistor $R_2$ is ``shorted" because little current flows through it relative to $R_1$.
+            \else
+
+            \newpage
+            \fi
+
+\end{enumerate}
+
+%4. Suppose the two resistors were replaced with a resistor with a resistance of $1/\left(\frac{1}{R_1}+\frac{1}{R_2}\right)$ as shown below. What is $I_o$?
+
+\section{Multiple Loops II}
 
 Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circuit are as shown.
 
@@ -139,45 +240,121 @@ Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circui
 
 \begin{enumerate}
 
-  \item Write the equation for KVL for loop A.
+  \item Write the equation for KVL for loop $A$.
 
-  \item Write the equation for KVL for loop B.
+        \ifsolutions
+        \textbf{Answer}: $+\mathcal{E}-I_1R-I_3R=0$
+        \else
+        \vskip 36pt
+        \fi
 
-  \item Write the equation for KCL for node X.
+  \item Write the equation for KVL for loop $B$.
+
+        \ifsolutions
+        \textbf{Answer}: $I_3R-I_2R=0$. A common error is to attempt to include $\mathcal{E}$ in this equation. When using KVL, the only elements that appear in the equation are elements that are stepped across when going around the chosen loop.
+        \else
+        \vskip 36pt
+        \fi
+
+  \item Write the equation for KCL for junction X.
+
+        \ifsolutions
+        \textbf{Answer}: $I_3+I_2=I_1$
+        \else
+        \vskip 36pt
+        \fi
+
+  \item Use the three equations found above to solve for the three unknowns, $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$.
+
+        \ifsolutions
+        \textbf{Answer}:
+
+        Eqn 1: $+\mathcal{E}-I_1R-I_3R=0$
+
+        Eqn 2: $I_3R-I_2R=0$
+
+        Eqn 3: $I_3+I_2=I_1$
+
+        From Eqn 2., $I_2=I_3$ (this is expected, why?). Sub this into Eqn. 3 to get $I_3=I_1/2$. Plug this into Eqn 1. to get $I_1=(2/3)(\mathcal{E}/R)$. Additional substitution gives $I_2=I_3=(1/3)(\mathcal{E}/R)$.
+        \else
+        \vskip 96pt
+        \fi
+
+  \item Check your answers by plugging your values for $I_1$, $I_2$, and $I_3$ into the equations that you wrote for parts 1.-3.
+
+        \ifsolutions
+        \textbf{Comment}: This is an important step. Sign errors in KVL and KCL are common, as are algebraic errors, and this check will determine if you made an error.
+        \else
+
+        \newpage
+        \fi
 
 \end{enumerate}
 
-Use the three equations found above to solve for the three unknowns, $I_1$, $I_2$, and $I_3$.
+\section{Multiple Loops II}
 
-\newpage
-
-\section{Multiple Loop Circuit II}
-
-In the circuit for the previous problem, there are three possible loops. The third loop is loop C. indicated below.
+In the circuit for the previous problem, there are three possible loops. The third loop is loop $C$, which is indicated below.
 
 \input{figures/Multiple_Loops_II.tikz}
 
 \begin{enumerate}
 
-  \item Write the equation for KVL for loop C.
+  \item Write the equation for KVL for loop $C$.
 
-  \item Use the equation for KVL for loop B. and the KCL equation for node X from the previous problem along with the KVL equation for loop C to find $I_1$, $I_2$, and $I_3$. (You should get the same answers.)
+        \ifsolutions
+        \textbf{Answer}: $\mathcal{E}-I_1R-I_2R=0$
+        \else
+        \vskip 36pt
+        \fi
+
+  \item Use the equation for KVL for loop $B$ and the KCL equation for junction $X$ along with the KVL equation for loop $C$ to find $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$. (You should get the same answers as the previous problem.)
 
 \end{enumerate}
 
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
 \section{Redundant Equations}
 
-When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote $N$ equations based on KVL and KCL but cannot find $N$ unknows, the reason is that two or more of the $N$ equations that you wrote were not independent. To demonstrate this, for the circuit below,
+When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you attempt to solve a problem with $N$ unknowns by writing $N$ equations based on KVL and KCL but cannot solve for the unknowns, the reason is that two or more of the equations that you wrote were not independent. To demonstrate this, for the following circuit,
+
+\input{figures/Multiple_Loops_III.tikz}
 
 \begin{enumerate}
 
-  \item Write the KCL equation for node X
+  \item write the KCL equation for junction X,
 
-  \item Write the KCL equation for node Y
+        \ifsolutions
+        \textbf{Answer}: $-I_1+I_2+I_3$
+        \else
+        \vskip 36pt
+        \fi
 
-  \item Write the KVL equation for loop A
+  \item write the KCL equation for junction Y,
 
-  \item Attempt to use the above three equations to solve for $I_1$, $I_2$, and $I_3$.
+        \ifsolutions
+        \textbf{Answer}: $+I_1-I_2-I_3=0$
+        \else
+        \vskip 36pt
+        \fi
+
+  \item write the KVL equation for loop $A$, and
+
+        \ifsolutions
+        \textbf{Answer}: $+\mathcal{E}-I_1R-I_3R=0$
+        \else
+        \vskip 36pt
+        \fi
+
+  \item Is it possible to use the above three equations to solve for $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$? If yes, do it. If no, explain why.
+
+        \ifsolutions
+        \textbf{Answer}: No. The equation for junction $X$ can be turned into the equation for junction $Y$ by multiplying all terms in either equation by $-1$. Thus, the equations are not independent. Given that three independent equations are needed to solve for three unknowns, a solution is impossible with the equations requested in parts 1.--3.
+        \fi
 
 \end{enumerate}
 

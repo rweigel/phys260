@@ -1,0 +1,40 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,165); %set diagram left start at 0, and has height of 165
+
+%Shape: Resistor [id:dp642022856937654] 
+\draw   (30,40) -- (37.2,40) -- (38.8,30) -- (42,50) -- (45.2,30) -- (48.4,50) -- (51.6,30) -- (54.8,50) -- (58,30) -- (61.2,50) -- (62.8,40) -- (70,40) ;
+%Straight Lines [id:da44085423383571] 
+\draw    (70,40) -- (90,40) ;
+%Straight Lines [id:da8302389383510358] 
+\draw    (90,100) -- (90,130) ;
+%Straight Lines [id:da2830777981311956] 
+\draw    (70,130) -- (90,130) ;
+%Straight Lines [id:da2903003917360325] 
+\draw    (10,40) -- (30,40) ;
+%Straight Lines [id:da5654282060441964] 
+\draw    (10,130) -- (70,130) ;
+%Straight Lines [id:da4525798154990017] 
+\draw    (10,40) -- (10,130) ;
+%Straight Lines [id:da23681722570448738] 
+\draw    (80,77) -- (100,77) ;
+%Straight Lines [id:da2106938932782303] 
+\draw [line width=1.5]    (85,81) -- (95,81) ;
+%Straight Lines [id:da4202462894704919] 
+\draw    (90,81) -- (90,100) ;
+%Straight Lines [id:da13525425547720427] 
+\draw    (90,43) -- (90,77) ;
+\draw [shift={(90,40)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (39,8.4) node [anchor=north west][inner sep=0.75pt]    {$2R$};
+% Text Node
+\draw (103,71.4) node [anchor=north west][inner sep=0.75pt]    {$\mathcal{E}$};
+% Text Node
+\draw (105,36.4) node [anchor=north west][inner sep=0.75pt]    {$I$};
+
+
+\end{tikzpicture}

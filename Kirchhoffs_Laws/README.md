@@ -1,3 +1,7 @@
+# General
+
+The introduction of this activity does not describe how to determine the voltage changes across batteries and resistors. It is expected that the instructor will review this.
+
 # 2022 Fall
 
 rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.

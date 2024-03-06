@@ -41,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -291,6 +291,11 @@
       padding-left: 0.5em;
     }
 
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
     #display>.section>.block>ol.loose {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
@@ -377,10 +382,6 @@
       font-size: inherit !important;
     }
 
-    .katex-warning {
-      border-right: 0.5em solid red;
-    }
-
     .katex-display {
       text-align: center;
       margin: 0em;
@@ -392,6 +393,16 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
     .page-break {
       break-after: page;
       width: 100%;
@@ -400,11 +411,11 @@
     }
 
     .solutionsfalse {
-      display: block;
+      display: none;
     }
 
     .solutionstrue {
-      display: none;
+      display: block;
     }
 
     @media print {
@@ -550,33 +561,28 @@
         </a>
       </li>
       <li>
-        <a href="#single-loop" raw="# Single Loop" lo="41">
+        <a href="#single-loop" raw="# Single Loop" lo="38">
           <span class="toctext">Single Loop</span>
         </a>
       </li>
       <li>
-        <a href="#multiple-loops-i" raw="# Multiple Loops I" lo="87">
+        <a href="#multiple-loops-i" raw="# Multiple Loops I" lo="87" class="">
           <span class="toctext">Multiple Loops I</span>
         </a>
       </li>
       <li>
-        <a href="#multiple-loops-ii" raw="# Multiple Loops II" lo="144">
+        <a href="#multiple-loops-ii" raw="# Multiple Loops II" lo="121">
           <span class="toctext">Multiple Loops II</span>
         </a>
       </li>
       <li>
-        <a href="#redundant-equations" raw="# Redundant Equations" lo="162" class="highlighted">
+        <a href="#multiple-loops-ii" raw="# Multiple Loops II" lo="181">
+          <span class="toctext">Multiple Loops II</span>
+        </a>
+      </li>
+      <li>
+        <a href="#redundant-equations" raw="# Redundant Equations" lo="202" class="">
           <span class="toctext">Redundant Equations</span>
-        </a>
-      </li>
-      <li>
-        <a href="#using-equivalent-resistances" raw="# Using Equivalent Resistances" lo="199">
-          <span class="toctext">Using Equivalent Resistances</span>
-        </a>
-      </li>
-      <li>
-        <a href="#using-equivalent-resistances" raw="# Using Equivalent Resistances" lo="226">
-          <span class="toctext">Using Equivalent Resistances</span>
         </a>
       </li>
     </ol>
@@ -594,20 +600,20 @@
         <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="7" lf="7">To find the current through each resistor in a circuit with only batteries and resistors, Kirchhoff’s Current Law and Kirchhoff’s Voltage Law can be used.</p>
+        <p padlength="0" lo="7" lf="7">To find the current through each resistor in a circuit with only resistors and batteries, Kirchhoff’s Current Law and Kirchhoff’s Voltage Law can be used.</p>
         <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
       </div>
       <div class="block">
         <ol lo="9" lf="10" class="compact">
           <li markerlength="3" padlength="0" lo="9" lf="9">
             <div class="block">
-              <p padlength="0" lo="9" lf="9">Kirchhoff’s Voltage Law (KVL): The sum of all voltage changes around a closed loop is zero. </p>
+              <p padlength="0" lo="9" lf="9">Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.</p>
               <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
             </div>
           </li>
           <li markerlength="3" padlength="0" lo="10" lf="12">
             <div class="block">
-              <p padlength="0" lo="10" lf="10">Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.</p>
+              <p padlength="0" lo="10" lf="10">Kirchhoff’s Voltage Law (KVL): The sum of all voltage changes around a closed loop is zero. </p>
               <div class="block-info" style="display: none;"><span class="line-numbers">10</span></div>
             </div>
           </li>
@@ -652,111 +658,124 @@
         <div class="block-info" style="display: none;"><span class="line-numbers">16-19</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="21" lf="21"><strong type="md">Note on Equivalent Resistances</strong></p>
+        <p padlength="0" lo="21" lf="21">To apply KVL, draw a closed loop and choose a direction to step around the loop. </p>
         <div class="block-info" style="display: none;"><span class="line-numbers">21</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="23" lf="23">You may have already had experience solving for currents in circuits using equivalent resistances. In this activity, do not use equivalent resistances unless asked. The motivation is that after solving for currents without using equivalent resistances, you will better understand their interpretation and derivation.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">23</span></div>
+        <ol lo="23" lf="25" class="loose">
+          <li markerlength="3" padlength="0" lo="23" lf="24">
+            <div class="block">
+              <p padlength="0" lo="23" lf="24">If stepping around the loop requires a step across a battery with emf <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and the <span len="3" raw="_-_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span></span></span></span> side is encountered first, the voltage change is <span len="14" raw="_+\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span>. If the <span len="3" raw="_+_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span></span></span></span> side is encountered first, the voltage change is <span len="14" raw="_-\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span>. <em type="md" marker="_">The direction of current through the battery does not matter.</em></p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">23-24</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="25" lf="27">
+            <div class="block">
+              <p padlength="0" lo="25" lf="26">If stepping around the loop requires a step across a resistor <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> and the direction of current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> through the resistor is the same as the step direction, the voltage change is <span len="5" raw="_-IR_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. If the current is opposite the step direction, the voltage change is <span len="5" raw="_+IR_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">25-26</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">23-25</span></div>
       </div>
       <div class="block">
-        <div class="comment" lo="25" lf="25">%<strong type="md">KCL Rules</strong></div>
+        <p padlength="0" lo="27" lf="27">A common error is to assume every loop equation requires an emf.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">27</span></div>
       </div>
       <div class="block">
-        <div class="comment" lo="27" lf="27">%At a junction (a point where two or more currents flow into or out of), </div>
+        <p padlength="0" lo="29" lf="29"><strong type="md">Note on Equivalent Resistances</strong></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">29</span></div>
       </div>
       <div class="block">
-        <div class="comment" lo="29" lf="29">%<strong type="md">KVL Rules</strong></div>
+        <p padlength="0" lo="31" lf="31">You may have already had experience solving for currents in circuits using equivalent resistances. In this activity, do not use equivalent resistances unless asked. The motivation is that you will better understand their interpretation and derivation after solving for currents without using equivalent resistances.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">31</span></div>
       </div>
       <div class="block">
-        <div class="comment" lo="31" lf="31">%When you write KVL, you must choose a direction that you “step” around the loop. If you “step” across a resistor $R$ in the direction of an assumed current $I$, the voltage change is $-IR$. If you “step” across in the direction opposite of $I$, the voltage change is $+IR$.</div>
-      </div>
-      <div class="block">
-        <div class="comment" lo="33" lf="33">%If you step across a battery with emf $\mathcal{E}$ from the $-$ to the $+$, the voltage change is $+\mathcal{E}$. If you step across a battery with emf $\mathcal{E}$ from the $+$ to the $-$, the voltage change is $-\mathcal{E}$. <em type="md" marker="_">The direction of the assumed current does not matter.</em></div>
-      </div>
-      <div class="block">
-        <div class="comment" lo="35" lf="35">%<strong type="md">Sign conventions</strong></div>
-      </div>
-      <div class="block">
-        <div class="comment" lo="37" lf="37">%If you get a negative number for a current, your assumed direction was wrong.</div>
-      </div>
-      <div class="block">
-        <div class="inline-html" lo="39" lf="39">
-          <div class="newpage">
-            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
-            <div></div>
+        <div class="inline-html" lo="33" lf="36">
+          <div class="solutionstrue" style="display: block;">
+          </div>
+          <div class="solutionsfalse" style="display: none;">
+            <div class="block">
+              <div class="inline-html">
+                <div class="newpage">
+                  <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">33-36</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="41" lf="41"><a name="single-loop" number="2" lo="41" raw="# Single Loop" class="anchor hanchor" href="#single-loop"><span class="hnumber">2</span>&nbsp;<span class="htext">Single Loop</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">41</span></div>
+        <h1 lo="38" lf="38"><a name="single-loop" number="2" lo="38" raw="# Single Loop" class="anchor hanchor" href="#single-loop"><span class="hnumber">2</span>&nbsp;<span class="htext">Single Loop</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">38</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="43" lf="43">Only KVL is needed to find the current in a single-loop circuit.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
+        <p padlength="0" lo="40" lf="40">Only KVL is needed to find the current in a single-loop circuit.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">40</span></div>
       </div>
       <div class="block">
-        <ol lo="45" lf="83" class="loose">
-          <li markerlength="3" padlength="0" lo="45" lf="52">
+        <ol lo="42" lf="80" class="loose">
+          <li markerlength="3" padlength="0" lo="42" lf="49">
             <div class="block">
-              <p padlength="0" lo="45" lf="46">The direction of the unknown current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the following circuit is assumed to be counterclockwise. Write the equation for KVL stepping around the loop in the counterclockwise direction; then solve for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">45-46</span></div>
+              <p padlength="0" lo="42" lf="43">The direction of the unknown current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the following circuit is assumed to be counterclockwise. Write the equation for KVL by stepping around the loop counterclockwise; then solve for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">42-43</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="47" lf="47">
+              <div class="inline-html" lo="44" lf="44">
                 <img src="figures/Single_Loop_CCW.svg" height="130px">
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">47</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">44</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="49" lf="50">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="46" lf="47">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer:</strong> <span len="62" raw="_\mathcal{E}-IR-IR=0 \quad \Rightarrow \quad I=\mathcal{E}/2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></p>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">49-50</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">46-47</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="53" lf="60">
+          <li markerlength="3" padlength="0" lo="50" lf="57">
             <div class="block">
-              <p padlength="0" lo="53" lf="54">The direction of current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the following circuit was assumed to be clockwise. Write the equation for KVL stepping around the loop in the counterclockwise direction; then solve for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">53-54</span></div>
+              <p padlength="0" lo="50" lf="51">The direction of current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in the following circuit was assumed to be clockwise. Write the equation for KVL stepping around the loop counterclockwise; then solve for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">50-51</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="55" lf="55">
+              <div class="inline-html" lo="52" lf="52">
                 <img src="figures/Single_Loop_CW.svg" height="130px">
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">55</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">52</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="57" lf="58">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="54" lf="55">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer:</strong> <span len="63" raw="_\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=-\mathcal{E}/2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></p>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">57-58</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">54-55</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="61" lf="68">
+          <li markerlength="3" padlength="0" lo="58" lf="65">
             <div class="block">
-              <p padlength="0" lo="61" lf="62">Which value for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> found above is correct?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">61-62</span></div>
+              <p padlength="0" lo="58" lf="59">Which value for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> found above is correct?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">58-59</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="63" lf="66">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="60" lf="63">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="0"><strong type="md">Answer</strong>: Both are correct. A negative clockwise current is equivalent to a clockwise flowing current.</p>
+                    <p padlength="0"><strong type="md">Answer</strong>: Both are correct. A negative current is equivalent to a positive current in the opposite direction.</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -764,22 +783,22 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">63-66</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">60-63</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="69" lf="76">
+          <li markerlength="3" padlength="0" lo="66" lf="73">
             <div class="block">
-              <p padlength="0" lo="69" lf="70">In part 1., a counterclockwise current was assumed and you stepped in the counterclockwise direction. If you stepped in the clockwise direction, would your answer for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> be different? </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">69-70</span></div>
+              <p padlength="0" lo="66" lf="67">In part 1., a counterclockwise current was assumed, and you stepped in the counterclockwise direction. If you stepped clockwise, would your answer for <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> be different? </p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">66-67</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="71" lf="74">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="68" lf="71">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: Answer same. KVL is <span len="63" raw="_-\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=\mathcal{E}/2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -787,74 +806,204 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">71-74</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">68-71</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="77" lf="85">
+          <li markerlength="3" padlength="0" lo="74" lf="82">
             <div class="block">
-              <p padlength="0" lo="77" lf="78">For the first circuit considered above, if you removed the bottom resistor and replaced the top resistor with a resistor with resistance <span len="4" raw="_2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, the following circuit results. What is the current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> for this circuit?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">77-78</span></div>
+              <p padlength="0" lo="74" lf="75">For the first circuit considered above, if you remove the bottom resistor and replace the top resistor with a resistor with resistance <span len="4" raw="_2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>, the following circuit results. What is the current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> for this circuit?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">74-75</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="79" lf="83">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="76" lf="76">
+                <img src="figures/Single_Loop_Equiv.svg" height="130px">
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">76</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="78" lf="80">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="0"><strong type="md">Answer</strong>: <span len="18" raw="_I=\mathcal{E}/2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> in counterclockwise direction. The fact that the answer here is the same as in 1. is related to the formula for the equivalent resistance of resistors in series.</p>
-                  </div>
-                </div>
-                <div class="solutionsfalse">
-                  <div class="block">
-                    <div class="inline-html">
-                      <img src="figures/Single_Loop_Equiv.svg" height="130px">
-                    </div>
+                    <p padlength="0"><strong type="md">Answer</strong>: <span len="18" raw="_I=\mathcal{E}/2R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> in counterclockwise direction. The fact that the answer here is the same as in 1. is related to the formula for the equivalent resistance of resistors in series: <span len="23" raw="_R_{\text{eq}}=R_1+R_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">eq</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Two resistors are in series if only one current path exists between them.</p>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">79-83</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">78-80</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">45-83</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">42-80</span></div>
       </div>
       <div class="block">
-        <div class="inline-html" lo="85" lf="85">
-          <div class="newpage">
-            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
-            <div></div>
+        <div class="inline-html" lo="82" lf="85">
+          <div class="solutionstrue" style="display: block;">
+          </div>
+          <div class="solutionsfalse" style="display: none;">
+            <div class="block">
+              <div class="inline-html">
+                <div class="newpage">
+                  <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">82-85</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="87" lf="87"><a name="multiple-loops-i" number="3" lo="87" raw="# Multiple Loops I" class="anchor hanchor" href="#multiple-loops-i"><span class="hnumber">3</span>&nbsp;<span class="htext">Multiple Loops I</span></a></h1>
+        <h1 lo="87" lf="87" class=""><a name="multiple-loops-i" number="3" lo="87" raw="# Multiple Loops I" class="anchor hanchor" href="#multiple-loops-i"><span class="hnumber">3</span>&nbsp;<span class="htext">Multiple Loops I</span></a></h1>
         <div class="block-info" style="display: none;"><span class="line-numbers">87</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="89" lf="89">Assume the direction of currents <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in the following circuit are as shown.</p>
+        <div class="inline-html" lo="89" lf="89">
+          <img src="figures/Parallel.svg" height="200px">
+        </div>
         <div class="block-info" style="display: none;"><span class="line-numbers">89</span></div>
       </div>
       <div class="block">
-        <div class="inline-html" lo="91" lf="91">
-          <img src="figures/Multiple_Loops_I.svg">
-        </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">91</span></div>
-      </div>
-      <div class="block">
-        <ol lo="93" lf="140" class="loose">
-          <li markerlength="3" padlength="0" lo="93" lf="100">
+        <ol lo="91" lf="103" class="loose">
+          <li markerlength="3" padlength="0" lo="91" lf="103" class="">
             <div class="block">
-              <p padlength="0" lo="93" lf="94">Write the equation for KVL for loop A.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">93-94</span></div>
+              <p padlength="0" lo="91" lf="92" class="">Use KCL at junction <span len="3" raw="_X_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> and KVL for loops <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> and <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> to show that <span len="57" raw="_I_o=\mathcal{E}\left(\frac{1}{R_1}+\frac{1}{R_2}\right)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8em;vertical-align:-0.65em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4451em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4451em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">91-92</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="95" lf="98">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="93" lf="102">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong type="md">Answer</strong>:</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">KVL for <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>: <span len="64" raw="_+\mathcal{E}-I_1R_1=0\quad\Rightarrow\quad I_1=\mathcal{E}/R_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">KVL for <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>: <span len="76" raw="_+I_1R_1-I_2R_2=0 \quad\Rightarrow\quad I_2 = I_1 R_1/R_2 = \mathcal{E}/R_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">+</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">KCL at <span len="3" raw="_X_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>: <span len="103" raw="_I_o=I_1+I_2 = \mathcal{E}/R_1 + \mathcal{E}/R_2 = \mathcal{E}\left(\frac{1}{R_1}+\frac{1}{R_2}\right)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8em;vertical-align:-0.65em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4451em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4451em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{10em}" style="height:10em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">93-102</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">91-103</span></div>
+      </div>
+      <div class="block">
+        <ol start="2" lo="105" lf="123" class="loose">
+          <li markerlength="3" padlength="0" lo="105" lf="116" class="">
+            <div class="block">
+              <p padlength="0" lo="105" lf="106" class="">If <span len="11" raw="_R_2 > R_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, which resistor will have more current?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">105-106</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="107" lf="114">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong type="md">Answer</strong>:</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="1"><span len="71" raw="__\frac{I_2}{I_1} = \frac{R_1}{R_2} \quad \Rightarrow \quad I_2 < I_1__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> </p>
+                  </div>
+                  <div class="block">
+                    <p padlength="1">One can also use the water flow analogy. If <span len="5" raw="_R_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> resists flow more than <span len="5" raw="_R_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, there will be more flow through <span len="5" raw="_R_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{5em}" style="height:5em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">107-114</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="117" lf="125" class="">
+            <div class="block">
+              <p padlength="0" lo="117" lf="118" class="">If <span len="19" raw="_R_1 \rightarrow 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, what happens to <span len="5" raw="_I_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">117-118</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="119" lf="123">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong type="md">Answer</strong>: <span len="24" raw="_I_o \rightarrow \infty_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span>, <span len="24" raw="_I_1 \rightarrow \infty_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span>, and <span len="18" raw="_I_2\rightarrow 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>. In this case, we say that resistor <span len="5" raw="_R_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is “shorted” because little current flows through it relative to <span len="5" raw="_R_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div class="inline-html">
+                      <div class="newpage">
+                        <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">119-123</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">105-123</span></div>
+      </div>
+      <div class="block">
+        <div class="comment" lo="125" lf="125" style="">%4. Suppose the two resistors were replaced with a resistor with a resistance of $1/\left(\frac{1}{R_1}+\frac{1}{R_2}\right)$ as shown below. What is $I_o$?</div>
+      </div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-120</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-119</span></div>
+      <div class="block-info" style="display: none;"><span class="line-numbers">91-118</span></div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="127" lf="127" class=""><a name="multiple-loops-ii" number="4" lo="127" raw="# Multiple Loops II" class="anchor hanchor" href="#multiple-loops-ii" lf="127"><span class="hnumber">4</span>&nbsp;<span class="htext">Multiple Loops II</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">127</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="129" lf="129">Assume the direction of currents <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in the following circuit are as shown.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">129</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="131" lf="131">
+          <img src="figures/Multiple_Loops_I.svg">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">131</span></div>
+      </div>
+      <div class="block">
+        <ol lo="133" lf="180" class="loose">
+          <li markerlength="3" padlength="0" lo="133" lf="140" class="">
+            <div class="block">
+              <p padlength="0" lo="133" lf="134" class="">Write the equation for KVL for loop <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">133-134</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="135" lf="138">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: <span len="26" raw="_+\mathcal{E}-I_1R-I_3R=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -862,22 +1011,22 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">95-98</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">135-138</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="101" lf="108">
+          <li markerlength="3" padlength="0" lo="141" lf="148" class="">
             <div class="block">
-              <p padlength="0" lo="101" lf="102">Write the equation for KVL for loop B.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">101-102</span></div>
+              <p padlength="0" lo="141" lf="142" class="">Write the equation for KVL for loop <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">141-142</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="103" lf="106">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="143" lf="146">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: <span len="13" raw="_I_3R-I_2R=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>. A common error is to attempt to include <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> in this equation. When using KVL, the only elements that appear in the equation are elements that are stepped across when going around the chosen loop.</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -885,22 +1034,22 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">103-106</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">143-146</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="109" lf="116">
+          <li markerlength="3" padlength="0" lo="149" lf="156" class="">
             <div class="block">
-              <p padlength="0" lo="109" lf="110">Write the equation for KCL for node X.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">109-110</span></div>
+              <p padlength="0" lo="149" lf="150" class="">Write the equation for KCL for junction X.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">149-150</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="111" lf="114">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="151" lf="154">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: <span len="13" raw="_I_3+I_2=I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -908,17 +1057,17 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">111-114</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">151-154</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="117" lf="133">
+          <li markerlength="3" padlength="0" lo="157" lf="173" class="">
             <div class="block">
-              <p padlength="0" lo="117" lf="118">Use the three equations found above to solve for the three unknowns, <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">117-118</span></div>
+              <p padlength="0" lo="157" lf="158" class="">Use the three equations found above to solve for the three unknowns, <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">157-158</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="119" lf="131">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="159" lf="171">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>:</p>
                   </div>
@@ -935,82 +1084,77 @@
                     <p padlength="0">From Eqn 2., <span len="9" raw="_I_2=I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (this is expected, why?). Sub this into Eqn. 3 to get <span len="11" raw="_I_3=I_1/2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/2</span></span></span></span>. Plug this into Eqn 1. to get <span len="26" raw="_I_1=(2/3)(\mathcal{E}/R)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2/3</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span></span></span></span>. Additional substitution gives <span len="30" raw="_I_2=I_3=(1/3)(\mathcal{E}/R)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1/3</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span></span></span></span>.</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{6em}" style="height:6em"></div>
+                      <div class="tex" raw="\vspace{8em}" style="height:8em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">119-131</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">159-171</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="134" lf="142">
+          <li markerlength="3" padlength="0" lo="174" lf="181" class="">
             <div class="block">
-              <p padlength="0" lo="134" lf="135">Check your answers by plugging your values for <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> into the equations that you wrote for parts 1.-3.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">134-135</span></div>
+              <p padlength="0" lo="174" lf="175" class="">Check your answers by plugging your values for <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> into the equations that you wrote for parts 1.-3.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">174-175</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="136" lf="140">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="176" lf="179">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="0"><strong type="md">Comment</strong>: This is an important step. Sign errors in KVL and KCL are common as are algebraic errors, and this check will determine if you made an error.</p>
+                    <p padlength="0"><strong type="md">Comment</strong>: This is an important step. Sign errors in KVL and KCL are common, as are algebraic errors, and this check will determine if you made an error.</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
-                    <div style="width:100%">
-                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
+                    <div class="inline-html">
+                      <div class="newpage">
+                        <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                        <div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">136-140</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">176-179</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">93-140</span></div>
-      </div>
-      <div class="block">
-        <div class="inline-html" lo="142" lf="142">
-          <div class="newpage">
-            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
-            <div></div>
-          </div>
-        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">133-180</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="144" lf="144"><a name="multiple-loops-ii" number="4" lo="144" raw="# Multiple Loops II" class="anchor hanchor" href="#multiple-loops-ii"><span class="hnumber">4</span>&nbsp;<span class="htext">Multiple Loops II</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">144</span></div>
+        <h1 lo="182" lf="182" class=""><a name="multiple-loops-ii" number="5" lo="182" raw="# Multiple Loops II" class="anchor hanchor" href="#multiple-loops-ii" lf="182"><span class="hnumber">5</span>&nbsp;<span class="htext">Multiple Loops II</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">187</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="146" lf="146">In the circuit for the previous problem, there are three possible loops. The third loop is loop C. indicated below.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">146</span></div>
+        <p padlength="0" lo="184" lf="184">In the circuit for the previous problem, there are three possible loops. The third loop is loop <span len="3" raw="_C_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>, which is indicated below.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">189</span></div>
       </div>
       <div class="block">
-        <div class="inline-html" lo="148" lf="148">
+        <div class="inline-html" lo="186" lf="186">
           <img src="figures/Multiple_Loops_II.svg">
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">148</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">191</span></div>
       </div>
       <div class="block">
-        <ol lo="150" lf="158" class="loose">
-          <li markerlength="3" padlength="0" lo="150" lf="157">
+        <ol lo="188" lf="196" class="loose">
+          <li markerlength="3" padlength="0" lo="188" lf="195">
             <div class="block">
-              <p padlength="0" lo="150" lf="151">Write the equation for KVL for loop C.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">150-151</span></div>
+              <p padlength="0" lo="188" lf="189">Write the equation for KVL for loop <span len="3" raw="_C_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">201-203</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="152" lf="155">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="190" lf="193">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
                     <p padlength="0"><strong type="md">Answer</strong>: <span len="25" raw="_\mathcal{E}-I_1R-I_2R=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -1018,54 +1162,66 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">152-155</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">201-203</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="158" lf="160">
+          <li markerlength="3" padlength="0" lo="196" lf="198">
             <div class="block">
-              <p padlength="0" lo="158" lf="159">Use the equation for KVL for loop B. and the KCL equation for node X from the previous problem along with the KVL equation for loop C to find <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. (You should get the same answers.)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">158-159</span></div>
+              <p padlength="0" lo="196" lf="197">Use the equation for KVL for loop <span len="3" raw="_B_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> and the KCL equation for junction <span len="3" raw="_X_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> along with the KVL equation for loop <span len="3" raw="_C_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> to find <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. (You should get the same answers as the previous problem.)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">201-202</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">150-158</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">193-201</span></div>
       </div>
       <div class="block">
-        <div class="inline-html" lo="160" lf="160">
-          <div class="newpage">
-            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
-            <div></div>
+        <div class="inline-html" lo="198" lf="201">
+          <div class="solutionstrue" style="display: block;">
+          </div>
+          <div class="solutionsfalse" style="display: none;">
+            <div class="block">
+              <div class="inline-html">
+                <div class="newpage">
+                  <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">203-206</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="162" lf="162" class="highlighted"><a name="redundant-equations" number="5" lo="162" raw="# Redundant Equations" class="anchor hanchor" href="#redundant-equations"><span class="hnumber">5</span>&nbsp;<span class="htext">Redundant Equations</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">162</span></div>
+        <h1 lo="203" lf="203" class="highlighted"><a name="redundant-equations" number="6" lo="203" raw="# Redundant Equations" class="anchor hanchor" href="#redundant-equations" lf="203"><span class="hnumber">6</span>&nbsp;<span class="htext">Redundant Equations</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">208</span></div>
       </div>
       <div class="block">
-        <p padlength="0" lo="164" lf="164">When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you encounter a situation where you wrote <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations based on KVL and KCL but cannot find <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> unknowns, the reason is that two or more of the <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations that you wrote were not independent. To demonstrate this, for the following circuit,</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">164</span></div>
+        <p padlength="0" lo="205" lf="205" class="">When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you attempt to solve a problem with <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> unknowns by writing <span len="3" raw="_N_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> equations based on KVL and KCL but cannot solve for the unknowns, the reason is that two or more of the equations that you wrote were not independent. To demonstrate this, for the following circuit,</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">210</span></div>
       </div>
       <div class="block">
-        <div class="inline-html active" lo="166" lf="166">
+        <div class="inline-html" lo="207" lf="207">
           <img src="figures/Multiple_Loops_III.svg">
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">166</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">212</span></div>
       </div>
       <div class="block">
-        <ol lo="168" lf="195" class="loose">
-          <li markerlength="3" padlength="0" lo="168" lf="174">
+        <ol lo="209" lf="237" class="loose">
+          <li markerlength="3" padlength="0" lo="209" lf="216" class="">
             <div class="block">
-              <p padlength="0" lo="168" lf="169">write the KCL equation for node X,</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">168-169</span></div>
+              <p padlength="0" lo="209" lf="210" class="">write the KCL equation for junction X,</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">209-210</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="170" lf="172">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="211" lf="214">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong type="md">Answer</strong>: <span len="14" raw="_-I_1+I_2+I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+                  </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -1073,19 +1229,22 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">170-172</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">211-214</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="175" lf="181">
+          <li markerlength="3" padlength="0" lo="217" lf="224" class="">
             <div class="block">
-              <p padlength="0" lo="175" lf="176">write the KCL equation for node Y,</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">175-176</span></div>
+              <p padlength="0" lo="217" lf="218" class="">write the KCL equation for junction Y,</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">217-218</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="177" lf="179">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="219" lf="222">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong type="md">Answer</strong>: <span len="16" raw="_+I_1-I_2-I_3=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">+</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+                  </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -1093,19 +1252,22 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">177-179</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">219-222</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="182" lf="188">
+          <li markerlength="3" padlength="0" lo="225" lf="232" class="">
             <div class="block">
-              <p padlength="0" lo="182" lf="183">write the KVL equation for loop A, and</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">182-183</span></div>
+              <p padlength="0" lo="225" lf="226" class="">write the KVL equation for loop <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, and</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">225-226</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="184" lf="186">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="227" lf="230">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong type="md">Answer</strong>: <span len="26" raw="_+\mathcal{E}-I_1R-I_3R=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathcal" style="margin-right:0.08944em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+                  </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
                       <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
@@ -1113,137 +1275,27 @@
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">184-186</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">227-230</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="189" lf="197">
+          <li markerlength="3" padlength="0" lo="233" lf="237" class="active">
             <div class="block">
-              <p padlength="0" lo="189" lf="190">Is it possible to use the above three equations to solve for <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>? If yes, do it. If no, explain why.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">189-190</span></div>
+              <p padlength="0" lo="233" lf="234" class="">Is it possible to use the above three equations to solve for <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>? If yes, do it. If no, explain why.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">233-234</span></div>
             </div>
             <div class="block">
-              <div class="inline-html" lo="191" lf="195">
-                <div class="solutionstrue">
+              <div class="inline-html" lo="235" lf="236">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="0"><strong type="md">Answer</strong>: No. The equation for node X can be turned into the equation for node Y by multiplying all terms in either equation by <span len="4" raw="_-1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>. Thus, the equations are not independent. Given that three independent equations are needed to solve for three unknowns, a solution is not possible with the equations requested in parts 1.–3.</p>
-                  </div>
-                </div>
-                <div class="solutionsfalse">
-                  <div class="block">
-                    <div style="width:100%">
-                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
-                    </div>
+                    <p padlength="0"><strong type="md">Answer</strong>: No. The equation for junction <span len="3" raw="_X_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> can be turned into the equation for junction <span len="3" raw="_Y_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span></span></span></span> by multiplying all terms in either equation by <span len="4" raw="_-1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>. Thus, the equations are not independent. Given that three independent equations are needed to solve for three unknowns, a solution is impossible with the equations requested in parts 1.–3.</p>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">191-195</span></div>
-            </div>
-          </li>
-        </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">168-195</span></div>
-      </div>
-      <div class="block">
-        <div class="inline-html" lo="197" lf="197">
-          <div class="newpage">
-            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h1 lo="199" lf="199"><a name="using-equivalent-resistances" number="6" lo="199" raw="# Using Equivalent Resistances" class="anchor hanchor" href="#using-equivalent-resistances"><span class="hnumber">6</span>&nbsp;<span class="htext">Using Equivalent Resistances</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">199</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="201" lf="201">The analysis of the circuit considered previously could have been simplified if we had combined the lower two resistors into an equivalent resistor. In this case, we can easily solve for <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> using the equivalent circuit in the middle.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">201</span></div>
-      </div>
-      <div class="block">
-        <div class="inline-html" lo="203" lf="203">
-          <img src="figures/Multiple_Loops_IV.svg">
-        </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">203</span></div>
-      </div>
-      <div class="block">
-        <ol lo="205" lf="217" class="loose">
-          <li markerlength="3" padlength="0" lo="205" lf="211">
-            <div class="block">
-              <p padlength="0" lo="205" lf="206">For the middle circuit, find <span len="5" raw="_I_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">205-206</span></div>
-            </div>
-            <div class="block">
-              <div class="inline-html" lo="207" lf="209">
-                <div class="solutionstrue">
-                </div>
-                <div class="solutionsfalse">
-                  <div class="block">
-                    <div style="width:100%">
-                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">207-209</span></div>
-            </div>
-          </li>
-          <li markerlength="3" padlength="0" lo="212" lf="219">
-            <div class="block">
-              <p padlength="0" lo="212" lf="213">Use KVL for loop B and <span len="13" raw="_I_1=I_2+I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to find <span len="5" raw="_I_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span len="5" raw="_I_3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">212-213</span></div>
-            </div>
-            <div class="block">
-              <div class="inline-html" lo="214" lf="217">
-                <div class="solutionstrue">
-                </div>
-                <div class="solutionsfalse">
-                  <div class="block">
-                    <div style="width:100%">
-                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">214-217</span></div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">235-236</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">205-217</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="219" lf="219">An alternative to the last step is to recognize that the voltage drop across both of the bottom two resistors is <span len="12" raw="_V = I_1R/2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord">/2</span></span></span></span>. Then the current through both resistors is <span len="13" raw="_I_2=I_3=V/R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. Use this equation to check your answer to 2.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">219</span></div>
-      </div>
-      <div class="block">
-        <div class="inline-html" lo="221" lf="224">
-          <div class="solutionstrue">
-          </div>
-          <div class="solutionsfalse">
-            <div class="block">
-              <div style="width:100%">
-                <div class="tex" raw="\vspace{2em}" style="height:2em"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">221-224</span></div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h1 lo="226" lf="226"><a name="using-equivalent-resistances" number="7" lo="226" raw="# Using Equivalent Resistances" class="anchor hanchor" href="#using-equivalent-resistances"><span class="hnumber">7</span>&nbsp;<span class="htext">Using Equivalent Resistances</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">226</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="228" lf="228">Find the current through all resistors in the following circuit in terms of <span len="13" raw="_\mathcal{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.08944em;">E</span></span></span></span> and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">228</span></div>
-      </div>
-      <div class="block">
-        <div class="inline-html" lo="230" lf="230">
-          <img src="figures/Multiple_Loops_V.svg">
-        </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">230</span></div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">209-237</span></div>
       </div>
     </div>
   </div>
