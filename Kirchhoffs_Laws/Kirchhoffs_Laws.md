@@ -58,7 +58,7 @@ Only KVL is needed to find the current in a single-loop circuit.
 3. Which value for $I$ found above is correct?
 
    \ifsolutions
-   **Answer**: Both are correct. A negative current is equivalent to a positive current in the opposite direction.
+   **Answer**: Both are correct and consistent. A negative current is equivalent to a positive current in the opposite direction. (You may recall from mechanics that when solving static equilibrium problems, you assume a direction for an unknown force $F$ on an object in a free-body diagram, sum all of the forces on it, and then solve for the unknown force. If the solution gives a negative $F$, you assumed the wrong direction for $F$.)
    \else
    \vspace{3em}
    \fi
@@ -71,7 +71,7 @@ Only KVL is needed to find the current in a single-loop circuit.
    \vspace{3em}
    \fi
 
-5. For the first circuit considered above, if you remove the bottom resistor and replace the top resistor with a resistor with resistance $2R$, the following circuit results. What is the current $I$ for this circuit?
+5. For the circuit in part 1., if you replace the bottom resistor with a wire and replace the top resistor with a resistor with resistance $2R$, the following circuit results. What is the current $I$ for this circuit?
 
    <img src="figures/Single_Loop_Equiv.svg" height="130px">
 
@@ -109,7 +109,7 @@ Only KVL is needed to find the current in a single-loop circuit.
     
     $$\frac{I_2}{I_1} = \frac{R_1}{R_2} \quad \Rightarrow \quad I_2 < I_1$$ 
     
-    One can also use the water flow analogy. If $R_2$ resists flow more than $R_1$, there will be more flow through $R_1$.
+    One can also use the water flow analogy. If $R_2$ resists flow more than $R_1$, there will be less flow through $R_2$.
    \else
    \vspace{5em}
    \fi
@@ -202,7 +202,7 @@ In the circuit for the previous problem, there are three possible loops. The thi
 
 # Redundant Equations
 
-When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknowns. If you attempt to solve a problem with $N$ unknowns by writing $N$ equations based on KVL and KCL but cannot solve for the unknowns, the reason is that two or more of the equations that you wrote were not independent. To demonstrate this, for the following circuit,
+When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknown currents. If you attempt to solve a problem with $N$ unknowns by writing $N$ equations based on KVL and KCL but cannot solve for the unknowns, the reason is that two or more of the equations that you wrote were not independent. To demonstrate this, for the following circuit,
 
 <img src="figures/Multiple_Loops_III.svg">
 
@@ -233,5 +233,5 @@ When solving circuit problems with multiple loops, you will generally find that 
 4. Is it possible to use the above three equations to solve for $I_1$, $I_2$, and $I_3$ in terms of $\mathcal{E}$ and $R$? If yes, do it. If no, explain why.
 
    \ifsolutions
-   **Answer**: No. The equation for junction $X$ can be turned into the equation for junction $Y$ by multiplying all terms in either equation by $-1$. Thus, the equations are not independent. Given that three independent equations are needed to solve for three unknowns, a solution is impossible with the equations requested in parts 1.--3.
+   **Answer**: No. The equation for junction $X$ can be turned into the equation for junction $Y$ by multiplying all terms in it by $-1$. Thus, the equations are not independent. Given that three independent equations are needed to solve for three unknowns, a solution is impossible with the equations requested in parts 1.--3.
    \fi
