@@ -324,6 +324,8 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 |
   * See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)
 
+## Equivalent Resistance
+
 * Activity - Using KVL and KCL
   * [Instructor notes](Equivalent_Resistance/README.html)
   * Documents:
