@@ -327,7 +327,6 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 ## Equivalent Resistance
 
 * Activity - Using KVL and KCL
-  * [Instructor notes](Equivalent_Resistance/README.html)
   * Documents:
 | [pdf](Equivalent_Resistance/Equivalent_Resistance.pdf)
 | [pdf solns](Equivalent_Resistance/Equivalent_Resistance-solutions.pdf)
