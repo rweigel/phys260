@@ -324,6 +324,19 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 |
   * See also [Section 10.5 of University Physics Volume 2 by Ling et al.](https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/)
 
+* Activity - Using KVL and KCL
+  * [Instructor notes](Equivalent_Resistance/README.html)
+  * Documents:
+| [pdf](Equivalent_Resistance/Equivalent_Resistance.pdf)
+| [pdf solns](Equivalent_Resistance/Equivalent_Resistance-solutions.pdf)
+| [html](Equivalent_Resistance/Equivalent_Resistance.html)
+| 
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Equivalent_Resistance)
+| [Markdown](Equivalent_Resistance/Equivalent_Resistance.md)
+|
+
 ## RC Circuits
 
 * Activity
