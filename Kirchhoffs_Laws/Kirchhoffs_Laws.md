@@ -6,7 +6,7 @@ Title: Kirchhoff's Circuit Laws
 
 To find the current through each resistor in a circuit with only resistors and batteries, Kirchhoff’s Current Law and Kirchhoff’s Voltage Law can be used.
 
-1. Kirchhoff’s Current Law (KCL): The sum of all currents entering and exiting a junction is zero. Or, equivalently, the current flowing into a junction is equal to the current flowing out of a junction.
+1. Kirchhoff’s Current Law (KCL): The current flowing into a junction is equal to the current flowing out of a junction.
 2. Kirchhoff’s Voltage Law (KVL): The sum of all voltage changes around a closed loop is zero. 
 
 **General procedure**
@@ -16,19 +16,19 @@ To find the values of currents in a circuit,
 1. assume directions of current,
 2. write equations for KCL for junctions,
 3. write equations for KVL for loops, and
-4. solve for currents. If you get a negative value for a current, the actual direction of current flow is opposite to what you assumed in 1.
+4. solve for currents. If the value for a current is negative, the actual direction of current flow is opposite to what you assumed in 1.
 
 To apply KVL, draw a closed loop and choose a direction to step around the loop. 
 
 1. If stepping around the loop requires a step across a battery with emf $\mathcal{E}$ and the $-$ side is encountered first, the voltage change is $+\mathcal{E}$. If the $+$ side is encountered first, the voltage change is $-\mathcal{E}$. _The direction of current through the battery does not matter._
 
-2. If stepping around the loop requires a step across a resistor $R$ and the direction of current $I$ through the resistor is the same as the step direction, the voltage change is $-IR$. If the current is opposite the step direction, the voltage change is $+IR$.
+2. If stepping around the loop requires a step across a resistor $R$ and the assumed direction of current $I$ through the resistor is the same as the step direction, the voltage change is $-IR$. If the current is opposite the step direction, the voltage change is $+IR$.
 
 A common error is to assume every loop equation requires an emf.
 
 **Note on Equivalent Resistances**
 
-You may have already had experience solving for currents in circuits using equivalent resistances. In this activity, do not use equivalent resistances unless asked. The motivation is that you will better understand their interpretation and derivation after solving for currents without using equivalent resistances.
+You may have already had experience solving for currents in circuits using equivalent resistances. In this activity, do not use equivalent resistances unless asked. The motivation is that you will better understand their interpretation and derivation after solving for currents without using them.
 
 \ifsolutions
 \else
@@ -55,10 +55,10 @@ Only KVL is needed to find the current in a single-loop circuit.
    **Answer:** $\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=-\mathcal{E}/2R$
    \fi
 
-3. Which value for $I$ found above is correct?
+3. Which value for $I$ is correct?
 
    \ifsolutions
-   **Answer**: Both are correct and consistent. A negative current is equivalent to a positive current in the opposite direction. (You may recall from mechanics that when solving static equilibrium problems, you assume a direction for an unknown force $F$ on an object in a free-body diagram, sum all of the forces on it, and then solve for the unknown force. If the solution gives a negative $F$, you assumed the wrong direction for $F$.)
+   **Answer**: Both are correct and consistent. A negative current is equivalent to a positive current in the opposite direction. (You may recall from mechanics that when solving static equilibrium problems, you assume a direction for an unknown force $F$ on an object in a free-body diagram, sum all of the forces on it, and then solve for $F$. If the solution gives a negative $F$, you assumed the wrong direction for $F$.)
    \else
    \vspace{3em}
    \fi
@@ -66,7 +66,7 @@ Only KVL is needed to find the current in a single-loop circuit.
 4. In part 1., a counterclockwise current was assumed, and you stepped in the counterclockwise direction. If you stepped clockwise, would your answer for $I$ be different? 
 
    \ifsolutions
-   **Answer**: Answer same. KVL is $-\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=\mathcal{E}/2R$
+   **Answer**: Answer same as 1. -- KVL is $-\mathcal{E}+IR+IR=0 \quad \Rightarrow \quad I=\mathcal{E}/2R$
    \else
    \vspace{3em}
    \fi
@@ -76,7 +76,7 @@ Only KVL is needed to find the current in a single-loop circuit.
    <img src="figures/Single_Loop_Equiv.svg" height="130px">
 
    \ifsolutions
-   **Answer**: $I=\mathcal{E}/2R$ in counterclockwise direction. The fact that the answer here is the same as in 1. is related to the formula for the equivalent resistance of resistors in series: $R_{\text{eq}}=R_1+R_2$. Two resistors are in series if only one current path exists between them.
+   **Answer**: $I=\mathcal{E}/2R$ in counterclockwise direction. The fact that the answer here is the same as in 1. is related to the formula for the equivalent resistance of resistors in series: $R_{\text{eq}}=R_1+R_2$. (Two resistors are in series if only one current path exists between them.)
    \fi
 
 \ifsolutions
@@ -93,11 +93,12 @@ Only KVL is needed to find the current in a single-loop circuit.
    \ifsolutions
    **Answer**:
    
-   KVL for $A$: $+\mathcal{E}-I_1R_1=0\quad\Rightarrow\quad I_1=\mathcal{E}/R_1$
+   KCL at $X$: $\quad I_o=I_1+I_2 = \mathcal{E}/R_1 + \mathcal{E}/R_2 = \mathcal{E}\left(\frac{1}{R_1}+\frac{1}{R_2}\right)$
 
-   KVL for $B$: $+I_1R_1-I_2R_2=0 \quad\Rightarrow\quad I_2 = I_1 R_1/R_2 = \mathcal{E}/R_2$
+   KVL for $A$: $\quad+\mathcal{E}-I_1R_1=0\quad\Rightarrow\quad I_1=\mathcal{E}/R_1$
 
-   KCL at $X$: $I_o=I_1+I_2 = \mathcal{E}/R_1 + \mathcal{E}/R_2 = \mathcal{E}\left(\frac{1}{R_1}+\frac{1}{R_2}\right)$
+   KVL for $B$: $\quad+I_1R_1-I_2R_2=0 \quad\Rightarrow\quad I_2 = I_1 R_1/R_2 = \mathcal{E}/R_2$
+
    \else
    \vspace{10em}
    \fi
@@ -165,7 +166,7 @@ Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circui
 
    Eqn 3: $I_3+I_2=I_1$
 
-   From Eqn 2., $I_2=I_3$ (this is expected, why?). Sub this into Eqn. 3 to get $I_3=I_1/2$. Plug this into Eqn 1. to get $I_1=(2/3)(\mathcal{E}/R)$. Additional substitution gives $I_2=I_3=(1/3)(\mathcal{E}/R)$.
+   From Eqn 2., $I_2=I_3$ (this is expected, why?). Substitute this into Eqn. 3 to get $I_3=I_1/2$. Plug this into Eqn 1. to get $I_1=(2/3)(\mathcal{E}/R)$. Additional substitution gives $I_2=I_3=(1/3)(\mathcal{E}/R)$.
 
    \else
    \vspace{8em}
@@ -181,7 +182,7 @@ Assume the direction of currents $I_1$, $I_2$, and $I_3$ in the following circui
 
 # Multiple Loops II
 
-In the circuit for the previous problem, there are three possible loops. The third loop is loop $C$, which is indicated below.
+In the circuit for the previous problem, there are three possible loops. A third loop is loop $C$, which is indicated below.
 
 <img src="figures/Multiple_Loops_II.svg">
 
@@ -202,7 +203,7 @@ In the circuit for the previous problem, there are three possible loops. The thi
 
 # Redundant Equations
 
-When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknown currents. If you attempt to solve a problem with $N$ unknowns by writing $N$ equations based on KVL and KCL but cannot solve for the unknowns, the reason is that two or more of the equations that you wrote were not independent. To demonstrate this, for the following circuit,
+When solving circuit problems with multiple loops, you will generally find that you can use KVL and KCL to write more equations than there are unknown currents. If you attempt to solve a problem with $N$ unknowns by writing $N$ equations based on KVL and KCL but cannot solve for the unknowns, the reason is two or more of the equations that you wrote were not independent. To demonstrate this, for the following circuit,
 
 <img src="figures/Multiple_Loops_III.svg">
 

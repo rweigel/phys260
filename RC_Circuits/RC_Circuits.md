@@ -22,7 +22,7 @@ where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is
 
 ## Problem
 
-Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$. Note that $1 \text{ }\Omega\cdot F = 1 \text{ second}$.
+Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$. Note that $1 \text{ }\Omega\cdot \text{F} = 1 \text{ second}$.
 
 <img src="figures/Discharging_a.svg"/>
 
@@ -82,7 +82,7 @@ In the circuit above, the values of $R$ and $C$ are such that $RC=1\text{ s}$.
 \ifsolutions
 **Answer**:
 
-$q(t)=Q_oe^{-t/\tau}$ and we want $t$ when $q(t)=Q_o/2$, so need to solve 
+$q(t)=Q_oe^{-t/\tau}$, where $\tau=RC=1\text{ s}$ was given and we want $t$ when $q(t)=Q_o/2$, so need to solve 
 
 $Q_o/2=Q_oe^{-t/\tau}\quad$ or $\quad 1/2=e^{-t/\tau}$
 
@@ -90,7 +90,7 @@ Taking the natural log of boths sides, and using $\ln(1/x)=-\ln x$, gives
 
 $$-\ln(2) = \ln e^{-t/\tau} = -\frac{t}{\tau}$$
 
-so $t=\tau\ln(2)\simeq 0.70\tau$. The answer does not depend on $Q_o$, so this is the answer for parts 1. and 2.
+so $t=\tau\ln(2)\simeq 0.70\tau=0.70RC=0.70\text{ s}$. The answer does not depend on $Q_o$, so this is the answer for parts 1. and 2.
 \else
 \newpage
 \fi
@@ -135,7 +135,7 @@ For a circuit with any number of capacitors, DC voltage sources, and resistors, 
 (In the above circuit, the equation used in the previous problem does not apply and so you are only asked for the state of the circuit after a long time.)
 
 1. Find the charge on the capacitor a long time after the switch is closed. 
-2. Find the current in the left, middle, and right resistors after long time after the switch is closed.
+2. Find the current in the left, middle, and right resistors a long time after the switch is closed.
 
 \ifsolutions
 **Answer**

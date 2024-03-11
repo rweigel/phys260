@@ -72,7 +72,7 @@ $I_1=\mathcal{E}/R_{\text{eq}}$, where $R_{\text{eq}}=3R/2$; This is the same an
 
 # Multiple Loops III
 
-Reduce the following circuit as much as possible using equivalent resistances. Then find the currents through $\mathcal{E}_o$ and $\mathcal{E}_1$.
+Reduce the following circuit as much as possible using equivalent resistances. Then find the equations for KCL and KVL that are needed to find the currents through $\mathcal{E}_o$ and $\mathcal{E}_1$.
 
 <img src="figures/Two_Batteries.svg" height="150px">
 
@@ -109,7 +109,7 @@ The original circuit was:
 
 <img src="figures/Parallel.svg" height="200px">
 
-We know the voltage across each resistor is $\mathcal{E}$, so we can write $I_1=\mathcal{E}/R_1$ and $I_2=\mathcal{E}/R_1$.
+We know the voltage across each resistor is $\mathcal{E}$, so we can write $I_1=\mathcal{E}/R_1$ and $I_2=\mathcal{E}/R_2$.
 
 Check: $I_1+I_2=I_o$ is satisfied because we found $I_o=\mathcal{E}/R_{\text{eq}}$, where $R_{\text{eq}}=\frac{1}{\left(\frac{1}{R_1}+\frac{1}{R_2}\right)}$, so 
 
@@ -134,7 +134,7 @@ This voltage, $I_1R/2$, is also the voltage across the two lower resistors in th
 
 <img src="../Kirchhoffs_Laws/figures/Multiple_Loops_I_No_Annotation.svg" height="200px">
 
-So $I_2=(I_1R/2)/R=I_1/2$ and $I_3=(I_1R/2)/R=I_1/2$
+So $I_2=(I_1R/2)/R=I_1/2$ and $I_3=(I_1R/2)/R=I_1/2$ (Note that the $I_2=I_3$ is expected.)
 
 Check: $I_2+I_3=I_1$
 

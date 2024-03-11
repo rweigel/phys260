@@ -39,7 +39,7 @@ A $9$--volt power source is connected to a wire of length $10$ meters with a cir
 1. What is the resistance (with units) of the wire?
 
     \ifsolutions
-    **Answer**: $\ds R=\frac{\rho L}{A} = \frac{(10^{-8}\text{ }\Omega\cdot\text{m})(10\text{ m})}{\pi (0.01\text{ m})^2} = \frac{10^{-3}}{\pi}\text{ }\Omega$. When solving circuit problems, the resistors involved typically have a much larger than this, which is why we neglect the resistance of the wires.
+    **Answer**: $\ds R=\frac{\rho L}{A} = \frac{(10^{-8}\text{ }\Omega\cdot\text{m})(10\text{ m})}{\pi (0.01\text{ m})^2} = \frac{10^{-3}}{\pi}\text{ }\Omega$. When solving circuit problems, the resistors involved typically have a much larger resistance than this, which is why we neglect the resistance of the wires.
     \else
     \vspace{7em}
     \fi
