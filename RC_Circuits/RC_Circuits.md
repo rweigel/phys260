@@ -67,6 +67,8 @@ $q(2)=Q_oe^{-2/RC}$, assuming $RC$ has units of seconds. So
 3. $q(2)=Q_oe^{-2/4}=Q_o/\sqrt{e} \simeq 0.61 Q_o$
 
 4. All curves decay exponentially. To plot, start at $Q_o$, and draw an exponentially decaying curve that passes through one of the values above at $t=2\text{ s}$.
+<img src="figures/Discharging_b_Solution.svg"/>
+
 \fi
 
 ## Problem
