@@ -8,7 +8,9 @@ Title: RC Circuits
 
   "$Q_C= 10 \text{ C}$" means "the capacitor labeled $C$ has a charge of $10$ Coulombs."
 
-* Lower case letters are used for electrical quantities that vary in time. In circuits with only emfs and resistors, currents and voltages are constant, and we used $I$ and $V$. In the circuits considered in this activity, the currents, charges, and voltages vary in time, so we use $i(t)$, $q(t)$, and $v(t)$.
+* Lower case letters are used for electrical quantities that vary in time. In circuits with only emfs and resistors, currents and voltages are constant, and we used $I$ and $V$. In the circuits considered in this activity, the currents and voltages vary in time, so we use $i(t)$ and $v(t)$.
+
+* In this activity, we use the the relationship $i(t)=dq(t)/dt$ between the current $i(t)$ in the wires connected to a capacitor and the charge $q(t)$ on the capacitor.
 
 # Discharging Capacitor
 
@@ -16,7 +18,7 @@ If one capacitor with capacitance $C$ is in a circuit with other resistors (and 
 
 $q(t)=Q_oe^{-t/\tau}$,
 
-where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is the equivalent resistance. The quantity $\tau$ is called "$RC$ time constant." The equation for $q(t)$ follows from solving the differential equation that follows from using Kirchhoff's voltage law.
+where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is the equivalent resistance. The quantity $\tau$ is called the "$RC$ time constant." The equation for $q(t)$ is derived by solving the differential equation that follows from using Kirchhoff's voltage law.
 
 ## Problem
 
@@ -56,17 +58,15 @@ For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}
 \ifsolutions
 **Answer**:
 
-$q(2)=Q_oe^{-2/RC}$, assuming $RC$ has units of seconds. So
+$q(2)=Q_oe^{-2\text{ s}/RC}$, so
 
-1. $q(2)=Q_oe^{-2/1}=Q_o/e^2 \simeq 0.14 Q_o$
+1. $q(2)=Q_oe^{-2\text{ s}/1\text{ s}}=Q_o/e^2 \simeq 0.14 Q_o$
 
-2. $q(2)=Q_oe^{-2/2}=Q_o/e \simeq 0.37 Q_o$
+2. $q(2)=Q_oe^{-2\text{ s}/2\text{ s}}=Q_o/e \simeq 0.37 Q_o$
 
-3. $q(2)=Q_oe^{-2/4}=Q_o/\sqrt{e} \simeq 0.61 Q_o$
+3. $q(2)=Q_oe^{-2\text{ s}/4\text{ s}}=Q_o/\sqrt{e} \simeq 0.61 Q_o$
 
-4. All curves decay exponentially. To plot, start at $Q_o$, and draw an exponentially decaying curve that passes through one of the values above at $t=2\text{ s}$.
-<img src="figures/Discharging_b_Solution.svg"/>
-
+4. All curves decay exponentially according to $q(t)=Q_oe^{-t/RC}$. To plot, start at $Q_o$, and draw an exponentially decaying curve that passes through one of the values above at $t=2\text{ s}$.
 \fi
 
 ## Problem
@@ -86,7 +86,7 @@ $q(t)=Q_oe^{-t/\tau}$, where $\tau=RC=1\text{ s}$ was given and we want $t$ when
 
 $Q_o/2=Q_oe^{-t/\tau}\quad$ or $\quad 1/2=e^{-t/\tau}$
 
-Taking the natural log of boths sides, and using $\ln(1/x)=-\ln x$, gives
+Taking the natural logarithm of boths sides, and using $\ln(1/x)=-\ln x$, gives
 
 $$-\ln(2) = \ln e^{-t/\tau} = -\frac{t}{\tau}$$
 
@@ -103,7 +103,7 @@ $$q(t)=Q_f(1-e^{-t/\tau})$$
 
 where $\tau\equiv RC$, $R$ is the equivalent resistance, and $Q_f$ is the final charge on the capacitor, that is, the charge on the capacitor as $t\rightarrow\infty$ (it is technically more accurate to say $t\gg \tau$ instead of $t\rightarrow\infty$; why?).
 
-To find $Q_f$, replace the capacitor with an open circuit and use Kirchhoff's voltage law to find the voltage across the capacitor, $V_f$. Then use $Q_f=CV_f$.
+To find $Q_f$, replace the capacitor with an open circuit and use Kirchhoff's voltage law to find the voltage across the capacitor, $V_f$, and then use $Q_f=CV_f$.
 
 ## Example
 
@@ -115,7 +115,7 @@ Find $q(t)$ for the following circuit, assuming the switch is closed at $t=0$ an
 
 <img src="figures/Charging_b.svg"/>
 
-Kirchhoff's voltage Law gives $\mathcal{E}-i(t)R-v_C(t)=0$, where $v_C(t)$ is the voltage across the capacitor. For large $t$, $i(t)=0$, leaving $v_{C}(t)=\mathcal{E}$. This voltage is for large $t$, so we relabel it as $V_f$. Using $Q_f=CV_f$ gives $Q_f=C\mathcal{E}$, so
+Kirchhoff's voltage Law gives $\mathcal{E}-i(t)R-v_C(t)=0$, where $v_C(t)$ is the voltage across the capacitor. For large $t$, $i(t)=0$, so $v_{C}(t)=\mathcal{E}$. This voltage is for large $t$, so we relabel it as $V_f$. Using $Q_f=CV_f$ gives $Q_f=C\mathcal{E}$, so
 
 $$q(t)=C\mathcal{E}(1-e^{-t/RC})$$
 
