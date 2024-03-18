@@ -352,33 +352,33 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Markdown](RC_Circuits/RC_Circuits.md)
 |
 
-## Lorentz Force Law
+## Magnetic Force on Charged Particles
 
-* Activity - Lorentz Force on Charged Particles
-  * [Instructor notes](Lorentz_Force/README.html)
+* Activity - Magnetic Force on Charged Particles
+  * [Instructor notes](Magnetic_Force/README.html)
   * Documents:
-| [pdf](Lorentz_Force/Lorentz_Force.pdf)
-| [pdf solns](Lorentz_Force/Lorentz_Force-solutions.pdf)
-| [html](Lorentz_Force/Lorentz_Force.html)
+| [pdf]((Magnetic_Force/(Magnetic_Force.pdf)
+| [pdf solns]((Magnetic_Force/(Magnetic_Force-solutions.pdf)
+| [html]((Magnetic_Force/(Magnetic_Force.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
-| [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force)
-| [Markdown](Lorentz_Force/Lorentz_Force.md)
+| [Github](https://github.com/rweigel/phys260/tree/master/(Magnetic_Force)
+| [Markdown]((Magnetic_Force/(Magnetic_Force.md)
 |
 
-## Lorentz Force Law on Wires
+## Magnetic Force on Wires
 
-* Activity - Lorentz Force on Wires
+* Activity - Magnetic Force on Wires
   * Documents:
-| [pdf](Lorentz_Force_Wires/Lorentz_Force_Wires.pdf)
-| [pdf solns](Lorentz_Force_Wires/Lorentz_Force_Wires-solutions.pdf)
-| [html](Lorentz_Force_Wires/Lorentz_Force_Wires.html)
+| [pdf](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.pdf)
+| [pdf solns](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires-solutions.pdf)
+| [html](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.html)
 |
 * Source:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
-| [Github](https://github.com/rweigel/phys260/tree/master/Lorentz_Force_Wires)
-| [Markdown](Lorentz_Force_Wires/Lorentz_Force_Wires.md)
+| [Github](https://github.com/rweigel/phys260/tree/master/Magnetic_Force_on_Wires)
+| [Markdown](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.md)
 | 
 
 ## The Biot--Savart law

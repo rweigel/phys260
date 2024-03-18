@@ -4,7 +4,7 @@ Magnets sorting nails https://imgur.com/gallery/qxoTVRA
 
 Previously, you have considered the trajectories of charged particles in a given magnetic field. The given magnetic fields were created by currents, which are composed of moving charges.
 
-In general, computing the magnetic field due to an arbitrary current system requires the use of the Biot--Savart law (Ampere’s law can only be used in special cases). 
+In general, computing the magnetic field due to an arbitrary current system requires the use of the Biot--Savart law (Ampere’s law can only be used in special cases).
 
 It can be shown using both the Biot--Savart law and Ampere’s law that the magnitude of the magnetic field $\mathbf{B}$ at a perpendicular distance $r$ from a long and straight wire carrying a current $I$ is $|\mathbf{B}|=\mu_oI/2\pi r$. The direction of $\mathbf{B}$ is given by the right-hand rule covered in class and in the textbook.
  

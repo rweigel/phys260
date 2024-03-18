@@ -1,5 +1,5 @@
 ```mdextension
-Title: Lorentz Force
+Title: Magnetic Force
 ```
 
 # Introduction
@@ -71,26 +71,22 @@ There is a mnemonic (memory) device for remembering this table. Suppose you do t
 
 In the following diagram, a positive charge $q$ moves with a velocity in a region of space with a magnetic field.
 
-<img src="figures/Lorentz_Force.svg"/>
+<img src="figures/Magnetic_Force.svg"/>
 
 For case f. in the figure above,
 
-1. Write a vector equation for both $\bfvec{v}$ and $\bfvec{B}$ and use it to compute the force vector using $\bfvec{F} = q\bfvec{v}\times\bfvec{B}$ assuming that $|\bfvec{B}|=B_o$ and $|\bfvec{v}|=v_o$. Then compute the magnitude of $\bfvec{F}$.
+1. Assuming $|\bfvec{B}|=B_o$ and $|\bfvec{v}|=v_o$, express $\bfvec{v}$ and $\bfvec{B}$ in terms of their magnitudes and unit vectors. Then find the magnetic force using $\bfvec{F} = q\bfvec{v}\times\bfvec{B}$ and compute the magnitude of $\bfvec{F}$.
 2. Use $F = |q|vB\sin\phi$ to compute the magnitude of the force and use the right-hand rule to determine its direction.
 
 **Answer**
 
-**f.1**
-
-$\bfvec{v}=-v_o\khat$, so $\bfvec{F} = q(-v_o\khat)\times (B_o\ihat)=-qv_oB_o(\khat\times \ihat)=-qv_oB_o\jhat$;
+**f.1**: The diagram does not indicate the direction of $z$. However, using the right--hand rule, it must be out of the page. The velocity vector points into the page, so $\bfvec{v}=-v_o\khat$. Also from the diagram $\bfvec{B}=B_o\ihat$, so $\bfvec{F} = q(-v_o\khat)\times (B_o\ihat)=-qv_oB_o(\khat\times \ihat)=-qv_oB_o\jhat$;
 
 $|\bfvec{F}|=|-qv_oB_o\jhat| = |-qv_oB_o||\jhat|=|q|v_oB_o$
 
 Note: $v_o$ and $B_o$ are both positive because they were given as magnitudes, so $|v_oB_o|=v_oB_o$; also, in the equation $|-qv_oB_o||\jhat|$, in the first term, $|-qv_oB_o|$, the vertical bars means "absolute value" and $|\jhat|$ they mean "magnitude".
 
-**f.2**
-
-$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$.
+**f.2**: $\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$.
 
 The right--hand rule gives direction as $-\jhat$.
 
@@ -100,7 +96,7 @@ Answer questions 1. and 2. given in the previous problem for cases a.--e. in the
 
 {\bf a.1}
 \ifsolutions
-$\bfvec{v}=v_o\jhat$, so $\bfvec{F} = q(v_o\jhat)\times (B_o\ihat)=qv_oB_o(\jhat\times \ihat)=-qv_oB_o\khat$; $|\bfvec{F}|=|q|v_oB_o$
+$\bfvec{v}=v_o\jhat$ and $\bfvec{B}=B_o\ihat$, so $\bfvec{F} = q(v_o\jhat)\times (B_o\ihat)=qv_oB_o(\jhat\times \ihat)=-qv_oB_o\khat$; $|\bfvec{F}|=|q|v_oB_o$. 
 \else
 <div style="height:3em"/>
 \fi
@@ -108,7 +104,7 @@ $\bfvec{v}=v_o\jhat$, so $\bfvec{F} = q(v_o\jhat)\times (B_o\ihat)=qv_oB_o(\jhat
 {\bf a.2}
 
 \ifsolutions
-$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$.
+$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$. The right--hand rule gives direction as $-\khat$.
 \fi
 
 \ifsolutions\else
@@ -116,105 +112,112 @@ $\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$.
 \fi
 
 \ifsolutions\else
-<img src="figures/Lorentz_Force.svg"/>
+<img src="figures/Magnetic_Force.svg"/>
 
-The figure above is a copy of that on previous page.
+The figure above is a copy of that on the previous page.
 \fi
 
 {\bf b.1}
 \ifsolutions
-$\bfvec{v}=-v_o\jhat$, so $\bfvec{F} = -q\thinspace (v_o\jhat)\times (B_o\ihat)=qv_oB_o(\jhat\times \ihat)=qv_oB_o\khat$; $|\bfvec{F}|=|q|v_oB_o$
+$\bfvec{v}=-v_o\jhat$ and $\bfvec{B}=B_o\ihat$, so $\bfvec{F} = -q\thinspace (v_o\jhat)\times (B_o\ihat)=-qv_oB_o(\jhat\times \ihat)=qv_oB_o\khat$; $|\bfvec{F}|=|q|v_oB_o$
 \else
 <div style="height:4em"/>
 \fi
 {\bf b.2}
 \ifsolutions
-$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$.
+$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$. The right--hand rule gives direction as $\khat$.
 \else
 <div style="height:4em"/>
 \fi
 
 {\bf c.1}
 \ifsolutions
-$\bfvec{v}=-v_o\ihat$, so $\bfvec{F} = -q(v_o\ihat)\times (B_o\ihat)=-qv_oB_o(\jhat\times \ihat)=0$; $|\bfvec{F}|=0$
+$\bfvec{v}=-v_o\ihat$ and $\bfvec{B}=B_o\ihat$, so $\bfvec{F} = -q(v_o\ihat)\times (B_o\ihat)=-qv_oB_o(\ihat\times \ihat)=0$; $|\bfvec{F}|=0$
 \else
 <div style="height:4em"/>
 \fi
 
 {\bf c.2}
 \ifsolutions
-$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(180^{\circ})=0$.
+$\phi=180^{\circ}$, so $F = |q|v_oB_o\sin(180^{\circ})=0$.
 \else
 <div style="height:4em"/>
 \fi
 
 {\bf d.1}
 \ifsolutions
-$\bfvec{v}=v_o\ihat$, so $\bfvec{F} = q(v_o\ihat)\times (B_o\ihat)=qv_oB_o(\ihat\times \ihat)=0$; $|\bfvec{F}|=0$
+$\bfvec{v}=v_o\ihat$ and $\bfvec{B}=B_o\ihat$, so $\bfvec{F} = q(v_o\ihat)\times (B_o\ihat)=qv_oB_o(\ihat\times \ihat)=0$; $|\bfvec{F}|=0$
 \else
 <div style="height:4em"/>
 \fi
 
 {\bf d.2}
 \ifsolutions
-$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(0^{\circ})=0$.
+$\phi=0^{\circ}$, so $F = |q|v_oB_o\sin(0^{\circ})=0$.
 \else
 <div style="height:4em"/>
 \fi
 
 {\bf e.1}
 \ifsolutions
-$\bfvec{v}=v_o\khat$, so $\bfvec{F} = q\thinspace (v_o\khat)\times (B_o\ihat)=qv_oB_o(\khat\times \ihat)=qv_oB_o\jhat$; $|\bfvec{F}|=|q|v_oB_o$
+$\bfvec{v}=v_o\khat$ and $\bfvec{B}=B_o\ihat$, so $\bfvec{F} = q\thinspace (v_o\khat)\times (B_o\ihat)=qv_oB_o(\khat\times \ihat)=qv_oB_o\jhat$; $|\bfvec{F}|=|q|v_oB_o$
 \else
 <div style="height:4em"/>
 \fi
 
 {\bf e.2}
 \ifsolutions
-$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$.
+$\phi=90^{\circ}$, so $F = |q|v_oB_o\sin(90^{\circ})=|q|v_oB_o$. The right--hand rule gives direction as $\jhat$.
 \else
 \newpage
 \fi
 
 # Trajectories
 
-If the magnetic force on a charge particle is not zero the direction of its velocity vector will change. Because the magnetic force depends on the velocity vector direction, the magnetic force vector will also change.
+If the magnetic force on a charged particle is not zero, the direction of its velocity vector will change. Because the magnetic force depends on the velocity vector direction, the magnetic force vector will also change.
 
 For a charged particle moving in a region of space with a constant magnetic field (both in magnitude and direction), there are three general trajectories:
 
 1. If the velocity is parallel to the magnetic field lines, the trajectory is a straight line because no magnetic forces are acting on it.
-2. If velocity is perpendicular to the magnetic field lines, the trajectory is a circle. The particle rotates in a circle in the same plane as the velocity vector.
-3. The velocity has parallel and perpendicular components to the magnetic field line. In this case, the particle will move at a constant speed parallel or antiparallel to the field lines and in a circle around the field line. The trajectory is a spiral.
+2. If velocity is perpendicular to the magnetic field lines, the trajectory is a circle in a plane that is perpendicular to the magnetic field.
+3. The velocity has components parallel and perpendicular to the magnetic field. In this case, the particle will move at a constant speed parallel or antiparallel to the field lines and in a circle around the field line. The trajectory is a spiral.
 
 ## Problem
 
 Use the simulation at https://ophysics.com/em8.html to verify the above three statements. State the settings that you used to create the trajectory. Also, state how the settings affected the trajectory and in which way (for example, for case $a.$, "changing $m$ did not change the shape of the type or shape of the trajectory").
 
-1. \ifsolutions
-**Answer**: With $v_x=0.01$, and $v_z=0.1$, trajectory is along the vertical axis. The only setting that causes an obvious change is $v_z$. Large $v_z$ causes faster movement upwards. If $v_z=0$, there was no obvious movement. The other settings seemed to cause a change, but it is difficult to determine the change visually.
-\else
-<div style="height:10em"/>
-\fi
+1. &nbsp;
 
-2. \ifsolutions
-**Answer** Setting $v_z=0$ creates a trajectory in the gray plane that is a circle. The radius of the circle increases with increasing $m$ and decreasing $b$ and $|q|$. When viewed from a point far on the postive side of the vertical axis, the direction of rotation around the vertical axis is clockwise for positive $q$ and counterclockwise for negative $q$.
-\else
-<div style="height:10em"/>
-\fi
+   \ifsolutions
+   **Answer**: With $v_x=0.01$ (the smallest value allowed), and $v_z=0.1$, trajectory is along the vertical axis. The only setting that causes an obvious change is $v_z$. Large $v_z$ causes faster movement upwards. If $v_z=0$, there was no obvious movement.
+   \else
+    \vspace{10em}
+   \fi
 
-3. \ifsolutions
-**Answer** With non--zero $v_z$ (only positive $v_z$ can be chosen), the trajectory is a spiral upwards. The tightness of the spiral depends on $v_z$, with small non--zero $v_z$ giving a tight spiral. The radius of the spiral depends on the parameters in the same way as the radius of the circle decribed in the answer to part 2. The direction of rotation has the same dependence on the sign of $q$ as in the answer to part 2.
-\else
-<div style="height:10em"/>
-\fi
+2. &nbsp;
+
+   \ifsolutions
+   **Answer** Setting $v_z=0$ creates a trajectory in the gray plane that is a circle. The radius of the circle increases with increasing $m$ and decreasing $b$ and $|q|$. When viewed from a point far on the positive side of the vertical axis, the direction of rotation around the vertical axis is clockwise for positive $q$ and counterclockwise for negative $q$.
+   \else
+    \vspace{10em}
+   \fi
+
+3. &nbsp;
+
+   \ifsolutions
+   **Answer** With non--zero $v_z$ (only positive $v_z$ can be chosen), the trajectory is a spiral upwards. The tightness of the spiral depends on $v_z$, with small non--zero $v_z$ giving a tight spiral. The radius of the spiral depends on the parameters in the same way as the radius of the circle described in the answer to part 2. The direction of rotation has the same dependence on the sign of $q$ as in the answer to part 2.
+   \else
+   \vspace{10em}
+   \fi
+
 
 \ifsolutions\else
-\newpage
+%\newpage
 \fi
 
 ## Problem
 
-Consider the following cases and describe the trajectory of the particle in words in the table below (e.g., "circle in $x$--$y$ plane; ccw when viewed from a point on $+z$ axis" or "spiral with motion in $+z$ direction; ccw when viewed from a point on $+z$ axis"). You may use the simulation to check some of your answers. 
+Consider the following cases and describe the trajectory of a positively charged particle in words in the table below (e.g., "circle in $x$--$y$ plane; ccw when viewed from a point on $+z$ axis" or "spiral with motion in $+z$ direction; ccw when viewed from a point on $+z$ axis"). You may use the simulation to check some of your answers. 
 
 \ifsolutions
 
@@ -233,7 +236,7 @@ c. $\mathbf{B} = -B_o\yhat$ $\mathbf{v} = v_o\zhat$: Trajectory is ccw circle in
 
 d. $\mathbf{B} = B_o\ihat $ $\mathbf{v} = v_o\ihat+v_o\yhat$: Trajectory is cw circle in $y$--$z$ plane when viewed from point on the $+x$ axis. Spiral growing in +x direction.
 
-e. $\mathbf{B} = -B_o\yhat$ $\mathbf{v} = v_o\yhat+v_o\zhat$: Trajectory is ccw circle in $x$--$y$ plane when viewed from point on $+y$ axis. Spiral growing in $+y$ direction.
+e. $\mathbf{B} = -B_o\yhat$ $\mathbf{v} = v_o\yhat+v_o\zhat$: Trajectory is ccw circle in $x$--$z$ plane when viewed from point on $+y$ axis. Spiral growing in $+y$ direction.
 \else
 $$
 \begin{align*}
@@ -245,4 +248,3 @@ e.\quad  & \mathbf{B} = -B_o\yhat & \mathbf{v} & = v_o\yhat+v_o\zhat& & \bf{Traj
 \end{align*}
 $$
 \fi
-

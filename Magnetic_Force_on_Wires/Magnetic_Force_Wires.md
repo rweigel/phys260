@@ -1,12 +1,12 @@
 ```mdextension
-Title: Lorentz Force and Torque on Current Loops
+Title: Magnetic Force and Torque on Current Loops
 ```
 
 # Forces on Straight Wires
 
-A wire carrying a current contains many moving charges. If a current--carrying wire is in a region of space with a magnetic field, the Lorentz force on the moving charges in the wire results in a force on the wire.
+A wire carrying a current contains many moving charges. If a current--carrying wire is in a region of space with a magnetic field, the magnetic force on the moving charges in the wire results in a force on the wire.
 
-Each charge $q$ moving with a velocity $\bfvec{v}$ in a segment of wire  will have a Lorentz force on it of
+Each charge $q$ moving with a velocity $\bfvec{v}$ in a segment of wire  will have a magnetic force on it of
 
 $$\bfvec{F} = q\bfvec{v}\times\bfvec{B}$$
 
@@ -18,7 +18,7 @@ or, equivalently, by defining a length vector $\bfvec{L}$ with the same directio
 
 $$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
 
-As was the case for the Lorentz force equation for a charge $q$, the magnitude of this cross--product can be written in a simplified form:
+As was the case for the magnetic force equation for a charge $q$, the magnitude of this cross--product can be written in a simplified form:
 
 $$F=ILB\sin\phi$$
 
@@ -62,20 +62,25 @@ The sum of the forces is zero.
 
 1. For the current loops in a. and b. in the figure above, determine the magnitude and direction of the force on each segment of the wire and the net force on the loop given that a magnetic field of magnitude $B_o$ points out of the page. Draw the force vector on the line segments and show your calculation on the figure or in the space below.
 
-\ifsolutions
-\else
-\vspace{6cm}
-\fi
+   \ifsolutions
+   The force on each segment is shown on the diagram above. The net force is zero for both cases.
+   \else
+   \vspace{6cm}
+   \fi
 
 2. For the current loop in c., determine {\bf only} the direction of the force at each of the five points shown as solid dots when $\bfvec{B}=B_o\khat$. Draw a vector on the diagram to indicate the direction of the force at that point. What is the net force on this loop?
 
-\newpage
+   \ifsolutions
+   The force vectors are shown on the diagram above. The net force is zero.
+   \else
+   \newpage
+   \fi
 
 # Torques on Current Loops
 
-In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). The general result is that a closed loop in a _constant_ magnetic field will not have a net force. To see this, think of computing the force by adding all of the force vectors in each of the previous problems head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.
+In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). The general result is the net force on a closed loop in a _constant_ magnetic field is zero. To see this, think of computing the force by adding all of the force vectors in each of the previous problems head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.
 
-A closed loop in a constant magnetic field can have a net torque (in which case it will tend to rotate).
+The net torque on a closed loop in a constant magnetic field can be non--zero (in which case it will tend to rotate).
 
 The torque on a current loop that lies in a plane is:
 
@@ -87,17 +92,20 @@ The equation $\vec{\boldsymbol{\tau}} = \boldsymbol{\mu}\times\bfvec{B} = I\bfve
 
 **Interpreting the torque unit vector**
 
-1. A torque in the $+\khat$ direction corresponds to a rotation in the same sense as rotation of the $+\ihat$ axis towards the $+\jhat$ axis;
-2. a torque in the $+\ihat$ direction corresponds to a rotation in the same sense as rotation of the $+\jhat$ axis towards the $+\khat$ axis;
-3. a torque in the $+\jhat$ direction corresponds to a rotation in the same sense as rotation of the $+\khat$ axis towards the $+\ihat$ axis.
+1. A torque in the $+\khat$ direction corresponds to a rotation in the same sense as rotation from the $+\ihat$ axis towards the $+\jhat$ axis;
+2. a torque in the $+\ihat$ direction corresponds to a rotation in the same sense as rotation from the $+\jhat$ axis towards the $+\khat$ axis;
+3. a torque in the $+\jhat$ direction corresponds to a rotation in the same sense as rotation from the $+\khat$ axis towards the $+\ihat$ axis.
 
 You do not need to memorize these -- they can be obtained from the following diagram. Rotating $\ihat$ towards $\jhat$ gives $\khat$ (item 1. above). Rotating $\jhat$ towards $\khat$ gives $\jhat$ (item 2. above), etc.
 
 <img src="../Cross_Products/figures/Cyclic_ijk.svg"/>
 
+\ifsolutions
+\else
 \newpage
+\fi
 
-## Problem -- $\bfvec{B}$ $\perp$ to Loop
+## Problem -- $\bfvec{B}$ in Plane of Loop
 
 \ifsolutions
 <img src="figures/Rectangle_Triangle_Torque_Solutions.svg"/>
@@ -105,7 +113,7 @@ You do not need to memorize these -- they can be obtained from the following dia
 <img src="figures/Rectangle_Triangle_Torque.svg"/>
 \fi
 
-The three current loops are in a region of space with a constant magnetic field and a magnitude of $B_o$.
+The three current loops are in a region of space with a constant magnetic field with a magnitude of $B_o$.
 
 1. Will loop a. tend to rotate? If so, what axis will it tend to rotate about? Determine this by drawing the direction of the force (determined using the right--hand rule) on each segment of the wire.
 
@@ -156,9 +164,9 @@ The three current loops are in a region of space with a constant magnetic field 
    \ifsolutions
    {\bf Answer: }
 
-   a. $\boldsymbol{\tau}= (72I_oL_o^2\khat)\times (B_o\ihat)= 72I_oL_o^2\jhat$
+   a. $\boldsymbol{\tau}= (72I_oL_o^2\khat)\times (B_o\ihat)= 72I_oL_o^2B_o\jhat$
 
-   b. $\boldsymbol{\tau}= (-33I_oL_o^2\khat)\times (B_o\ihat)= -33I_oL_o^2\jhat$
+   b. $\boldsymbol{\tau}= (-33I_oL_o^2\khat)\times (B_o\ihat)= -33I_oL_o^2B_o\jhat$
    \else
    \vspace{2cm}
    \fi
@@ -182,7 +190,7 @@ The three current loops are in a region of space with a constant magnetic field 
    \vspace{2cm}
    \fi
 
-## Problem -- $\bfvec{B}$ not $\perp$ to Loop
+## Problem -- $\bfvec{B}$ not in Plane of Loop
 
 <img src="figures/Rectangle_Rotated.svg"/>
 
@@ -211,7 +219,7 @@ If $\bfvec{B}=B_o\ihat$,
 2. $0$
 3. From a diagram, $\hat{\mathbf{n}}=-\sin\theta_o\ihat + \cos\theta_o\jhat$, and using $\bfvec{A}=A\hat{\mathbf{n}}$,
 
-   $\boldsymbol{\tau}=\boldsymbol{\mu}\times\bfvec{B}=I_oA\hat{\mathbf{n}}\times\bfvec{B} = I_owhB_o(-\sin\theta_o\ihat + \cos\theta_o\jhat)\times\ihat=-IwhB_o\cos\theta_o\khat$
+   $\boldsymbol{\tau}=\boldsymbol{\mu}\times\bfvec{B}=I_oA\hat{\mathbf{n}}\times\bfvec{B} = I_owhB_o(-\sin\theta_o\ihat + \cos\theta_o\jhat)\times\ihat=-I_owhB_o\cos\theta_o\khat$
 
 \else
 \fi

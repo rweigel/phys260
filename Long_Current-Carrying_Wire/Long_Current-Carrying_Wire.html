@@ -26,6 +26,7 @@
     #toc {
       flex: 0 1 auto;
       margin-top: 0em;
+      margin-right: 1em;
       max-width: 12em;
       overflow: hidden auto;
     }
@@ -40,8 +41,8 @@
     }
 
     #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
       list-style-type: decimal;
-      margin: 0.25em 0.5em 0em 0.25em;
       padding-inline-start: 1em;
     }
 
@@ -66,16 +67,16 @@
 
     #display .title {
       text-align: center;
-      font-size: 250%;
+      font-size: 150%;
       font-weight: bold;
       color: black;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
     }
 
     #display .subtitle {
       text-align: center;
-      font-size: 150%;
+      font-size: 120%;
       font-weight: bold;
       color: black;
       margin-top: 0.2em;
@@ -91,12 +92,8 @@
       flex: 1 1 auto;
     }
 
-    #display .block.comment {
+    #display .block>.comment {
       display: none;
-    }
-
-    #display .block.inline-html {
-      display: block;
     }
 
     #display .hr {
@@ -108,9 +105,26 @@
     }
 
     #display a {
-      text-decoration: none black;
-      text-underline-offset: 2px;
+      text-decoration-line: none;
+      text-decoration-color: black;
       color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
     }
 
     #display p {
@@ -123,22 +137,6 @@
     #display pre {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-    }
-
-    #display ul {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.35em;
-    }
-
-    #display ol {
-      width: 100%;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      padding-left: 0.5em;
     }
 
     #display h1,
@@ -274,20 +272,66 @@
       width: 100%;
     }
 
-    #display li p {
+    #display ul {
       width: 100%;
-      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
     }
 
-    #display li .block:first-of-type p {
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
       width: 100%;
-      display: block;
-      margin-top: 0em;
-      margin-bottom: 0em;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
     }
 
     .inline-html .block .block-info {
       display: none;
+    }
+
+    .inline-html {
+      width: 100%;
     }
 
     .section>.block ol~.block-info {}
@@ -325,12 +369,17 @@
       border-radius: 0.5em;
     }
 
-    .katex {
-      font-size: inherit !important;
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
     }
 
-    .katex-warning {
-      border-right: 3px solid red;
+    .latex-underline {
+      text-decoration: underline;
+    }
+
+    .katex {
+      font-size: inherit !important;
     }
 
     .katex-display {
@@ -344,6 +393,31 @@
       margin: 0em;
     }
 
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
     @media print {
       * {
         overflow: visible !important;
@@ -351,25 +425,20 @@
 
       @page {
         size: auto;
-        margin: 0.75in;
+        margin: 0.5in 0.75in 0.75in;
       }
 
       .katex .hide-tail {
         overflow: hidden !important;
       }
 
+      .page-break {
+        border-top: none;
+      }
+
       .body {
         display: inline;
         position: relative;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        break-before: page;
       }
 
       h1,
@@ -451,7 +520,6 @@
   </style>
   <script>
     function tocClickListen() {
-      // No jQuery b/c also used in stand-alone HTML.
       let hs = document.querySelectorAll('#toc > ol ol');
       let el, ns;
       for (let i = 0; i < hs.length; i++) {
@@ -462,11 +530,12 @@
           }
           el.addEventListener('click', event => {
             ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
             if (ns.style.display === 'none') {
     ns.style.display = 'block';
-            } else {
-    ns.style.display = 'none';
-            }
+            } else
+            {
+    ns.style.display = 'none';}
           });
         }
       }
@@ -484,11 +553,11 @@
 </head>
 
 <body class="body">
-  <div id="toc" style="display: block; min-width: 5em;">
+  <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#long-current-carrying-wires-ch-28" raw="# Long Current-Carrying Wires (Ch 28)" lo="1" class="highlighted">
-          <span class="toctext" raw="# Long Current-Carrying Wires" href="#long-current-carrying-wires">Long Current-Carrying Wires</span>
+        <a href="#long-current-carrying-wires" raw="# Long Current-Carrying Wires" lo="1" class="highlighted">
+          <span class="toctext">Long Current-Carrying Wires</span>
         </a>
         <ol class="toc" style="display: none;">
           <li>
@@ -510,130 +579,162 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1" class="highlighted"><a name="long-current-carrying-wires" number="1" lo="1" raw="# Long Current-Carrying Wires" class="hanchor" href="#long-current-carrying-wires"><span class="hnumber">1</span>&nbsp;<span class="htext">Long Current-Carrying Wires</span></a></h1>
+        <h1 lo="1" lf="1" class="highlighted"><a name="long-current-carrying-wires" number="1" lo="1" raw="# Long Current-Carrying Wires" class="anchor hanchor" href="#long-current-carrying-wires"><span class="hnumber">1</span>&nbsp;<span class="htext">Long Current-Carrying Wires</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
       </div>
       <div class="block">
-        <p lo="3" lf="3" class="active">Magnets sorting nails <a href="https://imgur.com/gallery/qxoTVRA">https://imgur.com/gallery/qxoTVRA</a></p>
+        <p padlength="0" lo="3" lf="3">Magnets sorting nails <a href="https://imgur.com/gallery/qxoTVRA">https://imgur.com/gallery/qxoTVRA</a></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
       </div>
       <div class="block">
-        <p lo="5" lf="5">Previously, you have considered the trajectories of charged particles in a given magnetic field. The given magnetic fields were created by currents, which are composed of moving charges.</p>
+        <p padlength="0" lo="5" lf="5">Previously, you have considered the trajectories of charged particles in a given magnetic field. The given magnetic fields were created by currents, which are composed of moving charges.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
       </div>
       <div class="block">
-        <p lo="7" lf="7">In general, computing the magnetic field due to an arbitrary current system requires the use of the Biot–Savart law (Ampere’s law can only be used in special cases). </p>
+        <p padlength="0" lo="7" lf="7" class="active">In general, computing the magnetic field due to an arbitrary current system requires the use of the Biot–Savart law (Ampere’s law can only be used in special cases).</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
       </div>
       <div class="block">
-        <p lo="9" lf="9">It can be shown using both the Biot–Savart law and Ampere’s law that the magnitude of the magnetic field <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> at a perpendicular distance <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> from a long and straight wire carrying a current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> is <span len="28" raw="_|\mathbf{B}|=\mu_oI/2\pi r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathbf">B</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>. The direction of <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> is given by the right-hand rule covered in class and in the textbook.</p>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h2 lo="11" lf="11"><a name="long-wires" number="1.1" lo="11" raw="## Long Wires" class="hanchor" href="#long-wires"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Long Wires</span></a></h2>
-      </div>
-      <div class="block">
-        <p lo="13" lf="13">In the following diagram current flowing in long wires is shown. On the left, the current flows into the page and the wire extend a large distance into and out of the page. On the right, only a small segment of the long wire is shown. Make clear that these are two separate problems and the coordinate axis applies to both.</p>
-      </div>
-      <div class="block">
-        <ol lo="15" lf="17">
-          <li lo="15" lf="16">
-            <div class="block">
-              <p lo="15" lf="16"> In the diagram, the <span len="3" raw="_x_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and <span len="3" raw="_y_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> directions are shown. What must be the <span len="3" raw="_z_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> direction for the coordinate system to be right-handed? (A right-handed coordinate system is one in which the cross product of the <span len="3" raw="_x_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and <span len="3" raw="_y_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> unit vectors gives the <span len="3" raw="_z_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> unit vector.)</p>
-            </div>
-          </li>
-          <li lo="17" lf="19">
-            <div class="block">
-              <p lo="17" lf="18"> In terms of <span len="5" raw="_I_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_r_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, constants, and unit vectors, find the magnetic field <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> at the four locations a., b., c., and d.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="19" lf="19">The following diagram is identical to the one on the previous page.</p>
-      </div>
-      <div class="block">
-        <ol start="4" lo="21" lf="23">
-          <li lo="21" lf="22">
-            <div class="block">
-              <p lo="21" lf="22"> If a positively charged particle has a velocity of <span len="10" raw="_v_o\jhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9023em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord boldsymbol"></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
-            </div>
-          </li>
-          <li lo="23" lf="25">
-            <div class="block">
-              <p lo="23" lf="24"> If a positively charged particle has a velocity of <span len="11" raw="_-v_o\jhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9023em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord boldsymbol"></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="block">
-        <p lo="25" lf="25">If a positively charged particle has a velocity of <span len="10" raw="_v_o\ihat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8579em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol"></span></span></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
-      </div>
-      <div class="block">
-        <p lo="27" lf="27">If a positively charged particle has a velocity of <span len="10" raw="_-vo\ihat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7912em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">o</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol"></span></span></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
+        <p padlength="0" lo="9" lf="9">It can be shown using both the Biot–Savart law and Ampere’s law that the magnitude of the magnetic field <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> at a perpendicular distance <span len="3" raw="_r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> from a long and straight wire carrying a current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> is <span len="28" raw="_|\mathbf{B}|=\mu_oI/2\pi r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathbf">B</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord">/2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span>. The direction of <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> is given by the right-hand rule covered in class and in the textbook.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="29" lf="29" class=""><a name="forces-on-current-loops" number="1.2" lo="29" raw="## Forces on current loops" class="hanchor" href="#forces-on-current-loops"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Forces on current loops</span></a></h2>
+        <h2 lo="11" lf="11"><a name="long-wires" number="1.1" lo="11" raw="## Long Wires" class="anchor hanchor" href="#long-wires"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Long Wires</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
       </div>
       <div class="block">
-        <p lo="31" lf="31">Previously, you computed the direction of force on a moving charged particle due to the magnetic field created by a long wire. In this section, you will compute the direction of force on a charged particle that is moving but also constrained to flow along a wire.</p>
+        <p padlength="0" lo="13" lf="13">In the following diagram current flowing in long wires is shown. On the left, the current flows into the page and the wire extend a large distance into and out of the page. On the right, only a small segment of the long wire is shown. Make clear that these are two separate problems and the coordinate axis applies to both.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">13</span></div>
       </div>
       <div class="block">
-        <p lo="33" lf="33">In the diagram above, a square loop carries a current <span len="5" raw="_I_w_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Recall that a current is due to charges flowing along a wire with a small velocity.</p>
-      </div>
-      <div class="block">
-        <ol lo="35" lf="45">
-          <li lo="35" lf="36">
+        <ol lo="15" lf="17" class="loose">
+          <li markerlength="3" padlength="0" lo="15" lf="16">
             <div class="block">
-              <p lo="35" lf="36"> Find the direction of force on each segment of the square loop. Indicate your answer by drawing a vector on the diagram.</p>
+              <p padlength="1" lo="15" lf="16">In the diagram, the <span len="3" raw="_x_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and <span len="3" raw="_y_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> directions are shown. What must be the <span len="3" raw="_z_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> direction for the coordinate system to be right-handed? (A right-handed coordinate system is one in which the cross product of the <span len="3" raw="_x_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and <span len="3" raw="_y_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> unit vectors gives the <span len="3" raw="_z_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> unit vector.)</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">15-16</span></div>
             </div>
           </li>
-          <li lo="37" lf="44">
+          <li markerlength="3" padlength="0" lo="17" lf="19">
             <div class="block">
-              <p lo="37" lf="38">What is the relative magnitude of the force on the top vs bottom segment? Circle one of the following answers.</p>
-            </div>
-            <div class="block">
-              <p lo="39" lf="39"> a. Same</p>
-            </div>
-            <div class="block">
-              <p lo="41" lf="41"> b. Force on top is larger than force on bottom.</p>
-            </div>
-            <div class="block">
-              <p lo="43" lf="43"> c. Force on bottom is larger than force on top.</p>
-            </div>
-          </li>
-          <li lo="45" lf="47">
-            <div class="block">
-              <p lo="45" lf="46"> Will the loop tend to rotate or translate? If yes, state the direction of translation and/or rotation.</p>
+              <p padlength="1" lo="17" lf="18">In terms of <span len="5" raw="_I_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span len="5" raw="_r_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, constants, and unit vectors, find the magnetic field <span len="12" raw="_\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> at the four locations a., b., c., and d.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">17-18</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">15-17</span></div>
       </div>
       <div class="block">
-        <p lo="47" lf="47">The force on a point charge <span len="3" raw="_q_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> moving with a velocity <span len="12" raw="_\mathbf{v}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span> is <span len="43" raw="_\mathbf{F}=q \mathbf{v} \times \mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> (the Lorentz force Law). From this equation, it can be shown that the differential force acting on a small segment of wire of length <span len="4" raw="_dl_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> is <span len="43" raw="_d\mathbf{F}=dl \mathbf{I}\times\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathbf">I</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span>, where <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> is the current that flows through <span len="4" raw="_dl_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>. In the following diagram, four small segments of length <span len="4" raw="_dl_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> labeled a., b., c., and d. are shown.</p>
+        <p padlength="0" lo="19" lf="19">The following diagram is identical to the one on the previous page.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">19</span></div>
       </div>
       <div class="block">
-        <ol start="4" lo="49" lf="55">
-          <li lo="49" lf="50">
+        <ol start="4" lo="21" lf="23" class="loose">
+          <li markerlength="3" padlength="0" lo="21" lf="22">
             <div class="block">
-              <p lo="49" lf="50"> Is <span len="15" raw="_|d\mathbf{F}|_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mord">∣</span></span></span></span> for the differential segment at a. equal to, greater than, or less than <span len="15" raw="_|d\mathbf{F}|_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mord">∣</span></span></span></span> for the differential segment at b.?</p>
+              <p padlength="1" lo="21" lf="22">If a positively charged particle has a velocity of <span len="10" raw="_v_o\jhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9023em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol"></span></span></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">21-22</span></div>
             </div>
           </li>
-          <li lo="51" lf="52">
+          <li markerlength="3" padlength="0" lo="23" lf="25">
             <div class="block">
-              <p lo="51" lf="52"> Is <span len="15" raw="_|d\mathbf{F}|_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mord">∣</span></span></span></span> for the differential segment at c. equal to, greater than, or less than dF for the differential segment at d.?</p>
-            </div>
-          </li>
-          <li lo="53" lf="54">
-            <div class="block">
-              <p lo="53" lf="54"> Use <span len="43" raw="_\mathbf{F}=q \mathbf{v} \times \mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> to compute the net force on the bottom segment of the current loop. </p>
-            </div>
-          </li>
-          <li lo="55" lf="56">
-            <div class="block">
-              <p lo="55" lf="56" class=""> Use <span len="43" raw="_\mathbf{F}=q \mathbf{v} \times \mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> to compute the net force on the right-hand side segment of the current loop.</p>
+              <p padlength="1" lo="23" lf="24">If a positively charged particle has a velocity of <span len="11" raw="_-v_o\jhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9023em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol"></span></span></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">23-24</span></div>
             </div>
           </li>
         </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">21-23</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="25" lf="25">If a positively charged particle has a velocity of <span len="10" raw="_v_o\ihat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8579em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol"></span></span></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">25</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="27" lf="27">If a positively charged particle has a velocity of <span len="10" raw="_-vo\ihat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7912em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">o</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol"></span></span></span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> at point c., what will be the direction of force on it? State your answer using a unit vector. Assume <span len="5" raw="_v_o_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is positive.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">27</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2 lo="29" lf="29"><a name="forces-on-current-loops" number="1.2" lo="29" raw="## Forces on current loops" class="anchor hanchor" href="#forces-on-current-loops"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Forces on current loops</span></a></h2>
+        <div class="block-info" style="display: none;"><span class="line-numbers">29</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="31" lf="31">Previously, you computed the direction of force on a moving charged particle due to the magnetic field created by a long wire. In this section, you will compute the direction of force on a charged particle that is moving but also constrained to flow along a wire.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">31</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="33" lf="33">In the diagram above, a square loop carries a current <span len="5" raw="_I_w_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Recall that a current is due to charges flowing along a wire with a small velocity.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">33</span></div>
+      </div>
+      <div class="block">
+        <ol lo="35" lf="45" class="loose">
+          <li markerlength="3" padlength="0" lo="35" lf="36">
+            <div class="block">
+              <p padlength="1" lo="35" lf="36">Find the direction of force on each segment of the square loop. Indicate your answer by drawing a vector on the diagram.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">35-36</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="37" lf="44">
+            <div class="block">
+              <p padlength="0" lo="37" lf="38">What is the relative magnitude of the force on the top vs bottom segment? Circle one of the following answers.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">37-38</span></div>
+            </div>
+            <div class="block">
+              <p padlength="1" lo="39" lf="39">a. Same</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">39</span></div>
+            </div>
+            <div class="block">
+              <p padlength="1" lo="41" lf="41">b. Force on top is larger than force on bottom.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">41</span></div>
+            </div>
+            <div class="block">
+              <p padlength="1" lo="43" lf="43">c. Force on bottom is larger than force on top.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="45" lf="47">
+            <div class="block">
+              <p padlength="1" lo="45" lf="46">Will the loop tend to rotate or translate? If yes, state the direction of translation and/or rotation.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">45-46</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">35-45</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="47" lf="47">The force on a point charge <span len="3" raw="_q_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> moving with a velocity <span len="12" raw="_\mathbf{v}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4444em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span> is <span len="43" raw="_\mathbf{F}=q \mathbf{v} \times \mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> (the Lorentz force Law). From this equation, it can be shown that the differential force acting on a small segment of wire of length <span len="4" raw="_dl_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> is <span len="43" raw="_d\mathbf{F}=dl \mathbf{I}\times\mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathbf">I</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span>, where <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> is the current that flows through <span len="4" raw="_dl_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>. In the following diagram, four small segments of length <span len="4" raw="_dl_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> labeled a., b., c., and d. are shown.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">47</span></div>
+      </div>
+      <div class="block">
+        <ol start="4" lo="49" lf="55" class="loose">
+          <li markerlength="3" padlength="0" lo="49" lf="50">
+            <div class="block">
+              <p padlength="1" lo="49" lf="50">Is <span len="15" raw="_|d\mathbf{F}|_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mord">∣</span></span></span></span> for the differential segment at a. equal to, greater than, or less than <span len="15" raw="_|d\mathbf{F}|_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mord">∣</span></span></span></span> for the differential segment at b.?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">49-50</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="51" lf="52">
+            <div class="block">
+              <p padlength="1" lo="51" lf="52">Is <span len="15" raw="_|d\mathbf{F}|_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">d</span><span class="mord mathbf">F</span><span class="mord">∣</span></span></span></span> for the differential segment at c. equal to, greater than, or less than dF for the differential segment at d.?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">51-52</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="53" lf="54">
+            <div class="block">
+              <p padlength="1" lo="53" lf="54">Use <span len="43" raw="_\mathbf{F}=q \mathbf{v} \times \mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> to compute the net force on the bottom segment of the current loop. </p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">53-54</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="55" lf="56">
+            <div class="block">
+              <p padlength="1" lo="55" lf="56">Use <span len="43" raw="_\mathbf{F}=q \mathbf{v} \times \mathbf{B}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord mathbf" style="margin-right:0.01597em;">v</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6861em;"></span><span class="mord mathbf">B</span></span></span></span> to compute the net force on the right-hand side segment of the current loop.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">55-56</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">49-55</span></div>
       </div>
     </div>
   </div>
