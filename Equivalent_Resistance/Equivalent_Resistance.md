@@ -93,7 +93,7 @@ $I_o+I_1 = I_2$
 
 $-I_or + \mathcal{E}_o - \mathcal{E}_1 + I_1r = 0$
 
-$-I_1r + \mathcal{E}_1 - I_2/(R/2) = 0$
+$-I_1r + \mathcal{E}_1 - I_2(R/2) = 0$
 
 \else
 \newpage

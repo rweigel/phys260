@@ -8,7 +8,7 @@ Title: RC Circuits
 
   "$Q_C= 10 \text{ C}$" means "the capacitor labeled $C$ has a charge of $10$ Coulombs."
 
-* Lower case letters are used for electrical quantities that vary in time. In circuits with only emfs and resistors, currents and voltages are constant, and we used $I$ and $V$. In the circuits considered in this activity, the currents and voltages vary in time, so we use $i(t)$ and $v(t)$.
+* Lower case letters are used for electrical quantities that vary in time. In circuits constant current, charge, and voltages, we used $I$, $Q$, and $V$. In the circuits considered in this activity, the currents and voltages vary in time, so we use $i(t)$, $q(t)$, and $v(t)$.
 
 * In this activity, we use the the relationship $i(t)=dq(t)/dt$ between the current $i(t)$ in the wires connected to a capacitor and the charge $q(t)$ on the capacitor.
 
@@ -67,6 +67,8 @@ $q(2)=Q_oe^{-2\text{ s}/RC}$, so
 3. $q(2)=Q_oe^{-2\text{ s}/4\text{ s}}=Q_o/\sqrt{e} \simeq 0.61 Q_o$
 
 4. All curves decay exponentially according to $q(t)=Q_oe^{-t/RC}$. To plot, start at $Q_o$, and draw an exponentially decaying curve that passes through one of the values above at $t=2\text{ s}$.
+
+   <img src="figures/Discharging_b_Solution.svg"/>
 \fi
 
 ## Problem
@@ -103,7 +105,7 @@ $$q(t)=Q_f(1-e^{-t/\tau})$$
 
 where $\tau\equiv RC$, $R$ is the equivalent resistance, and $Q_f$ is the final charge on the capacitor, that is, the charge on the capacitor as $t\rightarrow\infty$ (it is technically more accurate to say $t\gg \tau$ instead of $t\rightarrow\infty$; why?).
 
-To find $Q_f$, replace the capacitor with an open circuit and use Kirchhoff's voltage law to find the voltage across the capacitor, $V_f$, and then use $Q_f=CV_f$.
+To find $Q_f$, replace the capacitor with an open circuit and use Kirchhoff's voltage law to find the voltage across the capacitor, $V_f$, and then use the relationship $Q_f=CV_f$.
 
 ## Example
 
