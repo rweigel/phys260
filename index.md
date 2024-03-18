@@ -357,9 +357,9 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 * Activity - Magnetic Force on Charged Particles
   * [Instructor notes](Magnetic_Force/README.html)
   * Documents:
-| [pdf]((Magnetic_Force/(Magnetic_Force.pdf)
-| [pdf solns]((Magnetic_Force/(Magnetic_Force-solutions.pdf)
-| [html]((Magnetic_Force/(Magnetic_Force.html)
+| [pdf](Magnetic_Force/Magnetic_Force.pdf)
+| [pdf solns](Magnetic_Force/Magnetic_Force-solutions.pdf)
+| [html](Magnetic_Force/Magnetic_Force.html)
 |
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
