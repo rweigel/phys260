@@ -1,35 +1,39 @@
-# Computing $\Phi_B$ (Ch 29)
+# Computing $\Phi_B$
 
 ## Example
 
-A spatially uniform external magnetic field points in the $\yhat$ direction and it is not changing with time. Assume that the normal direction of the cross-sectional area of loop is as shown in the diagram. \footnote{Recall that one can define to vectors that are perpendicular to a plane. Here we choose the normal as shown and as a result, positive rotation around the loop is determined by the right-hand rule using your thumb in the direction of the chosen normal direction.
+In the following figure, a square loop of area $A$ that can be rotated about the $z$ axis is shown. Assume that the normal direction of the loop is as shown in the diagram$^*$. A uniform external magnetic field points in the $\jhat$ direction.
 
-The conducting loop of area $A$ is rotated in the direction shown.
+$^*$Recall that one can define to vectors that are perpendicular to a plane. Here we choose the normal as shown and as a result, positive rotation around the loop is determined by the right-hand rule using your thumb in the direction of the chosen normal direction.
 
-\input{EMF and Induced Fields/figures/Square_Loop_III}
+<img src="figures/Square_I.svg"/>
 
-1.  At what angles is the magnetic flux maximum, minimum, and zero?
+1. Draw the loop, $\hat{\mathbf{n}}$, and $\bfvec{B}_{\text{ext}}$ as they would appear when viewed from large $z$ when $\phi=0^\circ$, $\phi=45^\circ$, $\phi=135^\circ$, and $\phi=180^\circ$.
 
-2.  When $\phi=45^\circ$, is the magnetic flux positive or negative?
+3. At what angles in the range of $\phi=[0,360^\circ]$ is the magnetic flux zero?
 
-3.  When $\phi=135^\circ$, is the magnetic flux positive or negative?
+2. When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of $B_oA$?
 
-4.  Based on your answers to (a)-(c), plot the magnetic flux as a function of $\phi$ as a smooth curve for $\phi=0$ to $\phi=180^\circ$.
+4. When $\phi=135^\circ$, is the magnetic flux positive or negative?
+ 
+
+5. Use your answers to 2.--4. to sketch a plot of $\Phi$ as a function of $\phi$.
 
 {\bf Answer}:
 
-\input{EMF and Induced Fields/figures/Square_Loop_III_Answer}
+1. &nbsp;
 
-1.  At $\phi=0$, the flux will be a maximum, $\Phi_o=B_oA$. At $\phi=180^\circ$, the flux will be a minimum that is equal and magnitude and opposite in sign from the maximum. At $\phi=90^\circ$, the flux will be zero. 
+   <img src="figures/Square_I_Solution_A.svg"/>
 
-2.  As shown in the diagram, the dot product of the normal vector and $\mathbf{B}_{ext}$ will be positive when $\phi=45^\circ$, so the flux will be positive.
+1. At $\phi=0$, the flux will be a maximum, $\Phi_o=B_oA$. At $\phi=180^\circ$, the flux will be a minimum that is equal and magnitude and opposite in sign from the maximum. At $\phi=90^\circ$, the flux will be zero. 
 
-3.  As shown in the diagram above, when $\phi=135^\circ$ the dot product of the normal vector and $\mathbf{B}_{ext}$ will be negative, so the flux will be negative.
+2. As shown in the diagram, the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be positive when $\phi=45^\circ$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
 
+3. As shown in the diagram above, when $\phi=135^\circ$ the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be negative, so the flux will be negative. Its value will be $-B_oA\cos 135^\circ=-B_oA/\sqrt{2}$.
 
-4.  The curve is shown below. The curve is $\Phi=\Phi_o\cos\phi$.
+4. The values of $\Phi$ are sketched shown as dots in the following diagram.
 
-    \input{EMF and Induced Fields/figures/Square_Loop_III_Answer_b}
+   <img src="figures/Square_I_Solution_B.svg"/>
 
 ## Problem
 
