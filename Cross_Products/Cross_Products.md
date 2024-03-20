@@ -1,58 +1,113 @@
-# Cross product review
+# Introduction
 
-Thus far, only the cross product of vectors with one component were considered, e.g.,
+The cross product of two vectors $\bfvec{v}$ and $\bfvec{B}$ is given by $\bfvec{v}\times\bfvec{B}$, which is a vector quantity with a magnitude of $vB\sin\phi$, where $\phi$ is the angle between the two vectors. The direction of $\bfvec{v}\times\bfvec{B}$ is perpendicular to the plane that contains both vectors. (There are two perpendicular directions, and the one to choose is determined using the cross--product right--hand rule; see your textbook of this right--hand rule.)
 
-$$\bfvec{v} \times \bfvec{B} = v_o\ihat \times B_o\jhat$$
+There are two methods that are commonly used for computing a cross product.
 
-The most general case that you will encounter is
+## Method I
 
-$$\mathbf{v}\times \mathbf{B} = (v_x\ihat + v_y\jhat + v_z\khat)\times (B_x\ihat + B_y\jhat + B_z\khat)$$
+If the angle $\phi$ is given or straightforward to compute and both vectors (a) lie in a coordinate plane or (b) both vectors point along a cartesian axis, the magnitude is given by $|\bfvec{v}||\bfvec{B}|\sin\phi$ and the direction of the cross product can be determined using the cross--product right--hand rule.
 
-which has a cross product of 
+Examples of case (a): 
 
-$$\mathbf{v}\times \mathbf{B} = (v_yB_z - v_zB_y)\ihat + (v_zB_x - v_xB_z)\jhat + (v_xB_y - v_yB_x)\khat$$
+* The cross product of $\ihat\times\ihat$ is zero because its magnitude is $|\ihat||\ihat|\sin 0 = 1\cdot 1 \cdot 0$.
+* The cross product of $\ihat$ and $\ihat+\jhat$ has a magnitude of $|\ihat||\ihat+\jhat|\sin 45^\circ = 1\cdot \sqrt{2} \cdot 1/\sqrt{2}=1$. (From a diagram, it is straightforward to see that the angle between $\ihat$ and $\ihat+\jhat$ is $45^\circ$). The direction $\khat$, which can be determined using the cross--product right--hand rule or the method using the circle diagram described in the following section.
 
-This formula is not easy to memorize. There are two ways to derive it
+Example of case (b):
+   
+* The cross product $2\ihat\times3\jhat$ has a magnitude $|2\ihat||3\jhat|\sin 90^\circ = 6$. The direction is $\khat$, which is determined using the right--hand rule.
 
-1. Using the "determinant method": https://www.youtube.com/watch?v=2wTUqZa66ng
-2. By splitting up  $(v_x\ihat + v_y\jhat + v_z\khat)\times (B_x\ihat + B_y\jhat + B_z\khat)$ into 9 cross products (3 of which will be zero).
 
-When the number of components in $\bfvec{v}$ and $\bfvec{B}$ is two or less, I recommend using method 2.
+## Method II
 
-## Example
+Write the vectors in component form and then use either the (a) "multiply through" or (a) "determinant" method.
 
-As an example of method 2., consider the case
+**"Multiply through" method**:
+   
+Re--write $(v_x\ihat + v_y\jhat + v_z\khat)\times (B_x\ihat + B_y\jhat + B_z\khat)$ as 9 cross products (3 of which will be zero) and evaluate each of the six cross products.
 
-$$(v_x\ihat)\times (B_x\ihat + B_y\jhat + B_z\khat)$$
+Example:
 
-This can be re-written as (by doing the equivalent of "multiplying through")
+$(v_x\ihat + v_y\jhat)\times (B_x\ihat + B_y\jhat) = v_xB_x(\ihat\times\ihat) + v_xB_y(\ihat\times\jhat)  + v_yB_x(\jhat\times\ihat) + v_yB_y(\jhat\times\jhat)$
 
-$$(v_x\ihat\times B_x\ihat) + (v_x\ihat\times B_y\jhat) + (v_x\ihat\times B_z\khat)$$
+The first and last terms are zero because $\ihat\times\ihat=0$ and $\jhat\times\jhat=0$. Using the right--hand rule or the circle diagram described in the following setion, $\ihat\times\jhat=\khat$ and $\jhat\times\ihat=-\khat$. This leaves
 
-After factoring out the constants, this is
+$(v_x\ihat + v_y\jhat)\times (B_x\ihat + B_y\jhat) = (v_xB_y-v_yB_x)\khat$
 
-$$v_xB_x(\ihat\times \ihat) + v_xB_y(\ihat\times \jhat)+ v_xB_z(\ihat\times \khat)$$
+**"Determinant method"**:
 
-The first term is zero because $\ihat\times\ihat=0$. The second term  is $v_xB_y\khat$ because $\ihat \times\jhat = \khat$. The third term is $-v_xB_z\jhat$ because $\ihat\times\khat=-\jhat$. Thus,
+To determine all non--zero terms that would have resulted using the "multiply through" method, write the cross product in matrix form and compute the determinant.
 
-$$(v_x\ihat)\times (B_x\ihat + B_y\jhat + B_z\khat)=-v_xB_y\jhat + v_xB_y\khat$$
+$$
+\bfvec{v}\times\bfvec{B} =
+\begin{bmatrix}
+\ihat&\jhat&\khat\\
+v_x&v_y&v_z\\
+B_x&B_y&B_z\\
+\end{bmatrix}
+= (v_yB_z - v_zB_y)\ihat -(v_xB_z - v_zB_z)\jhat +(v_xB_y - v_yB_x)\khat
+$$
 
-## Problems
+# Unit Vector Cross--Products
 
-1. Use method 2. to find $(v_y\jhat)\times (B_x\ihat + B_y\jhat + B_z\khat)$
+Computing the cross product of two vectors typically involves computation of cross products of unit vectors. The possible cross--products of unit vectors are
 
-2. Use method 2. to find $(v_x\ihat + v_y\jhat)\times (B_x\ihat + B_y\jhat)$
+$$
+\begin{align*}
+\ihat\times\ihat & = \phantom{-}0 \qquad &
+\jhat\times\jhat & = \phantom{-}0 \qquad &
+\khat\times\khat & = \phantom{-}0 \qquad
+\\
+\ihat\times\jhat & =  \phantom{-}\khat &
+\jhat\times\khat & = \phantom{-}\ihat  &
+\khat\times\ihat & = \phantom{-}\jhat
+\\
+\jhat\times\ihat & = -\khat &
+\khat\times\jhat & = -\ihat &
+\ihat\times\khat & = -\jhat
+\end{align*}
+$$
 
-\ifsolutions
-**Answer**
+There is a mnemonic (memory) device for remembering this table. Suppose you do the cross product of two consecutive unit vectors in the order indicated by the arrows in the circle shown in the following figure. In that case, the result is the remaining unit vector (the second row in the table). If you do the cross product of two unit vectors in reverse order, the result is the remaining unit vector with a negative sign (the third row in the table).
 
-1. $(v_y\jhat)\times (B_x\ihat + B_y\jhat + B_z\khat)=v_yB_x\jhat\times\ihat + v_yB_y\jhat\times\jhat + v_yB_z\jhat\times\khat$. The middle term is zero, leaving
+<img src="../Cross_Products/figures/Cyclic_ijk.svg"/>
 
-  $v_yB_x\jhat\times\ihat + v_yB_z\jhat\times\khat= v_yB_z\ihat-v_yB_x\khat$
+Example: The cross product of $\jhat \times \ihat$ requires going counterclockwise from $\jhat$ in the circle to $\ihat$, so the result must be negative; the direction must be the unit vector that was not a part of the cross--product, which is $\khat$. Thus $\jhat \times \ihat = -\khat$.
 
-2. $(v_x\ihat + v_y\jhat)\times (B_x\ihat + B_y\jhat) = v_xB_y\ihat\times\jhat + v_yB_x\jhat\times\ihat$ (The two terms that involve $\ihat\times\ihat$ and $\jhat\times\jhat$ have been omitted.). This leaves
+# Problems
 
-  $v_xB_y\khat - v_yB_x\khat=(v_xB_y - v_yB_x)\khat$
+## Method 1.
 
-\else
-\fi
+Use Method I described in the introduction for these problems.
+
+Compute $\bfvec{v}\times\bfvec{B}$ and write your answer after the equal sign for each of the following cases.
+
+* $\bfvec{v}=v_x\ihat$ and $\bfvec{B}=B_y\jhat$, $\bfvec{v}\times\bfvec{B} =$
+* $\bfvec{v}=v_x\ihat$ and $\bfvec{B}=-B_x\jhat$, $\bfvec{v}\times\bfvec{B} =$
+* $\bfvec{v}=v_y\ihat$ and $\bfvec{B}=B_z\jhat$, $\bfvec{v}\times\bfvec{B} =$
+
+Compute $\bfvec{v}\times\bfvec{B}$ based on the information in the following diagrams.
+
+1. 
+
+2. 
+
+3. 
+
+## Method II
+
+Use Method II described in the introduction for these problems (which are identical to the previous problems).
+
+Compute $\bfvec{v}\times\bfvec{B}$ and write your answer after the equal sign for each of the following cases.
+
+* $\bfvec{v}=v_x\ihat$ and $\bfvec{B}=\phantom{-}B_y\jhat$, $\bfvec{v}\times\bfvec{B} =$
+* $\bfvec{v}=v_x\ihat$ and $\bfvec{B}=-B_x\jhat$, $\bfvec{v}\times\bfvec{B} =$
+* $\bfvec{v}=v_y\ihat$ and $\bfvec{B}=\phantom{-}B_z\jhat$, $\bfvec{v}\times\bfvec{B} =$
+
+Compute $\bfvec{v}\times\bfvec{B}$ based on the information in the following diagrams.
+
+1. 
+
+2. 
+
+3. 
