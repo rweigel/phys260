@@ -16,7 +16,7 @@ or, equivalently,
 
 $$\Phi_B = BA\cos\phi$$
 
-where $\theta$ is the angle between the $\bfvec{B}$ and $\bfvec{A}$ vectors.
+where $\phi$ is the angle between the $\bfvec{B}$ and $\bfvec{A}$ vectors.
 
 Note that previously electric flux was covered. The same techniques that apply to computing electric flux apply to magnetic flux.See the Electric Flux activity for additional discussion.
 
@@ -49,7 +49,7 @@ In the following figure, a square loop of area $A$ that can be rotated about the
    \vspace{12em}
    \fi
 
-3. When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of $B_oA$?
+3. When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of a fraction of $B_oA$?
 
    \ifsolutions
    **Answer**: As shown in the diagram in the solution to 2., the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be positive when $\phi=45^\circ$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
@@ -57,7 +57,7 @@ In the following figure, a square loop of area $A$ that can be rotated about the
    \vspace{3em}
    \fi
 
-4. When $\phi=135^\circ$, is the magnetic flux positive or negative? What is its value in terms of $B_oA$?
+4. When $\phi=135^\circ$, is the magnetic flux positive or negative? What is its value in terms of a fraction of $B_oA$?
 
    \ifsolutions
     **Answer**: As shown in the diagram above, when $\phi=135^\circ$ the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be negative, so the flux will be negative. Its value will be $B_oA\cos 135^\circ=-B_oA\cos 45^\circ=-B_oA/\sqrt{2}$.

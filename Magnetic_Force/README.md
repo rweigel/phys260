@@ -1,3 +1,6 @@
+# jw
+
+In the first two paragraph to the solutions to 3.2, techniques are used that were not covered.
 
 # rsw notes to self
 

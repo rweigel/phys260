@@ -75,7 +75,7 @@ In the following diagram, a positive charge $q$ moves with a velocity in a regio
 
 For case f. in the figure above,
 
-1. Assuming $|\bfvec{B}|=B_o$ and $|\bfvec{v}|=v_o$, express $\bfvec{v}$ and $\bfvec{B}$ in terms of their magnitudes and unit vectors. Then find the magnetic force using $\bfvec{F} = q\bfvec{v}\times\bfvec{B}$ and compute the magnitude of $\bfvec{F}$.
+1. Assuming $|\bfvec{B}|=B_o$ and $|\bfvec{v}|=v_o$, express $\bfvec{v}$ and $\bfvec{B}$ in terms of their magnitudes and unit vectors. Then use these expressions to find the magnetic force using $\bfvec{F} = q\bfvec{v}\times\bfvec{B}$ and compute the magnitude of $\bfvec{F}$.
 2. Use $F = |q|vB\sin\phi$ to compute the magnitude of the force and use the right-hand rule to determine its direction.
 
 **Answer**
