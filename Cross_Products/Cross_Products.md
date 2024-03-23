@@ -149,7 +149,7 @@ $\quad\bfvec{v}\times\bfvec{B} = 60\sin 30^\circ\khat$
 
 # Multiply Through Method
 
-_If you are familiar with the Determinant Method, covered in the next section, you may skip this section and do the Determinant Method problems._
+This method is most useful when each of the vectors in the cross--product has two or fewer components. Otherwise, the Determinant Method, covered in the next section, is preferred.
 
 Write the vectors in component form and then "multiply through" in a way that is similar to "multiplying through" to convert the product of sums into a sum of products. For example,
 
@@ -182,6 +182,11 @@ but replace the multiplication symbol ($\cdot$) with the cross product symbol ($
   & = 0 + v_xB_y\khat - v_xB_z\jhat
   \end{align*}
   $$
+
+\ifsolutions
+\else
+\newpage
+\fi
 
 ## Problems
 
@@ -238,8 +243,6 @@ $\quad\bfvec{v}\times\bfvec{B} = \frac{3}{\sqrt{2}}(\ihat+\jhat)\times 6\khat = 
 \fi
 
 # Determinant Method
-
-_If you are familiar with the Multiply Through Method, covered in the previous section, you may skip this section and do the  Multiply Through Method problems._
 
 To find all non--zero terms that would have resulted using the Determinant Method, write the cross product in matrix determinant form as follows and compute its determinant. (This requires that you have memorized the procedure for computing the determinant of a $3\times 3$ matrix.) The most general problem and steps are as follows.
 
