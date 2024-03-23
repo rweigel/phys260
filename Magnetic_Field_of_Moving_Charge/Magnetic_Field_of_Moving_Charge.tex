@@ -1,0 +1,224 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Magnetic Field of a Moving Charge}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Introduction}
+
+In previous activities, you computed the force on moving charges in a region of space where there is a magnetic field. No mention was made of how the magnetic field was created.
+
+In this activity, you compute the magnetic field created by moving charges.
+
+The magnetic field due to a point charge $q$ moving with velocity $\bfvec{v}$ (when $|\bfvec{v}|$ is small compared to the speed of light) is
+
+$$
+\bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}
+$$
+
+where $\rhat$ is the unit vector that points from the position of $q$ to the point in space where we want to know $\bfvec{B}$, and $r$ is the distance between $q$ and that point.
+
+To find $\rhat$ (see also the $\rhat$ Unit Vector activity), 
+
+\begin{enumerate}
+
+  \item draw a vector, $\bfvec{r}$ from $q$ to the point in space where you want to know $\bfvec{B}$;
+
+  \item Write $\bfvec{r}$ in the form $\bfvec{r}=r_x\ihat+r_y\jhat$; then
+
+  \item $\rhat=\bfvec{r}/r$, where $r=\sqrt{r_x^2+r_y^2}$.
+
+\end{enumerate}
+
+In this activity, the examples and solutions are given using the above approach.
+
+An alternative approach for computing $\bfvec{B}$ is to use the fact that $\bfvec{v}\times\hat{\mathbf{r}}=|\bfvec{v}|\sin\phi=v\sin\phi$, where $\phi$ is the angle between $\bfvec{v}$ and $\hat{\mathbf{r}}$ and $0 \le\phi \le 180^{\circ}$. With this, the magnitude of the magnetic field is
+
+$$
+B = \frac{\mu_o}{4\pi}\frac{|q|v\sin\phi}{r^2}
+$$
+
+and the right--hand rule is used to determine the dirction of $\bfvec{B}$. See the Cross Products activity for a discussion of when and how to compute the cross-product using this method.
+
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\section{Example}
+
+If $q$ is at $(x,y)=(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, find the magnetic field vector at $(x,y)=(a,a)$.
+
+\textbf{Solution}
+
+To find $\hat{\mathbf{r}}$, we draw a vector from $q$ to the point where we want to compute $\bfvec{B}$.
+
+\input{figures/Example.tikz}
+
+Based on the diagram, $\bfvec{r}=2a\ihat + 2a\jhat$ and $r = \sqrt{(2a)^2+(2a)^2}=2\sqrt{2}a$, so
+
+$$\hat{\mathbf{r}}=\frac{\bfvec{r}}{r} = \left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$$
+
+The cross-product is
+
+$$\bfvec{v}\times\hat{\mathbf{r}} = v_o\ihat\times\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right] = \frac{v_o}{\sqrt{2}}(\ihat\times\jhat) = \frac{v_o}{\sqrt{2}}\khat$$
+
+Substitution into 
+
+$$\bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}$$
+
+gives
+
+$$\bfvec{B}(a,a) = \frac{\mu_o}{4\pi} \frac{q\frac{v_o}{\sqrt{2}}\khat}{(2\sqrt{2}a)^2} = \frac{\mu_o}{4\pi} \frac{qv_o}{(8\sqrt{2})a^2}\khat$$
+
+Check: Use the right--hand rule for cross products on $\bfvec{v}\times\hat{\mathbf{r}}$ to verify that the result is out of the page. (Why do we know that the $\khat$ direction is out of the page?)
+
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\section{Problem I}
+
+If $q$ is at $(x,y)=(a,a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, find the magnetic field vector at $(x,y)=(-a,-a)$.
+
+\ifsolutions
+\textbf{Solution}
+
+$\bfvec{r}=-2a\ihat - 2a\jhat$ and $r=2\sqrt{2}a$, so
+
+$$\hat{\mathbf{r}}=\frac{\bfvec{r}}{r} = \left[-\frac{1}{\sqrt{2}}\ihat - \frac{1}{\sqrt{2}}\jhat\right]$$
+
+The cross product is
+
+$$\bfvec{v}\times\hat{\mathbf{r}}=v_o\ihat\times\left[-\frac{1}{\sqrt{2}}\ihat - \frac{1}{\sqrt{2}}\jhat\right] = -\frac{v_o}{\sqrt{2}}(\ihat\times\jhat) = -\frac{v_o}{\sqrt{2}}\khat$$
+
+Substitution into 
+
+$$\bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}$$
+
+gives
+
+$$\bfvec{B}(-a,-a) = -\frac{\mu_o}{4\pi} \frac{qv_o}{(8\sqrt{2})a^2}\khat$$
+
+Check: Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\mathbf{r}}$ confirms that the result is into the page.
+\else
+\vskip 288pt
+\fi
+
+\section{Problem II}
+
+If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find the magnetic field vector at $(x,y)=(a,a)$.
+
+\ifsolutions
+\textbf{Answer}: $\bfvec{B}(a,a)=0$ ($\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero.)
+\else
+\vskip 144pt
+\fi
+
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\section{Problem III}
+
+If $q$ is at $(x,y)=(a,2a)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find the magnetic field vector at $(x,y)=(-a,-a)$.
+
+\ifsolutions
+\textbf{Answer}: 
+$$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{2v_o\khat}{13\sqrt{13}a^2}$$
+\else
+\vskip 216pt
+\fi
+
+\section{Problem IV}
+
+If $q$ is at $(x,y)=(x_o,y_o)$ and has a velocity of $\bfvec{v}=v_x\ihat+v_y\jhat$, show
+
+$$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{1}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$$
+
+where
+
+$$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
+
+\end{document}

@@ -397,6 +397,33 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Magnetic Field of a Moving Charge
 
+
+* Activity - Magnetic Force on Wires
+  * Documents:
+| [pdf](Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.pdf)
+| [pdf solns](Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge-solutions.pdf)
+| [html](Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.html)
+|
+* Source:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Magnetic_Field_of_Moving_Charge)
+| [Markdown](Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.md)
+| 
+
+## Magnetic Force on Wires
+
+* Activity - Magnetic Force on Wires
+  * Documents:
+| [pdf](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.pdf)
+| [pdf solns](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires-solutions.pdf)
+| [html](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.html)
+|
+* Source:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Magnetic_Force_on_Wires)
+| [Markdown](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.md)
+| 
+
 ## The Biot--Savart Law
 
 ## Magnetic Flux

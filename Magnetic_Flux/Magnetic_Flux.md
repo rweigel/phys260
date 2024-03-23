@@ -1,78 +1,65 @@
+# Introduction
+
+The definition of magnetic flux is
+
+$$\Phi_B = \int \mathbf{B}\cdot d\mathbf{A}$$
+
+When the magnitude and direction of $\bfvec{B}$ is the same at all points on the surface, the integral simplifies to 
+
+$$\Phi_B = \mathbf{B}\cdot \mathbf{A}$$
+
+or, equivalently,
+
+$$\Phi_B = BA\cos\phi$$
+
+where $\theta$ is the angle between the $\bfvec{B}$ and $\bfvec{A}$ vectors.
+
+Note that previously electric flux was covered. The same techniques that apply to computing electric flux apply to magnetic flux.See the Electric Flux activity for additional discussion.
+
 # Computing $\Phi_B$
 
-## Example
-
-In the following figure, a square loop of area $A$ that can be rotated about the $z$ axis is shown. Assume that the normal direction of the loop is as shown in the diagram$^*$. A uniform external magnetic field points in the $\jhat$ direction.
-
-$^*$Recall that one can define to vectors that are perpendicular to a plane. Here we choose the normal as shown and as a result, positive rotation around the loop is determined by the right-hand rule using your thumb in the direction of the chosen normal direction.
+In the following figure, a square loop of area $A$ that can be rotated about the $z$ axis is shown. Assume that the normal direction of the loop is as shown in the diagram. A uniform external magnetic field points in the $\jhat$ direction.
 
 <img src="figures/Square_I.svg"/>
 
-1. Draw the loop, $\hat{\mathbf{n}}$, and $\bfvec{B}_{\text{ext}}$ as they would appear when viewed from large $z$ when $\phi=0^\circ$, $\phi=45^\circ$, $\phi=135^\circ$, and $\phi=180^\circ$.
+1. At what angles in the range of $\phi=[0,360^\circ]$ is the magnetic flux zero?
 
-3. At what angles in the range of $\phi=[0,360^\circ]$ is the magnetic flux zero?
+2. Draw the loop, $\hat{\mathbf{n}}$, and $\bfvec{B}_{\text{ext}}$ as they would appear when viewed from large $z$ when $\phi=0^\circ$, $\phi=45^\circ$, $\phi=135^\circ$, and $\phi=180^\circ$.
 
-2. When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of $B_oA$?
+3. When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of $B_oA$?
 
-4. When $\phi=135^\circ$, is the magnetic flux positive or negative?
- 
+4. When $\phi=135^\circ$, is the magnetic flux positive or negative? What is its value in terms of $B_oA$?
 
-5. Use your answers to 2.--4. to sketch a plot of $\Phi$ as a function of $\phi$.
+5. Sketch a plot of the magnetic flux, $\Phi$, as a function of $\phi$.
 
 {\bf Answer}:
 
-1. &nbsp;
+1. The magnetic flux will be zero when the normal vector is perpendicular to  $\bfvec{B}_{\text{ext}}$. This corresponds to $\phi = 90^\circ$ and $\phi = 270^\circ$
+
+2. &nbsp;
 
    <img src="figures/Square_I_Solution_A.svg"/>
 
-1. At $\phi=0$, the flux will be a maximum, $\Phi_o=B_oA$. At $\phi=180^\circ$, the flux will be a minimum that is equal and magnitude and opposite in sign from the maximum. At $\phi=90^\circ$, the flux will be zero. 
+3. As shown in the diagram, the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be positive when $\phi=45^\circ$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
 
-2. As shown in the diagram, the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be positive when $\phi=45^\circ$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
+4. As shown in the diagram above, when $\phi=135^\circ$ the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be negative, so the flux will be negative. Its value will be $B_oA\cos 135^\circ=-B_oA\cos 45^\circ=-B_oA/\sqrt{2}$.
 
-3. As shown in the diagram above, when $\phi=135^\circ$ the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be negative, so the flux will be negative. Its value will be $-B_oA\cos 135^\circ=-B_oA/\sqrt{2}$.
-
-4. The values of $\Phi$ are sketched shown as dots in the following diagram.
+5. The curve is $\Phi=B_oA\cos\phi$ is sketched below along with dots that were used to help determine the shape of the curve.
 
    <img src="figures/Square_I_Solution_B.svg"/>
 
-## Problem
+# Computing $d\Phi_B/dt$
 
-A spatially uniform external magnetic field points in the $\xhat$ direction and it is not changing with time.
+The time rate of change of magnetic flux through a closed loop is a quantity that will be used when Faraday's law is covered.
 
-The conducting loop is rotated in the direction shown at a constant rate.
+Suppose the loop in the previous problem rotates at a constant rate.
 
-Assume that the normal direction of the cross-sectional area of loop is as shown in the diagram.
+1. At what angles is $d\Phi_B/dt=0$?
+2. For what angle range is $d\Phi_B/dt$ increasing?
+3. For what angle range is $d\Phi_B/dt$ decreasing?
+4. What is the formula for $d\Phi_B/dt$?
 
-\input{EMF and Induced Fields/figures/Square_Loop_IV}
 
-1.  At what angles is the magnetic flux maximum, minimum, and zero? 
 
-    {\bf Answer}:
 
-    The magnetic flux will be zero when its surface is parallel to the external field (so that its normal/area vector is perpendicular to the external field). This corresponds to $\phi = 0^\circ$ and $\phi = 180^\circ$
 
-    The maximum will be when all of the external magnetic field lines are parallel to the as the normal/area vector of the loop. This corresponds to $\phi = 270^\circ$.
-
-    The minimum will be when all of the external magnetic field lines are anti-parallel to the as the normal/area vector of the loop. This corresponds to $\phi = 90^\circ$.
-
-2.  When $\phi=45^\circ$, is the magnetic flux positive or negative? 
-
-    {\bf Answer}: $\phi = 45^\circ$ is between one of the zeros and the minimum so it will be negative. 
-
-3.  When $\phi=135^\circ$, is the magnetic flux positive or negative? 
-
-    {\bf Answer}: $\phi = 135^\circ$ is between the minimum  and one of the zeros so it will be negative. 
-
-4.  Based on your answers to (a)-(c), plot the magnetic flux as a function of $\phi$ as a smooth curve for $\phi=0$ to $\phi=180^\circ$.
-
-    {\bf Answer}:
-
-    \includegraphics[scale=0.3]{EMF and Induced Fields/figures/Inductance_fig2.3.d.png}
-
-5.  At what angle or angles will the induced current be zero? (Hint: Lenz's law states that the induced current occurs when there is a changing flux and {it change} means with respect to time.)
-
-    {\bf Answer}: The change in time occurs when the slope of this curve is zero so it occurs at $\phi = 90^\circ$ and $\phi = 270^\circ$
-
-6.  At what angle or angles will the magnitude of induced current be maximum?
-
-    {\bf Answer}: The maximum current occurs at $\phi = 0^\circ$ and $\phi = 180^\circ$
