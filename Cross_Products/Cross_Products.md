@@ -120,11 +120,11 @@ Compute $\bfvec{v}\times\bfvec{B}$ for each of the following cases.
 
 \vspace{5em}
 
-* $\bfvec{v}=v_x\ihat\quad$ and $\quad\bfvec{B}=-B_x\jhat$, $\quad\bfvec{v}\times\bfvec{B} = \fbox{\qquad\phantom M}$
+* $\bfvec{v}=v_x\ihat\quad$ and $\quad\bfvec{B}=-B_y\jhat$, $\quad\bfvec{v}\times\bfvec{B} = \fbox{\qquad\phantom M}$
 
 \vspace{5em}
 
-* $\bfvec{v}=v_y\ihat\quad$ and $\quad\bfvec{B}=\phantom{-}B_z\jhat$, $\quad\bfvec{v}\times\bfvec{B} = \fbox{\qquad\phantom M}$
+* $\bfvec{v}=v_z\khat\quad$ and $\quad\bfvec{B}=\phantom{-}B_y\jhat$, $\quad\bfvec{v}\times\bfvec{B} = \fbox{\qquad\phantom M}$
 
 \fi
 
@@ -142,14 +142,20 @@ $\quad\bfvec{v}\times\bfvec{B} = 60\sin 30^\circ\khat$
 
 **b.** $\quad\bfvec{v}\times\bfvec{B}=-42\ihat$
 
-**c.** $\quad\bfvec{v}\times\bfvec{B} = 18(\ihat - \jhat)$
+**c.** $\quad\bfvec{v}\times\bfvec{B} = \frac{18}{\sqrt{2}}(\ihat - \jhat)$
 \else
 \newpage
 \fi
 
 # Multiply Through Method
 
-Write the vectors in component form and then "multiply through" in a way that is similar to "multiplying through" to convert the product of sums into a sum of products, e.g.,
+_If you are familiar with the Determinant Method, covered in the next section, you may skip this section and do the Determinant Method problems._
+
+Write the vectors in component form and then "multiply through" in a way that is similar to "multiplying through" to convert the product of sums into a sum of products. For example,
+
+$$a(b+c)=(a\cdot b) + (a\cdot c)$$
+
+and the first--outer--inner--last (foil) case
 
 $$(a+b)(c+d)=(a\cdot c) + (a\cdot d) + (b\cdot c) + (b\cdot d)$$
 
@@ -159,11 +165,23 @@ but replace the multiplication symbol ($\cdot$) with the cross product symbol ($
 
 * If $\bfvec{v}=v_x\ihat$ and $\bfvec{B}=B_x\ihat+B_y\jhat$, then
 
-  $\bfvec{v}\times\bfvec{B} = \ihat\times(\ihat+\jhat) = \ihat\times\ihat + \ihat\times\jhat = 0 + \khat = \khat$
+  $$
+  \begin{align*}
+  \bfvec{v}\times\bfvec{B} &= v_x\ihat\times(B_x\ihat+B_y\jhat)\\
+  &= v_xB_x(\ihat\times\ihat) + v_xB_y(\ihat\times\jhat)\\
+  &= 0 + v_xB_y\khat = \khat
+  \end{align*}
+  $$
 
 * If $\bfvec{v}=v_x\ihat$ and $\bfvec{B}=B_x\ihat+B_y\jhat + B_z\khat$, then
 
-  $\bfvec{v}\times\bfvec{B} = v_x\ihat\times(B_x\ihat+B_y\jhat+B_z\khat) = v_xB_x(\ihat\times\ihat) + v_xB_y(\ihat\times\jhat) + v_xB_z\ihat\times\khat = 0 + v_xB_y\khat - v_xB_z\jhat$
+  $$
+  \begin{align*}
+  \bfvec{v}\times\bfvec{B} &= v_x\ihat\times(B_x\ihat+B_y\jhat+B_z\khat) \\
+  & = v_xB_x(\ihat\times\ihat) + v_xB_y(\ihat\times\jhat) + v_xB_z(\ihat\times\khat)\\
+  & = 0 + v_xB_y\khat - v_xB_z\jhat
+  \end{align*}
+  $$
 
 ## Problems
 
@@ -210,16 +228,18 @@ $\quad$where the last equality follows from a trig identity.
 
 **b.**
 
-$\quad\bfvec{v}\times\bfvec{B} = 7\ihat \times (6\ihat + 7\jhat) = -42\ihat$
+$\quad\bfvec{v}\times\bfvec{B} = 7\khat \times (6\jhat + 7\khat) = -42\ihat$
 
 **c.**
 
-$\quad\bfvec{v}\times\bfvec{B} =3(\ihat+\jhat)\times 6\khat = 18(\ihat - \jhat)$
+$\quad\bfvec{v}\times\bfvec{B} = \frac{3}{\sqrt{2}}(\ihat+\jhat)\times 6\khat = \frac{18}{\sqrt{2}}(\ihat - \jhat)$
 \else
 \newpage
 \fi
 
 # Determinant Method
+
+_If you are familiar with the Multiply Through Method, covered in the previous section, you may skip this section and do the  Multiply Through Method problems._
 
 To find all non--zero terms that would have resulted using the Determinant Method, write the cross product in matrix determinant form as follows and compute its determinant. (This requires that you have memorized the procedure for computing the determinant of a $3\times 3$ matrix.) The most general problem and steps are as follows.
 
@@ -244,7 +264,7 @@ v_x & v_y \\
 B_x & B_y 
 \end{vmatrix} \khat
 \\\\ &=
-(v_yB_z - v_zB_y)\ihat -(v_xB_z - v_zB_z)\jhat +(v_xB_y - v_yB_x)\khat
+(v_yB_z - v_zB_y)\ihat -(v_xB_z - v_zB_x)\jhat +(v_xB_y - v_yB_x)\khat
 \end{align*}
 $$
 
