@@ -352,6 +352,20 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Markdown](RC_Circuits/RC_Circuits.md)
 |
 
+## Cross--Product Review
+
+* Activity - Cross Products
+  * Documents:
+| [pdf](Cross_Products/Cross_Products.pdf)
+| [pdf solns](Cross_Products/Cross_Products-solutions.pdf)
+| [html](Cross_Products/Cross_Products.html)
+|
+  * Source Files:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/(Magnetic_Force)
+| [Markdown](Cross_Products/Cross_Products.md)
+|
+
 ## Magnetic Force on Charged Particles
 
 * Activity - Magnetic Force on Charged Particles
@@ -364,7 +378,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
   * Source Files:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/(Magnetic_Force)
-| [Markdown]((Magnetic_Force/(Magnetic_Force.md)
+| [Markdown](Magnetic_Force/Magnetic_Force.md)
 |
 
 ## Magnetic Force on Wires
@@ -381,6 +395,12 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Markdown](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.md)
 | 
 
-## The Biot--Savart law
+## Magnetic Field of a Moving Charge
+
+## The Biot--Savart Law
+
+## Magnetic Flux
+
+## Lenz's Law
 
 ## RLC and AC Circuits
