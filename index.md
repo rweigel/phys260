@@ -397,7 +397,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Magnetic Field of a Moving Charge
 
-* Activity - Magnetic Force on Wires
+* Activity - Magnetic Force of a Moving Charge
   * Documents:
 | [pdf](Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.pdf)
 | [pdf solns](Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge-solutions.pdf)
@@ -413,9 +413,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Magnetic Flux
 
-## Magnetic Field of a Moving Charge
-
-* Activity - Magnetic Force on Wires
+* Activity - Magnetic Flux
   * Documents:
 | [pdf](Magnetic_Flux/Magnetic_Flux.pdf)
 | [pdf solns](Magnetic_Flux/Magnetic_Flux-solutions.pdf)
