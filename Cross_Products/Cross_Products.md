@@ -169,7 +169,8 @@ but replace the multiplication symbol ($\cdot$) with the cross product symbol ($
   \begin{align*}
   \bfvec{v}\times\bfvec{B} &= v_x\ihat\times(B_x\ihat+B_y\jhat)\\
   &= v_xB_x(\ihat\times\ihat) + v_xB_y(\ihat\times\jhat)\\
-  &= 0 + v_xB_y\khat = \khat
+  &= 0 + v_xB_y\khat\\
+  &= v_xB_y\khat
   \end{align*}
   $$
 
