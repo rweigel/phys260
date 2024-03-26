@@ -6,7 +6,7 @@ Title: Cross Products
 
 The cross product of two vectors $\bfvec{v}$ and $\bfvec{B}$, written as $\bfvec{v}\times\bfvec{B}$, is a vector quantity with a magnitude of $|\bfvec{v}||\bfvec{B}|\sin\phi = vB\sin\phi$, where $\phi$ is the angle between the two vectors ($0 \le\phi \le 180^{\circ}$). The direction of $\bfvec{v}\times\bfvec{B}$ is perpendicular to the plane that contains both vectors. (There are two perpendicular directions, and the one to choose is determined using the cross--product right--hand rule; see your textbook for details.)
 
-Three methods are commonly used for computing a cross product. The first method is useful for certain simple problems, whereas the last two methods apply to all problems.
+Three methods are commonly used for computing a cross--product. The first method ("By Inspection") is useful for certain simple problems, whereas the last two methods ("Multiply Through" and "Determinant") apply to all problems. In principle, one can solve any problem knowing only the second or third methods. However, as the examples demonstrate, some methods lead to a solution with less effort than others. In addition, we recommend understanding all of the methods because it leads to insight into how cross--products work, and you are likely to encounter all of the methods in solutions that you read.
 
 # The Circle Diagram
 
@@ -32,7 +32,7 @@ There is a mnemonic (memory) device for remembering the second and third rows of
 
 * If two unit vectors are crossed, the result is $\pm$, the unit vector not involved in the cross product.
 
-* To determine the sign, connect the two unit vectors that are crossed by drawing the shortest line that connects the first to the second along the circle shown below.
+* To determine the sign, connect the two crossed unit vectors by drawing the shortest line that connects the first to the second along the circle shown below.
 
 * If the line drawn was clockwise, the cross product is positive. If the line drawn was negative, the cross product is negative.
 
@@ -83,7 +83,7 @@ This method is most useful if the angle $\phi$ between the two vectors is given,
 
      Thus, $\bfvec{v}\times\bfvec{B}=-6\ihat$
 
-2. Both vectors lie in the same coordinate plane. In this case, compute the magnitude using $|\bfvec{v}||\bfvec{B}|\sin\phi$ and the direction using the cross--product right--hand rule or the circle diagram.
+2. Both vectors lie in the same coordinate plane (e.g., one of $x$--$y$, $x$--$z$, or $y$--$z$). In this case, compute the magnitude using $|\bfvec{v}||\bfvec{B}|\sin\phi$ and the direction using the cross--product right--hand rule.
 
    **Examples**:
 
@@ -138,11 +138,9 @@ Compute $\bfvec{v}\times\bfvec{B}$ based on the information in the following dia
 
 \ifsolutions
 **a.**
-$\quad\bfvec{v}\times\bfvec{B} = 60\sin 30^\circ\khat$
+$|\bfvec{v}\times\bfvec{B}| = |\bfvec{v}||\bfvec{B}|\sin 30^\circ = 60\sin 30^\circ$. From the right--hand rule, the direction is $-\khat$. So $\bfvec{v}\times\bfvec{B}=-60\sin 30^\circ\khat$
 
-**b.** $\quad\bfvec{v}\times\bfvec{B}=-42\ihat$
-
-**c.** $\quad\bfvec{v}\times\bfvec{B} = \frac{18}{\sqrt{2}}(\ihat - \jhat)$
+**b.** Here we are not given the angle, but it can be computed from $\sin\phi=6/\sqrt{6^2+7^2}$. In addition, we need to compute $|\bfvec{B}|$, which is $\sqrt{6^2+7^2}$. So $|\bfvec{v}\times\bfvec{B}| = |\bfvec{v}||\bfvec{B}|\sin\phi = 42$. The direction is $-\ihat$, so $\bfvec{v}\times\bfvec{B}=-42\ihat$. Note that because we were given vector components and not the angle between the vectors, several steps were needed for this method. A fast approach for this problem is to use the "Multiply Through" method, covered in the next section.
 \else
 \newpage
 \fi
@@ -153,13 +151,14 @@ This method is most useful when each of the vectors in the cross--product has tw
 
 Write the vectors in component form and then "multiply through" in a way that is similar to "multiplying through" to convert the product of sums into a sum of products. For example,
 
-$$a(b+c)=(a\cdot b) + (a\cdot c)$$
+$$(a)\cdot(b+c) = (a\cdot b) + (a\cdot c)$$
+ 
+but replace the multiplication symbol ($\cdot$) with the cross product symbol ($\times$). Note that order matters -- although with regular multiplication we can also write $a(b+c) = (b\cdot c) + (c\cdot d)$, when using this method, the first parentheses on the left--hand side must appear first in the mulitplications on the right--hand side.
 
-and the first--outer--inner--last (foil) case
+Another example is the first--outer--inner--last (foil) case:
 
 $$(a+b)(c+d)=(a\cdot c) + (a\cdot d) + (b\cdot c) + (b\cdot d)$$
 
-but replace the multiplication symbol ($\cdot$) with the cross product symbol ($\times$).
 
 ## Examples
 
@@ -214,12 +213,12 @@ Compute $\bfvec{v}\times\bfvec{B}$ and write your answer after the equal sign fo
 
 Compute $\bfvec{v}\times\bfvec{B}$ based on the information in the following diagrams by writing $\bfvec{v}$ and $\bfvec{B}$ in vector notation and using the Multiply Through Method. Show your work in the space below each diagram.
 
-<img src="figures/Diagram_I.svg">
+<img src="figures/Diagram_II.svg">
 
 \ifsolutions
 **a.**
 
-$\quad\bfvec{v}=10\cos 45^\circ\ihat + 10\sin 45^\circ\jhat$
+$\bfvec{v}=10\cos 45^\circ\ihat + 10\sin 45^\circ\jhat$
 
 $\quad\bfvec{B}=6\cos 15^\circ\ihat + 6\sin 15^\circ\jhat$
 
@@ -230,15 +229,45 @@ $$
 \end{align*}
 $$
 
-$\quad$where the last equality follows from a trig identity.
+where the last equality follows from a trig identity. Note that this problem is much more easily solved using the "By Inspection" method covered in the previous section.
 
 **b.**
 
-$\quad\bfvec{v}\times\bfvec{B} = 7\khat \times (6\jhat + 7\khat) = -42\ihat$
+$$
+\begin{align*}
+\bfvec{v}\times\bfvec{B} &= 7\khat \times (6\jhat + 7\khat) \\
+&= 42(\khat\times\jhat + \khat\times\khat) \\
+&= -42\ihat
+\end{align*}
+$$
+
+Note that the result is the same as if we crossed only the $y$--component of $\bfvec{B}$ with $\bfvec{v}$. The reason is that we can re--write the cross product $\bfvec{v}\times\bfvec{B}$ as
+
+$\bfvec{v}\times\bfvec{B} = \bfvec{v}\times\bfvec{B}_\parallel+\bfvec{v}\times\bfvec{B}_\perp$
+
+where the parallel and perpendicular are with respect to $\bfvec{v}$. The term $\bfvec{v}\times\bfvec{B}_\parallel$ is always zero, so another form of $\bfvec{v}\times\bfvec{B}$ that is sometimes used is when it is straightforward to determine $\bfvec{B}_\perp$ is
+
+$\bfvec{v}\times\bfvec{B} = \bfvec{v}\times\bfvec{B}_\perp$
+
+In this problem, we can read off from the diagram $\bfvec{B}_\perp=6\jhat$, so 
+
+$\bfvec{v}\times\bfvec{B} = \bfvec{v}\times\bfvec{B}_\perp = 7\khat\times 6\jhat = -42\ihat$
 
 **c.**
 
-$\quad\bfvec{v}\times\bfvec{B} = \frac{3}{\sqrt{2}}(\ihat+\jhat)\times 6\khat = \frac{18}{\sqrt{2}}(\ihat - \jhat)$
+$\bfvec{B}=6\khat$
+
+and
+
+$\bfvec{v}=3\cos 45^\circ\ihat + 3\sin 45^\circ\jhat = \ds \frac{3}{\sqrt{2}}(\ihat+\jhat)$, so
+
+  $$
+  \begin{align*}
+   \bfvec{v}\times\bfvec{B} & = \frac{3}{\sqrt{2}}(\ihat+\jhat)\times 6\khat \\
+   & = \frac{18}{\sqrt{2}}(\ihat\times\khat + \jhat\times\khat) \\
+   & = \frac{18}{\sqrt{2}}(\ihat - \jhat)
+  \end{align*}
+  $$
 \else
 \newpage
 \fi
