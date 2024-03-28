@@ -1,8 +1,10 @@
-# LR Circuits (Ch 30)
+```mdextension
+Title: LR Circuits
+```
 
-## Introduction
+# Introduction
 
-\input{LR/figures/lr}
+<img src="figures/LR_Series.svg">
 
 The above figure shows a LR series circuit consisting of an inductor of inductance $L$ connected in series with a resistor of resistance $R$. The switch, $S$, is closed at a time $t = 0$ and then remains closed. 
 
@@ -40,9 +42,9 @@ As a result, we state that initially the inductor behaves like an open circuit b
 
 For large $t/\tau$, the exponential term becomes much smaller than one and so the current becomes a constant value of $V_s/R$. If we replace the inductor with a wire, this is the same current that we would find. As a result, we state that after a long time, the inductor behaves like a resistanceless wire.
 
-## Problem
+# Problem I
 
-\input{LR/figures/lr_plot}
+<img src="figures/I_vs_t.svg">
 
 In this problem, you will consider the equation
 
@@ -58,7 +60,7 @@ that was described in the introduction.
 
 * Based on the equation, at $t\gg \tau$ does an inductor behave like an open circuit or a wire?
 
-    \bf Answer}: At $t \gg \tau$ the current will be $V_s/R$ with the inductor acting like a wire -- the circuit behaves as it would if there were no inductor in it.
+    {\bf Answer}: At $t \gg \tau$ the current will be $V_s/R$ with the inductor acting like a wire -- the circuit behaves as it would if there were no inductor in it.
     
 * If $L$ doubles but $R$ remains constant
     
@@ -74,21 +76,21 @@ that was described in the introduction.
     
     {\bf Answer:} $LdI/dt = -V_se^{-t/\tau}$. Yes. The voltage across the inductor is $-V_se^{-t/\tau}$ and for large $t/\tau$, $e^{-t/\tau}$ is near zero.
 
-## Problem
+# Problem II
 
-An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistance of 2\Omega$ are connected together to form a LR series circuit. If they are connected to a $20\text{ V}$ DC supply,
+An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistance of $2\text{ }\Omega$ are connected together to form a LR series circuit. If they are connected to a $20\text{ V}$ DC voltage source,
 
 *   What will be the final steady state value of the current (the current after a very long time)?
 
     {\bf Answer}: At the steady state, the current passing through the inductor is constant, the induced emf becomes 0. Consequently, the voltage drop on the resistor is the same as the total voltage of the DC supply. 
 
     $$
-    I = V_s/R=(20\text{ V})/(2\Omega) = 10\text{ A}
+    I = V_s/R=(20\text{ V})/(2\text{ }\Omega) = 10\text{ A}
     $$
 
 *   What is the time constant of the RL series circuit?
 
-    {\bf Answer}: The time constant is given by $\tau = L/R = (40\text{ mH}w)/(2\Omega) = 20 \text{ ms}$
+    {\bf Answer}: The time constant is given by $\tau = L/R = (40\text{ mH})/(2\text{ }\Omega) = 20 \text{ ms}$
 
 *   How long does it takes for the current to reach 63\% of its maximum value?
 
@@ -117,12 +119,13 @@ An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistanc
     {\bf Answer}: After 10 ms, the current is calculated as:
 
     $$
-    I(t) = \frac{V_s}{R}(1-e^{-t/(L/R)}) = \frac{20 \text{ V}}{2~\Omega} \left(1-e^{-(10\text{ ms})/(20\text{ ms})}\right) = 3.9\text{ A} 
+    I(t) = \frac{V_s}{R}(1-e^{-t/(L/R)}) = \frac{20 \text{ V}}{2\text{ }\Omega} \left(1-e^{-(10\text{ ms})/(20\text{ ms})}\right) = 3.9\text{ A} 
     $$
 
     The induced emf is:
+
     $$
-    emf = V_s - IR= 20\text{ V} - 3.9\text{ A} \cdot 2~\Omega=12.2\text{ V} 
+    \text{emf} = V_s - IR= 20\text{ V} - 3.9\text{ A} \cdot 2~\Omega=12.2\text{ V} 
     $$
 
 * What will be the value of the circuit current one time constant (that is, at $t=\tau$) after the switch is closed?
@@ -135,11 +138,11 @@ An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistanc
 
     This question is related to question 3. In the answer to question 3., it was found that it takes approximately one time constant to reach $63\%$ of the maximum value. So in this problem we expect that the answer to be approximately $63\%$ of the final value.
 
-## Problem
+# Problem III
 
-\input{LR/figures/lr_discharge}
+<img src="figures/LR_Two_Switches.svg">
 
-In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1\Omega$ is connected as shown. The battery has an emf of $10\text{ V}. At $t=0$, the switch $S_1$ is closed.
+In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1\text{ }\Omega$ is connected as shown. The battery has an emf of $10\text{ V}$. At $t=0$, the switch $S_1$ is closed.
 
 
 1.  What is the current through the resistor at $t=0$?
@@ -158,13 +161,14 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
     I(t)=  \frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
     $$
 
-    For large $t$, the exponential term is near zero, leaving $V_s/R=$10~V/1 $\Omega$ = $10$~A.
+    For large $t$, the exponential term is near zero, leaving $V_s/R=10\text{ V}/1 \text{ }\Omega$ = $10\text{ A}$.
 
 4.  After a long time, switch $S_1$ is opened and $S_2$ is closed simultaneously. Write Kirchhoff's voltage law around the new closed loop.
 
     {\bf Answer}: 
+
     $$
-    - I(t) R - L\frac{dI(t)}{dt} = 0
+    -I(t) R - L\frac{dI(t)}{dt} = 0
     $$
 
 5.  Show that the equation $I(t)=(10\text{ A})e^{-t/\tau}$ satisfies the equation in your answer to the previous question.
@@ -172,21 +176,20 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
     {\bf Answer}: Starting with
 
     $$
-    - I(t) \cdot R - L \frac{dI(t)}{dt} = 0
+    -I(t) \cdot R - L \frac{dI(t)}{dt} = 0
     $$
 
     And using $I=10e^{-t/\tau}$ and $d e^{t/\tau}/dt=(1/\tau) e^{-t/\tau}$, we have
 
     $$
-    - (10\text{ A})e^{-t/\tau} \cdot (1\Omega) - (10\text{ mH}/\tau)e^{-t/\tau} = 0
-
+    -(10\text{ A})e^{-t/\tau} \cdot (1\text{ }\Omega) - (10\text{ mH}/\tau)e^{-t/\tau} = 0
     $$
     Using $\tau = L/R$ one arrives at
 
     $$
-    - (10\text{ V})e^{-t/\tau} - (10\text{ V})e^{-t/\tau} = 0
+    -(10\text{ V})e^{-t/\tau} - (10\text{ V})e^{-t/\tau} = 0
     $$
 
-6.  Plot $I(t)$ from $t=0$ to $t=0.01$~s. Assume that the switch $S_1$ was opened and switch $S_2$ was closed at $t=0.005$~s.
+6.  Plot $I(t)$ from $t=0$ to $t=0.01\text{ s}$. Assume that the switch $S_1$ was opened and switch $S_2$ was closed at $t=0.005\text{ s}$.
     
-    \input{LR/figures/lr_plot}  
+    <img src="figures/I_vs_t.svg">

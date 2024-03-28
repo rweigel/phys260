@@ -1,4 +1,8 @@
-# LRC Circuits (Ch 31)
+```mdextension
+Title: LRC and AC Circuits
+```
+
+# Introduction
 
 Previously, we have examined circuits that are powered by batteries which produce constant voltage (called a direct current, or DC). However, our power distribution system makes use of alternating current (AC) in which the voltages and currents vary sinusoidally with time. 
 

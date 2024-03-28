@@ -427,4 +427,18 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Lenz's Law
 
+## RL Circuits
+
+* Activity - RL Charging and Discharging
+  * Documents:
+| [pdf](RL_Circuits/RL_Circuits.pdf)
+| [pdf solns](RL_Circuits/RL_Circuits-solutions.pdf)
+| [html](RL_Circuits/RL_Circuits.html)
+|
+* Source:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/RL_Circuits)
+| [Markdown](Magnetic_Flux/RL_Circuits.md)
+| 
+
 ## RLC and AC Circuits
