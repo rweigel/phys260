@@ -14,7 +14,7 @@ For a straight segment of wire of length $L$ with the same $\bfvec{B}$ on all pa
 
 $$\bfvec{F} = L\bfvec{I}\times\bfvec{B}$$
 
-or, equivalently, by defining a length vector $\bfvec{L}$ with the same direction of $\bfvec{I}$ and a magnitude of the length of the wire segment,
+or, equivalently, by defining a length vector $\bfvec{L}$ with the same direction as $\bfvec{I}$ and a magnitude of the length of the wire segment,
 
 $$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
 
