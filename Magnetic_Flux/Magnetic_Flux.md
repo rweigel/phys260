@@ -6,11 +6,11 @@ Title: Magnetic Flux
 
 The definition of magnetic flux is
 
-$$\Phi_B = \int \mathbf{B}\cdot d\mathbf{A}$$
+$$\Phi_B = \int \bfvec{B}\cdot d\mathbf{A}$$
 
-When the magnitude and direction of $\bfvec{B}$ is the same at all points on the surface, the integral simplifies to 
+When the magnitude and direction of $\bfvec{B}$ are the same at all points on the surface, the integral simplifies to 
 
-$$\Phi_B = \mathbf{B}\cdot \mathbf{A}$$
+$$\Phi_B = \bfvec{B}\cdot \mathbf{A}$$
 
 or, equivalently,
 
@@ -18,7 +18,7 @@ $$\Phi_B = BA\cos\phi$$
 
 where $\phi$ is the angle between the $\bfvec{B}$ and $\bfvec{A}$ vectors.
 
-Note that previously electric flux was covered. The same techniques that apply to computing electric flux apply to magnetic flux.See the Electric Flux activity for additional discussion.
+Note that previously, electric flux was covered. The same techniques that apply to computing electric flux apply to magnetic flux. See the Electric Flux activity for additional discussion.
 
 \ifsolutions
 \else
@@ -52,7 +52,7 @@ In the following figure, a square loop of area $A$ that can be rotated about the
 3. When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of a fraction of $B_oA$?
 
    \ifsolutions
-   **Answer**: As shown in the diagram in the solution to 2., the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be positive when $\phi=45^\circ$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
+   **Answer**: From the above diagram, the angle between $\hat{\mathbf{n}}$ and $\bfvec{B}_{\text{ext}}$ is $\phi$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
    \else
    \vspace{3em}
    \fi
@@ -60,16 +60,16 @@ In the following figure, a square loop of area $A$ that can be rotated about the
 4. When $\phi=135^\circ$, is the magnetic flux positive or negative? What is its value in terms of a fraction of $B_oA$?
 
    \ifsolutions
-    **Answer**: As shown in the diagram above, when $\phi=135^\circ$ the dot product of the normal vector and $\mathbf{B}_{\text{ext}}$ will be negative, so the flux will be negative. Its value will be $B_oA\cos 135^\circ=-B_oA\cos 45^\circ=-B_oA/\sqrt{2}$.
+    **Answer**: From the above diagram, the angle between $\hat{\mathbf{n}}$ and $\bfvec{B}_{\text{ext}}$ is $\phi$, so the flux will be negative. Its value will be $B_oA\cos 135^\circ=-B_oA\cos 45^\circ=-B_oA/\sqrt{2}$.
   \else
   \vspace{3em}
   \fi
 
-5. Sketch a plot of the magnetic flux, $\Phi$, as a function of $\phi$.
+5. Sketch a plot of the magnetic flux, $\Phi_B$, as a function of $\phi$.
 
   \ifsolutions
 
-   The curve is $\Phi=B_oA\cos\phi$ is sketched below along with dots that were used to help determine the shape of the curve.
+   From the diagram above, the angle of rotation of the plane is the same as the angle between the  $\hat{\mathbf{n}}$ and $\bfvec{B}_{\text{ext}}$, so the general formula is $\Phi=B_oA\cos\phi$, which is sketched below along with dots that correspond to answers to the above problems.
 
    <img src="figures/Square_I_Solution_B.svg"/>
 
@@ -85,9 +85,13 @@ Suppose the loop in the previous problem rotates at a constant rate.
 
 <img src="figures/Square_I.svg"/>
 
-1. At what angles is $d\Phi_B/dt=0$?
+1. At what angles in the range $\phi=[0^\circ, 360^\circ]$ is $d\Phi_B/dt=0$?
 
   \ifsolutions
+  The answer to part 5. of the previous problem is $\Phi_B=B_oA\cos\phi$, which is sketched below. The slope of $\Phi_B$ is zero at $\phi = 0, 180^\circ$, and $360^\circ$.
+
+  <img src="figures/Square_I_Solution_B.svg"/>
+
   \else
   \vspace{5em}
   \fi
@@ -95,6 +99,7 @@ Suppose the loop in the previous problem rotates at a constant rate.
 2. For what angle range is $d\Phi_B/dt$ increasing?
 
   \ifsolutions
+  From the plot of $\Phi_B$, the slope is positive for $180^\circ \lt \phi \lt 360^\circ$
   \else
   \vspace{5em}
   \fi
@@ -102,6 +107,7 @@ Suppose the loop in the previous problem rotates at a constant rate.
 3. For what angle range is $d\Phi_B/dt$ decreasing?
 
   \ifsolutions
+  From the plot of $\Phi_B$, the slope is negative for $0^\circ \lt \phi \lt 180^\circ$
   \else
   \vspace{5em}
   \fi
@@ -109,5 +115,6 @@ Suppose the loop in the previous problem rotates at a constant rate.
 4. What is the formula for $d\Phi_B/dt$?
 
   \ifsolutions
+  $\Phi=B_oA\cos\phi$, so $d\Phi_B/dt = -B_oA\sin\phi$
   \else
   \fi

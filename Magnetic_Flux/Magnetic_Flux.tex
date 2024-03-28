@@ -1,0 +1,205 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Magnetic Flux}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Introduction}
+
+The definition of magnetic flux is
+
+$$\Phi_B = \int \bfvec{B}\cdot d\mathbf{A}$$
+
+When the magnitude and direction of $\bfvec{B}$ are the same at all points on the surface, the integral simplifies to 
+
+$$\Phi_B = \bfvec{B}\cdot \mathbf{A}$$
+
+or, equivalently,
+
+$$\Phi_B = BA\cos\phi$$
+
+where $\phi$ is the angle between the $\bfvec{B}$ and $\bfvec{A}$ vectors.
+
+Note that previously, electric flux was covered. The same techniques that apply to computing electric flux apply to magnetic flux. See the Electric Flux activity for additional discussion.
+
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\section{Computing $\Phi_B$}
+
+In the following figure, a square loop of area $A$ that can be rotated about the $z$ axis is shown. Assume that the normal direction of the loop is as shown in the diagram. A uniform external magnetic field points in the $\jhat$ direction.
+
+\input{figures/Square_I.tikz}
+
+\begin{enumerate}
+
+  \item At what angles in the range of $\phi=[0,360^\circ]$ is the magnetic flux zero?
+
+        \ifsolutions
+        {\bf Answer}: The magnetic flux will be zero when the normal vector is perpendicular to  $\bfvec{B}_{\text{ext}}$. This corresponds to $\phi = 90^\circ$ and $\phi = 270^\circ$
+        \else
+        \vskip 36pt
+        \fi
+
+  \item Draw the loop, $\hat{\mathbf{n}}$, and $\bfvec{B}_{\text{ext}}$ as they would appear when viewed from large $z$ when $\phi=0^\circ$, $\phi=45^\circ$, $\phi=135^\circ$, and $\phi=180^\circ$.
+
+        \ifsolutions
+        \textbf{Answer}:
+
+        \input{figures/Square_I_Solution_A.tikz}
+        \else
+        \vskip 144pt
+        \fi
+
+  \item When $\phi=45^\circ$, is the magnetic flux positive or negative? What is its value in terms of a fraction of $B_oA$?
+
+        \ifsolutions
+        \textbf{Answer}: From the above diagram, the angle between $\hat{\mathbf{n}}$ and $\bfvec{B}_{\text{ext}}$ is $\phi$, so the flux will be positive. Its value will be $B_oA\cos 45^\circ=B_oA/\sqrt{2}$.
+        \else
+        \vskip 36pt
+        \fi
+
+  \item When $\phi=135^\circ$, is the magnetic flux positive or negative? What is its value in terms of a fraction of $B_oA$?
+
+        \ifsolutions
+        \textbf{Answer}: From the above diagram, the angle between $\hat{\mathbf{n}}$ and $\bfvec{B}_{\text{ext}}$ is $\phi$, so the flux will be negative. Its value will be $B_oA\cos 135^\circ=-B_oA\cos 45^\circ=-B_oA/\sqrt{2}$.
+        \else
+        \vskip 36pt
+        \fi
+
+  \item Sketch a plot of the magnetic flux, $\Phi_B$, as a function of $\phi$.
+
+        \ifsolutions
+        From the diagram above, the angle of rotation of the plane is the same as the angle between the  $\hat{\mathbf{n}}$ and $\bfvec{B}_{\text{ext}}$, so the general formula is $\Phi=B_oA\cos\phi$, which is sketched below along with dots that correspond to answers to the above problems.
+
+        \input{figures/Square_I_Solution_B.tikz}
+        \else
+        \vskip 60pt
+        \fi
+
+\end{enumerate}
+
+\section{Computing $d\Phi_B/dt$}
+
+The time rate of change of magnetic flux through a closed loop is a quantity that will be used when Faraday's law is covered.
+
+Suppose the loop in the previous problem rotates at a constant rate.
+
+\input{figures/Square_I.tikz}
+
+\begin{enumerate}
+
+  \item At what angles in the range $\phi=[0^\circ, 360^\circ]$ is $d\Phi_B/dt=0$?
+
+        \ifsolutions
+        The answer to part 5. of the previous problem is $\Phi_B=B_oA\cos\phi$, which is sketched below. The slope of $\Phi_B$ is zero at $\phi = 0, 180^\circ$, and $360^\circ$.
+
+        \input{figures/Square_I_Solution_B.tikz}
+        \else
+        \vskip 60pt
+        \fi
+
+  \item For what angle range is $d\Phi_B/dt$ increasing?
+
+        \ifsolutions
+        From the plot of $\Phi_B$, the slope is positive for $180^\circ \lt \phi \lt 360^\circ$
+        \else
+        \vskip 60pt
+        \fi
+
+  \item For what angle range is $d\Phi_B/dt$ decreasing?
+
+        \ifsolutions
+        From the plot of $\Phi_B$, the slope is negative for $0^\circ \lt \phi \lt 180^\circ$
+        \else
+        \vskip 60pt
+        \fi
+
+  \item What is the formula for $d\Phi_B/dt$?
+
+        \ifsolutions
+        $\Phi=B_oA\cos\phi$, so $d\Phi_B/dt = -B_oA\sin\phi$
+        \else
+
+        \fi
+
+\end{enumerate}
+
+\end{document}
