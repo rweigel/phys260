@@ -1,0 +1,333 @@
+\newif\ifsolutions
+\solutionstrue % Show solutions
+%\solutionsfalse % Hide solutions
+
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+% fleqn allows setting indent of display math
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{0pt} % Set indent
+% Disable equation numbering (https://tex.stackexchange.com/a/360378)
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+% Allow Unicode (some, e.g., © and £ at least)
+% https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+\usepackage[utf8]{inputenc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+% Prevent indentation of paragraphs
+\setlength\parindent{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Spacing above/below equations
+% https://tex.stackexchange.com/a/69678
+\AtBeginDocument{%
+ \abovedisplayskip=-\parskip
+ \abovedisplayshortskip=-\parskip
+ \belowdisplayskip=0pt
+ \belowdisplayshortskip=0pt
+}
+
+% Allow 3 additional subsection levels
+% https://tex.stackexchange.com/a/60212
+\usepackage{titlesec}
+\setcounter{secnumdepth}{6}
+% H4 in HTML
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H5 in HTML
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% H6 in HTML
+\titleformat{\subsubparagraph}{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+\titlespacing*{\subsubparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% So enumerate at all levels is numbers
+% https://tex.stackexchange.com/questions/78842/nested-enumeration-numbering
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.}
+
+\renewcommand{\mbox}{\text}
+\newcommand{\ds}[0]{\displaystyle}
+\newcommand{\ihat}[0]{\hat{\boldsymbol{\imath}}}
+\newcommand{\jhat}[0]{\hat{\boldsymbol{\jmath}}}
+\newcommand{\khat}[0]{\hat{\boldsymbol{k}}}
+\newcommand{\xhat}[0]{\hat{\mathbf{x}}}
+\newcommand{\yhat}[0]{\hat{\mathbf{y}}}
+\newcommand{\zhat}[0]{\hat{\mathbf{z}}}
+\newcommand{\rhat}[0]{\hat{\mathbf{r}}}
+\newcommand{\bfvec}[1]{\vec{\mathbf{#1}}}
+\newcommand{\bfcdot}[0]{\boldsymbol{\cdot}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Magnetic Force and Torque}
+\rhead{\thepage}
+\fancyfoot{}
+
+\begin{document}
+
+\section{Forces on Straight Wires}
+
+A wire carrying a current contains many moving charges. If a current--carrying wire is in a region of space with a magnetic field, the magnetic force on the moving charges in the wire results in a force on the wire.
+
+Each charge $q$ moving with a velocity $\bfvec{v}$ in a segment of wire  will have a magnetic force on it of
+
+$$\bfvec{F} = q\bfvec{v}\times\bfvec{B}$$
+
+For a straight segment of wire of length $L$ with the same $\bfvec{B}$ on all parts of it, this equation can be transformed into an equation for the force on a straight segment with current $\bfvec{I}$:
+
+$$\bfvec{F} = L\bfvec{I}\times\bfvec{B}$$
+
+or, equivalently, by defining a length vector $\bfvec{L}$ with the same direction of $\bfvec{I}$ and a magnitude of the length of the wire segment,
+
+$$\bfvec{F} = I\bfvec{L}\times\bfvec{B}$$
+
+As was the case for the magnetic force equation for a charge $q$, the magnitude of this cross--product can be written in a simplified form:
+
+$$F=ILB\sin\phi$$
+
+where $\phi$ is the angle between $\bfvec{L}$ and $\bfvec{B}$ and $0 \le\phi \le 180^{\circ}$. The direction of the force is determined using the cross--product right--hand rule by crossing $\bfvec{L}$ with $\bfvec{B}$.
+
+\newpage
+
+\subsection{Example}
+
+\input{figures/Rectangle_a.tikz}
+
+In the figure above, a magnetic field of magnitude $B_o$ is pointing out of the page, and the rectangle--shaped wire carries a current $I_o$, has a height of $6L_o$, and a width of $12L_o$.
+
+Determine the force on each side of the rectangle and the net force on the loop.
+
+{\bf Answer: } In this problem, a coordinate system was not given. We are free to use any coordinate system directions provided that it is a right--handed coordinate system. (In a right--handed coordinate system, $\ihat\times\jhat=\khat$. If we choose the $+x$ direction to be to the right and $+y$ up, then the $+z$ direction must be out of the page in order for $\ihat\times\jhat=\khat$.)
+
+\input{figures/Rectangle_b.tikz}
+
+\begin{itemize}
+
+  \item Left segment: The length is $6L_o$ and the current is flowing downward (in the $-\jhat$ direction), so $\bfvec{L} = -6L_o\jhat$ and $$\bfvec{F} = I\bfvec{L}\times\bfvec{B} = I_o(-6L_o\jhat)\times B_o\khat=-6I_oL_oB_o\jhat\times \khat=-6I_oL_oB_o\ihat$$
+
+        Check: The direction of the force is consistent with that from using the right--hand rule for cross products (crossing $\bfvec{L}$ with $\bfvec{B}$). The magnitude of the force can also be found using $F=ILB\sin\phi$. Using the given variables, $F=I_o(6L_o)B_o\sin\phi$. Here $\phi=90^\circ$ because $\bfvec{L}$ and $\bfvec{B}$ are perpendicular to each other. This leaves $F=6I_oL_oB_o$, which is the magnitude of $\bfvec{F}=-6I_oL_oB_o\ihat$ found above using vector notation.
+
+  \item Right: The length is $6L_0$ and the current is flowing upward (in the $+\jhat$ direction), so $\bfvec{L} = +6L_o\jhat$ and
+
+        $\bfvec{F}=I_o(+6L_o\jhat)\times (B_o\khat)=+6I_oL_oB_o\ihat$
+
+  \item Bottom: $\bfvec{F}=I_o(+12L_o\ihat)\times (B_o\khat) = 12I_oL_oB_o\ihat\times\khat = -12I_oL_oB_o\jhat$.
+
+  \item Top: $\bfvec{F}=I_o(-12L_o\ihat)\times (B_o\khat)=+12I_oL_oB_o\jhat$.
+
+\end{itemize}
+
+The sum of the forces is zero.
+
+\subsection{Problem}
+
+\ifsolutions
+\input{figures/Rectangle_Triangle_Circle_Solutions.tikz}
+\else
+
+\input{figures/Rectangle_Triangle_Circle.tikz}
+\fi
+
+\begin{enumerate}
+
+  \item For the current loops in a. and b. in the figure above, determine the magnitude and direction of the force on each segment of the wire and the net force on the loop given that a magnetic field of magnitude $B_o$ points out of the page. Draw the force vector on the line segments and show your calculation on the figure or in the space below.
+
+        \ifsolutions
+        The force on each segment is shown on the diagram above. The net force is zero for both cases.
+        \else
+        \vskip 169.5pt
+        \fi
+
+  \item For the current loop in c., determine {\bf only} the direction of the force at each of the five points shown as solid dots when $\bfvec{B}=B_o\khat$. Draw a vector on the diagram to indicate the direction of the force at that point. What is the net force on this loop?
+
+        \ifsolutions
+        The force vectors are shown on the diagram above. The net force is zero.
+        \else
+
+        \newpage
+        \fi
+
+\end{enumerate}
+
+\section{Torques on Current Loops}
+
+In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). The general result is the net force on a closed loop in a \emph{constant} magnetic field is zero. To see this, think of computing the force by adding all of the force vectors in each of the previous problems head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.
+
+The net torque on a closed loop in a constant magnetic field can be non--zero (in which case it will tend to rotate).
+
+The torque on a current loop that lies in a plane is:
+
+$$\vec{\boldsymbol{\tau}} = \vec{\boldsymbol{\mu}}\times\bfvec{B}$$
+
+where $\vec{\boldsymbol{\mu}}$ is the magnetic moment defined as $\vec{\boldsymbol{\mu}}=I\bfvec{A}$ and $\bfvec{A}=A\hat{\mathbf{n}}$ is the area vector for a loop. The magnitude of the area vector is simply the area of the loop. The direction of the area vector is determined by a right--hand rule: wrap your fingers along the direction of the current and your thumb points in the direction of the area vector.
+
+The equation $\vec{\boldsymbol{\tau}} = \boldsymbol{\mu}\times\bfvec{B} = I\bfvec{A}\times\bfvec{B}$ predicts that when $\bfvec{A}$ is perpendicular to $\bfvec{B}$, the torque magnitude is the largest. To see this, note that $I\bfvec{A}\times\bfvec{B}$ can be equivalently written as $IAB\sin\phi$, where $\phi$ is the angle between $\bfvec{A}$ and $\bfvec{B}$. When $\phi = 90^\circ$, the cross product will have the largest magnitude.
+
+\textbf{Interpreting the torque unit vector}
+
+\begin{enumerate}
+
+  \item A torque in the $+\khat$ direction corresponds to a rotation in the same sense as rotation from the $+\ihat$ axis towards the $+\jhat$ axis;
+
+  \item a torque in the $+\ihat$ direction corresponds to a rotation in the same sense as rotation from the $+\jhat$ axis towards the $+\khat$ axis;
+
+  \item a torque in the $+\jhat$ direction corresponds to a rotation in the same sense as rotation from the $+\khat$ axis towards the $+\ihat$ axis.
+
+\end{enumerate}
+
+You do not need to memorize these -- they can be obtained from the following diagram. Rotating $\ihat$ towards $\jhat$ gives $\khat$ (item 1. above). Rotating $\jhat$ towards $\khat$ gives $\jhat$ (item 2. above), etc.
+
+\input{../Cross_Products/figures/Cyclic_ijk.tikz}
+
+\ifsolutions
+
+\else
+
+\newpage
+\fi
+
+\subsection{Problem -- $\bfvec{B}$ in Plane of Loop}
+
+\ifsolutions
+\input{figures/Rectangle_Triangle_Torque_Solutions.tikz}
+\else
+
+\input{figures/Rectangle_Triangle_Torque.tikz}
+\fi
+
+The three current loops are in a region of space with a constant magnetic field with a magnitude of $B_o$.
+
+\begin{enumerate}
+
+  \item Will loop a. tend to rotate? If so, what axis will it tend to rotate about? Determine this by drawing the direction of the force (determined using the right--hand rule) on each segment of the wire.
+
+        \ifsolutions
+        {\bf Answer: }Yes. Will rotate about $y$ ($\jhat$) axis counterclockwise when viewed from a point on $+y$ axis. (Or, rotates in the same sense as rotation of $z$ ($\khat$) towards $x$ ($\ihat$).)
+        \else
+        \vskip 56.25pt
+        \fi
+
+  \item If the current direction is reversed, will loop a. tend to rotate? If so, what axis will it tend to rotate about?
+
+        \ifsolutions
+        {\bf Answer: } Yes. Rotation opposite of answer to 1.
+        \else
+        \vskip 56.25pt
+        \fi
+
+  \item Will loop b. tend to rotate? If so, what axis will it tend to rotate about?
+
+        \ifsolutions
+        {\bf Answer:} Yes. Will rotate about $y$ ($\jhat$) axis clockwise when viewed from a point on $+y$ axis. (Or, rotates in the same sense as rotation of $x$ ($\ihat$) towards $z$ ($\khat$).
+        \else
+        \vskip 56.25pt
+        \fi
+
+  \item If the current direction is reversed, will loop b. tend to rotate? If so, what axis will it tend to rotate about?
+
+        \ifsolutions
+        {\bf Answer: } Yes. Rotation opposite of answer to 3.
+        \else
+        \vskip 56.25pt
+        \fi
+
+  \item What is the magnetic moment, $\boldsymbol{\mu}$, of loops a. and b.?
+
+        \ifsolutions
+        {\bf Answer:} 
+
+        a. Using $\boldsymbol{\mu} = I_o\bfvec{A}$, $\bfvec{A} = A\hat{\mathbf{n}}$, and $\hat{\mathbf{n}} = +\khat$ gives $\boldsymbol{\mu } = I_o(6L_o\cdot 12 L_o)(+\khat) = 72I_oL_o^2\khat$.
+
+        b.  Using $\boldsymbol{\mu} = I_o\bfvec{A}$, $\bfvec{A} = A\hat{\mathbf{n}}$, and $\hat{\mathbf{n}} = -\khat$ gives $\boldsymbol{\mu } = I_o\frac{1}{2}(6L_o\cdot 11 L_o)(-\khat) = -33I_oL_o^2\khat$.
+        \else
+        \vskip 56.25pt
+        \fi
+
+  \item What is the torque, $\boldsymbol{\tau}$, on loops a. and b.? Verify that this torque vector corresponds to an axis of rotation that matches your previous answers.
+
+        \ifsolutions
+        {\bf Answer: }
+
+        a. $\boldsymbol{\tau}= (72I_oL_o^2\khat)\times (B_o\ihat)= 72I_oL_o^2B_o\jhat$
+
+        b. $\boldsymbol{\tau}= (-33I_oL_o^2\khat)\times (B_o\ihat)= -33I_oL_o^2B_o\jhat$
+        \else
+        \vskip 56.25pt
+        \fi
+
+  \item For loop c., compute $\boldsymbol{\tau}$ when $\bfvec{B}=(B_o/\sqrt{2})\ihat + (B_o/\sqrt{2})\jhat$ and verify that this torque vector matches what you would expect from using the right-hand rule to determine the direction of the force on each segment of the loop.
+
+        \ifsolutions
+        {\bf Answer: }
+        $$
+        \begin{align*}
+        \boldsymbol{\tau} & = \boldsymbol{\mu}\times\bfvec{B} \\\\
+        &  =(72I_oL_o^2\khat)\times (B_o\ihat+B_o\jhat)/\sqrt{2}\\\\
+        & = 72I_oB_oL_o^2(\khat\times \ihat + \khat\times \jhat)/\sqrt{2}\\\\
+        & = 72I_oB_oL_o^2(\jhat-\ihat)/\sqrt{2}\\\\
+        & = 72I_oB_oL_o^2(-\ihat+\jhat)/\sqrt{2}
+        \end{align*}
+        $$
+
+        The torque vector has a negative $x$-component and a positive $y$-component. To see that this makes sense, consider solving this problem using superposition -- first find the torque for $\bfvec{B}=(B_o/\sqrt{2})\ihat$ add the result to the torque for $\bfvec{B}=(B_o/\sqrt{2})\jhat$.
+        \else
+        \vskip 56.25pt
+        \fi
+
+\end{enumerate}
+
+\subsection{Problem -- $\bfvec{B}$ not in Plane of Loop}
+
+\input{figures/Rectangle_Rotated.tikz}
+
+If $\bfvec{B}=B_o\ihat$,
+
+\begin{enumerate}
+
+  \item Find the force on each segment of the loop.
+
+  \item Find the net force on the loop.
+
+  \item Find the net torque on the loop.
+
+\end{enumerate}
+
+\ifsolutions
+\textbf{Answers}
+
+    \begin{enumerate}
+
+      \item Left: $\bfvec{L} = h\khat$; $\bfvec{F}=I_o\mathbf{L}\times\mathbf{B}=I_ohB_o\khat\times\ihat=I_ohB_o\jhat$
+
+            Right: $\bfvec{L} = -h\khat$; $\bfvec{F}=-I_ohB_o\jhat$
+
+            From a diagram viewing the system from a point on the $+z$--axis to determine $\mathbf{L}$,
+
+            Top: $\bfvec{L}=w\cos\theta_o\ihat + w\sin\theta_o\jhat$; $\bfvec{F}=-I_owB_o\sin\theta_o\khat$
+
+            Bottom: $\bfvec{L}=-w\cos\theta_o\ihat - w\sin\theta_o\jhat$; $\bfvec{F}=I_owB_o\sin\theta_o\khat$
+
+      \item $0$
+
+      \item From a diagram, $\hat{\mathbf{n}}=-\sin\theta_o\ihat + \cos\theta_o\jhat$, and using $\bfvec{A}=A\hat{\mathbf{n}}$,
+
+            $\boldsymbol{\tau}=\boldsymbol{\mu}\times\bfvec{B}=I_oA\hat{\mathbf{n}}\times\bfvec{B} = I_owhB_o(-\sin\theta_o\ihat + \cos\theta_o\jhat)\times\ihat=-I_owhB_o\cos\theta_o\khat$
+
+    \end{enumerate}
+\else
+
+\fi
+
+\end{document}
