@@ -1,5 +1,5 @@
 ```mdextension
-Title: Magnetic Force and Torque on Current Loops
+Title: Magnetic Force and Torque
 ```
 
 # Forces on Straight Wires

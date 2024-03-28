@@ -381,18 +381,18 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | [Markdown](Magnetic_Force/Magnetic_Force.md)
 |
 
-## Magnetic Force on Wires
+## Magnetic Force and Torque
 
-* Activity - Magnetic Force on Wires
+* Activity - Magnetic Force and Torque
   * Documents:
-| [pdf](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.pdf)
-| [pdf solns](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires-solutions.pdf)
-| [html](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.html)
+| [pdf](Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.pdf)
+| [pdf solns](Magnetic_Force_and_Torque/Magnetic_Force_and_Torque-solutions.pdf)
+| [html](Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.html)
 |
 * Source:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
-| [Github](https://github.com/rweigel/phys260/tree/master/Magnetic_Force_on_Wires)
-| [Markdown](Magnetic_Force_on_Wires/Magnetic_Force_on_Wires.md)
+| [Github](https://github.com/rweigel/phys260/tree/master/Magnetic_Force_and_Torque)
+| [Markdown](Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.md)
 | 
 
 ## Magnetic Field of a Moving Charge
