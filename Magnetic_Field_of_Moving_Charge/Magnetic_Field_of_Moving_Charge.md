@@ -18,19 +18,17 @@ where $\rhat$ is the unit vector that points from the position of $q$ to the poi
 
 To find $\rhat$ (see also the $\rhat$ Unit Vector activity), 
 
-1. draw a vector, $\bfvec{r}$ from $q$ to the point in space where you want to know $\bfvec{B}$;
+1. draw a vector, $\bfvec{r}$, from $q$ to the point in space where you want to know $\bfvec{B}$;
 2. Write $\bfvec{r}$ in the form $\bfvec{r}=r_x\ihat+r_y\jhat$; then
 3. $\rhat=\bfvec{r}/r$, where $r=\sqrt{r_x^2+r_y^2}$.
 
-In this activity, the examples and solutions are given using the above approach.
-
-An alternative approach for computing $\bfvec{B}$ is to use the fact that $\bfvec{v}\times\hat{\mathbf{r}}=|\bfvec{v}|\sin\phi=v\sin\phi$, where $\phi$ is the angle between $\bfvec{v}$ and $\hat{\mathbf{r}}$ and $0 \le\phi \le 180^{\circ}$. With this, the magnitude of the magnetic field is
+In this activity, the examples and solutions are given using the above approach for computing $\bfvec{B}$. An alternative is to use the fact that $\bfvec{v}\times\hat{\mathbf{r}}=|\bfvec{v}|\sin\phi=v\sin\phi$, where $\phi$ is the angle between $\bfvec{v}$ and $\hat{\mathbf{r}}$ and $0 \le\phi \le 180^{\circ}$. With this, the magnitude of the magnetic field is
 
 $$
 B = \frac{\mu_o}{4\pi}\frac{|q|v\sin\phi}{r^2}
 $$
 
-and the right--hand rule is used to determine the dirction of $\bfvec{B}$. See the Cross Products activity for a discussion of when and how to compute the cross-product using this method.
+and the right--hand rule can be used to determine the direction of $\bfvec{B}$. See the Cross Products activity for a discussion of when and how to compute the cross-product using this method.
 
 \ifsolutions
 \else
@@ -39,7 +37,7 @@ and the right--hand rule is used to determine the dirction of $\bfvec{B}$. See t
 
 # Example
 
-If $q$ is at $(x,y)=(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, find the magnetic field vector at $(x,y)=(a,a)$.
+If $q$ is at $(x,y)=(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, find $\bfvec{B}$ at $(x,y)=(a,a)$.
 
 **Solution**
 
@@ -72,7 +70,7 @@ Check: Use the right--hand rule for cross products on $\bfvec{v}\times\hat{\math
 
 # Problem I
 
-If $q$ is at $(x,y)=(a,a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, find the magnetic field vector at $(x,y)=(-a,-a)$.
+If $q$ is at $(x,y)=(a,a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, find $\bfvec{B}$ at $(x,y)=(-a,-a)$.
 
 \ifsolutions
 **Solution**
@@ -81,7 +79,7 @@ $\bfvec{r}=-2a\ihat - 2a\jhat$ and $r=2\sqrt{2}a$, so
 
 $$\hat{\mathbf{r}}=\frac{\bfvec{r}}{r} = \left[-\frac{1}{\sqrt{2}}\ihat - \frac{1}{\sqrt{2}}\jhat\right]$$
 
-The cross product is
+The cross--product is
 
 $$\bfvec{v}\times\hat{\mathbf{r}}=v_o\ihat\times\left[-\frac{1}{\sqrt{2}}\ihat - \frac{1}{\sqrt{2}}\jhat\right] = -\frac{v_o}{\sqrt{2}}(\ihat\times\jhat) = -\frac{v_o}{\sqrt{2}}\khat$$
 
@@ -101,10 +99,10 @@ Check: Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\ma
 
 # Problem II
 
-If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find the magnetic field vector at $(x,y)=(a,a)$.
+If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ vector at $(x,y)=(a,a)$.
 
 \ifsolutions
-**Answer**: $\bfvec{B}(a,a)=0$ ($\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero.)
+**Answer**: $\bfvec{B}(a,a)=0$ (From a diagram, $\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero.)
 \else
 \vspace{12em}
 \fi
@@ -116,21 +114,25 @@ If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find the 
 
 # Problem III
 
-If $q$ is at $(x,y)=(a,2a)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find the magnetic field vector at $(x,y)=(-a,-a)$.
+If $q$ is at $(x,y)=(a,2a)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ at $(x,y)=(-a,-a)$.
 
 \ifsolutions
 **Answer**: 
-$$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{2v_o\khat}{13\sqrt{13}a^2}$$
+$$\bfvec{B}(-a,-a)= \frac{\mu_o}{4\pi} \frac{2v_o\khat}{13\sqrt{13}a^2}$$
 \else
 \vspace{18em}
 \fi
 
 # Problem IV
 
-If $q$ is at $(x,y)=(x_o,y_o)$ and has a velocity of $\bfvec{v}=v_x\ihat+v_y\jhat$, show
+If $q$ is at $(x,y)=(x_o,y_o)$ and has a velocity of $\bfvec{v}=v_x\ihat+v_y\jhat$, 
 
 $$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{1}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$$
 
 where
 
 $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
+
+1. Explain why $\bfvec{B}$ only has a $\khat$ component.
+1. Use this formula to find $\bfvec{B}$ for the example problem in section 2.
+2. Derive this formula.
