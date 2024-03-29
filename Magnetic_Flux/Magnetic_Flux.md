@@ -39,7 +39,7 @@ In the following figure, a square loop of area $A$ that can be rotated about the
    \vspace{3em}
    \fi
 
-2. Draw the loop, $\hat{\mathbf{n}}$, and $\bfvec{B}_{\text{ext}}$ as they would appear when viewed from large $z$ when $\phi=0^\circ$, $\phi=45^\circ$, $\phi=135^\circ$, and $\phi=180^\circ$.
+2. Draw the loop, $\hat{\mathbf{n}}$, and $\bfvec{B}_{\text{ext}}$ as they would appear when viewed from above (on the positive $z$--axis) when $\phi=0^\circ$, $\phi=45^\circ$, $\phi=135^\circ$, and $\phi=180^\circ$.
 
    \ifsolutions
    **Answer**:
@@ -81,7 +81,7 @@ In the following figure, a square loop of area $A$ that can be rotated about the
 
 The time rate of change of magnetic flux through a closed loop is a quantity that will be used when Faraday's law is covered.
 
-Suppose the loop in the previous problem rotates at a constant rate.
+Suppose the loop in the previous problem rotates at a constant rate such that $\phi=\omega t$, where $\omega$ is a contant.
 
 <img src="figures/Square_I.svg"/>
 
@@ -112,9 +112,9 @@ Suppose the loop in the previous problem rotates at a constant rate.
   \vspace{5em}
   \fi
 
-4. What is the formula for $d\Phi_B/dt$?
+4. What is the formula for $d\Phi_B(t)/dt$ in terms of $B_o$, $A$, $t$, and $\omega$?
 
   \ifsolutions
-  $\Phi=B_oA\cos\phi$, so $d\Phi_B/dt = -B_oA\sin\phi$
+  $\Phi_B=B_oA\cos\phi$, so $d\Phi_B/dt = -B_oA\omega\sin\omega t$
   \else
   \fi
