@@ -204,16 +204,16 @@ If $q$ is at $(x,y)=(a,2a)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\b
 
 \ifsolutions
 \textbf{Answer}: 
-$$\bfvec{B}(-a,-a)= \frac{\mu_o}{4\pi} \frac{2v_o\khat}{13\sqrt{13}a^2}$$
+$$\bfvec{B}(-a,-a)= \frac{\mu_o}{4\pi} \frac{2qv_o\khat}{13\sqrt{13}a^2}$$
 \else
 \vskip 216pt
 \fi
 
 \section{Problem IV}
 
-If $q$ is at $(x,y)=(x_o,y_o)$ and has a velocity of $\bfvec{v}=v_x\ihat+v_y\jhat$, 
+If $q$ is at the position $(x_o,y_o)$ and has a velocity of $\bfvec{v}=v_x\ihat+v_y\jhat$, 
 
-$$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{1}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$$
+$$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$$
 
 where
 
@@ -223,9 +223,100 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
 
   \item Explain why $\bfvec{B}$ only has a $\khat$ component.
 
+        \ifsolutions
+        \textbf{Answer}: The $\bfvec{r}$ and $\bfvec{B}$ vectors are in the $x$--$y$ plane, and the result of a cross--product is a vector that is perpendicular to the plane to the two crossed vectors.
+        \else
+        \vskip 36pt
+        \fi
+
   \item Use this formula to find $\bfvec{B}$ for the example problem in section 2.
 
+        \ifsolutions
+        \textbf{Answer}: In the example problem, $q$ is at $(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$ and we want to know $\bfvec{B}$ at $(a,a)$. In terms of the variables for the given equation, the position of the charge is $(x_o,y_o)=(-a,-a)$, the location where where we want to know $\bfvec{B}$ is $(x,y)=(a,a)$, $v_x=v_o$, and $v_y=0$. Plugging these values into
+
+        \vskip 12pt
+
+        $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
+
+        \vskip 12pt
+
+        $$
+        \bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat
+        $$
+
+        \vskip 12pt
+
+        gives
+
+        \vskip 12pt
+
+        $$r=\sqrt{(a--a)^2+(a--a)^2}=\sqrt{8}a$$
+
+        \vskip 12pt
+
+        and
+
+        \vskip 12pt
+
+        $$
+        \bfvec{B}(a,a)= \frac{\mu_o}{4\pi} \frac{q}{(\sqrt{8}a)^3} v_o(a--a)\khat
+        $$
+
+        \vskip 12pt
+
+        Simplification gives the same result found in the example:
+
+        \vskip 12pt
+
+        $$
+        \bfvec{B}(a,a) = \frac{\mu_o}{4\pi} \frac{qv_o}{(8\sqrt{2})a^2}\khat
+        $$
+        \else
+        \vskip 96pt
+        \fi
+
   \item Derive this formula.
+
+        \ifsolutions
+        \textbf{Answer}: 
+        The vector from the position of $q$, $(x_o,y_o)$, to the point where we want to know the field, $(x,y)$, is
+
+        $\bfvec{r} = (x-x_o)\ihat + (y-y_o)\jhat$, so $r=\sqrt{(x-x_o)^2+(y-y_o)^2}$.
+
+        Using this with $\rhat=\bfvec{r}/r$ and $\bfvec{v}=v_x\ihat+v_y\jhat$ in
+
+        \vskip 12pt
+
+        $$
+        \bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}
+        $$
+
+        gives
+
+        $$
+        \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q (v_x\ihat+v_y\jhat)\times\ds\frac{(x-x_o)\ihat + (y-y_o)\jhat}{r}}{r^2}
+        $$
+
+        or
+
+        $$
+        \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q}{r^3}(v_x\ihat+v_y\jhat)\times \big[(x-x_o)\ihat + (y-y_o)\jhat\big]
+        $$
+
+        Using the Multiply through method for cross--products (and dropping the terms involving $\ihat\times\ihat$ and $\jhat\times\jhat$) gives
+
+        $$
+        \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q}{r^3}\big[v_x\ihat\times (y-y_o)\jhat + v_y\jhat\times (x-x_o)\ihat\big]
+        $$
+
+        Evaluation of the cross--products gives
+
+        $$
+        \bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{1}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat
+        $$
+        \else
+
+        \fi
 
 \end{enumerate}
 
