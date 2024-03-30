@@ -135,41 +135,26 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
 
 1. Explain why $\bfvec{B}$ only has a $\khat$ component.
    \ifsolutions
-   **Answer**: The $\bfvec{r}$ and $\bfvec{B}$ vectors are in the $x$--$y$ plane, and the result of a cross--product is a vector that is perpendicular to the plane to the two crossed vectors.
+   **Answer**: $\bfvec{r}$ and $\bfvec{v}$ are in the $x$--$y$ plane, and the result of a cross--product is a vector that is perpendicular to the plane to the two crossed vectors.
    \else
    \vspace{3em}
    \fi
 2. Use this formula to find $\bfvec{B}$ for the example problem in section 2.
    \ifsolutions
-   **Answer**: In the example problem, $q$ is at $(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$ and we want to know $\bfvec{B}$ at $(a,a)$. In terms of the variables for the given equation, the position of the charge is $(x_o,y_o)=(-a,-a)$, the location where where we want to know $\bfvec{B}$ is $(x,y)=(a,a)$, $v_x=v_o$, and $v_y=0$. Plugging these values into
+   **Answer**: In the example problem, $q$ is at $(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, and we want to know $\bfvec{B}$ at $(a,a)$. In terms of the variables for the given equation, the position of the charge is $(x_o,y_o)=(-a,-a)$, the location where where we want to know $\bfvec{B}$ is $(x,y)=(a,a)$, $v_x=v_o$, and $v_y=0$. Substituting these values into
 
    \vspace{1em}
 
-   $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
-
-   \vspace{1em}
-
-   $$
-   \bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat
-   $$
-
-   \vspace{1em}
-
-   gives
-
-   \vspace{1em}
-
-   $$r=\sqrt{(a--a)^2+(a--a)^2}=\sqrt{8}a$$
-
-   \vspace{1em}
-
+   $r=\sqrt{(x-x_o)^2+(y-y_o)^2}$
    and
-   
+   $\ds\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$
+
    \vspace{1em}
 
-   $$
-   \bfvec{B}(a,a)= \frac{\mu_o}{4\pi} \frac{q}{(\sqrt{8}a)^3} v_o(a--a)\khat
-   $$
+   gives 
+   $r=\sqrt{(a--a)^2+(a--a)^2}=\sqrt{8}a$
+   and
+   $\ds\bfvec{B}(a,a)= \frac{\mu_o}{4\pi} \frac{q}{(\sqrt{8}a)^3} v_o(a--a)\khat$
 
    \vspace{1em}
 
@@ -194,12 +179,7 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
    $\bfvec{r} = (x-x_o)\ihat + (y-y_o)\jhat$, so $r=\sqrt{(x-x_o)^2+(y-y_o)^2}$.
 
    Using this with $\rhat=\bfvec{r}/r$ and $\bfvec{v}=v_x\ihat+v_y\jhat$ in
-
-   \vspace{1em}
-
-   $$
-   \bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}
-   $$
+$\ds\bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}$
 
    gives
 
@@ -213,7 +193,7 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
    \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q}{r^3}(v_x\ihat+v_y\jhat)\times \big[(x-x_o)\ihat + (y-y_o)\jhat\big]
    $$
 
-   Using the Multiply through method for cross--products (and dropping the terms involving $\ihat\times\ihat$ and $\jhat\times\jhat$) gives
+   Using the Multiply Through method for cross--products (and dropping the terms involving $\ihat\times\ihat$ and $\jhat\times\jhat$) gives
 
    $$
    \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q}{r^3}\big[v_x\ihat\times (y-y_o)\jhat + v_y\jhat\times (x-x_o)\ihat\big]
