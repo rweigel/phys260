@@ -99,7 +99,7 @@ Check: Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\ma
 
 # Problem II
 
-If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ vector at $(x,y)=(a,a)$.
+If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ at $(x,y)=(a,a)$.
 
 \ifsolutions
 **Answer**: $\bfvec{B}(a,a)=0$ (From a diagram, $\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero.)

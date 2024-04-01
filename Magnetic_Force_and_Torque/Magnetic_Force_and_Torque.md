@@ -60,7 +60,7 @@ The sum of the forces is zero.
 <img src="figures/Rectangle_Triangle_Circle.svg">
 \fi
 
-1. For the current loops in a. and b. in the figure above, determine the magnitude and direction of the force on each segment of the wire and the net force on the loop given that a magnetic field of magnitude $B_o$ points out of the page. Draw the force vector on the line segments and show your calculation on the figure or in the space below.
+1. For the current loops in a. and b. in the figure above, determine the magnitude and direction of the force on each segment of the wire and the net force on the loop given that a magnetic field of magnitude $B_o$ points out of the page. Draw the force vector on the wire segments and show your calculation on the figure or in the space below.
 
    \ifsolutions
    The force on each segment is shown on the diagram above. The net force is zero for both cases.
@@ -78,7 +78,9 @@ The sum of the forces is zero.
 
 # Torques on Current Loops
 
-In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). The general result is the net force on a closed loop in a _constant_ magnetic field is zero. To see this, think of computing the force by adding all of the force vectors in each of the previous problems head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.
+In the previous section, you considered forces on the current loops when $\bfvec{B}=B_o\khat$. The forces on all of the current loops that you drew should have been such that the loop would not tend to translate (the net force should have been zero). 
+
+%The general result is the net force on a closed loop in a _constant_ magnetic field is zero. To see this, think of computing the force by adding all of the force vectors in each of the previous problems head--to--tail. The head of the last vector will end up at the tail of the first vector, so the sum of all of the blue vectors is zero.
 
 The net torque on a closed loop in a constant magnetic field can be non--zero (in which case it will tend to rotate).
 
@@ -96,7 +98,7 @@ The equation $\vec{\boldsymbol{\tau}} = \boldsymbol{\mu}\times\bfvec{B} = I\bfve
 2. a torque in the $+\ihat$ direction corresponds to a rotation in the same sense as rotation from the $+\jhat$ axis towards the $+\khat$ axis;
 3. a torque in the $+\jhat$ direction corresponds to a rotation in the same sense as rotation from the $+\khat$ axis towards the $+\ihat$ axis.
 
-You do not need to memorize these -- they can be obtained from the following diagram. Rotating $\ihat$ towards $\jhat$ gives $\khat$ (item 1. above). Rotating $\jhat$ towards $\khat$ gives $\jhat$ (item 2. above), etc.
+You do not need to memorize these -- they can be obtained from the following diagram. Rotating $\ihat$ towards $\jhat$ gives $\khat$ (item 1. above). Rotating $\jhat$ towards $\khat$ gives $\ihat$ (item 2. above), etc.
 
 <img src="../Cross_Products/figures/Cyclic_ijk.svg"/>
 

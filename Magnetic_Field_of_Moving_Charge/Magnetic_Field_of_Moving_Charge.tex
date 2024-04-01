@@ -183,7 +183,7 @@ Check: Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\ma
 
 \section{Problem II}
 
-If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ vector at $(x,y)=(a,a)$.
+If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ at $(x,y)=(a,a)$.
 
 \ifsolutions
 \textbf{Answer}: $\bfvec{B}(a,a)=0$ (From a diagram, $\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero.)
@@ -224,7 +224,7 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
   \item Explain why $\bfvec{B}$ only has a $\khat$ component.
 
         \ifsolutions
-        \textbf{Answer}: The $\bfvec{r}$ and $\bfvec{B}$ vectors are in the $x$--$y$ plane, and the result of a cross--product is a vector that is perpendicular to the plane to the two crossed vectors.
+        \textbf{Answer}: $\bfvec{r}$ and $\bfvec{v}$ are in the $x$--$y$ plane, and the result of a cross--product is a vector that is perpendicular to the plane to the two crossed vectors.
         \else
         \vskip 36pt
         \fi
@@ -232,35 +232,20 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
   \item Use this formula to find $\bfvec{B}$ for the example problem in section 2.
 
         \ifsolutions
-        \textbf{Answer}: In the example problem, $q$ is at $(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$ and we want to know $\bfvec{B}$ at $(a,a)$. In terms of the variables for the given equation, the position of the charge is $(x_o,y_o)=(-a,-a)$, the location where where we want to know $\bfvec{B}$ is $(x,y)=(a,a)$, $v_x=v_o$, and $v_y=0$. Plugging these values into
+        \textbf{Answer}: In the example problem, $q$ is at $(-a,-a)$ and has a velocity of $\bfvec{v}=v_o\ihat$, and we want to know $\bfvec{B}$ at $(a,a)$. In terms of the variables for the given equation, the position of the charge is $(x_o,y_o)=(-a,-a)$, the location where where we want to know $\bfvec{B}$ is $(x,y)=(a,a)$, $v_x=v_o$, and $v_y=0$. Substituting these values into
 
         \vskip 12pt
 
-        $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
-
-        \vskip 12pt
-
-        $$
-        \bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat
-        $$
-
-        \vskip 12pt
-
-        gives
-
-        \vskip 12pt
-
-        $$r=\sqrt{(a--a)^2+(a--a)^2}=\sqrt{8}a$$
-
-        \vskip 12pt
-
+        $r=\sqrt{(x-x_o)^2+(y-y_o)^2}$
         and
+        $\ds\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$
 
         \vskip 12pt
 
-        $$
-        \bfvec{B}(a,a)= \frac{\mu_o}{4\pi} \frac{q}{(\sqrt{8}a)^3} v_o(a--a)\khat
-        $$
+        gives 
+        $r=\sqrt{(a--a)^2+(a--a)^2}=\sqrt{8}a$
+        and
+        $\ds\bfvec{B}(a,a)= \frac{\mu_o}{4\pi} \frac{q}{(\sqrt{8}a)^3} v_o(a--a)\khat$
 
         \vskip 12pt
 
@@ -284,12 +269,7 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
         $\bfvec{r} = (x-x_o)\ihat + (y-y_o)\jhat$, so $r=\sqrt{(x-x_o)^2+(y-y_o)^2}$.
 
         Using this with $\rhat=\bfvec{r}/r$ and $\bfvec{v}=v_x\ihat+v_y\jhat$ in
-
-        \vskip 12pt
-
-        $$
-        \bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}
-        $$
+        $\ds\bfvec{B} = \frac{\mu_o}{4\pi}\frac{q\bfvec{v}\times\hat{\mathbf{r}}}{r^2}$
 
         gives
 
@@ -303,7 +283,7 @@ $$r=\sqrt{(x-x_o)^2+(y-y_o)^2}$$
         \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q}{r^3}(v_x\ihat+v_y\jhat)\times \big[(x-x_o)\ihat + (y-y_o)\jhat\big]
         $$
 
-        Using the Multiply through method for cross--products (and dropping the terms involving $\ihat\times\ihat$ and $\jhat\times\jhat$) gives
+        Using the Multiply Through method for cross--products (and dropping the terms involving $\ihat\times\ihat$ and $\jhat\times\jhat$) gives
 
         $$
         \bfvec{B}(x,y) = \frac{\mu_o}{4\pi}\frac{q}{r^3}\big[v_x\ihat\times (y-y_o)\jhat + v_y\jhat\times (x-x_o)\ihat\big]
