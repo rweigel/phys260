@@ -21,7 +21,7 @@ $$
 If the magnitude of the magnetic field is not changing and the angle between the magnetic field vector and the area vector does not change, then integration is not required and we can write
 
 $
-\Phi_B = \bfvec{B}\cdot \bfvec{A}
+\Phi_B = \bfvec{B}\bfcdot \bfvec{A}
 $
 or, equivalently, $\Phi_B = BA\cos\phi$, where $\phi$ is the angle between the area vector and $\bfvec{B}$.
 
@@ -37,11 +37,14 @@ In this activity, you will determine the direction of the induced current in a c
 
 Lenz's law follows from Faraday's law. In principle, Faraday's law, with careful attention paid to signs, can be used to determine the direction of induced current, in which case Lenz's law is not needed. In a similar way that using the right--hand rules to determine the general direction for force can be used to check your math on a cross--product, Lenz's Law provides a check on the direction of the induced current when using Faraday's law.
 
+\newpage
+
 ## Field Due to Current Loop
 
 Given a loop of current in a plane, one can determine the direction of the magnetic field near the center of loop created by the current using the current loop right--hand rule. Wrap your fingers around the loop in the direction of the current and your thumb points in the direction of the magnetic field.
 
-<img src="figures/Figure-28.12_Young_Freedman_14th_Edition.png"/>
+<img src="figures/Figure-28.12_Young_Freedman_14th_Edition.png" width="50%"/>
+
 **Figure 28.12 of Young and Freedman 14th Edition**
 
 ## Lenz's Law
@@ -56,7 +59,7 @@ Here, we'll use a longer, but more descriptive definition.
 
 In the examples given, we will first find the direction of the induced magnetic field. Then we will ask what direction of induced current is consistent with this induced magnetic field.
 
-For cases 1. and 2., it is useful to draw the magnetic field before and after the change. 
+\newpage
 
 # $B$ Changing
 
@@ -72,11 +75,15 @@ A spatially uniform external magnetic field points out of the page and its magni
 
 {\bf Answer}:
 
-To determine the direction of the induced magnetic field, we draw field lines through the area at $t=0$. On the left--hand side, six field lines are shown pointing out of the page. A short time later, at $t=\Delta t$, $B_{\text{ext}}$ has increased so we draw another field line pointing out of the page. In order to keep the total flux through the loop as it was at $t=0$, we need the induced field to cancel the added field line. As shown, this induced field must be into the page.
+To determine the direction of the induced magnetic field, we draw field lines through the area at $t=0$ and then a short time later. On the left--hand side of the following figure, field lines are shown pointing out of the page. A short time later, at $t=\Delta t$, $B_{\text{ext}}$ has increased so we draw more field lines pointing out of the page.
+
+The induced magnetic field is in the direction that opposes the change in magnetic flux, so the induced field must be into the page. (Note that the induced field will not exactly cancel the increase in flux; the magnitude of the induced field will depend on how much current is induced, which depends on the resistance of the wires.)
 
 Finally, we ask what direction of induced current in the loop creates this direction of $B_{\text{ind}}$. Using the current loop right--hand rule, it is a clockwise current.
 
 <img src="figures/Field_out_of_Page_Field_Increasing.svg"/>
+
+\newpage
 
 ## Problems
 
@@ -109,8 +116,6 @@ A spatially uniform external magnetic field points into of the page and its magn
    \else
    \vspace{2em}
    \fi
-
-###
 
 ###
 
@@ -148,37 +153,38 @@ A spatially uniform external magnetic field points into of the page and its magn
 
 A conducting wire loop is placed in the magnetic field of a solenoid as shown. Treat the magnetic field of the solenoid as the external magnetic field. Several representitive magnetic field lines are shown.
 
-Determine if an induced magnetic field will appear and if so, its direction.
+For the following cased, determine if an induced magnetic field will appear and if so, its direction. Then determine the direction of induced current, if any, in the wire loop.
 
-   1. The loop is stationary.
+1. The loop is stationary.
 
-      \ifsolutions
-      {\bf Answer}: No flux change, so no induced magnetic field.
-      \else
-      \fi
+   \ifsolutions
+   {\bf Answer}: a. No flux change, so no induced magnetic field. b. No current.
+   \else
+   a. Direction of induced magnetic field:
 
-   2. The loop is moving to the right.
+   b. Direction of current in loop:
 
-      \ifsolutions
-      {\bf Answer}: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). To keep the flux the same, an induced magnetic field pointing to the left will appear.
-      \else
-      \fi
+   \fi
 
-   3. The loop is moving to the left.
+2. The loop is moving to the right.
 
-      \ifsolutions
-      {\bf Answer}: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). To keep the flux the same, an induced magnetic field pointing to the right will appear in the cross section of the loop.
-      \else
-      \fi
+   \ifsolutions
+   {\bf Answer}: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). a. To keep the flux the same, an induced magnetic field pointing to the left is needed. b. The current in the loop will such that the current on the white part of the ring is upwards.
+   \else
+   a. Direction of induced magnetic field:
 
-2. For each case in your answer to question 1. where there is an induced magnetic field, find the direction of the current in the loop.
+   b. Direction of current in loop:
+   \fi
 
-      \ifsolutions
-      {\bf Answer}: Moving to the right: counter--clockwise when viewed from a point to the the left of the loop.
-      
-      Moving to the left: clockwise when viewed from a point to the the left of the loop.
-      \else
-      \fi
+3. The loop is moving to the left.
+
+   \ifsolutions
+   {\bf Answer}: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). a. To keep the flux the same, an induced magnetic field pointing to the right will appear in the cross section of the loop. b. The current in the loop will such that the current on the white part of the ring is downwards.
+   \else
+   a. Direction of induced magnetic field:
+
+   b. Direction of current in loop:
+   \fi
 
 ###
 
@@ -200,13 +206,10 @@ For conducting loops A--D that are moving with a velocity in the direction shown
    D. Induced field is into page. Current is clockwise.
    \else
    \fi
+
 # $A$ Changing
 
-If the magnetic field is constant and out of the page and the area of the loop changes, draw the loop with a uniformly spaced dots inside and outside of it. Next draw the loop after the area has changed. If there are more dots in the area, an induced field, represented with crosses, will into the page will be needed to "kill off" the extra dots. If there are fewer dots in the area, an induced field out of the page will be needed to replace the lost dots. (If the magnetic field is constant and into the page, swap "dots" and "crosses" in this perscription.)
-
-<img src="figures/Field_out_of_Page_Area_Increasing.svg"/>
-
-**Example**
+## Example
 
 A spatially uniform external magnetic field points out of the page and it is not changing with time.
 
@@ -214,18 +217,23 @@ The conducting loop is heated causing the gray cross--sectional area to increase
 
 <img src="figures/Single_Loop_I.svg"/>
 
+<img src="figures/Field_out_of_Page_Area_Increasing.svg"/>
+
 1. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux?
 
 2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
 {\bf Answer}:
 
+To determine the direction of the induced magnetic field, we draw field lines at $t=0$. A short time later, at $t=\Delta t$, the area of the loop has increased an more field lines that are pointing out of the page pass through the area. In order to keep the total flux through the loop as it was at $t=0$, we need the induced field to cancel the added field lines. As shown, this induced field must be into the page.
+
+Finally, we ask what direction of induced current in the loop creates this direction of $B_{\text{ind}}$. Using the current loop right--hand rule, it is a clockwise current.
+
 1. Into the page.
 
 2. A clockwise current creates a magnetic field into the page.
 
-
-## Changing Area I
+## 
 
 An external magnetic field points into the page and it is not changing with time.
 
@@ -233,9 +241,18 @@ The conducting loop is cooled causing the gray cross--sectional area to decrease
 
 <img src="figures/Single_Loop_II.svg"/>
 
-1. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux through the loop?
+1. Draw representitive field lines at $t=0$ and $t=\Delta t$ as done in the example.
 
-2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
+   \ifsolutions
+   <img src="figures/Field_Into_Page_Field_Decreasing_Sketch.svg">
+   \else
+   \vspace{6em}
+   \fi
+
+2. What direction would an induced magnetic field have to be to oppose the change in the magnetic flux through the loop?
+
+
+3. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
    \ifsolutions
    {\bf Answer}:
@@ -245,7 +262,7 @@ The conducting loop is cooled causing the gray cross--sectional area to decrease
    \else
    \fi
 
-## Changing Area II
+##
 
 A conducting bar slides along a U-shaped conducting wire as shown in a region of space where an external magnetic field is spatially uniform. (This is known as a "slidewire generator").
 
