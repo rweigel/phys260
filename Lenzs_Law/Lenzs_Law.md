@@ -47,7 +47,7 @@ Here, we'll use a longer but more descriptive definition.
 
 {\bf Lenz’s Law alternative}: When the magnetic flux due to an external source of a magnetic field through a conducting loop changes, a current appears (is induced) in the loop. The induced current creates an induced magnetic field. The direction of the induced current is such that the induced magnetic field opposes the change in flux.
 
-In the examples given, we will first find the direction of the induced magnetic field that needed to oppose a change in flux due to an external source of a magnetic field. Then, we will ask what direction of the induced current is consistent with this induced magnetic field using the current loop right--hand rule, which is described in the next section.
+In the examples given, we will first find the direction of the induced magnetic field needed to oppose a change in flux due to an external source of a magnetic field. Then, we will ask what direction of the induced current is consistent with this induced magnetic field using the current loop right--hand rule, which is described in the next section.
 
 (Lenz's law follows from Faraday's law. In principle, Faraday's law, with careful attention paid to signs, can be used to determine the direction of induced current, in which case Lenz's law is not needed. In a similar way that using the right--hand rules to determine the general direction for force can be used to check your math on a cross--product, Lenz's Law provides a check on the direction of the induced current when using Faraday's law.)
 
@@ -65,7 +65,7 @@ Given a loop of current in a plane, one can determine the direction of its magne
 
 ## Example
 
-A spatially uniform external magnetic field points out of the page, and its magnitude is increasing in time.
+A spatially uniform external magnetic field points out of the page, and its magnitude increases over time.
 
 <img src="figures/Field_Out_Of_Page.svg"/>
 
@@ -77,7 +77,7 @@ A spatially uniform external magnetic field points out of the page, and its magn
 
 To determine the direction of the induced magnetic field, we draw field lines through the area at $t=0$ and then a short time later. On the left--hand side of the following figure, field lines are shown pointing out of the page. A short time later, at $t=\Delta t$, $B_{\text{ext}}$ has increased, so we draw more field lines pointing out of the page.
 
-The induced magnetic field is in the direction that opposes the change in magnetic flux, so the induced field must be into the page. (The induced magnetic flux will not exactly cancel the increase in flux; the magnitude of the induced magnetic flux will depend on how much current is induced, which depends on the resistance of the wires.)
+The induced magnetic field is in the direction that opposes the change in magnetic flux, so the induced field must be in to the page. (The induced magnetic flux will not exactly cancel the increase in flux; the magnitude of the induced magnetic flux will depend on how much current is induced, which depends on the resistance of the wires.)
 
 Finally, we ask what direction of induced current is consistent with a $B_{\text{ind}}$ directed into the page. Using the current loop right--hand rule, it is a clockwise current.
 
@@ -89,7 +89,7 @@ Finally, we ask what direction of induced current is consistent with a $B_{\text
 
 ###
 
-A spatially uniform external magnetic field points into the page, and its magnitude is increasing in time.
+A spatially uniform external magnetic field points into the page, and its magnitude increases over time.
 
 <img src="figures/Field_In_To_Page.svg" width="38%">
 
@@ -112,7 +112,6 @@ A spatially uniform external magnetic field points into the page, and its magnit
    \ifsolutions
    {\bf Answer}: Counterclockwise
    \else
-   \newpage
    \fi
 
 ###
@@ -140,6 +139,7 @@ A spatially uniform external magnetic field points into the page, and its magnit
    \ifsolutions
    {\bf Answer}: Clockwise
    \else
+   \newpage
    \fi
 
 ###
@@ -157,7 +157,7 @@ For the following case, determine if an induced magnetic field will appear and, 
    \else
    a. Direction of induced magnetic field:
 
-   b. Direction of current in loop:
+   b. Direction of current in the loop:
 
    \fi
 
@@ -174,11 +174,11 @@ For the following case, determine if an induced magnetic field will appear and, 
 3. The loop is moving to the left.
 
    \ifsolutions
-   {\bf Answer}: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). a. To  oppose the change in flux, an induced magnetic field pointing to the right is needed. b. The current in the loop is such that the current on the white part of the ring is downwards.
+   {\bf Answer}: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). a. To oppose the change in flux, an induced magnetic field pointing to the right is needed. b. The current in the loop is such that the current on the white part of the ring is downwards.
    \else
    a. Direction of induced magnetic field:
 
-   b. Direction of current in loop:
+   b. Direction of current in the loop:
    \fi
 
 ###
@@ -207,9 +207,9 @@ For conducting loops A--D that are moving with a velocity in the direction shown
 
 ##
 
-A spatially uniform external magnetic field points out of the page and it is not changing with time. The conducting loop is heated causing the gray cross--sectional area to increase with time.
+A spatially uniform external magnetic field points out of the page, and it does not change with time. The conducting loop is heated, causing the gray cross--sectional area to increase with time.
 
-1. Draw representitive field lines at $t=0$ and $t=\Delta t$.
+1. Draw representative field lines at $t=0$ and $t=\Delta t$.
 
    \ifsolutions
    \else
@@ -234,7 +234,7 @@ A spatially uniform external magnetic field points out of the page and it is not
 
 An external magnetic field points into the page and it is not changing with time. The conducting loop is cooled causing the gray cross--sectional area to decrease with time.
 
-1. Draw representitive field lines at $t=0$ and $t=\Delta t$.
+1. Draw representative field lines at $t=0$ and $t=\Delta t$.
 
    \ifsolutions
    \else
