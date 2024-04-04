@@ -14,9 +14,9 @@ Figure (a) below shows a circuit in which an AC power source causes the current 
 
 Figure (b) shows the current and voltage. The voltage and current are "in phase" because the peaks, valleys, and zero crossings in the plots of $i(t)$ and $v_R(t)$ occur at the same time.
 
-<img src="figures/31_07_FigureA.png" width="50%">
+<img src="figures/31_07_FigureA.png" width="45%">
 
-<img src="figures/31_07_FigureB.png" width="50%">
+<img src="figures/31_07_FigureB.png" width="45%">
 
 ## L Only
 
@@ -31,6 +31,8 @@ Figure (b) shows the $v(t)$ and $i(t)$. The voltage across the inductor "leads" 
 <img src="figures/31_08_FigureA.png" width="50%">
 
 <img src="figures/31_08_FigureB.png" width="50%">
+
+\newpage
 
 ## C Only
 
@@ -79,6 +81,8 @@ v(t)=IR\cos(\omega t)+IX_L\cos(\omega t + 90^\circ)+IX_C\cos(\omega t - 90^\circ
 $$
 
 In this activity, you will compute $v(t)$ in two ways. First, you will use the above formula and a trig identity to write $v(t)$ in the form $IZ\cos(\omega t+\phi)$, where the constants $Z$ and $\phi$ depend on $R$, $L$, and $C$ (or equivalently, $R$, $X_L$, and $X_C$). Next, you will use a general formula to compute $Z$ and $\phi$.
+
+\newpage
 
 # Problem I
 
@@ -161,7 +165,9 @@ Plot all quantites on the same graph.
    \else
    \fi
 
-## Problem II
+\newpage
+
+# Problem II
 
 In the previous problem, computing $v(t)$ required the use of a trig identity to combine $v_R$ and $v_L$ and write $v(t)$ in the form $v(t)=Z\cos(\omega t + \phi)$, where $Z$ and $\phi$ are constants that depend on $L$ and $R$. When $v_C$ is not zero, additional algebra is needed to compute $v(t)$ (by using the trig identity again). However, there is formula that can be used to find $v(t)$ in general so that trig identities are not needed to compute $v(t)$.
 

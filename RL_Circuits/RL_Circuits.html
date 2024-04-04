@@ -1,0 +1,1159 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LR Circuits</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
+  <style>
+    #toc>ol ol {
+      display: none
+    }
+
+    body {
+      background-image: url("https://rweigel.github.io/biedit/img/paper.png")
+    }
+
+    .body {
+      display: flex;
+      min-width: 50%;
+      max-height: 100%;
+      position: absolute;
+      background-image: url("https://rweigel.github.io/biedit/img/paper.png");
+    }
+
+    #toc {
+      flex: 0 1 auto;
+      margin-top: 0em;
+      margin-right: 1em;
+      max-width: 12em;
+      overflow: hidden auto;
+    }
+
+    #toc .toctext {
+      color: darkblue;
+    }
+
+    #toc .toctext-empty {
+      min-width: 1em;
+      border-bottom: 1px solid blue;
+    }
+
+    #toc ol {
+      margin: 0.25em 0em 0em 0.5em;
+      list-style-type: decimal;
+      padding-inline-start: 1em;
+    }
+
+    #toc a {
+      text-decoration: none;
+    }
+
+    #display {
+      flex: 1 1 80%;
+      overflow: hidden auto;
+      overflow-wrap: break-word;
+    }
+
+    #display .abstract {
+      text-align: center;
+      font-size: 100%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display .title {
+      text-align: center;
+      font-size: 150%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+
+    #display .subtitle {
+      text-align: center;
+      font-size: 120%;
+      font-weight: bold;
+      color: black;
+      margin-top: 0.2em;
+    }
+
+    #display .date {
+      text-align: right;
+      color: black;
+    }
+
+    #display .block {
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+    #display .block>.comment {
+      display: none;
+    }
+
+    #display .hr {
+      width: 100%;
+      height: 1px;
+      display: block;
+      margin: 0.5em;
+      border-top: 1px solid black;
+    }
+
+    #display a {
+      text-decoration-line: none;
+      text-decoration-color: black;
+      color: darkblue;
+    }
+
+    #display a.broken-internal-link {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 2px;
+      text-decoration-color: red;
+    }
+
+    #display span.broken-internal-link {
+      font-size: 0.75em;
+      color: red;
+    }
+
+    #display a:focus-visible {
+      outline: none;
+      background-color: yellow;
+    }
+
+    #display p {
+      width: 100%;
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display pre {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display h1 {
+      color: darkblue;
+      border-bottom: 2px solid darkblue;
+    }
+
+    #display h2 {
+      border-bottom: 1px solid black;
+    }
+
+    #display h3 {
+      border-bottom: 1px dotted black;
+    }
+
+    #display img {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      max-width: 100%;
+    }
+
+    figure {
+      display: block;
+      margin-block: 0em;
+      margin-inline: 0px;
+    }
+
+    details>summary {
+      font-weight: bold;
+    }
+
+    details {
+      padding-left: 0.5em;
+    }
+
+    details[open] {
+      border: 1px solid black;
+      padding: 0em 0em 0em 0.5em;
+    }
+
+    table {
+      padding: 0px;
+      display: block;
+      width: 100%;
+    }
+
+    table tr {
+      border-top: 1px solid rgb(204, 204, 204);
+      background-color: white;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table tr:nth-child(2n) {
+      background-color: rgb(248, 248, 248);
+    }
+
+    table tr th {
+      font-weight: bold;
+      border: 1px solid rgb(204, 204, 204);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr td {
+      border: 1px solid rgb(204, 204, 204);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr th :first-child,
+    table tr td :first-child {
+      margin-top: 0px;
+    }
+
+    table tr th :last-child,
+    table tr td :last-child {
+      margin-bottom: 0px;
+    }
+
+    #display code {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-radius: 0px;
+      white-space: pre-wrap;
+    }
+
+    #display code~.line-number {
+      margin-top: 3px;
+      margin-right: 3px;
+    }
+
+    #display pre {
+      width: 100%;
+      text-indent: 0.75em;
+      margin: 0.5em 0px;
+      white-space: pre-wrap;
+      border-left: 3px solid black;
+      background-color: rgba(0, 0, 0, 0.03);
+      line-height: 1.25;
+      overflow-x: clip;
+    }
+
+    #display pre code {
+      background-color: rgba(0, 0, 0, 0);
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display pre.language-python {}
+
+    #display li>div {
+      display: flex;
+    }
+
+    #display li {
+      min-height: 1em;
+      width: 100%;
+    }
+
+    #display ul {
+      width: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      padding-left: 0.35em;
+    }
+
+    #display ul.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol {
+      width: 100%;
+      margin-left: 1em;
+      padding-left: 0.5em;
+    }
+
+    #display>.section>.block &>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display>.section>.block>ol.loose {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    #display>.section>.block>ol.compact {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ol.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.compact p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    #display ul.loose p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    .inline-html .block .block-info {
+      display: none;
+    }
+
+    .inline-html {
+      width: 100%;
+    }
+
+    .section>.block ol~.block-info {}
+
+    .section>.block ul~.block-info {}
+
+    .section>.block pre~.block-info {}
+
+    .section>.block code~.block-info {}
+
+    pre .block-info {
+      font-size: 8px;
+      text-align: right;
+      text-indent: 0px;
+    }
+
+    .block-info {
+      text-align: right;
+      width: 24px;
+      font-family: monospace;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+      font-size: 8px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .blockquote {
+      width: 100%;
+      display: block;
+      margin: 1em;
+      border: 1px solid black;
+      padding: 1em;
+      border-radius: 0.5em;
+    }
+
+    .inline {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .latex-underline {
+      text-decoration: underline;
+    }
+
+    .katex {
+      font-size: inherit !important;
+    }
+
+    .katex-display {
+      text-align: center;
+      margin: 0em;
+      font-size: 1em !important;
+    }
+
+    .katex-display.fleqn>.katex {
+      padding-left: 0em;
+      margin: 0em;
+    }
+
+    .katex-warning {
+      border-right: 0.5em solid red;
+    }
+
+    .katex-error-expression {}
+
+    .katex-error-message {
+      color: red;
+    }
+
+    .page-break {
+      break-after: page;
+      width: 100%;
+      font-size: 0px;
+      border-top: 1px dotted black;
+    }
+
+    .solutionsfalse {
+      display: none;
+    }
+
+    .solutionstrue {
+      display: block;
+    }
+
+    @media print {
+      * {
+        overflow: visible !important;
+      }
+
+      @page {
+        size: auto;
+        margin: 0.5in 0.75in 0.75in;
+      }
+
+      body,
+      html {
+        margin: 0px;
+        padding: 0px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        overflow: auto;
+        display: inline;
+      }
+
+      .page-break {
+        border-top: none;
+      }
+
+      .body {
+        display: inline;
+        position: relative;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        width: 100%;
+        margin-block: 0.1em;
+      }
+
+      h1 {
+        font-size: 1.25em;
+        color: black;
+        border-bottom: 2px solid black;
+      }
+
+      h2 {
+        font-size: 1.15em;
+        border-bottom: 1px solid black;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+
+      h4,
+      h5,
+      h6 {
+        font-size: 1.05em;
+      }
+
+      .md-toc {
+        break-inside: avoid;
+        font-size: 14px;
+      }
+
+      pre {
+        break-inside: avoid;
+      }
+
+      p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      #toc {
+        display: none;
+        font-size: 100%;
+        margin: 0px;
+        width: 100%;
+        overflow-y: hidden;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      #display {
+        margin-left: 0em;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        border: none;
+        overflow-wrap: break-word;
+      }
+
+      .katex .hide-tail {
+        overflow: hidden !important;
+      }
+
+      .katex {
+        font: 1em / 1.1 KaTeX_Main, "Times New Roman", serif;
+        white-space: nowrap;
+        text-indent: 0px;
+        text-rendering: auto;
+      }
+
+      .katex-display {
+        margin-top: 0px !important;
+        font-size: 1em !important;
+      }
+    }
+  </style>
+  <script>
+    function tocClickListen() {
+      let hs = document.querySelectorAll('#toc > ol ol');
+      let el, ns;
+      for (let i = 0; i < hs.length; i++) {
+        if (hs[i].previousElementSibling) {
+          el = hs[i].previousElementSibling.firstElementChild;
+          if (el.length == 0) {
+            continue;
+          }
+          el.addEventListener('click', event => {
+            ns = event.target.parentNode.nextElementSibling;
+            if (!ns) return;
+            if (ns.style.display === 'none') {
+    ns.style.display = 'block';
+            } else
+            {
+    ns.style.display = 'none';}
+          });
+        }
+      }
+    }
+    if (
+        document.readyState === "complete" ||
+        (document.readyState !== "loading" && 
+          !document.documentElement.doScroll)
+    ) {
+      tocClickListen();
+    } else {
+      document.addEventListener("DOMContentLoaded", tocClickListen);
+    }
+  </script>
+</head>
+
+<body class="body">
+  <div id="toc" style="min-width: 5em;">
+    <ol>
+      <li>
+        <a href="#introduction" raw="# Introduction" lo="5">
+          <span class="toctext">Introduction</span>
+        </a>
+      </li>
+      <li>
+        <a href="#problem-i" raw="# Problem I" lo="47">
+          <span class="toctext">Problem I</span>
+        </a>
+      </li>
+      <li>
+        <a href="#problem-ii" raw="# Problem II" lo="98">
+          <span class="toctext">Problem II</span>
+        </a>
+      </li>
+      <li>
+        <a href="#problem-iii" raw="# Problem III" lo="181" class="highlighted">
+          <span class="toctext">Problem III</span>
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div id="display">
+    <div class="section">
+      <div class="block">
+        <p padlength="0" lo="2" lf="2" class="title">LR Circuits</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">2</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="5" lf="5"><a name="introduction" number="1" lo="5" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="7" lf="7">
+          <img src="figures/LR_Series.svg">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="9" lf="9">The above figure shows a LR series circuit consisting of an inductor of inductance <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> connected in series with a resistor of resistance <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. The switch, <span len="3" raw="_S_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span>, is closed at a time <span len="7" raw="_t = 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> and then remains closed.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="11" lf="11">Using Kirchhoff’s voltage law around the loop, we have</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="13" lf="15"><span len="49" raw="__
+V_s - I(t) \cdot R - L \frac{dI(t)}{dt} = 0
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord mathnormal">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">13-15</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="17" lf="17">The term <span len="20" raw="_\ds L\frac{dI}{dt}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord mathnormal">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> is called the induced emf.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">17</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="19" lf="19">The above differential equation can be solved for <span len="6" raw="_I(t)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span>, the current at any time given the initial value of <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, which is zero. The result is</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">19</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="21" lf="23"><span len="51" raw="__
+I(t)=\frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">21-23</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="25" lf="25">After a long time, the current approaches a constant value of <span len="11" raw="_I = V_s/R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> because the exponential term approaches zero and so there is effectively no time dependence in <span len="6" raw="_I(t)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span>. How quickly the exponential term approaches zero depends on a quantity called the LR time constant defined by</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">25</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="27" lf="27"><span len="14" raw="__\tau = L/R__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">27</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="29" lf="29">which has units of seconds when <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> is in Henrys and <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> is in Ohms. With this, we can write</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">29</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="31" lf="33"><span len="52" raw="__
+I(t) = \frac{V_s}{R}\left(1-e^{-t/\tau}\right)
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">31-33</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="35" lf="35">In this equation, at <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, the current is</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">35</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="37" lf="39"><span len="72" raw="__
+I(0) = (V_s/R)\left(1-e^{-0/\tau}\right)=(V_s/R)\left(1-1\right)=0
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8em;vertical-align:-0.65em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">0/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">37-39</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="41" lf="41">As a result, we state that initially the inductor behaves like an open circuit because current does not flow though it.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">41</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="43" lf="43">For large <span len="8" raw="_t/\tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>, the exponential term becomes much smaller than one and so the current becomes a constant value of <span len="7" raw="_V_s/R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. If we replace the inductor with a wire, this is the same current that we would find. As a result, we state that after a long time, the inductor behaves like a resistanceless wire.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="45" lf="45">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="47" lf="47"><a name="problem-i" number="2" lo="47" raw="# Problem I" class="anchor hanchor" href="#problem-i"><span class="hnumber">2</span>&nbsp;<span class="htext">Problem I</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">47</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="49" lf="49">
+          <img src="figures/I_vs_t.svg">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">49</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="51" lf="51">In this problem, you will consider the equation</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">51</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="53" lf="53"><span len="50" raw="__I(t) = \frac{V_s}{R}\left(1-e^{-t/\tau}\right)__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">53</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="55" lf="55">that was described in the introduction.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">55</span></div>
+      </div>
+      <div class="block">
+        <ol lo="57" lf="94" class="loose">
+          <li markerlength="3" padlength="0" lo="57" lf="58">
+            <div class="block">
+              <p padlength="0" lo="57" lf="58">If <span len="19" raw="_V_s/R=10\text{ A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>, plot dots for the values of <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> at <span len="27" raw="_t=0, 2, 4, 6, 12\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">12</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span> with <span len="25" raw="_L/R = \tau = 2\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span> </p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">57-58</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="59" lf="66">
+            <div class="block">
+              <p padlength="0" lo="59" lf="60">Based on the equation, at <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> does an inductor behave like an open circuit or a wire?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">59-60</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="61" lf="64">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: At <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> the current will be <span len="3" raw="_0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> with the inductor acting like a break in the circuit with no current flowing.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{1em}" style="height:1em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">61-64</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="67" lf="74">
+            <div class="block">
+              <p padlength="0" lo="67" lf="68">Based on the equation, at <span len="11" raw="_t\gg \tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6542em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≫</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span> does an inductor behave like an open circuit or a wire?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">67-68</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="69" lf="72">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: At <span len="12" raw="_t \gg \tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6542em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≫</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span> the current will be <span len="7" raw="_V_s/R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> with the inductor acting like a wire – the circuit behaves as it would if there were no inductor in it.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{2em}" style="height:2em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">69-72</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="75" lf="88">
+            <div class="block">
+              <p padlength="0" lo="75" lf="76">If <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> doubles but <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> remains constant</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">75-76</span></div>
+            </div>
+            <div class="block">
+              <p padlength="0" lo="77" lf="77">a. does the time constant <span len="6" raw="_\tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span> increase, decrease, or remain the same?;</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">77</span></div>
+            </div>
+            <div class="block">
+              <p padlength="0" lo="79" lf="79">b. how will the points that you drew for part 1. change? (Will they move up, down, or remain the same?) </p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">79</span></div>
+            </div>
+            <div class="block">
+              <p padlength="0" lo="81" lf="81">c. Does your answer to b. make sense physically? That is, an inductor tends to impede changes in current and so is your answer to b. consistent with this? </p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">81</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="83" lf="86">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: If <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> increases, the inductor provides more resistance to change from its initial state, which is <span len="5" raw="_I=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>. Thus we expect the current to take longer to reach its final state. All of the points (except for <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> will move downward).</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{4em}" style="height:4em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">83-86</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="89" lf="96">
+            <div class="block">
+              <p padlength="0" lo="89" lf="90">The voltage across the inductor is <span len="8" raw="_LdI/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span>. Compute <span len="7" raw="_dI/dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span> and sketch its curve on the graph above. Is this equation consistent with the statement that for large <span len="8" raw="_t/\tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>, the voltage across the inductor is zero?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">89-90</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="91" lf="94">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="1"><strong raw="{\bf Answer:}" markerlength="4"> Answer:</strong> <span len="26" raw="_LdI/dt = -V_se^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.038em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span>. Yes. The voltage across the inductor is <span len="17" raw="_-V_se^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.038em;vertical-align:-0.15em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> and for large <span len="8" raw="_t/\tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>, <span len="13" raw="_e^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> is near zero.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">91-94</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">57-94</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="96" lf="96">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="98" lf="98"><a name="problem-ii" number="3" lo="98" raw="# Problem II" class="anchor hanchor" href="#problem-ii"><span class="hnumber">3</span>&nbsp;<span class="htext">Problem II</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">98</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="100" lf="100">An inductor with an inductance of <span len="14" raw="_40\text{ mH}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">40</span><span class="mord text"><span class="mord">&nbsp;mH</span></span></span></span></span> and a resistor with a resistance of <span len="17" raw="_2\text{ }\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span> are connected together to form a LR series circuit. If they are connected to a <span len="13" raw="_20\text{ V}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;V</span></span></span></span></span> DC voltage source,</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">100</span></div>
+      </div>
+      <div class="block">
+        <ol lo="102" lf="177" class="loose">
+          <li markerlength="3" padlength="0" lo="102" lf="113">
+            <div class="block">
+              <p padlength="0" lo="102" lf="103">What will be the final steady state value of the current (the current after a very long time)?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">102-103</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="104" lf="111">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: At the steady state, the current passing through the inductor is constant, the induced emf becomes 0. Consequently, the voltage drop on the resistor is the same as the total voltage of the DC supply. </p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="61" raw="__
+I = V_s/R=(20\text{ V})/(2\text{ }\Omega) = 10\text{ A}
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;V</span></span><span class="mclose">)</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span></span></p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">104-111</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="114" lf="121">
+            <div class="block">
+              <p padlength="0" lo="114" lf="115">What is the time constant of the RL series circuit?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">114-115</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="116" lf="119">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The time constant is given by <span len="63" raw="_\tau = L/R = (40\text{ mH})/(2\text{ }\Omega) = 20 \text{ ms}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">40</span><span class="mord text"><span class="mord">&nbsp;mH</span></span><span class="mclose">)</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;ms</span></span></span></span></span></p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{2em}" style="height:2em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">116-119</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="122" lf="147">
+            <div class="block">
+              <p padlength="0" lo="122" lf="123">How long does it takes for the current to reach 63% of its maximum value?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">122-123</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="124" lf="145">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The current in the circuit is expressed as:</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="53" raw="__
+I(t)=  \frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">The maximum current value is <span len="11" raw="_I_0=V_s/R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>. Therefore,</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="55" raw="__
+\frac{I(t)}{I_0} = 1-e^{-t/(L/R)} = 1-e^{-t/\tau}
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.263em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.938em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.938em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">When <span len="16" raw="_I(t)/I_0 =0.63_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.63</span></span></span></span> and <span len="27" raw="_\tau = L/R = 40\text{ ms}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">40</span><span class="mord text"><span class="mord">&nbsp;ms</span></span></span></span></span>:</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="68" raw="__0.63 = 1-e^{-t/\tau}\Rightarrow\quad e^{-t/\tau} = 1-0.63 = 0.37__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.63</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.938em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.938em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.63</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.37</span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="74" raw="__-t/\tau = \ln(0.37) = -0.9943\quad\Rightarrow\quad t = 19.89\text{ ms}__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal">t</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">ln</span><span class="mopen">(</span><span class="mord">0.37</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">0.9943</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">19.89</span><span class="mord text"><span class="mord">&nbsp;ms</span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">It takes roughly <span len="14" raw="_20\text{ ms}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;ms</span></span></span></span></span> (<span len="13" raw="_\simeq \tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4637em;"></span><span class="mrel">≃</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>) to reach <span len="4" raw="_63_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">63</span></span></span></span>% of the maximum current value. (So <span len="6" raw="_0.63_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.63</span></span></span></span> is a special number for an LR circuit – at <span len="8" raw="_t=\tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>, the current is <span len="6" raw="_0.63_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.63</span></span></span></span> of its maximum value.)</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{5em}" style="height:5em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">124-145</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="148" lf="165">
+            <div class="block">
+              <p padlength="0" lo="148" lf="149">What will be the value of the induced emf after <span len="14" raw="_10\text{ ms}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;ms</span></span></span></span></span>?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">148-149</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="150" lf="163">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: After 10 ms, the current is calculated as:</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="147" raw="__
+I(t) = \frac{V_s}{R}(1-e^{-t/(L/R)}) = \frac{20 \text{ V}}{2\text{ }\Omega} \left(1-e^{-(10\text{ ms})/(20\text{ ms})}\right) = 3.9\text{ A} 
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.188em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;V</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mopen mtight">(</span><span class="mord mtight">10</span><span class="mord text mtight"><span class="mord mtight">&nbsp;ms</span></span><span class="mclose mtight">)</span><span class="mord mtight">/</span><span class="mopen mtight">(</span><span class="mord mtight">20</span><span class="mord text mtight"><span class="mord mtight">&nbsp;ms</span></span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">3.9</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">The induced emf is:</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="85" raw="__
+\text{emf} = V_s - IR= 20\text{ V} - 3.9\text{ A} \cdot 2~\Omega=12.2\text{ V} 
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">emf</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">20</span><span class="mord text"><span class="mord">&nbsp;V</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">3.9</span><span class="mord text"><span class="mord">&nbsp;A</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2</span><span class="mspace nobreak">&nbsp;</span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">12.2</span><span class="mord text"><span class="mord">&nbsp;V</span></span></span></span></span></span></p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">150-163</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="166" lf="179">
+            <div class="block">
+              <p padlength="0" lo="166" lf="167">What will be the value of the circuit current one time constant (that is, at <span len="8" raw="_t=\tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>) after the switch is closed?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">166-167</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="168" lf="177">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: At time <span len="10" raw="_t = \tau_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span>,</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="79" raw="__
+I(t) =  \frac{V_s}{R} (1-e^{-t/\tau})=10 \times (1-0.368) = 6.32\text{ A}
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.188em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.368</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">6.32</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">This question is related to question 3. In the answer to question 3., it was found that it takes approximately one time constant to reach <span len="4" raw="_63_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">63</span></span></span></span>% of the maximum value. So in this problem we expect that the answer to be approximately <span len="4" raw="_63_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">63</span></span></span></span>% of the final value.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">168-177</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">102-177</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="179" lf="179">
+          <div class="newpage">
+            <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1 lo="181" lf="181" class="highlighted"><a name="problem-iii" number="4" lo="181" raw="# Problem III" class="anchor hanchor" href="#problem-iii"><span class="hnumber">4</span>&nbsp;<span class="htext">Problem III</span></a></h1>
+        <div class="block-info" style="display: none;"><span class="line-numbers">181</span></div>
+      </div>
+      <div class="block">
+        <div class="inline-html" lo="183" lf="183">
+          <img src="figures/LR_Two_Switches.svg">
+        </div>
+        <div class="block-info" style="display: none;"><span class="line-numbers">183</span></div>
+      </div>
+      <div class="block">
+        <p padlength="0" lo="185" lf="185">In the circuit above, an inductor with <span len="16" raw="_L=10\text{ mH}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;mH</span></span></span></span></span> and a resistor with <span len="19" raw="_R=1\text{ }\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span> is connected as shown. The battery has an emf of <span len="13" raw="_10\text{ V}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;V</span></span></span></span></span>. At <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, the switch <span len="5" raw="_S_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is closed.</p>
+        <div class="block-info" style="display: none;"><span class="line-numbers">185</span></div>
+      </div>
+      <div class="block">
+        <ol lo="188" lf="241" class="loose">
+          <li markerlength="3" padlength="0" lo="188" lf="194" class="">
+            <div class="block">
+              <p padlength="0" lo="188" lf="189" class="">What is the current through the resistor at <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">188-189</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="190" lf="192">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Zero. There is no closed path for current to flow. \vspace{1em}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">190-192</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="195" lf="202" class="">
+            <div class="block">
+              <p padlength="0" lo="195" lf="196" class="">What is the current through the inductor at <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">195-196</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="197" lf="200">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Zero. There is no closed path for current to flow.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{1em}" style="height:1em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">197-200</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="203" lf="216" class="">
+            <div class="block">
+              <p padlength="0" lo="203" lf="204" class="">After a long time, what will the current be through the resistor and inductor?</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">203-204</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="205" lf="214">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: The current in the circuit as a function of time is</p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0"><span len="53" raw="__
+I(t)=  \frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
+__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">L</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p padlength="0">For large <span len="3" raw="_t_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span>, the exponential term is near zero, leaving <span len="36" raw="_V_s/R=10\text{ V}/1 \text{ }\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;V</span></span><span class="mord">/1</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span> = <span len="13" raw="_10\text{ A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">205-214</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="217" lf="224" class="">
+            <div class="block">
+              <p padlength="0" lo="217" lf="218" class="">After a long time, switch <span len="5" raw="_S_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is opened and <span len="5" raw="_S_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is closed simultaneously. Write Kirchhoff’s voltage law around the new closed loop.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">217-218</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html active" lo="219" lf="222">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: <span len="37" raw="_\ds -I(t) R - L\frac{dI(t)}{dt} = 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord mathnormal">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{3em}" style="height:3em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">219-222</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="225" lf="238" class="">
+            <div class="block">
+              <p padlength="0" lo="225" lf="226" class="">Show that the equation <span len="31" raw="_I(t)=(10\text{ A})e^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;A</span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> satisfies the equation in your answer to the previous question.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">225-226</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="227" lf="236">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p padlength="0"><strong raw="{\bf Answer}" markerlength="4"> Answer</strong>: Starting with <span len="40" raw="_-I(t) \cdot R - L \frac{dI(t)}{dt} = 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord mathnormal">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> and using <span len="17" raw="_I=10e^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord">10</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span> and <span len="38" raw="_d e^{t/\tau}/dt=(1/\tau) e^{-t/\tau}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1/</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span></span></span></span>, we have <span len="88" raw="_-(10\text{ A})e^{-t/\tau} \cdot (1\text{ }\Omega) - (10\text{ mH}/\tau)e^{-t/\tau} = 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;A</span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;mH</span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>. Using <span len="12" raw="_\tau = L/R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span> one arrives at <span len="58" raw="_-(10\text{ V})e^{-t/\tau} - (10\text{ V})e^{-t/\tau} = 0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;V</span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;V</span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.1132em;">τ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" raw="\vspace{5em}" style="height:5em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">227-236</span></div>
+            </div>
+          </li>
+          <li markerlength="3" padlength="0" lo="239" lf="241" class="">
+            <div class="block">
+              <p padlength="0" lo="239" lf="240" class="">Plot <span len="6" raw="_I(t)_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span> from <span len="5" raw="_t=0_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> to <span len="17" raw="_t=0.01\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.01</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span>. Assume that the switch <span len="5" raw="_S_1_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> was opened and switch <span len="5" raw="_S_2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> was closed at <span len="18" raw="_t=0.005\text{ s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.005</span><span class="mord text"><span class="mord">&nbsp;s</span></span></span></span></span>.</p>
+              <div class="block-info" style="display: none;"><span class="line-numbers">239-240</span></div>
+            </div>
+            <div class="block">
+              <div class="inline-html" lo="241" lf="240">
+                <img src="figures/I_vs_t.svg">
+              </div>
+              <div class="block-info" style="display: none;"><span class="line-numbers">241-240</span></div>
+            </div>
+          </li>
+        </ol>
+        <div class="block-info" style="display: none;"><span class="line-numbers">188-241</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

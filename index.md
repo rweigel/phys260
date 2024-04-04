@@ -427,6 +427,18 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## Lenz's Law
 
+* Activity - Magnetic Flux
+  * Documents:
+| [pdf](Lenzs_Law/Lenzs_Law.pdf)
+| [pdf solns](Lenzs_Law/Lenzs_Law-solutions.pdf)
+| [html](Lenzs_Law/Lenzs_Law.html)
+|
+* Source:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Lenzs_Law)
+| [Markdown](Lenzs_Law/Lenzs_Law.md)
+| 
+
 ## RL Circuits
 
 * Activity - RL Charging and Discharging
@@ -438,7 +450,7 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 * Source:
 | [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
 | [Github](https://github.com/rweigel/phys260/tree/master/RL_Circuits)
-| [Markdown](Magnetic_Flux/RL_Circuits.md)
+| [Markdown](RL_Circuits/RL_Circuits.md)
 | 
 
 ## RLC and AC Circuits
