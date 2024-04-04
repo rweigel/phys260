@@ -14,9 +14,9 @@ Figure (a) below shows a circuit in which an AC power source causes the current 
 
 Figure (b) shows the current and voltage. The voltage and current are "in phase" because the peaks, valleys, and zero crossings in the plots of $i(t)$ and $v_R(t)$ occur at the same time.
 
-<img src="figures/31_07_FigureA.png" width="45%">
+<img src="figures/31_07_FigureA.png" width="300px">
 
-<img src="figures/31_07_FigureB.png" width="45%">
+<img src="figures/31_07_FigureB.png" width="300px">
 
 ## L Only
 
@@ -28,9 +28,9 @@ The term $\omega L$ is called the inductive reactance: $X_L \equiv \omega L$. Wi
 
 Figure (b) shows the $v(t)$ and $i(t)$. The voltage across the inductor "leads" the current by $90^\circ$ (or, equivalently, $T/4$) because the maxima (or minima) in $v_L(t)$ occur before the maxima (or minima) in $i(t)$.
 
-<img src="figures/31_08_FigureA.png" width="50%">
+<img src="figures/31_08_FigureA.png" width="300px">
 
-<img src="figures/31_08_FigureB.png" width="50%">
+<img src="figures/31_08_FigureB.png" width="300px">
 
 \newpage
 
@@ -44,15 +44,17 @@ The term $1/(\omega C)$ is called the capacitive reactance: $X_C \equiv 1/(\omeg
 
 Figure (b) shows the $v(t)$ and $i(t)$. The voltage across the inductor "lags" the current by $90^\circ$ (or, equivalently, $T/4$) because the maxima (or minima) in $v_C(t)$ occur after the maxima (or minima) in $i(t)$.
 
-<img src="figures/31_09_FigureA.png" width="400px">
+<img src="figures/31_09_FigureA.png" width="300px">
 
-<img src="figures/31_09_FigureB.png" width="400px">
+<img src="figures/31_09_FigureB.png" width="300px">
+
+\newpage
 
 ## Series LRC circuit
 
 Suppose that we know the current $i(t)$ in the following series LRC circuit is $i(t)=I\cos(\omega t)$.
 
-<img src="figures/31_13_FigureA.png" width="400px">
+<img src="figures/31_13_FigureA.png" width="300px">
 
 We want to know the voltage across the AC power supply, $v_{d}-v_{a}$, which we call $v$. We know the voltage across each of the components from the discussion above:
 
@@ -82,7 +84,10 @@ $$
 
 In this activity, you will compute $v(t)$ in two ways. First, you will use the above formula and a trig identity to write $v(t)$ in the form $IZ\cos(\omega t+\phi)$, where the constants $Z$ and $\phi$ depend on $R$, $L$, and $C$ (or equivalently, $R$, $X_L$, and $X_C$). Next, you will use a general formula to compute $Z$ and $\phi$.
 
+\ifsolutions
+\else
 \newpage
+\fi
 
 # Problem I
 
@@ -163,9 +168,8 @@ Plot all quantites on the same graph.
    \ifsolutions
    **Answer**: See [Desmos plot](https://www.desmos.com/calculator/klkajsstdc). Try to adjust the parameters $R$, $L$, and $C$ to see how they change the curves (both amplitudes and phases).
    \else
+   \newpage
    \fi
-
-\newpage
 
 # Problem II
 
