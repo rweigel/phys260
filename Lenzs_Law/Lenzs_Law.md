@@ -8,7 +8,7 @@ Title: Lenz's Law
 
 A changing magnetic flux through a closed conducting loop _induces_ the flow of a current in the loop.
 
-In this activity, we will deal with a conducting loop that has a current that is not driven by a battery -- it will be driven by a change in magnetic flux through the loop. This change will _induce_ a current, and this induced current will create what we will refer to as an _induced_ magnetic field.
+In this activity, we will deal with a conducting loop with a current that is not driven by a battery -- it will be driven by a change in magnetic flux through the loop. This change will _induce_ a current, and this induced current will create what we will refer to as an _induced_ magnetic field.
 
 The general equation for magnetic flux is:
 
@@ -25,7 +25,7 @@ or, equivalently, $\Phi_B = BA\cos\phi$, where $\phi$ is the angle between the a
 
 There are three ways in which $\Phi_B$ can change:
 
-1. The magnitude of $\bfvec{B}$ (that is, $B$) can change. To do this, a magnet can be moved closer or farther away from a loop, a loop can be moved closer or farther away from a magnet, or the current that is generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of the creation of a changing magnetic field with an electromagnet.
+1. The magnitude of $\bfvec{B}$ (that is, $B$) can change. To do this, a magnet can be moved closer or farther away from a loop, a loop can be moved closer or farther away from a magnet, or the current generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of creating a changing magnetic field with an electromagnet.
 
 2. The area $A$ can change. To do this, the loop cross--section can be expanded or contracted by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5 in the textbook).
 
@@ -144,13 +144,20 @@ A spatially uniform external magnetic field points into the page, and its magnit
 
 ###
 
-A conducting wire loop is placed in the magnetic field of a solenoid, as shown. Treat the magnetic field of the solenoid as the external magnetic field. Several representative magnetic field lines are shown.
+As shown, a conducting wire loop is placed in the magnetic field of a solenoid. Treat the solenoid's magnetic field as the external magnetic field. Several representative magnetic field lines are shown.
 
-<img src="figures/Ring_and_Solenoid.png"/>
+<img src="figures/Solenoid.svg"/>
 
-For the following case, determine if an induced magnetic field will appear and, if so, its direction. Then, determine the direction of induced current, if any, in the wire loop.
+1. Draw arrows on the magnetic field lines to indicate their direction.
 
-1. The loop is stationary.
+   \ifsolutions
+   {\bf Answer}: To the left. (Because the solenoid is composed of loops of current, the current loop right--hand rule can be used on a solenoid to determine the direction of the field it creates.)
+   \else
+   \fi
+
+For the following cases, determine if an induced magnetic field will appear and, if so, its direction. Then, determine the direction of the induced current, if any, in the wire loop.
+
+2. The loop is stationary.
 
    \ifsolutions
    {\bf Answer}: a. No flux change, so no induced magnetic field. b. No current.
@@ -161,20 +168,23 @@ For the following case, determine if an induced magnetic field will appear and, 
 
    \fi
 
-2. The loop is moving to the right.
+3. The loop is moving to the right.
 
    \ifsolutions
-   {\bf Answer}: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). a. To oppose the change in flux, an induced magnetic field pointing to the left is needed. b. The current in the loop is such that the current on the white part of the ring is upwards.
+   {\bf Answer}: As the loop moves to the right, the magnetic field is larger (field lines are more closely spaced). a. To oppose the change in flux, an induced magnetic field pointing to the left is needed. b. The current in the loop is such that the current on the darker part of the ring is upwards.
+
+   <img src="figures/Solenoid_Solution_Right.svg"/>
+
    \else
    a. Direction of induced magnetic field:
 
    b. Direction of current in loop:
    \fi
 
-3. The loop is moving to the left.
+4. The loop is moving to the left.
 
    \ifsolutions
-   {\bf Answer}: As the loop moves to the left, the magnetic field is smaller (field lines are less closely spaced). a. To oppose the change in flux, an induced magnetic field pointing to the right is needed. b. The current in the loop is such that the current on the white part of the ring is downwards.
+   {\bf Answer}: The magnetic field is smaller to the left of the loop (the field lines are less closely spaced). a. To oppose the change in flux, an induced magnetic field pointing to the right is needed. b. The current in the loop is such that the current on the darker part of the ring is downwards.
    \else
    a. Direction of induced magnetic field:
 
@@ -183,22 +193,20 @@ For the following case, determine if an induced magnetic field will appear and, 
 
 ###
 
-<img src="figures/Loops_in_Wire_Field.svg"/>
+<img src="figures/Loops_in_Wire_Field.svg" width="250px"/>
 
-In the figure above, there is a current $I$ running through a long straight wire as shown.
-
-For conducting loops A--D that are moving with a velocity in the direction shown, determine if the current flow is zero, clockwise, or counterclockwise. Put your answers on the diagram.
+The figure above shows a current $I$ running through a long straight wire as shown. For conducting loops A--D that are moving with a velocity in the direction shown, determine if the current flow is zero, clockwise, or counterclockwise. Put your answers on the diagram.
 
    \ifsolutions
    {\bf Answer}: The field is out of the page above the long straight wire. Below, it is into the page (See section 28.3 of the Textbook). The magnitude of $\bfvec{B}$ is larger near the wire.
 
-   A. Induced field is into page. The current is clockwise.
+   A. The induced field points in to the page. The current is clockwise.
 
    B. No current.
 
    C. No current.
 
-   D. Induced field is out of page. The current is counterclockwise.
+   D. The induced field points out of the page. The current is counterclockwise.
    \else
    \newpage
    \fi
@@ -223,7 +231,7 @@ A spatially uniform external magnetic field points out of the page, and it does 
    \else
    \fi
 
-3. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
+3. What is the direction of the induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
    \ifsolutions
    {\bf Answer}: Clockwise
@@ -232,7 +240,7 @@ A spatially uniform external magnetic field points out of the page, and it does 
 
 ## 
 
-An external magnetic field points into the page and it is not changing with time. The conducting loop is cooled causing the gray cross--sectional area to decrease with time.
+An external magnetic field points into the page, and it does not change with time. The conducting loop is cooled, causing the gray cross--sectional area to decrease with time.
 
 1. Draw representative field lines at $t=0$ and $t=\Delta t$.
 
@@ -248,7 +256,7 @@ An external magnetic field points into the page and it is not changing with time
    \else
    \fi
 
-3. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 2?
+3. What is the direction of the induced current in the loop that is consistent with the induced magnetic field found in part 2?
 
    \ifsolutions
    {\bf Answer}: Clockwise
@@ -269,7 +277,7 @@ In a region of space where an external magnetic field is spatially uniform, a co
    \else
    \fi
 
-2. What is the direction of induced current in the loop that is consistent with the induced magnetic field found in part 1?
+2. What is the direction of the induced current in the loop that is consistent with the induced magnetic field found in part 1?
 
    \ifsolutions
    {\bf Answer}: Clockwise.
