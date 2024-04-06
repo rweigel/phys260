@@ -203,7 +203,7 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    {\bf Answer}: The current in the circuit as a function of time is
 
    $$
-   I(t)=  \frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
+   I(t) =  \frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
    $$
 
    For large $t$, the exponential term is near zero, leaving $V_s/R=10\text{ V}/1 \text{ }\Omega$ = $10\text{ A}$.
@@ -219,20 +219,54 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    \vspace{3em}
    \fi
 
-5. Show that the equation $I(t)=(10\text{ A})e^{-t/\tau}$ satisfies the equation in your answer to the previous question.
+5. Show that the equation $I(t)=I_oe^{-(t-t_o)/\tau}$ satisfies the equation in your answer to the previous question.
 
    \ifsolutions
    {\bf Answer}: Starting with
-   $-I(t) \cdot R - L \frac{dI(t)}{dt} = 0$
-   and using $I=10e^{-t/\tau}$ and $d e^{t/\tau}/dt=(1/\tau) e^{-t/\tau}$,
+
+   $$-I(t) \cdot R - L \frac{dI(t)}{dt} = 0$$
+
+   and using
+   
+   $$I=I_oe^{-(t-t_o)/\tau}$$
+   
+   and
+   
+   $$\frac{d}{dt}\left(e^{-(t-t_o)/\tau}\right) = -\frac{1}{\tau} e^{-(t-t_o)/\tau}$$
+
    we have
-   $-(10\text{ A})e^{-t/\tau} \cdot (1\text{ }\Omega) - (10\text{ mH}/\tau)e^{-t/\tau} = 0$.
+
+   $$-I_oe^{-(t-t_o)/\tau} \cdot (1\text{ }\Omega) + (10\text{ mH}/\tau)e^{-(t-t_o)/\tau} = 0$$
+
    Using $\tau = L/R$ one arrives at
-   $-(10\text{ V})e^{-t/\tau} - (10\text{ V})e^{-t/\tau} = 0$.
+
+   $-I_oe^{-(t-t_o)/\tau} + I_oe^{-(t-t_o)/\tau} = 0$.
    \else
    \vspace{5em}
    \fi
 
-6. If switch $S_1$ was opened and switch $S_2$ was closed at $t=0.005\text{ s}$, plot $I(t)$ from $t=0$ to $t=0.01\text{ s}$.
+6. If switch $S_1$ was opened and switch $S_2$ was closed at $t_o=5\text{ ms}$, plot $I(t)$ from $t=0$ to $t=10\text{ ms}$.
 
-    <img src="figures/I_vs_t.svg">
+   \ifsolutions
+   In the range $t=[0, 5]\text{ ms}$
+
+   $$I(t) = \frac{V_s}{R}\left(1-e^{-t/\tau}\right)$$
+
+   Starting at $t=5\text{ ms}$, the solution is
+   
+   $I(t) = I_o e^{-(t-t_o)/\tau}$
+   
+   To find $I_o$, use the fact that the current is continuous at $t=5\text{ ms}$. From the first equation,
+   
+   $I(5\text{ ms}) = (10\text{ V})\left(1-e^{-5\text{ ms}/10\text{ ms}}\right) \approx 4\text{ V}$
+   
+   and
+   
+   $I(5\text{ ms}) = I_oe^{-(5\text{ ms}-5\text{ ms})/10\text{ ms}} = I_o$
+
+   Thus, $I_o = (10\text{ V})(1-e^{-1/2})\approx 4\text{ V}$
+   
+   <img src="figures/I_vs_t_SolutionIII.svg" width="200px">
+   \else
+   <img src="figures/I_vs_t.svg">
+   \fi
