@@ -1,5 +1,5 @@
 ```mdextension
-Title: LR Circuits
+Title: RL Circuits
 ```
 
 # Introduction
