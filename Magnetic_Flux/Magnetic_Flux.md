@@ -81,7 +81,7 @@ In the following figure, a square loop of area $A$ that can be rotated about the
 
 The time rate of change of magnetic flux through a closed loop is a quantity that will be used when Faraday's law is covered.
 
-Suppose the loop in the previous problem rotates at a constant rate such that $\phi=\omega t$, where $\omega$ is a contant.
+Suppose the loop in the previous problem rotates at a constant rate such that $\phi=\omega t$, where $\omega$ is a constant.
 
 <img src="figures/Square_I.svg"/>
 
