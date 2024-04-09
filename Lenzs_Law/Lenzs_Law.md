@@ -144,9 +144,9 @@ A spatially uniform external magnetic field points into the page, and its magnit
 
 ###
 
-As shown, a conducting wire loop is placed in the magnetic field of a solenoid. Treat the solenoid's magnetic field as the external magnetic field. Several representative magnetic field lines are shown.
+As shown, a conducting wire loop is placed in the magnetic field of a solenoid. Treat the solenoid's magnetic field as the external magnetic field. Several representative magnetic field lines are shown without arrows that indicate direction.
 
-<img src="figures/Solenoid.svg"/>
+<img src="figures/Solenoid.svg" width="300px"/>
 
 1. Draw arrows on the magnetic field lines to indicate their direction.
 
@@ -155,7 +155,7 @@ As shown, a conducting wire loop is placed in the magnetic field of a solenoid. 
    \else
    \fi
 
-For the following cases, determine if an induced magnetic field will appear and, if so, its direction. Then, determine the direction of the induced current, if any, in the wire loop.
+For the following cases, determine if an induced magnetic field will appear and, if so, its direction. Then, determine the direction of the induced current, if any, in the wire loop. (If there is no induced current or induced field, enter "N/A".)
 
 2. The loop is stationary.
 
@@ -164,7 +164,7 @@ For the following cases, determine if an induced magnetic field will appear and,
    \else
    a. Direction of induced magnetic field:
 
-   b. Direction of current in the loop:
+   b. Direction of induced current in the loop:
 
    \fi
 
@@ -178,7 +178,7 @@ For the following cases, determine if an induced magnetic field will appear and,
    \else
    a. Direction of induced magnetic field:
 
-   b. Direction of current in loop:
+   b. Direction of induced current in loop:
    \fi
 
 4. The loop is moving to the left.
@@ -188,14 +188,14 @@ For the following cases, determine if an induced magnetic field will appear and,
    \else
    a. Direction of induced magnetic field:
 
-   b. Direction of current in the loop:
+   b. Direction of induced current in the loop:
    \fi
 
 ###
 
 <img src="figures/Loops_in_Wire_Field.svg" width="250px"/>
 
-The figure above shows a current $I$ running through a long straight wire as shown. For conducting loops A--D that are moving with a velocity in the direction shown, determine if the current flow is zero, clockwise, or counterclockwise. Put your answers on the diagram.
+The figure above shows a current $I$ running in a long straight wire. For conducting loops A--D moving with a velocity in the direction shown, determine if the current in the loop is zero, clockwise, or counterclockwise. Put your answers on the diagram.
 
    \ifsolutions
    {\bf Answer}: The field is out of the page above the long straight wire. Below, it is into the page (See section 28.3 of the Textbook). The magnitude of $\bfvec{B}$ is larger near the wire.
