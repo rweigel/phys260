@@ -6,9 +6,9 @@ Title: Lenz's Law
 
 ## Magnetic Flux
 
-A changing magnetic flux through a closed conducting loop _induces_ the flow of a current in the loop.
+A changing magnetic flux through a closed conducting loop induces the flow of a current in the loop.
 
-In this activity, we will deal with a conducting loop with a current that is not driven by a battery -- it will be driven by a change in magnetic flux through the loop. This change will _induce_ a current, and this induced current will create what we will refer to as an _induced_ magnetic field.
+In this activity, we consider a conducting loop with a current that is not driven by a battery -- it will be driven by a change in magnetic flux through the loop. This change will induce a current, and this induced current creates an induced magnetic field.
 
 The general equation for magnetic flux is:
 
@@ -21,11 +21,11 @@ If the magnitude of the magnetic field is not changing and the angle between the
 $
 \Phi_B = \bfvec{B}\bfcdot \bfvec{A}
 $
-or, equivalently, $\Phi_B = BA\cos\phi$, where $\phi$ is the angle between the area vector, $\bfvec{A}$, and $\bfvec{B}$.
+or, equivalently, $\Phi_B = BA\cos\phi$, where $\phi$ is the angle between the area vector, $\bfvec{B}$, and $\bfvec{A}$.
 
-There are three ways in which $\Phi_B$ can change:
+There are three ways that $\Phi_B$ can change:
 
-1. The magnitude of $\bfvec{B}$ (that is, $B$) can change. To do this, a magnet can be moved closer or farther away from a loop, a loop can be moved closer or farther away from a magnet, or the current generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of creating a changing magnetic field with an electromagnet.
+1. The magnitude of $\bfvec{B}$ (that is, $B$) can change. To do this, a magnet can be moved closer or farther from a loop, a loop can be moved closer or farther from a magnet, or the current generating the magnetic field can be changed. See Example 29.1 in the textbook for an example of creating a changing magnetic field with an electromagnet.
 
 2. The area $A$ can change. To do this, the loop cross--section can be expanded or contracted by heating or cooling a wire or, more commonly, using a device called a slidewire generator (see Example 29.5 in the textbook).
 
@@ -49,7 +49,7 @@ Here, we'll use a longer but more descriptive definition.
 
 In the examples given, we will first find the direction of the induced magnetic field needed to oppose a change in flux due to an external source of a magnetic field. Then, we will ask what direction of the induced current is consistent with this induced magnetic field using the current loop right--hand rule, which is described in the next section.
 
-(Lenz's law follows from Faraday's law. In principle, Faraday's law, with careful attention paid to signs, can be used to determine the direction of induced current, in which case Lenz's law is not needed. In a similar way that using the right--hand rules to determine the general direction for force can be used to check your math on a cross--product, Lenz's Law provides a check on the direction of the induced current when using Faraday's law.)
+(Lenz's law follows from Faraday's law. In principle, Faraday's law, with careful attention paid to signs, can be used to determine the direction of induced current, in which case Lenz's law is not needed. In a similar way that using the right--hand rules to determine the general direction for force can be used to check your math on a cross--product, Lenz's Law provides can be used to check the direction of the induced current when using Faraday's law.)
 
 # Current Loop Right--Hand Rule
 
@@ -89,7 +89,7 @@ Finally, we ask what direction of induced current is consistent with a $B_{\text
 
 ###
 
-A spatially uniform external magnetic field points into the page, and its magnitude increases over time.
+A spatially uniform external magnetic field points into the page, and its magnitude increases over time. A square conducting loop lies in the plane of the page.
 
 <img src="figures/Field_In_To_Page.svg" width="38%">
 
