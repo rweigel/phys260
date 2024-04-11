@@ -6,7 +6,7 @@ Title: RL Circuits
 
 <img src="figures/LR_Series.svg">
 
-The above figure shows a RL series circuit consisting of an inductor of inductance $L$ connected in series with a resistor of resistance $R$. The switch, $S$, is closed at a time $t = 0$ and then remains closed.
+The above figure shows a RL series circuit consisting of an inductor of inductance $L$ connected in series with a resistor of resistance $R$. The switch, $S$, is closed at a time $t = 0$ and remains closed.
 
 Using Kirchhoff’s voltage law around the loop, we have
 
@@ -14,15 +14,15 @@ $$
 V_s - I(t) \cdot R - L \frac{dI(t)}{dt} = 0
 $$
 
-The term $\ds L\frac{dI}{dt}$ is called the induced emf. The above differential equation can be solved for $I(t)$, the current at any time given the initial value of $I$, which is zero. The result is
+This differential equation can be solved for $I(t)$, the current at any time. If the current at $t=0$ is zero, the solution is
 
 $$
 I(t)=\frac{V_s}{R}\left(1-e^{-t/(L/R)}\right)
 $$
 
-After a long time, the current approaches a constant value of $I = V_s/R$ because the exponential term approaches zero. How quickly the exponential term approaches zero depends on a quantity called the RL time constant defined by
+After a long time$^*$ (specifically, $t\gg\tau$), the current approaches a constant value of $I = V_s/R$ because the exponential term approaches zero. How quickly the exponential term approaches zero depends on a quantity called the RL time constant defined by
 
-$$\tau = L/R$$
+$$\tau \equiv L/R$$
 
 which has units of seconds when $L$ is in Henrys ($\text{H}$) and $R$ is in Ohms ($\Omega$). Using $\tau$, we have
 
@@ -30,15 +30,11 @@ $$
 I(t) = \frac{V_s}{R}\left(1-e^{-t/\tau}\right)
 $$
 
-In this equation, at $t=0$, the current is
+When $t/\tau \simeq 0$, $e^{-t/\tau} \simeq e^0 = 1$, so $I(t) \simeq (V_s/R)(1-1)=0$. As a result, we state that initially the inductor behaves like an open circuit because the current through it is nearly zero.
 
-$$
-I(0) = (V_s/R)\left(1-e^{-0/\tau}\right)=(V_s/R)\left(1-1\right)=0
-$$
+When $t/\tau \gg 1$, the exponential term $e^{-t/\tau}$ becomes much smaller than one, so $I(t) \simeq (V_s/R)(1-0)=V_s/R$. If we replace the inductor with a wire, this is the same current that we would find. As a result, we state that after a long time, an inductor behaves like a resistanceless wire.
 
-As a result, we state that initially the inductor behaves like an open circuit because current does not flow though it.
-
-For large $t/\tau$, the exponential term $e^{-t/\tau}$ becomes much smaller than one and so $I(t)\rightarrow V_s/R$. If we replace the inductor with a wire, this is the same current that we would find. As a result, we state that after a long time, an inductor behaves like a resistanceless wire.
+$^*$ Informally, we often use phrases such as "after a long time". This phrase is ambiguous because a reference length of time is not given. To be specific, one should instead state $t\gg t_{\text{ref}}$, where $t_{\text{ref}}$ is a reference length of time.
 
 \newpage
 
@@ -50,7 +46,7 @@ $$I(t) = \frac{V_s}{R}\left(1-e^{-t/\tau}\right)$$
 
 that was described in the introduction.
 
-1. If $V_s = 10\text{ V}$ and $R=1\text{ }\Omega$, plot dots for the values of $I$ at $t=0, 2, 4, 6, 12\text{ s}$ with $L/R = \tau = 2\text{ s}$ 
+1. If $V_s = 10\text{ V}$ and $R=1\text{ }\Omega$, plot dots for the values of $I$ at $t=0, 2, 4, 6, 12\text{ s}$ using $L/R = \tau = 2\text{ s}$ 
 
    \ifsolutions
    <img src="figures/I_vs_t_Solution.svg" width="200px">
@@ -69,7 +65,7 @@ that was described in the introduction.
 3. Based on the equation, at $t\gg \tau$ does an inductor behave like an open circuit or a resistanceless wire?
 
    \ifsolutions
-   {\bf Answer}: At $t \gg \tau$ the current will be $V_s/R$, which is the same current that would be found if the inductor was replaced with a resistanceless wire.
+   {\bf Answer}: When $t \gg \tau$ the current is approximately $V_s/R$, which is the same current that would be found if the inductor was replaced with a resistanceless wire.
    \else
    \vspace{2em}
    \fi
@@ -99,9 +95,9 @@ that was described in the introduction.
 
 # Problem II
 
-An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistance of $2\text{ }\Omega$ are connected together to form a RL series circuit. If they are connected to a $20\text{ V}$ DC voltage source,
+If the circuit in the introduction has $L=40\text{ mH}$, $R=2\text{ }\Omega$, and $V_s=20\text{ V}$,
 
-1. What is the current after a very long time?
+1. What is the current after a very long time after the switch is closed?
 
    \ifsolutions
    {\bf Answer}: $I = V_s/R=(20\text{ V})/(2\text{ }\Omega) = 10\text{ A}$
@@ -112,12 +108,12 @@ An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistanc
 2. What is the time constant of this RL series circuit?
 
    \ifsolutions
-   {\bf Answer}: The time constant is given by $\tau = L/R = (40\text{ mH})/(2\text{ }\Omega) = 20 \text{ ms}$
+   {\bf Answer}: $\tau = L/R = (40\text{ mH})/(2\text{ }\Omega) = 20 \text{ ms}$
    \else
    \vspace{2em}
    \fi
 
-3. How long does it takes for the current to reach $63$\% of its maximum value?
+3. How long does it take for the current to reach $63$\% of its maximum value?
 
    \ifsolutions
    {\bf Answer}: The current in the circuit is expressed as:
@@ -129,46 +125,38 @@ An inductor with an inductance of $40\text{ mH}$ and a resistor with a resistanc
    The maximum current value is $I_{\text{max}}=V_s/R$. Therefore,
 
    $$
-   \frac{I(t)}{I_{\text{max}}} = 1-e^{-t/\tau} = 1-e^{-t/\tau}
+   \frac{I(t)}{I_{\text{max}}} = 1-e^{-t/\tau}
    $$
 
    Setting $I(t)/I_{\text{max}} =0.63\quad$ gives $\quad0.63 = 1-e^{-t/\tau}\quad\Rightarrow\quad e^{-t/\tau} = 1-0.63 = 0.37$
 
    $e^{-t/\tau} = 0.37\quad\Rightarrow\quad -t/\tau = \ln(0.37)=-0.9943\quad\Rightarrow\quad t = 19.89\text{ ms}$
 
-   Thus, it takes roughly $20\text{ ms}$ ($\simeq \tau$) to reach $63$\% of the maximum current value. (So $0.63$ is a special number for an RL circuit -- at $t=\tau$, the current is $63$\% of its maximum value.)
+   Thus, it takes roughly $20\text{ ms}$ ($\simeq \tau$) to reach $63$\% of the maximum current value. (So $0.63$ is a special number for an RL circuit -- at $t=\tau$, the current is $\simeq 63$\% of its maximum value.)
    \else
    \vspace{5em}
    \fi
 
-4. What is the value of the induced emf after $10\text{ ms}$?
+4. What is the voltage across the inductor at $t = 10\text{ ms}$?
 
    \ifsolutions
-   {\bf Answer}: After 10 ms, the current is calculated as:
+   {\bf Answer}: From part 5. of the previous problem, $v_L(t)=LdI/dt = V_se^{-t/\tau}$, so
 
-   $$
-   I(t) = \frac{V_s}{R}(1-e^{-t/(L/R)}) = \frac{20 \text{ V}}{2\text{ }\Omega} \left(1-e^{-(10\text{ ms})/(20\text{ ms})}\right) = 3.9\text{ A} 
-   $$
-
-   The induced emf is:
-
-   $$
-   \text{emf} = V_s - IR= 20\text{ V} - 3.9\text{ A} \cdot 2~\Omega=12.2\text{ V} 
-   $$
+   $v_L(10\text{ ms}) = (20\text{ V})e^{-10/20}\simeq 12.1\text{ V}$
    \else
    \vspace{3em}
    \fi
 
-5. What is the value of the circuit current one time constant (that is, at $t=\tau$) after the switch is closed?
+5. What is the current at $t=\tau$ after the switch is closed?
 
    \ifsolutions
    {\bf Answer}: At time $t = \tau$,
 
    $$
-   I(t) =  \frac{V_s}{R} (1-e^{-t/\tau})=10 \times (1-0.368) = 6.32\text{ A}
+   I(\tau) = \frac{V_s}{R} (1-e^{-\tau/\tau}) = (10\text{ A})(1-0.368) = 6.32\text{ A}
    $$
 
-   This question is related to question 3. In the answer to question 3., it was found that it takes approximately one time constant to reach $63$\% of the maximum value. So in this problem we expect that the answer to be approximately $63$\% of the final value.
+   This question is related to question 3. In the answer to question 3., it was found that it takes approximately one time constant for the current to reach $63$\% of the maximum value.
    \else
    \fi
 
@@ -197,7 +185,7 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    \vspace{1em}
    \fi
 
-3. After a long time, what will the current be through the resistor and inductor?
+3. After a long time, what is current be through the resistor and inductor?
 
    \ifsolutions
    {\bf Answer}: The current in the circuit as a function of time is
@@ -248,23 +236,22 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
 6. If switch $S_1$ was opened and switch $S_2$ was closed at $t_o=5\text{ ms}$, plot $I(t)$ from $t=0$ to $t=10\text{ ms}$.
 
    \ifsolutions
-   In the range $t=[0, 5]\text{ ms}$
+   In the range $t=[0, 5]\text{ ms}$, $I(t) = (10\text{ A})\left(1-e^{-t/\tau}\right)$. At $t=5\text{ ms}$,
 
-   $$I(t) = \frac{V_s}{R}\left(1-e^{-t/\tau}\right)$$
+   $I(5\text{ ms}) = (10\text{ A})\left(1-e^{-5\text{ ms}/10\text{ ms}}\right) \approx 4\text{ A}$
 
-   Starting at $t=5\text{ ms}$, the solution is
+   For $t\ge 5\text{ ms}$, the solution $I(t) = I_o e^{-(t-t_o)/\tau}$
    
-   $I(t) = I_o e^{-(t-t_o)/\tau}$
+   Because the current is continuous at $t=5\text{ ms}$, $I_o = 4\text{ A}$.
    
-   To find $I_o$, use the fact that the current is continuous at $t=5\text{ ms}$. From the first equation,
-   
-   $I(5\text{ ms}) = (10\text{ V})\left(1-e^{-5\text{ ms}/10\text{ ms}}\right) \approx 4\text{ V}$
+   A plot of
+
+   $I(t) = (10\text{ A})\left(1-e^{-t/\tau}\right)$ for $t=[0, 5]\text{ ms}$
    
    and
    
-   $I(5\text{ ms}) = I_oe^{-(5\text{ ms}-5\text{ ms})/10\text{ ms}} = I_o$
-
-   Thus, $I_o = (10\text{ V})(1-e^{-1/2})\approx 4\text{ V}$
+   $I(t) = (10\text{ A})e^{-(t-5\text{ ms})/\tau}$ $t\ge 5\text{ ms}$ is shown below.
+   
    
    <img src="figures/I_vs_t_SolutionIII.svg" width="200px">
    \else
