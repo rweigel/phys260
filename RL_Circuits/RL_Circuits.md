@@ -69,7 +69,7 @@ that was described in the introduction.
    \else
    \vspace{2em}
    \fi
-    
+
 3. If $L$ doubles but $R$ remains constant
     
    a. does the time constant $\tau$ increase, decrease, or remain the same?;
@@ -215,9 +215,9 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    $$-I(t) \cdot R - L \frac{dI(t)}{dt} = 0$$
 
    and using
-   
+
    $$I=I_oe^{-(t-t_o)/\tau}$$
-   
+
    and
    
    $$\frac{d}{dt}\left(e^{-(t-t_o)/\tau}\right) = -\frac{1}{\tau} e^{-(t-t_o)/\tau}$$
@@ -241,7 +241,7 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    $I(5\text{ ms}) = (10\text{ A})\left(1-e^{-5\text{ ms}/10\text{ ms}}\right) \approx 4\text{ A}$
 
    For $t\ge 5\text{ ms}$, the solution $I(t) = I_o e^{-(t-t_o)/\tau}$
-   
+
    Because the current is continuous at $t=5\text{ ms}$, $I_o = 4\text{ A}$.
    
    A plot of
@@ -249,10 +249,9 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    $I(t) = (10\text{ A})\left(1-e^{-t/\tau}\right)$ for $t=[0, 5]\text{ ms}$
    
    and
-   
+
    $I(t) = (10\text{ A})e^{-(t-5\text{ ms})/\tau}$ $t\ge 5\text{ ms}$ is shown below.
-   
-   
+
    <img src="figures/I_vs_t_SolutionIII.svg" width="200px">
    \else
    <img src="figures/I_vs_t.svg">
