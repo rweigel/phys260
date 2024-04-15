@@ -73,15 +73,27 @@ that was described in the introduction.
 3. If $L$ doubles but $R$ remains constant
     
    a. does the time constant $\tau$ increase, decrease, or remain the same?;
-    
+
+   \ifsolutions
+   {\bf Answer}: $\tau=L/R$, so $\tau$ doubles.
+   \else
+   \vspace{2em}
+   \fi
+
    b. how will the position of the points that you drew for part 1. change? (Will they move up, down, or remain the same?) 
+
+   \ifsolutions
+   {\bf Answer}: All points move down except the point at $t=0$.
+   \else
+   \vspace{2em}
+   \fi
 
    c. Does your answer to b. make sense physically? That is, an inductor tends to impede changes in current and so is your answer to b. consistent with this? 
 
    \ifsolutions
-   {\bf Answer}: If $L$ increases, the inductor provides more opposition to change in the currrent through it. Thus we expect the current to take longer to reach its final state. All of the points (except for $t=0$ will move downward).
+   {\bf Answer}: If $L$ increases, the inductor provides more opposition to change in the currrent through it. Thus we expect the current to take longer to reach its final state.
    \else
-   \vspace{4em}
+   \vspace{2em}
    \fi
 
 4. The voltage across the inductor is $LdI/dt$. Compute $dI/dt$ and sketch its curve on the graph above. Is this equation consistent with the statement that for large $t/\tau$, the voltage across the inductor is zero?
@@ -89,9 +101,8 @@ that was described in the introduction.
    \ifsolutions
     {\bf Answer:} $LdI/dt = V_se^{-t/\tau}$. Yes. The voltage across the inductor is $V_se^{-t/\tau}$ and for large $t/\tau$, $e^{-t/\tau}$ is small.
    \else
+   \newpage
    \fi
-
-\newpage
 
 # Problem II
 
@@ -102,7 +113,7 @@ If the circuit in the introduction has $L=40\text{ mH}$, $R=2\text{ }\Omega$, an
    \ifsolutions
    {\bf Answer}: $I = V_s/R=(20\text{ V})/(2\text{ }\Omega) = 10\text{ A}$
    \else
-   \vspace{3em}
+   \vspace{5em}
    \fi
 
 2. What is the time constant of this RL series circuit?
@@ -110,7 +121,7 @@ If the circuit in the introduction has $L=40\text{ mH}$, $R=2\text{ }\Omega$, an
    \ifsolutions
    {\bf Answer}: $\tau = L/R = (40\text{ mH})/(2\text{ }\Omega) = 20 \text{ ms}$
    \else
-   \vspace{2em}
+   \vspace{5em}
    \fi
 
 3. How long does it take for the current to reach $63$\% of its maximum value?
@@ -134,7 +145,7 @@ If the circuit in the introduction has $L=40\text{ mH}$, $R=2\text{ }\Omega$, an
 
    Thus, it takes roughly $20\text{ ms}$ ($\simeq \tau$) to reach $63$\% of the maximum current value. (So $0.63$ is a special number for an RL circuit -- at $t=\tau$, the current is $\simeq 63$\% of its maximum value.)
    \else
-   \vspace{5em}
+   \vspace{15em}
    \fi
 
 4. What is the voltage across the inductor at $t = 10\text{ ms}$?
@@ -144,7 +155,7 @@ If the circuit in the introduction has $L=40\text{ mH}$, $R=2\text{ }\Omega$, an
 
    $v_L(10\text{ ms}) = (20\text{ V})e^{-10/20}\simeq 12.1\text{ V}$
    \else
-   \vspace{3em}
+   \vspace{5em}
    \fi
 
 5. What is the current at $t=\tau$ after the switch is closed?
@@ -185,7 +196,7 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    \vspace{1em}
    \fi
 
-3. After a long time, what is current be through the resistor and inductor?
+3. After a long time, what is the current through the resistor and inductor?
 
    \ifsolutions
    {\bf Answer}: The current in the circuit as a function of time is
@@ -199,7 +210,7 @@ In the circuit above, an inductor with $L=10\text{ mH}$ and a resistor with $R=1
    \vspace{3em}
    \fi
 
-4. After a long time, switch $S_1$ is opened and $S_2$ is closed simultaneously. Write Kirchhoff's voltage law around the new closed loop.
+4. $S_1$ is opened and $S_2$ is closed simultaneously at $t=t_o$. Write Kirchhoff's voltage law around the new closed loop.
 
    \ifsolutions
    {\bf Answer}: $\ds -I(t) R - L\frac{dI(t)}{dt} = 0$
