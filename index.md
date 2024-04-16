@@ -454,3 +454,15 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 | 
 
 ## RLC and AC Circuits
+
+* Activity - RLC Circuits
+  * Documents:
+| [pdf](RLC_Circuits/RLC_Circuits.pdf)
+| [pdf solns](RLC_Circuits/RLC_Circuits-solutions.pdf)
+| [html](RLC_Circuits/RLC_Circuits.html)
+|
+* Source:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/RLC_Circuits)
+| [Markdown](RLC_Circuits/RLC_Circuits.md)
+| 

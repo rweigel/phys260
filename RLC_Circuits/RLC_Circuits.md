@@ -4,29 +4,31 @@ Title: LRC AC Circuits
 
 # Introduction
 
-Previously, we have examined circuits with either capacitors and resistors or inductors and resistors that were powered by batteries that produce constant voltage. These are called a direct current (DC) circuits. When a switch was closed to complete a circuit, the current varied in time and the time dependence was exponential (the current had a term $e^{-t/\tau}$.
+Previously, we have examined circuits with either capacitors and resistors or inductors and resistors that were powered by batteries that produce constant voltage. These are called a direct current (DC) circuits. When a switch was closed to complete a circuit, the current varied in time and the time dependence was exponential (the current had a term $e^{-t/\tau}$).
 
-If instead of a battery we use a voltage source that varies in time sinusouidally, the current will also vary in time sinusoidally, possibly with a differnt phase. (Technically, there will also be exponential terms, but after a short amount of time they approach zero.)
+If instead of a battery, we use a voltage source that varies in time sinusouidally, the current will also vary in time sinusoidally, possibly with a differnt phase. There will also be a "transient" exponential variation for a short amount, but here we only discuss the variation after the transient variation is zero "steady--state".
 
 ## R Only
 
-Figure (a) below shows a circuit in which an AC power source causes the current to vary sinusoidally in time according to $i(t)=I\cos(\omega t)$. By Ohm's law, the equation for the instantaneous voltage across the resistor is $v_R(t) = IR\cos(\omega t) = V_R\cos(\omega t)$.
+Figure (a) below shows a circuit in which an AC power source causes the current to vary sinusoidally in time according to $i(t)=I\cos(\omega t)$. By Ohm's law, the equation for the instantaneous voltage across the resistor is $v_R(t) = IR\cos(\omega t) = V_R\cos(\omega t)$, where $V_R$ is the amplitude of the voltage source.
 
-Figure (b) shows the current and voltage. The voltage and current are "in phase" because the peaks, valleys, and zero crossings in the plots of $i(t)$ and $v_R(t)$ occur at the same time.
+Figure (b) shows the time variation of current and voltage for this circuit. The voltage and current are "in phase" because the peaks, valleys, and zero crossings of $i(t)$ and $v_R(t)$ occur at the same time.
 
-<img src="figures/31_07_FigureA.png" width="300px">
+<img src="figures/31_07_FigureA.png" width="250px">
 
-<img src="figures/31_07_FigureB.png" width="300px">
+<img src="figures/31_07_FigureB.png" width="250px">
+
+\newpage
 
 ## L Only
 
 Figure (a) below shows a $RL$ circuit in which an AC power source causes the current to vary sinusoidally in time according to $i(t)=I\cos(\omega t)$.
 
-The voltage across the inductor varies according to $v_L(t) = I\omega L\cos(\omega t + 90^o)$.
+The voltage across the inductor varies in time according to $v_L(t) = I\omega L\cos(\omega t + 90^o)$.
 
-The term $\omega L$ is called the inductive reactance: $X_L \equiv \omega L$. With this new variable, $v_L(t) = IX_L\cos(\omega t + 90^\circ)$.
+The term $\omega L$ is called the inductive reactance: $X_L \equiv \omega L$, which has units of $\text{Ohms}$ when $L$ has units of $\text{H}$ and $\omega$ has units of $\text{rad}/\text{s}$. With this new variable, $v_L(t) = IX_L\cos(\omega t + 90^\circ)$.
 
-Figure (b) shows the $v(t)$ and $i(t)$. The voltage across the inductor "leads" the current by $90^\circ$ (or, equivalently, $T/4$) because the maxima (or minima) in $v_L(t)$ occur before the maxima (or minima) in $i(t)$.
+Figure (b) shows the $v(t)$ and $i(t)$. The voltage across the inductor "leads" the current by $90^\circ$ (or, equivalently, $T/4$, where $T=2\pi/\omega$) because the maxima (or minima) in $v_L(t)$ occur before the maxima (or minima) in $i(t)$.
 
 <img src="figures/31_08_FigureA.png" width="300px">
 
@@ -84,10 +86,7 @@ $$
 
 In this activity, you will compute $v(t)$ in two ways. First, you will use the above formula and a trig identity to write $v(t)$ in the form $IZ\cos(\omega t+\phi)$, where the constants $Z$ and $\phi$ depend on $R$, $L$, and $C$ (or equivalently, $R$, $X_L$, and $X_C$). Next, you will use a general formula to compute $Z$ and $\phi$.
 
-\ifsolutions
-\else
 \newpage
-\fi
 
 # Problem I
 
