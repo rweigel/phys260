@@ -31,9 +31,10 @@ If you have corrections, comments, or suggestions please [submit an issue](https
 
 The figures were created using [MathCha](https://www.mathcha.io/). To edit a figure using MathCha, open the MathCha links in the comments in the `.md` or `.tex` file with a web browser. The `.tikz` files can also be edited using a [tikz editor](https://www.google.com/search?q=tikz+editor).
 
-# Resources
+# Resources and References
 
 * CU Boulder Science Education Initiative has  [resources related to Junior--level E&M](https://www.colorado.edu/sei/departments/physics/activities/courses/electricity-magnetism-i-course-materials).
+* [Koedinger et al., 2023, An astonishing regularity in student learning rate](https://www.pnas.org/doi/full/10.1073/pnas.2221311120)
 
 # Activities
 
