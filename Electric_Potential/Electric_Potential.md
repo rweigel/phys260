@@ -20,7 +20,7 @@ Another way of writing $\bfvec{F}\bfcdot d\bfvec{l}$ is $|F|dl\cos\phi$, where $
 
    $$W_{a\rightarrow b}=\int_a^b \bfvec{F}\cdot d\bfvec{l}=(\pm)|\bfvec{F}|L$$
 
-   where $L$ is positive; the $+$ sign is used for a force that is in the direction of movement, and the $-$ sign is used for a force that is in the opposite direction of movement. For example, if you lift a mass $m$ upwards by a distance $L$, the force you exert is in the same direction of movement, so you do a work of $mgL$ on the mass. The gravitational force on the mass is in the opposite direction of movement, so the work done by the gravitational force is $-mgL$. If, instead, you lower the mass, your force is upwards, and the direction of motion is downwards, so the work you do is now $-mgL$, and the work done by the gravitational force is $+mgL$.
+   where $L$ is positive; the $+$ sign is used for a force that is in the direction of movement, and the $-$ sign is used for a force that is in the opposite direction of movement. For example, if you lift a mass $m$ upwards at a constant velocity a distance $L$, the force you exert is in the same direction of movement, so you do a work of $mgL$ on the mass. The gravitational force on the mass is in the opposite direction of movement, so the work done by the gravitational force is $-mgL$. If, instead, you lower the mass at a constant velocity, your force is upwards, and the direction of motion is downwards, so the work you do is now $-mgL$, and the work done by the gravitational force is $+mgL$.
 
 3. When the direction of force relative to the direction of movement changes (so the dot product changes) and/or the magnitude of force changes. This is covered on [page 755 of the textbook](https://drive.google.com/file/d/10Zsubt69yu6wn-AWBvKEjyezXSiaeIup/view?usp=sharing★★★★remove★★★★).
 
@@ -30,31 +30,34 @@ $$
 W_{a\rightarrow b}^{\text{cons}} \equiv -\Delta U = -(U_b-U_a)
 $$
 
-where the symbol $\equiv$ is used to indicate a definition and the superscript $\text{cons}$ indicates that the equation applies only to a conservative force.
+where $W_{a\rightarrow b}^{\text{cons}}$ is the work done by the conservative force in moving the object from $a$ to $b$, the symbol $\equiv$ is used to indicate a definition, and the superscript $\text{cons}$ indicates that the equation applies only to a conservative force.
 
 In mechanics, you encountered conservative forces of
 
 1. A force that is constant in magnitude and direction (e.g., the force on a small mass near Earth's surface)
 2. A force that varies according to $\rhat/r^2$ (e.g., the gravitational force between two objects separated by a large distance)
+3. A force that varies according to $kx$, where $k$ is a spring constant and $x$ is the displacement of the string from its equilibrium position
 
-In E&M, we encounter these same two types of conservative forces.
+In E&M, we encounter the first two types of conservative forces.
+
+% This has been revised according to Joe's notes, but I think there may be some lurking technical inconsistencies or cases where the general rule does not apply due to not accounting for KE or heat.
 
 %One of the most common difficulties in calculating work and change in potential energy is getting the correct sign for the answer. The first two problems in this activity have questions that help you determine the correct sign of work and changes in potential energy.
 
-%For a conservative force, determine the direction an object would move when released from rest (call this the "release direction"). If the object moves or is moved a small step in the release direction, its potential energy will decrease. If the object moves or is moved a small step in a direction opposite to the release direction, its potential energy will increase.
+%For a conservative force, determine the direction an object would move when released from rest if subjected to only the conservative force (call this the "release direction"). If the object moves or is moved a small step in the release direction, its potential energy will decrease. If the object moves or is moved a small step in a direction opposite to the release direction, its potential energy will increase.
 
 %* The potential energy of an object increases when you do positive work on it. That is, when your force on the object is in the direction that you move the object. One way of determining if an object's potential is higher is if it has more potential to do something. A mass lifted upwards has more potential to crush something below it. If you lower a mass, it will have less potential to crush something.
 
-%* Potential energy increases when a conservative force does negative work. 
+%* Potential energy increases when the conservative force does negative work and decreases when the cconservative force does positive pork. Potential energy represent the potential for the conservative force to do positve work.
 
 %**Example**
 
-%Near Earth's surface, the gravitation field is nearly constant in magnitude and direction. If point $a$ is a point on the floor and point $b$ is a distance $L$ above $a$, using
+%Near Earth's surface, the gravitational field is nearly constant in magnitude and direction. If point $a$ is a point on the floor and point $b$ is a distance $L$ above $a$, using
 
 %$$W_{a\rightarrow b}=(\pm)|\bfvec{F}|L$$
 
-%1. how much work is required by you to lift the object from $a$ to $b$?;
-%2. how much work is done by the gravitational force?
+%1. How much work is required by you to lift the object from $a$ to $b$ at a constant velocity?;
+%2. How much work is done by the gravitational field?
 
 %3. The equation for $U$ for a mass $m$ in near Earth's surface is $g$ is $mgy$, where $y$ is the distance from Earth's surface. Use $W_{a\rightarrow b}^{\text{cons}} \equiv -\Delta U = -(U_b-U_a)$ to find the work done by the gravitational field when the object is moved from $a$ to $b$.
 
@@ -77,11 +80,16 @@ In E&M, we encounter these same two types of conservative forces.
 
 ## Problem -- Uniform Field
 
-The following diagram shows a region of space where the electric field is constant and has a value of $3\text{ N/C}$ and points to the right. Field lines are shown as lines with arrows.
+The following diagram shows a region of space where the electric field is constant and has a value of $3\text{ N/C}$ and points to the right. Electric field lines are shown as lines with arrows.
 
 <img src="figures/Uniform_Field.svg"/>
 
-1. A charge of $+3\text{ C}$ is placed at point $A$. What happens to that charge when it is released from rest?
+1. Is the force due to this electric field conservative?
+   \ifsolutions
+   {\bf Answer}: Yes
+   \fi
+
+2. A charge of $+3\text{ C}$ is placed at point $A$. What happens to that charge when it is released from rest?
 
    \ifsolutions
    {\bf Answer}: Moves to right. By convention, electric field lines point in the direction of the force on a positive charge.
@@ -107,7 +115,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-4. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
+4. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy changed?
 
    \ifsolutions
    {\bf Answer}: (a) $-18\text{ J}$, and (b) $\Delta U = +18\text{ J}$ (the change in PE, $\Delta U$, is equal and opposite to the work done by the field).
@@ -115,7 +123,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-5. A charge of $-3\text{ C}$ is moved straight downward from $A$ to $D$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the charge changed?
+5. A charge of $-3\text{ C}$ is moved straight downward from $A$ to $D$. (a) How much work was done by the electric field? (b) By how much has the potential energy?
 
    \ifsolutions
    {\bf Answer}: The force due to the field is always perpendicular to the direction of movement. So the work done is zero: (a) $0\text{ J}$; (b) $0 \text{ J}$.
@@ -139,9 +147,22 @@ In the previous problem, a charge was moved in a region of space where the elect
 
 <img src="figures/Radially_Inward_Field.svg"/>
 
-There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for this charge are shown. To simplify the calculations, use $k=9\cdot 10^9\text{ N}\cdot \text{m}^2/\text{C}^2$.
+There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for this charge are shown. To simplify the calculations, use $k=1/4\pi\epsilon_o = 9\cdot 10^9\text{ N}\cdot \text{m}^2/\text{C}^2$.
 
-1. A charge of $+3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
+1. Is the force due to this electric field conservative?
+   \ifsolutions
+   {\bf Answer}: Yes
+   \fi
+
+2. A charge of $+3\text{ C}$ is placed at point $A$. What happens to that charge when it is released from rest?
+
+   \ifsolutions
+   {\bf Answer}: Moves towards B. By convention, electric field lines point in the direction of the force on a positive charge.
+   \else
+   <div style="height:3em"/>
+   \fi
+
+2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
 
    \ifsolutions
    {\bf Answer}: According to [equation 23.8](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_), the work done by the field, labeled $W^E$ here, when a charge $q_0$ is moved from a distance $r_a$ to a distance $r_b$ from a charge $q$ is
@@ -159,6 +180,14 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    This is the answer for (a). Note that the work is positive as expected -- the force of the electric field on the charge is in the same direction as its movement. The change in electric potential energy is equal to and opposite of the work done by the field, so (b) $-27\cdot 10^9\text{ J}$. Note that the answer of $27\cdot 10^9\text{ J}$ is unphysically large; it is the amount of energy that you would need to lift $27\cdot 10^9\text{ kg}$ (about $5$ million elephants) by $1\text{ m}$. 
    \else
    <div style="height:4em"/>
+   \fi
+
+2. A charge of $-3\text{ C}$ is placed at point $A$. What happens to that charge when it is released from rest?
+
+   \ifsolutions
+   {\bf Answer}: Moves away from B. By convention, electric field lines point in the direction of the force on a positive charge. For a negative charge, the direction is opposite.
+   \else
+   <div style="height:3em"/>
    \fi
    
 2. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?

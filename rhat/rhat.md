@@ -62,9 +62,7 @@ From the diagram, $\bfvec{r}_{12}=2a\ihat + 2a\jhat$, so $\ds\rhat_{12}=\frac{\b
 
 Note that the magnitude of $\rhat_{12}=1$: $\ds|\rhat_{12}|=\sqrt{\left(\frac{1}{\sqrt{2}}\right)^2+\left(\frac{1}{\sqrt{2}}\right)^2}=1$
 
-Substitution gives
-
-$$\bfvec{F}_{q_1\text{ on }q_2}=kq_1q_2\frac{\rhat_{12}}{r^2} = \frac{kq_1q_2}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$$
+Substitution gives $\bfvec{F}_{q_1\text{ on }q_2}=kq_1q_2\frac{\rhat_{12}}{r^2} = \frac{kq_1q_2}{8a^2}\left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$
 
 Check: if $q_1$ and $q_2$ are both positive or both negative, the force on $q_2$ is upwards and to the right, as expected.
 

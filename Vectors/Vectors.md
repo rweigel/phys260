@@ -1,6 +1,9 @@
 ```mdextension
 Title: Vectors
 ```
+# Introduction
+
+These problems are a review of vector notation and trigonometry. Recall that a two-dimensional vector requires two pieces of information to describe it. In Problem I, the two pieces of information are the magnitude and direction. In Problem II, the two pieces of information are the horizontal and vertical components. In each problem, you convert from one description to the other.
 
 # Problem I
 
