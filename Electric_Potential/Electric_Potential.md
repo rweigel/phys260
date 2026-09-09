@@ -162,7 +162,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    <div style="height:3em"/>
    \fi
 
-2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
+2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy changed?
 
    \ifsolutions
    {\bf Answer}: According to [equation 23.8](https://drive.google.com/file/d/1KO0ETw12uhGYdBMHExKIdR_eCUhHB7dw/view?usp=sharing_remove_), the work done by the field, labeled $W^E$ here, when a charge $q_0$ is moved from a distance $r_a$ to a distance $r_b$ from a charge $q$ is
@@ -190,7 +190,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    <div style="height:3em"/>
    \fi
    
-2. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
+2. A charge of $-3\text{ C}$ is moved from $A$ to $B$. (a) How much work was done by the electric field? (b) By how much has the potential energy changed?
 
    \ifsolutions
    {\bf Answer}: (a) $-27\cdot 10^9\text{ J}$, (b) $+27\cdot 10^9\text{ J}$. 
@@ -198,7 +198,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    <div style="height:4em"/>
    \fi
 
-3. A charge of $-3\text{ C}$ is moved from $B$ to $D$ along the dotted curve. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
+3. A charge of $-3\text{ C}$ is moved from $B$ to $D$ along the dotted curve. (a) How much work was done by the electric field? (b) By how much has the potential energy changed?
 
    \ifsolutions
    {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$
@@ -206,7 +206,7 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    <div style="height:4em"/>
    \fi
 
-4. A charge of $-3\text{ C}$ is moved from from $D$ to $B$ but along a path that deviates from the dotted curve. (a) How much work was done by the electric field? (b) By how much has the potential energy of the moved charge changed?
+4. A charge of $-3\text{ C}$ is moved from from $D$ to $B$ but along a path that deviates from the dotted curve. (a) How much work was done by the electric field? (b) By how much has the potential energy changed?
 
    \ifsolutions
    {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$
@@ -216,9 +216,9 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
 
 # Electric potential difference, $\Delta V$
 
-In the previous section, we considered moving an arbitrary amount of charge (either positive or negative) from point $a$ to point $b$ and computed its change in potential energy $\Delta U$.
+In the previous section, we considered moving an arbitrary amount of charge (either positive or negative) from point $a$ to point $b$ and computed the change in potential energy $\Delta U$.
 
-An electric potential difference $\Delta V$ is defined to be the change in electric potential energy of a test charge, $q_o$ when it is moved from point $a$ to point $b$ divided by $q_o$.
+An electric potential difference $\Delta V$ is defined to be the change in electric potential energy when a test charge, $q_o$, when it is moved from point $a$ to point $b$ divided by $q_o$.
 
 As a result, the only difference between the $\Delta U$ calculations performed previously and $\Delta V$ calculations is that we first compute $\Delta U$ for a $+1\text{ C}$ charge. To get $\Delta V$, we simply divide by $\Delta U$ by $+1\text{ C}$.
 
@@ -226,7 +226,7 @@ The definition of electric potential is similar to the definition of the electri
 
 $$\bfvec{E} = {\bfvec{F}}/{q_o}$$
 
-A change in electric potential is the change in electric potential energy of a positive test charge divided by the magnitude of the test charge's charge:
+A change in electric potential is the change in electric potential energy due to the change in position of the test charge divided by the magnitude of the test charge's charge:
 
 $$\Delta V = {\Delta U}/{q_o}$$
 
@@ -252,7 +252,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
+2. A charge of $+3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy changed?
 
    \ifsolutions
    {\bf Answer}: This question was already answered previously in 1.1.2. But given $\Delta V$, we can compute $\Delta U$:
@@ -262,7 +262,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-3. A charge of $-3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy of the moved charge changed?
+3. A charge of $-3\text{ C}$ is moved from $A$ to $B$. By how much has the electric potential energy changed?
 
    \ifsolutions
    {\bf Answer}: This question was already answered previously in 1.1.4. But given $\Delta V$, we can compute $\Delta U$:
@@ -274,7 +274,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-4. A charge of $-3\text{ C}$ is moved from $B$ to $D$. By how much has the electric potential energy of the moved charge changed?
+4. A charge of $-3\text{ C}$ is moved from $B$ to $D$. By how much has the electric potential energy changed?
 
    \ifsolutions
    {\bf Answer}: The move from $B$ to $D$ can be made by moving from $B$ to $A$ and then moving from $A$ to $D$. The change in potential when moving from $B$ to $A$ is opposite to the change in potential when moving from $A$ to $B$, which was found to be $-6\text{ Volts}$. The change in potential in going from $A$ to $D$ is zero. Thus,
