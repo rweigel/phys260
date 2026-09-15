@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>index</title>
-  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%220.9em%22 font-size=%22100%22&gt;📖&lt;/text&gt;&lt;/svg&gt;">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
     #toc>ol ol {
@@ -12,7 +12,7 @@
     }
 
     body {
-      background-image: url("https://rweigel.github.io/biedit/img/paper.png")
+      background-image: url("https://rweigel.github.io/biedit/biedit/ui/img/paper.png")
     }
 
     .body {
@@ -20,7 +20,7 @@
       min-width: 50%;
       max-height: 100%;
       position: absolute;
-      background-image: url("https://rweigel.github.io/biedit/img/paper.png");
+      background-image: url("https://rweigel.github.io/biedit/biedit/ui/img/paper.png");
     }
 
     #toc {
@@ -439,7 +439,9 @@
       }
 
       .page-break {
-        border-top: none;
+        border-top-width: medium;
+        border-top-style: none;
+        border-top-color: currentcolor;
       }
 
       .body {
@@ -507,7 +509,10 @@
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
-        border: none;
+        border-width: medium;
+        border-style: none;
+        border-color: currentcolor;
+        border-image: none;
         overflow-wrap: break-word;
       }
 
@@ -566,53 +571,53 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#overview" raw="# Overview" lo="1">
+        <a href="#overview">
           <span class="toctext">Overview</span>
         </a>
       </li>
       <li>
-        <a href="#using" raw="# Using" lo="24">
+        <a href="#using">
           <span class="toctext">Using</span>
         </a>
       </li>
       <li>
-        <a href="#resources-and-references" raw="# Resources and References" lo="34" class="highlighted">
+        <a href="#resources-and-references">
           <span class="toctext">Resources and References</span>
         </a>
       </li>
       <li>
-        <a href="#activities" raw="# Activities" lo="38">
+        <a href="#activities">
           <span class="toctext">Activities</span>
         </a>
         <ol class="toc" style="display: none;">
           <li>
-            <a href="#logarithm-review" raw="## Logarithm Review" lo="40">
+            <a href="#logarithm-review">
               <span class="toctext">Logarithm Review</span>
             </a>
           </li>
           <li>
-            <a href="#sound-intensity-level" raw="## Sound Intensity Level" lo="54">
+            <a href="#sound-intensity-level">
               <span class="toctext">Sound Intensity Level</span>
             </a>
           </li>
           <li>
-            <a href="#vector-review" raw="## Vector Review" lo="77">
+            <a href="#vector-review">
               <span class="toctext">Vector Review</span>
             </a>
           </li>
           <li>
-            <a href="#electric-force-between-point-charges-coulomb-s-law" raw="## Electric Force Between Point Charges (Coulomb's Law)" lo="103">
+            <a href="#electric-force-between-point-charges-coulomb-s-law">
               <span class="toctext">Electric Force Between Point Charges (Coulomb’s Law)</span>
             </a>
           </li>
           <li>
-            <a href="#electric-field" raw="## Electric Field" lo="132">
+            <a href="#electric-field">
               <span class="toctext">Electric Field</span>
             </a>
           </li>
           <li>
-            <a href="#using-rhat-to-find-bfvec-f-and-bfvec-e" raw="## Using $\rhat$ to find $\bfvec{F}$ and $\bfvec{E}$" lo="158">
-              <span class="toctext">Using <span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> to find <span len="11" raw="_\bfvec{F}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">F</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+            <a href="#using-rhat-to-find-bfvec-f-and-bfvec-e">
+              <span class="toctext">Using <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> to find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">F</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                       <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -620,7 +625,7 @@
 -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
-                                    </svg></span></span></span></span></span></span></span></span></span></span> and <span len="11" raw="_\bfvec{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">E</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                    </svg></span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">E</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                       <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -632,102 +637,102 @@ c-16-25.333-24-45-24-59z"></path>
             </a>
           </li>
           <li>
-            <a href="#superposition-and-symmetry" raw="## Superposition and Symmetry" lo="173">
+            <a href="#superposition-and-symmetry">
               <span class="toctext">Superposition and Symmetry</span>
             </a>
           </li>
           <li>
-            <a href="#continuous-charge-distributions" raw="## Continuous Charge Distributions" lo="195">
+            <a href="#continuous-charge-distributions">
               <span class="toctext">Continuous Charge Distributions</span>
             </a>
           </li>
           <li>
-            <a href="#electric-flux" raw="## Electric Flux" lo="215">
+            <a href="#electric-flux">
               <span class="toctext">Electric Flux</span>
             </a>
           </li>
           <li>
-            <a href="#enclosed-charge" raw="## Enclosed Charge" lo="237">
+            <a href="#enclosed-charge">
               <span class="toctext">Enclosed Charge</span>
             </a>
           </li>
           <li>
-            <a href="#gauss-s-law" raw="## Gauss's Law" lo="252">
+            <a href="#gauss-s-law">
               <span class="toctext">Gauss’s Law</span>
             </a>
           </li>
           <li>
-            <a href="#electric-potential" raw="## Electric Potential" lo="267">
+            <a href="#electric-potential">
               <span class="toctext">Electric Potential</span>
             </a>
           </li>
           <li>
-            <a href="#capacitance" raw="## Capacitance" lo="282">
+            <a href="#capacitance">
               <span class="toctext">Capacitance</span>
             </a>
           </li>
           <li>
-            <a href="#current-and-resistance" raw="## Current and Resistance" lo="297">
+            <a href="#current-and-resistance">
               <span class="toctext">Current and Resistance</span>
             </a>
           </li>
           <li>
-            <a href="#kirchhoff-s-circuit-laws" raw="## Kirchhoff's Circuit Laws" lo="311">
+            <a href="#kirchhoff-s-circuit-laws">
               <span class="toctext">Kirchhoff’s Circuit Laws</span>
             </a>
           </li>
           <li>
-            <a href="#equivalent-resistance" raw="## Equivalent Resistance" lo="327">
+            <a href="#equivalent-resistance">
               <span class="toctext">Equivalent Resistance</span>
             </a>
           </li>
           <li>
-            <a href="#rc-circuits" raw="## RC Circuits" lo="341">
+            <a href="#rc-circuits">
               <span class="toctext">RC Circuits</span>
             </a>
           </li>
           <li>
-            <a href="#cross-product-review" raw="## Cross--Product Review" lo="355">
+            <a href="#cross-product-review">
               <span class="toctext">Cross–Product Review</span>
             </a>
           </li>
           <li>
-            <a href="#magnetic-force-on-charged-particles" raw="## Magnetic Force on Charged Particles" lo="369">
+            <a href="#magnetic-force-on-charged-particles">
               <span class="toctext">Magnetic Force on Charged Particles</span>
             </a>
           </li>
           <li>
-            <a href="#magnetic-force-and-torque" raw="## Magnetic Force and Torque" lo="384">
+            <a href="#magnetic-force-and-torque">
               <span class="toctext">Magnetic Force and Torque</span>
             </a>
           </li>
           <li>
-            <a href="#magnetic-field-of-a-moving-charge" raw="## Magnetic Field of a Moving Charge" lo="398">
+            <a href="#magnetic-field-of-a-moving-charge">
               <span class="toctext">Magnetic Field of a Moving Charge</span>
             </a>
           </li>
           <li>
-            <a href="#the-biot-savart-law" raw="## The Biot--Savart Law" lo="412">
+            <a href="#the-biot-savart-law">
               <span class="toctext">The Biot–Savart Law</span>
             </a>
           </li>
           <li>
-            <a href="#magnetic-flux" raw="## Magnetic Flux" lo="414">
+            <a href="#magnetic-flux">
               <span class="toctext">Magnetic Flux</span>
             </a>
           </li>
           <li>
-            <a href="#lenz-s-law" raw="## Lenz's Law" lo="428">
+            <a href="#lenz-s-law">
               <span class="toctext">Lenz’s Law</span>
             </a>
           </li>
           <li>
-            <a href="#rl-circuits" raw="## RL Circuits" lo="442">
+            <a href="#rl-circuits">
               <span class="toctext">RL Circuits</span>
             </a>
           </li>
           <li>
-            <a href="#rlc-and-ac-circuits" raw="## RLC and AC Circuits" lo="456">
+            <a href="#rlc-and-ac-circuits">
               <span class="toctext">RLC and AC Circuits</span>
             </a>
           </li>
@@ -740,514 +745,426 @@ c-16-25.333-24-45-24-59z"></path>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1"><a name="overview" number="1" lo="1" raw="# Overview" class="anchor hanchor" href="#overview"><span class="hnumber">1</span>&nbsp;<span class="htext">Overview</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
+        <h1><a name="overview" class="anchor hanchor" href="#overview"><span class="hnumber">1</span>&nbsp;<span class="htext">Overview</span></a></h1>
       </div>
       <div class="block">
-        <p padlength="0" lo="3" lf="3">These are activities that students work on during a weekly 50–minute recitation for PHYS 260 at GMU. To maximize students’ time working on problems, I typically give at most a 10–minute review. Often, my 10–minute review involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
+        <p>These are activities that students work on during a weekly 50–minute recitation for PHYS 260 at GMU. To maximize students’ time working on problems, I typically give at most a 10–minute review. Often, my 10–minute review involves working through an example that is nearly identical to the first problem. If many students are stuck on a part of the problem, I will interrupt the class and have students guide to the answer.</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="5" lf="5">Associated with each of the activities is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts because they are covered in the lectures. The problems primarily involve basic calculations required to solve homework problems. I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
+        <p>Associated with each of the activities is a list of background material. I often select an animation that demonstrates the concept associated with the problems and play it in the five minutes before class starts. The activities typically do not cover concepts because they are covered in the lectures. The problems primarily involve basic calculations required to solve homework problems. I generally explain the concepts and ask questions about them while the students solve problems or when I go over a solution. </p>
       </div>
       <div class="block">
-        <p padlength="0" lo="7" lf="7">These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, Patrick Vora, Joe Weingartner, and Michael Reefe have contributed edits, video solutions, or links to resources.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
+        <p>These activities were written in collaboration with Jessica Rosenberg over four semesters. The tutorials were revised from semester to semester based on observations made while using them. Robb Oerter, Gunnar Schwertfeger, Patrick Vora, Joe Weingartner, and Michael Reefe have contributed edits, video solutions, or links to resources.</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="9" lf="9">The length of the activities is such that 1–4 students out of 30 will finish.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+        <p>The length of the activities is such that 1–4 students out of 30 will finish.</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="11" lf="11">The problems on these activities are generally basic and straightforward. The problems chosen and their difficulty are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master in order to understand how to approach the homework problems.)</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+        <p>The problems on these activities are generally basic and straightforward. The problems chosen and their difficulty are based on observations when helping students solve activity and homework problems. (Initial drafts of these activities were medium-difficulty homework-level problems and were revised when we understood which mathematical concepts they needed to master in order to understand how to approach the homework problems.)</p>
       </div>
       <div class="block">
-        <div class="comment" lo="13" lf="13">%<strong type="md">Motivation</strong></div>
+        <div class="comment">%<strong>Motivation</strong></div>
       </div>
       <div class="block">
-        <div class="comment" lo="15" lf="15">%In the past, I would solve problems at the board for 40 minutes and then give a quiz at the end. The quiz required students to reproduce something that I had expained several times or to reproduce the set–up of a problem. Based on the results of these very simple quizes, few students got much out of my presentation. In addition, often students would ask for help on homework problems after the recitation that were nearly identical to the problem covered in recitation. It was clear from their questions that their notes from, or memory of, my presentation were of little use.</div>
+        <div class="comment">%In the past, I would solve problems at the board for 40 minutes and then give a quiz at the end. The quiz required students to reproduce something that I had expained several times or to reproduce the set–up of a problem. Based on the results of these very simple quizes, few students got much out of my presentation. In addition, often students would ask for help on homework problems after the recitation that were nearly identical to the problem covered in recitation. It was clear from their questions that their notes from, or memory of, my presentation were of little use.</div>
       </div>
       <div class="block">
-        <div class="comment" lo="17" lf="17">%Prior to working on these, approximately 1/2–2/3 of the students will have attended two 75–minute lectures covering the associated chapter and content.</div>
+        <div class="comment">%Prior to working on these, approximately 1/2–2/3 of the students will have attended two 75–minute lectures covering the associated chapter and content.</div>
       </div>
       <div class="block">
-        <div class="comment" lo="20" lf="20">%However, I find that most students only have time to attempt half of the problems and there are many questions. Based on experience, I assume that after two 75–minute lectures, most students have only knowledge of keywords and associated concepts and are not able to solve problems that require more than identifying the equation to use given variables in the problem statement.</div>
+        <div class="comment">%However, I find that most students only have time to attempt half of the problems and there are many questions. Based on experience, I assume that after two 75–minute lectures, most students have only knowledge of keywords and associated concepts and are not able to solve problems that require more than identifying the equation to use given variables in the problem statement.</div>
       </div>
       <div class="block">
-        <div class="comment" lo="22" lf="22">%For my recitations, students turn in their work at the end of class and I hand out solutions. The minimum score for their work is 7/10 points. Scores below a 10 are for students who made little progress and did not ask questions or work with others. I typically indicate wrong answers but do not take points off unless almost everything is very wrong. I also hand out solutions at the end of class and tell students that in order to have any chance of a passing score on the exams, they must have mastered the problems in this tutorial prior to exams. I also encourage them to review by re–solving the tutorial problems again without referring to their previous work or solutions.</div>
+        <div class="comment">%For my recitations, students turn in their work at the end of class and I hand out solutions. The minimum score for their work is 7/10 points. Scores below a 10 are for students who made little progress and did not ask questions or work with others. I typically indicate wrong answers but do not take points off unless almost everything is very wrong. I also hand out solutions at the end of class and tell students that in order to have any chance of a passing score on the exams, they must have mastered the problems in this tutorial prior to exams. I also encourage them to review by re–solving the tutorial problems again without referring to their previous work or solutions.</div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="24" lf="24"><a name="using" number="2" lo="24" raw="# Using" class="anchor hanchor" href="#using"><span class="hnumber">2</span>&nbsp;<span class="htext">Using</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">24</span></div>
+        <h1><a name="using" class="anchor hanchor" href="#using"><span class="hnumber">2</span>&nbsp;<span class="htext">Using</span></a></h1>
       </div>
       <div class="block">
-        <p padlength="0" lo="26" lf="26">The source files for all activities are available at <a href="(https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> and <a href="https://github.com/rweigel/phys260">GitHub</a>; all files are available in a <a href="https://github.com/rweigel/phys260/archive/refs/heads/master.zip">zip</a> file.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">26</span></div>
+        <p>The source files for all activities are available at <a href="(https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> and <a href="https://github.com/rweigel/phys260">GitHub</a>; all files are available in a <a href="https://github.com/rweigel/phys260/archive/refs/heads/master.zip">zip</a> file.</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="28" lf="28">The master document is the <code type="md">.md</code> file, which is converted to <code type="md">.html</code> and <code type="md">.tex</code>. The <code type="md">.pdf</code> files are based on the <code type="md">.html</code> file. The <code type="md">.tex</code> files are auto–generated from the <code type="md">.md</code> files and a <code type="md">.pdf</code> created with the <code type="md">.tex</code> file may look different than the one stored in the repository.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">28</span></div>
+        <p>The master document is the <code>.md</code> file, which is converted to <code>.html</code> and <code>.tex</code>. The <code>.pdf</code> files are based on the <code>.html</code> file. The <code>.tex</code> files are auto–generated from the <code>.md</code> files and a <code>.pdf</code> created with the <code>.tex</code> file may look different than the one stored in the repository.</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="30" lf="30">If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code type="md">rweigel@gmu.edu</code>. </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">30</span></div>
+        <p>If you have corrections, comments, or suggestions please <a href="https://github.com/rweigel/phys260/issues">submit an issue</a> or email <code>rweigel@gmu.edu</code>. </p>
       </div>
       <div class="block">
-        <p padlength="0" lo="32" lf="32">The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit a figure using MathCha, open the MathCha links in the comments in the <code type="md">.md</code> or <code type="md">.tex</code> file with a web browser. The <code type="md">.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">32</span></div>
+        <p>The figures were created using <a href="https://www.mathcha.io/">MathCha</a>. To edit a figure using MathCha, open the MathCha links in the comments in the <code>.md</code> or <code>.tex</code> file with a web browser. The <code>.tikz</code> files can also be edited using a <a href="https://www.google.com/search?q=tikz+editor">tikz editor</a>.</p>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="34" lf="34" class="highlighted"><a name="resources-and-references" number="3" lo="34" raw="# Resources and References" class="anchor hanchor" href="#resources-and-references"><span class="hnumber">3</span>&nbsp;<span class="htext">Resources and References</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">34</span></div>
+        <h1><a name="resources-and-references" class="anchor hanchor" href="#resources-and-references"><span class="hnumber">3</span>&nbsp;<span class="htext">Resources and References</span></a></h1>
       </div>
       <div class="block">
-        <ul lo="36" lf="37" class="compact">
-          <li markerlength="2" padlength="0" lo="36" lf="36" class="">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="36" lf="36" class="">CU Boulder Science Education Initiative has <a href="https://www.colorado.edu/sei/departments/physics/activities/courses/electricity-magnetism-i-course-materials">resources related to Junior–level E&amp;M</a>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">36</span></div>
+              <p>CU Boulder Science Education Initiative has <a href="https://www.colorado.edu/sei/departments/physics/activities/courses/electricity-magnetism-i-course-materials">resources related to Junior–level E&amp;M</a>.</p>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="37" lf="37" class="">
+          <li>
             <div class="block">
-              <p padlength="0" lo="37" lf="37" class="active"><a href="https://www.pnas.org/doi/full/10.1073/pnas.2221311120">Koedinger et al., 2023, An astonishing regularity in student learning rate</a></p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">37</span></div>
+              <p><a href="https://www.pnas.org/doi/full/10.1073/pnas.2221311120">Koedinger et al., 2023, An astonishing regularity in student learning rate</a></p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">36-37</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="39" lf="39"><a name="activities" number="4" lo="39" raw="# Activities" class="anchor hanchor" href="#activities" lf="39"><span class="hnumber">4</span>&nbsp;<span class="htext">Activities</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">39</span></div>
+        <h1><a name="activities" class="anchor hanchor" href="#activities"><span class="hnumber">4</span>&nbsp;<span class="htext">Activities</span></a></h1>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="41" lf="41"><a name="logarithm-review" number="4.1" lo="41" raw="## Logarithm Review" class="anchor hanchor" href="#logarithm-review" lf="41"><span class="hnumber">4.1</span>&nbsp;<span class="htext">Logarithm Review</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">41</span></div>
+        <h2><a name="logarithm-review" class="anchor hanchor" href="#logarithm-review"><span class="hnumber">4.1</span>&nbsp;<span class="htext">Logarithm Review</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="43" lf="53" class="compact">
-          <li markerlength="2" padlength="0" lo="43" lf="55">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="43" lf="43">Activity – A review of base 10 and base <span len="3" raw="_e_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> logarithms and associated identites used in the Sound Intensity Level Activity. </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">43</span></div>
+              <p>Activity – A review of base 10 and base <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> logarithms and associated identites used in the Sound Intensity Level Activity. </p>
             </div>
             <div class="block">
-              <ul lo="44" lf="53" class="compact">
-                <li markerlength="2" padlength="0" lo="44" lf="48">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="44" lf="48">Documents: | <a href="Logarithms/Logarithms.pdf">pdf</a> | <a href="Logarithms/Logarithms-solutions.pdf">pdf solns</a> | <a href="Logarithms/Logarithms.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">49-55</span></div>
+                    <p>Documents: | <a href="Logarithms/Logarithms.pdf">pdf</a> | <a href="Logarithms/Logarithms-solutions.pdf">pdf solns</a> | <a href="Logarithms/Logarithms.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="49" lf="55">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="49" lf="53">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Logarithms/Logarithms.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">49-53</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Logarithms/Logarithms.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">44-53</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">43-53</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="55" lf="55"><a name="sound-intensity-level" number="4.2" lo="55" raw="## Sound Intensity Level" class="anchor hanchor" href="#sound-intensity-level" lf="55"><span class="hnumber">4.2</span>&nbsp;<span class="htext">Sound Intensity Level</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">55</span></div>
+        <h2><a name="sound-intensity-level" class="anchor hanchor" href="#sound-intensity-level"><span class="hnumber">4.2</span>&nbsp;<span class="htext">Sound Intensity Level</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="57" lf="76" class="loose">
-          <li markerlength="2" padlength="0" lo="57" lf="68">
+        <ul class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="57" lf="58">Activity – Calculations related to sound intensity, <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, and sound intensity level, <span len="7" raw="_\beta_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">69-78</span></div>
+              <p>Activity – Calculations related to sound intensity, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, and sound intensity level, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>.</p>
             </div>
             <div class="block">
-              <ul lo="58" lf="67" class="compact">
-                <li markerlength="2" padlength="0" lo="58" lf="62">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="58" lf="62">Documents: | <a href="Sound_Intensity_Level/Sound_Intensity_Level.pdf">pdf</a> | <a href="Sound_Intensity_Level/Sound_Intensity_Level-solutions.pdf">pdf solns</a> | <a href="Sound_Intensity_Level/Sound_Intensity_Level.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">69-78</span></div>
+                    <p>Documents: | <a href="Sound_Intensity_Level/Sound_Intensity_Level.pdf">pdf</a> | <a href="Sound_Intensity_Level/Sound_Intensity_Level-solutions.pdf">pdf solns</a> | <a href="Sound_Intensity_Level/Sound_Intensity_Level.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="63" lf="68">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="63" lf="67">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Sound_Intensity_Level/Sound_Intensity_Level.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">69-78</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Sound_Intensity_Level/Sound_Intensity_Level.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">69-78</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="69" lf="78">
+          <li>
             <div class="block">
-              <p padlength="0" lo="69" lf="70">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">69-70</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="70" lf="76" class="compact">
-                <li markerlength="2" padlength="0" lo="70" lf="73">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="70" lf="70">Reading:</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">74-78</span></div>
+                    <p>Reading:</p>
                   </div>
                   <div class="block">
-                    <ul lo="71" lf="73" class="compact">
-                      <li markerlength="2" padlength="0" lo="71" lf="71">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="71" lf="71"><a href="https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Section 16.3 of Young and Freedman, 2015, 14th Edition</a></p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">74-78</span></div>
+                          <p><a href="https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Section 16.3 of Young and Freedman, 2015, 14th Edition</a></p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="72" lf="72">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="72" lf="72"><a href="https://drive.google.com/file/d/1TrXkPpdcDHBRtA0P0F3ByJHRPrQxwaaw/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Section 17.4 of Halliday and Resnick, 2014, 10th Edition</a> has a better explanation of <span len="7" raw="_I=P/A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">/</span><span class="mord mathnormal">A</span></span></span></span> and include several diagrams; Sample Problem 17.03 covers an example of a line source of sound, in which case the intensity depends on <span len="5" raw="_1/r_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> insted or <span len="7" raw="_1/r^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> as it is for a point source.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">74-78</span></div>
+                          <p><a href="https://drive.google.com/file/d/1TrXkPpdcDHBRtA0P0F3ByJHRPrQxwaaw/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Section 17.4 of Halliday and Resnick, 2014, 10th Edition</a> has a better explanation of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">/</span><span class="mord mathnormal">A</span></span></span></span> and include several diagrams; Sample Problem 17.03 covers an example of a line source of sound, in which case the intensity depends on <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> insted or <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">1/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> as it is for a point source.</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="73" lf="73">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="73" lf="73">The relationship between the Noise Reduction Ratio (NRR) rating of ear protection and sound intensity level, <span len="7" raw="_\beta_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>, is described at <a href="https://gruseckiaudiology.com/earplug-and-noise-reduction-ratings-explained/">gruseckiaudiology.com</a> and <a href="https://www.sensear.com/blog/how-do-you-calculate-a-noise-reduction-rating-nrr">sensear.com</a>.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">74-78</span></div>
+                          <p>The relationship between the Noise Reduction Ratio (NRR) rating of ear protection and sound intensity level, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>, is described at <a href="https://gruseckiaudiology.com/earplug-and-noise-reduction-ratings-explained/">gruseckiaudiology.com</a> and <a href="https://www.sensear.com/blog/how-do-you-calculate-a-noise-reduction-rating-nrr">sensear.com</a>.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">74-78</span></div>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="74" lf="78">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="74" lf="74">Videos:</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">74</span></div>
+                    <p>Videos:</p>
                   </div>
                   <div class="block">
-                    <ul lo="75" lf="76" class="compact">
-                      <li markerlength="2" padlength="0" lo="75" lf="75">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="75" lf="75">Audio University has <a href="https://www.youtube.com/watch?v=umTSWJ3POOk">a video</a> with visualizations and explanations of spherical waves and the inverse square dependence of <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">76-78</span></div>
+                          <p>Audio University has <a href="https://www.youtube.com/watch?v=umTSWJ3POOk">a video</a> with visualizations and explanations of spherical waves and the inverse square dependence of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>.</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="76" lf="78">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="76" lf="76">The Organic Chemistry Tutor has a <a href="https://www.youtube.com/watch?v=6ZQYALZqZNQ">video</a> demonstrating some of the calucations performed in this activity. Note that the formula <span len="14" raw="_I=P/4\pi r^2_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">/4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> is used without discussion of the assumptions required for it to apply.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">76</span></div>
+                          <p>The Organic Chemistry Tutor has a <a href="https://www.youtube.com/watch?v=6ZQYALZqZNQ">video</a> demonstrating some of the calucations performed in this activity. Note that the formula <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">/4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> is used without discussion of the assumptions required for it to apply.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">75-76</span></div>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">70-76</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">57-76</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="78" lf="78"><a name="vector-review" number="4.3" lo="78" raw="## Vector Review" class="anchor hanchor" href="#vector-review" lf="78"><span class="hnumber">4.3</span>&nbsp;<span class="htext">Vector Review</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">78</span></div>
+        <h2><a name="vector-review" class="anchor hanchor" href="#vector-review"><span class="hnumber">4.3</span>&nbsp;<span class="htext">Vector Review</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="80" lf="93" class="compact">
-          <li markerlength="2" padlength="0" lo="80" lf="90">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="80" lf="80">Activity – Given magnitude and direction, compute components; given components, compute magnitude and direction. (This activity requires only 10–15 minutes.)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">91-95</span></div>
+              <p>Activity – Given magnitude and direction, compute components; given components, compute magnitude and direction. (This activity requires only 10–15 minutes.)</p>
             </div>
             <div class="block">
-              <ul lo="81" lf="90" class="compact">
-                <li markerlength="2" padlength="0" lo="81" lf="85">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="81" lf="85">Documents: | <a href="Vectors/Vectors.pdf">pdf</a> | <a href="Vectors/Vectors-solutions.pdf">pdf solns</a> | <a href="Vectors/Vectors.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">91-95</span></div>
+                    <p>Documents: | <a href="Vectors/Vectors.pdf">pdf</a> | <a href="Vectors/Vectors-solutions.pdf">pdf solns</a> | <a href="Vectors/Vectors.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="86" lf="90">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="86" lf="90">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Vectors/Vectors.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">91-95</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Vectors/Vectors.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">91-95</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="91" lf="95">
+          <li>
             <div class="block">
-              <p padlength="0" lo="91" lf="91">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">91</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="92" lf="93" class="compact">
-                <li markerlength="2" padlength="0" lo="92" lf="92">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="92" lf="92">Reading: <a href="https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 1.7–1.8 of Young and Freedman 2015, 14th Edition</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">93-95</span></div>
+                    <p>Reading: <a href="https://drive.google.com/file/d/1Mj1mNWyOMumaGORjPSj1RSH9aUKUR1m5/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 1.7–1.8 of Young and Freedman 2015, 14th Edition</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="93" lf="95">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="93" lf="93">Videos: <a href="https://www.youtube.com/watch?v=EwSHKuSxX_8&amp;ab_channel=TheOrganicChemistryTutor">Vector Basics</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">93</span></div>
+                    <p>Videos: <a href="https://www.youtube.com/watch?v=EwSHKuSxX_8&amp;ab_channel=TheOrganicChemistryTutor">Vector Basics</a></p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">92-93</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">80-93</span></div>
       </div>
       <div class="block">
-        <div class="comment" lo="95" lf="102">%## Electric Charge % %* Activity – There is no activity for this topic. %* Background material: % * <a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a> % * Reading: <a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 21.1 of Young and Freedman 2015, 14th Edition</a>; see also <a href="https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge">Sections 18.1 at openstax Physics</a> % * <a href="https://www.youtube.com/watch?v=Opz_Grl_vQA&amp;t=2s&amp;ab_channel=BozemanScience">Video</a> – includes references to early experiements related to charged object. % * Overview and History: <a href="https://physics.info/charge/">https://physics.info/charge/</a></div>
+        <div class="comment">%## Electric Charge % %* Activity – There is no activity for this topic. %* Background material: % * <a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a> % * Reading: <a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 21.1 of Young and Freedman 2015, 14th Edition</a>; see also <a href="https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge">Sections 18.1 at openstax Physics</a> % * <a href="https://www.youtube.com/watch?v=Opz_Grl_vQA&amp;t=2s&amp;ab_channel=BozemanScience">Video</a> – includes references to early experiements related to charged object. % * Overview and History: <a href="https://physics.info/charge/">https://physics.info/charge/</a></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="104" lf="104"><a name="electric-force-between-point-charges-coulomb-s-law" number="4.4" lo="104" raw="## Electric Force Between Point Charges (Coulomb's Law)" class="anchor hanchor" href="#electric-force-between-point-charges-coulomb-s-law" lf="104"><span class="hnumber">4.4</span>&nbsp;<span class="htext">Electric Force Between Point Charges (Coulomb’s Law)</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">104</span></div>
+        <h2><a name="electric-force-between-point-charges-coulomb-s-law" class="anchor hanchor" href="#electric-force-between-point-charges-coulomb-s-law"><span class="hnumber">4.4</span>&nbsp;<span class="htext">Electric Force Between Point Charges (Coulomb’s Law)</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="106" lf="131" class="loose">
-          <li markerlength="2" padlength="0" lo="106" lf="118">
+        <ul class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="106" lf="107">Activity: Using Coulomb’s law to find the electric force magnitude and direction between two charges (without <span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> notation; see <a href="rhat/README.html"><span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> module instructor notes</a> for motivation).</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">119-133</span></div>
+              <p>Activity: Using Coulomb’s law to find the electric force magnitude and direction between two charges (without <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> notation; see <a href="rhat/README.html"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> module instructor notes</a> for motivation).</p>
             </div>
             <div class="block">
-              <ul lo="107" lf="117" class="compact">
-                <li markerlength="2" padlength="0" lo="107" lf="107">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="107" lf="107"><a href="Electric_Force/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">119-133</span></div>
+                    <p><a href="Electric_Force/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="108" lf="112">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="108" lf="112">Documents: | <a href="Electric_Force/Electric_Force.pdf">pdf</a> | <a href="Electric_Force/Electric_Force-solutions.pdf">pdf solns</a> | <a href="Electric_Force/Electric_Force.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">119-133</span></div>
+                    <p>Documents: | <a href="Electric_Force/Electric_Force.pdf">pdf</a> | <a href="Electric_Force/Electric_Force-solutions.pdf">pdf solns</a> | <a href="Electric_Force/Electric_Force.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="113" lf="118">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="113" lf="117">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Electric_Force/Electric_Force.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">119-133</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Force">Github</a> | <a href="Electric_Force/Electric_Force.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">119-133</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="119" lf="133">
+          <li>
             <div class="block">
-              <p padlength="0" lo="119" lf="120">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">119-120</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="120" lf="131" class="loose">
-                <li markerlength="2" padlength="0" lo="120" lf="121">
+              <ul class="loose">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="120" lf="121"><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
+                    <p><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="122" lf="123">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="122" lf="123">Reading: <a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 21.3 of Young and Freedman 2015, 14th Edition</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
+                    <p>Reading: <a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 21.3 of Young and Freedman 2015, 14th Edition</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="124" lf="128">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="124" lf="125">Videos</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
+                    <p>Videos</p>
                   </div>
                   <div class="block">
-                    <ul lo="125" lf="127" class="compact">
-                      <li markerlength="2" padlength="0" lo="125" lf="125">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="125" lf="125"><a href="https://www.youtube.com/watch?v=kCp5yYjo9zE">Solving 2– and 3–charge problems in 1-D</a>: Very basic, and long (35 minutes)</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=kCp5yYjo9zE">Solving 2– and 3–charge problems in 1-D</a>: Very basic, and long (35 minutes)</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="126" lf="126">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="126" lf="126"><a href="https://www.youtube.com/watch?v=t6S-PX14Pu4">3–charge problem</a>: Charges at points of equilateral triangle</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=t6S-PX14Pu4">3–charge problem</a>: Charges at points of equilateral triangle</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="127" lf="128">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="127" lf="127"><a href="https://www.youtube.com/watch?v=t6S-PX14Pu4">4–charge problem</a>: Charges at corners of square.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=t6S-PX14Pu4">4–charge problem</a>: Charges at corners of square.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">129-133</span></div>
                   </div>
                 </li>
-                <li markerlength="2" padlength="1" lo="129" lf="133">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="129" lf="130">Demonstrations:</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">129-130</span></div>
+                    <p>Demonstrations:</p>
                   </div>
                   <div class="block">
-                    <ul lo="130" lf="131" class="compact">
-                      <li markerlength="2" padlength="0" lo="130" lf="130">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="130" lf="130"><a href="https://youtu.be/K-8nCXY-iSI?t=29">Estimating charge using balloons</a> – Balloons are charged and hung from a strings attached to a common point on the ceiling. Their charge is estimated using the distance between the balloons.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">131-133</span></div>
+                          <p><a href="https://youtu.be/K-8nCXY-iSI?t=29">Estimating charge using balloons</a> – Balloons are charged and hung from a strings attached to a common point on the ceiling. Their charge is estimated using the distance between the balloons.</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="131" lf="133">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="131" lf="131"><a href="https://www.youtube.com/watch?v=B5LVoU_a08c">Comparing Coulomb’s law to experimental results</a> – An experiment measuring the forces between two charged spheres using an experimental set–up similar to Coulomb’s.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">131</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=B5LVoU_a08c">Comparing Coulomb’s law to experimental results</a> – An experiment measuring the forces between two charged spheres using an experimental set–up similar to Coulomb’s.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">130-131</span></div>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">120-131</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">106-131</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="133" lf="133"><a name="electric-field" number="4.5" lo="133" raw="## Electric Field" class="anchor hanchor" href="#electric-field" lf="133"><span class="hnumber">4.5</span>&nbsp;<span class="htext">Electric Field</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">133</span></div>
+        <h2><a name="electric-field" class="anchor hanchor" href="#electric-field"><span class="hnumber">4.5</span>&nbsp;<span class="htext">Electric Field</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="135" lf="157" class="loose">
-          <li markerlength="2" padlength="0" lo="135" lf="147">
+        <ul class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="135" lf="136">Activity: Computing the electric field due to one point charges (without <span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> notation; see <a href="rhat/README.html"><span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> module instructor notes</a> for motivation).</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">148-159</span></div>
+              <p>Activity: Computing the electric field due to one point charges (without <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> notation; see <a href="rhat/README.html"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> module instructor notes</a> for motivation).</p>
             </div>
             <div class="block">
-              <ul lo="136" lf="146" class="compact">
-                <li markerlength="2" padlength="0" lo="136" lf="136">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="136" lf="136"><a href="Electric_Field/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">148-159</span></div>
+                    <p><a href="Electric_Field/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="137" lf="141">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="137" lf="141">Documents: | <a href="Electric_Field/Electric_Field.pdf">pdf</a> | <a href="Electric_Field/Electric_Field-solutions.pdf">pdf solns</a> | <a href="Electric_Field/Electric_Field.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">148-159</span></div>
+                    <p>Documents: | <a href="Electric_Field/Electric_Field.pdf">pdf</a> | <a href="Electric_Field/Electric_Field-solutions.pdf">pdf solns</a> | <a href="Electric_Field/Electric_Field.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="142" lf="147">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="142" lf="146">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Field">Github</a> | <a href="Electric_Field/Electric_Field.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">148-159</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Field">Github</a> | <a href="Electric_Field/Electric_Field.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">148-159</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="148" lf="159">
+          <li>
             <div class="block">
-              <p padlength="0" lo="148" lf="149">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">148-149</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="149" lf="157" class="loose">
-                <li markerlength="2" padlength="0" lo="149" lf="149">
+              <ul class="loose">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="149" lf="149"><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">154-159</span></div>
+                    <p><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="150" lf="150">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="150" lf="150">Reading: <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.4 of Young and Freedman 2015, 14th Edition</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">154-159</span></div>
+                    <p>Reading: <a href="https://drive.google.com/file/d/1JS_pBuNEwXdz9IzpSBFPJffgVacZmqN7/view?usp=sharing_remove_">Section 21.4 of Young and Freedman 2015, 14th Edition</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="151" lf="153">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="151" lf="152">Videos</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">154-159</span></div>
+                    <p>Videos</p>
                   </div>
                   <div class="block">
-                    <ul lo="152" lf="152" class="compact">
-                      <li markerlength="2" padlength="0" lo="152" lf="153">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="152" lf="152"><a href="https://www.youtube.com/watch?v=_4VC3IHbuW8">Electric Field Definition</a> – Includes details on how the electric field is related to electric force.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">154-159</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=_4VC3IHbuW8">Electric Field Definition</a> – Includes details on how the electric field is related to electric force.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">154-159</span></div>
                   </div>
                 </li>
-                <li markerlength="2" padlength="1" lo="154" lf="159">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="154" lf="155">Visualizations</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">154-155</span></div>
+                    <p>Visualizations</p>
                   </div>
                   <div class="block">
-                    <ul lo="155" lf="157" class="compact">
-                      <li markerlength="2" padlength="0" lo="155" lf="155">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="155" lf="155"><a href="https://www.youtube.com/watch?v=rB83DpBJQsE&amp;t=185s">3-D visualizations of vector fields</a>. Although the video covers advanced vector calculus, is has several vector field visuals that can be used when explaining how to imagine vector fields.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">157-159</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=rB83DpBJQsE&amp;t=185s">3-D visualizations of vector fields</a>. Although the video covers advanced vector calculus, is has several vector field visuals that can be used when explaining how to imagine vector fields.</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="156" lf="156">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="156" lf="156"><a href="https://www.geogebra.org/m/MAsvESCX">2-D visualization of vector field due to two charges</a> – This interactive online Geogebra application can be used to demonstrate superposition and the fact that the electric field points in the same direction as the force on a test charge. A good review is to hide the test charge and ask students to predict the direction the force will be on it.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">157-159</span></div>
+                          <p><a href="https://www.geogebra.org/m/MAsvESCX">2-D visualization of vector field due to two charges</a> – This interactive online Geogebra application can be used to demonstrate superposition and the fact that the electric field points in the same direction as the force on a test charge. A good review is to hide the test charge and ask students to predict the direction the force will be on it.</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="157" lf="159">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="157" lf="157"><a href="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html">PhEt Charges and Fields Simulation</a> – Similar to the Geogebra example above.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">157</span></div>
+                          <p><a href="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html">PhEt Charges and Fields Simulation</a> – Similar to the Geogebra example above.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">155-157</span></div>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">149-157</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">135-157</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="159" lf="159"><a name="using-rhat-to-find-bfvec-f-and-bfvec-e" number="4.6" lo="159" raw="## Using $\rhat$ to find $\bfvec{F}$ and $\bfvec{E}$" class="anchor hanchor" href="#using-rhat-to-find-bfvec-f-and-bfvec-e" lf="159"><span class="hnumber">4.6</span>&nbsp;<span class="htext">Using <span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> to find <span len="11" raw="_\bfvec{F}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">F</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+        <h2><a name="using-rhat-to-find-bfvec-f-and-bfvec-e" class="anchor hanchor" href="#using-rhat-to-find-bfvec-f-and-bfvec-e"><span class="hnumber">4.6</span>&nbsp;<span class="htext">Using <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> to find <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">F</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                     <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -1255,7 +1172,7 @@ c-16-25.333-24-45-24-59z"></path>
 -7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
-                                  </svg></span></span></span></span></span></span></span></span></span></span> and <span len="11" raw="_\bfvec{E}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">E</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
+                                  </svg></span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9691em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9691em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">E</span></span><span style="top:-3.2551em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1522em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin">
                                     <path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
 3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
 10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
@@ -1264,884 +1181,729 @@ c-16-25.333-24-45-24-59z"></path>
 H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
 c-16-25.333-24-45-24-59z"></path>
                                   </svg></span></span></span></span></span></span></span></span></span></span></span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">159</span></div>
       </div>
       <div class="block">
-        <ul lo="161" lf="172" class="compact">
-          <li markerlength="2" padlength="0" lo="161" lf="174">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="161" lf="161">Activity: Computing electric force and electric field using <span len="7" raw="_\rhat_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> notation. </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">161</span></div>
+              <p>Activity: Computing electric force and electric field using <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7079em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7079em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf">r</span></span><span style="top:-3.0134em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span> notation. </p>
             </div>
             <div class="block">
-              <ul lo="162" lf="172" class="compact">
-                <li markerlength="2" padlength="0" lo="162" lf="162">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="162" lf="162"><a href="rhat/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">168-174</span></div>
+                    <p><a href="rhat/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="163" lf="167">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="163" lf="167">Documents: | <a href="rhat/rhat.pdf">pdf</a> | <a href="rhat/rhat-solutions.pdf">pdf solns</a> | <a href="rhat/rhat.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">168-174</span></div>
+                    <p>Documents: | <a href="rhat/rhat.pdf">pdf</a> | <a href="rhat/rhat-solutions.pdf">pdf solns</a> | <a href="rhat/rhat.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="168" lf="174">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="168" lf="172">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/rhat">Github</a> | <a href="rhat/rhat.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">168-172</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/rhat">Github</a> | <a href="rhat/rhat.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">162-172</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">161-172</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="174" lf="174"><a name="superposition-and-symmetry" number="4.7" lo="174" raw="## Superposition and Symmetry" class="anchor hanchor" href="#superposition-and-symmetry" lf="174"><span class="hnumber">4.7</span>&nbsp;<span class="htext">Superposition and Symmetry</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">174</span></div>
+        <h2><a name="superposition-and-symmetry" class="anchor hanchor" href="#superposition-and-symmetry"><span class="hnumber">4.7</span>&nbsp;<span class="htext">Superposition and Symmetry</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="176" lf="194" class="loose">
-          <li markerlength="2" padlength="0" lo="176" lf="187">
+        <ul class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="176" lf="177">Activity: Computing electric force and field due to multiple charges</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
+              <p>Activity: Computing electric force and field due to multiple charges</p>
             </div>
             <div class="block">
-              <ul lo="177" lf="186" class="compact">
-                <li markerlength="2" padlength="0" lo="177" lf="181">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="177" lf="181">Documents: | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry.pdf">pdf</a> | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry-solutions.pdf">pdf solns</a> | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
+                    <p>Documents: | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry.pdf">pdf</a> | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry-solutions.pdf">pdf solns</a> | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="182" lf="187">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="182" lf="186">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Superposition_and_Symmetry">Github</a> | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Superposition_and_Symmetry">Github</a> | <a href="Superposition_and_Symmetry/Superposition_and_Symmetry.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="188" lf="191">
+          <li>
             <div class="block">
-              <p padlength="0" lo="188" lf="189">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="189" lf="190" class="compact">
-                <li markerlength="2" padlength="0" lo="189" lf="189">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="189" lf="189"><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
+                    <p><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="190" lf="191">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="190" lf="190">Reading: <a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 21.5 of Young and Freedman 2015, 14th Edition</a>; see also <a href="https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge">Sections 18.1 at openstax Physics</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
+                    <p>Reading: <a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 21.5 of Young and Freedman 2015, 14th Edition</a>; see also <a href="https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge">Sections 18.1 at openstax Physics</a></p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">192-196</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="192" lf="196">
+          <li>
             <div class="block">
-              <p padlength="0" lo="192" lf="193">Instructor Resources:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">192-193</span></div>
+              <p>Instructor Resources:</p>
             </div>
             <div class="block">
-              <ul lo="193" lf="194" class="compact">
-                <li markerlength="2" padlength="0" lo="193" lf="193">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="193" lf="193"><a href="https://drive.google.com/file/d/1K5x1CevuPg7kibZOom_c32tNwuke3QmG/view?usp=drive_link">Singh, 2006, Student understanding of symmetry and Gauss’s law of electricity</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">194-196</span></div>
+                    <p><a href="https://drive.google.com/file/d/1K5x1CevuPg7kibZOom_c32tNwuke3QmG/view?usp=drive_link">Singh, 2006, Student understanding of symmetry and Gauss’s law of electricity</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="194" lf="196">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="194" lf="194"><a href="https://drive.google.com/file/d/1y18mdxRCsMp8-N2NaupteG2zo6t8YEES/view?usp=drive_link">Li, 2017, Investigating and improving introductory physics students’ understanding of symmetry and Gauss’s law</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">194</span></div>
+                    <p><a href="https://drive.google.com/file/d/1y18mdxRCsMp8-N2NaupteG2zo6t8YEES/view?usp=drive_link">Li, 2017, Investigating and improving introductory physics students’ understanding of symmetry and Gauss’s law</a></p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">193-194</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">176-194</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="196" lf="196"><a name="continuous-charge-distributions" number="4.8" lo="196" raw="## Continuous Charge Distributions" class="anchor hanchor" href="#continuous-charge-distributions" lf="196"><span class="hnumber">4.8</span>&nbsp;<span class="htext">Continuous Charge Distributions</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">196</span></div>
+        <h2><a name="continuous-charge-distributions" class="anchor hanchor" href="#continuous-charge-distributions"><span class="hnumber">4.8</span>&nbsp;<span class="htext">Continuous Charge Distributions</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="198" lf="214" class="loose">
-          <li markerlength="2" padlength="0" lo="198" lf="209">
+        <ul class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="198" lf="199">Activity – Computing the electric field due to a finite line of charge</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">210-216</span></div>
+              <p>Activity – Computing the electric field due to a finite line of charge</p>
             </div>
             <div class="block">
-              <ul lo="199" lf="208" class="compact">
-                <li markerlength="2" padlength="0" lo="199" lf="203">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="199" lf="203">Documents: | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf">pdf</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf">pdf solns</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">210-216</span></div>
+                    <p>Documents: | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.pdf">pdf</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions-solutions.pdf">pdf solns</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="204" lf="209">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="204" lf="208">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions">Github</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.md!" target="_blank">Markdown</a> | </p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">210-216</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Continuous_Charge_Distributions">Github</a> | <a href="Continuous_Charge_Distributions/Continuous_Charge_Distributions.html" target="_blank">Markdown</a> | </p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">210-216</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="210" lf="216">
+          <li>
             <div class="block">
-              <p padlength="0" lo="210" lf="211">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">210-211</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="211" lf="214" class="compact">
-                <li markerlength="2" padlength="0" lo="211" lf="211">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="211" lf="211"><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">212-216</span></div>
+                    <p><a href="https://drive.google.com/drive/folders/1_J8xugm5xmigjdDZpKEiIPhGoZw6t2uU">PowerPoint</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="212" lf="216">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="212" lf="212">Reading:</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">212</span></div>
+                    <p>Reading:</p>
                   </div>
                   <div class="block">
-                    <ul lo="213" lf="214" class="compact">
-                      <li markerlength="2" padlength="0" lo="213" lf="213">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="213" lf="213"><a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Section 21.5</a> of Young and Freedman 2015, 14th Edition</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">214-216</span></div>
+                          <p><a href="https://drive.google.com/file/d/1SkPFIdgiiEv_5sV_QIijzxKOLIPPAwd_/view?usp=drive_link%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Section 21.5</a> of Young and Freedman 2015, 14th Edition</p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="214" lf="216">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="214" lf="214"><a href="https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/">Section 1.5</a> of Introduction to Electricity, Magnetism, and Circuits by Ling et al.</p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">214</span></div>
+                          <p><a href="https://openpress.usask.ca/physics155/chapter/1-5-calculating-electric-fields-of-charge-distributions/">Section 1.5</a> of Introduction to Electricity, Magnetism, and Circuits by Ling et al.</p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">213-214</span></div>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">211-214</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">198-214</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="216" lf="216"><a name="electric-flux" number="4.9" lo="216" raw="## Electric Flux" class="anchor hanchor" href="#electric-flux" lf="216"><span class="hnumber">4.9</span>&nbsp;<span class="htext">Electric Flux</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">216</span></div>
+        <h2><a name="electric-flux" class="anchor hanchor" href="#electric-flux"><span class="hnumber">4.9</span>&nbsp;<span class="htext">Electric Flux</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="218" lf="236" class="loose">
-          <li markerlength="2" padlength="0" lo="218" lf="229">
+        <ul class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="218" lf="219">Activity – Computing electric flux for open and closed rectangular surfaces</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">230-238</span></div>
+              <p>Activity – Computing electric flux for open and closed rectangular surfaces</p>
             </div>
             <div class="block">
-              <ul lo="219" lf="228" class="compact">
-                <li markerlength="2" padlength="0" lo="219" lf="219">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="219" lf="219"><a href="Electric_Flux/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">230-238</span></div>
+                    <p><a href="Electric_Flux/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="220" lf="224">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="220" lf="224">Documents: | <a href="Electric_Flux/Electric_Flux.pdf">pdf</a> | <a href="Electric_Flux/Electric_Flux-solutions.pdf">pdf solns</a> | <a href="Electric_Flux/Electric_Flux.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">230-238</span></div>
+                    <p>Documents: | <a href="Electric_Flux/Electric_Flux.pdf">pdf</a> | <a href="Electric_Flux/Electric_Flux-solutions.pdf">pdf solns</a> | <a href="Electric_Flux/Electric_Flux.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="225" lf="229">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="225" lf="228">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux">Github</a> | <a href="Electric_Flux/Electric_Flux.md!" target="_blank">Markdown</a> | </p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">230-238</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Flux">Github</a> | <a href="Electric_Flux/Electric_Flux.html" target="_blank">Markdown</a> | </p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">230-238</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="230" lf="238">
+          <li>
             <div class="block">
-              <p padlength="0" lo="230" lf="231">Background material:</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">230-231</span></div>
+              <p>Background material:</p>
             </div>
             <div class="block">
-              <ul lo="231" lf="236" class="compact">
-                <li markerlength="2" padlength="0" lo="231" lf="233">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="231" lf="231">Reading:</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">234-238</span></div>
+                    <p>Reading:</p>
                   </div>
                   <div class="block">
-                    <ul lo="232" lf="233" class="compact">
-                      <li markerlength="2" padlength="0" lo="232" lf="232">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="232" lf="232"><a href="https://drive.google.com/file/d/1oOs-vfig3K9_xnXgghFwS-Ef99D4oQqB/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 22.1-22.2 of Young and Freedman 2015, 14th Edition</a></p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">234-238</span></div>
+                          <p><a href="https://drive.google.com/file/d/1oOs-vfig3K9_xnXgghFwS-Ef99D4oQqB/view?usp=sharing%E2%98%85%E2%98%85%E2%98%85%E2%98%85remove%E2%98%85%E2%98%85%E2%98%85%E2%98%85">Sections 22.1-22.2 of Young and Freedman 2015, 14th Edition</a></p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="233" lf="233">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="233" lf="233"><a href="https://phys.libretexts.org/Bookshelves/University_Physics/Book:_Introductory_Physics_-_Building_Models_to_Describe_Our_World_(Martin_Neary_Rinaldo_and_Woodman)/17:_Gauss_Law/17.01:_Flux_of_the_Electric_Field">Introductory Physics - Building Models to Describe Our World (Martin et al.)</a></p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">234-238</span></div>
+                          <p><a href="https://phys.libretexts.org/Bookshelves/University_Physics/Book:_Introductory_Physics_-_Building_Models_to_Describe_Our_World_(Martin_Neary_Rinaldo_and_Woodman)/17:_Gauss_Law/17.01:_Flux_of_the_Electric_Field">Introductory Physics - Building Models to Describe Our World (Martin et al.)</a></p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">234-238</span></div>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="234" lf="238">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="234" lf="234">Videos:</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">234</span></div>
+                    <p>Videos:</p>
                   </div>
                   <div class="block">
-                    <ul lo="235" lf="236" class="compact">
-                      <li markerlength="2" padlength="0" lo="235" lf="235">
+                    <ul class="compact">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="235" lf="235"><a href="https://www.youtube.com/watch?v=9MN0eTC-vzQ">Basic overview of definition of electric flux by Khan Academy</a></p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">236-238</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=9MN0eTC-vzQ">Basic overview of definition of electric flux by Khan Academy</a></p>
                         </div>
                       </li>
-                      <li markerlength="2" padlength="0" lo="236" lf="238">
+                      <li>
                         <div class="block">
-                          <p padlength="0" lo="236" lf="236"><a href="https://www.youtube.com/watch?v=q1eor6oIuUo&amp;ab_channel=TheOrganicChemistryTutor">Basic electric flux calculations by the Organic Chemistry Tutor</a></p>
-                          <div class="block-info" style="display: none;"><span class="line-numbers">236</span></div>
+                          <p><a href="https://www.youtube.com/watch?v=q1eor6oIuUo&amp;ab_channel=TheOrganicChemistryTutor">Basic electric flux calculations by the Organic Chemistry Tutor</a></p>
                         </div>
                       </li>
                     </ul>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">235-236</span></div>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">231-236</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">218-236</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="238" lf="238"><a name="enclosed-charge" number="4.10" lo="238" raw="## Enclosed Charge" class="anchor hanchor" href="#enclosed-charge" lf="238"><span class="hnumber">4.10</span>&nbsp;<span class="htext">Enclosed Charge</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">238</span></div>
+        <h2><a name="enclosed-charge" class="anchor hanchor" href="#enclosed-charge"><span class="hnumber">4.10</span>&nbsp;<span class="htext">Enclosed Charge</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="240" lf="251" class="compact">
-          <li markerlength="2" padlength="0" lo="240" lf="253">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="240" lf="240">Activity – Computing the amount of charge enclosed for common geometries used in Gauss’ law problems</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">240</span></div>
+              <p>Activity – Computing the amount of charge enclosed for common geometries used in Gauss’ law problems</p>
             </div>
             <div class="block">
-              <ul lo="241" lf="251" class="compact">
-                <li markerlength="2" padlength="0" lo="241" lf="241">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="241" lf="241"><a href="Enclosed_Charge/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">247-253</span></div>
+                    <p><a href="Enclosed_Charge/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="242" lf="246">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="242" lf="246">Documents: | <a href="Enclosed_Charge/Enclosed_Charge.pdf">pdf</a> | <a href="Enclosed_Charge/Enclosed_Charge-solutions.pdf">pdf solns</a> | <a href="Enclosed_Charge/Enclosed_Charge.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">247-253</span></div>
+                    <p>Documents: | <a href="Enclosed_Charge/Enclosed_Charge.pdf">pdf</a> | <a href="Enclosed_Charge/Enclosed_Charge-solutions.pdf">pdf solns</a> | <a href="Enclosed_Charge/Enclosed_Charge.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="247" lf="253">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="247" lf="251">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge">Github</a> | <a href="Enclosed_Charge/Enclosed_Charge.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">247-251</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Enclosed_Charge">Github</a> | <a href="Enclosed_Charge/Enclosed_Charge.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">241-251</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">240-251</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="253" lf="253"><a name="gauss-s-law" number="4.11" lo="253" raw="## Gauss's Law" class="anchor hanchor" href="#gauss-s-law" lf="253"><span class="hnumber">4.11</span>&nbsp;<span class="htext">Gauss’s Law</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">253</span></div>
+        <h2><a name="gauss-s-law" class="anchor hanchor" href="#gauss-s-law"><span class="hnumber">4.11</span>&nbsp;<span class="htext">Gauss’s Law</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="255" lf="266" class="compact">
-          <li markerlength="2" padlength="0" lo="255" lf="268">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="255" lf="255">Activity – Using Gauss’s law to find the electric field for spherically symmetric continuous charge distributions.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">255</span></div>
+              <p>Activity – Using Gauss’s law to find the electric field for spherically symmetric continuous charge distributions.</p>
             </div>
             <div class="block">
-              <ul lo="256" lf="266" class="compact">
-                <li markerlength="2" padlength="0" lo="256" lf="256">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="256" lf="256"><a href="Gauss_Law/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">262-268</span></div>
+                    <p><a href="Gauss_Law/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="257" lf="261">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="257" lf="261">Documents: | <a href="Gauss_Law/Gauss_Law.pdf">pdf</a> | <a href="Gauss_Law/Gauss_Law-solutions.pdf">pdf solns</a> | <a href="Gauss_Law/Gauss_Law.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">262-268</span></div>
+                    <p>Documents: | <a href="Gauss_Law/Gauss_Law.pdf">pdf</a> | <a href="Gauss_Law/Gauss_Law-solutions.pdf">pdf solns</a> | <a href="Gauss_Law/Gauss_Law.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="262" lf="268">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="262" lf="266">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Gauss_Law">Github</a> | <a href="Gauss_Law/Gauss_Law.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">262-266</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Gauss_Law">Github</a> | <a href="Gauss_Law/Gauss_Law.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">256-266</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">255-266</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="268" lf="268"><a name="electric-potential" number="4.12" lo="268" raw="## Electric Potential" class="anchor hanchor" href="#electric-potential" lf="268"><span class="hnumber">4.12</span>&nbsp;<span class="htext">Electric Potential</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">268</span></div>
+        <h2><a name="electric-potential" class="anchor hanchor" href="#electric-potential"><span class="hnumber">4.12</span>&nbsp;<span class="htext">Electric Potential</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="270" lf="281" class="compact">
-          <li markerlength="2" padlength="0" lo="270" lf="283">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="270" lf="270">Activity – Computing elelctric potential energy differences and electric potential differences</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">270</span></div>
+              <p>Activity – Computing elelctric potential energy differences and electric potential differences</p>
             </div>
             <div class="block">
-              <ul lo="271" lf="281" class="compact">
-                <li markerlength="2" padlength="0" lo="271" lf="271">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="271" lf="271"><a href="Electric_Potential/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">277-283</span></div>
+                    <p><a href="Electric_Potential/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="272" lf="276">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="272" lf="276">Documents: | <a href="Electric_Potential/Electric_Potential.pdf">pdf</a> | <a href="Electric_Potential/Electric_Potential-solutions.pdf">pdf solns</a> | <a href="Electric_Potential/Electric_Potential.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">277-283</span></div>
+                    <p>Documents: | <a href="Electric_Potential/Electric_Potential.pdf">pdf</a> | <a href="Electric_Potential/Electric_Potential-solutions.pdf">pdf solns</a> | <a href="Electric_Potential/Electric_Potential.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="277" lf="283">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="277" lf="281">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Potential">Github</a> | <a href="Electric_Potential/Electric_Potential.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">277-281</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Electric_Potential">Github</a> | <a href="Electric_Potential/Electric_Potential.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">271-281</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">270-281</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="283" lf="283"><a name="capacitance" number="4.13" lo="283" raw="## Capacitance" class="anchor hanchor" href="#capacitance" lf="283"><span class="hnumber">4.13</span>&nbsp;<span class="htext">Capacitance</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">283</span></div>
+        <h2><a name="capacitance" class="anchor hanchor" href="#capacitance"><span class="hnumber">4.13</span>&nbsp;<span class="htext">Capacitance</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="285" lf="296" class="compact">
-          <li markerlength="2" padlength="0" lo="285" lf="298">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="285" lf="285">Activity – Computing capacitance of a parallel plate and spherical capacitor</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">285</span></div>
+              <p>Activity – Computing capacitance of a parallel plate and spherical capacitor</p>
             </div>
             <div class="block">
-              <ul lo="286" lf="296" class="compact">
-                <li markerlength="2" padlength="0" lo="286" lf="286">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="286" lf="286"><a href="Capacitance/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">292-298</span></div>
+                    <p><a href="Capacitance/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="287" lf="291">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="287" lf="291">Documents: | <a href="Capacitance/Capacitance.pdf">pdf</a> | <a href="Capacitance/Capacitance-solutions.pdf">pdf solns</a> | <a href="Capacitance/Capacitance.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">292-298</span></div>
+                    <p>Documents: | <a href="Capacitance/Capacitance.pdf">pdf</a> | <a href="Capacitance/Capacitance-solutions.pdf">pdf solns</a> | <a href="Capacitance/Capacitance.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="292" lf="298">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="292" lf="296">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Capacitance">Github</a> | <a href="Capacitance/Capacitance.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">292-296</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Capacitance">Github</a> | <a href="Capacitance/Capacitance.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">286-296</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">285-296</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="298" lf="298"><a name="current-and-resistance" number="4.14" lo="298" raw="## Current and Resistance" class="anchor hanchor" href="#current-and-resistance" lf="298"><span class="hnumber">4.14</span>&nbsp;<span class="htext">Current and Resistance</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">298</span></div>
+        <h2><a name="current-and-resistance" class="anchor hanchor" href="#current-and-resistance"><span class="hnumber">4.14</span>&nbsp;<span class="htext">Current and Resistance</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="300" lf="310" class="compact">
-          <li markerlength="2" padlength="0" lo="300" lf="312">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="300" lf="300">Activity - Using Ohm’s law and definitions related to current</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">300</span></div>
+              <p>Activity - Using Ohm’s law and definitions related to current</p>
             </div>
             <div class="block">
-              <ul lo="301" lf="310" class="compact">
-                <li markerlength="2" padlength="0" lo="301" lf="305">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="301" lf="305">Documents: | <a href="Current_and_Resistance/Current_and_Resistance.pdf">pdf</a> | <a href="Current_and_Resistance/Current_and_Resistance-solutions.pdf">pdf solns</a> | <a href="Current_and_Resistance/Current_and_Resistance.html">html</a> | </p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">306-312</span></div>
+                    <p>Documents: | <a href="Current_and_Resistance/Current_and_Resistance.pdf">pdf</a> | <a href="Current_and_Resistance/Current_and_Resistance-solutions.pdf">pdf solns</a> | <a href="Current_and_Resistance/Current_and_Resistance.html">html</a> | </p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="306" lf="312">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="306" lf="310">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Current_and_Resistance">Github</a> | <a href="Current_and_Resistance/Current_and_Resistance.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">306-310</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Current_and_Resistance">Github</a> | <a href="Current_and_Resistance/Current_and_Resistance.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">301-310</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">300-310</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="312" lf="312"><a name="kirchhoff-s-circuit-laws" number="4.15" lo="312" raw="## Kirchhoff's Circuit Laws" class="anchor hanchor" href="#kirchhoff-s-circuit-laws" lf="312"><span class="hnumber">4.15</span>&nbsp;<span class="htext">Kirchhoff’s Circuit Laws</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">312</span></div>
+        <h2><a name="kirchhoff-s-circuit-laws" class="anchor hanchor" href="#kirchhoff-s-circuit-laws"><span class="hnumber">4.15</span>&nbsp;<span class="htext">Kirchhoff’s Circuit Laws</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="314" lf="326" class="compact">
-          <li markerlength="2" padlength="0" lo="314" lf="328">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="314" lf="314">Activity - Using KVL and KCL</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">314</span></div>
+              <p>Activity - Using KVL and KCL</p>
             </div>
             <div class="block">
-              <ul lo="315" lf="326" class="compact">
-                <li markerlength="2" padlength="0" lo="315" lf="315">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="315" lf="315"><a href="Kirchhoffs_Laws/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">326-328</span></div>
+                    <p><a href="Kirchhoffs_Laws/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="316" lf="320">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="316" lf="320">Documents: | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.pdf">pdf</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf">pdf solns</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.html">html</a> | </p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">326-328</span></div>
+                    <p>Documents: | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.pdf">pdf</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws-solutions.pdf">pdf solns</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.html">html</a> | </p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="321" lf="325">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="321" lf="325">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws">Github</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">326-328</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Kirchhoffs_Laws">Github</a> | <a href="Kirchhoffs_Laws/Kirchhoffs_Laws.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="326" lf="328">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="326" lf="326">See also <a href="https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/">Section 10.5 of University Physics Volume 2 by Ling et al.</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">326</span></div>
+                    <p>See also <a href="https://pressbooks.online.ucf.edu/osuniversityphysics2/chapter/kirchhoffs-rules/">Section 10.5 of University Physics Volume 2 by Ling et al.</a></p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">315-326</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">314-326</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="328" lf="328"><a name="equivalent-resistance" number="4.16" lo="328" raw="## Equivalent Resistance" class="anchor hanchor" href="#equivalent-resistance" lf="328"><span class="hnumber">4.16</span>&nbsp;<span class="htext">Equivalent Resistance</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">328</span></div>
+        <h2><a name="equivalent-resistance" class="anchor hanchor" href="#equivalent-resistance"><span class="hnumber">4.16</span>&nbsp;<span class="htext">Equivalent Resistance</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="330" lf="340" class="compact">
-          <li markerlength="2" padlength="0" lo="330" lf="342">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="330" lf="330">Activity - Using KVL and KCL</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">330</span></div>
+              <p>Activity - Using KVL and KCL</p>
             </div>
             <div class="block">
-              <ul lo="331" lf="340" class="compact">
-                <li markerlength="2" padlength="0" lo="331" lf="335">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="331" lf="335">Documents: | <a href="Equivalent_Resistance/Equivalent_Resistance.pdf">pdf</a> | <a href="Equivalent_Resistance/Equivalent_Resistance-solutions.pdf">pdf solns</a> | <a href="Equivalent_Resistance/Equivalent_Resistance.html">html</a> | </p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">336-342</span></div>
+                    <p>Documents: | <a href="Equivalent_Resistance/Equivalent_Resistance.pdf">pdf</a> | <a href="Equivalent_Resistance/Equivalent_Resistance-solutions.pdf">pdf solns</a> | <a href="Equivalent_Resistance/Equivalent_Resistance.html">html</a> | </p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="336" lf="342">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="336" lf="340">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Equivalent_Resistance">Github</a> | <a href="Equivalent_Resistance/Equivalent_Resistance.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">336-340</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Equivalent_Resistance">Github</a> | <a href="Equivalent_Resistance/Equivalent_Resistance.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">331-340</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">330-340</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="342" lf="342"><a name="rc-circuits" number="4.17" lo="342" raw="## RC Circuits" class="anchor hanchor" href="#rc-circuits" lf="342"><span class="hnumber">4.17</span>&nbsp;<span class="htext">RC Circuits</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">342</span></div>
+        <h2><a name="rc-circuits" class="anchor hanchor" href="#rc-circuits"><span class="hnumber">4.17</span>&nbsp;<span class="htext">RC Circuits</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="344" lf="354" class="compact">
-          <li markerlength="2" padlength="0" lo="344" lf="356">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="344" lf="344">Activity</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">344</span></div>
+              <p>Activity</p>
             </div>
             <div class="block">
-              <ul lo="345" lf="354" class="compact">
-                <li markerlength="2" padlength="0" lo="345" lf="349">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="345" lf="349">Documents: | <a href="RC_Circuits/RC_Circuits.pdf">pdf</a> | <a href="RC_Circuits/RC_Circuits-solutions.pdf">pdf solns</a> | <a href="RC_Circuits/RC_Circuits.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">350-356</span></div>
+                    <p>Documents: | <a href="RC_Circuits/RC_Circuits.pdf">pdf</a> | <a href="RC_Circuits/RC_Circuits-solutions.pdf">pdf solns</a> | <a href="RC_Circuits/RC_Circuits.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="350" lf="356">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="350" lf="354">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/RC_Circuits">Github</a> | <a href="RC_Circuits/RC_Circuits.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">350-354</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/RC_Circuits">Github</a> | <a href="RC_Circuits/RC_Circuits.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">345-354</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">344-354</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="356" lf="356"><a name="cross-product-review" number="4.18" lo="356" raw="## Cross--Product Review" class="anchor hanchor" href="#cross-product-review" lf="356"><span class="hnumber">4.18</span>&nbsp;<span class="htext">Cross–Product Review</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">356</span></div>
+        <h2><a name="cross-product-review" class="anchor hanchor" href="#cross-product-review"><span class="hnumber">4.18</span>&nbsp;<span class="htext">Cross–Product Review</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="358" lf="368" class="compact">
-          <li markerlength="2" padlength="0" lo="358" lf="370">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="358" lf="358">Activity - Cross Products</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">358</span></div>
+              <p>Activity - Cross Products</p>
             </div>
             <div class="block">
-              <ul lo="359" lf="368" class="compact">
-                <li markerlength="2" padlength="0" lo="359" lf="363">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="359" lf="363">Documents: | <a href="Cross_Products/Cross_Products.pdf">pdf</a> | <a href="Cross_Products/Cross_Products-solutions.pdf">pdf solns</a> | <a href="Cross_Products/Cross_Products.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">364-370</span></div>
+                    <p>Documents: | <a href="Cross_Products/Cross_Products.pdf">pdf</a> | <a href="Cross_Products/Cross_Products-solutions.pdf">pdf solns</a> | <a href="Cross_Products/Cross_Products.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="364" lf="370">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="364" lf="368">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/(Magnetic_Force">Github</a> | <a href="Cross_Products/Cross_Products.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">364-368</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/(Magnetic_Force">Github</a> | <a href="Cross_Products/Cross_Products.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">359-368</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">358-368</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="370" lf="370"><a name="magnetic-force-on-charged-particles" number="4.19" lo="370" raw="## Magnetic Force on Charged Particles" class="anchor hanchor" href="#magnetic-force-on-charged-particles" lf="370"><span class="hnumber">4.19</span>&nbsp;<span class="htext">Magnetic Force on Charged Particles</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">370</span></div>
+        <h2><a name="magnetic-force-on-charged-particles" class="anchor hanchor" href="#magnetic-force-on-charged-particles"><span class="hnumber">4.19</span>&nbsp;<span class="htext">Magnetic Force on Charged Particles</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="372" lf="383" class="compact">
-          <li markerlength="2" padlength="0" lo="372" lf="385">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="372" lf="372">Activity - Magnetic Force on Charged Particles</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">372</span></div>
+              <p>Activity - Magnetic Force on Charged Particles</p>
             </div>
             <div class="block">
-              <ul lo="373" lf="383" class="compact">
-                <li markerlength="2" padlength="0" lo="373" lf="373">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="373" lf="373"><a href="Magnetic_Force/README.html">Instructor notes</a></p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">379-385</span></div>
+                    <p><a href="Magnetic_Force/README.html">Instructor notes</a></p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="374" lf="378">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="374" lf="378">Documents: | <a href="Magnetic_Force/Magnetic_Force.pdf">pdf</a> | <a href="Magnetic_Force/Magnetic_Force-solutions.pdf">pdf solns</a> | <a href="Magnetic_Force/Magnetic_Force.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">379-385</span></div>
+                    <p>Documents: | <a href="Magnetic_Force/Magnetic_Force.pdf">pdf</a> | <a href="Magnetic_Force/Magnetic_Force-solutions.pdf">pdf solns</a> | <a href="Magnetic_Force/Magnetic_Force.html">html</a> |</p>
                   </div>
                 </li>
-                <li markerlength="2" padlength="0" lo="379" lf="385">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="379" lf="383">Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/(Magnetic_Force">Github</a> | <a href="Magnetic_Force/Magnetic_Force.md!" target="_blank">Markdown</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">379-383</span></div>
+                    <p>Source Files: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/(Magnetic_Force">Github</a> | <a href="Magnetic_Force/Magnetic_Force.html" target="_blank">Markdown</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">373-383</span></div>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">372-383</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="385" lf="385"><a name="magnetic-force-and-torque" number="4.20" lo="385" raw="## Magnetic Force and Torque" class="anchor hanchor" href="#magnetic-force-and-torque" lf="385"><span class="hnumber">4.20</span>&nbsp;<span class="htext">Magnetic Force and Torque</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">385</span></div>
+        <h2><a name="magnetic-force-and-torque" class="anchor hanchor" href="#magnetic-force-and-torque"><span class="hnumber">4.20</span>&nbsp;<span class="htext">Magnetic Force and Torque</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="387" lf="397" class="compact">
-          <li markerlength="2" padlength="0" lo="387" lf="392">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="387" lf="387">Activity - Magnetic Force and Torque</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">393-399</span></div>
+              <p>Activity - Magnetic Force and Torque</p>
             </div>
             <div class="block">
-              <ul lo="388" lf="392" class="compact">
-                <li markerlength="2" padlength="0" lo="388" lf="392">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="388" lf="392">Documents: | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.pdf">pdf</a> | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque-solutions.pdf">pdf solns</a> | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">393-399</span></div>
+                    <p>Documents: | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.pdf">pdf</a> | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque-solutions.pdf">pdf solns</a> | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.html">html</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">393-399</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="393" lf="399">
+          <li>
             <div class="block">
-              <p padlength="0" lo="393" lf="397">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Magnetic_Force_and_Torque">Github</a> | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.md!" target="_blank">Markdown</a> | </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">393-397</span></div>
+              <p>Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Magnetic_Force_and_Torque">Github</a> | <a href="Magnetic_Force_and_Torque/Magnetic_Force_and_Torque.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">387-397</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="399" lf="399"><a name="magnetic-field-of-a-moving-charge" number="4.21" lo="399" raw="## Magnetic Field of a Moving Charge" class="anchor hanchor" href="#magnetic-field-of-a-moving-charge" lf="399"><span class="hnumber">4.21</span>&nbsp;<span class="htext">Magnetic Field of a Moving Charge</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">399</span></div>
+        <h2><a name="magnetic-field-of-a-moving-charge" class="anchor hanchor" href="#magnetic-field-of-a-moving-charge"><span class="hnumber">4.21</span>&nbsp;<span class="htext">Magnetic Field of a Moving Charge</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="401" lf="411" class="compact">
-          <li markerlength="2" padlength="0" lo="401" lf="406">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="401" lf="401">Activity - Magnetic Force of a Moving Charge</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">407-413</span></div>
+              <p>Activity - Magnetic Force of a Moving Charge</p>
             </div>
             <div class="block">
-              <ul lo="402" lf="406" class="compact">
-                <li markerlength="2" padlength="0" lo="402" lf="406">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="402" lf="406">Documents: | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.pdf">pdf</a> | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge-solutions.pdf">pdf solns</a> | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">407-413</span></div>
+                    <p>Documents: | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.pdf">pdf</a> | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge-solutions.pdf">pdf solns</a> | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.html">html</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">407-413</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="407" lf="413">
+          <li>
             <div class="block">
-              <p padlength="0" lo="407" lf="411">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Magnetic_Field_of_Moving_Charge">Github</a> | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.md!" target="_blank">Markdown</a> | </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">407-411</span></div>
+              <p>Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Magnetic_Field_of_Moving_Charge">Github</a> | <a href="Magnetic_Field_of_Moving_Charge/Magnetic_Field_of_Moving_Charge.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">401-411</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="413" lf="413"><a name="the-biot-savart-law" number="4.22" lo="413" raw="## The Biot--Savart Law" class="anchor hanchor" href="#the-biot-savart-law" lf="413"><span class="hnumber">4.22</span>&nbsp;<span class="htext">The Biot–Savart Law</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">413</span></div>
+        <h2><a name="the-biot-savart-law" class="anchor hanchor" href="#the-biot-savart-law"><span class="hnumber">4.22</span>&nbsp;<span class="htext">The Biot–Savart Law</span></a></h2>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="415" lf="415"><a name="magnetic-flux" number="4.23" lo="415" raw="## Magnetic Flux" class="anchor hanchor" href="#magnetic-flux" lf="415"><span class="hnumber">4.23</span>&nbsp;<span class="htext">Magnetic Flux</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">415</span></div>
+        <h2><a name="magnetic-flux" class="anchor hanchor" href="#magnetic-flux"><span class="hnumber">4.23</span>&nbsp;<span class="htext">Magnetic Flux</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="417" lf="427" class="compact">
-          <li markerlength="2" padlength="0" lo="417" lf="422">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="417" lf="417">Activity - Magnetic Flux</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">423-429</span></div>
+              <p>Activity - Magnetic Flux</p>
             </div>
             <div class="block">
-              <ul lo="418" lf="422" class="compact">
-                <li markerlength="2" padlength="0" lo="418" lf="422">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="418" lf="422">Documents: | <a href="Magnetic_Flux/Magnetic_Flux.pdf">pdf</a> | <a href="Magnetic_Flux/Magnetic_Flux-solutions.pdf">pdf solns</a> | <a href="Magnetic_Flux/Magnetic_Flux.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">423-429</span></div>
+                    <p>Documents: | <a href="Magnetic_Flux/Magnetic_Flux.pdf">pdf</a> | <a href="Magnetic_Flux/Magnetic_Flux-solutions.pdf">pdf solns</a> | <a href="Magnetic_Flux/Magnetic_Flux.html">html</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">423-429</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="423" lf="429">
+          <li>
             <div class="block">
-              <p padlength="0" lo="423" lf="427">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Magnetic_Flux">Github</a> | <a href="Magnetic_Flux/Magnetic_Flux.md!" target="_blank">Markdown</a> | </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">423-427</span></div>
+              <p>Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Magnetic_Flux">Github</a> | <a href="Magnetic_Flux/Magnetic_Flux.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">417-427</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="429" lf="429"><a name="lenz-s-law" number="4.24" lo="429" raw="## Lenz's Law" class="anchor hanchor" href="#lenz-s-law" lf="429"><span class="hnumber">4.24</span>&nbsp;<span class="htext">Lenz’s Law</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">429</span></div>
+        <h2><a name="lenz-s-law" class="anchor hanchor" href="#lenz-s-law"><span class="hnumber">4.24</span>&nbsp;<span class="htext">Lenz’s Law</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="431" lf="441" class="compact">
-          <li markerlength="2" padlength="0" lo="431" lf="436">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="431" lf="431">Activity - Magnetic Flux</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">437-443</span></div>
+              <p>Activity - Magnetic Flux</p>
             </div>
             <div class="block">
-              <ul lo="432" lf="436" class="compact">
-                <li markerlength="2" padlength="0" lo="432" lf="436">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="432" lf="436">Documents: | <a href="Lenzs_Law/Lenzs_Law.pdf">pdf</a> | <a href="Lenzs_Law/Lenzs_Law-solutions.pdf">pdf solns</a> | <a href="Lenzs_Law/Lenzs_Law.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">437-443</span></div>
+                    <p>Documents: | <a href="Lenzs_Law/Lenzs_Law.pdf">pdf</a> | <a href="Lenzs_Law/Lenzs_Law-solutions.pdf">pdf solns</a> | <a href="Lenzs_Law/Lenzs_Law.html">html</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">437-443</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="437" lf="443">
+          <li>
             <div class="block">
-              <p padlength="0" lo="437" lf="441">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Lenzs_Law">Github</a> | <a href="Lenzs_Law/Lenzs_Law.md!" target="_blank">Markdown</a> | </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">437-441</span></div>
+              <p>Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/Lenzs_Law">Github</a> | <a href="Lenzs_Law/Lenzs_Law.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">431-441</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="443" lf="443"><a name="rl-circuits" number="4.25" lo="443" raw="## RL Circuits" class="anchor hanchor" href="#rl-circuits" lf="443"><span class="hnumber">4.25</span>&nbsp;<span class="htext">RL Circuits</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">443</span></div>
+        <h2><a name="rl-circuits" class="anchor hanchor" href="#rl-circuits"><span class="hnumber">4.25</span>&nbsp;<span class="htext">RL Circuits</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="445" lf="455" class="compact">
-          <li markerlength="2" padlength="0" lo="445" lf="450">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="445" lf="445">Activity - RL Charging and Discharging</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">451-457</span></div>
+              <p>Activity - RL Charging and Discharging</p>
             </div>
             <div class="block">
-              <ul lo="446" lf="450" class="compact">
-                <li markerlength="2" padlength="0" lo="446" lf="450">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="446" lf="450">Documents: | <a href="RL_Circuits/RL_Circuits.pdf">pdf</a> | <a href="RL_Circuits/RL_Circuits-solutions.pdf">pdf solns</a> | <a href="RL_Circuits/RL_Circuits.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">451-457</span></div>
+                    <p>Documents: | <a href="RL_Circuits/RL_Circuits.pdf">pdf</a> | <a href="RL_Circuits/RL_Circuits-solutions.pdf">pdf solns</a> | <a href="RL_Circuits/RL_Circuits.html">html</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">451-457</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="451" lf="457">
+          <li>
             <div class="block">
-              <p padlength="0" lo="451" lf="455">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/RL_Circuits">Github</a> | <a href="RL_Circuits/RL_Circuits.md!" target="_blank">Markdown</a> | </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">451-455</span></div>
+              <p>Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/RL_Circuits">Github</a> | <a href="RL_Circuits/RL_Circuits.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">445-455</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="457" lf="457"><a name="rlc-and-ac-circuits" number="4.26" lo="457" raw="## RLC and AC Circuits" class="anchor hanchor" href="#rlc-and-ac-circuits" lf="457"><span class="hnumber">4.26</span>&nbsp;<span class="htext">RLC and AC Circuits</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">457</span></div>
+        <h2><a name="rlc-and-ac-circuits" class="anchor hanchor" href="#rlc-and-ac-circuits"><span class="hnumber">4.26</span>&nbsp;<span class="htext">RLC and AC Circuits</span></a></h2>
       </div>
       <div class="block">
-        <ul lo="459" lf="469" class="compact">
-          <li markerlength="2" padlength="0" lo="459" lf="464">
+        <ul class="compact">
+          <li>
             <div class="block">
-              <p padlength="0" lo="459" lf="459">Activity - RLC Circuits</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">465-470</span></div>
+              <p>Activity - RLC Circuits</p>
             </div>
             <div class="block">
-              <ul lo="460" lf="464" class="compact">
-                <li markerlength="2" padlength="0" lo="460" lf="464">
+              <ul class="compact">
+                <li>
                   <div class="block">
-                    <p padlength="0" lo="460" lf="464">Documents: | <a href="RLC_Circuits/RLC_Circuits.pdf">pdf</a> | <a href="RLC_Circuits/RLC_Circuits-solutions.pdf">pdf solns</a> | <a href="RLC_Circuits/RLC_Circuits.html">html</a> |</p>
-                    <div class="block-info" style="display: none;"><span class="line-numbers">465-470</span></div>
+                    <p>Documents: | <a href="RLC_Circuits/RLC_Circuits.pdf">pdf</a> | <a href="RLC_Circuits/RLC_Circuits-solutions.pdf">pdf solns</a> | <a href="RLC_Circuits/RLC_Circuits.html">html</a> |</p>
                   </div>
                 </li>
               </ul>
-              <div class="block-info" style="display: none;"><span class="line-numbers">465-470</span></div>
             </div>
           </li>
-          <li markerlength="2" padlength="0" lo="465" lf="470">
+          <li>
             <div class="block">
-              <p padlength="0" lo="465" lf="469">Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/RLC_Circuits">Github</a> | <a href="RLC_Circuits/RLC_Circuits.md!" target="_blank">Markdown</a> | </p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">465-469</span></div>
+              <p>Source: | <a href="https://www.overleaf.com/read/btssfxsjgyzr">Overleaf</a> | <a href="https://github.com/rweigel/phys260/tree/master/RLC_Circuits">Github</a> | <a href="RLC_Circuits/RLC_Circuits.html" target="_blank">Markdown</a> | </p>
             </div>
           </li>
         </ul>
-        <div class="block-info" style="display: none;"><span class="line-numbers">459-469</span></div>
       </div>
     </div>
   </div>
