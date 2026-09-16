@@ -324,6 +324,12 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
 
 \newpage
 
+%# $U$ and $V$ for a point charge
+
+% Now that you have computed $U$ and $V$ ...
+% From problem 1.2 and 2.2, only the final and initial separation distances mattered due to conservative force. So now we can introduce $U$ and $V$ for a point charge and not do integration anymore.
+
+
 # Collections of Charges
 
 ## Problem
