@@ -2,7 +2,7 @@
 Title: Electric Potential
 ```
 
-# Electric Potential Energy Differences, $\Delta U$
+# Potential Energy Differences, $\Delta U$
 
 %Recall from mechanics that the symbol $U$ was used to represent potential energy. The potential energy of an object increases when you do a positive amount of work on it. For example, if you lift a mass from the floor, you increase its potential energy. In addition, recall that work done on an object {\it changes} its potential energy, and this change is represented by $\Delta U$.
 
@@ -20,9 +20,9 @@ Another way of writing $\bfvec{F}\bfcdot d\bfvec{l}$ is $|F|dl\cos\phi$, where $
 
    $$W_{a\rightarrow b}=\int_a^b \bfvec{F}\cdot d\bfvec{l}=(\pm)|\bfvec{F}|L$$
 
-   where $L$ is positive; the $+$ sign is used for a force that is in the direction of movement, and the $-$ sign is used for a force that is in the opposite direction of movement. For example, if you lift a mass $m$ upwards at a constant velocity a distance $L$, the force you exert is in the same direction of movement, so you do a work of $mgL$ on the mass. The gravitational force on the mass is in the opposite direction of movement, so the work done by the gravitational force is $-mgL$. If, instead, you lower the mass at a constant velocity, your force is upwards, and the direction of motion is downwards, so the work you do is now $-mgL$, and the work done by the gravitational force is $+mgL$.
+   where $L$ is positive; the $+$ sign is used for a force that is in the direction of movement, and the $-$ sign is used for a force that is in the opposite direction of movement. For example, if you lift a mass $m$ upwards at a constant velocity a distance $L$, the force you exert is in the same direction of movement, so you do a work of $mgL$ on the mass. The gravitational force on the mass is in the opposite direction of movement, so the work done by the gravitational force is $-mgL$.
 
-3. When the direction of force relative to the direction of movement changes (so the dot product changes) and/or the magnitude of force changes. This is covered on [page 755 of the textbook](https://drive.google.com/file/d/10Zsubt69yu6wn-AWBvKEjyezXSiaeIup/view?usp=sharing★★★★remove★★★★).
+3. When the direction of force relative to the direction of movement changes (so the dot product changes) and/or the magnitude of force changes.
 
 If $\bfvec{F}$ is a special kind of force, called a _conservative_ force, we do not need to perform integration to every time that we want to compute the work. For each conservative force, there is an equation for $U$ (called potential energy, or PE) such that one needs to only know $U$ at $b$ and $a$. In this case,
 
@@ -32,59 +32,16 @@ $$
 
 where $W_{a\rightarrow b}^{\text{cons}}$ is the work done by the conservative force in moving the object from $a$ to $b$, the symbol $\equiv$ is used to indicate a definition, and the superscript $\text{cons}$ indicates that the equation applies only to a conservative force.
 
-In mechanics, you encountered conservative forces of
-
-1. A force that is constant in magnitude and direction (e.g., the force on a small mass near Earth's surface)
-2. A force that varies according to $\rhat/r^2$ (e.g., the gravitational force between two objects separated by a large distance)
-3. A force that varies according to $kx$, where $k$ is a spring constant and $x$ is the displacement of the string from its equilibrium position
-
-In E&M, we encounter the first two types of conservative forces.
-
-% This has been revised according to Joe's notes, but I think there may be some lurking technical inconsistencies or cases where the general rule does not apply due to not accounting for KE or heat.
-
-%One of the most common difficulties in calculating work and change in potential energy is getting the correct sign for the answer. The first two problems in this activity have questions that help you determine the correct sign of work and changes in potential energy.
-
-%For a conservative force, determine the direction an object would move when released from rest if subjected to only the conservative force (call this the "release direction"). If the object moves or is moved a small step in the release direction, its potential energy will decrease. If the object moves or is moved a small step in a direction opposite to the release direction, its potential energy will increase.
-
-%* The potential energy of an object increases when you do positive work on it. That is, when your force on the object is in the direction that you move the object. One way of determining if an object's potential is higher is if it has more potential to do something. A mass lifted upwards has more potential to crush something below it. If you lower a mass, it will have less potential to crush something.
-
-%* Potential energy increases when the conservative force does negative work and decreases when the cconservative force does positive pork. Potential energy represent the potential for the conservative force to do positve work.
-
-%**Example**
-
-%Near Earth's surface, the gravitational field is nearly constant in magnitude and direction. If point $a$ is a point on the floor and point $b$ is a distance $L$ above $a$, using
-
-%$$W_{a\rightarrow b}=(\pm)|\bfvec{F}|L$$
-
-%1. How much work is required by you to lift the object from $a$ to $b$ at a constant velocity?;
-%2. How much work is done by the gravitational field?
-
-%3. The equation for $U$ for a mass $m$ in near Earth's surface is $g$ is $mgy$, where $y$ is the distance from Earth's surface. Use $W_{a\rightarrow b}^{\text{cons}} \equiv -\Delta U = -(U_b-U_a)$ to find the work done by the gravitational field when the object is moved from $a$ to $b$.
-
-%**Solution**
-
-%1. Your force on the object must be upwards in order to lift it upwards, so your force is in the direction of movement. So $W_{a\rightarrow b}=(+)mgL$.
- 
-%2. The gravitational force is downwards, which is opposite to the direction of movement. So $W_{a\rightarrow b}=(-)mgL$
-
-
-%3. $U_b=mgy_b$ and $U_a=mgy_a$. Using
-
-%   $$W_{a\rightarrow b}^{\text{cons}} \equiv -\Delta U = -(U_b-U_a)$$
-
-%   gives
-
-%   $W_{a\rightarrow b}^{\text{cons}} = (mgy_b-mgy_a) = -mg(y_b-y_a) = -mgL$, which matches the answer to 2., as expected.
-
 \newpage
 
 ## Problem -- Uniform Field
 
-The following diagram shows a region of space where the electric field is constant and has a value of $3\text{ N/C}$ and points to the right. Electric field lines are shown as lines with arrows.
+The following diagram shows a region of space where the electric field is constant and has a value of $3\text{ N/C}$ and points to the right. Electric field lines are shown as light lines with arrows.
 
-<img src="figures/Uniform_Field.svg"/>
+<img src="figures/Uniform_Field.svg" width="190px"/>
 
 1. Is the force due to this electric field conservative?
+
    \ifsolutions
    {\bf Answer}: Yes
    \fi
@@ -123,7 +80,7 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:4em"/>
    \fi
 
-5. A charge of $-3\text{ C}$ is moved straight downward from $A$ to $D$. (a) How much work was done by the electric field? (b) By how much has the potential energy?
+5. A charge of $-3\text{ C}$ is moved straight downward from $A$ to $D$. (a) How much work was done by the electric field? (b) By how much has the potential energy changed?
 
    \ifsolutions
    {\bf Answer}: The force due to the field is always perpendicular to the direction of movement. So the work done is zero: (a) $0\text{ J}$; (b) $0 \text{ J}$.
@@ -139,7 +96,10 @@ The following diagram shows a region of space where the electric field is consta
    <div style="height:3em"/>
    \fi
 
+\ifsolutions
+\else
 \newpage
+\fi
 
 ## Problem -- Radial Field
 
@@ -212,7 +172,10 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
    {\bf Answer}: (a) $0\text{ J}$, (b) $0\text{ J}$
    \fi
 
+\ifsolutions
+\else
 \newpage
+\fi
 
 # Electric potential difference, $\Delta V$
 
@@ -232,9 +195,13 @@ $$\Delta V = {\Delta U}/{q_o}$$
 
 The advantage of using changes in electric potential ($\Delta V$) as opposed to changes in electric potential energy ($\Delta U$) of a specific amount of charge is that once the electric potential difference $\Delta V$ between two points is known for a test charge, the change in potential energy for an arbitrary amount of charge $Q$ can be computed by simply multiplying $\Delta V$ by $Q$. This is similar to the advantage of the electric field. If we know the electric field at a given point, we can find the force on an arbitrary charge $Q$ at that point by multiplying $\bfvec{E}$ by $Q$.
 
+\ifsolutions
+\else
 \newpage
+\fi
 
-## Problem
+
+## Problem - Uniform Field
 
 The following diagram shows a region of space where the electric field is constant and has a value of $3$~N/C. 
 
@@ -296,7 +263,7 @@ The following diagram shows a region of space where the electric field is consta
 
 \newpage
 
-## Problem
+## Problem - Radial Field
 
 There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for this charge are shown. To simplify the math, use $k=9\cdot 10^9\text{ N}\cdot\text{m}^2/\text{C}^2$.
 
@@ -357,7 +324,83 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
 
 \newpage
 
-# $U$ and $V$ and Superposition
+# Collections of Charges
+
+## Problem
+
+Suppose $q_1$ is at $(x,y) = (a,0)$.
+
+1. What is $\Delta U$ if $q_0$ is moved from $(x,y)=(0,\infty)$ to $(x,y)=(0,0)$. Call this $\Delta U_1$.
+
+   \ifsolutions
+   {\bf Answer}: $\Delta U_1 = kq_0q_1/a$. We could compute the (complicated) integral of the force to find the work (try it). But based on problem 1.2, we know that the work done by the electric field is
+
+   $$W_1 = kq_0q_1\left(\frac{1}{r_{\text{initial}}}-\frac{1}{r_{\text{final}}}\right)$$
+
+   where $r$ is the separation distance between $q_0$ and $q_1$. $r_\text{initial}=\infty$ and $r_\text{final}=a$, so
+
+   $W_1 = -kq_0q_1/a$ and $\Delta U_1 = kq_0q_1/a$. Sign check: Assume $q_0$ and $q_1$ are positive. As $q_0$ is moved from far away to the origin, the electric force on it due to $q_1$ is always opposite the direction of movement (but with a changing magnitude). Thus, we expect $W_1$ to be positive in this case.
+
+   \else
+   \vspace{1in}
+   \fi
+
+2. What is $\Delta V$ between $(x,y)=(0,\infty)$ and $(x,y)=(0,0)$? Call this $\Delta V_1$.
+
+   \ifsolutions
+   {\bf Answer}: $\Delta V_1 = \Delta U_1/q_0 = kq_1/a$
+   \else 
+   \vspace{10mm}
+   \fi
+
+3. Does you answer change if instead of $q_0$ starting at $(x,y)=(0,\infty)$, the charge started at $(x,y)=(\infty,0)$?
+
+   \ifsolutions
+   {\bf Answer}: No -- only the initial and final positions matter because the force on $q_0$ is a conservative force.
+   \else 
+   \vspace{10mm}
+   \fi
+
+Now, suppose $q_1$ is not there and $q_2$ is at $(x,y) = (a,0)$. 
+
+1. What is $\Delta U$ if $q_0$ is moved from $(x,y)=(0,\infty)$ to $(x,y)=(0,0)$. Call this $\Delta U_2$.
+
+   \ifsolutions
+   {\bf Answer}: $\Delta U_1 = kq_0q_2/a$
+   \else
+   \vspace{1in}
+   \fi
+
+2. What is $\Delta V$ between $(x,y)=(0,\infty)$ and $(x,y)=(0,0)$? Call this $\Delta V_2$
+
+   \ifsolutions
+   {\bf Answer}: $\Delta V_2 = kq_2/a$
+   \else
+   \vspace{10mm}
+   \fi
+
+----
+
+The principle of superposition says that the change in potential associated with the movement of $q_0$ is
+
+$\Delta U = \Delta U_1 + \Delta U_2.$
+
+and the difference in potential between the final position of $q_0$ and its initial position is
+
+$\Delta V = \Delta V_1 + \Delta V_2.$
+
+If your answers from the previous problem are used, you should find
+
+$$\Delta U = k\frac{q_0q_1}{a} + k\frac{q_0q_2}{a}$$
+
+$$\Delta V = \frac{\Delta U}{q_o} = k\frac{q_1}{a} + k\frac{q_2}{a}$$
+
+%## Problem
+
+%Suppose $q_1$ is at $(x,y) = (a,0)$ and $q_2$ is at $(x,y) = (a,0)$. What is $\Delta V$ between $r=\infty$ and $(x,y)=(0,b)$?
+
+
+%# $U$ and $V$ and Superposition
 
 %Recall that the work done by the electric field when a charge $q_0$ is moved from $a$ to $b$ is
 
@@ -378,173 +421,170 @@ There is a charge of $-6\text{ C}$ at the origin. Some electric field lines for 
 %\text{cons}} \equiv -\Delta U = -(U_b-U_a)
 %$$
 
-The electric potential energy of a charge $q_0$ that is a distance of $r_1$ from a charge $q_1$ is defined to be 
+%The electric potential energy of a charge $q_0$ that is a distance of $r_1$ from %a charge $q_1$ is defined to be 
 
-$$
-U=k\frac{q_0q_1}{r_1}
-$$
+%$$
+%U=k\frac{q_0q_1}{r_1}
+%$$
 
-This corresponds to the work required to move $q_0$ from infinity to $r_1$. 
-In this formula, if the charges have opposite signs then $U$ is negative; if they have the same sign then $U$  is positive. Note that there is a sign associated with the potential energy, but the direction of the vector that connects the charges does not matter; the equation for $U$ only involves the values of the charges and the magnitude of the separation distance between them. As a result, we can also state that the formula above corresponds to the work required to move $q_1$ from infinity to a distance $r_1$ from $q_0$.
+%This corresponds to the work required to move $q_0$ from infinity to $r_1$. In this formula, if the charges have opposite signs then $U$ is negative; if they have the same sign then $U$  is positive. Note that there is a sign associated with the potential energy, but the direction of the vector that connects the charges does not matter; the equation for $U$ only involves the values of the charges and the magnitude of the separation distance between them. As a result, we can also state that the formula above corresponds to the work required to move $q_1$ from infinity to a distance $r_1$ from $q_0$.
 
-Consider next the potential energy of charge $q_0$ when it is a distance $r_1$ from charge $q_1$ and a distance $r_2$ from charge $q_2$. The potential energy of $q_0$ is the sum
+%Consider next the potential energy of charge $q_0$ when it is a distance $r_1$ from charge $q_1$ and a distance $r_2$ from charge $q_2$. The potential energy of $q_0$ is the sum
 
-$$
-U=k\frac{q_0q_1}{r_1}+k\frac{q_0q_2}{r_2}
-$$
+%$$
+%U=k\frac{q_0q_1}{r_1}+k\frac{q_0q_2}{r_2}
+%$$
 
-More generally, if $q_o$ is among a group of $N$ other charges, the potential energy of $q_0$ is
+%More generally, if $q_o$ is among a group of $N$ other charges, the potential energy of $q_0$ is
 
-$$
-U=k q_0 \sum_{i=1}^N {\frac{q_i}{r_i}}
-$$
+%$$
+%U=k q_0 \sum_{i=1}^N {\frac{q_i}{r_i}}
+%$$
 
-Dividing by $q_o$ gives the electric potential at a point in space due to a group of $N$ charges:
+%Dividing by $q_o$ gives the electric potential at a point in space due to a group of $N$ charges:
 
-$$
-V=k \sum_{i=1}^N {\frac{q_i}{r_i}}
-$$
+%$$
+%V=k \sum_{i=1}^N {\frac{q_i}{r_i}}
+%$$
 
-\newpage
+%\newpage
 
-## Problem
+%## Problem
 
-<img src="figures/Collection_of_Charges.svg"/>
+%<img src="figures/Collection_of_Charges.svg"/>
 
-1. What is the electric potential energy of the charge $q_0$ in the diagram shown? 
+%1. What is the electric potential energy of the charge $q_0$ in the diagram shown? 
 
-   \ifsolutions
-   {\bf Answer}
+%   \ifsolutions
+%   {\bf Answer}
+%   $$
+%   U = \frac{kq_oq_1}{r_1}+\frac{kq_oq_2}{r_2}+\frac{kq_oq_3}{r_3}
+%   $$
 
-   $$
-   U = \frac{kq_oq_1}{r_1}+\frac{kq_oq_2}{r_2}+\frac{kq_oq_3}{r_3}
-   $$
+%   This represents the amount of energy it would take to move charge $q_o$ from infinity to its position on the diagram.
+%   \else
+%   <div style="height:4em"/>
+%   \fi
 
-   This represents the amount of energy it would take to move charge $q_o$ from infinity to its position on the 
-   diagram.
-   \else
-   <div style="height:4em"/>
-   \fi
+%2. What is the electric potential at the position of $q_0$ if $q_0$ was not there? 
 
-2. What is the electric potential at the position of $q_0$ if $q_0$ was not there? 
+%   \ifsolutions
+%   {\bf Answer}
 
-   \ifsolutions
-   {\bf Answer}
-
-   $$
-   V = \frac{kq_1}{r_1}+\frac{kq_2}{r_2}+\frac{kq_3}{r_3}
-   $$
+%   $$
+%   V = \frac{kq_1}{r_1}+\frac{kq_2}{r_2}+\frac{kq_3}{r_3}
+%   $$
 
    %That is, the potential at a given location is found from potential energy of a charge at that location by dividing by the charge's potential energy by the value of the charge.
-   \else
-   <div style="height:4em"/>
-   \fi
+%   \else
+%   <div style="height:4em"/>
+%   \fi
 
-3. Can you find the potential energy at the position of $q_0$ if that charge was not there? Why or why not? 
+%3. Can you find the potential energy at the position of $q_0$ if that charge was not there? Why or why not? 
 
-   \ifsolutions
-   {\bf Answer}: No. It does not make sense to ask what the potential energy is at a point in space. Only physical objects (e.g., masses, charges) have potential energy.
-   \else
-   <div style="height:4em"/>
-   \fi
+%   \ifsolutions
+%   {\bf Answer}: No. It does not make sense to ask what the potential energy is at a point in space. Only physical objects (e.g., masses, charges) have potential energy.
+%   \else
+%   <div style="height:4em"/>
+%   \fi
 
-4. Explain the difference between potential and potential energy. 
+%4. Explain the difference between potential and potential energy. 
 
-   \ifsolutions
-   {\bf Answer}: Potential energy is the energy associated with an object at a given location in space. The electric potential energy of a charge is the energy required to move it from a large distance away from all other charges to a given location in space. The electric potential energy of a charge $Q$ at a point in space is related to the electric potential at that point in space by $U=QV$.
-   \else
-   <div style="height:4em"/>
-   \fi
+%   \ifsolutions
+%   {\bf Answer}: Potential energy is the energy associated with an object at a given location in space. The electric potential energy of a charge is the energy required to move it from a large distance away from all other charges to a given location in space. The electric potential energy of a charge $Q$ at a point in space is related to the electric potential at that point in space by $U=QV$.
+%   \else
+%   <div style="height:4em"/>
+%   \fi
 
-\newpage
+%\newpage
 
-## Problem
+%## Problem
 
-Given a point charge $q_1$ at the origin:
+%Given a point charge $q_1$ at the origin:
 
-1. Write the general equation for the electric potential at a distance $r$ from $q_1$
+%1. Write the general equation for the electric potential at a distance $r$ from $q_1$
 
-   \ifsolutions
-   **Answer**:
-   $V=kq_1/r$
-   \else
-   <div style="height:3em"/>
-   \fi
+%   \ifsolutions
+%  **Answer**:
+%   $V=kq_1/r$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
 
-2. Find the electric potential, $V_1$, at $(x,y) = (-d,0)$ due to $q_1$.
+%2. Find the electric potential, $V_1$, at $(x,y) = (-d,0)$ due to $q_1$.
 
-   \ifsolutions
-   **Answer**:
-   $V_1(d,0)=kq_1/d$
-   \else
-   <div style="height:3em"/>
-   \fi
+%   \ifsolutions
+%   **Answer**:
+%   $V_1(d,0)=kq_1/d$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
 
-3. If a charge $q_2$ is placed at $(x,y) = (d,0)$, find the electric potential, $V$, at $(x,y) = (-d,0)$ (hint -- it is the sum of the electric potentials at due to $q_1$ and $q_2$).
+%3. If a charge $q_2$ is placed at $(x,y) = (d,0)$, find the electric potential, $V$, at $(x,y) = (-d,0)$ (hint -- it is the sum of the electric potentials at due to $q_1$ and $q_2$).
 
-   \ifsolutions
-   **Answer**:
-   $V(-d,0)=V_1(-d,0)+V_2(-d,0) = kq_1/d + kq_2/2d$
-   \else
-   <div style="height:3em"/>
-   \fi
+%   \ifsolutions
+%   **Answer**:
+%   $V(-d,0)=V_1(-d,0)+V_2(-d,0) = kq_1/d + kq_2/2d$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
 
-4. How much work is required to place charge $q_3$ at $(x,y) = (-d,0)$?
+%4. How much work is required to place charge $q_3$ at $(x,y) = (-d,0)$?
 
-   \ifsolutions
-   **Answer**:
-   $U=W=q_3V(-d,0)=q_3(kq_1/d + kq_2/2d)$
-   \else
-   <div style="height:3em"/>
-   \fi
+%   \ifsolutions
+%   **Answer**:
+%   $U=W=q_3V(-d,0)=q_3(kq_1/d + kq_2/2d)$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
 
-5. What is the potential energy, $U$, of $q_3$ when it is at $(x,y) = (-d,0)$?
+%5. What is the potential energy, $U$, of $q_3$ when it is at $(x,y) = (-d,0)$?
 
-   \ifsolutions
-   **Answer**:
-   See 4.
-   \else
-   <div style="height:3em"/>
-   \fi
+%   \ifsolutions
+%   **Answer**:
+%   See 4.
+%   \else
+%   <div style="height:3em"/>
+%   \fi
 
 %In summary, to find the work required to put a charge $Q$ at point $P$ (or, equivalently, the electric potential energy $U$ of a single charge $Q$ when it is at point $P$), find the potential $V$ at point $P$ due to all of the other charges and then $U = QV$.
 
-\newpage
+%\newpage
 
-# Energy to Assemble a Collection of Charges
+%# Energy to Assemble a Collection of Charges
 
-In the previous problem you computed the work required to move $q_3$ to $(x,y) = (-d,0)$ after $q_2$ was in place. The total work required to assemble the system of three charges is larger than this work because it also took work to move $q_2$ into place. Given a point charge $q_1$ at origin, as in the previous question,
+%In the previous problem you computed the work required to move $q_3$ to $(x,y) = (-d,0)$ after $q_2$ was in place. The total work required to assemble the system of three charges is larger than this work because it also took work to move $q_2$ into place. Given a point charge $q_1$ at origin, as in the previous question,
 
-1. how much work is required to move $q_2$ to $(x,y) = (d,0)$?;
+%1. how much work is required to move $q_2$ to $(x,y) = (d,0)$?;
+
+%   \ifsolutions
+%   **Answer**:
+%   $W = q_2V_1(0,d) = q_2(kq_1/d)$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
+
+%2. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_1$ is present?;
+
+%   \ifsolutions
+%   **Answer**:
+%   $W = q_3V_1(-d,0) = q_3(kq_1/d)$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
+
+%3. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_2$ is present?
+
+%   \ifsolutions
+%   **Answer**:
+%   $W=q_3V_2(-d,0)=q_3kq_2/2d$
+%   \else
+%   <div style="height:3em"/>
+%   \fi
+
+%4. The total work required to assemble the system of three charges is the sum of the work from parts 1.-3.. Write the equation for this sum in terms of the given variables. (This sum is known as the total potential energy of the system of charges -- see equation 23.11 of the textbook.)
 
    \ifsolutions
-   **Answer**:
-   $W = q_2V_1(0,d) = q_2(kq_1/d)$
-   \else
-   <div style="height:3em"/>
-   \fi
-
-2. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_1$ is present?;
-
-   \ifsolutions
-   **Answer**:
-   $W = q_3V_1(-d,0) = q_3(kq_1/d)$
-   \else
-   <div style="height:3em"/>
-   \fi
-
-3. how much work is required to move $q_3$ to $(x,y) = (-d,0)$ if only $q_2$ is present?
-
-   \ifsolutions
-   **Answer**:
-   $W=q_3V_2(-d,0)=q_3kq_2/2d$
-   \else
-   <div style="height:3em"/>
-   \fi
-
-4. The total work required to assemble the system of three charges is the sum of the work from parts 1.-3.. Write the equation for this sum in terms of the given variables. (This sum is known as the total potential energy of the system of charges -- see equation 23.11 of the textbook.)
-
-   \ifsolutions
-   **Answer**:
-   $W=q_2kq_1/d +  q_3(kq_1/d) + q_3kq_2/2d$
-   \fi
+%   **Answer**:
+%   $W=q_2kq_1/d +  q_3(kq_1/d) + q_3kq_2/2d$
+%   \fi
