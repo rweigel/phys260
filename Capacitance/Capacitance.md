@@ -9,18 +9,18 @@ Title: Capacitance
 A technique for computing capacitance when Gauss's law can be used to compute the electric field is:
 
 1. place a positive charge $Q$ on one conductor and $-Q$ on the other conductor;
-2. use Gauss's law to compute the electric field between the conductors;
+2. use Gauss's law, or a previously derived equation, to compute the electric field between the conductors;
 3. use $V(b)-V(a)=-\int^b_a \mathbf{E}\bfcdot d\mathbf{l}$ to find the potential difference between the conductors. Point $a$ is any point on the negatively charged conductor, and point $b$ is any point on the positively charged conductor; and
 4. Compute $C$ using $\ds C = {Q}/{\Delta V} = Q/\big(V(b)-V(a)\big)$.
 
 ## Review of Related Topics
 
-**Conductors**: The electric field at any location in space is the superposition (vector sum) of electric fields due to every charge in the universe. For locations inside a conductor, the electric field will be zero. The reason is that charges on or in a conductor are free to move and position themselves, effectively instantaneously, on the surface in a way that makes the electric field inside the conductor zero.
+### Conductors: The electric field at any location in space is the superposition (vector sum) of electric fields due to every charge in the universe. For locations inside a conductor, the electric field will be zero. The reason is that charges on or in a conductor are free to move and position themselves, effectively instantaneously, on the surface in a way that makes the electric field inside the conductor zero.
 
 1. If a conductor is isolated (meaning other charges are far enough away that we can ignore their electric fields), the electric field inside it is the superposition of the electric fields due to each charge on the conductor.
 2. If a conductor is not isolated, the electric field inside it is the superposition of the electric fields due to each charge on the conductor and all other charges in the universe.
 
-**Electric Potential Energy and Electric Potential**: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to an electric field, we define potential energy $U$ according to
+### Electric Potential: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to an electric field, we define potential energy $U$ according to
 
 $\Delta U = U(b)-U(a) \equiv -W_{a\rightarrow b}$
 
@@ -33,6 +33,15 @@ Defining electric potential as $V\equiv U/q_o$ gives $V(b)-V(a) = -\int_a^b\bfve
 1. how much work (in Joules) the electric field did on the charge: $-q_o(V(b)-V(a))$, and
 2. the change in electric potential energy (in Joules): $+q_o(V(b)-V(a))$.
 
+### Electric Field Equations
+
+Thus far, you have enountered the equations for the electric field for four charge configurations:
+
+* Large and uniformly charged sheet of charge: $E=|\sigma|/2\epsilon_o$, with direction perpendicular to the sheet and direction determined by the sign of $\sigma$.
+* Point charge at the origin: $E=k|q|/r^2$ directed radially with direction determined by the sign of $q$.
+* Uniformly charged shell centred on the origin: $E=k|q|/r^2$ outside and zero inside. (Outside the shell the field is the same as if all of the charge is at the origin.)
+* Long line of charge: $E=2k/r$, directed radially with direction determined by the sign of $q$; $r$ is the perpendicular distance from the line.
+
 # Parallel Plates
 
 An equal and opposite amount of charge is placed on two conducting and parallel plates, as shown on the left in the following figure. On the right, a side view of the plates is shown. The area of the plates, $A = w^2$, is much larger than shown, so the width, $w$, is much larger than the separation distance, $d$. Assume $Q$ is positive.
@@ -42,7 +51,7 @@ An equal and opposite amount of charge is placed on two conducting and parallel 
 1. How will the charges be distributed on the plates? That is, how much charge is on each of the four large faces with area $A$? Assume the charges are uniformly distributed on these four faces and that no charge appears on the thin edge faces with thickness $t$.
 
    \ifsolutions
-   {\bf Answer}: The charges will move to the inner faces, as shown in the following diagram. Electric field vectors associated with the positive and negative charges are shown.
+   {\bf Answer}: The charges will move to the inner faces, as shown in the following diagram. Electric field vectors associated with the positive and negative charges are shown. This can be shown by assuming an unknown charge on each face charge conservation: the sum of the charges on the faces of the left (right) slab is $-Q$ ($Q$), using the fact that the electric field inside a conductor is zero, and Gauss's law. Here we will assume the charge configuration shown and then in part 2. we find that it is consistent with charge conservation and the electric field being zero inside the conductors.
 
    <img src="figures/Parallel_Plate_Fields.svg"/>
    \else
@@ -199,7 +208,7 @@ Charge is placed on two long cylindrical conducting shells, the cross--section o
 
    \ifsolutions
     **Answer**:
-    * Net charge: $0$, $-Q$, $Q$, and $0$
+    * Net charge: $0$, $-Q$, $Q$, and $0$. This can be shown using the technique given in the challeng problem.
     * Surface charge density: $\lambda$ = $0$, $-Q/2\pi a L$, $Q/2\pi b L$, $0$
     * Linear charge density: $\sigma$ = $0$, $-Q/L$, $Q/L$, $0$. See the cylindrical shell problem in [the solutions for the Enclosed Charge activity](https://rweigel.github.io/phys260/Enclosed_Charge/Enclosed_Charge-solutions.pdf) for a discussion of why we can describe the charge density in terms of both surface and linear densities.
    \else
@@ -218,7 +227,7 @@ The cross--section figure from the previous page is repeated above.
    \ifsolutions
     **Answer**: In region 3., the field points in the radial direction and inward: $\ds E_r = -\frac{\lambda }{2\pi\epsilon_o}\frac{1}{r} = -\frac{Q/L}{2\pi\epsilon_o}\frac{1}{r}$
     
-    The field is zero in all other regions.
+    The field is zero in all other regions. This can be shown using the technique given in the challeng problem.
    \else
    \vspace{8em}
    \fi
