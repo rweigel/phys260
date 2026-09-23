@@ -15,12 +15,16 @@ A technique for computing capacitance when Gauss's law can be used to compute th
 
 ## Review of Related Topics
 
-### Conductors: The electric field at any location in space is the superposition (vector sum) of electric fields due to every charge in the universe. For locations inside a conductor, the electric field will be zero. The reason is that charges on or in a conductor are free to move and position themselves, effectively instantaneously, on the surface in a way that makes the electric field inside the conductor zero.
+### Conductors
+
+The electric field at any location in space is the superposition (vector sum) of electric fields due to every charge in the universe. For locations inside a conductor, the electric field will be zero. The reason is that charges on or in a conductor are free to move and position themselves, effectively instantaneously, on the surface in a way that makes the electric field inside the conductor zero.
 
 1. If a conductor is isolated (meaning other charges are far enough away that we can ignore their electric fields), the electric field inside it is the superposition of the electric fields due to each charge on the conductor.
 2. If a conductor is not isolated, the electric field inside it is the superposition of the electric fields due to each charge on the conductor and all other charges in the universe.
 
-### Electric Potential: The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to an electric field, we define potential energy $U$ according to
+### Electric Potential
+
+The general formula for work is $W_{a\rightarrow b}=\int_a^b \bfvec{F}\bfcdot d\bfvec{l}$. If $\bfvec{F}$ is a conservative force, such as the force on a charge due to an electric field, we define potential energy $U$ according to
 
 $\Delta U = U(b)-U(a) \equiv -W_{a\rightarrow b}$
 
