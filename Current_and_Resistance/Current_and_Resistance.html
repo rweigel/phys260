@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Current_and_Resistance</title>
-  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <title>Current and Resistance</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%220.9em%22 font-size=%22100%22&gt;📖&lt;/text&gt;&lt;/svg&gt;">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" />
   <style>
     #toc>ol ol {
@@ -12,7 +12,7 @@
     }
 
     body {
-      background-image: url("https://rweigel.github.io/biedit/img/paper.png")
+      background-image: url("https://rweigel.github.io/biedit/biedit/ui/img/paper.png")
     }
 
     .body {
@@ -20,7 +20,7 @@
       min-width: 50%;
       max-height: 100%;
       position: absolute;
-      background-image: url("https://rweigel.github.io/biedit/img/paper.png");
+      background-image: url("https://rweigel.github.io/biedit/biedit/ui/img/paper.png");
     }
 
     #toc {
@@ -428,12 +428,20 @@
         margin: 0.5in 0.75in 0.75in;
       }
 
-      .katex .hide-tail {
-        overflow: hidden !important;
+      body,
+      html {
+        margin: 0px;
+        padding: 0px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        overflow: auto;
+        display: inline;
       }
 
       .page-break {
-        border-top: none;
+        border-top-width: medium;
+        border-top-style: none;
+        border-top-color: currentcolor;
       }
 
       .body {
@@ -501,8 +509,15 @@
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
-        border: none;
+        border-width: medium;
+        border-style: none;
+        border-color: currentcolor;
+        border-image: none;
         overflow-wrap: break-word;
+      }
+
+      .katex .hide-tail {
+        overflow: hidden !important;
       }
 
       .katex {
@@ -556,118 +571,115 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#introduction" raw="# Introduction" lo="1">
+        <a href="#introduction">
           <span class="toctext">Introduction</span>
         </a>
         <ol class="toc" style="display: none;">
           <li>
-            <a href="#definitions" raw="## Definitions" lo="3">
+            <a href="#definitions">
               <span class="toctext">Definitions</span>
             </a>
           </li>
           <li>
-            <a href="#ohm-s-law" raw="## Ohm's Law" lo="19">
+            <a href="#ohm-s-law">
               <span class="toctext">Ohm’s Law</span>
             </a>
           </li>
         </ol>
       </li>
       <li>
-        <a href="#problem-i-definitions-and-ohm-s-law" raw="# Problem I -- Definitions and Ohm's Law" lo="35" class="highlighted">
-          <span class="toctext">Problem I – Definitions and Ohm’s Law</span>
+        <a href="#problems">
+          <span class="toctext">Problems</span>
         </a>
-      </li>
-      <li>
-        <a href="#problem-ii-definitions-and-ohm-s-law" raw="# Problem II -- Definitions and Ohm's Law" lo="93">
-          <span class="toctext">Problem II – Definitions and Ohm’s Law</span>
-        </a>
-      </li>
-      <li>
-        <a href="#problem-iii-current-through-a-cylindrical-shell" raw="# Problem III -- Current Through a Cylindrical Shell" lo="134">
-          <span class="toctext">Problem III – Current Through a Cylindrical Shell</span>
-        </a>
-      </li>
-      <li>
-        <a href="#problem-iv-i-n|q|v_da-derivation" raw="# Problem IV -- $I = n|q|v_dA$ derivation" lo="144">
-          <span class="toctext">Problem IV – <span len="14" raw="_I = n|q|v_dA_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span> derivation</span>
-        </a>
+        <ol class="toc" style="display: none;">
+          <li>
+            <a href="#definitions-and-ohm-s-law">
+              <span class="toctext">Definitions and Ohm’s Law</span>
+            </a>
+          </li>
+          <li>
+            <a href="#definitions-and-ohm-s-law">
+              <span class="toctext">Definitions and Ohm’s Law</span>
+            </a>
+          </li>
+          <li>
+            <a href="#current-through-a-cylindrical-shell">
+              <span class="toctext">Current Through a Cylindrical Shell</span>
+            </a>
+          </li>
+          <li>
+            <a href="#i-n|q|v_da-derivation">
+              <span class="toctext"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span> derivation</span>
+            </a>
+          </li>
+        </ol>
       </li>
     </ol>
   </div>
   <div id="display">
     <div class="section">
-    </div>
-    <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1"><a name="introduction" number="1" lo="1" raw="# Introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
+        <p class="title">Current and Resistance</p>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="3" lf="3"><a name="definitions" number="1.1" lo="3" raw="## Definitions" class="anchor hanchor" href="#definitions"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Definitions</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="5" lf="5">The electric current in a wire is defined as </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="7" lf="7"><span len="21" raw="__I = \frac{dQ}{dt}__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="9" lf="9">where <span len="4" raw="_dQ_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span> is the total amount of charge that passes through a cross–section of the wire in a differential amount of time, <span len="4" raw="_dt_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span>.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="11" lf="11">If <span len="3" raw="_q_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> is the charge (in Coulombs) of each flowing charge, <span len="3" raw="_n_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> is their number per volume (“number density”), <span len="5" raw="_v_d_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> their average speed along the wire (called the “drift speed”), then</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="13" lf="13"><span len="14" raw="_I = n|q|v_dA_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span>, where <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is the cross–sectional area of the wire.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">13</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="15" lf="15">The average current density is defined as</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">15</span></div>
-      </div>
-      <div class="block">
-        <p padlength="0" lo="17" lf="17"><span len="19" raw="_\ds J=\frac{I}{A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, which can be written as <span len="13" raw="_J = n|q|v_d_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">17</span></div>
+        <h1><a name="introduction" class="anchor hanchor" href="#introduction"><span class="hnumber">1</span>&nbsp;<span class="htext">Introduction</span></a></h1>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h2 lo="19" lf="19"><a name="ohm-s-law" number="1.2" lo="19" raw="## Ohm's Law" class="anchor hanchor" href="#ohm-s-law"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Ohm’s Law</span></a></h2>
-        <div class="block-info" style="display: none;"><span class="line-numbers">19</span></div>
+        <h2><a name="definitions" class="anchor hanchor" href="#definitions"><span class="hnumber">1.1</span>&nbsp;<span class="htext">Definitions</span></a></h2>
       </div>
       <div class="block">
-        <p padlength="0" lo="21" lf="21">If an electric field exists in a wire (by, for example, connecting its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (collisions resist the flow). The net result will be current – a flow of charges with an average drift speed. Experimentally, it has been shown that in many materials, the electric field is proportional to the current density: </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">21</span></div>
+        <p>The electric current in a wire is defined as </p>
       </div>
       <div class="block">
-        <p padlength="0" lo="23" lf="23"><span len="14" raw="__E = \rho J__" class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span></span></span></span></span></p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">23</span></div>
+        <p><span class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
       </div>
       <div class="block">
-        <p padlength="0" lo="25" lf="25">where the value of the proportionality constant <span len="6" raw="_\rho_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span>, called resistivity, depends on the material. This is one version of Ohm’s law.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">25</span></div>
+        <p>where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">Q</span></span></span></span> is the total amount of charge that passes through a cross–section of the wire in a differential amount of time, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span></span>.</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="27" lf="27">For a wire of length <span len="3" raw="_L_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> and constant cross–sectional area <span len="3" raw="_A_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, Ohm’s law can also be written as <span len="22" raw="_V = ({\rho L}/{A}) I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">ρ</span><span class="mord mathnormal">L</span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">A</span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>. If we define resistance as <span len="18" raw="_R = {\rho L}/{A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="mord mathnormal">L</span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">A</span></span></span></span></span>, then we have another relationship that is also referred to as Ohm’s law: </p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">27</span></div>
+        <p>The SI units of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> are Coulombs per second, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">C</span></span><span class="mord">/</span><span class="mord mathnormal">s</span></span></span></span>, which is defined to be an Ampere (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">A</span></span></span></span></span>).</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="29" lf="29"><span len="9" raw="_V = I R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">29</span></div>
+        <p>If <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span> is the charge (in Coulombs) of each flowing charge, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> is their number per volume (“number density”), <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> their average speed along the wire (called the “drift speed”), then</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="31" lf="31">In this form, the interpretation is that the voltage between the ends of a wire is proportional to the current in the wire, with the proportionality constant of <span len="3" raw="_R_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">31</span></div>
+        <p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span>, where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is the cross–sectional area of the wire. <strong>Caution</strong>: The <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> here is itallicized whereas the abbreviation of an Ampere, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">A</span></span></span></span></span> is not itallicized.</p>
       </div>
       <div class="block">
-        <div class="inline-html" lo="33" lf="33">
+        <p>The average current density is defined as</p>
+      </div>
+      <div class="block">
+        <p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, which can be written as <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="ohm-s-law" class="anchor hanchor" href="#ohm-s-law"><span class="hnumber">1.2</span>&nbsp;<span class="htext">Ohm’s Law</span></a></h2>
+      </div>
+      <div class="block">
+        <p>If an electric field exists in a wire (by, for example, connecting its ends to a battery), the charges will accelerate until they collide with another particle and decelerate (collisions resist the flow). The net result will be current – a flow of charges with an average drift speed. Experimentally, it has been shown that in many materials, the electric field is proportional to the current density: </p>
+      </div>
+      <div class="block">
+        <p><span class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span></span></span></span></span></p>
+      </div>
+      <div class="block">
+        <p>where the value of the proportionality constant <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span>, called resistivity, depends on the material. This is one version of Ohm’s law.</p>
+      </div>
+      <div class="block">
+        <p>For a wire of length <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span> and constant cross–sectional area <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, Ohm’s law can also be written as <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">ρ</span><span class="mord mathnormal">L</span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">A</span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>. If we define resistance as <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="mord mathnormal">L</span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">A</span></span></span></span></span>, then we have another relationship that is also referred to as Ohm’s law: </p>
+      </div>
+      <div class="block">
+        <p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+      </div>
+      <div class="block">
+        <p>In this form, the interpretation is that the voltage between the ends of a wire is proportional to the current in the wire, with the proportionality constant of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>.</p>
+      </div>
+      <div class="block">
+        <div class="inline-html">
           <div class="newpage">
             <div class="page-break" style="font-size:0px;page-break-after: always;">&nbsp;</div>
             <div></div>
@@ -677,162 +689,183 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="35" lf="35" class="highlighted"><a name="problem-i-definitions-and-ohm-s-law" number="2" lo="35" raw="# Problem I -- Definitions and Ohm's Law" class="anchor hanchor" href="#problem-i-definitions-and-ohm-s-law"><span class="hnumber">2</span>&nbsp;<span class="htext">Problem I – Definitions and Ohm’s Law</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">35</span></div>
+        <h1><a name="problems" class="anchor hanchor" href="#problems"><span class="hnumber">2</span>&nbsp;<span class="htext">Problems</span></a></h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h2><a name="definitions-and-ohm-s-law" class="anchor hanchor" href="#definitions-and-ohm-s-law"><span class="hnumber">2.1</span>&nbsp;<span class="htext">Definitions and Ohm’s Law</span></a></h2>
       </div>
       <div class="block">
-        <p padlength="0" lo="37" lf="37">A <span len="3" raw="_9_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span></span></span></span>–volt power source is connected to a wire of length <span len="4" raw="_10_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span> meters with a circular cross–section and radius of <span len="6" raw="_0.01_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.01</span></span></span></span> meters. The wire has a resistivity of <span len="36" raw="_10^{-8}\text{ }\Omega\cdot\text{m}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">m</span></span></span></span></span>. The number density of flowing charges is <span len="20" raw="_10^{28}/\text{m}^3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">28</span></span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>. Assume Ohm’s law applies and the charges that flow are electrons.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">37</span></div>
+        <p>A <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span></span></span></span>–volt power source is connected to a wire of length <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span> meters with a circular cross–section and radius of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.01</span></span></span></span> meters. The wire has a resistivity of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">m</span></span></span></span></span>. The number density of flowing charges is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">28</span></span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>. Assume Ohm’s law applies and the charges that flow are electrons.</p>
       </div>
       <div class="block">
-        <ol lo="39" lf="86" class="loose">
-          <li markerlength="3" padlength="0" lo="39" lf="46" class="">
+        <ol class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="39" lf="40" class="">What is the resistance (with units) of the wire?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">39-40</span></div>
+              <p>What is the resistance (with units) of the wire?</p>
             </div>
             <div class="block">
-              <div class="inline-html active" lo="41" lf="44">
-                <div class="solutionstrue">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="142" raw="_\ds R=\frac{\rho L}{A} = \frac{(10^{-8}\text{ }\Omega\cdot\text{m})(10\text{ m})}{\pi (0.01\text{ m})^2} = \frac{10^{-3}}{\pi}\text{ }\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4271em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord">0.01</span><span class="mord text"><span class="mord">&nbsp;m</span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">m</span></span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;m</span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span>. When solving circuit problems, the resistors involved typically have a much larger resistance than this, which is why we neglect the resistance of the wires.</p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">ρ</span><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4271em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord">0.01</span><span class="mord text"><span class="mord">&nbsp;m</span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">m</span></span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">10</span><span class="mord text"><span class="mord">&nbsp;m</span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span>. When solving circuit problems, the resistors involved typically have a much larger resistance than this, which is why we neglect the resistance of the wires.</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">41-44</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="47" lf="54" class="">
+          <li>
             <div class="block">
-              <p padlength="0" lo="47" lf="48" class="">What is the current (with units) in the wire?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">47-48</span></div>
+              <p>What is the current (with units) in the wire?</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="49" lf="52">
-                <div class="solutionstrue">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="80" raw="_\ds I = \frac{9\text{ v}}{\frac{10^{-3}}{\pi}\text{ }\Omega}=9,000\pi\text{ A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4729em;vertical-align:-1.1514em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.1936em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9164em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">9</span><span class="mord text"><span class="mord">&nbsp;v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1514em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. This is a huge current. If you look at the back of an electronic device, you will see a rating on the order of <span len="12" raw="_1\text{ A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. Household circuit breakers are set to open (“trip”) at approximately <span len="13" raw="_15\text{ A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">15</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. Most power sources cannot supply current at this rate; even if the power source could supply this current, the amount of heat created would lead to a fire or melting of the wire.</p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4729em;vertical-align:-1.1514em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.1936em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9164em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">9</span><span class="mord text"><span class="mord">&nbsp;v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1514em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord text"><span class="mord">&nbsp;C/s</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. This is a huge current. If you look at the back of an electronic device, you will see a rating on the order of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. Household circuit breakers are set to open (“trip”) at approximately <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">15</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. Most power sources cannot supply current at this rate; even if the power source could supply this current, the amount of heat created would lead to a fire or melting of the wire.</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">49-52</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="55" lf="62" class="">
+          <li>
             <div class="block">
-              <p padlength="0" lo="55" lf="56" class="">How much charge (in Coulombs) flows past a cross–section of the wire per second?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">55-56</span></div>
+              <p>How much charge (in Coulombs) flows past a cross–section of the wire per second?</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="57" lf="60">
-                <div class="solutionstrue">
+              <div class="inline-html active">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="19" raw="_9,000\pi\text{ C}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span></p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p>Many student are confused by this question, perhaps because it is simple. If current measures the amount of charge that flows past a cross section per unit time, the amount of charge that flows past that cross section in a time of 1 s is the current x 1 s. <strong>Caution</strong>: The abbreviation of Coulomb is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">C</span></span></span></span></span> (not itallicized). Later, you will work with capacitance, which we denote with <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> (itallicized) … and the unit of capacitance is the Farad (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">F</span></span></span></span></span>).</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">57-60</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="63" lf="64" class="">
+          <li>
             <div class="block">
-              <p padlength="0" lo="63" lf="64" class="">How many electrons flow past a cross–section of the wire per second?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">63-64</span></div>
-            </div>
-          </li>
-          <li markerlength="3" padlength="0" lo="65" lf="72" class="">
-            <div class="block">
-              <p padlength="0" lo="65" lf="66" class="">What is the current density (with units)?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">65-66</span></div>
+              <p>How many electrons flow past a cross–section of the wire per second? (The charge on an electron is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1.6</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">19</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span>.)</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="67" lf="70">
-                <div class="solutionstrue">
+              <p>Have you ever encountered a number on the order of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span> before?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="61" raw="_\ds J=\frac{I}{A} = 9\cdot 10^7 \frac{\text{A}}{\text{m}^2}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+                    <p><strong>Answer</strong>:</p>
+                  </div>
+                  <div class="block">
+                    <p><span class="katex-display fleqn"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">9</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mord text"><span class="mord">&nbsp;C</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.6</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">19</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;electron</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1.8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;electrons</span></span></span></span></span></span></p>
+                  </div>
+                  <div class="block">
+                    <p>Avogadro’s number, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">6.02214076</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span>, is the approximate number of atoms found in 12 grams of pure carbon-12. A mol is used to describe exactly <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">6.02214076</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span> items (such as atoms, molecules, ions, or electrons).</p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">67-70</span></div>
-            </div>
-          </li>
-          <li markerlength="3" padlength="0" lo="73" lf="80" class="">
-            <div class="block">
-              <p padlength="0" lo="73" lf="74" class="">What is the drift velocity of electrons in the wire? (The charge on an electron is <span len="24" raw="_-1.6·10^{-19}\text{ C}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1.6</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">19</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span>.)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">73-74</span></div>
-            </div>
-            <div class="block">
-              <div class="inline-html" lo="75" lf="78">
-                <div class="solutionstrue">
-                  <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="35" raw="_v_d = J/n|q| \simeq 6\text{ cm/s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord">/</span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≃</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">6</span><span class="mord text"><span class="mord">&nbsp;cm/s</span></span></span></span></span></p>
-                  </div>
-                </div>
-                <div class="solutionsfalse">
-                  <div class="block">
-                    <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">75-78</span></div>
-            </div>
-          </li>
-          <li markerlength="3" padlength="0" lo="81" lf="88" class="">
-            <div class="block">
-              <p padlength="0" lo="81" lf="82" class="">Based on the description of how charged particles flow in a wire, explain why the resistance of a cylindrical wire is proportional to its length and inversely proportional to the square of its radius.</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">81-82</span></div>
-            </div>
-            <div class="block">
-              <div class="inline-html" lo="83" lf="86">
-                <div class="solutionstrue">
-                  <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: See the description in your textbook.</p>
-                  </div>
-                </div>
-                <div class="solutionsfalse">
-                </div>
-              </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">83-86</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">39-86</span></div>
       </div>
       <div class="block">
-        <div class="inline-html" lo="88" lf="91">
-          <div class="solutionstrue">
+        <ol start="5" class="loose">
+          <li>
+            <div class="block">
+              <p>What is the current density (with units)?</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span></span></span></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> (note the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> in the first equation is a cross-sectional aread and the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">A</span></span></span></span></span> in the second equation corresponds to an Ampere).</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" style="height:7em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>What is the drift velocity of electrons in the wire? (The charge on an electron is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1.6</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">19</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span>.)</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord">/</span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≃</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">6</span><span class="mord text"><span class="mord">&nbsp;cm/s</span></span></span></span></span></p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                  <div class="block">
+                    <div style="width:100%">
+                      <div class="tex" style="height:7em"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <p>Based on the description of how charged particles flow in a wire, explain why the resistance of a cylindrical wire is proportional to its length and inversely proportional to the square of its radius.</p>
+            </div>
+            <div class="block">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
+                  <div class="block">
+                    <p><strong>Answer</strong>: See the description in your textbook.</p>
+                  </div>
+                </div>
+                <div class="solutionsfalse" style="display: none;">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <div class="inline-html">
+          <div class="solutionstrue" style="display: block;">
           </div>
-          <div class="solutionsfalse">
+          <div class="solutionsfalse" style="display: none;">
             <div class="block">
               <div class="inline-html">
                 <div class="newpage">
@@ -843,120 +876,108 @@
             </div>
           </div>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">88-91</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="93" lf="93"><a name="problem-ii-definitions-and-ohm-s-law" number="3" lo="93" raw="# Problem II -- Definitions and Ohm's Law" class="anchor hanchor" href="#problem-ii-definitions-and-ohm-s-law"><span class="hnumber">3</span>&nbsp;<span class="htext">Problem II – Definitions and Ohm’s Law</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">93</span></div>
+        <h2><a name="definitions-and-ohm-s-law" class="anchor hanchor" href="#definitions-and-ohm-s-law"><span class="hnumber">2.2</span>&nbsp;<span class="htext">Definitions and Ohm’s Law</span></a></h2>
       </div>
       <div class="block">
-        <p padlength="0" lo="95" lf="95">A power source is connected to a <span len="4" raw="_20_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span></span></span></span> meter long wire with a circular cross–section and radius of <span len="6" raw="_0.01_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.01</span></span></span></span> meters. The wire has a resistivity of <span len="36" raw="_10^{-7}\text{ }\Omega\cdot\text{m}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">7</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">m</span></span></span></span></span>. The number density of flowing charges is <span len="20" raw="_10^{27}/\text{m}^3_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">27</span></span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>. The current in the wire was measured and found to be <span len="12" raw="_1\text{ A}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. Assume Ohm’s law applies and the charges that flow are electrons.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">95</span></div>
+        <p>A power source is connected to a <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">20</span></span></span></span> meter long wire with a circular cross–section and radius of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.01</span></span></span></span> meters. The wire has a resistivity of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">7</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">m</span></span></span></span></span>. The number density of flowing charges is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">27</span></span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>. The current in the wire was measured and found to be <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;A</span></span></span></span></span>. Assume Ohm’s law applies and the charges that flow are electrons.</p>
       </div>
       <div class="block">
-        <ol lo="97" lf="127" class="loose">
-          <li markerlength="3" padlength="0" lo="97" lf="104">
+        <ol class="loose">
+          <li>
             <div class="block">
-              <p padlength="0" lo="97" lf="98">What is the resistance (with units) of the wire?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">97-98</span></div>
+              <p>What is the resistance (with units) of the wire?</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="99" lf="102">
-                <div class="solutionstrue">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="25" raw="_(.02/\pi)\text{ }\Omega_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">.02/</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mclose">)</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span></p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">.02/</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mclose">)</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">Ω</span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">99-102</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="105" lf="112">
+          <li>
             <div class="block">
-              <p padlength="0" lo="105" lf="106">How much charge (with units) flows past a cross–section of the wire per second?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">105-106</span></div>
+              <p>How much charge (with units) flows past a cross–section of the wire per second?</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="107" lf="110">
-                <div class="solutionstrue">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="12" raw="_1\text{ C}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span></p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">107-110</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="113" lf="120">
+          <li>
             <div class="block">
-              <p padlength="0" lo="113" lf="114">What is the current density (with units)?</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">113-114</span></div>
+              <p>What is the current density (with units)?</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="115" lf="118">
-                <div class="solutionstrue">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="53" raw="_\ds J = \frac{10^4}{\pi}\frac{\text{A}}{\text{m}^2}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord text"><span class="mord">m</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">115-118</span></div>
             </div>
           </li>
-          <li markerlength="3" padlength="0" lo="121" lf="129">
+          <li>
             <div class="block">
-              <p padlength="0" lo="121" lf="122">What is the drift velocity of electrons in the wire? (The charge on an electron is <span len="24" raw="_-1.6·10^{-19}\text{ C}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1.6</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">19</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span>.)</p>
-              <div class="block-info" style="display: none;"><span class="line-numbers">121-122</span></div>
+              <p>What is the drift velocity of electrons in the wire? (The charge on an electron is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1.6</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">19</span></span></span></span></span></span></span></span></span><span class="mord text"><span class="mord">&nbsp;C</span></span></span></span></span>.)</p>
             </div>
             <div class="block">
-              <div class="inline-html" lo="123" lf="127">
-                <div class="solutionstrue">
+              <div class="inline-html">
+                <div class="solutionstrue" style="display: block;">
                   <div class="block">
-                    <p padlength="1"><strong type="md">Answer</strong>: <span len="33" raw="_v_d = J/n|q| = 0.02\text{ mm/s}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord">/</span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.02</span><span class="mord text"><span class="mord">&nbsp;mm/s</span></span></span></span></span></p>
+                    <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mord">/</span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.02</span><span class="mord text"><span class="mord">&nbsp;mm/s</span></span></span></span></span></p>
                   </div>
                 </div>
-                <div class="solutionsfalse">
+                <div class="solutionsfalse" style="display: none;">
                   <div class="block">
                     <div style="width:100%">
-                      <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                      <div class="tex" style="height:7em"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="block-info" style="display: none;"><span class="line-numbers">123-127</span></div>
             </div>
           </li>
         </ol>
-        <div class="block-info" style="display: none;"><span class="line-numbers">97-127</span></div>
       </div>
       <div class="block">
-        <div class="inline-html" lo="129" lf="132">
-          <div class="solutionstrue">
+        <div class="inline-html">
+          <div class="solutionstrue" style="display: block;">
           </div>
-          <div class="solutionsfalse">
+          <div class="solutionsfalse" style="display: none;">
             <div class="block">
               <div class="inline-html">
                 <div class="newpage">
@@ -967,56 +988,49 @@
             </div>
           </div>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">129-132</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="134" lf="134"><a name="problem-iii-current-through-a-cylindrical-shell" number="4" lo="134" raw="# Problem III -- Current Through a Cylindrical Shell" class="anchor hanchor" href="#problem-iii-current-through-a-cylindrical-shell"><span class="hnumber">4</span>&nbsp;<span class="htext">Problem III – Current Through a Cylindrical Shell</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">134</span></div>
+        <h2><a name="current-through-a-cylindrical-shell" class="anchor hanchor" href="#current-through-a-cylindrical-shell"><span class="hnumber">2.3</span>&nbsp;<span class="htext">Current Through a Cylindrical Shell</span></a></h2>
       </div>
       <div class="block">
-        <p padlength="0" lo="136" lf="136">If a cylindrical wire with an inner radius <span len="3" raw="_a_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> and outer radius <span len="3" raw="_b_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> carries a current <span len="3" raw="_I_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, what is <span len="3" raw="_J_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span></span></span></span>?</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">136</span></div>
+        <p>If a cylindrical wire with an inner radius <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> and outer radius <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> carries a current <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>, what is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span></span></span></span>?</p>
       </div>
       <div class="block">
-        <div class="inline-html" lo="138" lf="142">
-          <div class="solutionstrue">
+        <div class="inline-html">
+          <div class="solutionstrue" style="display: block;">
             <div class="block">
-              <p padlength="0"><strong type="md">Answer</strong>: <span len="30" raw="_\ds J=\frac{I}{\pi(b^2-a^2)}_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2963em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+              <p><strong>Answer</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2963em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
             </div>
           </div>
-          <div class="solutionsfalse">
+          <div class="solutionsfalse" style="display: none;">
             <div class="block">
               <div style="width:100%">
-                <div class="tex" raw="\vspace{7em}" style="height:7em"></div>
+                <div class="tex" style="height:7em"></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">138-142</span></div>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="144" lf="144"><a name="problem-iv-i-n|q|v_da-derivation" number="5" lo="144" raw="# Problem IV -- $I = n|q|v_dA$ derivation" class="anchor hanchor" href="#problem-iv-i-n|q|v_da-derivation"><span class="hnumber">5</span>&nbsp;<span class="htext">Problem IV – <span len="14" raw="_I = n|q|v_dA_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span> derivation</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">144</span></div>
+        <h2><a name="i-n|q|v_da-derivation" class="anchor hanchor" href="#i-n|q|v_da-derivation"><span class="hnumber">2.4</span>&nbsp;<span class="htext"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span> derivation</span></a></h2>
       </div>
       <div class="block">
-        <p padlength="0" lo="146" lf="146">Derive the relationship <span len="14" raw="_I = n|q|v_dA_" class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span>. Provide a diagram.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">146</span></div>
+        <p>Derive the relationship <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">A</span></span></span></span>. Provide a diagram.</p>
       </div>
       <div class="block">
-        <div class="inline-html" lo="148" lf="151">
-          <div class="solutionstrue">
+        <div class="inline-html">
+          <div class="solutionstrue" style="display: block;">
             <div class="block">
-              <p padlength="0"><strong type="md">Answer</strong>: See textbook.</p>
+              <p><strong>Answer</strong>: See textbook.</p>
             </div>
           </div>
-          <div class="solutionsfalse">
+          <div class="solutionsfalse" style="display: none;">
           </div>
         </div>
-        <div class="block-info" style="display: none;"><span class="line-numbers">148-151</span></div>
       </div>
     </div>
   </div>
