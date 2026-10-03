@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>README</title>
-  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22100%22>📖</text></svg>">
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%220.9em%22 font-size=%22100%22&gt;📖&lt;/text&gt;&lt;/svg&gt;">
   <style>
     #toc>ol ol {
       display: none
     }
 
     body {
-      background-image: url("https://rweigel.github.io/biedit/img/paper.png")
+      background-image: url("https://rweigel.github.io/biedit/biedit/ui/img/paper.png")
     }
 
     .body {
@@ -19,7 +19,7 @@
       min-width: 50%;
       max-height: 100%;
       position: absolute;
-      background-image: url("https://rweigel.github.io/biedit/img/paper.png");
+      background-image: url("https://rweigel.github.io/biedit/biedit/ui/img/paper.png");
     }
 
     #toc {
@@ -427,12 +427,20 @@
         margin: 0.5in 0.75in 0.75in;
       }
 
-      .katex .hide-tail {
-        overflow: hidden !important;
+      body,
+      html {
+        margin: 0px;
+        padding: 0px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        overflow: auto;
+        display: inline;
       }
 
       .page-break {
-        border-top: none;
+        border-top-width: medium;
+        border-top-style: none;
+        border-top-color: currentcolor;
       }
 
       .body {
@@ -500,8 +508,15 @@
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
-        border: none;
+        border-width: medium;
+        border-style: none;
+        border-color: currentcolor;
+        border-image: none;
         overflow-wrap: break-word;
+      }
+
+      .katex .hide-tail {
+        overflow: hidden !important;
       }
 
       .katex {
@@ -555,17 +570,17 @@
   <div id="toc" style="min-width: 5em;">
     <ol>
       <li>
-        <a href="#general" raw="# General" lo="1" class="highlighted">
+        <a href="#general">
           <span class="toctext">General</span>
         </a>
       </li>
       <li>
-        <a href="#2022-fall" raw="# 2022 Fall" lo="5" class="">
+        <a href="#2022-fall">
           <span class="toctext">2022 Fall</span>
         </a>
       </li>
       <li>
-        <a href="#2023-spring" raw="# 2023 Spring" lo="9">
+        <a href="#2023-spring">
           <span class="toctext">2023 Spring</span>
         </a>
       </li>
@@ -576,32 +591,34 @@
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="1" lf="1" class="highlighted"><a name="general" number="1" lo="1" raw="# General" class="anchor hanchor" href="#general"><span class="hnumber">1</span>&nbsp;<span class="htext">General</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">1</span></div>
+        <h1><a name="general" class="anchor hanchor" href="#general"><span class="hnumber">1</span>&nbsp;<span class="htext">General</span></a></h1>
       </div>
       <div class="block">
-        <p padlength="0" lo="3" lf="3" class="active">The introduction of this activity does not describe how to determine the voltage changes across batteries and resistors. It is expected that the instructor will review this.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">3</span></div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="block">
-        <h1 lo="5" lf="5" class=""><a name="2022-fall" number="2" lo="5" raw="# 2022 Fall" class="anchor hanchor" href="#2022-fall"><span class="hnumber">2</span>&nbsp;<span class="htext">2022 Fall</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">5</span></div>
+        <p>The introduction of this activity does not describe how to determine the voltage changes across batteries and resistors. It is expected that the instructor will review this. I typically go over the rules</p>
       </div>
       <div class="block">
-        <p padlength="0" lo="7" lf="7">rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">7</span></div>
+        <div class="inline-html">
+          <img src="figures/Rules.png" width="500px">
+        </div>
+      </div>
+      <div class="block">
+        <p>and provide physical justifications for each rule.</p>
       </div>
     </div>
     <div class="section">
       <div class="block">
-        <h1 lo="9" lf="9"><a name="2023-spring" number="3" lo="9" raw="# 2023 Spring" class="anchor hanchor" href="#2023-spring"><span class="hnumber">3</span>&nbsp;<span class="htext">2023 Spring</span></a></h1>
-        <div class="block-info" style="display: none;"><span class="line-numbers">9</span></div>
+        <h1><a name="2022-fall" class="anchor hanchor" href="#2022-fall"><span class="hnumber">2</span>&nbsp;<span class="htext">2022 Fall</span></a></h1>
       </div>
       <div class="block">
-        <p padlength="0" lo="11" lf="11">With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).</p>
-        <div class="block-info" style="display: none;"><span class="line-numbers">11</span></div>
+        <p>rsw: Mention at start that they should not solve using equivalent resistances unless instructed to do so. The reason is that they will see the motivation for equivalent resistances after doing a few problems without them. In addition, it may be better to learn KVL and KCL first and then learn about equivalent resistances separately.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="block">
+        <h1><a name="2023-spring" class="anchor hanchor" href="#2023-spring"><span class="hnumber">3</span>&nbsp;<span class="htext">2023 Spring</span></a></h1>
+      </div>
+      <div class="block">
+        <p>With a 20-minute introduction, most student got to part 4. In the future, split off the equivalent resistance part into a separate activity (and add background). The equiv. resistance problems were added here without explanation for students who found the other parts easy (usually 1-2 per class of 25).</p>
       </div>
     </div>
   </div>

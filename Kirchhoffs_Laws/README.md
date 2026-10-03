@@ -1,6 +1,10 @@
 # General
 
-The introduction of this activity does not describe how to determine the voltage changes across batteries and resistors. It is expected that the instructor will review this.
+The introduction of this activity does not describe how to determine the voltage changes across batteries and resistors. It is expected that the instructor will review this. I typically go over the rules
+
+<img src="figures/Rules.png" width="500px"/>
+
+and provide physical justifications for each rule.
 
 # 2022 Fall
 
