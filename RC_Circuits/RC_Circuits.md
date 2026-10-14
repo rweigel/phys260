@@ -8,7 +8,7 @@ Title: RC Circuits
 
   "$Q_C= 10 \text{ C}$" means "the capacitor labeled $C$ has a charge of $10$ Coulombs."
 
-* Lower case letters are used for electrical quantities that vary in time. In circuits constant current, charge, and voltages, we used $I$, $Q$, and $V$. In the circuits considered in this activity, the currents and voltages vary in time, so we use $i(t)$, $q(t)$, and $v(t)$.
+* Lower case letters are used for electrical quantities that vary in time. In circuits constant current and voltages, we used $I$ and $V$. In the circuits considered in this activity, the currents and voltages vary in time, so we use $i(t)$, $q(t)$, and $v(t)$.
 
 * In this activity, we use the the relationship $i(t)=dq(t)/dt$ between the current $i(t)$ in the wires connected to a capacitor and the charge $q(t)$ on the capacitor.
 
@@ -20,16 +20,31 @@ $q(t)=Q_oe^{-t/\tau}$,
 
 where $\tau\equiv RC$, $Q_o$ is the charge on the capacitor at $t=0$, and $R$ is the equivalent resistance. The quantity $\tau$ is called the "$RC$ time constant." The equation for $q(t)$ is derived by solving the differential equation that follows from using Kirchhoff's voltage law.
 
+**Question**: According to the rate at which $q(t)$ decays is lower when the resistance is larger. Justify this physically.
+\ifsolutions
+For infinite resistance, there will be no current and so the charge on the capacitor will not decay.
+\else
+\fi
+
 ## Problem
 
-Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$. Note that $1 \text{ }\Omega\cdot \text{F} = 1 \text{ second}$.
+1. Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$ and $C=1\text{ }\mu\text{F}$. Note that $1 \text{ }\Omega\cdot \text{F} = 1 \text{ second}$.
+2. Will the charge decay faster for circuit (a) or (b)?
 
 <img src="figures/Discharging_a.svg"/>
 
+(a)$\qquad\qquad\qquad\qquad\qquad$(b)
+
 \ifsolutions
 **Answer**:
-* Left: $R_{\text{eq}}=20\text{ k}\Omega$; $\tau = R_{\text{eq}}C = (20\cdot 10^3\text{ }\Omega) \cdot (10^{-6}\text{ F}) = 0.02\text{ s}$
-* Right: $R_{\text{eq}}=5\text{ k}\Omega$; $\tau=.005\text{ s}$ 
+
+1. &nbsp;
+
+  a. $R_{\text{eq}}=20\text{ k}\Omega$; $\tau = R_{\text{eq}}C = (20\cdot 10^3\text{ }\Omega) \cdot (10^{-6}\text{ F}) = 0.02\text{ s}$
+
+  b. $R_{\text{eq}}=5\text{ k}\Omega$; $\tau=.005\text{ s}$ 
+2. (b)
+
 \else
 \vspace{1in}
 \fi
@@ -38,7 +53,7 @@ Find $\tau$ in seconds for the following two circuits. Use $R=10\text{ k}\Omega$
 
 ## Problem
 
-For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}$ if the switch is closed at $t=0$ and the capacitor has an initial charge of $Q_o$ for the following three cases.
+For the following circuit, find the charge $q$ on the capacitor at $t=2\text{ s}$ if the switch is closed at $t=0$ and the capacitor has an initial charge of $Q_o$ for the following three cases. Express your answers in terms of $Q_o$.
 
 1. $RC=1\text{ s}\qquad$ $q(2\text{ s})=\fbox{\qquad\phantom M}$
 
@@ -88,9 +103,9 @@ $q(t)=Q_oe^{-t/\tau}$, where $\tau=RC=1\text{ s}$ was given and we want $t$ when
 
 $Q_o/2=Q_oe^{-t/\tau}\quad$ or $\quad 1/2=e^{-t/\tau}$
 
-Taking the natural logarithm of boths sides, and using $\ln(1/x)=-\ln x$, gives
+Taking the natural logarithm of boths sides, and using the identity $\ln x^a = a\ln x$, so that $\ln(1/x)=\ln x^{-1} =-\ln x$, gives
 
-$$-\ln(2) = \ln e^{-t/\tau} = -\frac{t}{\tau}$$
+$$\ln\frac{1}{2}=\ln 2^{-1} = -\ln 2 = \ln e^{-t/\tau} = -\frac{t}{\tau}$$
 
 so $t=\tau\ln(2)\simeq 0.70\tau=0.70RC=0.70\text{ s}$. The answer does not depend on $Q_o$, so this is the answer for parts 1. and 2.
 \else
@@ -99,17 +114,21 @@ so $t=\tau\ln(2)\simeq 0.70\tau=0.70RC=0.70\text{ s}$. The answer does not depen
 
 # Charging a Capacitor
 
-If a single capacitor is in series with other resistors and a DC voltage source, the charge of the capacitor varies according to 
+If a single uncharged capacitor is in series with other resistors and a DC voltage source that is turned on at $t=0$, the charge of the capacitor varies according to 
 
 $$q(t)=Q_f(1-e^{-t/\tau})$$
 
-where $\tau\equiv RC$, $R$ is the equivalent resistance, and $Q_f$ is the final charge on the capacitor, that is, the charge on the capacitor as $t\rightarrow\infty$ (it is technically more accurate to say $t\gg \tau$ instead of $t\rightarrow\infty$; why?).
+where $\tau\equiv RC$, $R$ is the equivalent resistance, and $Q_f$ is the final charge on the capacitor, that is, the charge on the capacitor as $t\rightarrow\infty$ (it is technically more accurate to say $t/\tau\rightarrow\infty$ instead of $t\rightarrow\infty$; why?).
+\ifsolutions
+**Answer**: $t$ is a number with a unit such as seconds. Infinity is a number without a unit. Also, when we say "large time", we should always qualify what large is relative to. For example, "one day" is long to an insect because its lifespan is about a day; to a dog, "one day" is not long relative to its lifespan.
+\else
+\fi
 
 To find $Q_f$, replace the capacitor with an open circuit and use Kirchhoff's voltage law to find the voltage across the capacitor, $V_f$, and then use the relationship $Q_f=CV_f$.
 
 ## Example
 
-Find $q(t)$ for the following circuit, assuming the switch is closed at $t=0$ and the capacitor is initially uncharged.
+Find $Q_f$ and then $q(t)$ for the following circuit, assuming the switch is closed at $t=0$ and the capacitor is initially uncharged.
 
 <img src="figures/Charging_a.svg"/>
 

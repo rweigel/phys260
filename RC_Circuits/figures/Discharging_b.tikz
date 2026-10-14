@@ -13,22 +13,22 @@
 \draw    (118,31) -- (118,68) ;
 \draw [shift={(118,68)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
 %Shape: Grid [id:dp4136213731791418] 
-\draw  [draw opacity=0] (206,36) -- (416,36) -- (416,120) -- (206,120) -- cycle ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (206,36) -- (206,120)(220,36) -- (220,120)(234,36) -- (234,120)(248,36) -- (248,120)(262,36) -- (262,120)(276,36) -- (276,120)(290,36) -- (290,120)(304,36) -- (304,120)(318,36) -- (318,120)(332,36) -- (332,120)(346,36) -- (346,120)(360,36) -- (360,120)(374,36) -- (374,120)(388,36) -- (388,120)(402,36) -- (402,120)(416,36) -- (416,120) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (206,36) -- (416,36)(206,50) -- (416,50)(206,64) -- (416,64)(206,78) -- (416,78)(206,92) -- (416,92)(206,106) -- (416,106)(206,120) -- (416,120) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]  ;
+\draw  [draw opacity=0] (200.5,46) -- (410.5,46) -- (410.5,130) -- (200.5,130) -- cycle ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (200.5,46) -- (200.5,130)(214.5,46) -- (214.5,130)(228.5,46) -- (228.5,130)(242.5,46) -- (242.5,130)(256.5,46) -- (256.5,130)(270.5,46) -- (270.5,130)(284.5,46) -- (284.5,130)(298.5,46) -- (298.5,130)(312.5,46) -- (312.5,130)(326.5,46) -- (326.5,130)(340.5,46) -- (340.5,130)(354.5,46) -- (354.5,130)(368.5,46) -- (368.5,130)(382.5,46) -- (382.5,130)(396.5,46) -- (396.5,130)(410.5,46) -- (410.5,130) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ] (200.5,46) -- (410.5,46)(200.5,60) -- (410.5,60)(200.5,74) -- (410.5,74)(200.5,88) -- (410.5,88)(200.5,102) -- (410.5,102)(200.5,116) -- (410.5,116)(200.5,130) -- (410.5,130) ; \draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]  ;
 %Straight Lines [id:da6371695008603995] 
-\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (206,120) -- (416,120) ;
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (200.5,130) -- (410.5,130) ;
 %Straight Lines [id:da19392406724359912] 
-\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (416,120) -- (416,36) ;
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (410.5,130) -- (410.5,46) ;
 
 %Straight Lines [id:da5115200356999086] 
-\draw    (206,25.5) -- (206,120) ;
-\draw [shift={(206,22.5)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+\draw    (200.5,35.5) -- (200.5,130) ;
+\draw [shift={(200.5,32.5)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
 %Straight Lines [id:da04281112255200381] 
-\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (206,120) -- (428,120) ;
-\draw [shift={(431,120)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (200.5,130) -- (422.5,130) ;
+\draw [shift={(425.5,130)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
 %Straight Lines [id:da19821580998780153] 
-\draw    (276,114) -- (276,125) ;
+\draw    (270.5,124) -- (270.5,135) ;
 %Straight Lines [id:da5919180085071085] 
-\draw    (210,50) -- (201,50) ;
+\draw    (204.5,60) -- (195.5,60) ;
 %Shape: Resistor [id:dp13122071046108608] 
 \draw   (58,31) -- (65.2,31) -- (66.8,21) -- (70,41) -- (73.2,21) -- (76.4,41) -- (79.6,21) -- (82.8,41) -- (86,21) -- (89.2,41) -- (90.8,31) -- (98,31) ;
 %Straight Lines [id:da48328279530987794] 
@@ -51,13 +51,13 @@
 % Text Node
 \draw (8,50.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
 % Text Node
-\draw (208,10.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q$};
+\draw (202.5,20.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$q$};
 % Text Node
-\draw (432,115.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$t$};
+\draw (426.5,125.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$t$};
 % Text Node
-\draw (270,129.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$2\ s$};
+\draw (264.5,139.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$2\ s$};
 % Text Node
-\draw (183,43.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q_{o}$};
+\draw (177.5,53.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$Q_{o}$};
 % Text Node
 \draw (63,92.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$R/2$};
 % Text Node
