@@ -125,6 +125,8 @@ $$\bfvec{B}(-a,-a)= \frac{\mu_o}{4\pi} \frac{2qv_o\khat}{13\sqrt{13}a^2}$$
 
 # Problem IV
 
+This problem involves deriving a general equation that can be used to answer all of the questions previously considered in this activity.
+
 If $q$ is at the position $(x_o,y_o)$ and has a velocity of $\bfvec{v}=v_x\ihat+v_y\jhat$, 
 
 $$\bfvec{B}(x,y)= \frac{\mu_o}{4\pi} \frac{q}{r^3} \big[v_x(y-y_o) - v_y(x-x_o)\big]\khat$$
