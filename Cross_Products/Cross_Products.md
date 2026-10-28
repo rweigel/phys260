@@ -8,6 +8,18 @@ The cross product of two vectors $\bfvec{v}$ and $\bfvec{B}$, written as $\bfvec
 
 Three methods are commonly used for computing a cross--product. The first method ("By Inspection") is useful for certain simple problems, whereas the last two methods ("Multiply Through" and "Determinant") apply to all problems. In principle, one can solve any problem knowing only the second or third methods. However, as the examples demonstrate, some methods lead to a solution with less effort than others. In addition, we recommend understanding all of the methods because it leads to insight into how cross--products work, and you are likely to encounter all of the methods in solutions that you read.
 
+**Notation Note**
+
+Recall that the symbol $|\text{ }|$ has different meaning depending on what it operates on:
+* "absolute value" when it encloses a number, e.g., $|-3|=3$
+* "vector magnitude" when it encloses a vector, e.g., $|3\ihat + 4\jhat|=\sqrt{3^2+4^2}$.
+(In math courses, the notation $||3\ihat + 4\jhat||$ is sometimes used as an alternative to avoid confusion.)
+
+In a similar way, the symbol $\times$ has different meanings:
+
+* "times" when between two numbers, e.g., $3\times 4=12$
+* "cross product" when between two numbers, e.g., $(3\ihat + 4\jhat)\times (5\ihat + 6\jhat)=-2\khat$
+
 # The Circle Diagram
 
 Computing the cross--product of two vectors typically involves the cross-products of unit vectors. Unit vector cross products can be determined using the right--hand rule. However, some students find it easier to use a non--visual approach, which is described here. The possible cross products of unit vectors are

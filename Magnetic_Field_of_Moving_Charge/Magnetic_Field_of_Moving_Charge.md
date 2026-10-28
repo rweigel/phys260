@@ -45,9 +45,9 @@ To find $\hat{\mathbf{r}}$, we draw a vector from $q$ to the point where we want
 
 <img src="figures/Example.svg">
 
-Based on the diagram, $\bfvec{r}=2a\ihat + 2a\jhat$ and $r = \sqrt{(2a)^2+(2a)^2}=2\sqrt{2}a$, so
+Based on the diagram, $\bfvec{r}=2a\ihat + 2a\jhat$ and $r = \sqrt{(2a)^2+(2a)^2}=2a\sqrt{2}$, so
 
-$$\hat{\mathbf{r}}=\frac{\bfvec{r}}{r} = \left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$$
+$$\hat{\mathbf{r}}=\frac{\bfvec{r}}{r} = \left[\frac{2a}{2a\sqrt{2}}\ihat + \frac{2a}{2a\sqrt{2}}\jhat\right] = \left[\frac{1}{\sqrt{2}}\ihat + \frac{1}{\sqrt{2}}\jhat\right]$$
 
 The cross-product is
 
@@ -61,7 +61,9 @@ gives
 
 $$\bfvec{B}(a,a) = \frac{\mu_o}{4\pi} \frac{q\frac{v_o}{\sqrt{2}}\khat}{(2\sqrt{2}a)^2} = \frac{\mu_o}{4\pi} \frac{qv_o}{(8\sqrt{2})a^2}\khat$$
 
-Check: Use the right--hand rule for cross products on $\bfvec{v}\times\hat{\mathbf{r}}$ to verify that the result is out of the page. (Why do we know that the $\khat$ direction is out of the page?)
+Checks:
+1. Use the right--hand rule for cross products on $\bfvec{v}\times\hat{\mathbf{r}}$ to verify that the result is out of the page. (Why do we know that the $\khat$ direction is out of the page?)
+2. Use $B = \frac{\mu_o}{4\pi}\frac{|q|v\sin\phi}{r^2}$ to compute the magnitude (you should find that $\phi=45^\circ$)
 
 \ifsolutions
 \else
@@ -91,7 +93,10 @@ gives
 
 $$\bfvec{B}(-a,-a) = -\frac{\mu_o}{4\pi} \frac{qv_o}{(8\sqrt{2})a^2}\khat$$
 
-Check: Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\mathbf{r}}$ confirms that the result is into the page.
+Checks:
+1. Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\mathbf{r}}$ confirms that the result is into the page.
+2. Use $B = \frac{\mu_o}{4\pi}\frac{|q|v\sin\phi}{r^2}$ to compute the magnitude (you should find that $\phi=135^\circ$)
+
 
 \else
 \vspace{24em}
@@ -102,7 +107,7 @@ Check: Using the right--hand rule for cross products on $\bfvec{v}\times\hat{\ma
 If $q$ is at $(x,y)=(a,0)$ and has a velocity of $\bfvec{v}=v_o\jhat$, find $\bfvec{B}$ at $(x,y)=(a,a)$.
 
 \ifsolutions
-**Answer**: $\bfvec{B}(a,a)=0$ (From a diagram, $\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero.)
+**Answer**: $\bfvec{B}(a,a)=0$ (From a diagram, $\bfvec{v}$ and $\hat{\mathbf{r}}$ are parallel, so their cross product is zero. Another way of arriving at this answer is to note that $\phi=0$ so $\sin\phi=0$.
 \else
 \vspace{12em}
 \fi

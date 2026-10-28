@@ -5,6 +5,9 @@ Title: Vectors
 
 These problems are a review of vector notation and trigonometry. Recall that a two-dimensional vector requires two pieces of information to describe it. In Problem I, the two pieces of information are the magnitude and direction. In Problem II, the two pieces of information are the horizontal and vertical components. In each problem, you convert from one description to the other.
 
+% Add a comment about the $\langle \rangle$ notation.
+% Discuss that some books use $\xhat$ while others use $\ihat$, etc.
+
 # Problem I
 
 A vector $\bfvec{F}$ has a magnitude of $2$ and makes an angle of $30^\circ$ with the $x$--axis (with positive rotation counterclockwise).

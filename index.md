@@ -412,6 +412,17 @@ The figures were created using [MathCha](https://www.mathcha.io/). To edit a fig
 
 ## The Biot--Savart Law
 
+* Activity - The Biot--Savart Law
+  * Documents:
+| [pdf](Biot-Savart/Biot-Savart.pdf)
+| [html](Biot-Savart/Biot-Savart.html)
+|
+* Source:
+| [Overleaf](https://www.overleaf.com/read/btssfxsjgyzr)
+| [Github](https://github.com/rweigel/phys260/tree/master/Biot-Savart)
+| [Markdown](Biot-Savart/Biot-Savart.md)
+| 
+
 ## Magnetic Flux
 
 * Activity - Magnetic Flux

@@ -1,78 +1,75 @@
+```mdextension
+Title: Biot-Savart
+```
 
-\section{Calculating the magnetic field of a steady current}
+Previously, we considered the magnetic field due to a point charge $q$ moving with velocity $\bfvec{v}$ (when $|\bfvec{v}|$ is small compared to the speed of light):
 
-The Biot-Savart law gives the magnetic field due to a steady current. 
+$$
+\bfvec{B} = \frac{\mu_oq}{4\pi}\frac{\bfvec{v}\times\hat{\mathbf{r}}}{r^2}
+$$
 
-\begin{center}
-\includegraphics[]{Magnetic Fields Tutorial #3/figures/BiotSavart.png}
-\end{center}
+where $\rhat$ is the unit vector that points from the position of $q$ to the point in space where we want to know $\bfvec{B}$, and $r$ is the distance between $q$ and that point.
 
-The magnetic field created by a small segment $d\mathbf{l}$ of a wire carrying a current $I$ is
+An equation with a similar form is the Biot-Savart law for the magnetic field due to a steady current in a wire that forms a closed loop:
 
-$$d{\bf B} = \frac{\mu_0}{4\pi}\frac{I d{\bf l} \times \hat{\bf r}}{r^2}$$
+$$
+\bfvec{B} = \frac{\mu_oI}{4\pi}\int\frac{d\bfvec{l}\times\hat{\mathbf{r}}}{r^2}
+$$
 
-where $\hat{\bf r}$ is a unit vector in the direction of the vector distance ${\bf r}$ from the source $d\mathbf{l}$ to the field point.
+where $d\bfvec{l}$ is a small length along the wire with a direction determined by the direction of $I$, the integration is taken along the path of the wire, $\rhat$ is the unit vector that points from the position of $d\mathbf{l}$ to the point in space where we want to know $\bfvec{B}$, and $r$ is the distance between $d\mathbf{l}$ and that location.
 
-The Biot-Savart law can be used to find the total magnetic field ${\bf B}$ at any point in space due to all current elements (e.g., in a circuit) by summing the magnetic field created by each infinitesimal current element:
+If we remove the integral, we can identify the small amount of field attributable to $d\bfvec{l}$:
 
-$${\bf B} = \frac{\mu_0}{4\pi}\int \frac{I d{\bf l} \times \hat{\bf r}}{r^2}$$
+$$
+d\bfvec{B} = \frac{\mu_oI}{4\pi}\frac{d\bfvec{l}\times\hat{\mathbf{r}}}{r^2}
+$$
 
-If the vector direction of the cross product does not change, this formula simplifies. Writing the magnitude of the cross product in the integral, $|d{\bf l} \times \hat{\bf r}|$, as $dl \sin \theta$, where $\theta$ is the angle between $d\mathbf{l}$ and $\hat{\bf r}$, the the magnetic field in the direction of the cross product can be written as
+In this activity, you will find $d\bfvec{B}$ due to differential elements $d\bfvec{l}$ at various points on a wire carrying a steady current.
 
-$$B = \frac{\mu_0}{4\pi}\int \frac{I\sin\theta dl}{r^2}$$
+# Straight Wire along $x$-axis
 
-and the direction of the magnetic field must be determined using the right-hand rule.
+Current $I$ flows in the $+x$ direction along the $x$-axis.
 
-\clearpage
-\begin{tcolorbox}[enhanced,breakable,parbox=false,colback=white!0!white,colframe=blue!100!blue,title=Example 3.1]
+1. Find $d\bfvec{B}_1$ at $(x,y)=(0,b)$ for $dx$ located at the origin.
+2. Find $d\bfvec{B}_2$ at $(x,y)=(0,b)$ for $dx$ located at $(x,y)=(-a,0)$
+3. Find $d\bfvec{B}_3$ at $(x,y)=(0,b)$ for $dx$ located at $(x,y)=(+a,0)$
+4. Find $d\bfvec{B}_2$+$d\bfvec{B}_3$.
 
-The wire in the following figure is infinitely long and carries a current I. Calculate the magnitude and direction of the magnetic field produced at P.
+# Straight Wire along $y$-axis
 
-\begin{center}
-    \includegraphics[]{Magnetic Fields Tutorial #3/figures/BiotSavartExample1.png}
-\end{center}
+Current $I$ flows in the $+y$ direction along the $y$-axis.
 
-In this problem, apply the Biot-Savart law for both the horizontal and vertical segments of the wire for calculating the magnetic field at $P$. 
+1. Find $d\bfvec{B}_1$ at $(x,y)=(a,0)$ for $dy$ located at the origin.
+2. Find $d\bfvec{B}_2$ at $(x,y)=(a,0)$ for $dy$ located at $(x,y)=(0,-b)$
+3. Find $d\bfvec{B}_3$ at $(x,y)=(a,0)$ for $dy$ located at $(x,y)=(0,+b)$
+4. Find $d\bfvec{B}_2$+$d\bfvec{B}_3$.
 
-{\bf Step 1:} The magnetic field due to the horizontal wire is:
+# Straight Wire along $y=x$
 
-$$B_{horizontal} = \frac{\mu_0 I}{4\pi}\int \frac{dl\sin\theta}{r^2}$$
+Current $I$ flows upwards and to the right along the line $y=x$.
 
-Because the direction of the vector $\mathbf{r}$ drawn from $d\mathbf{l}$ to point $P$ is in the same direction as $d\mathbf{l}$, $\theta = 0$ and so $\sin\theta = 0$, giving
+1. Find $d\bfvec{B}$ at $(x,y)=(a,0)$ for $dl$ located at the origin.
+2. Find $d\bfvec{B}$ at $(x,y)=(0,b)$ for $dl$ located at the origin.
 
-$$B_{horizontal} = 0$$
+# Straight Wire along $x=[0,\infty]$
 
-{\bf Step 2:} From the right-hand rule, the magnetic field due to each small current element on the vertical wire will be parallel to the $z$ axis. As a result, we can used the simplified Biot-Savart formula:
+Current $I$ flows in the $+x$ direction along a wire that extends from $x=0$ to $x=\infty$.
 
-$$B_z^{vertical} = \frac{\mu_0 I}{4\pi}\int \frac{dl\sin\theta}{r^2}$$
+Find $d\bfvec{B}$ at $(x,y)=(-a,0)$
 
-\begin{center}
-    \includegraphics[scale = 0.5]{Magnetic Fields Tutorial #3/figures/BiotSavartExample2.png}
-\end{center}
+# Circular Wire in $x$-$y$ plane 
 
-From the diagram, $dl = dy$, $r = \sqrt{y^2 + a^2}$, and
+A circular wire of radius $R$ is centered on the origin and in the $x$-$y$ plane carries a current $I$ that flows counterclockwise when viewed from the $+z$ axis.
 
-$$\sin \theta = \frac{a}{\sqrt{y^2 + a^2}}.$$
+Find $d\mathbf{B}$ due to $dl$ at
 
-Therefore, 
+1. $(x,y)=(R,0)$
+2. $(x,y)=(-R,0)$
+3. $(x,y)=(0,R)$
+4. $(x,y)=(0,-R)$
 
-$$B_z^{vertical} = \frac{\mu_0 I}{4\pi}\int_{y=0}^{-\infty} \frac{ady}{(a^2 + y^2)^{3/2}}$$
+Then,
 
-From a table of integrals,
+5. Find the vector sum of these four $d\mathbf{B}$s.
 
-$$\int \frac{dy}{(a^2 + y^2)^{3/2}} =  \frac{y}{a^2\sqrt{a^2 + y^2}} + C$$
 
-$$B_z^{vertical} = \frac{\mu_0 I}{4\pi}\int_{y=0}^{-\infty} \frac{ady}{(a^2 + y^2)^{3/2}} = \frac{\mu_0 I}{4\pi}\frac{y}{a\sqrt{a^2 + y^2}}\Big|_0^{-\infty} = -\frac{\mu_0 I}{4\pi a}$$
-
-{\bf Step 3: } Combining both ${\bf B}_{horizontal}$ and ${\bf B}_z^{vertical}$, the magnitude of the magnetic field {\bf B} is ${\mu_0 I}/{4\pi a}$, and the direction of {\bf B} at $P$ is perpendicular to the plane of the page and points out of the page. (The negative sign in the answer means that $\mathbf{B}^{vertical}$ has a negative $z$ component. By the right-hand rule, the $+z$ direction must be into the page for the coordinate axes given on the diagram.)
-
-\begin{center}
-\begin{subfigure}{}
-\includegraphics[scale=1.2]{Magnetic Fields Tutorial #3/figures/RightHandRule2.png} 
-\end{subfigure}
-\begin{subfigure}{
-\includegraphics[scale=1.2]{Magnetic Fields Tutorial #3/figures/RightHandRule3.png}
-\end{subfigure}
-\end{center}
-
-\end{tcolorbox}
